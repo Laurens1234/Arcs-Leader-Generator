@@ -57,7 +57,7 @@ If you need to change the font size you can change the last lines of the leader 
 "body_font_size": 16
 ```
 
-I reccomend you use ChatGPT or another AI tool to quickly reformat your leader data into this format.
+I recommend you use ChatGPT or another AI tool to quickly reformat your leader data into this format.
 
 If you want to change the body font on your card you can surround words with \* to do so (you have to surround each word individually):
 
