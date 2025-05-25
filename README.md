@@ -67,6 +67,8 @@ If you want to change the body font on your card you can surround words with \* 
 
 Cards will be saved in the `results/` folder.
 
+Here you can find the most up to date version of my custom leaders: https://docs.google.com/document/d/11SS9AGXG0q3Vlb67Kl0mdvhnE0kKLfgCDgx5LVDwsGk/edit?tab=t.0
+
 ### Example Card:
 
 ![Demo Card](https://github.com/Laurens1234/Arcs-Leader-Generator/blob/main/results/Shapeshifter_Card.png)
