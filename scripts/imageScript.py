@@ -231,6 +231,22 @@ def create_card(input_data):
     draw_box_number(box_a_x, box_y, box_width, box_height, str(input_data['setup']['A']['ships']))
     draw_box_number(box_b_x, box_y, box_width, box_height, str(input_data['setup']['B']['ships']))
     draw_box_number(box_c_x, box_y, box_c_size, box_c_size, str(input_data['setup']['C']['ships']), adjust_left=True)
+    
+    def final_crop(image, bleed_mm=3, card_width_mm=70, card_height_mm=120):
+        width, height = image.size
+
+        # Calculate the % of the bleed relative to final card size
+        left = int((bleed_mm / card_width_mm) * width)
+        top = int((bleed_mm / card_height_mm) * height)
+        right = width - left
+        bottom = height - top
+
+        return image.crop((left, top, right, bottom))
+
+
+    combined_img = final_crop(combined_img, bleed_mm=3, card_width_mm=70, card_height_mm=120)
 
     combined_img.save(output_image_path)
     print(f"Combined image saved at {output_image_path}")
+    
+
