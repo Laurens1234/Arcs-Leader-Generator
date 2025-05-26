@@ -167,12 +167,12 @@ def create_card(input_data):
         )
 
     circle_radius = int(new_size[0] * 1.25 / 2)
-    resource_x = 75
+    resource_x = 80
     resource_y = combined_img.height - new_size[1] - 35
     resource_x2 = resource_x + new_size[0] + 15
 
     for x, res in zip([resource_x, resource_x2], [resource_1, resource_2]):
-        draw.ellipse([x - circle_radius, resource_y - circle_radius, x + circle_radius, resource_y + circle_radius], outline="black", width=3)
+        draw.ellipse([x - circle_radius, resource_y - circle_radius, x + circle_radius, resource_y + circle_radius], outline="black", width=1)
         combined_img.paste(res, (x - r_new_size[0] // 2, resource_y - r_new_size[1] // 2), res)
 
     box_width = 80
@@ -212,13 +212,13 @@ def create_card(input_data):
 
     combined_img.paste(box_a_img, (box_a_x + 5, box_y + 5), box_a_img)
     combined_img.paste(box_b_img, (box_b_x + 5, box_y + 5), box_b_img)
-    draw.rectangle([box_a_x, box_y, box_a_x + box_width, box_y + box_height], outline="black", width=3)
-    draw.rectangle([box_b_x, box_y, box_b_x + box_width, box_y + box_height], outline="black", width=3)
-    draw.rectangle([box_c_x, box_y, box_c_x + box_c_size, box_y + box_c_size], outline="black", width=3)
+    draw.rectangle([box_a_x, box_y, box_a_x + box_width, box_y + box_height], outline="black", width=1)
+    draw.rectangle([box_b_x, box_y, box_b_x + box_width, box_y + box_height], outline="black", width=1)
+    draw.rectangle([box_c_x, box_y, box_c_x + box_c_size, box_y + box_c_size], outline="black", width=1)
 
-    draw.text((box_a_x + 10, box_y + 5), "A", font=box_label_font, fill="black")
-    draw.text((box_b_x + 10, box_y + 5), "B", font=box_label_font, fill="black")
-    draw.text((box_c_x + 10, box_y + 5), "C", font=box_label_font, fill="black")
+    draw.text((box_a_x + 4, box_y + 4), "A", font=box_label_font, fill="black")
+    draw.text((box_b_x + 4, box_y + 4), "B", font=box_label_font, fill="black")
+    draw.text((box_c_x + 4, box_y + 4), "C", font=box_label_font, fill="black")
 
     def draw_box_number(box_x, box_y, box_w, box_h, number, adjust_left=False):
         text_width = draw.textbbox((0, 0), number, font=big_box_number_font)[2]
