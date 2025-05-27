@@ -7,9 +7,9 @@ leaders = [
         ),
         "resources": ["Weapon", "Material"],
         "setup": {
-            "A": {"ships": 4, "building": "city", "damaged": False},
-            "B": {"ships": 4, "building": "city", "damaged": False},
-            "C": {"ships": 2, "building": "None", "damaged": False}
+            "A": {"ships": 4, "building": "city"},
+            "B": {"ships": 4, "building": "city"},
+            "C": {"ships": 2, "building": "None"}
         }
     },
     {
@@ -21,9 +21,9 @@ leaders = [
         ),
         "resources": ["Psionic", "Material"],
         "setup": {
-            "A": {"ships": 3, "building": "city", "damaged": False},
-            "B": {"ships": 3, "building": "starport", "damaged": False},
-            "C": {"ships": 2, "building": "None", "damaged": False}
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
         }
     },
     {
@@ -35,9 +35,9 @@ leaders = [
         ),
         "resources": ["Fuel", "Psionic"],
         "setup": {
-            "A": {"ships": 3, "building": "city", "damaged": False},
-            "B": {"ships": 2, "building": "None", "damaged": False},
-            "C": {"ships": 3, "building": "None", "damaged": False}
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 2, "building": "None"},
+            "C": {"ships": 3, "building": "None"}
         }
     },
     {
@@ -48,9 +48,9 @@ leaders = [
         ),
         "resources": ["Psionic", "Fuel"],
         "setup": {
-            "A": {"ships": 3, "building": "city", "damaged": False},
-            "B": {"ships": 3, "building": "starport", "damaged": False},
-            "C": {"ships": 2, "building": "None", "damaged": False}
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
         }
     },
     {
@@ -61,9 +61,9 @@ leaders = [
         ),
         "resources": ["Fuel", "Weapon"],
         "setup": {
-            "A": {"ships": 4, "building": "starport", "damaged": False},
-            "B": {"ships": 3, "building": "starport", "damaged": False},
-            "C": {"ships": 2, "building": "None", "damaged": False}
+            "A": {"ships": 3, "building": "None"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
         }
     },
     {
@@ -74,9 +74,9 @@ leaders = [
         ),
         "resources": ["Weapon", "Fuel"],
         "setup": {
-            "A": {"ships": 3, "building": "city", "damaged": False},
-            "B": {"ships": 3, "building": "starport", "damaged": False},
-            "C": {"ships": 2, "building": "None", "damaged": False}
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
         }
     },
     {
@@ -87,9 +87,9 @@ leaders = [
         ),
         "resources": ["Psionic", "Weapon"],
         "setup": {
-            "A": {"ships": 3, "building": "city", "damaged": True},
-            "B": {"ships": 3, "building": "starport", "damaged": True},
-            "C": {"ships": 3, "building": "None", "damaged": False}
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 3, "building": "None"}
         }
     },
     {
@@ -100,9 +100,9 @@ leaders = [
         ),
         "resources": ["Material", "Weapon"],
         "setup": {
-            "A": {"ships": 3, "building": "city", "damaged": False},
-            "B": {"ships": 3, "building": "starport", "damaged": False},
-            "C": {"ships": 3, "building": "None", "damaged": False}
+            "A": {"ships": 3, "building": "None"},
+            "B": {"ships": 3, "building": "None"},
+            "C": {"ships": 3, "building": "None"}
         }
     },
     # ... Continue with the rest in the same format.
@@ -117,9 +117,9 @@ leaders += [
         ),
         "resources": ["Weapon", "Material"],
         "setup": {
-            "A": {"ships": 3, "building": "city", "damaged": False},
-            "B": {"ships": 3, "building": "starport", "damaged": False},
-            "C": {"ships": 2, "building": "None", "damaged": False}
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
         }
     },
     {
@@ -131,10 +131,11 @@ leaders += [
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
-            "A": {"ships": 3, "building": "city", "damaged": False},
-            "B": {"ships": 3, "building": "starport", "damaged": False},
-            "C": {"ships": 2, "building": "None", "damaged": False}
-        }
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 17
     },
     {
         "name": "Seer",
@@ -144,9 +145,9 @@ leaders += [
         ),
         "resources": ["Psionic", "Psionic"],
         "setup": {
-            "A": {"ships": 3, "building": "city", "damaged": False},
-            "B": {"ships": 3, "building": "starport", "damaged": False},
-            "C": {"ships": 2, "building": "None", "damaged": False}
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
         }
     },
     {
@@ -159,9 +160,9 @@ leaders += [
         ),
         "resources": ["Material", "Relic"],
         "setup": {
-            "A": {"ships": 3, "building": "city", "damaged": False},
-            "B": {"ships": 3, "building": "city", "damaged": False},
-            "C": {"ships": 2, "building": "None", "damaged": False}
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "city"},
+            "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 17
     },
@@ -174,9 +175,9 @@ leaders += [
         ),
         "resources": ["Weapon", "Relic"],
         "setup": {
-            "A": {"ships": 3, "building": "city", "damaged": False},
-            "B": {"ships": 3, "building": "starport", "damaged": False},
-            "C": {"ships": 2, "building": "None", "damaged": False}
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
         }
     },
     {
@@ -188,9 +189,9 @@ leaders += [
         ),
         "resources": ["Material", "Fuel"],
         "setup": {
-            "A": {"ships": 3, "building": "city", "damaged": False},
-            "B": {"ships": 3, "building": "starport", "damaged": False},
-            "C": {"ships": 2, "building": "None", "damaged": False}
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
         }
     },
     {
@@ -202,9 +203,9 @@ leaders += [
         ),
         "resources": ["Psionic", "Fuel"],
         "setup": {
-            "A": {"ships": 3, "building": "city", "damaged": False},
-            "B": {"ships": 3, "building": "starport", "damaged": False},
-            "C": {"ships": 2, "building": "None", "damaged": False}
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
         }
     },
     {
@@ -215,9 +216,9 @@ leaders += [
         ),
         "resources": ["Fuel", "Fuel"],
         "setup": {
-            "A": {"ships": 3, "building": "starport", "damaged": False},
-            "B": {"ships": 3, "building": "starport", "damaged": False},
-            "C": {"ships": 2, "building": "None", "damaged": False}
+            "A": {"ships": 3, "building": "starport"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
         }
     },
     # Continue adding the rest (Desecrator, Chosen, Sage, Gambler) in the same format.
@@ -233,9 +234,9 @@ leaders += [
         ),
         "resources": ["Material", "Psionic"],
         "setup": {
-            "A": {"ships": 3, "building": "city", "damaged": False},
-            "B": {"ships": 3, "building": "city", "damaged": False},
-            "C": {"ships": 2, "building": "None", "damaged": False}
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "city"},
+            "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 13  # custom body font size
     },
@@ -247,9 +248,9 @@ leaders += [
         ),
         "resources": ["Relic", "Fuel"],
         "setup": {
-            "A": {"ships": 3, "building": "city", "damaged": False},
-            "B": {"ships": 3, "building": "starport", "damaged": False},
-            "C": {"ships": 2, "building": "None", "damaged": False}
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 16
     },
@@ -261,9 +262,9 @@ leaders += [
         ),
         "resources": ["Relic", "Relic"],
         "setup": {
-            "A": {"ships": 3, "building": "city", "damaged": False},
-            "B": {"ships": 3, "building": "starport", "damaged": False},
-            "C": {"ships": 2, "building": "None", "damaged": False}
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
         }
     },
     {
@@ -274,9 +275,9 @@ leaders += [
         ),
         "resources": ["Weapon", "Psionic"],
         "setup": {
-            "A": {"ships": 3, "building": "city", "damaged": False},
-            "B": {"ships": 3, "building": "city", "damaged": False},
-            "C": {"ships": 2, "building": "None", "damaged": False}
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "city"},
+            "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 17
     }
