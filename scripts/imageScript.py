@@ -27,6 +27,25 @@ def create_card(input_data):
     base_img = Image.open(leader_image_path).convert("RGBA")
     text_box_img = Image.open(text_box_image_path).convert("RGBA")
 
+    leader_image_overlay_path = os.path.join(base_path, "cardAssets", "leaderImages", f"{input_data['name']}.png")
+
+    try:
+        overlay_img = Image.open(leader_image_overlay_path).convert("RGBA")
+        
+        overlay_width = base_img.width // 2
+        aspect_ratio = overlay_img.height / overlay_img.width
+        overlay_height = int(overlay_width * aspect_ratio)
+        overlay_img = overlay_img.resize((overlay_width, overlay_height))
+        
+        overlay_x = (base_img.width - overlay_img.width) // 2 
+        overlay_y = 390 - overlay_img.height  
+
+        base_img.paste(overlay_img, (overlay_x, overlay_y), overlay_img)
+
+    except FileNotFoundError:
+        print(f"Warning: Overlay image '{input_data['name']}.png' not found. Proceeding without overlay.")
+
+
     # Resize resource images
     resource_size = (50, 50)
 
@@ -63,8 +82,7 @@ def create_card(input_data):
     except IOError:
         title_font = body_font = italic_font = bold_font = bolditalic_font = ImageFont.load_default()
 
-
-  # Setup images resize while keeping aspect ratio
+    # Setup images resize while keeping aspect ratio
     def get_setup_image_path(slot, setup_data):
         building = setup_data["building"]
         ships = setup_data["ships"]
@@ -86,7 +104,6 @@ def create_card(input_data):
     setup_a_img = load_and_resize_setup(get_setup_image_path("A", setup_data["A"]))
     setup_b_img = load_and_resize_setup(get_setup_image_path("B", setup_data["B"]))
     setup_c_img = load_and_resize_setup(get_setup_image_path("C", setup_data["C"]))
-
 
     setup_a_building = setup_data["A"]["building"].lower() != "none"
     setup_b_building = setup_data["B"]["building"].lower() != "none"
@@ -211,7 +228,6 @@ def create_card(input_data):
             continue
         current_y = draw_rich_text(draw, line, body_font, italic_font, bold_font, bolditalic_font, text_x0, current_y, text_width, 22)
 
-  
     # Final crop
     def final_crop(image, bleed_mm=3, card_width_mm=70, card_height_mm=120):
         width, height = image.size

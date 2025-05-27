@@ -10,13 +10,13 @@ leaders = [
             "A": {"ships": 4, "building": "city"},
             "B": {"ships": 4, "building": "city"},
             "C": {"ships": 2, "building": "None"}
-        }
+        },
+        "body_font_size": 18
     },
     {
         "name": "Shapeshifter",
         "abilities": (
-            "**Mimicry:** When any player declares an ambition, gain a resource of its type. "
-            "(Weapon for Tyrant and Warlord, you choose Material or Fuel for Tycoon.)\n"
+            "**Mimicry:** When any player declares an ambition, gain a resource of its type.\n"
             "**Flickering:** At the end of each chapter, discard all your resources, then gain 1 Material."
         ),
         "resources": ["Psionic", "Material"],
@@ -24,13 +24,13 @@ leaders = [
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
-        }
+        },
+        "body_font_size": 18
     },
     {
         "name": "Sentient",
         "abilities": (
-            "**Formless:** At the start of each chapter, choose a gate. Until the end of the chapter, you may Catapult and build ships there any number of times per turn. "
-            "(You do not need any Loyal pieces to build.)\n"
+            "**Formless:** At the start of each chapter, choose a gate. Until the end of the chapter, you may Catapult and build ships there any number of times per turn.\n"
             "**Shapeless:** In setup, scrap all your starports."
         ),
         "resources": ["Fuel", "Psionic"],
@@ -38,59 +38,64 @@ leaders = [
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 2, "building": "None"},
             "C": {"ships": 3, "building": "None"}
-        }
+        },
+        "body_font_size": 18
     },
     {
         "name": "Hierarch",
         "abilities": (
-            "**Zealous:** When you influence a card with no Loyal agents, you may influence another card with no Loyal agents.\n"
+            "**Zealous:** When you influence a card with a rival agent, you may influence another card with a rival agent.\n"
             "**Rigid:** You cannot influence when you Pivot."
         ),
-        "resources": ["Psionic", "Fuel"],
+        "resources": ["Psionic", "Material"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
-        }
+        },
+        "body_font_size": 18
     },
     {
         "name": "Smuggler",
         "abilities": (
-            "**Resourceful:** When you battle and roll any raid dice, you may steal 1 additional resource for free.\n"
-            "**Infamous:** When you destroy a building, scrap 1 agent and 1 ship in your supply."
+            "**Resourceful:** When you battle and roll any raid dice, you may steal 1 resource for free.\n"
+            "**Infamous:** When you destroy a building, scrap 1 agent or 1 ship in your supply."
         ),
         "resources": ["Fuel", "Weapon"],
         "setup": {
-            "A": {"ships": 3, "building": "None"},
+            "A": {"ships": 3, "building": "starport"},
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
-        }
+        },
+        "body_font_size": 18
     },
     {
         "name": "General",
         "abilities": (
-            "**Blitzing:** Prelude: Once per turn, you may spend a resource to battle.\n"
-            "**Reckless:** In battle, when you roll an intercept, add 1 self hit to your roll and immediately reroll any other die without a self hit."
+            "**Blitzing:** Prelude: You may spend resources to battle.\n"
+            "**Reckless:** In battle, for each intercept you roll, take 1 self hit."
         ),
-        "resources": ["Weapon", "Fuel"],
+        "resources": ["Material", "Fuel"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
-        }
+        },
+        "body_font_size": 18
     },
     {
         "name": "Necromancer",
         "abilities": (
             "**Arising:** When you destroy any piece, you may place a matching fresh piece of your own there.\n"
-            "**Gravebound:** You cannot build fresh pieces and build them damaged instead. You cannot repair buildings."
+            "**Gravebound:** In setup, damage both of your buildings. You cannot build fresh pieces and build them damaged instead. You cannot repair buildings."
         ),
         "resources": ["Psionic", "Weapon"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 3, "building": "None"}
-        }
+        },
+        "body_font_size": 18
     },
     {
         "name": "Composer",
@@ -100,14 +105,12 @@ leaders = [
         ),
         "resources": ["Material", "Weapon"],
         "setup": {
-            "A": {"ships": 3, "building": "None"},
-            "B": {"ships": 3, "building": "None"},
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 3, "building": "None"}
-        }
+        },
+        "body_font_size": 18
     },
-    # ... Continue with the rest in the same format.
-]
-leaders += [
     {
         "name": "Maw",
         "abilities": (
@@ -120,14 +123,15 @@ leaders += [
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
-        }
+        },
+        "body_font_size": 18
     },
     {
         "name": "Saint",
         "abilities": (
             "**Sacred:** At the end of each chapter, for each ambition a Rival won that chapter, they must give you a resource. If they can’t, they must give you a Guild card.\n"
-            "**Blessed:** Before scoring, if there is any ambition marker left unplaced, you may declare any ambition.\n"
-            "**Corrupted:** At the end of each chapter, discard 1 resource for each ambition you won this chapter."
+            "**Blessed:** Before scoring, if there is an ambition marker left unplaced, you may declare an ambition.\n"
+            "**Corrupted:** After sacred, at the end of each chapter, discard 1 resource per ambition you won this chapter."
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
@@ -140,7 +144,8 @@ leaders += [
     {
         "name": "Seer",
         "abilities": (
-            "**Reflective:** At the start of each turn, choose a Guild card in the Court. You may use all its abilities this turn, except its Prelude action.\n"
+            "**Reflective:** You play as if you have all cards in the court: you have all their icons and can use all their abilities, but you cannot use prelude actions that would discard them.\n"
+            "**Ethereal:** When you secure a vox card, you may bury it to secure the top card of the court deck instead.\n"
             "**Unstable:** You cannot have more than 1 resource type on your player board."
         ),
         "resources": ["Psionic", "Psionic"],
@@ -148,7 +153,8 @@ leaders += [
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
-        }
+        },
+        "body_font_size": 18
     },
     {
         "name": "Terrestrial",
@@ -178,7 +184,8 @@ leaders += [
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
-        }
+        },
+        "body_font_size": 18
     },
     {
         "name": "Sentinel",
@@ -192,7 +199,8 @@ leaders += [
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
-        }
+        },
+        "body_font_size": 18
     },
     {
         "name": "Prefect",
@@ -206,7 +214,8 @@ leaders += [
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
-        }
+        },
+        "body_font_size": 18
     },
     {
         "name": "Ghost",
@@ -219,32 +228,30 @@ leaders += [
             "A": {"ships": 3, "building": "starport"},
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
-        }
+        },
+        "body_font_size": 18
     },
-    # Continue adding the rest (Desecrator, Chosen, Sage, Gambler) in the same format.
-]
-leaders += [
     {
         "name": "Desecrator",
         "abilities": (
-            "**Unholy:** In your Prelude, you may damage and destroy Rival buildings you control and Loyal pieces.\n"
-            "**Reaping:** After you place an agent to provoke Outrage, gain a resource you have not Outraged.\n"
-            "**Ascendant:** After Sacrificial if you performed it, if you control no buildings, secure the top card of the Court discard pile; if you control no systems, fill up your empty resource slots with any resources you have not outraged.\n"
-            "**Sacrificial:** At the end of each chapter, Outrage half of your not Outraged resources, scrap half of the agents or scrap half of the ships in your supply (rounded up). You can only scrap if it would scrap at least 2. If you did, perform Ascendant."
+            "**Unholy:** In your Prelude, you may damage and destroy Rival buildings you control and Loyal pieces. After you destroy a loyal city, scrap it.\n"
+            "**Reaping:** After you provoke outrage, gain a non-Outraged resource.\n"
+            "**Ascendant:** After Sacrificial, if you control no buildings, secure the top card of the Court discard pile, if you control no systems, fill up your empty resource slots with any resources.\n"
+            "**Sacrificial:** At the end of each chapter, if you did not outrage any non-Outraged resource this chapter, do so now, if you did not scrap any city this chapter, scrap any loyal city now, then resolve Ascendant."
         ),
         "resources": ["Material", "Psionic"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
         },
-        "body_font_size": 13  # custom body font size
+        "body_font_size": 13
     },
     {
         "name": "Chosen",
         "abilities": (
-            "**Hallowed:** In setup, choose a ship you place to be the chosen ship. When anyone destroys it, they place it fresh in any system. Once per turn, after it moves, it may battle by itself. In battle, the die it rolls has the following effects: Skirmish: double damage; Assault: self hit gives 1 key, intercept gives 2 keys; Raid: each key repairs 1 Loyal ship after the battle.\n"
-            "**Forsaken:** If you have not attacked with the chosen ship this chapter, you cannot secure or declare any ambition."
+            "**Hallowed:** In setup, choose a ship you place to be the chosen ship. When anyone destroys it, they place it fresh in any system. Once per turn, after it moves, it may battle by itself. In battle, the die it rolls has the following effects: Skirmish: double damage; Assault: self hit gives 1 key, intercept gives 2 keys; Raid: each key repairs 1 attacking Loyal ship after the battle.\n"
+            "**Forsaken:** If you have not attacked with the chosen ship this chapter, you cannot secure or declare an ambition."
         ),
         "resources": ["Relic", "Fuel"],
         "setup": {
@@ -252,7 +259,7 @@ leaders += [
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
         },
-        "body_font_size": 16
+        "body_font_size": 15
     },
     {
         "name": "Sage",
@@ -265,18 +272,19 @@ leaders += [
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
-        }
+        },
+        "body_font_size": 18
     },
     {
         "name": "Gambler",
         "abilities": (
-            "**Daring:** At the start of your turn you may pass the initiative to any player and guess a suit. If they have it, they must play the lowest card of that suit they have, you gain a Psionic and you may surpass only with cards of other suits. (The original suit wins the trick if you tie.)\n"
-            "**Brash:** If you guess incorrectly you cannot surpass this round. You must pass this initiative if you have it at the start of the chapter."
+            "**Cunning:** When you pass the initiative, you may pass it to any player and guess a suit. If they have it, they must play the lowest card of that suit they have, you gain any resource and you may surpass with cards of any suit. (The original suit wins the trick if you tie.) If you guess incorrectly, you cannot surpass this round.\n"
+            "**Compulsive:** You must pass the initiative the first time you have it each chapter."
         ),
         "resources": ["Weapon", "Psionic"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 17
