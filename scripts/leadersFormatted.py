@@ -16,7 +16,7 @@ leaders = [
     {
         "name": "Shapeshifter",
         "abilities": (
-            "**Mimicry:** When any player declares an ambition, gain a resource of its type.\n"
+            "**Mimicry:** When any player declares an ambition, gain a resource of its type. (Weapon for Tyrant and Warlord, you choose Material or Fuel for Tycoon.)\n"
             "**Flickering:** At the end of each chapter, discard all your resources, then gain 1 Material."
         ),
         "resources": ["Psionic", "Material"],
@@ -30,7 +30,7 @@ leaders = [
     {
         "name": "Sentient",
         "abilities": (
-            "**Formless:** At the start of each chapter, choose a gate. Until the end of the chapter, you may Catapult and build ships there any number of times per turn.\n"
+            "**Formless:** At the start of each chapter, choose a gate. Until the end of the chapter, you may Catapult and build ships there any number of times per turn. (You do not need any Loyal pieces to build.)\n"
             "**Shapeless:** In setup, scrap all your starports."
         ),
         "resources": ["Fuel", "Psionic"],
@@ -59,7 +59,7 @@ leaders = [
         "name": "Smuggler",
         "abilities": (
             "**Resourceful:** When you battle and roll any raid dice, you may steal 1 resource for free.\n"
-            "**Infamous:** When you destroy a building, scrap 1 agent or 1 ship in your supply."
+            "**Hunted:** After each battle where you destroy a building, each Rival may move from adjacent systems into the system you just battled in."
         ),
         "resources": ["Fuel", "Weapon"],
         "setup": {
@@ -115,7 +115,7 @@ leaders = [
         "name": "Maw",
         "abilities": (
             "**Voracious:** When you declare an ambition, place a ship anywhere on the map.\n"
-            "**Crushing:** When more than 1 Rival ship enters a planetary system you control, you destroy 1 of those ships.\n"
+            "**Crushing:** When more than 1 Rival ship moves into a planetary system you control, you destroy 1 of those ships.\n"
             "**Erratic:** At the end of each chapter, destroy 1 of your ships."
         ),
         "resources": ["Weapon", "Material"],
@@ -131,7 +131,7 @@ leaders = [
         "abilities": (
             "**Sacred:** At the end of each chapter, for each ambition a Rival won that chapter, they must give you a resource. If they can’t, they must give you a Guild card.\n"
             "**Blessed:** Before scoring, if there is an ambition marker left unplaced, you may declare an ambition.\n"
-            "**Corrupted:** After sacred, at the end of each chapter, discard 1 resource per ambition you won this chapter."
+            "**Corrupted:** After sacred, at the end of each chapter, discard 1 resource per ambition you won this chapter. If you can't, outrage a non-Outraged resource."
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
@@ -139,7 +139,7 @@ leaders = [
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
         },
-        "body_font_size": 17
+        "body_font_size": 16
     },
     {
         "name": "Seer",
@@ -159,7 +159,7 @@ leaders = [
     {
         "name": "Terrestrial",
         "abilities": (
-            "**Symbiotic:** You may place pieces you build in adjacent systems with no rival pieces.\n"
+            "**Symbiotic:** You may build in adjacent systems with no rival pieces. (Place pieces damaged if the adjacent system you use to build is Rival controlled.)\n"
             "**Fertile:** Gain 1 Material when you build a starport; gain 1 matching resource when you build a city.\n"
             "**Sprouting:** At the start of each chapter, you may replace one Loyal building with a ship.\n"
             "**Rooted:** You cannot battle in clusters where you have no buildings."
@@ -170,7 +170,7 @@ leaders = [
             "B": {"ships": 3, "building": "city"},
             "C": {"ships": 2, "building": "None"}
         },
-        "body_font_size": 17
+        "body_font_size": 15
     },
     {
         "name": "Manipulator",
@@ -236,8 +236,8 @@ leaders = [
         "abilities": (
             "**Unholy:** In your Prelude, you may damage and destroy Rival buildings you control and Loyal pieces. After you destroy a loyal city, scrap it.\n"
             "**Reaping:** After you provoke outrage, gain a non-Outraged resource.\n"
-            "**Ascendant:** After Sacrificial, if you control no buildings, secure the top card of the Court discard pile, if you control no systems, fill up your empty resource slots with any resources.\n"
-            "**Sacrificial:** At the end of each chapter, if you did not outrage any non-Outraged resource this chapter, do so now, if you did not scrap any city this chapter, scrap any loyal city now, then resolve Ascendant."
+            "**Ascendant:** After Sacrificial, if you control no buildings, secure the top card of the Court discard pile; if you control no systems, fill up your empty resource slots with any resources.\n"
+            "**Sacrificial:** At the end of each chapter, if you did not outrage any non-Outraged resource this chapter, do so now; if you did not scrap any city this chapter, scrap any loyal city now, then resolve Ascendant."
         ),
         "resources": ["Material", "Psionic"],
         "setup": {
@@ -288,5 +288,48 @@ leaders = [
             "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 17
+    },
+    {
+        "name": "Nomad",
+        "abilities": (
+            "**Versatile:** Your starports can move, battle intercept and control like a ship. You place starports outside building slots.\n"
+            "**Exorbitant:** You can only build starports at cities once per city each turn. It costs 2 build actions to build a starport.\n"
+            "**Fragile:** After you catapult move, damage the starport you used."
+        ),
+        "resources": ["Material", "Material"],
+        "setup": {
+            "A": {"ships": 3, "building": "starport"},
+            "B": {"ships": 3, "building": "city"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    {
+        "name": "Magician",
+        "abilities": (
+            "**Illusive:** After you tax a city, you may place it in any empty building slot you control.\n"
+            "**Unmasked:** Before you tax a rival city, its owner may tax any of your cities."
+        ),
+        "resources": ["Psionic", "Material"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "city"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    {
+        "name": "Weaver",
+        "abilities": (
+            "**Interwoven:** After you secure a card in the court, you may influence an adjacent card.\n"
+            "**Tangled:** You must discard a resource to secure a card with a Rival’s agent."
+        ),
+        "resources": ["Relic", "Fuel"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
     }
 ]

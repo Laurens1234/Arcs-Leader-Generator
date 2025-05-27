@@ -47,7 +47,7 @@ def create_card(input_data):
 
 
     # Resize resource images
-    resource_size = (50, 50)
+    resource_size = (55, 55)
 
     def load_and_resize(path):
         return Image.open(path).convert("RGBA").resize(resource_size)
@@ -110,7 +110,7 @@ def create_card(input_data):
     
     # Paste resources
     resource_x = 100
-    resource_y = combined_img.height - resource_size[1] - 25
+    resource_y = combined_img.height - resource_size[1] - 22
     resource_x2 = resource_x + resource_size[0] + 5
     
     setup_start_x = resource_x2 + resource_size[0] - 20
@@ -139,7 +139,7 @@ def create_card(input_data):
         for x, res in zip([resource_x, resource_x2], [resource_1, resource_2]):
             combined_img.paste(res, (x - resource_size[0] // 2, resource_y - resource_size[1] // 2), res)
         combined_img.paste(setup_a_img, (setup_start_x, setup_y), setup_a_img)
-        combined_img.paste(setup_b_img, (setup_start_x + setup_image_size[0] + setup_spacing, setup_y), setup_b_img)
+        combined_img.paste(setup_b_img, (setup_start_x + setup_image_size[0] + setup_spacing +1, setup_y), setup_b_img)
         combined_img.paste(setup_c_img, (setup_start_x + 2 * (setup_image_size[0] + setup_spacing), setup_y), setup_c_img)
 
 
