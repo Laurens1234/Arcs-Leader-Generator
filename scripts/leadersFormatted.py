@@ -169,7 +169,7 @@ leaders = [
             "B": {"ships": 3, "building": "city"},
             "C": {"ships": 2, "building": "None"}
         },
-        "body_font_size": 18
+        "body_font_size": 15
     },
     {
         "name": "Manipulator",
@@ -290,7 +290,7 @@ leaders = [
         "name": "Magician",
         "abilities": (
             "**Illusive:** After you tax a city, you may place it in any building slot you control.\n"
-            "**Unmasked:** When you tax a rival city, you only gain a captive or resource not both."
+            "**Unmasked:** When you tax a rival city, you only gain a captive or resource, not both."
         ),
         "resources": ["Psionic", "Material"],
         "setup": {
