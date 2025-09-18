@@ -12,7 +12,7 @@ A Python project to instantly generate leader cards for Arcs. It uses the **Pill
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/arcs-development-kit.git
+   git clone https://github.com/your-username/Arcs-Leader-Generator.git
    ```
 
 2. Install dependencies:
