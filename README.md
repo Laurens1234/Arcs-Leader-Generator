@@ -1,6 +1,6 @@
-# Arcs-Leader-Generator
+# Arcs Development Kit
 
-A Python project to instantly generate leader cards for Arcs. It uses the **Pillow** library to manipulate images and create customizable leader cards.
+A Python project to generate custom leader cards and lore cards for Arcs. It uses the **Pillow** library to manipulate images and create customizable cards.
 
 ## Requirements
 
@@ -23,7 +23,7 @@ A Python project to instantly generate leader cards for Arcs. It uses the **Pill
 
 ## Usage
 
-### Generate a Card for All Leaders:
+### Generate Leader Cards
 
 Run the following script to generate cards for all leaders defined in `leadersFormatted.py`:
 
@@ -31,7 +31,7 @@ Run the following script to generate cards for all leaders defined in `leadersFo
 python scripts/batchImages.py
 ```
 
-Add the leaders you have made to leadersFormatted.py in this format:
+Add the leaders you have made to `leadersFormatted.py` in this format:
 
 ```python
 {
@@ -45,27 +45,71 @@ Add the leaders you have made to leadersFormatted.py in this format:
         "A": {"ships": 4, "building": "city", "damaged": False},
         "B": {"ships": 4, "building": "city", "damaged": False},
         "C": {"ships": 2, "building": "None", "damaged": False}
-    }
-},
+    },
+    "body_font_size": 16  # Optional: adjust text size (default: 18)
+}
 ```
 
-If you need to change the font size you can change the last lines of the leader to this:
+Leader cards will be saved in the `results/` folder.
+
+### Generate Lore Cards
+
+Run the following script to generate lore cards defined in `loreCardsFormatted.py`:
+
+```bash
+python scripts/loreCards.py
+```
+
+Add lore cards to `loreCardsFormatted.py` in this format:
 
 ```python
-"C": {"ships": 2, "building": "None", "damaged": False}
-},
-"body_font_size": 16
+{
+    "name": "Ancient Prophecy",      # Must match image filename in cardAssets/loreImages/ (without .png)
+    "title": "Ancient Prophecy",     # Title displayed on the card
+    "body": (
+        "When you destroy a city, discard this lore and draw 2 Lore cards."
+    ),
+    "footer_left": "L",              # Left footer text (black)
+    "footer": "Lore",                # Center footer text (white)
+    "footer_right": "29",            # Right footer text (black)
+    "footer_font_size": 16,          # Optional: footer text size (default: 14)
+    "body_font_size": 18             # Optional: body text size (default: 18)
+}
 ```
 
-I recommend you use ChatGPT or another AI tool to quickly reformat your leader data into this format.
+**Adding Lore Images:**
+Place your lore card artwork in `cardAssets/loreImages/` with the filename matching the card's `name` field (e.g., `Ancient Prophecy.png`).
 
-If you want to change the body font on your card you can surround words with \* to do so (you have to surround each word individually):
+Lore cards will be saved in the `results/lore/` folder.
 
-* \**italic\*
-* \*\***bold**\*\*
-* \*\*\****both***\*\*\*
+### Text Formatting
 
-Cards will be saved in the `results/` folder.
+For both leader and lore cards, you can format text by surrounding words with asterisks (each word individually):
+
+* `*italic*` → *italic*
+* `**bold**` → **bold**
+* `***both***` → ***bold italic***
+
+## Project Structure
+
+```
+├── cardAssets/
+│   ├── loreImages/       # Place lore card artwork here
+│   └── leaderImages/     # Leader card assets
+├── fonts/                # Font files
+├── results/
+│   └── lore/             # Generated lore cards
+├── scripts/
+│   ├── batchImages.py    # Generate all leader cards
+│   ├── leadersFormatted.py   # Leader card data
+│   ├── loreCards.py      # Generate lore cards
+│   └── loreCardsFormatted.py # Lore card data
+└── README.md
+```
+
+## Tips
+
+I recommend using ChatGPT or another AI tool to quickly reformat your card data into the required format.
 
 Here you can find the most up to date version of my custom leaders: https://docs.google.com/document/d/11SS9AGXG0q3Vlb67Kl0mdvhnE0kKLfgCDgx5LVDwsGk/edit?usp=sharing
 

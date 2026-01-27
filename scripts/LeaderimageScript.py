@@ -32,7 +32,11 @@ def create_card(input_data):
     try:
         overlay_img = Image.open(leader_image_overlay_path).convert("RGBA")
         
-        overlay_width = base_img.width // 2
+        if input_data['name'] == "leadername":
+            overlay_width = int(base_img.width / 1.5)
+        else:
+            overlay_width = base_img.width // 2
+
         aspect_ratio = overlay_img.height / overlay_img.width
         overlay_height = int(overlay_width * aspect_ratio)
         overlay_img = overlay_img.resize((overlay_width, overlay_height))

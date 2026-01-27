@@ -4,7 +4,7 @@ import sys
 script_dir = os.path.dirname(os.path.dirname(__file__))
 sys.path.append(script_dir)
 
-from imageScript import create_card as create_leader_image
+from scripts.LeaderimageScript import create_card as create_leader_image
 from leadersFormatted import leaders
 
 base_path = os.path.dirname(os.path.dirname(__file__))
