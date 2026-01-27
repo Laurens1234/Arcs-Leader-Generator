@@ -113,6 +113,12 @@ I recommend using ChatGPT or another AI tool to quickly reformat your card data 
 
 Here you can find the most up to date version of my custom leaders: https://docs.google.com/document/d/11SS9AGXG0q3Vlb67Kl0mdvhnE0kKLfgCDgx5LVDwsGk/edit?usp=sharing
 
-### Example Card:
+### Example Cards:
 
-![Demo Card](https://github.com/Laurens1234/Arcs-Leader-Generator/blob/main/results/Shapeshifter_Card.png)
+**Leader Card:**
+
+![Demo Leader Card](https://github.com/Laurens1234/Arcs-Leader-Generator/blob/main/results/Shapeshifter_Card.png)
+
+**Lore Card:**
+
+![Demo Lore Card](https://github.com/Laurens1234/Arcs-Leader-Generator/blob/main/results/lore/Ancient%20Prophecy_Lore_Card.png)
