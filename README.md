@@ -1,4 +1,4 @@
-# Arcs Development Kit
+# Arcs Leader Generator
 
 A Python project to generate custom leader cards and lore cards for Arcs. It uses the **Pillow** library to manipulate images and create customizable cards.
 
