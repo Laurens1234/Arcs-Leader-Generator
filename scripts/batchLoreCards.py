@@ -36,7 +36,7 @@ def create_lore_card(input_data):
     card_width, card_height = lore_frame.size
 
     # Create base canvas
-    base_img = Image.new("RGBA", (card_width, card_height), (255, 255, 255, 255))
+    base_img = Image.new("RGBA", (card_width, card_height), (0, 0, 0, 255))
 
     # Load and paste lore image (top half of the card)
     lore_image_path = os.path.join(lore_image_folder, f"{input_data['name']}.png")
