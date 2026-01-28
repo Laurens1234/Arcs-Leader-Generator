@@ -28,7 +28,7 @@ A Python project to generate custom leader cards and lore cards for Arcs. It use
 Run the following script to generate cards for all leaders defined in `leadersFormatted.py`:
 
 ```bash
-python scripts/batchImages.py
+python scripts/batchLeaderCards.py
 ```
 
 Add the leaders you have made to `leadersFormatted.py` in this format:
@@ -57,7 +57,7 @@ Leader cards will be saved in the `results/` folder.
 Run the following script to generate lore cards defined in `loreCardsFormatted.py`:
 
 ```bash
-python scripts/loreCards.py
+python scripts/batchloreCards.py
 ```
 
 Add lore cards to `loreCardsFormatted.py` in this format:
