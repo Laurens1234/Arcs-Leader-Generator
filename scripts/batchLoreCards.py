@@ -67,7 +67,7 @@ def create_lore_card(input_data):
 
     # Load fonts
     try:
-        title_font = ImageFont.truetype(custom_font_path, 25)
+        title_font = ImageFont.truetype(custom_font_path, input_data.get("title_font_size", 25))
         footer_font = ImageFont.truetype(custom_font_path, input_data.get("footer_font_size", 14))
         body_font = ImageFont.truetype(neue_kabel_font_path, input_data.get("body_font_size", 18))
         italic_font = ImageFont.truetype(neue_kabel_italic_path, input_data.get("body_font_size", 18))
