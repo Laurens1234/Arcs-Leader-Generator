@@ -385,7 +385,7 @@ leaders = [
     {
         "name": "Alchemist",
         "abilities": (
-            "*Transformative.* Prelude: Once per chapter, discard 1 resource to gain 3 different resources.\n"
+            "*Transformative.* Prelude: Once per chapter, discard 1 resource to gain 2 different resources.\n"
             "*Cautious.* You cannot spend your last resource."
         ),
         "resources": ["Psionic", "Relic"],
@@ -595,9 +595,9 @@ leaders = [
     {
         "name": "Nomad",
         "abilities": (
-            "*Versatile.* Your starports can **move**, **battle** , intercept and control like a ship. You place starports outside building slots\n"
+            "*Versatile.* Your starports can **move** **battle** intercept and control like a ship. You place starports outside building slots\n"
             "*Exorbitant.* You can only build starports at cities once per city each turn. It costs 2 build actions to build a starport. \n"
-            "*Fragile.* After you catapult **move**, damage the starport you used."
+            "*Fragile.* After you catapult **move** damage the starport you used."
         ),
         "resources": ["Material", "Material"],
         "setup": {
