@@ -79,7 +79,7 @@ leaders = [
         "name": "General",
         "abilities": (
             "*Blitzing.* Prelude: You may spend resources to  **battle.**\n"
-            "*Reckless.* In  **battle,** for each intercept you roll, take 1 self hit."
+            "*Reckless.* In  **battle,** for each intercept you roll, take 1 self hit additionally."
         ),
         "resources": ["Material", "Fuel"],
         "setup": {
@@ -140,7 +140,7 @@ leaders = [
         "name": "Saint",
         "abilities": (
             "*Sacred.* At the end of each chapter, for each ambition a Rival won that chapter, they must give you a resource. If they can’t, they must give you a Guild card.\n"
-            "*Blessed.* Before scoring, if no ambitions have been declared, you may  **declare **an** **ambition.**\n"
+            "*Blessed.* Before scoring, if no ambitions have been declared, you may  **declare** **an** **ambition.**\n"
             "*Corrupted.* After sacred, discard 1 resource per ambition you won this chapter."
         ),
         "resources": ["Psionic", "Relic"],
@@ -370,7 +370,7 @@ leaders = [
     {
         "name": "Herald",
         "abilities": (
-            "*Farsighted.* After you  **secure** , look at the top 3 cards of the Court deck, keep 1 on top, put 1 in the card and bury 1.\n"
+            "*Farsighted.* After you  **secure** , look at the top 3 cards of the Court deck, keep 1 on top, put 1 in the court and bury 1.\n"
             "*Hasty.* After you discard a guild card with it's Prelude action, shuffle it back into the court deck. "
         ),
         "resources": ["Material", "Relic"],
@@ -385,7 +385,7 @@ leaders = [
     {
         "name": "Alchemist",
         "abilities": (
-            "*Transformative.* Prelude: Once per chapter, discard 1 resource to gain 2 different resources.\n"
+            "*Transformative.* At the start of each chapter discard 1 resource to gain 2 resources different types other than the one you discarded.\n"
             "*Cautious.* You cannot spend your last resource."
         ),
         "resources": ["Psionic", "Relic"],
@@ -415,8 +415,8 @@ leaders = [
     {
         "name": "Martyr",
         "abilities": (
-            "*Venerated.* After a  **battle** where rival destroys one of your cities, secure the top card of the court deck.\n"
-            "*Selfless.* When attacking in  **battle,** any hits that would destroy a city also damage your ships."
+            "*Venerated.* After a  **battle** where rival damages or destroys one of your cities, secure the top card of the court deck.\n"
+            "*Selfless.* When attacking in **battle,** when you destroy a city also damage all your ships in its system."
         ),
         "resources": ["Psionic", "Material"],
         "setup": {
@@ -580,7 +580,7 @@ leaders = [
     {
         "name": "Trickster",
         "abilities": (
-            "*Misdirecting.* Once per chapter, before you play an action card, you may take a facedown action card and swap it with one of yours.\n"
+            "*Misdirecting.* Once per chapter, before you play an action card, you may take a played facedown action card and replace it with one of yours.\n"
             "*Revealed.* When you discard a card to seize, play it faceup."
         ),
         "resources": ["Psionic", "Fuel"],
