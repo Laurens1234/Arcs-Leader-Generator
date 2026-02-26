@@ -607,4 +607,67 @@ leaders = [
         },
         "body_font_size": 18
     }
+    ,
+    # Iconoclast
+    {
+        "name": "Iconoclast",
+        "abilities": (
+            "*Radical.* When you may discard a card to seize the initiative you may steal a guild card from a player which hurry type matches your or their outrage, if none exist you may instead move an ambition marker to a different box.\n"
+            "*Hoarding.* You only draw 5 cards each chapter. On your final turn of each chapter of playing your final card you may pass to keep it for the next chapter.\n"
+            "*Fervent.* In **setup,** provoke outrage of your city's starting types, then gain any amount of any resources."
+        ),
+        "resources": ["Psionic", "Psionic"],
+        "setup": {
+            "A": {"ships": 4, "building": "city"},
+            "B": {"ships": 4, "building": "city"},
+            "C": {"ships": 3, "building": "None"}
+        },
+        "body_font_size": 15
+    },
+    # Fiend
+    {
+        "name": "Fiend",
+        "abilities": (
+            "*Gluttonous.* When you provoke outrage, clear it if you already have it outraged; if you do, gain that resource up to your empty slots.\n"
+            "*Malevolent.* Prelude: If you have outrage in all types, you may spend a resource to damage a ship in a matching system.\n"
+            "*Frenzied.* In **setup,** provoke outrage in all resource types. (Before you gain resources.)"
+        ),
+        "resources": ["Fuel", "Material"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 3, "building": "None"}
+        },
+        "body_font_size": 17
+    },
+    # Wheeler-dealer
+    {
+        "name": "Wheeler-dealer",
+        "abilities": (
+            "*Cunning.* After securing a card, you may outrage its resource type, then secure cards from the top of the deck matching the amount of cards you just discarded.\n"
+            "*Preparatory.* In **setup,** provoke relic outrage."
+        ),
+        "resources": ["Psionic", "Material"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 3, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    # Curator
+    {
+        "name": "Curator",
+        "abilities": (
+            "*Meticulous.* When you secure a card, you may discard it to secure the top card of the lore deck instead. You must do this if you have more guild cards than lore cards.\n"
+            "*Ascetic.* At the end of each chapter scrap a lore card you have."
+        ),
+        "resources": ["Psionic", "Relic"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 3, "building": "None"}
+        },
+        "body_font_size": 18
+    }
 ]
