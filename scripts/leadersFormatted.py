@@ -645,7 +645,7 @@ leaders = [
         "name": "Wheeler-dealer",
         "abilities": (
             "*Cunning.* After securing a card, you may outrage its resource type, then secure cards from the top of the deck matching the amount of cards you just discarded.\n"
-            "*Preparatory.* In **setup,** provoke relic outrage."
+            "*Irate.* In **setup,** provoke relic outrage."
         ),
         "resources": ["Psionic", "Material"],
         "setup": {
