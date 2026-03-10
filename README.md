@@ -133,8 +133,9 @@ Here you can find the most up to date version of my custom leaders: https://docs
 
 **Leader Card:**
 
-![Demo Leader Card](https://github.com/Laurens1234/Arcs-Leader-Generator/blob/main/results/Ghost_Card.png)
+![Demo Leader Card](https://github.com/Laurens1234/Arcs-Leader-Generator/blob/main/results/Prefect_Card.png)
 
+![Demo Leader Card](https://github.com/Laurens1234/Arcs-Leader-Generator/blob/main/results/Ghost_Card.png)
 **Lore Card:**
 
 ![Demo Lore Card](https://github.com/Laurens1234/Arcs-Leader-Generator/blob/main/results/lore/Ancient%20Prophecy_Lore_Card.png)
