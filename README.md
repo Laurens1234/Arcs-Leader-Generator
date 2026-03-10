@@ -52,6 +52,22 @@ Add the leaders you have made to `leadersFormatted.py` in this format:
 
 Leader cards will be saved in the `results/` folder.
 
+**Leader Image Options**
+- **zoom**: : A numeric multiplier applied to the leader artwork (e.g., `1.5` for 150%). Zooming enlarges the image and may cause the left/right edges of the card to be cropped, which is expected when zoom > 1.
+- **boundary_shift**: : A fractional value that moves the card image boundaries up or down. Positive values move the top and bottom boundaries lower on the card (e.g., `0.25` moves them 25% lower), negative values move them up. This affects how the artwork is fitted and where its bottom aligns relative to the title area.
+
+You can set these per-leader in `scripts/leadersFormatted.py`. Example:
+
+```python
+{
+    "name": "Prefect",
+    "abilities": (...),
+    "resources": ["Psionic", "Fuel"],
+    "body_font_size": 18,
+    "zoom": 1.45,
+    "boundary_shift": 0.33
+}
+```
 ### Generate Lore Cards
 
 Run the following script to generate lore cards defined in `loreCardsFormatted.py`:

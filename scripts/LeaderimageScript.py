@@ -31,18 +31,54 @@ def create_card(input_data):
 
     try:
         overlay_img = Image.open(leader_image_overlay_path).convert("RGBA")
-        
-        if input_data['name'] == "leadername":
-            overlay_width = int(base_img.width / 1.5)
-        else:
-            overlay_width = base_img.width // 2
 
-        aspect_ratio = overlay_img.height / overlay_img.width
-        overlay_height = int(overlay_width * aspect_ratio)
-        overlay_img = overlay_img.resize((overlay_width, overlay_height))
-        
-        overlay_x = (base_img.width - overlay_img.width) // 2 
-        overlay_y = 390 - overlay_img.height  
+        # Keep the bottom of the leader image aligned to the original location
+        # Support an optional `boundary_shift` fractional value in input_data
+        # Positive shifts move the top boundary lower (down), negative moves it up.
+        default_top_margin = 60
+        shift = input_data.get("boundary_shift", 0.0)
+        try:
+            shift = float(shift)
+        except Exception:
+            shift = 0.0
+        top_margin = max(0, int(default_top_margin * (1 + shift)))
+        # Allow boundary_shift to also move the bottom alignment point
+        default_overlay_bottom = 390
+        overlay_bottom_y = int(default_overlay_bottom * (1 + shift))
+        # Clamp bottom to image bounds and ensure it's below top_margin
+        overlay_bottom_y = max(top_margin + 1, min(base_img.height - 1, overlay_bottom_y))
+        max_allowed_height = max(0, overlay_bottom_y - top_margin)
+
+        # Target width respects side margins but allow special-case sizing
+        side_margin = 60
+        target_width = base_img.width - 2 * side_margin
+        if input_data['name'] == "leadername":
+            target_width = int(base_img.width / 1.5)
+
+        iw, ih = overlay_img.size
+        aspect_ratio = ih / iw
+        target_height = int(target_width * aspect_ratio)
+
+        # If height would overflow into the text area or above the margin, scale down
+        if max_allowed_height > 0 and target_height > max_allowed_height:
+            target_height = max_allowed_height
+            target_width = max(1, int(target_height / aspect_ratio))
+
+        # Support an optional zoom multiplier from input_data (e.g., 1.5 for 150%)
+        zoom = input_data.get("zoom", 1.0)
+        try:
+            zoom = float(zoom)
+        except Exception:
+            zoom = 1.0
+
+        # Apply zoom (allow overflow/cropping of sides as requested)
+        target_width = max(1, int(target_width * zoom))
+        target_height = max(1, int(target_height * zoom))
+
+        overlay_img = overlay_img.resize((target_width, target_height), Image.Resampling.LANCZOS)
+
+        overlay_x = (base_img.width - overlay_img.width) // 2
+        overlay_y = overlay_bottom_y - overlay_img.height
 
         base_img.paste(overlay_img, (overlay_x, overlay_y), overlay_img)
 
