@@ -614,7 +614,7 @@ leaders = [
     {
         "name": "Iconoclast",
         "abilities": (
-            "*Radical.* When you may discard a card to seize the initiative you may steal a guild card from a player which hurry type matches your or their outrage, if none exist you may instead move an ambition marker to a different box.\n"
+            "*Radical.* When you may discard a card to seize the initiative you may steal a guild card from a player which type matches your or their outrage, if none exist, you may instead move an ambition marker to a different box.\n"
             "*Hoarding.* You only draw 5 cards each chapter. On your final turn of each chapter of playing your final card you may pass to keep it for the next chapter.\n"
             "*Fervent.* In **setup,** provoke outrage of your city's starting types, then gain any amount of any resources."
         ),
