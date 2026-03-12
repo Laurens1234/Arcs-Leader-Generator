@@ -28,7 +28,8 @@ leaders = [
             "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 18,
-        "zoom": 1.2
+        "zoom": 1.2,
+        "boundary_shift": 0.1
     },
     # Sentient
     {
@@ -214,7 +215,8 @@ leaders = [
             "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 18,
-        "zoom": 1.2
+        "zoom": 1.3,
+        "boundary_shift": 0.9
     },
     # Prefect
     {
@@ -384,7 +386,8 @@ leaders = [
             "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 18,
-        "zoom": 1.2
+        "zoom": 1.2,
+        "boundary_shift": 0.25
     },
     # Alchemist
     {
@@ -537,7 +540,8 @@ leaders = [
             "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 18,
-        "zoom": 1.2
+        "zoom": 1.2,
+        "boundary_shift": 0.2
     },
     # Solian
     {
@@ -553,7 +557,8 @@ leaders = [
             "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 18,
-        "zoom": 1.2
+        "zoom": 1.2,
+        "boundary_shift": 0.4
     },
     # Bargainer
     {
@@ -634,7 +639,8 @@ leaders = [
             "C": {"ships": 3, "building": "None"}
         },
         "body_font_size": 15,
-        "zoom": 1.2
+        "zoom": 1.2,
+        "boundary_shift": 0.25
     },
     # Fiend
     {
@@ -651,7 +657,8 @@ leaders = [
             "C": {"ships": 3, "building": "None"}
         },
         "body_font_size": 17,
-        "zoom": 1.2
+        "zoom": 1,
+        "boundary_shift": 0.35
     },
     # Wheeler-dealer
     {
@@ -667,7 +674,7 @@ leaders = [
             "C": {"ships": 3, "building": "None"}
         },
         "body_font_size": 18,
-        "zoom": 1.2
+        "zoom": 1
     },
     # Curator
     {
