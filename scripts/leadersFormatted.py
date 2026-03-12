@@ -111,7 +111,7 @@ leaders = [
         "name": "Composer",
         "abilities": (
             "*Elegant.* When you spend a pip to repair, gain 1 resource.\n"
-            "*Obsessed.* You cannot  **build** in clusters where any of your pieces are damaged."
+            "*Obsessed.* You cannot  **build** or **tax** in clusters where any of your pieces are damaged."
         ),
         "resources": ["Material", "Weapon"],
         "setup": {
@@ -530,7 +530,7 @@ leaders = [
     {
         "name": "Golem",
         "abilities": (
-            "*Ironclad.* When one of your ships is destroyed, you may discard a resource to repair it instead.\n"
+            "*Ironclad.* After a battle where one or more of your ships is destroyed, you may discard a resource to keep them all of them damaged instead.\n"
             "*Cold.* At the end of each chapter, destroy all damaged loyal ships."
         ),
         "resources": ["Material", "Fuel"],
@@ -548,7 +548,7 @@ leaders = [
         "name": "Solian",
         "abilities": (
             "*Raiding.* You can catapult **move** through planetary systems as if they were gates.\n"
-            "*Brutal.* When your ships catapult into an enemy-controlled gate, one of them takes a hit."
+            "*Brutal.* When your ships catapult move into an enemy-controlled gate, one of them takes a hit."
         ),
         "resources": ["Weapon", "Fuel"],
         "setup": {
@@ -564,8 +564,8 @@ leaders = [
     {
         "name": "Bargainer",
         "abilities": (
-            "*Leverage.* You may return a player’s trophy or captive to  **tax** one of their cities. (You don’t get a captive.)\n"
-            "*Obliged.* You must return a trophy or captive when you before first place. If you can’t, you get the second-place points and don’t get the city bonus."
+            "*Leverage.* You may return a player’s trophy or captive to  **tax** one of their cities.\n"
+            "*Obliged.* You must return a trophy or captive when you when you score first place. If you can’t, you get the second-place points and don’t get the city bonus."
         ),
         "resources": ["Relic", "Material"],
         "setup": {
@@ -664,8 +664,8 @@ leaders = [
     {
         "name": "Wheeler-dealer",
         "abilities": (
-            "*Cunning.* After securing a card, you may outrage its resource type, then secure cards from the top of the deck matching the amount of cards you just discarded.\n"
-            "*Irate.* In **setup,** provoke relic outrage."
+            "*Cunning.* **Prelude:** You may provoke outrage in a resource type, then secure cards from the top of the deck matching the amount of cards you just discarded.\n"
+            "*Irate.* In **setup,** provoke relic or psionic outrage."
         ),
         "resources": ["Psionic", "Material"],
         "setup": {
@@ -680,7 +680,7 @@ leaders = [
     {
         "name": "Curator",
         "abilities": (
-            "*Meticulous.* When you secure a card, you may discard it to secure the top card of the lore deck instead. You must do this if you have more guild cards than lore cards.\n"
+            "*Meticulous.* When you **secure** a card, you may discard it to secure the top card of the lore deck instead. You must do this if you have more guild cards than lore cards.\n"
             "*Ascetic.* At the end of each chapter scrap a lore card you have."
         ),
         "resources": ["Psionic", "Relic"],
