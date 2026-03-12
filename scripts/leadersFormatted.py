@@ -485,7 +485,7 @@ leaders = [
     {
         "name": "Conduit",
         "abilities": (
-            "*Conductive.* Once per turn, you may spend a resource as a resource non-Outraged resource.\n"
+            "*Conductive.* Once per turn, you may spend a resource as a non-Outraged resource.\n"
             "*Overloaded.* You cannot have more than 1 resource of each type on your player board."
         ),
         "resources": ["Psionic", "Material"],
