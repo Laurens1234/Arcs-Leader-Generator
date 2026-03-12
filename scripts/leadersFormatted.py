@@ -599,7 +599,8 @@ leaders = [
             "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 18,
-        "zoom": 1.2
+        "zoom": 1,
+        "boundary_shift": 0.25
     },
     # Nomad
     {
@@ -682,7 +683,8 @@ leaders = [
             "C": {"ships": 3, "building": "None"}
         },
         "body_font_size": 18,
-        "zoom": 1.6
+        "zoom": 1,
+        
     },
     # GOD'S HAND
     {
