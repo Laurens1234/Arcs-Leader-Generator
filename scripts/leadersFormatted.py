@@ -27,7 +27,8 @@ leaders = [
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
         },
-        "body_font_size": 18
+        "body_font_size": 18,
+        "zoom": 1.2
     },
     # Sentient
     {
@@ -212,7 +213,8 @@ leaders = [
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
         },
-        "body_font_size": 18
+        "body_font_size": 18,
+        "zoom": 1.2
     },
     # Prefect
     {
@@ -381,7 +383,8 @@ leaders = [
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
         },
-        "body_font_size": 18
+        "body_font_size": 18,
+        "zoom": 1.2
     },
     # Alchemist
     {
@@ -426,7 +429,8 @@ leaders = [
             "B": {"ships": 3, "building": "city"},
             "C": {"ships": 2, "building": "None"}
         },
-        "body_font_size": 18
+        "body_font_size": 18,
+        "zoom": 1.2
     },
     # Scourge
     {
@@ -441,7 +445,8 @@ leaders = [
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
         },
-        "body_font_size": 18
+        "body_font_size": 18,
+        "zoom": 1.2
     },
     # Beggar
     {
@@ -531,7 +536,8 @@ leaders = [
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
         },
-        "body_font_size": 18
+        "body_font_size": 18,
+        "zoom": 1.2
     },
     # Solian
     {
@@ -546,7 +552,8 @@ leaders = [
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
         },
-        "body_font_size": 18
+        "body_font_size": 18,
+        "zoom": 1.2
     },
     # Bargainer
     {
@@ -591,7 +598,8 @@ leaders = [
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
         },
-        "body_font_size": 18
+        "body_font_size": 18,
+        "zoom": 1.2
     },
     # Nomad
     {
@@ -624,7 +632,8 @@ leaders = [
             "B": {"ships": 4, "building": "city"},
             "C": {"ships": 3, "building": "None"}
         },
-        "body_font_size": 15
+        "body_font_size": 15,
+        "zoom": 1.2
     },
     # Fiend
     {
@@ -640,7 +649,8 @@ leaders = [
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 3, "building": "None"}
         },
-        "body_font_size": 17
+        "body_font_size": 17,
+        "zoom": 1.2
     },
     # Wheeler-dealer
     {
@@ -655,7 +665,8 @@ leaders = [
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 3, "building": "None"}
         },
-        "body_font_size": 18
+        "body_font_size": 18,
+        "zoom": 1.2
     },
     # Curator
     {
@@ -670,7 +681,8 @@ leaders = [
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 3, "building": "None"}
         },
-        "body_font_size": 18
+        "body_font_size": 18,
+        "zoom": 1.6
     },
     # GOD'S HAND
     {
