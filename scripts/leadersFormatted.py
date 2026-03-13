@@ -80,8 +80,8 @@ leaders = [
     {
         "name": "General",
         "abilities": (
-            "*Blitzing.* When you tax to gain a resource, you may discard it to gain a weapon instead. You may a discard a weapon resource to ignore one rolled intercept.\n"
-            "*Reckless.* In  **battle,** you must always roll at least 1 dice of each type if you can."
+            "*Blitzing.* After you **tax** you may discard a resource to gain a weapon. You may a discard a weapon resource to ignore one rolled intercept.\n"
+            "*Reckless.* In  **battle,** you must always roll at least 1 die of each type if you can."
         ),
         "resources": ["Weapon", "Weapon"],
         "setup": {
@@ -157,8 +157,8 @@ leaders = [
     {
         "name": "Seer",
         "abilities": (
-            "*Reflective.* You play as if you have all cards in the court: you have all their icons and can use all their abilities, but you cannot use their prelude actions.\n"
-            "*Unstable.* You cannot have more than 1 resource type on your player board."
+            "*Reflective.* Once per turn, you may discard a guild card to secure one in the court with no agents on it.\n"
+            "*Unstable.* Discard a guild card for no effect if you have two or more of the same type."
         ),
         "resources": ["Psionic", "Psionic"],
         "setup": {
@@ -172,7 +172,7 @@ leaders = [
     {
         "name": "Terrestrial",
         "abilities": (
-            "*Symbiotic.* You may  **build** in adjacent systems with no rival pieces. (Place pieces damaged if the adjacent system you use to  **build** is Rival controlled.)\n"
+            "*Symbiotic.* You may  **build** in adjacent systems with no rival pieces.\n"
             "*Fertile.* Gain 1 Material when you  **build** a starport; gain 1 matching resource when you  **build** a city.\n"
             "*Sprouting.* At the start of each chapter, you may replace one Loyal building with a ship.\n"
             "*Rooted.* You cannot  **battle** in clusters where you have no buildings."
@@ -183,7 +183,7 @@ leaders = [
             "B": {"ships": 3, "building": "city"},
             "C": {"ships": 2, "building": "None"}
         },
-        "body_font_size": 15
+        "body_font_size": 16
     },
     # Manipulator
     {
