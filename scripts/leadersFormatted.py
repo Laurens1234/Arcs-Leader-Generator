@@ -422,7 +422,7 @@ leaders = [
     {
         "name": "Martyr",
         "abilities": (
-            "*Venerated.* After a  **battle** where rival damages or destroys one of your buildings, secure the top card of the court deck.\n"
+            "*Venerated.* After a **battle** where rival destroys any of your ships in a system with your loyal city, gain a matching resource, and if they destroy one of your cities, secure the top card of the court deck.\n"
             "*Selfless.* When attacking in **battle,** when you destroy a city also damage all your ships in its system."
         ),
         "resources": ["Psionic", "Material"],
@@ -611,15 +611,14 @@ leaders = [
     {
         "name": "Nomad",
         "abilities": (
-            "*Versatile.* Your starports can **move** **battle** intercept and control like a ship. You place starports outside building slots\n"
-            "*Exorbitant.* You can only build starports at cities once per city each turn. It costs 2 build actions to build a starport. \n"
-            "*Fragile.* After you catapult **move** damage the starport you used."
+            "*Wayfaring.* When **moving** **must** take cities you control with you. Cities in gates match the resource types of each planet in its cluster. If there is no space on a planet place the city outside the building slots.\n"
+            "*Itinerant.* You cannot **Tax** cities on planets.\n"
         ),
-        "resources": ["Material", "Material"],
+        "resources": ["Material", "Fuel"],
         "setup": {
             "A": {"ships": 3, "building": "starport"},
             "B": {"ships": 3, "building": "city"},
-            "C": {"ships": 2, "building": "None"}
+            "C": {"ships": 3, "building": "None"}
         },
         "body_font_size": 18
     }
