@@ -4,7 +4,7 @@ leaders = [
         "name": "Kaiju",
         "abilities": (
             "*Devouring.* When you destroy a city, repair all your ships in its cluster.\n"
-            "*Feared.* When you  **tax** a city you control, damage it."
+            "*Feared.* When you **tax** a city you control, damage it."
         ),
         "resources": ["Weapon", "Material"],
         "setup": {
@@ -18,7 +18,7 @@ leaders = [
     {
         "name": "Shapeshifter",
         "abilities": (
-            "*Mimicry.* When any player **declares** **an** **ambition,** gain a resource of its type. (Weapon for Warlord, you choose Material or Fuel for Tycoon.)\n"
+            "*Mimicry.* When any player **declares** **an** **ambition**, gain a resource of its type. (Weapon for Warlord, you choose Material or Fuel for Tycoon.)\n"
             "*Flickering.* At the end of each chapter, discard all your resources, then gain 1 Material."
         ),
         "resources": ["Psionic", "Material"],
@@ -35,8 +35,8 @@ leaders = [
     {
         "name": "Sentient",
         "abilities": (
-            "*Formless.* At the start of each chapter, choose a gate. Until the end of the chapter, you may Catapult and  **build** ships there any number of times per turn. (You do not need any Loyal pieces to build them.)\n"
-            "*Shapeless.* In **setup,** scrap all your starports."
+            "*Formless.* At the start of each chapter, choose a gate. Until the end of the chapter, you may Catapult and **build** ships there any number of times per turn. (You do not need any Loyal pieces to build them.)\n"
+            "*Shapeless.* In **setup**, scrap all your starports."
         ),
         "resources": ["Fuel", "Psionic"],
         "setup": {
@@ -65,8 +65,8 @@ leaders = [
     {
         "name": "Smuggler",
         "abilities": (
-            "*Opportunistic.* When you  **battle** and roll any raid dice, you may steal 1 resource for free.\n"
-            "*Hunted.* After you destroy a building in  **battle,** the defender may move from adjacent systems into the system you just battled in."
+            "*Opportunistic.* When you **battle** and roll any raid dice, you may steal 1 resource for free.\n"
+            "*Hunted.* After you destroy a building in **battle**, the defender may move from adjacent systems into the system you just battled in."
         ),
         "resources": ["Fuel", "Weapon"],
         "setup": {
@@ -81,7 +81,7 @@ leaders = [
         "name": "General",
         "abilities": (
             "*Blitzing.* After you **tax** you may discard a resource to gain a weapon. You may a discard a weapon resource to ignore one rolled intercept.\n"
-            "*Reckless.* In  **battle,** you must always roll at least 1 die of each type if you can."
+            "*Reckless.* In **battle**, you must always roll at least 1 die of each type if you can."
         ),
         "resources": ["Weapon", "Weapon"],
         "setup": {
@@ -95,8 +95,8 @@ leaders = [
     {
         "name": "Necromancer",
         "abilities": (
-            "*Arising.* After you destroy a piece in  **battle,** you may place a matching fresh loyal piece there..\n"
-            "*Gravebound.* In **setup,** damage both of your buildings. You cannot  **build** fresh pieces and place them damaged instead. You cannot repair buildings."
+            "*Arising.* After you destroy a piece in **battle**, you may place a matching fresh loyal piece there..\n"
+            "*Gravebound.* In **setup**, damage both of your buildings. You cannot **build** fresh pieces and place them damaged instead. You cannot repair buildings."
         ),
         "resources": ["Psionic", "Weapon"],
         "setup": {
@@ -110,8 +110,8 @@ leaders = [
     {
         "name": "Composer",
         "abilities": (
-            "*Elegant.* When you spend a pip to repair, gain 1 resource.\n"
-            "*Obsessed.* You cannot  **build** or **tax** in clusters where any of your pieces are damaged."
+            "*Elegant.* When you spend a pip to **repair**, gain 1 resource.\n"
+            "*Obsessed.* You cannot **build** or **tax** in clusters where any of your pieces are damaged."
         ),
         "resources": ["Material", "Weapon"],
         "setup": {
@@ -125,7 +125,7 @@ leaders = [
     {
         "name": "Maw",
         "abilities": (
-            "*Voracious.* When you  **declare** **an** **ambition,** place a ship anywhere on the map.\n"
+            "*Voracious.* When you **declare** **an** **ambition**, place a ship anywhere on the map.\n"
             "*Crushing.* When more than 1 Rival ship moves into a planet you control, you destroy 1 of those ships.\n"
             "*Erratic.* In scoring, destroy 1 loyal fresh ship for each ambition you win."
         ),
@@ -142,7 +142,7 @@ leaders = [
         "name": "Saint",
         "abilities": (
             "*Sacred.* At the end of each chapter, for each ambition a Rival won that chapter, they must give you a resource. If they can’t, they must give you a Guild card.\n"
-            "*Blessed.* Before scoring, you may  **declare** **an** **ambition.**\n"
+            "*Blessed.* Before scoring, you may **declare** **an** **ambition**.\n"
             "*Corrupted.* After sacred, discard 1 resource per ambition you won this chapter."
         ),
         "resources": ["Psionic", "Relic"],
@@ -158,7 +158,7 @@ leaders = [
         "name": "Seer",
         "abilities": (
             "*Reflective.* Once per turn, you may discard a guild card to secure one in the court with no agents on it.\n"
-            "*Unstable.* Discard a guild card for no effect if you have two or more of the same type."
+            "*Unstable.* Discard a guild card for no effect if you have two or more of the same resource type."
         ),
         "resources": ["Psionic", "Psionic"],
         "setup": {
@@ -172,10 +172,10 @@ leaders = [
     {
         "name": "Terrestrial",
         "abilities": (
-            "*Symbiotic.* You may  **build** in adjacent systems with no rival pieces.\n"
-            "*Fertile.* Gain 1 Material when you  **build** a starport; gain 1 matching resource when you  **build** a city.\n"
+            "*Symbiotic.* You may **build** in adjacent systems with no rival pieces.\n"
+            "*Fertile.* Gain 1 Material when you **build** a starport; gain 1 matching resource when you **build** a city.\n"
             "*Sprouting.* At the start of each chapter, you may replace one Loyal building with a ship.\n"
-            "*Rooted.* You cannot  **battle** in clusters where you have no buildings."
+            "*Rooted.* You cannot **battle** in clusters where you have no buildings."
         ),
         "resources": ["Material", "Relic"],
         "setup": {
@@ -189,7 +189,7 @@ leaders = [
     {
         "name": "Manipulator",
         "abilities": (
-            "*Clever.* When you  **declare** **an** **ambition,** you may declare an adjacent one instead.\n"
+            "*Clever.* When you **declare** **an** **ambition**, you may declare an adjacent one instead.\n"
             "*Fraudulent.* When an ambition has multiple markers, you only score Power for the highest one."
         ),
         "resources": ["Weapon", "Relic"],
@@ -204,7 +204,7 @@ leaders = [
     {
         "name": "Sentinel",
         "abilities": (
-            "*Assertive.* When attacking in  **battle,** deal 1 extra hit.\n"
+            "*Assertive.* When attacking in **battle**, deal 1 extra hit.\n"
             "*Cautious.* You cannot roll more Raid and Assault dice than you have fresh attacking ships."
         ),
         "resources": ["Material", "Fuel"],
@@ -223,7 +223,7 @@ leaders = [
         "abilities": (
             "*Judicious.* In scoring, if any players tie for first in an ambition, you gain the initiative.\n"
             "*Immunized.* If you have the initiative you don't provoke Outrage.\n"
-            "*Constrained.* In  **battle,** when you Ransack the Court, you take a normal secure action instead."
+            "*Constrained.* In **battle**, when you Ransack the Court, you take a normal secure action instead."
         ),
         "resources": ["Psionic", "Fuel"],
         "setup": {
@@ -239,7 +239,7 @@ leaders = [
     {
         "name": "Ghost",
         "abilities": (
-            "*Manifested.* When you Catapult **move,** your ships may move through one Rival-controlled system. If you move through one, you may influence a card after the move.\n"
+            "*Manifested.* When you Catapult **move**, your ships may move through one Rival-controlled system. If you move through one, you may influence a card after the move.\n"
             "*Directionless.* You cannot **move** each ship more than once per turn. You cannot end your Catapult **move** in the system you catapulted from."
         ),
         "resources": ["Fuel", "Fuel"],
@@ -254,8 +254,8 @@ leaders = [
     {
         "name": "Chosen",
         "abilities": (
-            "*Hallowed.* In **setup,** choose a ship you place to be the chosen ship. When anyone destroys it, they place it fresh in any system. Once per turn, after it **moves,* it may **battle** by itself. In  **battle,** the die it rolls has the following effects: Skirmish: double damage; Assault: self hit gives 1 key, intercept gives 2 keys; Raid: each key repairs 1 attacking Loyal ship after the battle.\n"
-            "*Forsaken.* If you have not attacked with the chosen ship this chapter, you cannot  **secure**  or  **declare** **an** **ambition.**"
+            "*Hallowed.* In **setup**, choose a ship you place to be the chosen ship. When anyone destroys it, they place it fresh in any system. Once per turn, after it **moves*, it may **battle** by itself. In **battle**, the die it rolls has the following effects: Skirmish: double damage; Assault: self hit gives 1 key, intercept gives 2 keys; Raid: each key repairs 1 attacking Loyal ship after the battle.\n"
+            "*Forsaken.* If you have not attacked with the chosen ship this chapter, you cannot **secure**  or **declare** **an** **ambition**."
         ),
         "resources": ["Relic", "Fuel"],
         "setup": {
@@ -269,8 +269,8 @@ leaders = [
     {
         "name": "Sage",
         "abilities": (
-            "*Arcane.* In **setup,** gain 5 extra Lore cards.\n"
-            "*Elusive.* Players may influence and  **secure**  your lore. When you  **secure**  your own lore, you may discard it to gain a new one. At the end of each chapter, gain a lore per lore that was taken from you by other players. If the lore deck is empty, reshuffle the lore discard."
+            "*Arcane.* In **setup**, gain 5 extra Lore cards.\n"
+            "*Elusive.* Players may influence and **secure**  your lore. When you **secure**  your own lore, you may discard it to gain a new one. At the end of each chapter, gain a lore per lore that was taken from you by other players. If the lore deck is empty, reshuffle the lore discard."
         ),
         "resources": ["Relic", "Relic"],
         "setup": {
@@ -299,9 +299,9 @@ leaders = [
     {
         "name": "Engineer",
         "abilities": (
-            "*Versatile.* Your starports can **move,**  **battle** intercept and control like a ship. You place starports outside building slots.\n"
-            "*Exorbitant.* You can only  **build** starports at cities, once per city each turn. It costs 2  **build** actions to  **build** a starport.\n"
-            "*Fragile.* After you catapult **move,** damage the starport you used. "
+            "*Versatile.* Your starports can **move**, **battle** intercept and control like a ship. You place starports outside building slots.\n"
+            "*Exorbitant.* You can only **build** starports at cities, once per city each turn. It costs 2 **build** actions to **build** a starport.\n"
+            "*Fragile.* After you catapult **move**, damage the starport you used. "
         ),
         "resources": ["Material", "Material"],
         "setup": {
@@ -315,8 +315,8 @@ leaders = [
     {
         "name": "Magician",
         "abilities": (
-            "*Illusive.* After you  **tax** a city, you may place it in any building slot you control.\n"
-            "*Unmasked.* When you  **tax** a rival city, you only gain a captive or resource, not both."
+            "*Illusive.* After you **tax** a city, you may place it in any building slot you control.\n"
+            "*Unmasked.* When you **tax** a rival city, you only gain a captive or resource, not both."
         ),
         "resources": ["Psionic", "Material"],
         "setup": {
@@ -331,7 +331,7 @@ leaders = [
         "name": "Weaver",
         "abilities": (
             "*Interwoven.* Before you **secure** a card in the court, you may influence an adjacent card.\n"
-            "*Tangled.* You must discard a resource to  **secure**  a card with a 2 or more Rival agents."
+            "*Tangled.* You must discard a resource to **secure**  a card with a 2 or more Rival agents."
         ),
         "resources": ["Relic", "Fuel"],
         "setup": {
@@ -345,7 +345,7 @@ leaders = [
     {
         "name": "Dreamer",
         "abilities": (
-            "*Lucid.* When you **declare** **an** **ambition,** gain 1 Lore card.\n"
+            "*Lucid.* When you **declare** **an** **ambition**, gain 1 Lore card.\n"
             "*Blurred.* Your lore cards have a raid cost of 3 keys."
         ),
         "resources": ["Psionic", "Fuel"],
@@ -360,7 +360,7 @@ leaders = [
     {
         "name": "Seeker",
         "abilities": (
-            "*Inquisitive.*  When you copy or pivot to  **tax,** gain **any** additional resource if it’s a type you haven’t taxed this chapter.\n"
+            "*Inquisitive.*  When you copy or pivot to **tax**, gain **any** additional resource if it’s a type you haven’t taxed this chapter.\n"
             "*Distracted.* After scoring tycoon keeper or empath, discard a refsource matching that ambition."
         ),
         "resources": ["Material", "Relic"],
@@ -375,7 +375,7 @@ leaders = [
     {
         "name": "Herald",
         "abilities": (
-            "*Farsighted.* After you  **secure** , look at the top 3 cards of the Court deck, keep 1 on top, put 1 in the court and bury 1.\n"
+            "*Farsighted.* After you **secure** , look at the top 3 cards of the Court deck, keep 1 on top, put 1 in the court and bury 1.\n"
             "*Hasty.* After you discard a guild card with it's Prelude action, shuffle it back into the court deck. "
         ),
         "resources": ["Psionic", "Relic"],
@@ -407,8 +407,8 @@ leaders = [
     {
         "name": "Architect",
         "abilities": (
-            "*Visionary.* You may  **build** using repair actions.\n"
-            "*Meticulous.* You cannot  **tax** if any of your pieces are damaged."
+            "*Visionary.* You may **build** using **repair** actions.\n"
+            "*Meticulous.* You cannot **tax** if any of your pieces are damaged."
         ),
         "resources": ["Material", "Fuel"],
         "setup": {
@@ -423,7 +423,7 @@ leaders = [
         "name": "Martyr",
         "abilities": (
             "*Venerated.* After a **battle** where rival destroys any of your ships in a system with your loyal city, gain a matching resource, and if they destroy one of your cities, secure the top card of the court deck.\n"
-            "*Selfless.* When attacking in **battle,** when you destroy a city also damage all your ships in its system."
+            "*Selfless.* When attacking in **battle**, when you destroy a city also damage all your ships in its system."
         ),
         "resources": ["Psionic", "Material"],
         "setup": {
@@ -438,7 +438,7 @@ leaders = [
     {
         "name": "Scourge",
         "abilities": (
-            "*Pyromaniacal.* After a  **battle** where you destroy a city, destroy all damaged pieces in its system if you control it's system.\n"
+            "*Pyromaniacal.* After a **battle** where you destroy a city, destroy all damaged pieces in its system if you control it's system.\n"
             "*Insatiable.* At the end of each chapter, if you did not destroy and buildings this chapter, destroy a loyal city."
         ),
         "resources": ["Weapon", "Fuel"],
@@ -470,7 +470,7 @@ leaders = [
     {
         "name": "Feral",
         "abilities": (
-            "*Savage.* When you  **battle** in a system with no buildings, collect 1 extra die.\n"
+            "*Savage.* When you **battle** in a system with no buildings, collect 1 extra die.\n"
             "*Uncivilized.* When you influence a card with any rival agents, damage one of your pieces."
         ),
         "resources": ["Weapon", "Fuel"],
@@ -501,7 +501,7 @@ leaders = [
         "name": "Puppeteer",
         "abilities": (
             "*Guiding.* Once per round, when a rival tries to influence a card with one of your agents, you may force him to influence another card.\n"
-            "*Straining.* To  **secure**  a card with a rival agent on it, you must have 2 more agents on it than them instead of 1."
+            "*Straining.* To **secure**  a card with a rival agent on it, you must have 2 more agents on it than them instead of 1."
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
@@ -516,7 +516,7 @@ leaders = [
         "name": "Automaton",
         "abilities": (
             "*Overclocked.* If you spend 2 or more resources this turn, you may influence at the end of your prelude.\n"
-            "*Wasteful.* If you  **secure**  a card using 3 or more agents, discard a resource."
+            "*Wasteful.* If you **secure**  a card using 3 or more agents, discard a resource."
         ),
         "resources": ["Material", "Fuel"],
         "setup": {
@@ -564,7 +564,7 @@ leaders = [
     {
         "name": "Bargainer",
         "abilities": (
-            "*Leverage.* You may return a player’s trophy or captive to  **tax** one of their cities.\n"
+            "*Leverage.* You may return a player’s trophy or captive to **tax** one of their cities.\n"
             "*Obliged.* You must return a trophy or captive when you when you score first place. If you can’t, you get the second-place points and don’t get the city bonus."
         ),
         "resources": ["Relic", "Material"],
@@ -628,7 +628,7 @@ leaders = [
         "name": "Iconoclast",
         "abilities": (
             "*Radical.* When you may discard a card to seize, you may steal a guild card from a player which type matches your or their outrage.\n"
-            "*Fervent.* In **setup,** provoke outrage in any three resource types."
+            "*Fervent.* In **setup**, provoke outrage in any three resource types."
         ),
         "resources": ["Psionic", "Weapon"],
         "setup": {
@@ -645,7 +645,7 @@ leaders = [
         "name": "Fiend",
         "abilities": (
             "*Gluttonous.* When you provoke outrage, clear it if you already have it outraged; if you do, gain that resource thrice.\n"
-            "*Frenzied.* In **setup,** provoke outrage in all resource types. (Before you gain resources.)"
+            "*Frenzied.* In **setup**, provoke outrage in all resource types. (Before you gain resources.)"
         ),
         "resources": ["Fuel", "Material"],
         "setup": {
@@ -662,7 +662,7 @@ leaders = [
         "name": "Wheeler-dealer",
         "abilities": (
             "*Cunning.* **Prelude:** You may provoke outrage in a resource type, then secure cards from the top of the deck matching the amount of cards you just discarded. Then gain **any** resources matching the amount you've just discarded.\n"
-            "*Irate.* In **setup,** provoke relic or psionic outrage."
+            "*Irate.* In **setup**, provoke relic or psionic outrage."
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
@@ -726,7 +726,7 @@ leaders = [
         "name": "Scavenger",
         "abilities": (
             "**Scavenge** **(Tax):** Damage a fresh rival ship in a system you control. Then gain a resource matching that system.\n"
-            "*Broken* *Reach.* In **setup,** all players Provoke Material Outrage."
+            "*Broken* *Reach.* In **setup**, all players Provoke Material Outrage."
         ),
         "resources": ["Material", "Fuel"],
         "setup": {
@@ -742,8 +742,8 @@ leaders = [
     {
         "name": "Diplomat",
         "abilities": (
-            "*Canny.* Before **scoring** **ambitions,** you **secure** all cards where you have the most agents.\n"
-            "*Greedy.* In **setup,** place an agent on your Relic Outrage slot."
+            "*Canny.* Before **scoring** **ambitions**, you **secure** all cards where you have the most agents.\n"
+            "*Greedy.* In **setup**, place an agent on your Relic Outrage slot."
         ),
         "resources": ["Psionic", "Fuel"],
         "setup": {

@@ -97,7 +97,49 @@ def create_lore_card(input_data):
     line_y = title_y + (title_bbox[3] - title_bbox[1]) + 12
 
     # Text wrapping function
-    def wrap_text(text, font, max_width):
+    _TRAILING_PUNCT = set(",.;:!?)]}\"'”’»")
+
+    def _split_trailing_punct(token: str) -> tuple[str, str]:
+        trailing = ""
+        while token and token[-1] in _TRAILING_PUNCT:
+            trailing = token[-1] + trailing
+            token = token[:-1]
+        return token, trailing
+
+    def _parse_rich_token(token: str, font, italic_font, bold_font, bolditalic_font):
+        core, trailing = _split_trailing_punct(token)
+
+        font_to_use = font
+        text_to_draw = core
+        adjust_y = 0
+
+        if core.startswith("***") and core.endswith("***") and len(core) > 6:
+            text_to_draw = core[3:-3]
+            font_to_use = bolditalic_font
+            adjust_y = 4
+        elif core.startswith("**") and core.endswith("**") and len(core) > 4:
+            text_to_draw = core[2:-2]
+            font_to_use = bold_font
+            adjust_y = 4
+        elif core.startswith("*") and core.endswith("*") and len(core) > 2:
+            text_to_draw = core[1:-1]
+            font_to_use = italic_font
+            adjust_y = 3
+
+        return text_to_draw, trailing, font_to_use, adjust_y
+
+    def _measure_rich_token(token: str, font, italic_font, bold_font, bolditalic_font) -> int:
+        text_to_draw, trailing, font_to_use, _adjust_y = _parse_rich_token(
+            token, font, italic_font, bold_font, bolditalic_font
+        )
+        main_bbox = draw.textbbox((0, 0), text_to_draw, font=font_to_use)
+        main_width = main_bbox[2] - main_bbox[0]
+        if trailing:
+            trailing_bbox = draw.textbbox((0, 0), trailing, font=font)
+            main_width += trailing_bbox[2] - trailing_bbox[0]
+        return main_width
+
+    def wrap_text(text, font, italic_font, bold_font, bolditalic_font, max_width):
         paragraphs = text.split('\n')
         wrapped_lines = []
         for para in paragraphs:
@@ -109,7 +151,7 @@ def create_lore_card(input_data):
             current_line_width = 0
 
             for idx, word in enumerate(words):
-                word_width = draw.textbbox((0, 0), word, font=font)[2]
+                word_width = _measure_rich_token(word, font, italic_font, bold_font, bolditalic_font)
                 space_width = draw.textbbox((0, 0), " ", font=font)[2]
                 additional_width = word_width if idx == 0 else word_width + space_width
 
@@ -134,36 +176,30 @@ def create_lore_card(input_data):
         current_y = y
 
         for word in words:
-            font_to_use = font
-            text_to_draw = word
-
-            if word.startswith("***") and word.endswith("***") and len(word) > 6:
-                text_to_draw = word[3:-3]
-                font_to_use = bolditalic_font
-                adjust_y = 4
-            elif word.startswith("**") and word.endswith("**") and len(word) > 4:
-                text_to_draw = word[2:-2]
-                font_to_use = bold_font
-                adjust_y = 4
-            elif word.startswith("*") and word.endswith("*") and len(word) > 2:
-                text_to_draw = word[1:-1]
-                font_to_use = italic_font
-                adjust_y = 3
-            else:
-                adjust_y = 0
+            text_to_draw, trailing, font_to_use, adjust_y = _parse_rich_token(
+                word, font, italic_font, bold_font, bolditalic_font
+            )
 
             word_bbox = draw.textbbox((0, 0), text_to_draw, font=font_to_use)
             word_width = word_bbox[2] - word_bbox[0]
             draw.text((current_x, current_y + adjust_y), text_to_draw, font=font_to_use, fill="black")
+            current_x += word_width
+
+            if trailing:
+                trailing_bbox = draw.textbbox((0, 0), trailing, font=font)
+                trailing_width = trailing_bbox[2] - trailing_bbox[0]
+                draw.text((current_x, current_y + adjust_y), trailing, font=font, fill="black")
+                current_x += trailing_width
+
             space_width = draw.textbbox((0, 0), " ", font=font)[2]
-            current_x += word_width + space_width
+            current_x += space_width
 
         return current_y + line_height
 
     # Draw body text
     body_text = input_data.get('body', '')
     current_y = line_y + 18
-    for line in wrap_text(body_text, body_font, text_width):
+    for line in wrap_text(body_text, body_font, italic_font, bold_font, bolditalic_font, text_width):
         if not line.strip():
             current_y += 10
             continue
