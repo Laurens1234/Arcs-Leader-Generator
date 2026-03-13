@@ -254,7 +254,7 @@ leaders = [
     {
         "name": "Chosen",
         "abilities": (
-            "*Hallowed.* In **setup,** choose a ship you place to be the chosen ship. When anyone destroys it, they place it fresh in any system. Once per turn, after it **moves**, it may  **battle** by itself. In  **battle,** the die it rolls has the following effects: Skirmish: double damage; Assault: self hit gives 1 key, intercept gives 2 keys; Raid: each key repairs 1 attacking Loyal ship after the battle.\n"
+            "*Hallowed.* In **setup,** choose a ship you place to be the chosen ship. When anyone destroys it, they place it fresh in any system. Once per turn, after it **moves,* it may **battle** by itself. In  **battle,** the die it rolls has the following effects: Skirmish: double damage; Assault: self hit gives 1 key, intercept gives 2 keys; Raid: each key repairs 1 attacking Loyal ship after the battle.\n"
             "*Forsaken.* If you have not attacked with the chosen ship this chapter, you cannot  **secure**  or  **declare** **an** **ambition.**"
         ),
         "resources": ["Relic", "Fuel"],
@@ -330,7 +330,7 @@ leaders = [
     {
         "name": "Weaver",
         "abilities": (
-            "*Interwoven.* Before you  **secure**  a card in the court, you may influence an adjacent card.\n"
+            "*Interwoven.* Before you **secure** a card in the court, you may influence an adjacent card.\n"
             "*Tangled.* You must discard a resource to  **secure**  a card with a 2 or more Rival agents."
         ),
         "resources": ["Relic", "Fuel"],
@@ -345,7 +345,7 @@ leaders = [
     {
         "name": "Dreamer",
         "abilities": (
-            "*Lucid.* When you  **declare** **an** **ambition,** gain 1 Lore card.\n"
+            "*Lucid.* When you **declare** **an** **ambition,** gain 1 Lore card.\n"
             "*Blurred.* Your lore cards have a raid cost of 3 keys."
         ),
         "resources": ["Psionic", "Fuel"],
