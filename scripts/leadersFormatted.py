@@ -80,7 +80,7 @@ leaders = [
     {
         "name": "General",
         "abilities": (
-            "*Blitzing.* When you gain tax to gain a resource, you may discard it to gain a weapon instead. You may a discard weapons to ignore one rolled intercept.**\n"
+            "*Blitzing.* When you tax to gain a resource, you may discard it to gain a weapon instead. You may a discard a weapon resource to ignore one rolled intercept.\n"
             "*Reckless.* In  **battle,** you must always roll at least 1 dice of each type if you can."
         ),
         "resources": ["Weapon", "Weapon"],
@@ -628,10 +628,10 @@ leaders = [
     {
         "name": "Iconoclast",
         "abilities": (
-            "*Radical.* When you may discard a card to seize the initiative you may steal a guild card from a player which type matches your or their outrage.\n"
-            "*Fervent.* In **setup,** provoke outrage in any two resources."
+            "*Radical.* When you may discard a card to seize, you may steal a guild card from a player which type matches your or their outrage.\n"
+            "*Fervent.* In **setup,** provoke outrage in any three resource types."
         ),
-        "resources": ["Psionic", "Psionic"],
+        "resources": ["Psionic", "Weapon"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
