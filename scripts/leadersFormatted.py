@@ -248,7 +248,9 @@ leaders = [
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
         },
-        "body_font_size": 18
+        "body_font_size": 18,
+        "zoom": 1.25,
+        "boundary_shift": 0.2
     },
     # Chosen
     {
@@ -530,7 +532,7 @@ leaders = [
     {
         "name": "Golem",
         "abilities": (
-            "*Ironclad.* After a battle where one or more of your ships is destroyed, you may discard a resource to keep all destroyed ships damaged instead.\n"
+            "*Ironclad.* After a battle where one or more of your ships is destroyed, you may discard a resource to keep all your destroyed ships damaged instead.\n"
             "*Cold.* At the end of each chapter, destroy all damaged loyal ships."
         ),
         "resources": ["Material", "Fuel"],
@@ -671,7 +673,8 @@ leaders = [
             "C": {"ships": 3, "building": "None"}
         },
         "body_font_size": 18,
-        "zoom": 1
+        "zoom": 1,
+        "boundary_shift": 0.1
     },
     # Curator
     {
