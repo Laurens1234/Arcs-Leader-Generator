@@ -117,6 +117,13 @@ If the exported PNG looks a little blurry when you zoom in, that usually means t
     python scripts/batchLoreCards.py --render-scale 3
     ```
 
+    2 = noticeably sharper text when zoomed, file sizes still reasonable.
+
+    3 = very crisp when zoomed, but slower + bigger PNGs (good if you’re printing or doing close inspection).
+
+    4 = only worth it if you really need maximum sharpness; file sizes get huge.
+
+
 You can set these per-leader in `scripts/leadersFormatted.py`. Example:
 
 ```python
