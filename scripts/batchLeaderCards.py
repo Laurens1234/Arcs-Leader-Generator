@@ -1,5 +1,6 @@
 import os
 import sys
+import argparse
 
 script_dir = os.path.dirname(os.path.dirname(__file__))
 sys.path.append(script_dir)
@@ -33,7 +34,37 @@ def _select_leaders(all_leaders, requested_names):
 
 
 def main(argv):
-    requested_names = argv[1:]
+    parser = argparse.ArgumentParser(description="Generate leader cards.")
+    parser.add_argument(
+        "--render-scale",
+        type=int,
+        dest="render_scale",
+        default=None,
+        help="Render the whole card at this scale (1-4). Overrides per-card setting if provided.",
+    )
+    upscale_group = parser.add_mutually_exclusive_group()
+    upscale_group.add_argument(
+        "--allow-upscale",
+        action="store_true",
+        dest="allow_upscale",
+        help="Allow upscaling low-res artwork (may look blurry). Overrides per-card setting.",
+    )
+    upscale_group.add_argument(
+        "--no-allow-upscale",
+        action="store_false",
+        dest="allow_upscale",
+        help="Disallow upscaling low-res artwork (default behavior). Overrides per-card setting.",
+    )
+    parser.set_defaults(allow_upscale=None)
+    parser.add_argument(
+        "names",
+        nargs="*",
+        help="Optional leader names to generate (case-insensitive). If omitted, generates all leaders.",
+    )
+
+    args = parser.parse_args(argv[1:])
+
+    requested_names = args.names
     selected_leaders, missing = _select_leaders(leaders, requested_names)
 
     if missing:
@@ -48,9 +79,15 @@ def main(argv):
 
     for leader in selected_leaders:
         try:
-            name = leader["name"]
+            leader_payload = dict(leader)
+            if args.render_scale is not None:
+                leader_payload["render_scale"] = args.render_scale
+            if args.allow_upscale is not None:
+                leader_payload["allow_upscale"] = args.allow_upscale
+
+            name = leader_payload["name"]
             print(f"Creating image for: {name}")
-            create_leader_image(leader)
+            create_leader_image(leader_payload)
             success_count += 1
         except Exception as e:
             print(f"Error generating image for {leader['name']}: {e}")

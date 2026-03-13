@@ -1,7 +1,19 @@
 import os
+import argparse
 
 from loreCardsFormatted import lore_cards
 from PIL import Image, ImageDraw, ImageFont
+
+
+_DEFAULT_OUTPUT_DPI = (300, 300)
+
+
+def _clamp_int(value, minimum, maximum, default):
+    try:
+        value = int(value)
+    except Exception:
+        return default
+    return max(minimum, min(maximum, value))
 
 
 def create_lore_card(input_data):
@@ -31,8 +43,20 @@ def create_lore_card(input_data):
     # Output path
     output_image_path = os.path.join(result_path, f"{input_data['name']}_Lore_Card.png")
 
+    # Rendering scale: render the whole card at a higher resolution so text stays sharp when zoomed.
+    # Set render_scale=1 to preserve original pixel dimensions.
+    render_scale = _clamp_int(input_data.get("render_scale", 2), 1, 4, 2)
+
+    def _s(value):
+        if isinstance(value, tuple):
+            return tuple(int(v * render_scale) for v in value)
+        return int(value * render_scale)
+
     # Load the lore frame to get card dimensions
     lore_frame = Image.open(lore_frame_path).convert("RGBA")
+
+    if render_scale != 1:
+        lore_frame = lore_frame.resize(_s(lore_frame.size), Image.Resampling.LANCZOS)
     card_width, card_height = lore_frame.size
 
     # Create base canvas
@@ -47,11 +71,25 @@ def create_lore_card(input_data):
         target_width = card_width
         aspect_ratio = lore_img.height / lore_img.width
         target_height = int(target_width * aspect_ratio)
+
+        # By default, prefer keeping artwork full-size even if it requires upscaling.
+        # Set allow_upscale=False to clamp to source resolution (avoids blur but may look smaller).
+        allow_upscale = bool(input_data.get("allow_upscale", True))
+        if not allow_upscale:
+            max_w = lore_img.width * render_scale
+            max_h = lore_img.height * render_scale
+            if target_width > max_w or target_height > max_h:
+                target_width = min(target_width, max_w)
+                target_height = int(target_width * aspect_ratio)
+                print(
+                    f"Note: '{input_data['name']}' lore art is smaller than the frame width; "
+                    f"not upscaling to avoid blur. Set allow_upscale=True to keep it full-size."
+                )
         
         lore_img = lore_img.resize((target_width, target_height), Image.Resampling.LANCZOS)
         
         # Position at top left (full width)
-        lore_x = 0
+        lore_x = (card_width - lore_img.width) // 2
         lore_y = 0
         
         base_img.paste(lore_img, (lore_x, lore_y), lore_img)
@@ -67,18 +105,23 @@ def create_lore_card(input_data):
 
     # Load fonts
     try:
-        title_font = ImageFont.truetype(custom_font_path, input_data.get("title_font_size", 25))
-        footer_font = ImageFont.truetype(custom_font_path, input_data.get("footer_font_size", 14))
-        body_font = ImageFont.truetype(neue_kabel_font_path, input_data.get("body_font_size", 18))
-        italic_font = ImageFont.truetype(neue_kabel_italic_path, input_data.get("body_font_size", 18))
-        bold_font = ImageFont.truetype(neue_kabel_bold_path, input_data.get("body_font_size", 18))
-        bolditalic_font = ImageFont.truetype(neue_kabel_bolditalic_path, input_data.get("body_font_size", 18))
+        title_font_size = input_data.get("title_font_size", 25)
+        footer_font_size = input_data.get("footer_font_size", 14)
+        body_font_size = input_data.get("body_font_size", 18)
+
+        title_font = ImageFont.truetype(custom_font_path, _s(title_font_size))
+        footer_font = ImageFont.truetype(custom_font_path, _s(footer_font_size))
+        body_font = ImageFont.truetype(neue_kabel_font_path, _s(body_font_size))
+        italic_font = ImageFont.truetype(neue_kabel_italic_path, _s(body_font_size))
+        bold_font = ImageFont.truetype(neue_kabel_bold_path, _s(body_font_size))
+        bolditalic_font = ImageFont.truetype(neue_kabel_bolditalic_path, _s(body_font_size))
     except IOError as e:
         print(f"Font loading error: {e}")
         title_font = body_font = italic_font = bold_font = bolditalic_font = footer_font = ImageFont.load_default()
+        body_font_size = input_data.get("body_font_size", 18)
 
     # Text area dimensions (adjust these based on the lore frame layout)
-    text_margin = 40
+    text_margin = _s(40)
     text_x0 = text_margin
     text_x1 = card_width - text_margin
     text_width = text_x1 - text_x0
@@ -94,7 +137,7 @@ def create_lore_card(input_data):
     draw.text((title_x, title_y), title_text, fill="black", font=title_font)
 
     # Calculate line_y for body text positioning (no line drawn)
-    line_y = title_y + (title_bbox[3] - title_bbox[1]) + 12
+    line_y = title_y + (title_bbox[3] - title_bbox[1]) + _s(12)
 
     # Text wrapping function
     _TRAILING_PUNCT = set(",.;:!?)]}\"'”’»")
@@ -116,15 +159,15 @@ def create_lore_card(input_data):
         if core.startswith("***") and core.endswith("***") and len(core) > 6:
             text_to_draw = core[3:-3]
             font_to_use = bolditalic_font
-            adjust_y = 4
+            adjust_y = _s(4)
         elif core.startswith("**") and core.endswith("**") and len(core) > 4:
             text_to_draw = core[2:-2]
             font_to_use = bold_font
-            adjust_y = 4
+            adjust_y = _s(4)
         elif core.startswith("*") and core.endswith("*") and len(core) > 2:
             text_to_draw = core[1:-1]
             font_to_use = italic_font
-            adjust_y = 3
+            adjust_y = _s(3)
 
         return text_to_draw, trailing, font_to_use, adjust_y
 
@@ -170,7 +213,7 @@ def create_lore_card(input_data):
 
     # Rich text rendering function
     def draw_rich_text(draw, text, font, italic_font, bold_font, bolditalic_font, x, y, max_width, line_height):
-        line_height = line_height * (input_data.get("body_font_size", 18) / 18)
+        line_height = line_height * (body_font_size / 18)
         words = text.split(" ")
         current_x = x
         current_y = y
@@ -198,16 +241,18 @@ def create_lore_card(input_data):
 
     # Draw body text
     body_text = input_data.get('body', '')
-    current_y = line_y + 18
+    current_y = line_y + _s(18)
     for line in wrap_text(body_text, body_font, italic_font, bold_font, bolditalic_font, text_width):
         if not line.strip():
-            current_y += 10
+            current_y += _s(10)
             continue
-        current_y = draw_rich_text(draw, line, body_font, italic_font, bold_font, bolditalic_font, text_x0, current_y, text_width, 22)
+        current_y = draw_rich_text(draw, line, body_font, italic_font, bold_font, bolditalic_font, text_x0, current_y, text_width, _s(22))
 
     # Load and paste footer image on top of everything
     try:
         footer_img = Image.open(footer_image_path).convert("RGBA")
+        if render_scale != 1:
+            footer_img = footer_img.resize(_s(footer_img.size), Image.Resampling.LANCZOS)
         # Position footer at the bottom center
         footer_x = (card_width - footer_img.width) // 2
         footer_y = card_height - footer_img.height
@@ -222,8 +267,8 @@ def create_lore_card(input_data):
     footer_center = input_data.get('footer', '')  # Keep 'footer' as center for backwards compatibility
     footer_right = input_data.get('footer_right', '')
     
-    footer_y = card_height - 45  # Position near bottom
-    footer_margin = 45  # Margin from edges
+    footer_y = card_height - _s(45)  # Position near bottom
+    footer_margin = _s(45)  # Margin from edges
     
     # Draw left footer text (black)
     if footer_left:
@@ -240,7 +285,7 @@ def create_lore_card(input_data):
     if footer_right:
         footer_bbox = draw.textbbox((0, 0), footer_right, font=footer_font)
         footer_width = footer_bbox[2] - footer_bbox[0]
-        footer_x = card_width - footer_margin - footer_width + 5
+        footer_x = card_width - footer_margin - footer_width + _s(5)
         draw.text((footer_x, footer_y), footer_right, fill="black", font=footer_font)
 
     # Final crop (same as leader cards for consistency)
@@ -256,20 +301,49 @@ def create_lore_card(input_data):
     os.makedirs(result_path, exist_ok=True)
 
     final_img = final_crop(base_img)
-    final_img.save(output_image_path)
+    final_img.save(output_image_path, dpi=_DEFAULT_OUTPUT_DPI)
     print(f"Lore card saved at {output_image_path}")
     
     return output_image_path
 
 
-def generate_all_lore_cards():
+def generate_all_lore_cards(render_scale=None, allow_upscale=None):
     """Generate all lore cards defined in the lore_cards list."""
     for lore_card in lore_cards:
         try:
-            create_lore_card(lore_card)
+            lore_payload = dict(lore_card)
+            if render_scale is not None:
+                lore_payload["render_scale"] = render_scale
+            if allow_upscale is not None:
+                lore_payload["allow_upscale"] = allow_upscale
+            create_lore_card(lore_payload)
         except Exception as e:
             print(f"Error generating lore card '{lore_card.get('name', 'Unknown')}': {e}")
 
 
 if __name__ == "__main__":
-    generate_all_lore_cards()
+    parser = argparse.ArgumentParser(description="Generate lore cards.")
+    parser.add_argument(
+        "--render-scale",
+        type=int,
+        dest="render_scale",
+        default=None,
+        help="Render the whole card at this scale (1-4). Overrides per-card setting if provided.",
+    )
+    upscale_group = parser.add_mutually_exclusive_group()
+    upscale_group.add_argument(
+        "--allow-upscale",
+        action="store_true",
+        dest="allow_upscale",
+        help="Allow upscaling low-res artwork (may look blurry). Overrides per-card setting.",
+    )
+    upscale_group.add_argument(
+        "--no-allow-upscale",
+        action="store_false",
+        dest="allow_upscale",
+        help="Disallow upscaling low-res artwork (default behavior). Overrides per-card setting.",
+    )
+    parser.set_defaults(allow_upscale=None)
+
+    args = parser.parse_args()
+    generate_all_lore_cards(render_scale=args.render_scale, allow_upscale=args.allow_upscale)

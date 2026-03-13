@@ -56,6 +56,67 @@ Leader cards will be saved in the `results/` folder.
 - **zoom**: : A numeric multiplier applied to the leader artwork (e.g., `1.5` for 150%). Zooming enlarges the image and may cause the left/right edges of the card to be cropped, which is expected when zoom > 1.
 - **boundary_shift**: : A fractional value that moves the card image boundaries up or down. Positive values move the top and bottom boundaries lower on the card (e.g., `0.25` moves them 25% lower), negative values move them up. This affects how the artwork is fitted and where its bottom aligns relative to the title area.
 
+**Image Quality / Blurry Text When Zooming**
+
+If the exported PNG looks a little blurry when you zoom in, that usually means the image simply doesn’t have enough pixels (the base templates are relatively small). The generator supports rendering the whole card at a higher internal resolution so the text stays crisp when zoomed.
+
+- **render_scale** (recommended): Integer `1`–`4` (default: `2`). Renders the entire card at `render_scale×` resolution (fonts and coordinates scale with it). Higher values look sharper when zoomed, but generate larger output files.
+- **allow_upscale**: Boolean (default: `True`). Keeps artwork filling the available space even when the source image is smaller (it will upscale, which can look blurry). Set `allow_upscale=False` to clamp to the source resolution (sharper, but the artwork may appear smaller).
+- **Output DPI metadata**: Saved PNGs include ~300 DPI metadata. This doesn’t add pixels by itself, but it helps some print/export tools interpret the image size more predictably.
+
+**Apply to One Card vs All Cards**
+
+- **One card**: Add `render_scale` / `allow_upscale` to that specific leader (in `scripts/leadersFormatted.py`) or lore card (in `scripts/loreCardsFormatted.py`).
+
+    Example (one leader):
+
+    ```python
+    {
+            "name": "Kaiju",
+            "abilities": (...),
+            "resources": ["Weapon", "Material"],
+            "setup": {...},
+            "render_scale": 3,
+            "allow_upscale": False,
+    }
+    ```
+
+- **All cards** (global default): Change the default in the generator scripts.
+
+    Leader cards default is controlled in `scripts/LeaderimageScript.py` via:
+
+    ```python
+    render_scale = _clamp_int(input_data.get("render_scale", 2), 1, 4, 2)
+    ```
+
+    Lore cards default is controlled in `scripts/batchLoreCards.py` via:
+
+    ```python
+    render_scale = _clamp_int(input_data.get("render_scale", 2), 1, 4, 2)
+    ```
+
+    To make *everything* render at 3× by default, change the `2` to `3` in those lines.
+
+- **All cards (one-off from the terminal)**: Pass flags to the batch scripts. If you don’t pass a flag, the script uses the existing per-card setting or the built-in default.
+
+    Generate all leaders at 3×:
+
+    ```bash
+    python scripts/batchLeaderCards.py --render-scale 3
+    ```
+
+    Generate just one leader at 4× and allow art upscaling:
+
+    ```bash
+    python scripts/batchLeaderCards.py --render-scale 4 --allow-upscale Kaiju
+    ```
+
+    Generate lore cards at 3×:
+
+    ```bash
+    python scripts/batchLoreCards.py --render-scale 3
+    ```
+
 You can set these per-leader in `scripts/leadersFormatted.py`. Example:
 
 ```python
@@ -65,7 +126,9 @@ You can set these per-leader in `scripts/leadersFormatted.py`. Example:
     "resources": ["Psionic", "Fuel"],
     "body_font_size": 18,
     "zoom": 1.45,
-    "boundary_shift": 0.33
+    "boundary_shift": 0.33,
+    "render_scale": 2,      # Optional: 1–4 (higher = sharper when zoomed)
+    "allow_upscale": False  # Optional: keep small art from being stretched
 }
 ```
 ### Generate Lore Cards
@@ -89,7 +152,9 @@ Add lore cards to `loreCardsFormatted.py` in this format:
     "footer": "Lore",                # Center footer text (white)
     "footer_right": "29",            # Right footer text (black)
     "footer_font_size": 16,          # Optional: footer text size (default: 14)
-    "body_font_size": 18             # Optional: body text size (default: 18)
+    "body_font_size": 18,            # Optional: body text size (default: 18)
+    "render_scale": 2,               # Optional: 1–4 (higher = sharper when zoomed)
+    "allow_upscale": False           # Optional: keep small lore art from being stretched
 }
 ```
 
