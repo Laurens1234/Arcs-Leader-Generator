@@ -183,7 +183,7 @@ leaders = [
             "B": {"ships": 3, "building": "city"},
             "C": {"ships": 2, "building": "None"}
         },
-        "body_font_size": 16
+        "body_font_size": 18
     },
     # Manipulator
     {
@@ -256,7 +256,7 @@ leaders = [
     {
         "name": "Chosen",
         "abilities": (
-            "*Hallowed.* In **setup**, choose a ship you place to be the chosen ship. When anyone destroys it, they place it fresh in any system. Once per turn, after it **moves**, it may **battle** by itself. In **battle**, the die it rolls has the following effects: Skirmish: double damage; Assault: self hit gives 1 key, intercept gives 2 keys; Raid: each key repairs 1 attacking Loyal ship after the battle.\n"
+            "*Hallowed.* In **setup**, choose a ship you place to be the chosen ship. When anyone destroys it, they place it fresh in any system. Once per turn, after it **moves**, it may battle by itself. In battle, the die it rolls has its result count twice.\n"
             "*Forsaken.* If you have not attacked with the chosen ship this chapter, you cannot **secure**  or **declare** **an** **ambition**."
         ),
         "resources": ["Relic", "Fuel"],
@@ -265,7 +265,7 @@ leaders = [
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
         },
-        "body_font_size": 15
+        "body_font_size": 18
     },
     # Sage
     {
@@ -655,7 +655,7 @@ leaders = [
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 3, "building": "None"}
         },
-        "body_font_size": 17,
+        "body_font_size": 18,
         "zoom": 1,
         "boundary_shift": 0.35
     },

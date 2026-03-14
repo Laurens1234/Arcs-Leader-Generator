@@ -99,16 +99,16 @@ If the exported PNG looks a little blurry when you zoom in, that usually means t
 
 - **All cards (one-off from the terminal)**: Pass flags to the batch scripts. If you don’t pass a flag, the script uses the existing per-card setting or the built-in default.
 
-    Generate all leaders at 3×:
+    Generate all leaders at 2×:
 
     ```bash
-    python scripts/batchLeaderCards.py --render-scale 3
+    python scripts/batchLeaderCards.py --render-scale 2
     ```
 
-    Generate just one leader at 4× and allow art upscaling:
+    Generate just one leader at 2× and allow art upscaling:
 
     ```bash
-    python scripts/batchLeaderCards.py --render-scale 4 --allow-upscale Kaiju
+    python scripts/batchLeaderCards.py --render-scale 2 --allow-upscale Kaiju
     ```
 
     Generate lore cards at 3×:
