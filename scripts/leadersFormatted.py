@@ -517,7 +517,7 @@ leaders = [
     {
         "name": "Automaton",
         "abilities": (
-            "*Overclocked.* If you spend 2 or more resources this turn, you may influence at the end of your prelude.\n"
+            "*Overclocked.* If you spend 2 or more resources, you may influence at the end of your prelude.\n"
             "*Wasteful.* If you **secure**  a card using 3 or more agents, discard a resource."
         ),
         "resources": ["Material", "Fuel"],
