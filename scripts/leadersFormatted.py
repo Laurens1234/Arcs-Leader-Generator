@@ -189,8 +189,8 @@ leaders = [
     {
         "name": "Manipulator",
         "abilities": (
-            "*Clever.* When you **declare** **an** **ambition**, you may declare an adjacent one instead.\n"
-            "*Fraudulent.* When an ambition has multiple markers, you only score Power for the highest one."
+            "*Clever.* When you **declare** **an** **ambition**, you may move any agents in the court to other cards.\n"
+            "*Fraudulent.* When you **secure** a card with rival agents on it, capture at most one and place the rest on other cards."
         ),
         "resources": ["Weapon", "Relic"],
         "setup": {
