@@ -242,7 +242,7 @@ leaders = [
             "*Manifested.* When you Catapult **move**, your ships may move through one Rival-controlled system. If you move through one, you may influence a card after the move.\n"
             "*Directionless.* You cannot **move** each ship more than once per turn. You cannot end your Catapult **move** in the system you catapulted from."
         ),
-        "resources": ["Fuel", "Fuel"],
+        "resources": ["Fuel", "Psionic"],
         "setup": {
             "A": {"ships": 3, "building": "starport"},
             "B": {"ships": 3, "building": "starport"},
@@ -680,8 +680,8 @@ leaders = [
     {
         "name": "Curator",
         "abilities": (
-            "*Meticulous.* When you **secure** a card, you may discard it to gain the top 2 cards of the lore deck.\n"
-            "*Ascetic.* At the end of each chapter, give a lore you have to another player."
+            "*Meticulous.* When you **secure** a card, you may discard it to secure the top two cards of the lore deck.\n"
+            "*Ascetic.* At the end of each chapter, give two lore cards to other players, divided as you choose."
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
