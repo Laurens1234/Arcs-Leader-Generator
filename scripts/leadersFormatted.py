@@ -549,12 +549,12 @@ leaders = [
     {
         "name": "Solian",
         "abilities": (
-            "*Routing.* When you **move** from a planet to a planet, you may keep moving again with those ships (like a catapult move).\n"
-            "*Brutal.* When your ships catapult move into an enemy-controlled gate, one of them takes a hit."
+            "*Settled.* **Prelude:** You may move freely from planets (no catapult moves).\n"
+            "*Rooted.* When your ships catapult move into an enemy-controlled gate, one of them takes a hit."
         ),
         "resources": ["Weapon", "Fuel"],
         "setup": {
-            "A": {"ships": 3, "building": "city"},
+            "A": {"ships": 4, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
         },
@@ -646,8 +646,8 @@ leaders = [
     {
         "name": "Fiend",
         "abilities": (
-            "*Gluttonous.* When you provoke outrage, clear it if you already have it outraged; if you do, gain that resource thrice.\n"
-            "*Frenzied.* In **setup**, provoke outrage in all resource types. (Before you gain resources.)"
+            "*Gluttonous.* When you provoke outrage, clear it if you already have it outraged; if you do, gain that resource up to your empty slots.\n"
+            "*Wrathful.* In **setup**, provoke outrage in all resource types. (Before you gain resources.)"
         ),
         "resources": ["Fuel", "Material"],
         "setup": {
