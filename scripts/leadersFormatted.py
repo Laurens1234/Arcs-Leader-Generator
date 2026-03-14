@@ -249,8 +249,8 @@ leaders = [
             "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 18,
-        "zoom": 1.25,
-        "boundary_shift": 0.2
+        "zoom": 1,
+        "boundary_shift": 0.1
     },
     # Chosen
     {
