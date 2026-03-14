@@ -629,13 +629,13 @@ leaders = [
     {
         "name": "Iconoclast",
         "abilities": (
-            "*Radical.* When you may discard a card to seize, you may steal a guild card from a player which type matches your or their outrage.\n"
-            "*Fervent.* In **setup**, provoke outrage in any three resource types."
+            "*Radical.* When you may discard a card to seize, you destroy a city your control to steal a guild card from a player which type matches your or their outrage.\n"
+            "*Fervent.* In **setup**, destroy both of your cities."
         ),
         "resources": ["Psionic", "Weapon"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "starport"},
+            "B": {"ships": 3, "building": "city"},
             "C": {"ships": 3, "building": "None"}
         },
         "body_font_size": 18,
