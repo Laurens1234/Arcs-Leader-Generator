@@ -646,7 +646,7 @@ leaders = [
     {
         "name": "Fiend",
         "abilities": (
-            "*Gluttonous.* When you provoke outrage, clear it if you already have it outraged; if you do, gain that resource up to your empty slots.\n"
+            "*Gluttonous.* When you provoke outrage, clear it if you already have it outraged; if you do, gain that resource thrice.\n"
             "*Wrathful.* In **setup**, provoke outrage in all resource types. (Before you gain resources.)"
         ),
         "resources": ["Fuel", "Material"],

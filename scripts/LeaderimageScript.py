@@ -2,7 +2,6 @@ import os
 
 from PIL import Image, ImageDraw, ImageFont
 
-
 _DEFAULT_OUTPUT_DPI = (300, 300)
 
 
@@ -40,6 +39,10 @@ def create_card(input_data):
     # Rendering scale: render the whole card at a higher resolution so text stays sharp when zoomed.
     # Set render_scale=1 to preserve original pixel dimensions.
     render_scale = _clamp_int(input_data.get("render_scale", 2), 1, 4, 2)
+
+    # By default, prefer keeping artwork full-size even if it requires upscaling.
+    # Set allow_upscale=False to clamp to source resolution (avoids blur but may look smaller).
+    allow_upscale = bool(input_data.get("allow_upscale", True))
 
     def _s(value):
         if isinstance(value, tuple):
@@ -101,9 +104,6 @@ def create_card(input_data):
         target_width = max(1, int(target_width * zoom))
         target_height = max(1, int(target_height * zoom))
 
-        # By default, prefer keeping artwork full-size even if it requires upscaling.
-        # Set allow_upscale=False to clamp to source resolution (avoids blur but may look smaller).
-        allow_upscale = bool(input_data.get("allow_upscale", True))
         if not allow_upscale:
             # Allow scaling up by up to render_scale (keeps the same logical size as before
             # while still letting higher-res output happen).
@@ -361,3 +361,4 @@ def create_card(input_data):
     combined_img = final_crop(combined_img)
     combined_img.save(output_image_path, dpi=_DEFAULT_OUTPUT_DPI)
     print(f"Combined image saved at {output_image_path}")
+    print(f"Settings used: render_scale={render_scale}, allow_upscale={allow_upscale}")
