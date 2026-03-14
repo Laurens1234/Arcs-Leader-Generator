@@ -127,7 +127,7 @@ leaders = [
         "abilities": (
             "*Voracious.* When you **declare** **an** **ambition**, place a ship in any system.\n"
             "*Crushing.* When more than 1 Rival ship moves into a planet you control, you destroy 1 of those ships.\n"
-            "*Erratic.* In scoring, destroy 1 loyal fresh ship for each ambition you win."
+            "*Erratic.* In **scoring**, destroy 1 loyal fresh ship for each ambition you win."
         ),
         "resources": ["Weapon", "Material"],
         "setup": {
@@ -142,7 +142,7 @@ leaders = [
         "name": "Saint",
         "abilities": (
             "*Sacred.* At the end of each chapter, for each ambition a Rival won that chapter, they must give you a resource. If they can’t, they must give you a Guild card.\n"
-            "*Blessed.* Before scoring, you may **declare** **an** **ambition**.\n"
+            "*Blessed.* Before **scoring**, you may **declare** **an** **ambition**.\n"
             "*Corrupted.* After sacred, discard 1 resource per ambition you won this chapter."
         ),
         "resources": ["Psionic", "Relic"],
@@ -157,7 +157,7 @@ leaders = [
     {
         "name": "Seer",
         "abilities": (
-            "*Reflective.* Once per turn, you may discard a guild card to secure one in the court with no agents on it.\n"
+            "*Reflective.* Once per turn, you may discard a guild card to secure a card with no agents on it.\n"
             "*Unstable.* Discard a guild card for no effect if you have two or more of the same type."
         ),
         "resources": ["Psionic", "Psionic"],
@@ -221,7 +221,7 @@ leaders = [
     {
         "name": "Prefect",
         "abilities": (
-            "*Judicious.* In scoring, if any players tie for first in an ambition, you gain the initiative.\n"
+            "*Judicious.* In **scoring**, if any players tie for first in an ambition, you gain the initiative.\n"
             "*Immunized.* If you have the initiative you don't provoke Outrage.\n"
             "*Constrained.* In **battle**, when you Ransack the Court, you take a normal secure action instead."
         ),
@@ -362,8 +362,8 @@ leaders = [
     {
         "name": "Seeker",
         "abilities": (
-            "*Inquisitive.*  When you copy or pivot to **tax**, gain an additional resource if it’s a type you haven’t taxed this chapter.\n"
-            "*Distracted.* After scoring tycoon, keeper or empath, discard a resource matching that ambition."
+            "*Inquisitive.*  When you **tax**, gain the resource twice if the matching ambition is declared. Add Weapons to your score for Warlord\n"
+            "*Distracted.* After **scoring** tycoon, warlord, keeper or empath, discard a resource matching that ambition."
         ),
         "resources": ["Material", "Relic"],
         "setup": {
@@ -378,7 +378,7 @@ leaders = [
         "name": "Herald",
         "abilities": (
             "*Baneful.* When you **secure** a card discard it without effect, then look at the top 3 cards of the Court deck, secure 1, put 1 in the court and bury 1.\n"
-            "*Scathing.* After you discard a guild card with it's Prelude action, shuffle it back into the court deck. "
+            "*Scathing.* After you discard a Guild card with it's Prelude action, shuffle it back into the court deck. "
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
@@ -646,8 +646,8 @@ leaders = [
     {
         "name": "Fiend",
         "abilities": (
-            "*Gluttonous.* When you provoke outrage, clear it if you already have it outraged; if you do, gain that resource thrice.\n"
-            "*Wrathful.* In **setup**, provoke outrage in all resource types, then gain any 2 resources"
+            "*Gluttonous.* When you **Provoke** **Outrage**, clear it if instead you already have it outraged; if you do, gain that resource thrice.\n"
+            "*Wrathful.* In **setup**, **Provoke** **Outrage** in all resource types, then gain any 2 resources"
         ),
         "resources": ["Fuel", "Material"],
         "setup": {
@@ -663,8 +663,8 @@ leaders = [
     {
         "name": "Wheeler-dealer",
         "abilities": (
-            "*Cunning.* **Prelude:** Once per turn, you may provoke outrage in a resource type, then secure cards from the top of the deck matching the amount of cards you just discarded. Then gain **any** resources matching the amount you've just discarded.\n"
-            "*Irate.* In **setup**, provoke relic or psionic outrage."
+            "*Cunning.* **Prelude:** Once per turn, you may **Provoke** **Outrage** in a resource type, then secure cards from the top of the deck matching the amount of cards you just discarded. Then gain **any** resources matching the amount you've just discarded.\n"
+            "*Irate.* In **setup**, provoke Relic or Psionic outrage."
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
