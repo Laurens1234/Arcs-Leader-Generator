@@ -377,7 +377,7 @@ leaders = [
     {
         "name": "Herald",
         "abilities": (
-            "*Baneful.* After you **secure** a card discard it without effect, then look at the top 3 cards of the Court deck, secure 1, put 1 in the court and bury 1.\n"
+            "*Baneful.* When you **secure** a card discard it without effect, then look at the top 3 cards of the Court deck, secure 1, put 1 in the court and bury 1.\n"
             "*Scathing.* After you discard a guild card with it's Prelude action, shuffle it back into the court deck. "
         ),
         "resources": ["Psionic", "Relic"],
