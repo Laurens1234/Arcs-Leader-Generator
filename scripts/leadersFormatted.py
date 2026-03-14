@@ -286,7 +286,7 @@ leaders = [
     {
         "name": "Gambler",
         "abilities": (
-            "*Cunning.* When you pass the initiative, you may pass it to any player and guess a suit. If they have it, they must play the lowest card of that suit they have, you may surpass with cards of any suit and gain 1 extra pip. (The original suit gets the initiative if you tie.)\n"
+            "*Cunning.* You may pass the initiative to any player, then guess a suit. If you guess correctly, they must play the lowest card of that suit they have and the card you play also has the pips of the card they played additionally.\n"
             "*Compulsive.* You must pass the initiative the first time you have it each chapter."
         ),
         "resources": ["Weapon", "Psionic"],
@@ -301,8 +301,8 @@ leaders = [
     {
         "name": "Engineer",
         "abilities": (
-            "*Versatile.* Your starports can **move**, **battle** intercept and control like a ship. You place starports outside building slots.\n"
-            "*Exorbitant.* You can only **build** starports at cities, once per city each turn. It costs 2 **build** actions to **build** a starport.\n"
+            "*Versatile.* Your starports can **move**, **battle**, intercept and control like a ship. You place starports outside building slots.\n"
+            "*Exorbitant.* You can only **build** starports at cities. It costs 2 **build** actions to **build** a starport.\n"
             "*Fragile.* After you catapult **move**, damage the starport you used. "
         ),
         "resources": ["Material", "Material"],
@@ -333,7 +333,7 @@ leaders = [
         "name": "Weaver",
         "abilities": (
             "*Interwoven.* Before you **secure** a card in the court, you may influence an adjacent card.\n"
-            "*Tangled.* You must discard a resource to **secure**  a card with a 2 or more Rival agents."
+            "*Tangled.* You must discard a resource to **secure** a card with any Rival agents on it."
         ),
         "resources": ["Relic", "Fuel"],
         "setup": {
@@ -363,7 +363,7 @@ leaders = [
         "name": "Seeker",
         "abilities": (
             "*Inquisitive.*  When you copy or pivot to **tax**, gain **any** additional resource if it’s a type you haven’t taxed this chapter.\n"
-            "*Distracted.* After scoring tycoon keeper or empath, discard a refsource matching that ambition."
+            "*Distracted.* After scoring tycoon keeper or empath, discard a resource matching that ambition."
         ),
         "resources": ["Material", "Relic"],
         "setup": {
@@ -377,7 +377,7 @@ leaders = [
     {
         "name": "Herald",
         "abilities": (
-            "*Farsighted.* After you **secure** , look at the top 3 cards of the Court deck, keep 1 on top, put 1 in the court and bury 1.\n"
+            "*Farsighted.* After you **secure** a card discard it without effect, then look at the top 3 cards of the Court deck, secure 1, put 1 in the court and bury 1.\n"
             "*Hasty.* After you discard a guild card with it's Prelude action, shuffle it back into the court deck. "
         ),
         "resources": ["Psionic", "Relic"],
