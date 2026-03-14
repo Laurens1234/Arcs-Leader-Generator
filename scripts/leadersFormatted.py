@@ -409,7 +409,7 @@ leaders = [
     {
         "name": "Architect",
         "abilities": (
-            "*Visionary.* You may **build** using **repair** actions.\n"
+            "*Visionary.* You may build using **repair** actions.\n"
             "*Meticulous.* You cannot **tax** if any of your pieces are damaged."
         ),
         "resources": ["Material", "Fuel"],
