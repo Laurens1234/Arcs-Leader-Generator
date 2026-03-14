@@ -183,7 +183,9 @@ leaders = [
             "B": {"ships": 3, "building": "city"},
             "C": {"ships": 2, "building": "None"}
         },
-        "body_font_size": 18
+        "body_font_size": 18,
+        "zoom": 1.155,
+        "boundary_shift": -0.02
     },
     # Manipulator
     {
@@ -363,7 +365,7 @@ leaders = [
         "name": "Seeker",
         "abilities": (
             "*Inquisitive.*  When you **tax**, gain the resource twice if the matching ambition is declared. Add Weapons to your score for Warlord\n"
-            "*Distracted.* After **scoring** tycoon, warlord, keeper or empath, discard a resource matching that ambition."
+            "*Distracted.* After **scoring** Tycoon, Warlord, Keeper or Empath, discard a resource matching that ambition."
         ),
         "resources": ["Material", "Relic"],
         "setup": {
