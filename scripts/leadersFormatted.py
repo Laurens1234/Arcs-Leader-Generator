@@ -286,7 +286,7 @@ leaders = [
     {
         "name": "Gambler",
         "abilities": (
-            "*Cunning.* You may pass the initiative to any player, then guess a suit. If they have it, they must play the lowest card of that suit they have and your card has additionally 1 pip of that suit.\n"
+            "*Cunning.* You may pass the initiative to any player, then guess a suit. If they have it, they must play the lowest card of that suit they have and the card you play that round additionally has the pips of that card.\n"
             "*Compulsive.* You must pass the initiative the first time you have it each chapter."
         ),
         "resources": ["Weapon", "Psionic"],
