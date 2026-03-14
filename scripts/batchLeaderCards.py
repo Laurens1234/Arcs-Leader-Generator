@@ -62,10 +62,30 @@ def main(argv):
         help="Optional leader names to generate (case-insensitive). If omitted, generates all leaders.",
     )
 
+    parser.add_argument(
+        "--number-start",
+        type=int,
+        dest="number_start",
+        default=1,
+        help=(
+            "Starting number for leader cards. The first leader in leadersFormatted.py will be this number, "
+            "the next leader will be +1, etc."
+        ),
+    )
+    parser.add_argument(
+        "--no-numbers",
+        action="store_true",
+        dest="no_numbers",
+        help="Disable drawing the small leader card number.",
+    )
+
     args = parser.parse_args(argv[1:])
 
     requested_names = args.names
     selected_leaders, missing = _select_leaders(leaders, requested_names)
+
+    # Numbering is based on the order of leaders in leadersFormatted.py
+    leader_index_by_name = {l["name"].casefold(): idx for idx, l in enumerate(leaders)}
 
     if missing:
         print("Warning: unknown leader name(s): " + ", ".join(missing))
@@ -84,6 +104,13 @@ def main(argv):
                 leader_payload["render_scale"] = args.render_scale
             if args.allow_upscale is not None:
                 leader_payload["allow_upscale"] = args.allow_upscale
+
+            if args.no_numbers:
+                leader_payload["show_number"] = False
+            else:
+                idx = leader_index_by_name.get(leader_payload["name"].casefold())
+                if idx is not None:
+                    leader_payload["card_number"] = args.number_start + idx
 
             name = leader_payload["name"]
             print(f"Creating image for: {name}")

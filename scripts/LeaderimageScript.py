@@ -159,12 +159,13 @@ def create_card(input_data):
     try:
         body_font_size = input_data.get("body_font_size", 18)
         title_font = ImageFont.truetype(custom_font_path, _s(25))
+        number_font = ImageFont.truetype(custom_font_path, _s(16))
         body_font = ImageFont.truetype(neue_kabel_font_path, _s(body_font_size))
         italic_font = ImageFont.truetype(neue_kabel_italic_path, _s(body_font_size))
         bold_font = ImageFont.truetype(neue_kabel_bold_path, _s(body_font_size))
         bolditalic_font = ImageFont.truetype(neue_kabel_bolditalic_path, _s(body_font_size))
     except IOError:
-        title_font = body_font = italic_font = bold_font = bolditalic_font = ImageFont.load_default()
+        title_font = number_font = body_font = italic_font = bold_font = bolditalic_font = ImageFont.load_default()
         body_font_size = input_data.get("body_font_size", 18)
 
     # Setup images resize while keeping aspect ratio
@@ -359,6 +360,29 @@ def create_card(input_data):
         return image.crop((left, top, right, bottom))
 
     combined_img = final_crop(combined_img)
+
+    # Optional card number (small white number near the top-right)
+    show_number = bool(input_data.get("show_number", True))
+    card_number = input_data.get("card_number")
+    if show_number and card_number is not None:
+        try:
+            number_text = str(int(card_number))
+        except Exception:
+            number_text = str(card_number)
+
+        number_draw = ImageDraw.Draw(combined_img)
+        bbox = number_draw.textbbox((0, 0), number_text, font=number_font)
+        text_w = bbox[2] - bbox[0]
+        text_h = bbox[3] - bbox[1]
+
+        # Increase margins to move the number down and left.
+        right_margin = _s(32)
+        top_margin = _s(30)
+        x = max(0, combined_img.width - right_margin - text_w)
+        y = max(0, top_margin)
+
+        number_draw.text((x, y), number_text, fill="white", font=number_font)
+
     combined_img.save(output_image_path, dpi=_DEFAULT_OUTPUT_DPI)
     print(f"Combined image saved at {output_image_path}")
     print(f"Settings used: render_scale={render_scale}, allow_upscale={allow_upscale}")
