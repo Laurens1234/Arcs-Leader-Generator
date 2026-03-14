@@ -50,7 +50,7 @@ leaders = [
     {
         "name": "Hierarch",
         "abilities": (
-            "*Zealous.* When you **influence** a card with a rival agent, you may influence another card with a rival agent.\n"
+            "*Zealous.* Affer you **influence** a card with a rival agent, you may influence a different card with a rival agent.\n"
             "*Rigid.* You cannot **influence** when you Pivot."
         ),
         "resources": ["Psionic", "Material"],
@@ -66,7 +66,7 @@ leaders = [
         "name": "Smuggler",
         "abilities": (
             "*Opportunistic.* When you **battle** and roll any raid dice, you may steal 1 resource for free.\n"
-            "*Hunted.* After you destroy a building in **battle**, the defender may move from adjacent systems into the system you just battled in."
+            "*Hunted.* After you destroy a building in **battle**, the defender may take a free move action."
         ),
         "resources": ["Fuel", "Weapon"],
         "setup": {
@@ -80,7 +80,7 @@ leaders = [
     {
         "name": "General",
         "abilities": (
-            "*Blitzing.* After you **tax** you may discard a resource to gain a weapon. You may a discard a weapon resource to ignore one rolled intercept.\n"
+            "*Blitzing.* After you **tax**, you may discard a resource to gain a weapon. You may a discard a weapon to ignore one rolled intercept.\n"
             "*Reckless.* In **battle**, you must always roll at least 1 die of each type if you can."
         ),
         "resources": ["Weapon", "Weapon"],
@@ -125,7 +125,7 @@ leaders = [
     {
         "name": "Maw",
         "abilities": (
-            "*Voracious.* When you **declare** **an** **ambition**, place a ship anywhere on the map.\n"
+            "*Voracious.* When you **declare** **an** **ambition**, place a ship in any system.\n"
             "*Crushing.* When more than 1 Rival ship moves into a planet you control, you destroy 1 of those ships.\n"
             "*Erratic.* In scoring, destroy 1 loyal fresh ship for each ambition you win."
         ),
