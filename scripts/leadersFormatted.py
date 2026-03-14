@@ -680,7 +680,7 @@ leaders = [
     {
         "name": "Curator",
         "abilities": (
-            "*Meticulous.* When you **secure** a card, you may discard it to secure the top 2 cards off the lore deck.\n"
+            "*Meticulous.* When you **secure** a card, you may discard it to draw 2 cards from the lore deck, keep one and discard one.\n"
             "*Ascetic.* At the end of each chapter, give a lore you have to another player."
         ),
         "resources": ["Psionic", "Relic"],
