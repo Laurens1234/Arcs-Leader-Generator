@@ -377,8 +377,8 @@ leaders = [
     {
         "name": "Herald",
         "abilities": (
-            "*Farsighted.* After you **secure** a card discard it without effect, then look at the top 3 cards of the Court deck, secure 1, put 1 in the court and bury 1.\n"
-            "*Hasty.* After you discard a guild card with it's Prelude action, shuffle it back into the court deck. "
+            "*Baneful.* After you **secure** a card discard it without effect, then look at the top 3 cards of the Court deck, secure 1, put 1 in the court and bury 1.\n"
+            "*Scathing.* After you discard a guild card with it's Prelude action, shuffle it back into the court deck. "
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
@@ -629,7 +629,7 @@ leaders = [
     {
         "name": "Iconoclast",
         "abilities": (
-            "*Radical.* When you may discard a card to seize, you destroy a city you control to steal a guild card from a player which type matches your or their outrage.\n"
+            "*Radical.* When you may discard a card to seize, you may destroy a city you control to steal a guild card from a player which type matches your or their outrage.\n"
             "*Fervent.* In **setup**, destroy both of your cities."
         ),
         "resources": ["Psionic", "Weapon"],
