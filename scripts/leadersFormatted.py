@@ -50,8 +50,8 @@ leaders = [
     {
         "name": "Hierarch",
         "abilities": (
-            "*Zealous.* When you influence a card with a rival agent, you may influence another card with a rival agent.\n"
-            "*Rigid.* You cannot influence when you Pivot."
+            "*Zealous.* When you **influence** a card with a rival agent, you may influence another card with a rival agent.\n"
+            "*Rigid.* You cannot **influence** when you Pivot."
         ),
         "resources": ["Psionic", "Material"],
         "setup": {
@@ -158,7 +158,7 @@ leaders = [
         "name": "Seer",
         "abilities": (
             "*Reflective.* Once per turn, you may discard a guild card to secure one in the court with no agents on it.\n"
-            "*Unstable.* Discard a guild card for no effect if you have two or more of the same resource type."
+            "*Unstable.* Discard a guild card for no effect if you have two or more of the same type."
         ),
         "resources": ["Psionic", "Psionic"],
         "setup": {
@@ -272,7 +272,7 @@ leaders = [
         "name": "Sage",
         "abilities": (
             "*Arcane.* In **setup**, gain 5 extra Lore cards.\n"
-            "*Elusive.* Players may influence and **secure**  your lore. When you **secure**  your own lore, you may discard it to gain a new one. At the end of each chapter, gain a lore per lore that was taken from you by other players. If the lore deck is empty, reshuffle the lore discard."
+            "*Elusive.* Players may **influence** and **secure**  your lore. When you **secure** your own lore, gain one lore card."
         ),
         "resources": ["Relic", "Relic"],
         "setup": {
@@ -286,7 +286,7 @@ leaders = [
     {
         "name": "Gambler",
         "abilities": (
-            "*Cunning.* You may pass the initiative to any player, then guess a suit. If you guess correctly, they must play the lowest card of that suit they have and the card you play also has the pips of the card they played additionally.\n"
+            "*Cunning.* You may pass the initiative to any player, then guess a suit. If they have it, they must play the lowest card of that suit they have and the card you play also has the pips of the card they played additionally.\n"
             "*Compulsive.* You must pass the initiative the first time you have it each chapter."
         ),
         "resources": ["Weapon", "Psionic"],
@@ -362,8 +362,8 @@ leaders = [
     {
         "name": "Seeker",
         "abilities": (
-            "*Inquisitive.*  When you copy or pivot to **tax**, gain **any** additional resource if it’s a type you haven’t taxed this chapter.\n"
-            "*Distracted.* After scoring tycoon keeper or empath, discard a resource matching that ambition."
+            "*Inquisitive.*  When you copy or pivot to **tax**, gain an additional resource if it’s a type you haven’t taxed this chapter.\n"
+            "*Distracted.* After scoring tycoon, keeper or empath, discard a resource matching that ambition."
         ),
         "resources": ["Material", "Relic"],
         "setup": {
@@ -425,7 +425,7 @@ leaders = [
         "name": "Martyr",
         "abilities": (
             "*Venerated.* After a **battle** where rival destroys any of your ships in a system with your loyal city, gain a matching resource, and if they destroy one of your cities, secure the top card of the court deck.\n"
-            "*Selfless.* When attacking in **battle**, when you destroy a city also damage all your ships in its system."
+            "*Selfless.* When attacking in **battle**, when you destroy a city, also damage all your fresh ships in its system."
         ),
         "resources": ["Psionic", "Material"],
         "setup": {
@@ -440,8 +440,8 @@ leaders = [
     {
         "name": "Scourge",
         "abilities": (
-            "*Pyromaniacal.* After a **battle** where you destroy a city, destroy all damaged pieces in its system if you control it's system.\n"
-            "*Insatiable.* At the end of each chapter, if you did not destroy and buildings this chapter, destroy a loyal city."
+            "*Pyromaniacal.* After you destroy a city in a system you control, destroy all damaged pieces there.\n"
+            "*Insatiable.* At the end of each chapter, if you did not destroy and cities this chapter, destroy a loyal city."
         ),
         "resources": ["Weapon", "Fuel"],
         "setup": {
@@ -473,7 +473,7 @@ leaders = [
         "name": "Feral",
         "abilities": (
             "*Savage.* When you **battle** in a system with no buildings, collect 1 extra die.\n"
-            "*Uncivilized.* When you influence a card with any rival agents, damage one of your pieces."
+            "*Uncivilized.* When you **influence** a card with any rival agents, damage one of your pieces."
         ),
         "resources": ["Weapon", "Fuel"],
         "setup": {
@@ -502,8 +502,8 @@ leaders = [
     {
         "name": "Puppeteer",
         "abilities": (
-            "*Guiding.* Once per round, when a rival tries to influence a card with one of your agents, you may force him to influence another card.\n"
-            "*Straining.* To **secure**  a card with a rival agent on it, you must have 2 more agents on it than them instead of 1."
+            "*Guiding.* Once per round, when a rival tries to **influence** a card with one of your agents, you may force them to influence another card.\n"
+            "*Straining.* To **secure** a card with a rival agent on it, you must have 2 more agents on it than them instead of 1."
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
@@ -549,7 +549,7 @@ leaders = [
     {
         "name": "Solian",
         "abilities": (
-            "*Routing.* When you move from a planet to a planet, you may keep moving again with those ships (like a catapult move).\n"
+            "*Routing.* When you **move** from a planet to a planet, you may keep moving again with those ships (like a catapult move).\n"
             "*Brutal.* When your ships catapult move into an enemy-controlled gate, one of them takes a hit."
         ),
         "resources": ["Weapon", "Fuel"],
@@ -581,7 +581,7 @@ leaders = [
     {
         "name": "Terraformer",
         "abilities": (
-            "*Genesis.* At the start of each chapter, place a resource token from the emptiest supply on any planet (if tied you choose). That planet now has this resource type.\n"
+            "*Genesis.* At the start of each chapter, place a resource token from the fullest supply on any planet (if tied you choose). That planet now has this resource type.\n"
             "*Codependent.* When taxing you only gain resources from terraformed planets."
         ),
         "resources": ["Psionic", "Material"],
@@ -613,8 +613,8 @@ leaders = [
     {
         "name": "Nomad",
         "abilities": (
-            "*Wayfaring.* When **moving** **must** take cities you control with you. Cities in gates match the resource types of each planet in its cluster. If there is no space on a planet place the city outside the building slots.\n"
-            "*Itinerant.* You cannot **Tax** cities on planets.\n"
+            "*Wayfaring.* When **moving** you **must** take cities you control with you. Cities in gates match the resource types of each planet in its cluster. If there is no space on a planet place the city outside the building slots.\n"
+            "*Itinerant.* You cannot **Tax** cities in planetary systems.\n"
         ),
         "resources": ["Material", "Fuel"],
         "setup": {
