@@ -80,7 +80,7 @@ leaders = [
     {
         "name": "General",
         "abilities": (
-            "*Blitzing.* After you **tax**, you may discard a resource to gain a weapon. You may a discard a weapon to ignore one rolled intercept.\n"
+            "*Blitzing.* After you **tax**, you may discard a resource to gain a weapon. In **battle**, you may a discard a weapon to ignore one rolled intercept.\n"
             "*Reckless.* In **battle**, you must always roll at least 1 die of each type if you can."
         ),
         "resources": ["Weapon", "Weapon"],
@@ -458,7 +458,7 @@ leaders = [
         "name": "Beggar",
         "abilities": (
             "*Frugal.* If you start a turn with no resources or guild cards, gain any resource.\n"
-            "*Depleted.* If you start your turn with any resources on your player board, discard 1."
+            "*Communal.* If you start your turn with any resources, discard 1."
         ),
         "resources": ["Material", "Relic"],
         "setup": {
@@ -518,7 +518,7 @@ leaders = [
         "name": "Automaton",
         "abilities": (
             "*Overclocked.* If you spend 2 or more resources, you may influence at the end of your prelude.\n"
-            "*Wasteful.* If you **secure**  a card using 3 or more agents, discard a resource."
+            "*Wasteful.* After you **secure** a card using 2 or more agents, scrap an agent"
         ),
         "resources": ["Material", "Fuel"],
         "setup": {
@@ -532,8 +532,8 @@ leaders = [
     {
         "name": "Golem",
         "abilities": (
-            "*Ironclad.* After a battle where one or more of your ships is destroyed, you may discard a resource to keep all your destroyed ships damaged instead.\n"
-            "*Cold.* At the end of each chapter, destroy all damaged loyal ships."
+            "*Ironclad.* After a **battle**, you may discard a resource to keep all your destroyed ships damaged instead.\n"
+            "*Cold.* At the end of each chapter, destroy all your damaged ships."
         ),
         "resources": ["Material", "Fuel"],
         "setup": {
@@ -566,7 +566,7 @@ leaders = [
     {
         "name": "Bargainer",
         "abilities": (
-            "*Leverage.* You may return a player’s trophy or captive to **tax** one of their cities.\n"
+            "*Leveraged.* You may return a player’s trophy or captive to **tax** one of their cities.\n"
             "*Obliged.* You must return a trophy or captive when you when you score first place. If you can’t, you get the second-place points and don’t get the city bonus."
         ),
         "resources": ["Relic", "Material"],
@@ -647,7 +647,7 @@ leaders = [
         "name": "Fiend",
         "abilities": (
             "*Gluttonous.* When you provoke outrage, clear it if you already have it outraged; if you do, gain that resource thrice.\n"
-            "*Wrathful.* In **setup**, provoke outrage in all resource types. (Before you gain resources.)"
+            "*Wrathful.* In **setup**, provoke outrage in all resource types, then gain any 2 resources"
         ),
         "resources": ["Fuel", "Material"],
         "setup": {
@@ -692,102 +692,5 @@ leaders = [
         "body_font_size": 18,
         "zoom": 1,
         
-    },
-    # GOD'S HAND
-    {
-        "name": "God's Hand",
-        "abilities": (
-            "*Faithful* *Reach.* Before dealing action cards, mix in the 6 Faithful Action cards (FL1-6) and take Champion of the Faith title (F7).\n"
-            "*An* *Era* *of* *Heresy.* When any player wins Empath, they take Champion of the Faith title."
-        ),
-        "resources": ["Psionic", "Psionic"],
-        "setup": {
-            "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "city"},
-            "C": {"ships": 3, "building": "None"}
-        },
-        "body_font_size": 18
-    },
-    {
-        "name": "Firebrand",
-        "abilities": (
-            "*Partisan* *Seizing.* Place the Partisan Seizing rules card near the action area. This game, players can seize by provoking outrage if they do not wish to spend a second action card.\n"
-            "*Shameless.* Whenever you win **any** ambition, you may discard a resource to remove the matching outrage."
-        ),
-        "resources": ["Weapon", "Psionic"],
-        "setup": {
-            "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "starport"},
-            "C": {"ships": 3, "building": "None"}
-        },
-        "body_font_size": 18,
-        "zoom": 1,
-        "boundary_shift": 0.22
-    },
-    # SCAVENGER
-    {
-        "name": "Scavenger",
-        "abilities": (
-            "**Scavenge** **(Tax):** Damage a fresh rival ship in a system you control. Then gain a resource matching that system.\n"
-            "*Broken* *Reach.* In **setup**, all players Provoke Material Outrage."
-        ),
-        "resources": ["Material", "Fuel"],
-        "setup": {
-            "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "starport"},
-            "C": {"ships": 3, "building": "None"}
-        },
-        "body_font_size": 18,
-        "zoom": 1.25,
-        "boundary_shift": 0.25
-    },
-    # DIPLOMAT
-    {
-        "name": "Diplomat",
-        "abilities": (
-            "*Canny.* Before **scoring** **ambitions**, you **secure** all cards where you have the most agents.\n"
-            "*Greedy.* In **setup**, place an agent on your Relic Outrage slot."
-        ),
-        "resources": ["Psionic", "Fuel"],
-        "setup": {
-            "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "starport"},
-            "C": {"ships": 3, "building": "None"}
-        },
-        "body_font_size": 18,
-        "zoom": 1.3,
-        "boundary_shift": 0.33
-    },
-    # IMPERATOR
-    {
-        "name": "Imperator",
-        "abilities": (
-            "*Empire* *Builder.* When you win an ambition score twice as many points from your city bonus.\n"
-            "*Sneering.* You do not score second place for any ambition."
-        ),
-        "resources": ["Material", "Weapon"],
-        "setup": {
-            "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "starport"},
-            "C": {"ships": 3, "building": "None"}
-        },
-        "body_font_size": 18,
-        "zoom": 1.15,
-        "boundary_shift": 0.5
-    },
-    # ANCIENT WRAITH
-    {
-        "name": "Ancient Wraith",
-        "abilities": (
-            "*The* *Undying* *Reach.* Place the Twisted Passage rules card in play. Players may move out of the Passage, and no players may harm Rivals there.\n"
-            "*Ethereal.* You cannot build shipyards, but your destroyed ships are never taken as trophies and are instead placed on the Twisted Passage."
-        ),
-        "resources": ["Weapon", "Psionic"],
-        "setup": {
-            "A": {"ships": 4, "building": "None"},
-            "B": {"ships": 3, "building": "None"},
-            "C": {"ships": 3, "building": "None"}
-        },
-        "body_font_size": 18
     }
 ]
