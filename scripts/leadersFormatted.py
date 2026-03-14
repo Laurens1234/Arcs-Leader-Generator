@@ -332,8 +332,8 @@ leaders = [
     {
         "name": "Weaver",
         "abilities": (
-            "*Interwoven.* Before you **secure** a card in the court, you may influence an adjacent card.\n"
-            "*Tangled.* You must discard a resource to **secure** a card with any Rival agents on it."
+            "*Interwoven.* After you use a pip to **secure**, you may influence an adjacent card.\n"
+            "*Tangled.* You must discard a resource to be able to **secure** a card with any Rival agents on it."
         ),
         "resources": ["Relic", "Fuel"],
         "setup": {
@@ -424,8 +424,8 @@ leaders = [
     {
         "name": "Martyr",
         "abilities": (
-            "*Venerated.* After a **battle** where rival destroys any of your ships in a system with your loyal city, gain a matching resource, and if they destroy one of your cities, secure the top card of the court deck.\n"
-            "*Selfless.* When attacking in **battle**, when you destroy a city, also damage all your fresh ships in its system."
+            "*Venerated.* After a **battle** where rival destroys any of your pieces, gain a matching resource (none if in gate), if they destroyed one of your cities, secure the top card of the court deck instead.\n"
+            "*Selfless.* After a **battle**, where you destroy a city, damage all your fresh ships in its system."
         ),
         "resources": ["Psionic", "Material"],
         "setup": {
@@ -441,7 +441,7 @@ leaders = [
         "name": "Scourge",
         "abilities": (
             "*Pyromaniacal.* After you destroy a city in a system you control, destroy all damaged pieces there.\n"
-            "*Insatiable.* At the end of each chapter, if you did not destroy and cities this chapter, destroy a loyal city."
+            "*Insatiable.* At the end of each chapter, if you did not destroy any city this chapter, destroy a loyal city."
         ),
         "resources": ["Weapon", "Fuel"],
         "setup": {
@@ -597,7 +597,7 @@ leaders = [
         "name": "Trickster",
         "abilities": (
             "*Misdirecting.* Before you play an action card, you may swap a facedown action card with one of yours without looking at it first. Put yours face-up.\n"
-            "*Revealed.* When you discard a card to seize or pivot, place it faceup."
+            "*Revealed.* When you discard a card to seize or copy, place it faceup."
         ),
         "resources": ["Psionic", "Fuel"],
         "setup": {
