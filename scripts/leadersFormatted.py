@@ -413,7 +413,7 @@ leaders = [
     {
         "name": "Architect",
         "abilities": (
-            "*Visionary.* You may build using **repair** actions.\n"
+            "*Visionary.* You may build using **repair** actions. After you repair a piece you may build.\n"
             "*Meticulous.* You cannot **tax** if any of your pieces are damaged."
         ),
         "resources": ["Material", "Fuel"],
@@ -464,7 +464,7 @@ leaders = [
             "*Frugal.* If you start a turn with no resources and no Guild cards, gain any resource.\n"
             "*Communal.* If you start your turn with any resources, discard 1."
         ),
-        "resources": ["Material", "Relic"],
+        "resources": ["Material", "Psionic"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
