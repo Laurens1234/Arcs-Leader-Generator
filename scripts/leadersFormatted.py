@@ -492,7 +492,7 @@ leaders = [
         "name": "Conduit",
         "abilities": (
             "*Conductive.* Once per turn, you may spend a resource as a resource no player has provoked Outrage in.\n"
-            "*Overloaded.* You cannot have more than 1 resource of each type on your player board."
+            "*Overloaded.* In **setup**, provoke Weapon Outrage."
         ),
         "resources": ["Psionic", "Material"],
         "setup": {
