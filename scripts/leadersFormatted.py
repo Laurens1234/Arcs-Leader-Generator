@@ -585,7 +585,7 @@ leaders = [
     {
         "name": "Terraformer",
         "abilities": (
-            "*Genesis.* At the start of each chapter, place a resource token from the fullest supply on any planet (if tied you choose). That planet now has this resource type.\n"
+            "*Genesis.* At the start of each chapter, place a resource from the fullest supply on any planet (if tied, choose). That planet gains that resource type. Also do this for a system after you destroy a city in it.\n"
             "*Codependent.* When you **tax**, you only gain resources from terraformed planets."
         ),
         "resources": ["Psionic", "Material"],
