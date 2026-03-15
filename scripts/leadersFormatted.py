@@ -428,8 +428,8 @@ leaders = [
     {
         "name": "Martyr",
         "abilities": (
-            "*Venerated.* After a **battle** where a rival destroys any of your pieces, gain a resource matching its system (none if in gate). If they destroyed one of your cities, secure the top card of the Court deck instead.\n"
-            "*Selfless.* When attacking in **battle**, any hits that would destroy a city damage your fresh ships first."
+            "*Venerated.* After a **battle** where a rival destroys any of your pieces, gain a resource matching its system (none if in gate).\n"
+            "*Selfless.* When attacking in **battle**, any hits that would damage a city damage your fresh ships first. Provoke outrage if you harm any city."
         ),
         "resources": ["Psionic", "Material"],
         "setup": {
@@ -694,5 +694,131 @@ leaders = [
         },
         "body_font_size": 18,
         "zoom": 1
+        },
+    {
+        "name": "Cartographer",
+        "abilities": (
+            "*Exploratory.* When you **move**, you may move ships from two different systems instead of one.\n"
+            "*Distracted.* When you Catapult **move**, after each move you must drop off 1 ship."
+        ),
+        "resources": ["Fuel", "Relic"],
+        "setup": {
+            "A": {"ships": 3, "building": "starport"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 3, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    {
+        "name": "Custodian",
+        "abilities": (
+            "*Vigilant.* When a fresh Rival ship moves into a gate you control, you may gain 1 resource matching any city in that gate's cluster.\n"
+            "*Heedless.* Damaged ships may continue moving after moving into a gate you control."
+        ),
+        "resources": ["Material", "Psionic"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 3, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    {
+        "name": "Salvager",
+        "abilities": (
+            "*Opportunistic.* After a **battle** in a system adjacent to one of your ships, if any ship was destroyed in that battle, you may place 1 ship in that system.\n"
+            "*Grimy.* At the end of each chapter, damage 1 loyal ship in each system that has any damaged ships."
+        ),
+        "resources": ["Material", "Fuel"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    {
+        "name": "Regent",
+        "abilities": (
+            "*Regal.* After any player whose city you control takes a **tax** action, you may also **tax**. After any player whose starport you control takes a **build** action, you may also **build**.\n"
+            "*Munificent.* At the end of each chapter, give 1 resource to each player whose building you control."
+        ),
+        "resources": ["Relic", "Weapon"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    {
+        "name": "Duelist",
+        "abilities": (
+            "*Daring.* In **battle**, if you attack with exactly 1 ship, collect 3 extra dice.\n"
+            "*Honor-bound.* In **battle**, if you attack a smaller fleet, you cannot roll assault dice."
+        ),
+        "resources": ["Weapon", "Relic"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+        {
+        "name": "Prophet",
+        "abilities": (
+            "*Revelatory.* When you **declare** **an** **ambition**, you may **secure** any Guild card in the Court discard pile.\n"
+            "*Fatalistic.* You cannot seize the initiative."
+        ),
+        "resources": ["Psionic", "Material"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    {
+        "name": "Broker",
+        "abilities": (
+            "*Mercantile.* When you **influence** a card, you may place 1 of your resources on it to **influence** it again. When it is **secured**, the player who secures it gains those resources. When a card is Ransacked, only the resources on it are gained.\n"
+            "*Indebted.* When you **declare** **an** **ambition**, discard a resource or return a piece."
+        ),
+        "resources": ["Relic", "Psionic"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    {
+        "name": "Siegebreaker",
+        "abilities": (
+            "*Ruinous.* In **battle**, if the defender has any buildings in the system, you may collect 1 extra Assault die.\n"
+            "*Brutal.* After you destroy a building in **battle**, damage 1 of your ships in that system."
+        ),
+        "resources": ["Weapon", "Weapon"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    {
+        "name": "Courier",
+        "abilities": (
+            "*Swift.* At the start of each chapter, each rival player places an agent on a planet, when you move a ship into it, gain a resource matching that planet and return the agent.\n"
+            "*Careless.* You cannot score city bonus points if you have not returned all agents on the board."
+        ),
+        "resources": ["Fuel", "Fuel"],
+        "setup": {
+            "A": {"ships": 3, "building": "starport"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
     }
 ]
