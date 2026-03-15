@@ -571,9 +571,9 @@ leaders = [
         "name": "Bargainer",
         "abilities": (
             "*Leveraged.* You may return a player’s trophy or captive to **tax** one of their cities.\n"
-            "*Obliged.* You must return a trophy or captive when you score first place. If you can’t, you get the second-place points and don’t get the city bonus."
+            "*Obliged.* When you score points from an ambition, you must return a trophy or captive, if you can’t, score no points."
         ),
-        "resources": ["Relic", "Material"],
+        "resources": ["Weapon", "Relic"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
