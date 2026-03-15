@@ -82,7 +82,7 @@ leaders = [
     {
         "name": "General",
         "abilities": (
-            "*Blitzing.* After you **tax**, you may discard a resource to gain a weapon. In **battle**, you may a discard a weapon to ignore one rolled intercept.\n"
+            "*Blitzing.* After you **tax**, you may discard a resource to gain a weapon. When attacking in **battle**, you may a discard a weapon to ignore one rolled intercept.\n"
             "*Reckless.* In **battle**, you must always roll at least 1 die of each type if you can."
         ),
         "resources": ["Weapon", "Weapon"],
@@ -306,7 +306,7 @@ leaders = [
         "name": "Engineer",
         "abilities": (
             "*Versatile.* Your starports can **move**, **battle**, intercept and control like a ship. You place starports outside building slots.\n"
-            "*Exorbitant.* You can only **build** starports at cities. It costs 2 **build** actions to **build** a starport.\n"
+            "*Exorbitant.* You can only **build** starports at cities, once per city per turn. \n"
             "*Fragile.* After you catapult **move**, damage the starport you used. "
         ),
         "resources": ["Material", "Material"],
@@ -366,8 +366,8 @@ leaders = [
     {
         "name": "Seeker",
         "abilities": (
-            "*Inquisitive.*  When you **tax**, gain the resource twice if the matching ambition is declared. Add Weapons to your score for Warlord\n"
-            "*Distracted.* After **scoring** Tycoon, Warlord, Keeper or Empath, discard a resource matching that ambition."
+            "*Inquisitive.*  When you **tax**, gain the resource twice if the matching ambition is declared (Weapon matches Warlord).\n"
+            "*Distracted.* After **scoring**, discard a resource matching each declared ambition."
         ),
         "resources": ["Material", "Relic"],
         "setup": {
@@ -428,7 +428,7 @@ leaders = [
     {
         "name": "Martyr",
         "abilities": (
-            "*Venerated.* After a **battle** where rival destroys any of your pieces, gain a matching resource (none if in gate), if they destroyed one of your cities, secure the top card of the court deck instead.\n"
+            "*Venerated.* After a **battle** where rival destroys any of your pieces, gain a resource matching its system (none if in gate), if they destroyed one of your cities, secure the top card of the court deck instead.\n"
             "*Selfless.* After a **battle**, where you destroy a city, damage all your fresh ships in its system."
         ),
         "resources": ["Psionic", "Material"],
@@ -444,8 +444,8 @@ leaders = [
     {
         "name": "Scourge",
         "abilities": (
-            "*Pyromaniacal.* After you destroy a city in a system you control, destroy all damaged pieces there.\n"
-            "*Insatiable.* At the end of each chapter, if you did not destroy any city this chapter, destroy a loyal city."
+            "*Pyromaniacal.* After you destroy a city in a system you control or a loyal city, destroy all damaged pieces there.\n"
+            "*Insatiable.* At the end of each chapter, if you did not destroy a city this chapter, destroy a loyal city or a city you control."
         ),
         "resources": ["Weapon", "Fuel"],
         "setup": {
@@ -461,7 +461,7 @@ leaders = [
     {
         "name": "Beggar",
         "abilities": (
-            "*Frugal.* If you start a turn with no resources or guild cards, gain any resource.\n"
+            "*Frugal.* If you start a turn with no resources and no guild cards, gain any resource.\n"
             "*Communal.* If you start your turn with any resources, discard 1."
         ),
         "resources": ["Material", "Relic"],
@@ -506,7 +506,7 @@ leaders = [
     {
         "name": "Puppeteer",
         "abilities": (
-            "*Guiding.* Once per round, when a rival tries to **influence** a card with one of your agents, you may force them to influence another card.\n"
+            "*Guiding.* Once per turn, when a rival tries to **influence** a card with one of your agents, you may force them to influence another card.\n"
             "*Straining.* To **secure** a card with a rival agent on it, you must have 2 more agents on it than them instead of 1."
         ),
         "resources": ["Psionic", "Relic"],
@@ -650,7 +650,7 @@ leaders = [
     {
         "name": "Fiend",
         "abilities": (
-            "*Gluttonous.* When you **Provoke** **Outrage**, clear it if instead you already have it outraged; if you do, gain that resource thrice.\n"
+            "*Gluttonous.* When you **Provoke** **Outrage**, if you already have it outraged, clear it instead and gain that resource thrice.\n"
             "*Wrathful.* In **setup**, **Provoke** **Outrage** in all resource types, then gain any 2 resources"
         ),
         "resources": ["Fuel", "Material"],
