@@ -30,7 +30,7 @@ leaders = [
             "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 18,
-        "zoom": 1.2,
+        "zoom": 1.1,
         "boundary_shift": 0.1
     },
     # Sentient
