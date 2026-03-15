@@ -82,7 +82,7 @@ leaders = [
     {
         "name": "General",
         "abilities": (
-            "*Blitzing.* After you **tax**, you may discard a resource to gain a weapon. When attacking in **battle**, you may discard a weapon to ignore one rolled intercept.\n"
+            "*Blitzing.* After you **tax**, you may discard a resource to gain a Weapon. When attacking in **battle**, you may discard a Weapon to ignore one rolled intercept.\n"
             "*Reckless.* In **battle**, you must always roll at least 1 die of each type if you can."
         ),
         "resources": ["Weapon", "Weapon"],
@@ -145,7 +145,7 @@ leaders = [
         "abilities": (
             "*Sacred.* When a Rival wins an ambition, they must give you a resource. If they can't, they must give you a Guild card.\n"
             "*Blessed.* Before **scoring**, you may **declare** **an** **ambition**.\n"
-            "*Corrupted.* When you win an ambition, discard a resource. If you can't, discard a Guild Card."
+            "*Corrupted.* When you win an ambition, discard a resource. If you can't, discard a Guild card."
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
@@ -193,7 +193,7 @@ leaders = [
     {
         "name": "Manipulator",
         "abilities": (
-            "*Clever.* When you **declare** **an** **ambition**, you may move any agents in the court to other cards.\n"
+            "*Clever.* When you **declare** **an** **ambition**, you may move any agents in the Court to other cards.\n"
             "*Fraudulent.* When you **secure** a card with rival agents on it, capture at most one and place the rest on other cards."
         ),
         "resources": ["Weapon", "Relic"],
@@ -321,7 +321,7 @@ leaders = [
     {
         "name": "Magician",
         "abilities": (
-            "*Illusive.* After you **tax** a city, you may place it in any building slot you control.\n"
+            "*Elusive.* After you **tax** a city, you may place it in any building slot you control.\n"
             "*Unmasked.* When you **tax** a rival city, you only gain a captive or resource, not both."
         ),
         "resources": ["Psionic", "Material"],
@@ -381,8 +381,8 @@ leaders = [
     {
         "name": "Herald",
         "abilities": (
-            "*Baneful.* When you **secure** a card, discard it without effect, then look at the top 3 cards of the Court deck, secure 1, put 1 in the court and bury 1.\n"
-            "*Scathing.* After you discard a Guild card with its Prelude action, shuffle it back into the court deck."
+            "*Baneful.* When you **secure** a card, discard it without effect, then look at the top 3 cards of the Court deck, secure 1, put 1 in the Court and bury 1.\n"
+            "*Scathing.* After you discard a Guild card with its Prelude action, shuffle it back into the Court deck."
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
@@ -428,7 +428,7 @@ leaders = [
     {
         "name": "Martyr",
         "abilities": (
-            "*Venerated.* After a **battle** where rival destroys any of your pieces, gain a resource matching its system (none if in gate), if they destroyed one of your cities, secure the top card of the court deck instead.\n"
+            "*Venerated.* After a **battle** where a rival destroys any of your pieces, gain a resource matching its system (none if in gate). If they destroyed one of your cities, secure the top card of the Court deck instead.\n"
             "*Selfless.* After a **battle**, where you destroy a city, damage all your fresh ships in its system."
         ),
         "resources": ["Psionic", "Material"],
