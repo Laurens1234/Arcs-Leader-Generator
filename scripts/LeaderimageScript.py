@@ -159,7 +159,7 @@ def create_card(input_data):
     try:
         body_font_size = input_data.get("body_font_size", 18)
         title_font = ImageFont.truetype(custom_font_path, _s(25))
-        number_font = ImageFont.truetype(custom_font_path, _s(16))
+        number_font = ImageFont.truetype(custom_font_path, _s(15))
         body_font = ImageFont.truetype(neue_kabel_font_path, _s(body_font_size))
         italic_font = ImageFont.truetype(neue_kabel_italic_path, _s(body_font_size))
         bold_font = ImageFont.truetype(neue_kabel_bold_path, _s(body_font_size))

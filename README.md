@@ -31,6 +31,30 @@ Run the following script to generate cards for all leaders defined in `leadersFo
 python scripts/batchLeaderCards.py
 ```
 
+**Leader Card Numbering**
+
+Leader cards can optionally show a small white number near the top-right of the card (using the same font as the leader title).
+
+- The number is based on the leader's position (order) in `scripts/leadersFormatted.py`.
+- You can start from a higher number with `--number-start`.
+- You can disable numbers entirely with `--no-numbers`.
+
+Examples:
+
+```bash
+# Default numbering (starts at 1)
+python scripts/batchLeaderCards.py
+
+# Start numbering at 11
+python scripts/batchLeaderCards.py --number-start 11
+
+# Disable numbering
+python scripts/batchLeaderCards.py --no-numbers
+
+# Generate a single leader, but keep numbering based on file order
+python scripts/batchLeaderCards.py --number-start 50 Kaiju
+```
+
 Add the leaders you have made to `leadersFormatted.py` in this format:
 
 ```python
