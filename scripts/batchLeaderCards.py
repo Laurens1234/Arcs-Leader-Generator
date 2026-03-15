@@ -1,12 +1,13 @@
+import argparse
 import os
 import sys
-import argparse
 
 script_dir = os.path.dirname(os.path.dirname(__file__))
 sys.path.append(script_dir)
 
-from scripts.LeaderimageScript import create_card as create_leader_image
 from leadersFormatted import leaders
+
+from scripts.LeaderimageScript import create_card as create_leader_image
 
 base_path = os.path.dirname(os.path.dirname(__file__))
 result_path = os.path.join(base_path, "results")
