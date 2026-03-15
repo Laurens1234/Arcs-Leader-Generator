@@ -398,7 +398,7 @@ leaders = [
     {
         "name": "Alchemist",
         "abilities": (
-            "*Transformative.* When you declare an ambition, discard 1 resource to gain 2 resources of different types other than the one you discarded.\n"
+            "*Transformative.* When you **declare** **an** **ambition**, discard 1 resource to gain 2 resources of different types other than the one you discarded.\n"
             "*Cautious.* You cannot spend your last resource."
         ),
         "resources": ["Psionic", "Relic"],
@@ -413,7 +413,7 @@ leaders = [
     {
         "name": "Architect",
         "abilities": (
-            "*Visionary.* You may build using **repair** . After you repair a piece you may build.\n"
+            "*Visionary.* You may build using **repair**. After you repair a piece you may build.\n"
             "*Meticulous.* You cannot **tax** if any of your pieces are damaged."
         ),
         "resources": ["Material", "Fuel"],
