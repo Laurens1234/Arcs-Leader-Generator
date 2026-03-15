@@ -290,7 +290,7 @@ leaders = [
     {
         "name": "Gambler",
         "abilities": (
-            "*Cunning.* You may pass the initiative to any player, then guess a suit. If they have it, they must play the lowest card of that suit they have and the card you play that round additionally has the pips of that card.\n"
+            "*Cunning.* You may pass the initiative to any player, then guess a suit. If they have it, they must play the lowest card of that suit they. The card you play that round additionally has the pips of that card.\n"
             "*Compulsive.* You must pass the initiative the first time you have it each chapter."
         ),
         "resources": ["Weapon", "Psionic"],
@@ -398,7 +398,7 @@ leaders = [
     {
         "name": "Alchemist",
         "abilities": (
-            "*Transformative.* At the start of each chapter, discard 1 resource to gain 2 resources of different types other than the one you discarded.\n"
+            "*Transformative.* When you declare an ambition, discard 1 resource to gain 2 resources of different types other than the one you discarded.\n"
             "*Cautious.* You cannot spend your last resource."
         ),
         "resources": ["Psionic", "Relic"],
@@ -413,7 +413,7 @@ leaders = [
     {
         "name": "Architect",
         "abilities": (
-            "*Visionary.* You may build using **repair** actions. After you repair a piece you may build.\n"
+            "*Visionary.* You may build using **repair** . After you repair a piece you may build.\n"
             "*Meticulous.* You cannot **tax** if any of your pieces are damaged."
         ),
         "resources": ["Material", "Fuel"],
@@ -477,7 +477,7 @@ leaders = [
         "name": "Feral",
         "abilities": (
             "*Savage.* When you **battle** in a system with no buildings, collect 1 extra die.\n"
-            "*Uncivilized.* When you **influence** a card with any rival agents, damage one of your pieces."
+            "*Uncivilized.* When you **secure** a card with any rival agents, destroy one of your pieces."
         ),
         "resources": ["Weapon", "Fuel"],
         "setup": {
@@ -536,7 +536,7 @@ leaders = [
     {
         "name": "Golem",
         "abilities": (
-            "*Ironclad.* After a **battle**, you may discard a resource to keep all your destroyed ships damaged instead.\n"
+            "*Ironclad.* After a **battle**, you may discard a resource to keep all your destroyed ships from that battle damaged instead.\n"
             "*Cold.* At the end of each chapter, destroy all your damaged ships."
         ),
         "resources": ["Material", "Fuel"],
