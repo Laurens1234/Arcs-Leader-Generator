@@ -143,9 +143,9 @@ leaders = [
     {
         "name": "Saint",
         "abilities": (
-            "*Sacred.* At the end of each chapter, for each ambition a Rival won that chapter, they must give you a resource. If they can’t, they must give you a Guild card.\n"
+            "*Sacred.* When a Rival wins an ambition, they must give you a resource. If they can't, they must give you a Guild card.\n"
             "*Blessed.* Before **scoring**, you may **declare** **an** **ambition**.\n"
-            "*Corrupted.* After sacred, discard 1 resource per ambition you won this chapter."
+            "*Corrupted.* When you win an ambition, discard a resource. If you can't, discard a Guild Card."
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
@@ -159,8 +159,8 @@ leaders = [
     {
         "name": "Seer",
         "abilities": (
-            "*Reflective.* After you discard a guild card, you may influence.\n"
-            "*Unstable.* Discard a guild card if you have two or more of the same type."
+            "*Reflective.* After you discard a Guild card, you may influence.\n"
+            "*Unstable.* Discard a Guild card if you have two or more of the same type."
         ),
         "resources": ["Psionic", "Psionic"],
         "setup": {
@@ -461,7 +461,7 @@ leaders = [
     {
         "name": "Beggar",
         "abilities": (
-            "*Frugal.* If you start a turn with no resources and no guild cards, gain any resource.\n"
+            "*Frugal.* If you start a turn with no resources and no Guild cards, gain any resource.\n"
             "*Communal.* If you start your turn with any resources, discard 1."
         ),
         "resources": ["Material", "Relic"],
@@ -633,7 +633,7 @@ leaders = [
     {
         "name": "Iconoclast",
         "abilities": (
-            "*Radical.* When you may discard a card to seize, you may destroy a city you control to steal a guild card from a player which type matches your or their outrage.\n"
+            "*Radical.* When you may discard a card to seize, you may destroy a city you control to steal a Guild card from a player which type matches your or their outrage.\n"
             "*Fervent.* In **setup**, destroy both of your cities."
         ),
         "resources": ["Psionic", "Weapon"],
