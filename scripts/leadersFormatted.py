@@ -159,7 +159,7 @@ leaders = [
     {
         "name": "Seer",
         "abilities": (
-            "*Reflective.* After you discard a guild card, you may influence the court.\n"
+            "*Reflective.* After you discard a guild card, you may influence.\n"
             "*Unstable.* Discard a guild card if you have two or more of the same type."
         ),
         "resources": ["Psionic", "Psionic"],
