@@ -12,7 +12,9 @@ leaders = [
             "B": {"ships": 4, "building": "city"},
             "C": {"ships": 2, "building": "None"}
         },
-        "body_font_size": 18
+        "body_font_size": 18,
+        "zoom": 1.15,
+        "boundary_shift": 0.12
     },
     # Shapeshifter
     {
