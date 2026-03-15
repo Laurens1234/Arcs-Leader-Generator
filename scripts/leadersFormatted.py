@@ -83,7 +83,7 @@ leaders = [
         "name": "General",
         "abilities": (
             "*Blitzing.* After you **tax**, you may discard a resource to gain a Weapon. When attacking in **battle**, you may discard a Weapon to ignore one rolled intercept.\n"
-            "*Reckless.* In **battle**, you must always roll at least 1 die of each type if you can."
+            "*Reckless.* In **battle**, you must always roll at least 1 die of each type if you can. (1 type with 1, 2 with 2.)"
         ),
         "resources": ["Weapon", "Weapon"],
         "setup": {
@@ -243,8 +243,8 @@ leaders = [
     {
         "name": "Ghost",
         "abilities": (
-            "*Manifested.* When you Catapult **move**, your ships may move through one Rival-controlled system. If you move through one, you may influence a card after the move.\n"
-            "*Directionless.* You cannot **move** each ship more than once per turn. You cannot end your Catapult **move** in the system you catapulted from."
+            "*Manifested.* When you Catapult **move**, your ships may move through one Rival-controlled gate. If they do, you may influence.\n"
+            "*Directionless.* You can use at most one **move** action each turn. You cannot end a Catapult **move** in a system with a loyal starport."
         ),
         "resources": ["Fuel", "Psionic"],
         "setup": {
@@ -571,7 +571,7 @@ leaders = [
         "name": "Bargainer",
         "abilities": (
             "*Leveraged.* You may return a player’s trophy or captive to **tax** one of their cities.\n"
-            "*Obliged.* When you score points from an ambition, you must return a trophy or captive, if you can’t, score no points."
+            "*Obliged.* To score points from an ambition, you must return a trophy or captive, if you don't, score no points."
         ),
         "resources": ["Weapon", "Relic"],
         "setup": {
