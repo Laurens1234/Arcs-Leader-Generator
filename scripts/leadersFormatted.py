@@ -429,7 +429,7 @@ leaders = [
         "name": "Martyr",
         "abilities": (
             "*Venerated.* After a **battle** where a rival destroys any of your pieces, gain a resource matching its system (none if in gate). If they destroyed one of your cities, secure the top card of the Court deck instead.\n"
-            "*Selfless.* After a **battle**, where you destroy a city, damage all your fresh ships in its system."
+            "*Selfless.* When attacking in **battle**, any hits that would destroy a city damage your fresh ships first."
         ),
         "resources": ["Psionic", "Material"],
         "setup": {
