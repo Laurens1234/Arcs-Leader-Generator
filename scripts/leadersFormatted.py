@@ -52,7 +52,7 @@ leaders = [
     {
         "name": "Hierarch",
         "abilities": (
-            "*Zealous.* Affer you **influence** a card with a rival agent, you may influence a different card with a rival agent.\n"
+            "*Zealous.* After you **influence** a card with a rival agent, you may influence a different card with a rival agent.\n"
             "*Rigid.* You cannot **influence** when you Pivot."
         ),
         "resources": ["Psionic", "Material"],
@@ -82,7 +82,7 @@ leaders = [
     {
         "name": "General",
         "abilities": (
-            "*Blitzing.* After you **tax**, you may discard a resource to gain a weapon. When attacking in **battle**, you may a discard a weapon to ignore one rolled intercept.\n"
+            "*Blitzing.* After you **tax**, you may discard a resource to gain a weapon. When attacking in **battle**, you may discard a weapon to ignore one rolled intercept.\n"
             "*Reckless.* In **battle**, you must always roll at least 1 die of each type if you can."
         ),
         "resources": ["Weapon", "Weapon"],
@@ -97,7 +97,7 @@ leaders = [
     {
         "name": "Necromancer",
         "abilities": (
-            "*Arising.* After you destroy a piece in **battle**, you may place a matching fresh loyal piece there..\n"
+            "*Arising.* After you destroy a piece in **battle**, you may place a matching fresh loyal piece there.\n"
             "*Gravebound.* In **setup**, damage both of your buildings. You cannot **build** fresh pieces and place them damaged instead. You cannot repair buildings."
         ),
         "resources": ["Psionic", "Weapon"],
@@ -261,7 +261,7 @@ leaders = [
         "name": "Chosen",
         "abilities": (
             "*Hallowed.* In **setup**, choose a ship you place to be the chosen ship. When anyone destroys it, they place it fresh in any system. Once per turn, after it **moves**, it may battle by itself. In battle, the die it rolls has its result count twice.\n"
-            "*Forsaken.* If you have not attacked with the chosen ship this chapter, you cannot **secure**  or **declare** **an** **ambition**."
+            "*Forsaken.* If you have not attacked with the chosen ship this chapter, you cannot **secure** or **declare** **an** **ambition**."
         ),
         "resources": ["Relic", "Fuel"],
         "setup": {
@@ -276,7 +276,7 @@ leaders = [
         "name": "Sage",
         "abilities": (
             "*Arcane.* In **setup**, gain 5 extra Lore cards.\n"
-            "*Elusive.* Players may **influence** and **secure**  your lore. When you **secure** your own lore, gain one lore card."
+            "*Elusive.* Players may **influence** and **secure** your lore. When you **secure** your own lore, gain one lore card."
         ),
         "resources": ["Relic", "Relic"],
         "setup": {
@@ -306,8 +306,8 @@ leaders = [
         "name": "Engineer",
         "abilities": (
             "*Versatile.* Your starports can **move**, **battle**, intercept and control like a ship. You place starports outside building slots.\n"
-            "*Exorbitant.* You can only **build** starports at cities, once per city per turn. \n"
-            "*Fragile.* After you catapult **move**, damage the starport you used. "
+            "*Exorbitant.* You can only **build** starports at cities, once per city per turn.\n"
+            "*Fragile.* After you Catapult **move**, damage the starport you used."
         ),
         "resources": ["Material", "Material"],
         "setup": {
@@ -366,7 +366,7 @@ leaders = [
     {
         "name": "Seeker",
         "abilities": (
-            "*Inquisitive.*  When you **tax**, gain the resource twice if the matching ambition is declared (Weapon matches Warlord).\n"
+            "*Inquisitive.* When you **tax**, gain the resource twice if the matching ambition is declared (Weapon matches Warlord).\n"
             "*Distracted.* After **scoring**, discard a resource matching each declared ambition."
         ),
         "resources": ["Material", "Relic"],
@@ -381,8 +381,8 @@ leaders = [
     {
         "name": "Herald",
         "abilities": (
-            "*Baneful.* When you **secure** a card discard it without effect, then look at the top 3 cards of the Court deck, secure 1, put 1 in the court and bury 1.\n"
-            "*Scathing.* After you discard a Guild card with it's Prelude action, shuffle it back into the court deck. "
+            "*Baneful.* When you **secure** a card, discard it without effect, then look at the top 3 cards of the Court deck, secure 1, put 1 in the court and bury 1.\n"
+            "*Scathing.* After you discard a Guild card with its Prelude action, shuffle it back into the court deck."
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
@@ -398,7 +398,7 @@ leaders = [
     {
         "name": "Alchemist",
         "abilities": (
-            "*Transformative.* At the start of each chapter discard 1 resource to gain 2 resources different types other than the one you discarded.\n"
+            "*Transformative.* At the start of each chapter, discard 1 resource to gain 2 resources of different types other than the one you discarded.\n"
             "*Cautious.* You cannot spend your last resource."
         ),
         "resources": ["Psionic", "Relic"],
@@ -491,7 +491,7 @@ leaders = [
     {
         "name": "Conduit",
         "abilities": (
-            "*Conductive.* Once per turn, you may spend a resource as a resource no player has provoked outraged in.\n"
+            "*Conductive.* Once per turn, you may spend a resource as a resource no player has provoked Outrage in.\n"
             "*Overloaded.* You cannot have more than 1 resource of each type on your player board."
         ),
         "resources": ["Psionic", "Material"],
@@ -522,7 +522,7 @@ leaders = [
         "name": "Automaton",
         "abilities": (
             "*Overclocked.* If you spend 2 or more resources, you may influence at the end of your prelude.\n"
-            "*Wasteful.* After you **secure** a card using 2 or more agents, scrap an agent"
+            "*Wasteful.* After you **secure** a card using 2 or more agents, scrap an agent."
         ),
         "resources": ["Material", "Fuel"],
         "setup": {
@@ -553,8 +553,8 @@ leaders = [
     {
         "name": "Solian",
         "abilities": (
-            "*Settled.* **Prelude:** You may move freely from planets (no catapult moves).\n"
-            "*Rooted.* When your ships catapult move into an enemy-controlled gate, one of them takes a hit."
+            "*Settled.* **Prelude:** You may move freely from planets (no Catapult moves).\n"
+            "*Rooted.* When your ships Catapult **move** into an enemy-controlled gate, one of them takes a hit."
         ),
         "resources": ["Weapon", "Fuel"],
         "setup": {
@@ -571,7 +571,7 @@ leaders = [
         "name": "Bargainer",
         "abilities": (
             "*Leveraged.* You may return a player’s trophy or captive to **tax** one of their cities.\n"
-            "*Obliged.* You must return a trophy or captive when you when you score first place. If you can’t, you get the second-place points and don’t get the city bonus."
+            "*Obliged.* You must return a trophy or captive when you score first place. If you can’t, you get the second-place points and don’t get the city bonus."
         ),
         "resources": ["Relic", "Material"],
         "setup": {
@@ -586,7 +586,7 @@ leaders = [
         "name": "Terraformer",
         "abilities": (
             "*Genesis.* At the start of each chapter, place a resource token from the fullest supply on any planet (if tied you choose). That planet now has this resource type.\n"
-            "*Codependent.* When taxing you only gain resources from terraformed planets."
+            "*Codependent.* When you **tax**, you only gain resources from terraformed planets."
         ),
         "resources": ["Psionic", "Material"],
         "setup": {
@@ -617,8 +617,8 @@ leaders = [
     {
         "name": "Nomad",
         "abilities": (
-            "*Wayfaring.* When **moving** you may take **any** pieces you control with you. Cities in gates match the resource types of each planet in its cluster. If there is no space on a planet place the building outside the building slots.\n"
-            "*Itinerant.* You cannot **Tax** cities in planetary systems.\n"
+            "*Wayfaring.* When you **move**, you may take **any** pieces you control with you. Cities in gates match the resource types of each planet in its cluster. If there is no space on a planet, place the building outside the building slots until there is.\n"
+            "*Itinerant.* You cannot **tax** cities in planetary systems."
         ),
         "resources": ["Material", "Fuel"],
         "setup": {
@@ -627,13 +627,12 @@ leaders = [
             "C": {"ships": 3, "building": "None"}
         },
         "body_font_size": 18
-    }
-    ,
+    },
     # Iconoclast
     {
         "name": "Iconoclast",
         "abilities": (
-            "*Radical.* When you may discard a card to seize, you may destroy a city you control to steal a Guild card from a player which type matches your or their outrage.\n"
+            "*Radical.* When you discard a card to seize, you may destroy a city you control to steal a Guild card from a player whose type matches your or their outrage.\n"
             "*Fervent.* In **setup**, destroy both of your cities."
         ),
         "resources": ["Psionic", "Weapon"],
@@ -651,7 +650,7 @@ leaders = [
         "name": "Fiend",
         "abilities": (
             "*Gluttonous.* When you **Provoke** **Outrage**, if you already have it outraged, clear it instead and gain that resource thrice.\n"
-            "*Wrathful.* In **setup**, **Provoke** **Outrage** in all resource types, then gain any 2 resources"
+            "*Wrathful.* In **setup**, **Provoke** **Outrage** in all resource types, then gain any 2 resources."
         ),
         "resources": ["Fuel", "Material"],
         "setup": {
@@ -694,7 +693,6 @@ leaders = [
             "C": {"ships": 3, "building": "None"}
         },
         "body_font_size": 18,
-        "zoom": 1,
-        
+        "zoom": 1
     }
 ]
