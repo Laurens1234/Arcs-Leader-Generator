@@ -91,7 +91,7 @@ leaders = [
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
         },
-        "body_font_size": 18
+        "body_font_size": 18,
     },
     # Necromancer
     {
@@ -106,7 +106,7 @@ leaders = [
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
         },
-        "body_font_size": 18
+        "body_font_size": 18,
     },
     # Composer
     {
@@ -159,8 +159,8 @@ leaders = [
     {
         "name": "Seer",
         "abilities": (
-            "*Reflective.* Once per turn, you may discard a guild card to secure a card with no agents on it.\n"
-            "*Unstable.* Discard a guild card for no effect if you have two or more of the same type."
+            "*Reflective.* After you discard a guild card, you may influence the court.\n"
+            "*Unstable.* Discard a guild card if you have two or more of the same type."
         ),
         "resources": ["Psionic", "Psionic"],
         "setup": {
