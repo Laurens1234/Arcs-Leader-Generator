@@ -909,6 +909,21 @@ leaders = [
             "C": {"ships": 3, "building": "None"}
         },
         "body_font_size": 18
+    },
+    # Collector
+    {
+        "name": "Collector",
+        "abilities": (
+            "*Acquisitive.* When you **secure** a card, gain the resource matching its type.\n"
+            "*Jaded.* At the end of each chapter, discard a guild card for no effect, if you can't, discard all resources you have."
+        ),
+        "resources": ["Psionic", "Relic"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
     }
 
 ]
