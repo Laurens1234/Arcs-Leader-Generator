@@ -914,7 +914,7 @@ leaders = [
     {
         "name": "Collector",
         "abilities": (
-            "*Acquisitive.* When you **secure** a card, gain the resource matching its type.\n"
+            "*Acquisitive.* When you **secure** a card, gain a resource matching its type.\n"
             "*Jaded.* At the end of each chapter, discard a guild card for no effect, if you can't, discard all resources you have."
         ),
         "resources": ["Psionic", "Relic"],
