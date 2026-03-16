@@ -782,7 +782,7 @@ leaders = [
     {
         "name": "Broker",
         "abilities": (
-            "*Mercantile.* When you **influence** a card, you may place 1 of your resources on it to **influence** it again. When it is **secured**, the player who secures it gains those resources. When a card is Ransacked, only the resources on it are gained.\n"
+            "*Mercantile.* When you **influence** a card, you may place 1 of your resources on it to **influence** it again. When it is **secured**, the player who secures it gains those resources. When that card is Ransacked, only the resources on it are gained.\n"
             "*Indebted.* When you **declare** **an** **ambition**, discard a resource or return a piece."
         ),
         "resources": ["Relic", "Psionic"],
@@ -810,7 +810,7 @@ leaders = [
     {
         "name": "Courier",
         "abilities": (
-            "*Swift.* At the start of each chapter, each rival player places an agent on a planet, when you move a ship into it, gain a resource matching that planet and return the agent.\n"
+            "*Swift.* At the start of each chapter, each rival player places an agent on a planet, when you move a ship into one, gain a resource matching that planet and return the agent.\n"
             "*Careless.* You cannot score city bonus points if you have not returned all agents on the board."
         ),
         "resources": ["Fuel", "Fuel"],
@@ -866,7 +866,7 @@ leaders = [
     {
         "name": "Bomber",
         "abilities": (
-            "*Incendiary.* When attacking in **battle**, before rolling dice, you may destroy 1 attacking ship to destroy 2 defending pieces.\n"
+            "*Incendiary.* When attacking in **battle**, before rolling dice, you may destroy 1 attacking ship to destroy 2 defending ships.\n"
             "*Abhored.* When you destroy a starport also provoke outrage of its system."
         ),
         "resources": ["Weapon", "Fuel"],
