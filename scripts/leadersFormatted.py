@@ -835,7 +835,9 @@ leaders = [
             "B": {"ships": 3, "building": "None"},
             "C": {"ships": 3, "building": "None"}
         },
-        "body_font_size": 18
+        "body_font_size": 18,
+        "zoom": 1.25,
+
     },
     {
         "name": "Highroller",
