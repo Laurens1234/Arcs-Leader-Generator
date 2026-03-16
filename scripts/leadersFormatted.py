@@ -336,7 +336,7 @@ leaders = [
     {
         "name": "Weaver",
         "abilities": (
-            "*Interwoven.* After you use a pip to **secure**, you may influence an adjacent card.\n"
+            "*Interwoven.* When you use a pip to **secure**, you may influence an adjacent card.\n"
             "*Tangled.* You must discard a resource to **influence** a card with any Rival agents on it."
         ),
         "resources": ["Relic", "Fuel"],
