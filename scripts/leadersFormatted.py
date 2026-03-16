@@ -740,7 +740,7 @@ leaders = [
     {
         "name": "Regent",
         "abilities": (
-            "*Regal.* After any player whose city you control takes a **tax** action, you may also **tax**. After any player whose starport you control takes a **build** action, you may also **build**.\n"
+            "*Imposing.* After any player whose city you control takes a **tax** action, you may also **tax**. After any player whose starport you control takes a **build** action, you may also **build**.\n"
             "*Munificent.* At the end of each chapter, give 1 resource to each player whose building you control."
         ),
         "resources": ["Relic", "Weapon"],
@@ -820,5 +820,76 @@ leaders = [
             "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 18
+    },
+    {
+        "name": "Forager",
+        "abilities": (
+            "*Rooting.* When you **move** into a planet with no pieces, gain 1 matching resource.\n"
+            "*Territorial.* When you **move** out of a planet, if it would be left empty, you must leave 1 of your pieces there."
+        ),
+        "resources": ["Material", "Fuel"],
+        "setup": {
+            "A": {"ships": 3, "building": "None"},
+            "B": {"ships": 3, "building": "None"},
+            "C": {"ships": 3, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    {
+        "name": "Highroller",
+        "abilities": (
+            "*Audacious.* After you roll dice in **battle**, you may damage 1 of your attacking ships to reroll all dice.\n"
+            "*Feverish.* After you reroll dice in **battle**, Provoke Outrage in any resource."
+        ),
+        "resources": ["Weapon", "Fuel"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 3, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    {
+        "name": "Insurgent",
+        "abilities": (
+            "*Seditious.* After attacking in **battle**, you may **influence** a card with a defender's agent on it.\n"
+            "*Decentralized.* You cannot **repair** ships."
+        ),
+        "resources": ["Weapon", "Psionic"],
+        "setup": {
+            "A": {"ships": 3, "building": "starport"},
+            "B": {"ships": 3, "building": "None"},
+            "C": {"ships": 3, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    {
+        "name": "Bomber",
+        "abilities": (
+            "*Incendiary.* When attacking in **battle**, before rolling dice, you may destroy 1 attacking ship to destroy 2 defending pieces.\n"
+            "*Abhored.* When you destroy a starport also provoke outrage of its system."
+        ),
+        "resources": ["Weapon", "Fuel"],
+        "setup": {
+            "A": {"ships": 3, "building": "starport"},
+            "B": {"ships": 3, "building": "city"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    {
+        "name": "Musician",
+        "abilities": (
+            "*Inspiring.* Instead of discarding a card to seize, you may give 1 resource to the player with the initiative to seize it.\n"
+            "*Temperamental.* When you gain the iniative, damage 1 loyal ship."
+        ),
+        "resources": ["Psionic", "Relic"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
     }
+
 ]
