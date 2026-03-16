@@ -243,7 +243,7 @@ leaders = [
     {
         "name": "Ghost",
         "abilities": (
-            "*Manifested.* When you Catapult **move**, your ships may move through one Rival controlled gate. If you do, you may influence.\n"
+            "*Manifested.* When you Catapult **move**, your ships may move through one Rival controlled gate. If they do, you may influence.\n"
             "*Directionless.* You can use at most one **move** action each turn."
         ),
         "resources": ["Fuel", "Psionic"],
