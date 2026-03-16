@@ -784,7 +784,7 @@ leaders = [
     {
         "name": "Broker",
         "abilities": (
-            "*Mercantile.* When you **influence** a card, you may place 1 of your resources on it to **influence** it again. When it is **secured**, the player who secures it gains those resources. When that card is Ransacked, only the resources on it are gained.\n"
+            "*Mercantile.* When you **influence** a card, you may place 1 of your resources on it to influence it again. When it is **secured**, the player who secures it gains those resources. When a card with resources is Ransacked, only the resources on it are gained.\n"
             "*Indebted.* When you **declare** **an** **ambition**, discard a resource or return a piece."
         ),
         "resources": ["Relic", "Psionic"],
