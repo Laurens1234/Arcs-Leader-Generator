@@ -194,7 +194,7 @@ leaders = [
         "name": "Manipulator",
         "abilities": (
             "*Clever.* When you **declare** **an** **ambition**, you may move any agents in the Court to other cards.\n"
-            "*Fraudulent.* When you **secure** a card with rival agents on it, capture at most one and place the rest on other cards."
+            "*Fraudulent.* When you **secure** a card with rival agents on it, capture one and place the rest on other cards."
         ),
         "resources": ["Weapon", "Relic"],
         "setup": {
