@@ -243,7 +243,7 @@ leaders = [
     {
         "name": "Ghost",
         "abilities": (
-            "*Manifested.* When you Catapult **move**, your ships may move through one Rival-controlled gate. If they do, you may influence.\n"
+            "*Manifested.* When you Catapult **move**, your ships may move through one Rival controlled gate. If you do, you may influence.\n"
             "*Directionless.* You can use at most one **move** action each turn. You cannot end a Catapult **move** in a system with a loyal starport."
         ),
         "resources": ["Fuel", "Psionic"],
@@ -337,7 +337,7 @@ leaders = [
         "name": "Weaver",
         "abilities": (
             "*Interwoven.* When you use a pip to **secure**, you may influence an adjacent card.\n"
-            "*Tangled.* You must discard a resource to **influence** a card with any Rival agents on it."
+            "*Tangled.* You must discard a resource to **influence** a card with only Rival agents on it."
         ),
         "resources": ["Relic", "Fuel"],
         "setup": {
@@ -743,7 +743,7 @@ leaders = [
         "name": "Chief",
         "abilities": (
             "*Imposing.* After any player whose city you control takes a **tax** action, you may also **tax**. After any player whose starport you control takes a **build** action, you may also **build**.\n"
-            "*Bountiful.* At the end of each chapter, give 1 resource to each player whose building you control."
+            "*Bountiful.* At the end of each chapter, give 1 resource to each player of which you control a building."
         ),
         "resources": ["Relic", "Weapon"],
         "setup": {
@@ -812,8 +812,8 @@ leaders = [
     {
         "name": "Courier",
         "abilities": (
-            "*Swift.* At the start of each chapter, each rival player places an agent on a planet with none of your ships (then the player on your left places 2 of yours in 2p and 1 in 3p), when you move a ship into one, gain a resource matching that planet and return the agent.\n"
-            "*Careless.* You cannot score city bonus points if you have not returned all agents on the board."
+            "*Swift.* At the start of each chapter, in turn order, Rival players place an agent on an empty planet until there are 3 on the board. When you move a ship into one, return the agent and gain a resource matching that planet.\n"
+            "*Careless.* You cannot score city bonus points if you have not returned all agents."
         ),
         "resources": ["Fuel", "Fuel"],
         "setup": {
@@ -892,6 +892,21 @@ leaders = [
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    # Ozymendias
+    {
+        "name": "Ozymendias",
+        "abilities": (
+            "*Hubristic.* When you control all gates, **secure** the entire Court, returning any agents, then you destroy all ships in the gates.\n"
+            "*Forgotten.* You cannot **influence** if you control no gates."
+        ),
+        "resources": ["Weapon", "Relic"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 3, "building": "None"}
         },
         "body_font_size": 18
     }
