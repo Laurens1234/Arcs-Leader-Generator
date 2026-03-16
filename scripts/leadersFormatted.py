@@ -379,10 +379,10 @@ leaders = [
     },
     # Herald
     {
-        "name": "Herald",
+        "name": "Augur",
         "abilities": (
-            "*Baneful.* When you **secure** a card, discard it without effect, then look at the top 3 cards of the Court deck, secure 1, put 1 in the Court and bury 1.\n"
-            "*Scathing.* After you discard a Guild card with its Prelude action, shuffle it back into the Court deck."
+            "*Baneful.* When you **secure** a card from the court, bury it, then look at the top two cards of the Court deck, secure one and bury the other.\n"
+            "*Ominous.* After you discard a Guild card with its Prelude action, bury the top card of the Court deck. If it shares a resource type with the discarded card, **Provoke** **Outrage** in that type."
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
@@ -429,7 +429,7 @@ leaders = [
         "name": "Martyr",
         "abilities": (
             "*Venerated.* After a **battle** where a rival destroys any of your pieces, gain a resource matching its system (none if in gate).\n"
-            "*Selfless.* When attacking in **battle**, any hits that would damage a city damage your fresh ships first. **Provoke** **Outrage** if you harm any city."
+            "*Selfless.* When attacking in **battle**, any hits that would damage a city damage your fresh ships first."
         ),
         "resources": ["Psionic", "Material"],
         "setup": {
