@@ -52,7 +52,7 @@ leaders = [
     {
         "name": "Hierarch",
         "abilities": (
-            "*Zealous.* After you **influence** a card with a rival agent, you may influence a different card with a rival agent.\n"
+            "*Entitled.* After you **influence** a card with a rival agent, you may influence a different card with a rival agent.\n"
             "*Rigid.* You cannot **influence** when you Pivot."
         ),
         "resources": ["Psionic", "Material"],
@@ -68,7 +68,7 @@ leaders = [
         "name": "Smuggler",
         "abilities": (
             "*Opportunistic.* When you **battle** and roll any raid dice, you may steal 1 resource for free.\n"
-            "*Hunted.* After you destroy a building in **battle**, the defender may take a free move action."
+            "*Hunted.* After you destroy a building in **battle**, the defender may force you to move all your ships back into the gate."
         ),
         "resources": ["Fuel", "Weapon"],
         "setup": {
@@ -143,7 +143,7 @@ leaders = [
     {
         "name": "Saint",
         "abilities": (
-            "*Sacred.* When a Rival wins an ambition, they must give you a resource. If they can't, they must give you a Guild card.\n"
+            "*Sacred.* When a Rival wins an ambition, they give you a resource. If they can't, they give you a Guild card.\n"
             "*Blessed.* Before **scoring**, you may **declare** **an** **ambition**.\n"
             "*Corrupted.* When you win an ambition, discard a resource. If you can't, discard a Guild card."
         ),
@@ -227,7 +227,7 @@ leaders = [
         "abilities": (
             "*Judicious.* In **scoring**, if any players tie for first in an ambition, you gain the initiative.\n"
             "*Immunized.* If you have the initiative you don't provoke Outrage.\n"
-            "*Constrained.* In **battle**, when you Ransack the Court, you take a normal secure action instead."
+            "*Fair.* Before scoring, the Rival player with the least points may take a resource from you."
         ),
         "resources": ["Psionic", "Fuel"],
         "setup": {
@@ -244,7 +244,7 @@ leaders = [
         "name": "Ghost",
         "abilities": (
             "*Manifested.* When you Catapult **move**, your ships may move through one Rival controlled gate. If you do, you may influence.\n"
-            "*Directionless.* You can use at most one **move** action each turn. You cannot end a Catapult **move** in a system with a loyal starport."
+            "*Directionless.* You can use at most one **move** action each turn."
         ),
         "resources": ["Fuel", "Psionic"],
         "setup": {
