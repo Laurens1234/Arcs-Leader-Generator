@@ -226,8 +226,8 @@ leaders = [
         "name": "Prefect",
         "abilities": (
             "*Judicious.* In **scoring**, if any players tie for first in an ambition, you gain the initiative.\n"
-            "*Immunized.* If you have the initiative you don't provoke Outrage.\n"
-            "*Fair.* Before scoring, the Rival player with the least points may take a resource from you."
+            "*Immunized.* If you have the initiative you don't **Provoke** **Outrage**.\n"
+            "*Fair.* Before **scoring**, the Rival player with the least points may take a resource from you."
         ),
         "resources": ["Psionic", "Fuel"],
         "setup": {
@@ -429,7 +429,7 @@ leaders = [
         "name": "Martyr",
         "abilities": (
             "*Venerated.* After a **battle** where a rival destroys any of your pieces, gain a resource matching its system (none if in gate).\n"
-            "*Selfless.* When attacking in **battle**, any hits that would damage a city damage your fresh ships first. Provoke outrage if you harm any city."
+            "*Selfless.* When attacking in **battle**, any hits that would damage a city damage your fresh ships first. **Provoke** **Outrage** if you harm any city."
         ),
         "resources": ["Psionic", "Material"],
         "setup": {
@@ -491,8 +491,8 @@ leaders = [
     {
         "name": "Conduit",
         "abilities": (
-            "*Conductive.* Once per turn, you may spend a resource as a resource no player has provoked Outrage in.\n"
-            "*Overloaded.* In **setup**, provoke Weapon Outrage."
+            "*Conductive.* Once per turn, you may spend a resource as a resource no player has **Provoked** **Outrage** in.\n"
+            "*Overloaded.* In **setup**, Provoke Weapon Outrage."
         ),
         "resources": ["Psionic", "Material"],
         "setup": {
@@ -601,7 +601,7 @@ leaders = [
         "name": "Trickster",
         "abilities": (
             "*Misdirecting.* Before you play an action card, you may swap a facedown action card with one of yours without looking at it first. Put yours face-up.\n"
-            "*Revealed.* When you discard a card to seize or copy, place it faceup."
+            "*Revealed.* When you discard a card to seize or copy, place it face-up."
         ),
         "resources": ["Psionic", "Fuel"],
         "setup": {
@@ -667,7 +667,7 @@ leaders = [
         "name": "Wheeler-dealer",
         "abilities": (
             "*Cunning.* **Prelude:** Once per turn, you may **Provoke** **Outrage** in a resource type, then secure cards from the top of the deck matching the amount of cards you just discarded. Then gain **any** resources matching the amount you've just discarded.\n"
-            "*Irate.* In **setup**, provoke Relic or Psionic outrage."
+            "*Irate.* In **setup**, Provoke Relic or Psionic Outrage."
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
@@ -694,7 +694,7 @@ leaders = [
         },
         "body_font_size": 18,
         "zoom": 1
-        },
+    },
     {
         "name": "Cartographer",
         "abilities": (
@@ -843,7 +843,7 @@ leaders = [
         "name": "Highroller",
         "abilities": (
             "*Audacious.* After you roll dice in **battle**, you may damage 1 of your attacking ships to reroll all dice.\n"
-            "*Feverish.* After you reroll dice in **battle**, Provoke Outrage in any resource."
+            "*Feverish.* After you reroll dice in **battle**, **Provoke** **Outrage** in a resource."
         ),
         "resources": ["Weapon", "Fuel"],
         "setup": {
@@ -870,8 +870,8 @@ leaders = [
     {
         "name": "Bomber",
         "abilities": (
-            "*Incendiary.* When attacking in **battle**, before collecting dice, you may destroy fresh 1 attacking ship to destroy 2 defending ships.\n"
-            "*Abhored.* When you destroy a starport also provoke outrage of its system."
+            "*Incendiary.* When attacking in **battle**, before collecting dice, you may destroy 1 fresh attacking ship to destroy 2 defending ships.\n"
+            "*Abhorred.* When you destroy a starport, also **Provoke** **Outrage** of its system."
         ),
         "resources": ["Weapon", "Fuel"],
         "setup": {
@@ -885,7 +885,7 @@ leaders = [
         "name": "Musician",
         "abilities": (
             "*Inspiring.* Instead of discarding a card to seize, you may give 1 resource to the player with the initiative to seize it.\n"
-            "*Temperamental.* When you gain the iniative, damage 1 loyal ship."
+            "*Temperamental.* When you gain the initiative, damage 1 loyal ship."
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
@@ -899,7 +899,7 @@ leaders = [
     {
         "name": "Ozymendias",
         "abilities": (
-            "*Hubristic.* When you control all gates, **secure** the entire Court, returning any agents, then you destroy all ships in the gates.\n"
+            "*Hubristic.* When you control all gates, **secure** the entire Court, returning all agents, then you destroy all ships in the gates.\n"
             "*Forgotten.* You cannot **influence** if you control no gates."
         ),
         "resources": ["Weapon", "Relic"],
@@ -915,7 +915,7 @@ leaders = [
         "name": "Collector",
         "abilities": (
             "*Acquisitive.* When you **secure** a card, gain a resource matching its type.\n"
-            "*Jaded.* At the end of each chapter, discard a guild card for no effect, if you can't, discard all resources you have."
+            "*Jaded.* At the end of each chapter, discard a Guild card for no effect, if you can't, discard all resources you have."
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
