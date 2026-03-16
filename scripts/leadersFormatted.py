@@ -799,7 +799,7 @@ leaders = [
         "name": "Siegebreaker",
         "abilities": (
             "*Ruinous.* In **battle**, if the defender has any buildings in the system, you may collect 1 extra Assault die.\n"
-            "*Brutal.* After you destroy a building in **battle**, damage 1 of your ships in that system."
+            "*Brutal.* When you destroy a building in **battle**, destroy 1 of your ships in that system."
         ),
         "resources": ["Weapon", "Weapon"],
         "setup": {
@@ -812,7 +812,7 @@ leaders = [
     {
         "name": "Courier",
         "abilities": (
-            "*Swift.* At the start of each chapter, each rival player places an agent on a planet, when you move a ship into one, gain a resource matching that planet and return the agent.\n"
+            "*Swift.* At the start of each chapter, each rival player places an agent on a planet with none of your ships (then the player on your left places 2 of yours in 2p and 1 in 3p), when you move a ship into one, gain a resource matching that planet and return the agent.\n"
             "*Careless.* You cannot score city bonus points if you have not returned all agents on the board."
         ),
         "resources": ["Fuel", "Fuel"],
@@ -870,7 +870,7 @@ leaders = [
     {
         "name": "Bomber",
         "abilities": (
-            "*Incendiary.* When attacking in **battle**, before rolling dice, you may destroy fresh 1 attacking ship to destroy 2 defending ships.\n"
+            "*Incendiary.* When attacking in **battle**, before collecting dice, you may destroy fresh 1 attacking ship to destroy 2 defending ships.\n"
             "*Abhored.* When you destroy a starport also provoke outrage of its system."
         ),
         "resources": ["Weapon", "Fuel"],
