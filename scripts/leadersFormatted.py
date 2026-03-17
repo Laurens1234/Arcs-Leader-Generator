@@ -428,8 +428,8 @@ leaders = [
     {
         "name": "Martyr",
         "abilities": (
-            "*Venerated.* After a **battle** where a rival destroys any of your pieces, gain a resource matching its system (none if in gate).\n"
-            "*Selfless.* When attacking in **battle**, any hits that would damage a city damage your fresh ships first."
+            "*Venerated.* After defending in a **battle**, if the defender took any trophies, gain a resource matching the battle system, gain any if in gate.\n"
+            "*Selfless.* In **battle** in a system with your ships, any hits that would damage a city damage your fresh ships instead."
         ),
         "resources": ["Psionic", "Material"],
         "setup": {
@@ -444,8 +444,8 @@ leaders = [
     {
         "name": "Scourge",
         "abilities": (
-            "*Pyromaniacal.* After you destroy a city in a system you control or a loyal city, destroy all damaged pieces there.\n"
-            "*Insatiable.* At the end of each chapter, if you did not destroy a city this chapter, destroy a loyal city or a city you control."
+            "*Pyromaniacal.* In **battle**, you may damage a city instead of a damaged ship. When you destroy a city, destroy all damaged pieces in its system.\n"
+            "*Insatiable.* Before **scoring**, if you did not destroy a city this chapter, destroy a city in a system you control or a loyal city."
         ),
         "resources": ["Weapon", "Fuel"],
         "setup": {
@@ -506,7 +506,7 @@ leaders = [
     {
         "name": "Puppeteer",
         "abilities": (
-            "*Guiding.* Once per turn, when a rival tries to **influence** a card with one of your agents, you may force them to influence another card.\n"
+            "*Guiding.* Once per turn, when a rival tries to **influence** a card with your agents on it, you may force them to influence another card instead.\n"
             "*Straining.* To **secure** a card with a rival agent on it, you must have 2 more agents on it than them instead of 1."
         ),
         "resources": ["Psionic", "Relic"],
@@ -784,7 +784,7 @@ leaders = [
     {
         "name": "Broker",
         "abilities": (
-            "*Mercantile.* When you **influence** a card, you may place 1 of your resources on it to influence it again. When it is **secured**, the player who secures it gains those resources. When a card with resources is Ransacked, only the resources on it are gained.\n"
+            "*Mercantile.* When you **influence** a card, you may place 1 of your resources on it to influence it again. When it is **secured**, the player who secures it gains those resources.\n"
             "*Indebted.* When you **declare** **an** **ambition**, discard a resource or return a piece."
         ),
         "resources": ["Relic", "Psionic"],
@@ -915,7 +915,7 @@ leaders = [
         "name": "Collector",
         "abilities": (
             "*Acquisitive.* When you **secure** a card, gain a resource matching its type.\n"
-            "*Jaded.* At the end of each chapter, discard a Guild card for no effect, if you can't, discard all resources you have."
+            "*Jaded.* At the end of each chapter, discard a Guild card, if you can't, discard all resources you have."
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
