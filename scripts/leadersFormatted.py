@@ -939,6 +939,6 @@ leaders = [
         },
         "body_font_size": 18,
         "zoom": 1.3,
-        "boundary_shift": 0.5
+        "boundary_shift": 0.4
     }
 ]
