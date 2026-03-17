@@ -871,7 +871,7 @@ leaders = [
         "name": "Bomber",
         "abilities": (
             "*Incendiary.* When attacking in **battle**, before collecting dice, you may destroy 1 fresh attacking ship to destroy 2 defending ships.\n"
-            "*Abhorred.* When you destroy a starport, also **Provoke** **Outrage** of its system."
+            "*Infamous.* When you destroy a starport, also **Provoke** **Outrage** of its system."
         ),
         "resources": ["Weapon", "Fuel"],
         "setup": {
