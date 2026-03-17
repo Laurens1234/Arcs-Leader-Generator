@@ -129,7 +129,7 @@ leaders = [
         "abilities": (
             "*Voracious.* When you **declare** **an** **ambition**, place a ship in any system.\n"
             "*Crushing.* When more than 1 Rival ship moves into a planet you control, you destroy 1 of those ships.\n"
-            "*Erratic.* In **scoring**, destroy 1 loyal fresh ship for each ambition you win."
+            "Starving.* In **scoring**, if you did not win any ambition, scrap 2 loyal ships."
         ),
         "resources": ["Weapon", "Material"],
         "setup": {
@@ -209,7 +209,7 @@ leaders = [
         "name": "Sentinel",
         "abilities": (
             "*Assertive.* When attacking in **battle**, deal 1 extra hit.\n"
-            "*Cautious.* You cannot roll more Raid and Assault dice than you have fresh attacking ships."
+            "*Cautious.* You cannot roll more raid and assault dice than you have fresh attacking ships."
         ),
         "resources": ["Material", "Fuel"],
         "setup": {
@@ -690,7 +690,7 @@ leaders = [
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
-            "C": {"ships": 3, "building": "None"}
+            "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 18,
         "zoom": 1
@@ -713,9 +713,9 @@ leaders = [
         "name": "Custodian",
         "abilities": (
             "*Vigilant.* When a fresh Rival ship moves into a gate you control, you may gain 1 resource matching any city in that gate's cluster.\n"
-            "*Heedless.* Damaged ships may continue moving after moving into a gate you control."
+            "*Heedless.* Damaged Rival ships may move after moving into a gate you control."
         ),
-        "resources": ["Material", "Psionic"],
+        "resources": ["Material", "Fuel"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
@@ -798,7 +798,7 @@ leaders = [
     {
         "name": "Siegebreaker",
         "abilities": (
-            "*Ruinous.* In **battle**, if the defender has any buildings in the system, you may collect 1 extra Assault die.\n"
+            "*Ruinous.* In **battle**, if the defender has any buildings in the system, you may collect 1 extra assault die.\n"
             "*Brutal.* When you destroy a building in **battle**, destroy 1 of your ships in that system."
         ),
         "resources": ["Weapon", "Weapon"],
