@@ -813,7 +813,7 @@ leaders = [
         "name": "Courier",
         "abilities": (
             "*Swift.* At the start of each chapter, in turn order, Rival players place an agent on planets with no Courier pieces until there are 3 on the board. When you **move** into one, return the agent and gain a resource matching that planet.\n"
-            "*Careless.* You cannot gain bonus city Power if you have not returned all agents."
+            "*Careless.* You cannot gain bonus city Power if you have not returned all agents on the board."
         ),
         "resources": ["Fuel", "Fuel"],
         "setup": {
