@@ -227,7 +227,7 @@ leaders = [
         "abilities": (
             "*Judicious.* In **scoring**, if any players tie for first in an ambition, you gain the initiative.\n"
             "*Immunized.* If you have the initiative you don't **Provoke** **Outrage**.\n"
-            "*Fair.* Before **scoring**, the Rival player with the least points may take a resource from you."
+            "*Fair.* Before **scoring**, the Rival player with the least Power may take a resource from you."
         ),
         "resources": ["Psionic", "Fuel"],
         "setup": {
@@ -571,7 +571,7 @@ leaders = [
         "name": "Bargainer",
         "abilities": (
             "*Leveraged.* You may return a player’s trophy or captive to **tax** one of their cities.\n"
-            "*Obliged.* To score points from an ambition, you must return a trophy or captive, if you don't, score no points."
+            "*Obliged.* To gain Power from an ambition, you must return a trophy or captive, if you don't, gain no Power."
         ),
         "resources": ["Weapon", "Relic"],
         "setup": {
@@ -684,7 +684,7 @@ leaders = [
         "name": "Curator",
         "abilities": (
             "*Meticulous.* When you **secure** a card, you may discard it to secure the top two cards of the lore deck.\n"
-            "*Ascetic.* At the end of each chapter, give two lore cards to other players, divided as you choose."
+            "*Ascetic.* At the end of each chapter, give one lore card to another player."
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
@@ -784,7 +784,7 @@ leaders = [
     {
         "name": "Broker",
         "abilities": (
-            "*Mercantile.* When you **influence** a card, you may place 1 of your resources on it to influence it again. When it is **secured**, the player who secures it gains those resources.\n"
+            "*Mercantile.* When you **influence** a card, you may place 1 of your resources on it to influence it again. When it is **secured**, gain those resources.\n"
             "*Indebted.* When you **declare** **an** **ambition**, discard a resource or return a piece."
         ),
         "resources": ["Relic", "Psionic"],
@@ -812,8 +812,8 @@ leaders = [
     {
         "name": "Courier",
         "abilities": (
-            "*Swift.* At the start of each chapter, in turn order, Rival players place an agent on an empty planet until there are 3 on the board. When you move a ship into one, return the agent and gain a resource matching that planet.\n"
-            "*Careless.* You cannot score city bonus points if you have not returned all agents."
+            "*Swift.* At the start of each chapter, in turn order, Rival players place an agent on an empty planet until there are 3 on the board. When you move into one, return the agent and gain a resource matching that planet.\n"
+            "*Careless.* You cannot gain bonus city Power if you have not returned all agents."
         ),
         "resources": ["Fuel", "Fuel"],
         "setup": {
