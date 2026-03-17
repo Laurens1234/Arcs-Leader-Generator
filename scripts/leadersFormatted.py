@@ -129,7 +129,7 @@ leaders = [
         "abilities": (
             "*Voracious.* When you **declare** **an** **ambition**, place a ship in any system.\n"
             "*Crushing.* When more than 1 Rival ship moves into a planet you control, you destroy 1 of those ships.\n"
-            "Starving.* In **scoring**, if you did not win any ambition, scrap 2 loyal ships."
+            "*Starving.* In **scoring**, if Warlord is declared and you don't win it, scrap 2 loyal ships."
         ),
         "resources": ["Weapon", "Material"],
         "setup": {
@@ -712,7 +712,7 @@ leaders = [
     {
         "name": "Custodian",
         "abilities": (
-            "*Vigilant.* When a fresh Rival ship moves into a gate you control, you may gain 1 resource matching any city in that gate's cluster.\n"
+            "*Vigilant.* When a Rival player moves any fresh ships into a gate you control, gain 1 resource matching any city in that gate's cluster.\n"
             "*Heedless.* Damaged Rival ships may move after moving into a gate you control."
         ),
         "resources": ["Material", "Fuel"],
@@ -799,7 +799,7 @@ leaders = [
         "name": "Siegebreaker",
         "abilities": (
             "*Ruinous.* In **battle**, if the defender has any buildings in the system, you may collect 1 extra assault die.\n"
-            "*Brutal.* When you destroy a building in **battle**, destroy 1 of your ships in that system."
+            "*Brutal.* When you destroy a building in **battle**, destroy 1 of your ships in that system (the defender takes it as a trophy)."
         ),
         "resources": ["Weapon", "Weapon"],
         "setup": {
