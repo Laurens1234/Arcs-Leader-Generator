@@ -801,7 +801,7 @@ leaders = [
             "*Ruinous.* In **battle**, if the defender has any buildings in the system, you may collect 1 extra assault die.\n"
             "*Brutal.* When you destroy a building in **battle**, destroy 1 of your ships in that system (the defender takes it as a trophy)."
         ),
-        "resources": ["Weapon", "Weapon"],
+        "resources": ["Weapon", "Fuel"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
@@ -875,8 +875,8 @@ leaders = [
         ),
         "resources": ["Weapon", "Fuel"],
         "setup": {
-            "A": {"ships": 3, "building": "starport"},
-            "B": {"ships": 3, "building": "city"},
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 18
