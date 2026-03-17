@@ -193,7 +193,7 @@ leaders = [
     {
         "name": "Manipulator",
         "abilities": (
-            "*Clever.* When you **declare** **an** **ambition**, you may move any agents in the Court to other cards.\n"
+            "*Clever.* When you **declare** **an** **ambition**, you may move any agents on cards to other cards.\n"
             "*Fraudulent.* When you **secure** a card with rival agents on it, capture one and place the rest on other cards."
         ),
         "resources": ["Weapon", "Relic"],
@@ -698,7 +698,7 @@ leaders = [
     {
         "name": "Cartographer",
         "abilities": (
-            "*Exploratory.* When you **move**, you may move ships from two different systems instead of one.\n"
+            "*Exploratory.* When you **move**, you may move ships starting from two systems instead of one.\n"
             "*Distracted.* When you Catapult **move**, after each move you must drop off 1 ship."
         ),
         "resources": ["Fuel", "Relic"],
@@ -812,7 +812,7 @@ leaders = [
     {
         "name": "Courier",
         "abilities": (
-            "*Swift.* At the start of each chapter, in turn order, Rival players place an agent on an empty planet until there are 3 on the board. When you move into one, return the agent and gain a resource matching that planet.\n"
+            "*Swift.* At the start of each chapter, in turn order, Rival players place an agent on an empty planet until there are 3 on the board. When you **move** into one, return the agent and gain a resource matching that planet.\n"
             "*Careless.* You cannot gain bonus city Power if you have not returned all agents."
         ),
         "resources": ["Fuel", "Fuel"],
