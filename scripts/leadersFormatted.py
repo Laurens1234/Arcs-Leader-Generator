@@ -82,7 +82,7 @@ leaders = [
     {
         "name": "General",
         "abilities": (
-            "*Blitzing.* After you **tax**, you may discard a resource to gain a Weapon. When attacking in **battle**, you may discard a Weapon to ignore one rolled intercept.\n"
+            "*Blitzing.* After you **tax**, you may discard a resource to gain a Weapon. When attacking in **battle**, you may discard a Weapon to ignore 1 rolled intercept.\n"
             "*Reckless.* In **battle**, you must always roll at least 1 die of each type if you can. (1 type with 1, 2 with 2.)"
         ),
         "resources": ["Weapon", "Weapon"],
@@ -176,7 +176,7 @@ leaders = [
         "abilities": (
             "*Symbiotic.* You may **build** in adjacent systems with no rival pieces.\n"
             "*Fertile.* Gain 1 Material when you **build** a starport; gain 1 matching resource when you **build** a city.\n"
-            "*Sprouting.* At the start of each chapter, you may replace one Loyal building with a ship.\n"
+            "*Sprouting.* At the start of each chapter, you may replace a Loyal building with a ship.\n"
             "*Rooted.* You cannot **battle** in clusters where you have no buildings."
         ),
         "resources": ["Material", "Relic"],
@@ -194,7 +194,7 @@ leaders = [
         "name": "Manipulator",
         "abilities": (
             "*Clever.* When you **declare** **an** **ambition**, you may move any agents on cards to other cards.\n"
-            "*Fraudulent.* When you **secure** a card with rival agents on it, capture one and place the rest on other cards."
+            "*Fraudulent.* When you **secure** a card with rival agents on it, capture 1 and place the rest on other cards."
         ),
         "resources": ["Weapon", "Relic"],
         "setup": {
@@ -351,8 +351,8 @@ leaders = [
     {
         "name": "Dreamer",
         "abilities": (
-            "*Lucid.* When you **declare** **an** **ambition**, gain 1 Lore card.\n"
-            "*Blurred.* Your lore cards have a raid cost of 3 keys."
+            "*Lucid.* When you **declare** **an** **ambition**, gain 1 lore card.\n"
+            "*Blurred.* Your lore cards have a raid cost of 2 keys."
         ),
         "resources": ["Psionic", "Fuel"],
         "setup": {
@@ -381,7 +381,7 @@ leaders = [
     {
         "name": "Augur",
         "abilities": (
-            "*Baneful.* When you **secure** a card from the court, bury it, then look at the top two cards of the Court deck, secure one and bury the other.\n"
+            "*Baneful.* When you **secure** a card from the court, bury it, then look at the top 2 cards of the Court deck, secure one and bury the other.\n"
             "*Ominous.* After you discard a Guild card with its Prelude action, bury the top card of the Court deck. If it shares a resource type with the discarded card, **Provoke** **Outrage** in that type."
         ),
         "resources": ["Psionic", "Relic"],
@@ -683,8 +683,8 @@ leaders = [
     {
         "name": "Curator",
         "abilities": (
-            "*Meticulous.* When you **secure** a card, you may discard it to secure the top two cards of the lore deck.\n"
-            "*Ascetic.* At the end of each chapter, give one lore card to another player."
+            "*Meticulous.* When you **secure** a card, you may discard it to gain two lore cards.\n"
+            "*Ascetic.* At the end of each chapter, give one lore card to another player, if you're in first place, give away another."
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
