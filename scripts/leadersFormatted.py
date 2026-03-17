@@ -712,7 +712,7 @@ leaders = [
     {
         "name": "Custodian",
         "abilities": (
-            "*Vigilant.* When a fresh Rival ship moves into a gate you control, you may gain 1 resource matching any city in that gate's cluster.\n"
+            "*Vigilant.* When a Rival player moves any fresh ships into a gate you control, gain 1 resource matching any city in that gate's cluster.\n"
             "*Heedless.* Damaged Rival ships may move after moving into a gate you control."
         ),
         "resources": ["Material", "Fuel"],
