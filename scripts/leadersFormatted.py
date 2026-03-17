@@ -924,6 +924,21 @@ leaders = [
             "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 18
+    },
+    {
+        "name": "Samurai",
+        "abilities": (
+            "*Saintly.* When attacking in **battle**, you may change 1 of your dice to any face (like a reroll).\n"
+            "*Honorable.* When attacking in **battle**, return half the pieces you destroy (rounded down)."
+        ),
+        "resources": ["Weapon", "Relic"],
+        "setup": {
+            "A": {"ships": 3, "building": "starport"},
+            "B": {"ships": 3, "building": "None"},
+            "C": {"ships": 3, "building": "None"}
+        },
+        "body_font_size": 18,
+        "zoom": 1.2,
+        "boundary_shift": 0.1
     }
-
 ]
