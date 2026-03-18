@@ -554,7 +554,7 @@ leaders = [
         "name": "Solian",
         "abilities": (
             "*Settled.* **Prelude:** You may move freely from planets (no Catapult moves).\n"
-            "*Rooted.* When your ships **move** into an enemy-controlled gate, one of them takes a hit."
+            "*Rooted.* When your ships **move** into an Rival-controlled gate, one of them takes a hit."
         ),
         "resources": ["Relic", "Material"],
         "setup": {
