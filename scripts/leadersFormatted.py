@@ -428,7 +428,7 @@ leaders = [
     {
         "name": "Martyr",
         "abilities": (
-            "*Venerated.* After defending in a **battle**, if the defender took any trophies, gain a resource matching the battle system, gain any if in gate.\n"
+            "*Venerated.* After defending in a **battle**, if the attacker took any trophies, gain a resource matching the battle system, gain any if in gate.\n"
             "*Selfless.* In **battle** in a system with your ships, any hits that would damage a city damage your fresh ships instead."
         ),
         "resources": ["Psionic", "Fuel"],
