@@ -74,7 +74,7 @@ leaders = [
         "setup": {
             "A": {"ships": 3, "building": "starport"},
             "B": {"ships": 3, "building": "starport"},
-            "C": {"ships": 3, "building": "None"}
+            "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 18
     },
@@ -211,7 +211,7 @@ leaders = [
             "*Assertive.* When attacking in **battle**, deal 1 extra hit.\n"
             "*Cautious.* You cannot roll more raid and assault dice than you have fresh attacking ships."
         ),
-        "resources": ["Material", "Fuel"],
+        "resources": ["Material", "Weapon"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
@@ -328,7 +328,7 @@ leaders = [
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "city"},
-            "C": {"ships": 2, "building": "None"}
+            "C": {"ships": 3, "building": "None"}
         },
         "body_font_size": 18
     },
@@ -382,7 +382,7 @@ leaders = [
         "name": "Augur",
         "abilities": (
             "*Baneful.* When you **secure** a card from the court, bury it, then look at the top 2 cards of the Court deck, secure one and bury the other.\n"
-            "*Ominous.* After you discard a Guild card with its Prelude action, bury the top card of the Court deck. If it shares a resource type with the discarded card, **Provoke** **Outrage** in that type."
+            "*Ominous.* After you discard a Guild card with its Prelude action, look at the top card of the Court deck. If it shares a resource type with the discarded card, **Provoke** **Outrage** in that type."
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
@@ -416,7 +416,7 @@ leaders = [
             "*Visionary.* You may build using **repair**. After you repair a piece you may build.\n"
             "*Meticulous.* You cannot **tax** if any of your pieces are damaged."
         ),
-        "resources": ["Material", "Fuel"],
+        "resources": ["Relic", "Material"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
@@ -431,7 +431,7 @@ leaders = [
             "*Venerated.* After defending in a **battle**, if the defender took any trophies, gain a resource matching the battle system, gain any if in gate.\n"
             "*Selfless.* In **battle** in a system with your ships, any hits that would damage a city damage your fresh ships instead."
         ),
-        "resources": ["Psionic", "Material"],
+        "resources": ["Psionic", "Fuel"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "city"},
@@ -507,7 +507,7 @@ leaders = [
         "name": "Puppeteer",
         "abilities": (
             "*Guiding.* Once per turn, when a rival tries to **influence** a card with your agents on it, you may force them to influence another card instead.\n"
-            "*Straining.* To **secure** a card with a rival agent on it, you must have 2 more agents on it than them instead of 1."
+            "*Straining.* To **secure** a card with any rival agents on it, you must have 2 more agents on it than them instead of 1."
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
@@ -539,7 +539,7 @@ leaders = [
             "*Ironclad.* After a **battle**, you may discard a resource to keep all your destroyed ships from that battle damaged instead.\n"
             "*Cold.* At the end of each chapter, destroy all your damaged ships."
         ),
-        "resources": ["Material", "Fuel"],
+        "resources": ["Material", "Weapon"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
@@ -556,9 +556,9 @@ leaders = [
             "*Settled.* **Prelude:** You may move freely from planets (no Catapult moves).\n"
             "*Rooted.* When your ships Catapult **move** into an enemy-controlled gate, one of them takes a hit."
         ),
-        "resources": ["Weapon", "Fuel"],
+        "resources": ["Relic", "Material"],
         "setup": {
-            "A": {"ships": 4, "building": "city"},
+            "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
         },
@@ -600,7 +600,7 @@ leaders = [
     {
         "name": "Trickster",
         "abilities": (
-            "*Misdirecting.* Before you play an action card, you may swap a facedown action card with one of yours without looking at it first. Put yours face-up.\n"
+            "*Misdirecting.* Before you play an action card, you may swap a facedown action card with one of yours without looking at it first. Place yours face-up.\n"
             "*Revealed.* When you discard a card to seize or copy, place it face-up."
         ),
         "resources": ["Psionic", "Fuel"],
@@ -632,8 +632,8 @@ leaders = [
     {
         "name": "Iconoclast",
         "abilities": (
-            "*Radical.* When you discard a card to seize, you may destroy a city you control to steal a Guild card from a player which type matches your or their outrage.\n"
-            "*Fervent.* In **setup**, destroy both of your cities."
+            "*Radical.* When you discard a card to seize, you may destroy a city you control to steal a Guild card from a player which type matches that city's type.\n"
+            "*Fervent.* In **setup**, destroy one of your cities."
         ),
         "resources": ["Psionic", "Weapon"],
         "setup": {
@@ -654,8 +654,8 @@ leaders = [
         ),
         "resources": ["Fuel", "Material"],
         "setup": {
-            "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "starport"},
+            "A": {"ships": 3, "building": "starport"},
+            "B": {"ships": 3, "building": "None"},
             "C": {"ships": 3, "building": "None"}
         },
         "body_font_size": 18,
@@ -713,7 +713,7 @@ leaders = [
         "name": "Custodian",
         "abilities": (
             "*Vigilant.* When a Rival player moves any fresh ships into a gate you control, gain 1 resource matching any city in that gate's cluster.\n"
-            "*Heedless.* Damaged Rival ships may move after moving into a gate you control."
+            "*Heedless.* Damaged Rival ships may move again after moving into a gate you control."
         ),
         "resources": ["Material", "Fuel"],
         "setup": {
@@ -729,7 +729,7 @@ leaders = [
             "*Opportunistic.* After a **battle** in a system adjacent to one of your ships, if any ship was destroyed in that battle, you may place 1 ship in that system.\n"
             "*Grimy.* At the end of each chapter, damage 1 loyal ship in each system that has any damaged ships."
         ),
-        "resources": ["Material", "Fuel"],
+        "resources": ["Weapon", "Fuel"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
@@ -742,7 +742,7 @@ leaders = [
     {
         "name": "Chief",
         "abilities": (
-            "*Imposing.* After any player whose city you control takes a **tax** action, you may also **tax**. After any player whose starport you control takes a **build** action, you may also **build**.\n"
+            "*Imposing.* After any player whose city you control takes a **tax** action, you may **tax**. After any player whose starport you control takes a **build** action, you may **build**.\n"
             "*Bountiful.* At the end of each chapter, give 1 resource to each player of which you control a building."
         ),
         "resources": ["Relic", "Weapon"],
