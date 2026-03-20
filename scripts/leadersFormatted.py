@@ -52,7 +52,7 @@ leaders = [
     {
         "name": "Hierarch",
         "abilities": (
-            "*Entitled.* After you **influence** a card with a rival agent, you may influence a different card with a rival agent.\n"
+            "*Entitled.* After you **influence** a card with a rival agent on it, you may influence a different card with a rival agent.\n"
             "*Rigid.* You cannot **influence** when you Pivot."
         ),
         "resources": ["Psionic", "Material"],
@@ -260,7 +260,7 @@ leaders = [
     {
         "name": "Chosen",
         "abilities": (
-            "*Hallowed.* In **setup**, choose a ship you place to be the chosen ship. When anyone destroys it, they place it fresh in any system. Once per turn, after it **moves**, it may battle by itself. In battle, the die it rolls has its result count twice.\n"
+            "*Hallowed.* In **setup**, choose a ship you place to be the chosen ship. When anyone destroys it, they place it fresh in any system. Once per turn, after it **moves**, it may **battle** by itself. In **battle**, the die it rolls has its result count twice.\n"
             "*Forsaken.* If you have not attacked with the chosen ship this chapter, you cannot **secure** or **declare** **an** **ambition**."
         ),
         "resources": ["Relic", "Fuel"],
@@ -290,8 +290,8 @@ leaders = [
     {
         "name": "Gambler",
         "abilities": (
-            "*Cunning.* You may pass the initiative to any player, then guess a suit. If they have it, they must play the lowest card of that suit they have and the card you play that round additionally has the pips of that card.\n"
-            "*Compulsive.* You must pass the initiative the first time you have it each chapter."
+            "*Cunning.* You may **pass** the initiative to any player, then guess a suit. If they have it, they must play the lowest card of that suit they have and the card you play that round additionally has the pips of that card.\n"
+            "*Compulsive.* You must **pass** the initiative the first time you have it each chapter."
         ),
         "resources": ["Weapon", "Psionic"],
         "setup": {
@@ -428,7 +428,7 @@ leaders = [
     {
         "name": "Martyr",
         "abilities": (
-            "*Venerated.* After defending in a **battle**, if the attacker took any trophies, gain a resource matching the battle system, gain any if in gate.\n"
+            "*Venerated.* After defending in a **battle**, if the attacker took any trophies, gain a resource matching the battle's system, gain any if in gate.\n"
             "*Selfless.* In **battle** in a system with your ships, any hits that would damage a city damage your fresh ships instead."
         ),
         "resources": ["Psionic", "Fuel"],
@@ -506,7 +506,7 @@ leaders = [
     {
         "name": "Puppeteer",
         "abilities": (
-            "*Guiding.* Once per turn, when a rival tries to **influence** a card with your agents on it, you may force them to influence another card instead.\n"
+            "*Guiding.* Once per turn, when a rival tries to **influence** a card with your agents on it, you may force them to influence any other card instead.\n"
             "*Straining.* To **secure** a card with any rival agents on it, you must have 2 more agents on it than them instead of 1."
         ),
         "resources": ["Psionic", "Relic"],
@@ -712,7 +712,7 @@ leaders = [
     {
         "name": "Custodian",
         "abilities": (
-            "*Vigilant.* When a Rival player moves any fresh ships into a gate you control, gain 1 resource matching any city in that gate's cluster.\n"
+            "*Vigilant.* When a Rival ships **move** into a gate you control, gain 1 resource matching any city in that gate's cluster.\n"
             "*Heedless.* Damaged Rival ships may move again after moving into a gate you control."
         ),
         "resources": ["Material", "Fuel"],
@@ -884,7 +884,7 @@ leaders = [
     {
         "name": "Musician",
         "abilities": (
-            "*Inspiring.* Instead of discarding a card to seize, you may give 1 resource to the player with the initiative to seize it.\n"
+            "*Inspiring.* Instead of discarding a card to seize, you may give a resource they don't have to the player with the initiative to seize it.\n"
             "*Temperamental.* When you gain the initiative, damage 1 loyal ship."
         ),
         "resources": ["Psionic", "Relic"],
