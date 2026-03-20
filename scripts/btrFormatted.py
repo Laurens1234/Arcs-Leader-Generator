@@ -95,5 +95,19 @@ leaders = [
             "C": {"ships": 3, "building": "None"}
         },
         "body_font_size": 18
+    },
+    {
+        "name": "Poet",
+        "abilities": (
+            "*Creative.* You can **Surpass** with cards of a different suit as long as its initiative is greater than the lead card. (On a tie with a suited card, they take initiative.)\n"
+            "*Pretentious.* You cannot **Surpass** with cards of the same suit as the lead card."
+        ),
+        "resources": ["Material", "Weapon"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 3, "building": "None"}
+        },
+        "body_font_size": 18
     }
 ]
