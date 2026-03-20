@@ -413,7 +413,7 @@ leaders = [
     {
         "name": "Architect",
         "abilities": (
-            "*Visionary.* You may build using **repair**. After you repair a piece you may build.\n"
+            "*Visionary.* You may build using **repair**. You may build at any starport you control.\n"
             "*Meticulous.* You cannot **tax** if any of your pieces are damaged."
         ),
         "resources": ["Relic", "Material"],
@@ -632,7 +632,7 @@ leaders = [
     {
         "name": "Iconoclast",
         "abilities": (
-            "*Radical.* When you discard a card to seize, you may destroy a city you control to steal a Guild card from a player which type matches that city's type.\n"
+            "*Radical.* When you discard a card to seize, you may destroy a city you control to steal a Guild card which type matches that city's type.\n"
             "*Fervent.* In **setup**, destroy one of your cities."
         ),
         "resources": ["Psionic", "Weapon"],
@@ -684,7 +684,7 @@ leaders = [
         "name": "Curator",
         "abilities": (
             "*Meticulous.* When you **secure** a card, you may discard it to gain two lore cards.\n"
-            "*Ascetic.* At the end of each chapter, give one lore card to another player, if you're in first place, give away another."
+            "*Ascetic.* At the end of each chapter, give one lore card to another player. If you're in first place, give away another."
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
