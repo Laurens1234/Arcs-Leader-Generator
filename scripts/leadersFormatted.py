@@ -617,7 +617,7 @@ leaders = [
     {
         "name": "Nomad",
         "abilities": (
-            "*Wayfaring.* When you **move**, you may take **any** pieces you control with you. Cities in gates match the resource types of each planet in its cluster. If there is no space on a planet, place the building outside the building slots until there is.\n"
+            "*Wayfaring.* When you **move**, you may take **any** pieces you control with you. Cities in gates match the resource types of each planet in its cluster. After moving, if there is no space on a planet, place the building outside the building slots until there is.\n"
             "*Itinerant.* You cannot **tax** cities in planetary systems."
         ),
         "resources": ["Material", "Fuel"],
