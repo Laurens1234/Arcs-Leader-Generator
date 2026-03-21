@@ -290,7 +290,7 @@ leaders = [
     {
         "name": "Gambler",
         "abilities": (
-            "*Cunning.* You may **pass** the initiative to any player, then guess a suit. If they have it, they must play the lowest card of that suit they have and the card you play that round additionally has the pips of that card.\n"
+            "*Cunning.* You may **pass** the initiative to any player, then guess a suit. If they have it, they must play it, and the card you play that round additionally has the pips on that card.\n"
             "*Compulsive.* You must **pass** the initiative the first time you have it each chapter."
         ),
         "resources": ["Weapon", "Psionic"],
@@ -812,7 +812,7 @@ leaders = [
     {
         "name": "Courier",
         "abilities": (
-            "*Swift.* At the start of each chapter, in turn order, Rival players place an agent on planets with no Courier pieces until there are 3 on the board. When you **move** into one, return the agent and gain a resource matching that planet.\n"
+            "*Swift.* At the start of each chapter, put 3 agents on planets with no loyal pieces. When you **move** into one, return the agent and gain a resource matching that planet.\n"
             "*Careless.* You cannot gain bonus city Power if you have not returned all agents on the board."
         ),
         "resources": ["Fuel", "Fuel"],
