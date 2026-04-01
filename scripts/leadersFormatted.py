@@ -585,7 +585,7 @@ leaders = [
     {
         "name": "Terraformer",
         "abilities": (
-            "*Genesis.* At the start of each chapter, place a resource from the fullest supply on any planet (if tied, choose). That planet gains that resource type. Also do this for a system after you destroy a city in it.\n"
+            "*Genesis.* At the start of each chapter, place a resource from the fullest supply on a planet you control planet (if tied, choose). That planet gains that resource type. Also do this for a planet after you destroy a city in it.\n"
             "*Codependent.* When you **tax**, you only gain resources from terraformed planets."
         ),
         "resources": ["Psionic", "Material"],
@@ -940,5 +940,140 @@ leaders = [
         "body_font_size": 18,
         "zoom": 1.3,
         "boundary_shift": 0.4
+    },
+    # Forsaken
+    {
+        "name": "Forsaken",
+        "abilities": (
+            "*Desperate.* When attacking in **battle**, you may destroy all damaged attacking ships (they're not taken as trophies) to roll 2 extra dice for each ship you just destroyed.\n"
+            "*Remorseless.* In **battle**, you cannot roll raid dice without destroying a ship first."
+        ),
+        "resources": ["Weapon", "Fuel"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    # Assasin
+    {
+        "name": "Assasin",
+        "abilities": (
+            "*Lethal.* At the start of your Prelude, you may move 1 ship to any other system, then **battle** with it by itself. After the battle, the defender destroys it if it did not destroy all rival pieces in its system.\n"
+            "*Doomed.* idk"
+        ),
+        "resources": ["Weapon", "Psionic"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    # Companion
+    {
+        "name": "Companion",
+        "abilities": (
+            "*Helpful.* When a rival **battles**, you may allow them to use your ships like they are loyal. If they do, take 1 of their agents as a favor. You may spend this favor to use their ships like they are loyal in a **battle** on your turn.\n"
+            "*Entangled.* At the start of each chapter, give 1 favor to a player."
+        ),
+        "resources": ["Relic", "Fuel"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    # Witch
+    {
+        "name": "Witch",
+        "abilities": (
+            "*Hexing.* When you **influence** a card, you may discard 1 resource to capture 1 rival agent from that card.\n"
+            "*Ostracized.* idk."
+        ),
+        "resources": ["Psionic", "Relic"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    # Creator
+    {
+        "name": "Creator",
+        "abilities": (
+            "*Ingenious.* When you **build** a ship, you may take it from any rival's supply and build it at any starport. If you build a rival's ship, take a resource matching that system.\n"
+            "*Onerous.* idk"
+        ),
+        "resources": ["Material", "Fuel"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    # Messiah
+    {
+        "name": "Messiah",
+        "abilities": (
+            "*Redemptive.* When you **build** a city in a system with any damaged rival ships, you may replace all those damaged rival ships with loyal fresh ships.\n"
+            "*Reckoning.* In **scoring**, if you win no ambitions, destroy all your damaged ships."
+        ),
+        "resources": ["Relic", "Weapon"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    # Abomination
+    {
+        "name": "Abomination",
+        "abilities": (
+            "*Ravenous.* When you play a card, you may discard a card to take twice as many actions with your played card.\n"
+            "*Revealed.* When a suit is led, reveal all your matching cards."
+        ),
+        "resources": ["Psionic", "Weapon"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    # Crusader
+    {
+        "name": "Crusader",
+        "abilities": (
+            "*Zealous.* When you destroy a building, **secure** a matching card from the Court.\n"
+            "*Dogmatic.* You cannot **influence** a card with no agents if a rival can secure a card with any of your loyal agents.."
+        ),
+        "resources": ["Weapon", "Material"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    # Djinn
+    {
+        "name": "Djinn",
+        "abilities": (
+            "*Wishful.* At the start of your Prelude, name a resource type. Until the end of your turn, you may spend resources only as that type.\n"
+            "*Bound.* When you have a resource type outraged, you **cannot** spend it."
+        ),
+        "resources": ["Relic", "Psionic"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
     }
 ]
