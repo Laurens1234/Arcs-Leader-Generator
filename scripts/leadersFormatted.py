@@ -53,7 +53,7 @@ leaders = [
         "name": "Hierarch",
         "abilities": (
             "*Entitled.* At the end of your turn, influence a card where you are tied with another player.\n"
-            "*Rigid.* You cannot **influence** on a turn when you Pivot."
+            "*Rigid.* You cannot **influence** on a turn in which you Pivot."
         ),
         "resources": ["Psionic", "Material"],
         "setup": {
