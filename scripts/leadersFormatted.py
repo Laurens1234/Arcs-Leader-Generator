@@ -742,7 +742,7 @@ leaders = [
     {
         "name": "Chief",
         "abilities": (
-            "*Imposing.* After any player whose city you control takes a **tax** action, you may **tax**. After any player whose starport you control takes a **build** action, you may **build**.\n"
+            "*Imposing.* After any player of which you control a city takes a **tax** action, you may **tax**. After any player of which you control a starport takes a **build** action, you may **build**.\n"
             "*Bountiful.* At the end of each chapter, give 1 resource to each player of which you control a building."
         ),
         "resources": ["Relic", "Weapon"],
