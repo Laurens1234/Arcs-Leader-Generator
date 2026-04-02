@@ -698,7 +698,7 @@ leaders = [
     {
         "name": "Cartographer",
         "abilities": (
-            "*Exploratory.* When you **move**, you may move ships starting from two systems instead of one.\n"
+            "*Exploratory.* When you Catapulult **move**, gain a Fuel.\n"
             "*Distracted.* When you Catapult **move**, after each move you must drop off 1 ship."
         ),
         "resources": ["Fuel", "Relic"],
@@ -812,7 +812,7 @@ leaders = [
     {
         "name": "Courier",
         "abilities": (
-            "*Swift.* At the start of each chapter, place 3 agents on planets with no loyal pieces. When you **move** into one, return the agent and gain a resource matching that planet. (While on the planet an agent is not considered a loyal piece.)\n"
+            "*Swift.* At the start of each chapter, place 3 agents on planets with no loyal pieces. When you **move** into one, return the agent and gain a resource matching that planet. (While on a planet an agent is not considered a loyal piece.)\n"
             "*Careless.* You cannot gain bonus city Power if you have not returned all agents on the board."
         ),
         "resources": ["Fuel", "Fuel"],
@@ -884,7 +884,7 @@ leaders = [
     {
         "name": "Musician",
         "abilities": (
-            "*Inspiring.* Instead of discarding a card to seize, you may give a resource they don't have to the player with the initiative to seize it.\n"
+            "*Inspiring.* Instead of discarding a card to seize, you may give two resources they don't have to the player with the initiative to seize it.\n"
             "*Temperamental.* When you gain the initiative, damage 1 loyal ship."
         ),
         "resources": ["Psionic", "Relic"],
