@@ -52,7 +52,7 @@ leaders = [
     {
         "name": "Hierarch",
         "abilities": (
-            "*Entitled.* After you **influence** a card with a rival agent on it, you may influence a different card with a rival agent.\n"
+            "*Entitled.* After you **influence** a card with a rival agent on it, you may influence a different card with a rival agent on it.\n"
             "*Rigid.* You cannot **influence** when you Pivot."
         ),
         "resources": ["Psionic", "Material"],
@@ -159,8 +159,8 @@ leaders = [
     {
         "name": "Seer",
         "abilities": (
-            "*Reflective.* After you discard a Guild card, you may influence.\n"
-            "*Unstable.* Discard a Guild card if you have two or more of the same type."
+            "*Prescient.* After you discard a Guild card using its **Prelude** action, you may take an action on the lead card.\n"
+            "*Narrow-minded.* You cannot take more than 2 different types of actions each turn."
         ),
         "resources": ["Psionic", "Psionic"],
         "setup": {
