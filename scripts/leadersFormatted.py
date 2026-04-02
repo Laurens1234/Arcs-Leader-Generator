@@ -52,8 +52,8 @@ leaders = [
     {
         "name": "Hierarch",
         "abilities": (
-            "*Entitled.* After you **influence** a card with a rival agent on it, you may influence a different card with a rival agent on it.\n"
-            "*Rigid.* You cannot **influence** when you Pivot."
+            "*Entitled.* At the end of your turn, influence a card where you are tied with another player.\n"
+            "*Rigid.* You cannot **influence** on a turn when you Pivot."
         ),
         "resources": ["Psionic", "Material"],
         "setup": {
@@ -194,7 +194,7 @@ leaders = [
         "name": "Manipulator",
         "abilities": (
             "*Clever.* When you **declare** **an** **ambition**, you may move any agents on cards to other cards.\n"
-            "*Fraudulent.* When you **secure** a card with rival agents on it, capture 1 and place the rest on other cards."
+            "*Fraudulent.* When you **secure** a card with rival agents on it, capture/take only 1 and place the rest on other cards."
         ),
         "resources": ["Weapon", "Relic"],
         "setup": {
@@ -401,7 +401,7 @@ leaders = [
             "*Transformative.* When you **declare** **an** **ambition**, discard 1 resource to gain 2 resources of different types other than the one you discarded.\n"
             "*Cautious.* You cannot spend your last resource."
         ),
-        "resources": ["Psionic", "Relic"],
+        "resources": ["Psionic", "Material"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "city"},
@@ -585,7 +585,7 @@ leaders = [
     {
         "name": "Terraformer",
         "abilities": (
-            "*Genesis.* At the start of each chapter, place a resource from the fullest supply on a planet you control (if tied, choose). That planet gains that resource type. Also do this for a planet after you destroy a city in it.\n"
+            "*Genesis.* At the start of each chapter, place a resource from the fullest supply on a planet you control (if tied, you choose). That planet gains that resource type. Also do this for a planet after you destroy a city in it.\n"
             "*Codependent.* When you **tax**, you only gain resources from terraformed planets."
         ),
         "resources": ["Psionic", "Material"],
@@ -812,7 +812,7 @@ leaders = [
     {
         "name": "Courier",
         "abilities": (
-            "*Swift.* At the start of each chapter, place 3 agents on planets with no loyal pieces. When you **move** into one, return the agent and gain a resource matching that planet. (You cannot attack them.)\n"
+            "*Swift.* At the start of each chapter, place 3 agents on planets with no loyal pieces. When you **move** into one, return the agent and gain a resource matching that planet. (While on the planet an agent is not considered a loyal piece.)\n"
             "*Careless.* You cannot gain bonus city Power if you have not returned all agents on the board."
         ),
         "resources": ["Fuel", "Fuel"],
@@ -831,8 +831,8 @@ leaders = [
         ),
         "resources": ["Material", "Fuel"],
         "setup": {
-            "A": {"ships": 3, "building": "None"},
-            "B": {"ships": 3, "building": "None"},
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 3, "building": "None"}
         },
         "body_font_size": 18,
