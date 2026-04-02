@@ -98,7 +98,7 @@ leaders = [
         "name": "Necromancer",
         "abilities": (
             "*Arising.* After you destroy a piece in **battle**, you may place a matching fresh loyal piece there.\n"
-            "*Gravebound.* In **setup**, damage both of your buildings. You cannot **build** fresh pieces and place them damaged instead."
+            "*Gravebound.* In **setup**, damage both of your buildings. You cannot **build** fresh pieces, place them damaged instead."
         ),
         "resources": ["Psionic", "Weapon"],
         "setup": {
