@@ -666,7 +666,7 @@ leaders = [
     {
         "name": "Wheeler-dealer",
         "abilities": (
-            "*Cunning.* **Prelude:** Once per turn, you may **Provoke** **Outrage** in a resource type, then secure cards from the top of the deck matching the amount of cards you just discarded. Then gain **any** resources matching the amount you've just discarded.\n"
+            "*Cunning.* **Prelude:** When you **declare** **an** **ambition**, you may **Provoke** **Outrage**. \n After you **Provoke** **Outrage**, secure cards from the top of the deck matching the amount of cards you just discarded. Then gain **any** resources matching the amount you've just discarded.\n"
             "*Irate.* In **setup**, Provoke Relic or Psionic Outrage."
         ),
         "resources": ["Psionic", "Relic"],
