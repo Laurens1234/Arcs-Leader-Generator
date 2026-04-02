@@ -476,7 +476,7 @@ leaders = [
     {
         "name": "Feral",
         "abilities": (
-            "*Savage.* When you **battle** in a system with no buildings, collect 1 extra die.\n"
+            "*Savage.* When you **battle** in a system with no buildings, collect 2 extra dice.\n"
             "*Uncivilized.* When you **secure** a card with any rival agents, destroy one of your pieces."
         ),
         "resources": ["Weapon", "Fuel"],
@@ -585,7 +585,7 @@ leaders = [
     {
         "name": "Terraformer",
         "abilities": (
-            "*Genesis.* At the start of each chapter, place a resource from the fullest supply on a planet you control planet (if tied, choose). That planet gains that resource type. Also do this for a planet after you destroy a city in it.\n"
+            "*Genesis.* At the start of each chapter, place a resource from the fullest supply on a planet you control (if tied, choose). That planet gains that resource type. Also do this for a planet after you destroy a city in it.\n"
             "*Codependent.* When you **tax**, you only gain resources from terraformed planets."
         ),
         "resources": ["Psionic", "Material"],
