@@ -208,7 +208,7 @@ leaders = [
     {
         "name": "Sentinel",
         "abilities": (
-            "*Assertive.* When attacking in **battle**, deal 1 extra hit.\n"
+            "*Assertive.* At the start of **battle**, if you control the gate of the cluster the battle is in, deal 1 hit.\n"
             "*Cautious.* You cannot roll more raid and assault dice than you have fresh attacking ships."
         ),
         "resources": ["Material", "Weapon"],
