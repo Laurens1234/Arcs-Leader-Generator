@@ -946,7 +946,7 @@ leaders = [
     {
         "name": "Assasin",
         "abilities": (
-            "*Lethal.* You may influence using ships. Ships on cards may move the adjecent cards.\n"
+            "*Lethal.* In setup, add 1 ships to your agents supply. It may move\n"
             "*Doomed.* idk"
         ),
         "resources": ["Weapon", "Psionic"],
@@ -1057,6 +1057,22 @@ leaders = [
         "resources": ["Relic", "Psionic"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+
+    # Beacon
+    {
+        "name": "Beacon",
+        "abilities": (
+            "*Guiding.* When you **move** into a gate, you may place a beacon there. Beacons allow any player to Catapult **move** through that gate.\n"
+            "*Radiant.* Before scoring, you may discard a beacon to gain 2 resources."
+        ),
+        "resources": ["Fuel", "Material"],
+        "setup": {
+            "A": {"ships": 3, "building": "starport"},
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
         },
