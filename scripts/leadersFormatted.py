@@ -78,21 +78,20 @@ leaders = [
         },
         "body_font_size": 18
     },
-    # General
+    # Manipulator
     {
-        "name": "General",
+        "name": "Manipulator",
         "abilities": (
-            "*Blitzing.* After you **tax**, you may discard a resource to gain a Weapon. After you roll in **battle**, you may discard a Weapon to ignore all intercepts.\n"
-            "*Insurmountable.* When attacking in **battle**, if you have more fresh ships than your opponent, collect 1 extra die.\n"
-            "*Reckless.* In **battle**, you must always roll at least 1 die of each type if you can."
+            "*Clever.* When you **declare** **an** **ambition**, you may move any agents on cards to other cards.\n"
+            "*Fraudulent.* When you **secure** a card with rival agents on it, capture/take only 1 and place the rest on other cards."
         ),
-        "resources": ["Weapon", "Weapon"],
+        "resources": ["Weapon", "Relic"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
-            "C": {"ships": 2, "building": "None"}
+            "C": {"ships": 3, "building": "None"}
         },
-        "body_font_size": 18,
+        "body_font_size": 18
     },
     # Necromancer
     {
@@ -107,7 +106,7 @@ leaders = [
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
         },
-        "body_font_size": 18,
+        "body_font_size": 18
     },
     # Composer
     {
@@ -190,18 +189,19 @@ leaders = [
         "zoom": 1.155,
         "boundary_shift": -0.02
     },
-    # Manipulator
+    # General
     {
-        "name": "Manipulator",
+        "name": "General",
         "abilities": (
-            "*Clever.* When you **declare** **an** **ambition**, you may move any agents on cards to other cards.\n"
-            "*Fraudulent.* When you **secure** a card with rival agents on it, capture/take only 1 and place the rest on other cards."
+            "*Blitzing.* After you **tax**, you may discard a resource to gain a Weapon. After you roll in **battle**, you may discard a Weapon to ignore all intercepts.\n"
+            "*Insurmountable.* When attacking in **battle**, if you have more fresh ships than your opponent, collect 1 extra die.\n"
+            "*Reckless.* In **battle**, you must always roll at least 1 die of each type if you can."
         ),
-        "resources": ["Weapon", "Relic"],
+        "resources": ["Weapon", "Weapon"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
-            "C": {"ships": 3, "building": "None"}
+            "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 18
     },
@@ -837,8 +837,7 @@ leaders = [
             "C": {"ships": 3, "building": "None"}
         },
         "body_font_size": 18,
-        "zoom": 1.25,
-
+        "zoom": 1.25
     },
     {
         "name": "Highroller",
