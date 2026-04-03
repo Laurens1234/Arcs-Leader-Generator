@@ -243,7 +243,7 @@ leaders = [
     {
         "name": "Ghost",
         "abilities": (
-            "*Manifested.* When you Catapult **move**, your ships may move through one Rival controlled gate. If they do, you may influence.\n"
+            "*Manifested.* Once per turn, when you Catapult **move**, your ships may move through one Rival controlled gate. If they do, you may influence.\n"
             "*Directionless.* You can use at most one **move** action each turn."
         ),
         "resources": ["Fuel", "Psionic"],
@@ -698,7 +698,7 @@ leaders = [
     {
         "name": "Cartographer",
         "abilities": (
-            "*Exploratory.* When you Catapulult **move**, gain a Fuel.\n"
+            "*Exploratory.* When you initiate a Catapult **move**, gain a Fuel.\n"
             "*Distracted.* When you Catapult **move**, after each move you must drop off 1 ship."
         ),
         "resources": ["Fuel", "Relic"],
