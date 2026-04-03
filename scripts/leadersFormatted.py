@@ -228,7 +228,7 @@ leaders = [
         "abilities": (
             "*Judicious.* In **scoring**, if any players tie for first in an ambition, you gain the initiative.\n"
             "*Immunized.* If you have the initiative you don't **Provoke** **Outrage**.\n"
-            "*Fair.* Before **scoring**, the Rival player with the least Power may take a resource from you."
+            "*Fair.* Before **scoring**, the Rival player with the least Power may take a resource or 3 power from you."
         ),
         "resources": ["Psionic", "Fuel"],
         "setup": {
