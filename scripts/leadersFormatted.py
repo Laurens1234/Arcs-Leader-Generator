@@ -82,7 +82,8 @@ leaders = [
     {
         "name": "General",
         "abilities": (
-            "*Blitzing.* After you **tax**, you may discard a resource to gain a Weapon. When attacking in **battle**, you may discard a Weapon to ignore all intercepts.\n"
+            "*Blitzing.* After you **tax**, you may discard a resource to gain a Weapon. After you roll in **battle**, you may discard a Weapon to ignore all intercepts.\n"
+            "*Insurmountable.* When attacking in **battle**, if you have more fresh ships than your opponent, collect 1 extra die.
             "*Reckless.* In **battle**, you must always roll at least 1 die of each type if you can. (1 type with 1, 2 with 2.)"
         ),
         "resources": ["Weapon", "Weapon"],
@@ -476,8 +477,8 @@ leaders = [
     {
         "name": "Feral",
         "abilities": (
-            "*Savage.* When you **battle** in a system with no buildings, collect 2 extra dice.\n"
-            "*Uncivilized.* When you **secure** a card with any rival agents, destroy one of your pieces."
+            "*Savage.* In **battle** in a system with no buildings, collect 2 extra dice.\n"
+            "*Uncivilized.* When you **secure** (not ransack) a card with any rival agents on it, destroy a building you control."
         ),
         "resources": ["Weapon", "Fuel"],
         "setup": {
