@@ -84,7 +84,7 @@ leaders = [
         "abilities": (
             "*Blitzing.* After you **tax**, you may discard a resource to gain a Weapon. After you roll in **battle**, you may discard a Weapon to ignore all intercepts.\n"
             "*Insurmountable.* When attacking in **battle**, if you have more fresh ships than your opponent, collect 1 extra die.\n"
-            "*Reckless.* In **battle**, you must always roll at least 1 die of each type if you can. (1 type with 1, 2 with 2.)"
+            "*Reckless.* In **battle**, you must always roll at least 1 die of each type if you can."
         ),
         "resources": ["Weapon", "Weapon"],
         "setup": {
@@ -368,7 +368,7 @@ leaders = [
         "name": "Seeker",
         "abilities": (
             "*Inquisitive.* When you **tax**, gain the resource twice if the matching ambition is declared (Weapon matches Warlord).\n"
-            "*Distracted.* After **scoring**, discard a resource matching each declared ambition."
+            "*Distracted.* After **scoring**, discard one resource matching a declared ambition."
         ),
         "resources": ["Material", "Relic"],
         "setup": {
@@ -633,7 +633,7 @@ leaders = [
     {
         "name": "Iconoclast",
         "abilities": (
-            "*Radical.* When you discard a card to seize, you may destroy a city you control to steal a Guild card which type matches that city's type.\n"
+            "*Radical.* After you discard a card to seize, you may destroy a city you control to steal a Guild card which type matches that city's type.\n"
             "*Fervent.* In **setup**, destroy one of your cities."
         ),
         "resources": ["Psionic", "Weapon"],
@@ -651,12 +651,12 @@ leaders = [
         "name": "Fiend",
         "abilities": (
             "*Gluttonous.* When you **Provoke** **Outrage**, if you already have it outraged, clear it instead and gain that resource thrice.\n"
-            "*Wrathful.* In **setup**, **Provoke** **Outrage** in all resource types, then gain any 2 resources."
+            "*Wrathful.* In **setup**, **Provoke** **Outrage** in all resource types except 1, then gain any 2 resources."
         ),
-        "resources": ["Fuel", "Material"],
+        "resources": ["", ""],
         "setup": {
-            "A": {"ships": 3, "building": "starport"},
-            "B": {"ships": 3, "building": "None"},
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 3, "building": "None"}
         },
         "body_font_size": 18,
@@ -942,26 +942,11 @@ leaders = [
         "zoom": 1.3,
         "boundary_shift": 0.4
     },
-    # Forsaken
-    {
-        "name": "Forsaken",
-        "abilities": (
-            "*Desperate.* When attacking in **battle**, you may destroy all damaged attacking ships (they're not taken as trophies) to roll 2 extra dice for each ship you just destroyed.\n"
-            "*Remorseless.* In **battle**, you cannot roll raid dice without destroying a ship first."
-        ),
-        "resources": ["Weapon", "Fuel"],
-        "setup": {
-            "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "starport"},
-            "C": {"ships": 2, "building": "None"}
-        },
-        "body_font_size": 18
-    },
     # Assasin
     {
         "name": "Assasin",
         "abilities": (
-            "*Lethal.* At the start of your Prelude, you may move 1 ship to any other system, then **battle** with it by itself. After the battle, the defender destroys it if it did not destroy all rival pieces in its system.\n"
+            "*Lethal.* You may influence using ships. Ships on cards may move the adjecent cards.\n"
             "*Doomed.* idk"
         ),
         "resources": ["Weapon", "Psionic"],

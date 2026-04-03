@@ -143,9 +143,28 @@ def create_card(input_data):
         "Weapon": load_and_resize(resource_weapon_path),
     }
 
-    chosen_resources = input_data['resources']
-    resource_1 = resources[chosen_resources[0]]
-    resource_2 = resources[chosen_resources[1]]
+    chosen_resources = input_data.get("resources")
+    if isinstance(chosen_resources, (list, tuple)):
+        chosen_resources_list = list(chosen_resources)
+    elif isinstance(chosen_resources, str):
+        chosen_resources_list = [chosen_resources]
+    else:
+        chosen_resources_list = []
+
+    resource_imgs = []
+    for res_name in chosen_resources_list:
+        if not res_name:
+            continue
+        img = resources.get(res_name)
+        if img is None:
+            print(
+                f"Warning: Unknown resource '{res_name}' for leader '{input_data.get('name', '<unknown>')}'. "
+                "Skipping it."
+            )
+            continue
+        resource_imgs.append(img)
+        if len(resource_imgs) >= 2:
+            break
 
     # Positioning text box
     text_box_x = (base_img.width - text_box_img.width) // 2
@@ -198,32 +217,40 @@ def create_card(input_data):
     resource_x = _s(100)
     resource_y = combined_img.height - resource_size[1] - _s(22)
     resource_x2 = resource_x + resource_size[0] + _s(5)
-    
-    setup_start_x = resource_x2 + resource_size[0] - _s(20)
+
+    has_resources = len(resource_imgs) > 0
+
+    def _paste_resources(center_xs):
+        if not has_resources:
+            return
+        for x, res in zip(center_xs, resource_imgs):
+            combined_img.paste(res, (x - resource_size[0] // 2, resource_y - resource_size[1] // 2), res)
+
+    if has_resources:
+        setup_start_x = resource_x2 + resource_size[0] - _s(20)
+    else:
+        # If no resources are provided, shift the setup icons left into that space.
+        setup_start_x = resource_x + _s(15)
     setup_y = resource_y - setup_image_size[1] // 2
     setup_spacing = _s(25)
 
     if not setup_a_building and not setup_b_building:
-        for x, res in zip([resource_x + _s(20), resource_x2 + _s(20)], [resource_1, resource_2]):
-            combined_img.paste(res, (x - resource_size[0] // 2, resource_y - resource_size[1] // 2), res)
+        _paste_resources([resource_x + _s(20), resource_x2 + _s(20)])
         combined_img.paste(setup_a_img, (setup_start_x + _s(20), setup_y), setup_a_img)
         combined_img.paste(setup_b_img, (setup_start_x + setup_image_size[0] + setup_spacing - _s(10), setup_y), setup_b_img)
         combined_img.paste(setup_c_img, (setup_start_x + 2 * (setup_image_size[0] + setup_spacing) - _s(40), setup_y), setup_c_img)
     elif not setup_a_building:
-        for x, res in zip([resource_x + _s(10) , resource_x2 + _s(10)], [resource_1, resource_2]):
-            combined_img.paste(res, (x - resource_size[0] // 2, resource_y - resource_size[1] // 2), res)        
+        _paste_resources([resource_x + _s(10), resource_x2 + _s(10)])
         combined_img.paste(setup_a_img, (setup_start_x + _s(10) , setup_y), setup_a_img)
         combined_img.paste(setup_b_img, (setup_start_x + setup_image_size[0] + setup_spacing-_s(20), setup_y), setup_b_img)
         combined_img.paste(setup_c_img, (setup_start_x + 2 * (setup_image_size[0] + setup_spacing)-_s(20), setup_y), setup_c_img)
     elif not setup_b_building:
-        for x, res in zip([resource_x + _s(10), resource_x2 + _s(10)], [resource_1, resource_2]):
-            combined_img.paste(res, (x - resource_size[0] // 2, resource_y - resource_size[1] // 2), res)
+        _paste_resources([resource_x + _s(10), resource_x2 + _s(10)])
         combined_img.paste(setup_a_img, (setup_start_x + _s(10), setup_y), setup_a_img)
         combined_img.paste(setup_b_img, (setup_start_x + setup_image_size[0] + setup_spacing + _s(12), setup_y), setup_b_img)
         combined_img.paste(setup_c_img, (setup_start_x + 2 * (setup_image_size[0] + setup_spacing) - _s(20), setup_y), setup_c_img)
     else:
-        for x, res in zip([resource_x, resource_x2], [resource_1, resource_2]):
-            combined_img.paste(res, (x - resource_size[0] // 2, resource_y - resource_size[1] // 2), res)
+        _paste_resources([resource_x, resource_x2])
         combined_img.paste(setup_a_img, (setup_start_x, setup_y), setup_a_img)
         combined_img.paste(setup_b_img, (setup_start_x + setup_image_size[0] + setup_spacing + _s(1), setup_y), setup_b_img)
         combined_img.paste(setup_c_img, (setup_start_x + 2 * (setup_image_size[0] + setup_spacing), setup_y), setup_c_img)
