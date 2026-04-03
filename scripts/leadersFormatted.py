@@ -83,7 +83,7 @@ leaders = [
         "name": "General",
         "abilities": (
             "*Blitzing.* After you **tax**, you may discard a resource to gain a Weapon. After you roll in **battle**, you may discard a Weapon to ignore all intercepts.\n"
-            "*Insurmountable.* When attacking in **battle**, if you have more fresh ships than your opponent, collect 1 extra die.
+            "*Insurmountable.* When attacking in **battle**, if you have more fresh ships than your opponent, collect 1 extra die.\n"
             "*Reckless.* In **battle**, you must always roll at least 1 die of each type if you can. (1 type with 1, 2 with 2.)"
         ),
         "resources": ["Weapon", "Weapon"],
@@ -743,7 +743,7 @@ leaders = [
     {
         "name": "Chief",
         "abilities": (
-            "*Imposing.* After any player of which you control a city takes a **tax** action, you may **tax**. After any player of which you control a starport takes a **build** action, you may **build**.\n"
+            "*Imposing.* After any rival player of which you control a city takes a **tax** action, you may **tax**. After any rival player of which you control a starport takes a **build** action, you may **build**.\n"
             "*Bountiful.* At the end of each chapter, give 1 resource to each player of which you control a building."
         ),
         "resources": ["Relic", "Weapon"],
@@ -843,7 +843,7 @@ leaders = [
     {
         "name": "Highroller",
         "abilities": (
-            "*Audacious.* After you roll dice in **battle**, you may damage 1 of your attacking ships to reroll all dice.\n"
+            "*Audacious.* After you roll dice in **battle**, you may damage 1 of your attacking ships to reroll **all** dice.\n"
             "*Feverish.* After you reroll dice in **battle**, **Provoke** **Outrage** in a resource."
         ),
         "resources": ["Weapon", "Fuel"],
@@ -872,7 +872,7 @@ leaders = [
         "name": "Bomber",
         "abilities": (
             "*Incendiary.* When attacking in **battle**, before collecting dice, you may destroy 1 fresh attacking ship to destroy 2 defending ships.\n"
-            "*Infamous.* When you destroy a starport, also **Provoke** **Outrage** of its system."
+            "*Infamous.* When you destroy a starport, also **Provoke** **Outrage** of its system's tyoe."
         ),
         "resources": ["Weapon", "Fuel"],
         "setup": {
