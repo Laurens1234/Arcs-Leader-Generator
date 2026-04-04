@@ -941,22 +941,22 @@ leaders = [
         "body_font_size": 18,
         "zoom": 1.3,
         "boundary_shift": 0.4
-    }
-    # # Assasin
-    # {
-    #     "name": "Assasin",
-    #     "abilities": (
-    #         "*Lethal.* In setup, add 1 ships to your agents supply. It may move\n"
-    #         "*Doomed.* idk"
-    #     ),
-    #     "resources": ["Weapon", "Psionic"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
+    },
+    # Assasin
+    {
+        "name": "Assasin",
+        "abilities": (
+            "*Lethal.* After you **influence**, if you have the most agents on a card, destroy one rival agent on it.\n"
+            "*Doomed.* If a Rival has as many or more agents on a card than you, you can only **influence** those cards."
+        ),
+        "resources": ["Weapon", "Psionic"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
     # # Companion
     # {
     #     "name": "Companion",
