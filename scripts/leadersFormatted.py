@@ -976,7 +976,7 @@ leaders = [
     # {
     #     "name": "Witch",
     #     "abilities": (
-    #         "*Hexing.* When you **influence** a card, you may discard 1 resource to capture 1 rival agent from that card.\n"
+    #         "*Hexing.* When you **secure** a card, you may capture an agent on an adjecent card.\n"
     #         "*Ostracized.* idk."
     #     ),
     #     "resources": ["Psionic", "Relic"],
