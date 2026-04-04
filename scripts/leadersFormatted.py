@@ -888,7 +888,7 @@ leaders = [
             "*Inspiring.* Instead of discarding a card to seize, you may give two resources they don't have to the player with the initiative to seize it.\n"
             "*Temperamental.* When you gain the initiative, damage 1 loyal ship."
         ),
-        "resources": ["Psionic", "Relic"],
+        "resources": ["Material", "Fuel"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
@@ -957,21 +957,7 @@ leaders = [
         },
         "body_font_size": 18
     },
-    # # Companion
-    # {
-    #     "name": "Companion",
-    #     "abilities": (
-    #         "*Helpful.* When a rival **battles**, you may allow them to use your ships like they are loyal. If they do, take 1 of their agents as a favor. You may spend this favor to use their ships like they are loyal in a **battle** on your turn.\n"
-    #         "*Entangled.* At the start of each chapter, give 1 favor to a player."
-    #     ),
-    #     "resources": ["Relic", "Fuel"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
+
     # Witch
     {
         "name": "Witch",
@@ -987,6 +973,21 @@ leaders = [
         },
         "body_font_size": 18
     },
+        # # Companion
+    # {
+    #     "name": "Companion",
+    #     "abilities": (
+    #         "*Helpful.* When a rival **battles**, you may allow them to use your ships like they are loyal. If they do, take 1 of their agents as a favor. You may spend this favor to use their ships like they are loyal in a **battle** on your turn.\n"
+    #         "*Entangled.* At the start of each chapter, give 1 favor to a player."
+    #     ),
+    #     "resources": ["Relic", "Fuel"],
+    #     "setup": {
+    #         "A": {"ships": 3, "building": "city"},
+    #         "B": {"ships": 3, "building": "starport"},
+    #         "C": {"ships": 2, "building": "None"}
+    #     },
+    #     "body_font_size": 18
+    # },
     # # Creator
     # {
     #     "name": "Creator",
