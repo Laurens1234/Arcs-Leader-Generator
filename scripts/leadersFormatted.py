@@ -97,7 +97,7 @@ leaders = [
     {
         "name": "Necromancer",
         "abilities": (
-            "*Arising.* After **any** **battle**, for each piece you destroy, you may place a matching fresh loyal piece there.\n"
+            "*Arising.* After **any** **battle**, for each piece you destroyed, you may place a matching fresh loyal piece there.\n"
             "*Gravebound.* In **setup**, damage both of your buildings. You cannot **build** fresh pieces, place them damaged instead."
         ),
         "resources": ["Psionic", "Weapon"],
@@ -159,8 +159,8 @@ leaders = [
     {
         "name": "Seer",
         "abilities": (
-            "*Prescient.* After you discard a Guild card, you may take an action on the lead card.\n"
-            "*Narrow-minded.* You cannot take more than 2 different types of standard actions each turn."
+            "*Prescient.* After you discard a Guild card, you may take an action on the **Lead** **card**.\n"
+            "*Narrow-minded.* You **cannot** take more than 2 different types of standard actions each turn."
         ),
         "resources": ["Psionic", "Psionic"],
         "setup": {
@@ -193,8 +193,8 @@ leaders = [
     {
         "name": "General",
         "abilities": (
-            "*Blitzing.* After you **tax**, you may discard a resource to gain a Weapon. After you roll in **battle**, you may discard a Weapon to ignore all intercepts.\n"
-            "*Insurmountable.* When attacking in **battle**, if you have more fresh ships than your opponent, collect 1 extra die.\n"
+            "*Blitzing.* In **battle**, you may discard a resource to ignore all intercepts.\n"
+            "*Insurmountable.* In **battle**, if you have more fresh ships, collect 1 extra die.\n"
             "*Reckless.* In **battle**, you must always roll at least 1 die of each type if you can."
         ),
         "resources": ["Weapon", "Weapon"],
@@ -244,7 +244,7 @@ leaders = [
     {
         "name": "Ghost",
         "abilities": (
-            "*Manifested.* Once per turn, when you Catapult **move**, your ships may move through one Rival controlled gate. If they do, you may influence.\n"
+            "*Manifested.* Once per turn, when you Catapult **move**, your ships may move through one Rival controlled gate. If you do, you may influence.\n"
             "*Directionless.* You can use at most one **move** action each turn."
         ),
         "resources": ["Fuel", "Psionic"],
@@ -291,7 +291,7 @@ leaders = [
     {
         "name": "Gambler",
         "abilities": (
-            "*Cunning.* You may **pass** the initiative to any player, then guess a suit. If they have it, they must play it, and the card you play that round additionally has the pips on that card.\n"
+            "*Cunning.* You may **pass** the initiative to any player, then guess a suit. If they have it, they must play it, and the card you play that round additionally has the pips of the card they play. (Even if you copy or pivot.)\n"
             "*Compulsive.* You must **pass** the initiative the first time you have it each chapter."
         ),
         "resources": ["Weapon", "Psionic"],
@@ -307,7 +307,7 @@ leaders = [
         "name": "Engineer",
         "abilities": (
             "*Versatile.* Your starports can **move**, **battle**, intercept and control like a ship. You place starports outside building slots.\n"
-            "*Exorbitant.* You can only **build** starports at cities, once per city per turn.\n"
+            "*Exorbitant.* You can only **build** starports at cities, once per city, per turn.\n"
             "*Fragile.* After you Catapult **move**, damage the starport you used."
         ),
         "resources": ["Material", "Material"],
@@ -322,13 +322,13 @@ leaders = [
     {
         "name": "Magician",
         "abilities": (
-            "*Elusive.* After you **tax** a city, you may place it in any building slot you control.\n"
-            "*Unmasked.* When you **tax** a rival city, you only gain a captive or resource, not both."
+            "*Elusive.* After you **tax** a city, you may place it in any building slot you control or swap it with any loyal building.\n"
+            "*Unmasked.* When you **tax** a rival city, you only gain a resource or captive, not both."
         ),
         "resources": ["Psionic", "Material"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 3, "building": "None"}
         },
         "body_font_size": 18
@@ -383,7 +383,7 @@ leaders = [
         "name": "Augur",
         "abilities": (
             "*Baneful.* When you **secure** a card from the court, bury it, then look at the top 2 cards of the Court deck, secure one and bury the other.\n"
-            "*Ominous.* After you discard a Guild card with its Prelude action, look at the top card of the Court deck. If it shares a resource type with the discarded card, **Provoke** **Outrage** in that type."
+            "*Ominous.* After you discard a Guild card using its Prelude action, look at the bottom card of the Court deck. If it shares a resource type with the discarded card, **Provoke** **Outrage** in that type."
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
@@ -429,8 +429,8 @@ leaders = [
     {
         "name": "Martyr",
         "abilities": (
-            "*Venerated.* After defending in a **battle**, if the attacker took any trophies, gain a resource matching the battle's system, gain any if in gate.\n"
-            "*Selfless.* In **battle** in a system with your ships, any hits that would damage a city damage your fresh ships instead."
+            "*Venerated.* After defending in a **battle**, if the attacker took any trophies, gain a resource matching the battle's system, gain **any** if in gate.\n"
+            "*Selfless.* In **battle** in a system with your ships, any hits that would damage a city damage your fresh ships first instead."
         ),
         "resources": ["Psionic", "Fuel"],
         "setup": {
@@ -445,7 +445,8 @@ leaders = [
     {
         "name": "Scourge",
         "abilities": (
-            "*Pyromaniacal.* In **battle**, you may damage a city instead of a damaged ship. When you destroy a city, destroy all damaged pieces in its system.\n"
+            "*Pyromaniacal.* In **battle**, you may damage cities if your opponent has no fresh ships.\n"
+            "*Incendiary.* When you destroy a city, destroy all damaged pieces in its system./n"
             "*Insatiable.* Before **scoring**, if you did not destroy a city this chapter, destroy a city in a system you control or a loyal city."
         ),
         "resources": ["Weapon", "Fuel"],
@@ -462,7 +463,7 @@ leaders = [
     {
         "name": "Beggar",
         "abilities": (
-            "*Frugal.* If you start a turn with no resources and no Guild cards, gain any resource.\n"
+            "*Frugal.* If you start a turn with no resources and no Guild cards, gain **any** resource.\n"
             "*Communal.* If you start your turn with any resources, discard 1."
         ),
         "resources": ["Material", "Psionic"],
@@ -522,7 +523,7 @@ leaders = [
     {
         "name": "Automaton",
         "abilities": (
-            "*Overclocked.* If you spend 2 or more resources, you may influence at the end of your Prelude.\n"
+            "*Overclocked.* If you spend 2 or more resources, you may **influence** at the end of your Prelude.\n"
             "*Wasteful.* After you **secure** a card using 2 or more agents, scrap an agent."
         ),
         "resources": ["Material", "Fuel"],
@@ -537,8 +538,8 @@ leaders = [
     {
         "name": "Golem",
         "abilities": (
-            "*Ironclad.* After a **battle**, you may discard a resource to keep all your destroyed ships from that battle damaged instead.\n"
-            "*Cold.* At the end of each chapter, destroy all your damaged ships."
+            "*Ironclad.* After assinging hits in **battle**, you may discard a resource to keep all your loyal destroyed ships from that battle damaged instead.\n"
+            "*Cold.* At the end of each chapter, destroy **all** your damaged ships."
         ),
         "resources": ["Material", "Weapon"],
         "setup": {
@@ -554,8 +555,8 @@ leaders = [
     {
         "name": "Solian",
         "abilities": (
-            "*Settled.* **Prelude:** You may move freely from planets (no Catapult moves).\n"
-            "*Rooted.* When your ships **move** into an Rival-controlled gate, one of them takes a hit."
+            "*Settled.* **Prelude:** You may move freely from planets (no free Catapult moves).\n"
+            "*Grounded.* When your ships **move** into an Rival-controlled gate, one of them takes a hit."
         ),
         "resources": ["Relic", "Material"],
         "setup": {
@@ -586,7 +587,7 @@ leaders = [
     {
         "name": "Terraformer",
         "abilities": (
-            "*Genesis.* At the start of each chapter, place a resource from the fullest supply on a planet you control (if tied, you choose). That planet gains that resource type. Also do this for a planet after you destroy a city in it.\n"
+            "*Genesiacal.* At the start of each chapter, place a resource from the fullest supply on a planet you control (if tied, you choose). That planet now has only that resource type. Also do this after you destroy a city on a planet.\n"
             "*Codependent.* When you **tax**, you only gain resources from terraformed planets."
         ),
         "resources": ["Psionic", "Material"],
@@ -601,7 +602,7 @@ leaders = [
     {
         "name": "Trickster",
         "abilities": (
-            "*Misdirecting.* Before you play an action card, you may swap a facedown action card with one of yours without looking at it first. Place yours face-up.\n"
+            "*Misdirecting.* Before you play an action card, you may swap a played facedown action card with one of yours without looking at it first. Place yours face-up.\n"
             "*Revealed.* When you discard a card to seize or copy, place it face-up."
         ),
         "resources": ["Psionic", "Fuel"],
