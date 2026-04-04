@@ -947,7 +947,7 @@ leaders = [
         "name": "Assasin",
         "abilities": (
             "*Lethal.* After you **influence**, if you have the most agents on a card, destroy one rival agent on it.\n"
-            "*Outmatched.* If a Rival has as many or more agents on a card than you, you can only **influence** those cards."
+            "*Bloodthirsty.* If a Rival has as many or more agents on a card than you, you can only **influence** those cards."
         ),
         "resources": ["Weapon", "Psionic"],
         "setup": {
