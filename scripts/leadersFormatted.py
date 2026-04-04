@@ -466,7 +466,7 @@ leaders = [
             "*Frugal.* If you start a turn with no resources and no Guild cards, gain **any** resource.\n"
             "*Communal.* If you start your turn with any resources, discard 1."
         ),
-        "resources": ["Material", "Psionic"],
+        "resources": ["", ""],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
@@ -860,11 +860,11 @@ leaders = [
             "*Seditious.* After attacking in **battle**, you may **influence** a card with a defender's agent on it.\n"
             "*Decentralized.* You cannot **repair** ships."
         ),
-        "resources": ["Weapon", "Psionic"],
+        "resources": ["Weapon", "Material"],
         "setup": {
             "A": {"ships": 3, "building": "starport"},
             "B": {"ships": 3, "building": "None"},
-            "C": {"ships": 3, "building": "None"}
+            "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 18
     },
@@ -903,7 +903,7 @@ leaders = [
             "*Hubristic.* When you control all gates, **secure** the entire Court, returning all agents, then you destroy all ships in the gates.\n"
             "*Forgotten.* You cannot **influence** if you control no gates."
         ),
-        "resources": ["Weapon", "Relic"],
+        "resources": ["Fuel", "Relic"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
@@ -918,7 +918,7 @@ leaders = [
             "*Acquisitive.* When you **secure** a card, gain a resource matching its type.\n"
             "*Jaded.* At the end of each chapter, discard a Guild card, if you can't, discard all resources you have."
         ),
-        "resources": ["Psionic", "Relic"],
+        "resources": ["Relic", "Relic"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},

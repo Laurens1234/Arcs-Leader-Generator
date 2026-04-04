@@ -226,13 +226,15 @@ def create_card(input_data):
         for x, res in zip(center_xs, resource_imgs):
             combined_img.paste(res, (x - resource_size[0] // 2, resource_y - resource_size[1] // 2), res)
 
+    setup_spacing = _s(25)
+
     if has_resources:
         setup_start_x = resource_x2 + resource_size[0] - _s(20)
     else:
-        # If no resources are provided, shift the setup icons left into that space.
-        setup_start_x = resource_x + _s(15)
+        # If no resources are provided, center the setup icons on the card
+        total_setup_width = 2 * setup_spacing + 3 * setup_image_size[0]
+        setup_start_x = (base_img.width - total_setup_width) // 2
     setup_y = resource_y - setup_image_size[1] // 2
-    setup_spacing = _s(25)
 
     if not setup_a_building and not setup_b_building:
         _paste_resources([resource_x + _s(20), resource_x2 + _s(20)])
