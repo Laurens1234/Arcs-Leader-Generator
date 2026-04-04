@@ -446,7 +446,7 @@ leaders = [
         "name": "Scourge",
         "abilities": (
             "*Pyromaniacal.* In **battle**, you may damage cities if your opponent has no fresh ships.\n"
-            "*Incendiary.* When you destroy a city, destroy all damaged pieces in its system./n"
+            "*Incendiary.* When you destroy a city, destroy all damaged pieces in its system.\n"
             "*Insatiable.* Before **scoring**, if you did not destroy a city this chapter, destroy a city in a system you control or a loyal city."
         ),
         "resources": ["Weapon", "Fuel"],
