@@ -150,7 +150,7 @@ leaders = [
         "resources": ["Psionic", "Relic"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "starport"},
+            "B": {"ships": 3, "building": "city"},
             "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 18
@@ -468,8 +468,8 @@ leaders = [
         ),
         "resources": ["", ""],
         "setup": {
-            "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "starport"},
+            "A": {"ships": 3, "building": "starport"},
+            "B": {"ships": 3, "building": "None"},
             "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 18
@@ -778,8 +778,8 @@ leaders = [
         "resources": ["Psionic", "Material"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "starport"},
-            "C": {"ships": 2, "building": "None"}
+            "B": {"ships": 3, "building": "city"},
+            "C": {"ships": 3, "building": "None"}
         },
         "body_font_size": 18
     },
@@ -936,7 +936,7 @@ leaders = [
         "setup": {
             "A": {"ships": 3, "building": "starport"},
             "B": {"ships": 3, "building": "None"},
-            "C": {"ships": 3, "building": "None"}
+            "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 18,
         "zoom": 1.3,
