@@ -972,21 +972,21 @@ leaders = [
     #     },
     #     "body_font_size": 18
     # },
-    # # Witch
-    # {
-    #     "name": "Witch",
-    #     "abilities": (
-    #         "*Hexed.* When you **secure** a card, you may capture a rival agent on an adjecent card.\n"
-    #         "*Covenbound.* You cannot **secure** a card unless there is an agent on an adjacent card."
-    #     ),
-    #     "resources": ["Psionic", "Relic"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
+    # Witch
+    {
+        "name": "Witch",
+        "abilities": (
+            "*Hexed.* When you **secure** a card, you may capture a rival agent on an adjecent card.\n"
+            "*Covenbound.* You cannot **secure** a card unless there is an agent on an adjacent card."
+        ),
+        "resources": ["Psionic", "Relic"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
     # # Creator
     # {
     #     "name": "Creator",
