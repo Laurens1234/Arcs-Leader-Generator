@@ -976,8 +976,8 @@ leaders = [
     # {
     #     "name": "Witch",
     #     "abilities": (
-    #         "*Hexing.* When you **secure** a card, you may capture an agent on an adjecent card.\n"
-    #         "*Ostracized.* idk."
+    #         "*Hexed.* When you **secure** a card, you may capture a rival agent on an adjecent card.\n"
+    #         "*Covenbound.* You cannot **secure** a card unless there is an agent on an adjacent card."
     #     ),
     #     "resources": ["Psionic", "Relic"],
     #     "setup": {
