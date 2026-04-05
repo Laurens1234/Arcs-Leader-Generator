@@ -86,7 +86,7 @@ leaders = [
         "name": "Manipulator",
         "abilities": (
             "*Clever.* When you **declare** **an** **ambition**, you may move any agents on cards to other cards.\n"
-            "*Fraudulent.* When you **secure** a card with rival agents on it, capture/take only 1 and place the rest on other cards."
+            "*Fraudulent.* When you **secure** a card with Rival agents on it, capture/take only 1 and place the rest on other cards."
         ),
         "resources": ["Psionic", "Psionic"],
         "setup": {
@@ -100,7 +100,7 @@ leaders = [
     {
         "name": "Necromancer",
         "abilities": (
-            "*Arising.* After **any** **battle**, for each piece you destroyed, you may place a matching fresh loyal piece there.\n"
+            "*Arising.* After **any** **battle**, for each piece you destroyed, you may place a matching fresh Loyal piece there.\n"
             "*Gravebound.* In **setup**, damage both of your buildings. You cannot **build** fresh pieces, place them damaged instead."
         ),
         "resources": ["Psionic", "Weapon"],
@@ -132,7 +132,7 @@ leaders = [
         "abilities": (
             "*Voracious.* When you **declare** **an** **ambition**, place a ship in any system.\n"
             "*Crushing.* When more than 1 Rival ship moves into a planet you control, you destroy 1 of those ships.\n"
-            "*Starving.* In **scoring**, if Warlord is declared and you don't win it, scrap 2 loyal ships."
+            "*Starving.* In **scoring**, if Warlord is declared and you don't win it, scrap 2 Loyal ships."
         ),
         "resources": ["Weapon", "Material"],
         "setup": {
@@ -177,7 +177,7 @@ leaders = [
     {
         "name": "Terrestrial",
         "abilities": (
-            "*Symbiotic.* You may **build** in adjacent systems with no rival pieces.\n"
+            "*Symbiotic.* You may **build** in adjacent systems with no Rival pieces.\n"
             "*Fertile.* Gain 1 Material when you **build** a starport; gain 1 matching resource when you **build** a city.\n"
             "*Sprouting.* At the start of each chapter, you may replace a Loyal building with a ship.\n"
             "*Rooted.* You cannot **battle** in clusters where you have no buildings."
@@ -325,8 +325,8 @@ leaders = [
     {
         "name": "Magician",
         "abilities": (
-            "*Elusive.* After you **tax** a city, you may place it in any building slot you control or swap it with any loyal building.\n"
-            "*Unmasked.* When you **tax** a rival city, you only gain a resource or captive, not both."
+            "*Elusive.* After you **tax** a city, you may place it in any building slot you control or swap it with any Loyal building.\n"
+            "*Unmasked.* When you **tax** a Rival city, you only gain a resource or captive, not both."
         ),
         "resources": ["Psionic", "Material"],
         "setup": {
@@ -385,7 +385,7 @@ leaders = [
     {
         "name": "Augur",
         "abilities": (
-            "*Baneful.* When you **secure** a card from the court, bury it, then look at the top 2 cards of the Court deck, secure one and bury the other.\n"
+            "*Baneful.* When you **secure** a card from the Court, bury it, then look at the top 2 cards of the Court deck, secure one and bury the other.\n"
             "*Ominous.* After you discard a Guild card using its Prelude action, look at the bottom card of the Court deck. If it shares a resource type with the discarded card, **Provoke** **Outrage** in that type."
         ),
         "resources": ["Psionic", "Relic"],
@@ -450,7 +450,7 @@ leaders = [
         "abilities": (
             "*Pyromaniacal.* In **battle**, you may damage cities if your opponent has no fresh ships.\n"
             "*Incendiary.* When you destroy a city, destroy all damaged pieces in its system.\n"
-            "*Insatiable.* Before **scoring**, if you did not destroy a city this chapter, destroy a city in a system you control or a loyal city."
+            "*Insatiable.* Before **scoring**, if you did not destroy a city this chapter, destroy a city in a system you control or a Loyal city."
         ),
         "resources": ["Weapon", "Fuel"],
         "setup": {
@@ -482,7 +482,7 @@ leaders = [
         "name": "Feral",
         "abilities": (
             "*Savage.* In **battle** in a system with no buildings, collect 2 extra dice.\n"
-            "*Uncivilized.* When you **secure** (not ransack) a card with any rival agents on it, destroy a building you control."
+            "*Uncivilized.* When you **secure** (not ransack) a card with any Rival agents on it, destroy a building you control."
         ),
         "resources": ["Weapon", "Fuel"],
         "setup": {
@@ -511,8 +511,8 @@ leaders = [
     {
         "name": "Puppeteer",
         "abilities": (
-            "*Guiding.* Once per turn, when a rival tries to **influence** a card with your agents on it, you may force them to influence any other card instead.\n"
-            "*Straining.* To **secure** a card with any rival agents on it, you must have 2 more agents on it than them instead of 1."
+            "*Guiding.* Once per turn, when a Rival tries to **influence** a card with your agents on it, you may force them to influence any other card instead.\n"
+            "*Straining.* To **secure** a card with any Rival agents on it, you must have 2 more agents on it than them instead of 1."
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
@@ -541,7 +541,7 @@ leaders = [
     {
         "name": "Golem",
         "abilities": (
-            "*Ironclad.* After **any** **battle**, you may discard a resource to keep all your loyal destroyed ships from that battle damaged instead.\n"
+            "*Ironclad.* After **any** **battle**, you may discard a resource to keep all your Loyal destroyed ships from that battle damaged instead.\n"
             "*Cold.* At the end of each chapter, destroy **all** your damaged ships."
         ),
         "resources": ["Material", "Weapon"],
@@ -733,7 +733,7 @@ leaders = [
         "name": "Salvager",
         "abilities": (
             "*Opportunistic.* After a **battle** in a system adjacent to one of your ships, if any ship was destroyed in that battle, you may place 1 ship in that system.\n"
-            "*Grimy.* At the end of each chapter, damage 1 loyal ship in each system that has any damaged ships."
+            "*Grimy.* At the end of each chapter, damage 1 Loyal ship in each system that has any damaged ships."
         ),
         "resources": ["Weapon", "Fuel"],
         "setup": {
@@ -748,7 +748,7 @@ leaders = [
     {
         "name": "Chief",
         "abilities": (
-            "*Imposing.* After any rival player of which you control a city takes a **tax** action, you may **tax**. After any rival player of which you control a starport takes a **build** action, you may **build**.\n"
+            "*Imposing.* After any Rival player of which you control a city takes a **tax** action, you may **tax**. After any Rival player of which you control a starport takes a **build** action, you may **build**.\n"
             "*Bountiful.* At the end of each chapter, give 1 resource to each player of which you control a building."
         ),
         "resources": ["Relic", "Weapon"],
@@ -818,7 +818,7 @@ leaders = [
     {
         "name": "Courier",
         "abilities": (
-            "*Swift.* At the start of each chapter, place 3 agents on planets with no loyal pieces. When you **move** into one, return the agent and gain a resource matching that planet. (While on a planet an agent is not considered a loyal piece.)\n"
+            "*Swift.* At the start of each chapter, place 3 agents on planets with no Loyal pieces. When you **move** into one, return the agent and gain a resource matching that planet. (While on a planet an agent is not considered a Loyal piece.)\n"
             "*Careless.* You **cannot** gain bonus city Power if you have not returned all agents on the board."
         ),
         "resources": ["Fuel", "Fuel"],
@@ -890,7 +890,7 @@ leaders = [
         "name": "Musician",
         "abilities": (
             "*Inspiring.* To seize the iniative, you may give two resources they don't have to the player with the initiative.\n"
-            "*Temperamental.* When you gain the initiative, damage 1 loyal ship."
+            "*Temperamental.* When you gain the initiative, damage 1 Loyal ship."
         ),
         "resources": ["Material", "Fuel"],
         "setup": {
@@ -950,7 +950,7 @@ leaders = [
     {
         "name": "Assasin",
         "abilities": (
-            "*Lethal.* After you **influence**, if you have the most agents on a card, destroy one rival agent on it.\n"
+            "*Lethal.* After you **influence**, if you have the most agents on a card, destroy one Rival agent on it.\n"
             "*Bloodthirsty.* If a Rival has as many or more agents on a card than you, you can only **influence** those cards."
         ),
         "resources": ["Weapon", "Psionic"],
@@ -966,7 +966,7 @@ leaders = [
     {
         "name": "Witch",
         "abilities": (
-            "*Malefic.* When you **secure**, you may capture a rival agent on another card.\n"
+            "*Malefic.* When you **secure**, you may capture a Rival agent on another card.\n"
             "*Covenbound.* You cannot **secure** unless there is an agent on another card."
         ),
         "resources": ["Psionic", "Relic"],
@@ -1027,7 +1027,7 @@ leaders = [
         "name": "Despot",
         "abilities": (
             "*Autocratic.* When you **declare** **an** **ambition**, you may **tax** one city of each player you control.\n"
-            "*Merciless.* At the end of each chapter, damage one loyal ship in each system you control."
+            "*Merciless.* At the end of each chapter, damage one Loyal ship in each system you control."
         ),
         "resources": ["Fuel", "Relic"],
         "setup": {
@@ -1100,7 +1100,7 @@ leaders = [
     # {
     #     "name": "Prince",
     #     "abilities": (
-    #         "*Royal. When you lead you may \"knight\" a rival's ship, making it loyal to you for the rest of the turn.\n"
+    #         "*Royal. When you lead you may \"knight\" a Rival's ship, making it Loyal to you for the rest of the turn.\n"
     #         "*Juvenile.* At the end of each chapter, lose 1 ship if you didn't declare an ambition."
     #     ),
     #     "resources": ["Weapon", "Relic"],
@@ -1115,7 +1115,7 @@ leaders = [
     # {
     #     "name": "Companion",
     #     "abilities": (
-    #         "*Helpful.* When a rival **battles**, you may allow them to use your ships like they are loyal. If they do, take 1 of their agents as a favor. You may spend this favor to use their ships like they are loyal in a **battle** on your turn.\n"
+    #         "*Helpful.* When a Rival **battles**, you may allow them to use your ships like they are Loyal. If they do, take 1 of their agents as a favor. You may spend this favor to use their ships like they are Loyal in a **battle** on your turn.\n"
     #         "*Entangled.* At the start of each chapter, give 1 favor to a player."
     #     ),
     #     "resources": ["Relic", "Fuel"],
@@ -1130,7 +1130,7 @@ leaders = [
     # {
     #     "name": "Creator",
     #     "abilities": (
-    #         "*Ingenious.* When you **build** a ship, you may take it from any rival's supply and build it at any starport. If you build a rival's ship, take a resource matching that system.\n"
+    #         "*Ingenious.* When you **build** a ship, you may take it from any Rival's supply and build it at any starport. If you build a Rival's ship, take a resource matching that system.\n"
     #         "*Onerous.* idk"
     #     ),
     #     "resources": ["Material", "Fuel"],
@@ -1145,7 +1145,7 @@ leaders = [
     # {
     #     "name": "Messiah",
     #     "abilities": (
-    #         "*Redemptive.* When you **build** a city in a system with any damaged rival ships, you may replace all those damaged rival ships with loyal fresh ships.\n"
+    #         "*Redemptive.* When you **build** a city in a system with any damaged Rival ships, you may replace all those damaged Rival ships with Loyal fresh ships.\n"
     #         "*Reckoning.* In **scoring**, if you win no ambitions, destroy all your damaged ships."
     #     ),
     #     "resources": ["Relic", "Weapon"],
@@ -1176,7 +1176,7 @@ leaders = [
     #     "name": "Crusader",
     #     "abilities": (
     #         "*Zealous.* When you destroy a building, **secure** a matching card from the Court.\n"
-    #         "*Dogmatic.* You cannot **influence** a card with no agents if a rival can secure a card with any of your loyal agents.."
+    #         "*Dogmatic.* You cannot **influence** a card with no agents if a Rival can secure a card with any of your Loyal agents.."
     #     ),
     #     "resources": ["Weapon", "Material"],
     #     "setup": {
