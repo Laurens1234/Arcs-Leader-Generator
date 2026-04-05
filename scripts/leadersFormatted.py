@@ -993,7 +993,7 @@ leaders = [
     {
         "name": "Shaman",
         "abilities": (
-            "*Holostic.* When you **declare** **an** **ambition**, you may **repair** any damaged ships you don't control.\n"
+            "*Holostic.* When you **declare** **an** **ambition**, you may **repair** **any** damaged ships you don't control.\n"
             "*Disruptive.* You cannot **repair** ships you control."
         ),
         "resources": ["Relic", "Fuel"],
