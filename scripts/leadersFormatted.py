@@ -85,7 +85,7 @@ leaders = [
     {
         "name": "Manipulator",
         "abilities": (
-            "*Clever.* When you **declare** **an** **ambition**, you may move any agents on cards to other cards.\n"
+            "*Clever.* When you **declare** **an** **undeclared** **ambition**, you may move any agents on cards to other cards.\n"
             "*Fraudulent.* When you **secure** a card with Rival agents on it, capture/take only 1 and place the rest on other cards."
         ),
         "resources": ["Psionic", "Psionic"],
@@ -733,7 +733,7 @@ leaders = [
         "name": "Salvager",
         "abilities": (
             "*Opportunistic.* After a **battle** in a system adjacent to one of your ships, if any ship was destroyed in that battle, you may place 1 ship in that system.\n"
-            "*Grimy.* At the end of each chapter, damage 1 Loyal ship in each system that has any damaged ships."
+            "*Grimy.* You can build at most 1 ship per turn."
         ),
         "resources": ["Weapon", "Fuel"],
         "setup": {
@@ -875,7 +875,7 @@ leaders = [
     {
         "name": "Bomber",
         "abilities": (
-            "*Incendiary.* When attacking in **battle**, before collecting dice, you may destroy 1 fresh attacking ship to destroy 2 defending ships.\n"
+            "*Incendiary.* When attacking in **battle**, before collecting dice, you may destroy 1 attacking ship to destroy 2 defending pieces.\n"
             "*Infamous.* When you destroy a starport, also **Provoke** **Outrage** of that starport's planet type."
         ),
         "resources": ["Weapon", "Fuel"],
