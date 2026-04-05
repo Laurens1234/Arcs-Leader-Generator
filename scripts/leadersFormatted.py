@@ -634,7 +634,7 @@ leaders = [
     {
         "name": "Iconoclast",
         "abilities": (
-            "*Radical.* After you discard a card to seize, you may destroy a city you control to steal a Guild card which type matches that city's type.\n"
+            "*Radical.* After you play an extra action card, you may destroy a city you control to steal a Guild card which matches that city's type.\n"
             "*Fervent.* In **setup**, destroy one of your cities."
         ),
         "resources": ["Psionic", "Weapon"],
@@ -886,7 +886,7 @@ leaders = [
     {
         "name": "Musician",
         "abilities": (
-            "*Inspiring.* Instead of discarding a card to seize, you may give two resources they don't have to the player with the initiative to seize it.\n"
+            "*Inspiring.* To seize the iniative, you may give two resources they don't have to the player with the initiative.\n"
             "*Temperamental.* When you gain the initiative, damage 1 loyal ship."
         ),
         "resources": ["Material", "Fuel"],
