@@ -261,7 +261,7 @@ leaders = [
     {
         "name": "Chosen",
         "abilities": (
-            "*Hallowed.* In **setup**, choose a ship you place to be the chosen ship. When anyone destroys it, they place it fresh in any system. Once per turn, after it **moves**, it may **battle** by itself. In **battle**, the die it rolls has its result count twice.\n"
+            "*Hallowed.* In **setup**, choose a ship you place to be the chosen ship. When anyone destroys it, they place it fresh in any system. After it **moves**, it may **battle** by itself. In **battle**, the die it rolls has its result count twice.\n"
             "*Forsaken.* If you have not attacked with the chosen ship this chapter, you cannot **secure** or **declare** **an** **ambition**."
         ),
         "resources": ["Relic", "Fuel"],
@@ -669,7 +669,7 @@ leaders = [
         "name": "Wheeler-dealer",
         "abilities": (
             "*Devious.* When you **declare** **an** **ambition**, you may **Provoke** **Outrage** in any type.\n"
-            "**Cunning.* After you **Provoke** **Outrage**, secure cards from the top of the deck matching the amount of cards you just discarded. Then gain **any** resources matching the amount you've just discarded.\n"
+            "*Cunning.* After you **Provoke** **Outrage**, secure cards from the top of the deck matching the amount of cards you just discarded. Then gain **any** resources matching the amount you've just discarded.\n"
             "*Irate.* In **setup**, Provoke Relic or Psionic Outrage."
         ),
         "resources": ["Psionic", "Relic"],
