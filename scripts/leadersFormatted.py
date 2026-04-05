@@ -85,11 +85,11 @@ leaders = [
             "*Clever.* When you **declare** **an** **ambition**, you may move any agents on cards to other cards.\n"
             "*Fraudulent.* When you **secure** a card with rival agents on it, capture/take only 1 and place the rest on other cards."
         ),
-        "resources": ["Weapon", "Relic"],
+        "resources": ["Psionic", "Psionic"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
-            "C": {"ships": 3, "building": "None"}
+            "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 18
     },
@@ -668,7 +668,8 @@ leaders = [
     {
         "name": "Wheeler-dealer",
         "abilities": (
-            "*Cunning.* **Prelude:** When you **declare** **an** **ambition**, you may **Provoke** **Outrage**. \n After you **Provoke** **Outrage**, secure cards from the top of the deck matching the amount of cards you just discarded. Then gain **any** resources matching the amount you've just discarded.\n"
+            "*Devious.* When you **declare** **an** **ambition**, you may **Provoke** **Outrage** in any type.\n"
+            "**Cunning.* After you **Provoke** **Outrage**, secure cards from the top of the deck matching the amount of cards you just discarded. Then gain **any** resources matching the amount you've just discarded.\n"
             "*Irate.* In **setup**, Provoke Relic or Psionic Outrage."
         ),
         "resources": ["Psionic", "Relic"],
