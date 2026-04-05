@@ -1053,7 +1053,7 @@ leaders = [
         "body_font_size": 18
     },
     {
-        "name": "Craftsman ",
+        "name": "Artificer",
         "abilities": (
             "*Proficient.* When you Copy or Pivot to **build** or **repair**, you may build or repair.\n"
             "*Diligent.* You cannot Pivot if the lead suit is Construction or Administration."
