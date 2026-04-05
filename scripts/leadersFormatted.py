@@ -930,8 +930,8 @@ leaders = [
     {
         "name": "Samurai",
         "abilities": (
-            "*Perfected.* When attacking in **battle**, you may change 1 of your dice to any face (like a reroll).\n"
-            "*Honorable.* When attacking in **battle**, return half the pieces you destroy (rounded down)."
+            "*Perfected.* In **battle**, you may change 1 of your dice to any face (like a reroll).\n"
+            "*Honorable.* After attacking in **battle**, return half the pieces you took as trophies (rounded down)."
         ),
         "resources": ["Weapon", "Relic"],
         "setup": {
