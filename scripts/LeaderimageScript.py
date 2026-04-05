@@ -364,7 +364,9 @@ def create_card(input_data):
             if trailing:
                 trailing_bbox = draw.textbbox((0, 0), trailing, font=font)
                 trailing_width = trailing_bbox[2] - trailing_bbox[0]
-                draw.text((current_x, current_y + adjust_y), trailing, font=font, fill="black")
+                # Trailing punctuation is outside the rich marker (e.g. "**tax**,")
+                # so it should use the normal font *and* the normal baseline.
+                draw.text((current_x, current_y), trailing, font=font, fill="black")
                 current_x += trailing_width
 
             space_width = draw.textbbox((0, 0), " ", font=font)[2]

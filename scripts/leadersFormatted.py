@@ -1026,8 +1026,8 @@ leaders = [
     {
         "name": "Despot",
         "abilities": (
-            "*Autocratic.* When you **declare** **an** **ambition**, you may **tax** one city of each player you control.\n"
-            "*Merciless.* At the end of each chapter, damage one Loyal ship in each system you control."
+            "*Autocratic.* When you **declare** **an** **ambition**, you may **tax** one city you control of each player.\n"
+            "*Merciless.* At the end of each chapter, damage one Loyal ship in each system with a city."
         ),
         "resources": ["Fuel", "Relic"],
         "setup": {
@@ -1041,7 +1041,7 @@ leaders = [
     {
         "name": "Viceroy",
         "abilities": (
-            "*Delegated.* When any player builds a city, you may place 1 of your ships in that city's cluster.\n"
+            "*Delegated.* When any player **builds** a city, you may place 1 of your ships in that city's cluster.\n"
             "*Administrative.* In **setup**, scrap 4 starports. If any player destroys your starport, they return it and take an agent instead."
         ),
         "resources": ["Relic", "Fuel"],
