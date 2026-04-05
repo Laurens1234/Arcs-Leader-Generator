@@ -588,7 +588,7 @@ leaders = [
         "name": "Terraformer",
         "abilities": (
             "*Genesiacal.* At the start of each chapter, place a resource from the fullest supply on a planet you control (if tied, you choose). That planet now has only that resource type. Also do this after you destroy a city on a planet.\n"
-            "*Codependent.* When you **tax**, you only gain resources from terraformed planets."
+            "*Codependent.* When you **tax**, you only gain resources from altered planets."
         ),
         "resources": ["Psionic", "Material"],
         "setup": {
@@ -872,7 +872,7 @@ leaders = [
         "name": "Bomber",
         "abilities": (
             "*Incendiary.* When attacking in **battle**, before collecting dice, you may destroy 1 fresh attacking ship to destroy 2 defending ships.\n"
-            "*Infamous.* When you destroy a starport, also **Provoke** **Outrage** of its system's tyoe."
+            "*Infamous.* When you destroy a starport, also **Provoke** **Outrage** of that starport's planet type."
         ),
         "resources": ["Weapon", "Fuel"],
         "setup": {
@@ -962,8 +962,8 @@ leaders = [
     {
         "name": "Witch",
         "abilities": (
-            "*Hexed.* When you **secure** a card, you may capture a rival agent on an adjecent card.\n"
-            "*Covenbound.* You cannot **secure** a card unless there is an agent on an adjacent card."
+            "*Malefic.* When you **secure** a card, you may capture a rival agent on another court cart.\n"
+            "*Covenbound.* You cannot **secure** a card unless there is an agent on another court cart."
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
