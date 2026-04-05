@@ -1,3 +1,6 @@
+#general advice: leaders need to have a one word noun as their name
+#both abilities are adjectives
+#1 negative and 1 possitive
 leaders = [
     # Kaiju
     {
@@ -291,7 +294,7 @@ leaders = [
     {
         "name": "Gambler",
         "abilities": (
-            "*Cunning.* You may **pass** the initiative to any player, then guess a suit. If they have it, they must play it, and the card you play that round additionally has the pips of the card they play. (Even if you copy or pivot.)\n"
+            "*Cunning.* You may **pass** the initiative to any player, then guess a suit. If they have it, they must play it, and the card you play that round additionally has the pips of the card they play. (Even if you Copy or Pivot.)\n"
             "*Compulsive.* You must **pass** the initiative the first time you have it each chapter."
         ),
         "resources": ["Weapon", "Psionic"],
@@ -603,7 +606,7 @@ leaders = [
         "name": "Trickster",
         "abilities": (
             "*Misdirecting.* Before you play an action card, you may swap a played facedown action card with one of yours without looking at it first. Place yours face-up.\n"
-            "*Revealed.* When you discard a card to seize or copy, place it face-up."
+            "*Revealed.* When you discard a card to seize or Copy, place it face-up."
         ),
         "resources": ["Psionic", "Fuel"],
         "setup": {
@@ -981,7 +984,7 @@ leaders = [
             "*Diplomatic.* When you **declare** **an** **ambition**, you may **secure** any number of times.\n"
             "*Unauthorized.* You cannot **secure** unless an ambition has been declared."
         ),
-        "resources": ["Psionic", "Material"],
+        "resources": ["Psionic", "Fuel"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
@@ -1038,7 +1041,7 @@ leaders = [
     {
         "name": "Viceroy",
         "abilities": (
-            "*Delegated.* When any player builds a city, you may place 1 of your ships in that cluster.\n"
+            "*Delegated.* When any player builds a city, you may place 1 of your ships in that city's cluster.\n"
             "*Administrative.* In **setup**, scrap 4 starports. If any player destroys your starport, they return it and take an agent instead."
         ),
         "resources": ["Relic", "Fuel"],
@@ -1048,7 +1051,66 @@ leaders = [
             "C": {"ships": 3, "building": "None"}
         },
         "body_font_size": 18
+    },
+    {
+        "name": "Craftsman ",
+        "abilities": (
+            "*Proficient.* When you Copy or Pivot to **build** or **repair**, you may build or repair.\n"
+            "*Diligent.* You cannot Pivot if the lead suit is Construction or Administration."
+        ),
+        "resources": ["Material", "Fuel"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    # Berserker
+    {
+        "name": "Warmonger",
+        "abilities": (
+            "*Blood-soaked.* When you Copy or Pivot to **battle**, you may declare Warlord, if you do, each die you roll has its result count twice.\n"
+            "*Glorybound.* In **scoring**, if you win no ambitions, lose 5 Power."
+        ),
+        "resources": ["Weapon", "Weapon"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    # Taxman
+    {
+        "name": "Extortioner",
+        "abilities": (
+            "*Shrewd.* When you Copy or Pivot to **tax**, you may tax the city of the player who led.\n"
+            "*Vindictive.* In scoring, if Tyrant is declared and you don't win it, scrap 3 agents."
+        ),
+        "resources": ["Psionic", "Material"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
     }
+    # # Prince
+    # {
+    #     "name": "Prince",
+    #     "abilities": (
+    #         "*Royal. When you lead you may \"knight\" a rival's ship, making it loyal to you for the rest of the turn.\n"
+    #         "*Juvenile.* At the end of each chapter, lose 1 ship if you didn't declare an ambition."
+    #     ),
+    #     "resources": ["Weapon", "Relic"],
+    #     "setup": {
+    #         "A": {"ships": 3, "building": "city"},
+    #         "B": {"ships": 3, "building": "starport"},
+    #         "C": {"ships": 2, "building": "None"}
+    #     },
+    #     "body_font_size": 18
+    # }
     # # Companion
     # {
     #     "name": "Companion",
@@ -1155,4 +1217,6 @@ leaders = [
     #     },
     #     "body_font_size": 18
     # },
+    # Fabricator
+
 ]
