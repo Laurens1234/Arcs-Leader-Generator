@@ -261,7 +261,7 @@ leaders = [
     {
         "name": "Chosen",
         "abilities": (
-            "*Hallowed.* In **setup**, choose a ship you place to be the chosen ship. When anyone destroys it, they place it fresh in any system. Once per turn, after it **moves**, it may **battle** by itself. In **battle**, the die it rolls has its result count twice.\n"
+            "*Hallowed.* In **setup**, choose a ship you place to be the chosen ship. When anyone destroys it, they place it fresh in any system. After it **moves**, it may **battle** by itself. In **battle**, the die it rolls has its result count twice.\n"
             "*Forsaken.* If you have not attacked with the chosen ship this chapter, you cannot **secure** or **declare** **an** **ambition**."
         ),
         "resources": ["Relic", "Fuel"],
@@ -538,7 +538,7 @@ leaders = [
     {
         "name": "Golem",
         "abilities": (
-            "*Ironclad.* After assinging hits in **battle**, you may discard a resource to keep all your loyal destroyed ships from that battle damaged instead.\n"
+            "*Ironclad.* After **any** **battle**, you may discard a resource to keep all your loyal destroyed ships from that battle damaged instead.\n"
             "*Cold.* At the end of each chapter, destroy **all** your damaged ships."
         ),
         "resources": ["Material", "Weapon"],
@@ -634,7 +634,7 @@ leaders = [
     {
         "name": "Iconoclast",
         "abilities": (
-            "*Radical.* After you discard a card to seize, you may destroy a city you control to steal a Guild card which type matches that city's type.\n"
+            "*Radical.* After you play an extra action card, you may destroy a city you control to steal a Guild card which matches that city's type.\n"
             "*Fervent.* In **setup**, destroy one of your cities."
         ),
         "resources": ["Psionic", "Weapon"],
@@ -669,7 +669,7 @@ leaders = [
         "name": "Wheeler-dealer",
         "abilities": (
             "*Devious.* When you **declare** **an** **ambition**, you may **Provoke** **Outrage** in any type.\n"
-            "**Cunning.* After you **Provoke** **Outrage**, secure cards from the top of the deck matching the amount of cards you just discarded. Then gain **any** resources matching the amount you've just discarded.\n"
+            "*Cunning.* After you **Provoke** **Outrage**, secure cards from the top of the deck matching the amount of cards you just discarded. Then gain **any** resources matching the amount you've just discarded.\n"
             "*Irate.* In **setup**, Provoke Relic or Psionic Outrage."
         ),
         "resources": ["Psionic", "Relic"],
@@ -886,7 +886,7 @@ leaders = [
     {
         "name": "Musician",
         "abilities": (
-            "*Inspiring.* Instead of discarding a card to seize, you may give two resources they don't have to the player with the initiative to seize it.\n"
+            "*Inspiring.* To seize the iniative, you may give two resources they don't have to the player with the initiative.\n"
             "*Temperamental.* When you gain the initiative, damage 1 loyal ship."
         ),
         "resources": ["Material", "Fuel"],
@@ -930,8 +930,8 @@ leaders = [
     {
         "name": "Samurai",
         "abilities": (
-            "*Perfected.* When attacking in **battle**, you may change 1 of your dice to any face (like a reroll).\n"
-            "*Honorable.* When attacking in **battle**, return half the pieces you destroy (rounded down)."
+            "*Perfected.* In **battle**, you may change 1 of your dice to any face (like a reroll).\n"
+            "*Honorable.* After attacking in **battle**, return half the pieces you took as trophies (rounded down)."
         ),
         "resources": ["Weapon", "Relic"],
         "setup": {
