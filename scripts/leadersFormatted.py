@@ -538,7 +538,7 @@ leaders = [
     {
         "name": "Golem",
         "abilities": (
-            "*Ironclad.* After assinging hits in **battle**, you may discard a resource to keep all your loyal destroyed ships from that battle damaged instead.\n"
+            "*Ironclad.* After **any** **battle**, you may discard a resource to keep all your loyal destroyed ships from that battle damaged instead.\n"
             "*Cold.* At the end of each chapter, destroy **all** your damaged ships."
         ),
         "resources": ["Material", "Weapon"],
