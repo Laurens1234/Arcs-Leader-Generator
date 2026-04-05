@@ -1086,7 +1086,7 @@ leaders = [
         "name": "Extortioner",
         "abilities": (
             "*Shrewd.* When you Copy or Pivot to **tax**, you may tax the city of the player who led.\n"
-            "*Vindictive.* In scoring, if Tyrant is declared and you don't win it, scrap 3 agents."
+            "*Vindictive.* In **scoring**, if Tyrant is declared and you don't win it, scrap 3 agents."
         ),
         "resources": ["Psionic", "Material"],
         "setup": {
