@@ -974,7 +974,52 @@ leaders = [
         },
         "body_font_size": 18
     },
-        # # Companion
+    # Ambassador
+    {
+        "name": "Ambassador",
+        "abilities": (
+            "*Diplomatic.* When you **declare** **an** **ambition**, you may **secure** any number of times.\n"
+            "*Unauthorized.* You cannot **secure** unless an ambition has been declared."
+        ),
+        "resources": ["Psionic", "Material"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    # Restorer
+    {
+        "name": "Shaman ",
+        "abilities": (
+            "*Holostic.* When you **declare** **an** **ambition**, you may **repair** all loyal damaged ships you don't control.\n"
+            "*Disruptive.* You cannot **repair** ships you control."
+        ),
+        "resources": ["Material", "Fuel"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    # Mediator
+    {
+        "name": "Mediator",
+        "abilities": (
+            "*Conciliatory.* When you **secure** a Guild card, you may discard it to clear its type's **Outrage** and gain a matching resource.\n"
+            "*Punitive.* If you **Provoke** **Outrage** in a type you already have outraged, **Provoke** **Outrage** in a type you dont have outraged."
+        ),
+        "resources": ["Psionic", "Material"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    }
+    # # Companion
     # {
     #     "name": "Companion",
     #     "abilities": (
@@ -1079,5 +1124,5 @@ leaders = [
     #         "C": {"ships": 2, "building": "None"}
     #     },
     #     "body_font_size": 18
-    # }
+    # },
 ]
