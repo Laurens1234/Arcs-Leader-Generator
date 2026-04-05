@@ -962,8 +962,8 @@ leaders = [
     {
         "name": "Witch",
         "abilities": (
-            "*Malefic.* When you **secure** a card, you may capture a rival agent on another court cart.\n"
-            "*Covenbound.* You cannot **secure** a card unless there is an agent on another court cart."
+            "*Malefic.* When you **secure**, you may capture a rival agent on another card.\n"
+            "*Covenbound.* You cannot **secure** unless there is an agent on another card."
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
