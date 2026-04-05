@@ -991,12 +991,12 @@ leaders = [
     },
     # Restorer
     {
-        "name": "Shaman ",
+        "name": "Shaman",
         "abilities": (
-            "*Holostic.* When you **declare** **an** **ambition**, you may **repair** all loyal damaged ships you don't control.\n"
+            "*Holostic.* When you **declare** **an** **ambition**, you may **repair** any damaged ships you don't control.\n"
             "*Disruptive.* You cannot **repair** ships you control."
         ),
-        "resources": ["Material", "Fuel"],
+        "resources": ["Relic", "Fuel"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
@@ -1009,9 +1009,9 @@ leaders = [
         "name": "Mediator",
         "abilities": (
             "*Conciliatory.* When you **secure** a Guild card, you may discard it to clear its type's **Outrage** and gain a matching resource.\n"
-            "*Punitive.* If you **Provoke** **Outrage** in a type you already have outraged, **Provoke** **Outrage** in a type you dont have outraged."
+            "*Punitive.* If you **Provoke** **Outrage** in a type you already have outraged, **Provoke** **Outrage** in a type you don't have outraged."
         ),
-        "resources": ["Psionic", "Material"],
+        "resources": ["Psionic", "Fuel"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
