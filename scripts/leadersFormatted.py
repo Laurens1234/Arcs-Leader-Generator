@@ -674,8 +674,8 @@ leaders = [
         "resources": ["Psionic", "Relic"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "starport"},
-            "C": {"ships": 3, "building": "None"}
+            "B": {"ships": 3, "building": "city"},
+            "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 18,
         "zoom": 1,
