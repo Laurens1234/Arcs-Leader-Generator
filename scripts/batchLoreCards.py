@@ -153,14 +153,13 @@ def create_lore_card(input_data):
 
         title_font = ImageFont.truetype(custom_font_path, _s(title_font_size))
         footer_font = ImageFont.truetype(custom_font_path, _s(footer_font_size))
-        number_font = ImageFont.truetype(custom_font_path, _s(14))
         body_font = ImageFont.truetype(neue_kabel_font_path, _s(body_font_size))
         italic_font = ImageFont.truetype(neue_kabel_italic_path, _s(body_font_size))
         bold_font = ImageFont.truetype(neue_kabel_bold_path, _s(body_font_size))
         bolditalic_font = ImageFont.truetype(neue_kabel_bolditalic_path, _s(body_font_size))
     except IOError as e:
         print(f"Font loading error: {e}")
-        title_font = body_font = italic_font = bold_font = bolditalic_font = footer_font = number_font = ImageFont.load_default()
+        title_font = body_font = italic_font = bold_font = bolditalic_font = footer_font = ImageFont.load_default()
         body_font_size = input_data.get("body_font_size", 18)
 
     # Text area dimensions (adjust these based on the lore frame layout)
@@ -197,25 +196,21 @@ def create_lore_card(input_data):
 
         font_to_use = font
         text_to_draw = core
-        adjust_y = 0
 
         if core.startswith("***") and core.endswith("***") and len(core) > 6:
             text_to_draw = core[3:-3]
             font_to_use = bolditalic_font
-            adjust_y = _s(4)
         elif core.startswith("**") and core.endswith("**") and len(core) > 4:
             text_to_draw = core[2:-2]
             font_to_use = bold_font
-            adjust_y = _s(4)
         elif core.startswith("*") and core.endswith("*") and len(core) > 2:
             text_to_draw = core[1:-1]
             font_to_use = italic_font
-            adjust_y = _s(3)
 
-        return text_to_draw, trailing, font_to_use, adjust_y
+        return text_to_draw, trailing, font_to_use
 
     def _measure_rich_token(token: str, font, italic_font, bold_font, bolditalic_font) -> int:
-        text_to_draw, trailing, font_to_use, _adjust_y = _parse_rich_token(
+        text_to_draw, trailing, font_to_use = _parse_rich_token(
             token, font, italic_font, bold_font, bolditalic_font
         )
         main_bbox = draw.textbbox((0, 0), text_to_draw, font=font_to_use)
@@ -261,10 +256,27 @@ def create_lore_card(input_data):
         current_x = x
         current_y = y
 
+        # Align baselines across fonts using ascent metrics.
+        try:
+            base_ascent = font.getmetrics()[0]
+        except Exception:
+            base_ascent = None
+
+        def _baseline_adjust(font_to_use):
+            if base_ascent is None:
+                return 0
+            try:
+                ascent = font_to_use.getmetrics()[0]
+            except Exception:
+                return 0
+            return base_ascent - ascent
+
         for word in words:
-            text_to_draw, trailing, font_to_use, adjust_y = _parse_rich_token(
+            text_to_draw, trailing, font_to_use = _parse_rich_token(
                 word, font, italic_font, bold_font, bolditalic_font
             )
+
+            adjust_y = _baseline_adjust(font_to_use)
 
             word_bbox = draw.textbbox((0, 0), text_to_draw, font=font_to_use)
             word_width = word_bbox[2] - word_bbox[0]
@@ -314,10 +326,32 @@ def create_lore_card(input_data):
     
     footer_y = card_height - _s(45)  # Position near bottom
     footer_margin = _s(45)  # Margin from edges
+
+    def _text_width(text: str) -> int:
+        bbox = draw.textbbox((0, 0), text, font=footer_font)
+        return bbox[2] - bbox[0]
+
+    def _x_centered_like_one_char_left(text: str) -> int:
+        # Existing behavior draws at x=footer_margin.
+        # Anchor the *center* to where a single character would be centered.
+        placeholder = (text or "L")[0]
+        single_w = _text_width(placeholder)
+        target_center = footer_margin + single_w / 2
+        return int(round(target_center - _text_width(text) / 2))
+
+    def _x_centered_like_one_char_right(text: str) -> int:
+        # Existing behavior is right-aligned with a small +5px tweak.
+        # Anchor the *center* to where a single character would be centered.
+        placeholder = (text or "0")[0]
+        single_w = _text_width(placeholder)
+        right_edge = card_width - footer_margin + _s(5)
+        target_center = right_edge - single_w / 2
+        return int(round(target_center - _text_width(text) / 2))
     
     # Draw left footer text (black)
     if footer_left:
-        draw.text((footer_margin, footer_y), footer_left, fill="black", font=footer_font)
+        x = footer_margin if len(str(footer_left)) <= 1 else _x_centered_like_one_char_left(str(footer_left))
+        draw.text((x, footer_y), str(footer_left), fill="black", font=footer_font)
     
     # Draw center footer text (white)
     if footer_center:
@@ -328,10 +362,12 @@ def create_lore_card(input_data):
     
     # Draw right footer text (black)
     if footer_right:
-        footer_bbox = draw.textbbox((0, 0), footer_right, font=footer_font)
-        footer_width = footer_bbox[2] - footer_bbox[0]
-        footer_x = card_width - footer_margin - footer_width + _s(5)
-        draw.text((footer_x, footer_y), footer_right, fill="black", font=footer_font)
+        footer_right_str = str(footer_right)
+        if len(footer_right_str) <= 1:
+            footer_x = card_width - footer_margin - _text_width(footer_right_str) + _s(5)
+        else:
+            footer_x = _x_centered_like_one_char_right(footer_right_str)
+        draw.text((footer_x, footer_y), footer_right_str, fill="black", font=footer_font)
 
     # Final crop (same as leader cards for consistency)
     def final_crop(image, bleed_mm=3, card_width_mm=70, card_height_mm=120):
@@ -346,26 +382,6 @@ def create_lore_card(input_data):
     os.makedirs(result_path, exist_ok=True)
 
     final_img = final_crop(base_img)
-
-    # Optional card number (small white number near the top-right), like leader cards.
-    show_number = bool(input_data.get("show_number", True))
-    card_number = input_data.get("card_number")
-    if show_number and card_number is not None:
-        try:
-            number_text = str(int(card_number))
-        except Exception:
-            number_text = str(card_number)
-
-        number_draw = ImageDraw.Draw(final_img)
-        bbox = number_draw.textbbox((0, 0), number_text, font=number_font)
-        text_w = bbox[2] - bbox[0]
-
-        right_margin = _s(32)
-        top_margin = _s(30)
-        x = max(0, final_img.width - right_margin - text_w)
-        y = max(0, top_margin)
-        number_draw.text((x, y), number_text, fill="white", font=number_font)
-
     final_img.save(output_image_path, dpi=_DEFAULT_OUTPUT_DPI)
     print(f"Lore card saved at {output_image_path}")
     print(f"Settings used: render_scale={render_scale}, allow_upscale={allow_upscale}")
@@ -424,14 +440,14 @@ def main(argv):
         default=1,
         help=(
             "Starting number for lore cards. The first lore card in loreCardsFormatted.py will be this number, "
-            "the next lore card will be +1, etc. Drawn as a small top-right number."
+            "the next lore card will be +1, etc. This value is written into footer_right (bottom-right)."
         ),
     )
     parser.add_argument(
         "--no-numbers",
         action="store_true",
         dest="no_numbers",
-        help="Disable drawing the small top-right lore card number.",
+        help="Do not override footer_right numbering.",
     )
 
     args = parser.parse_args(argv[1:])
@@ -458,12 +474,14 @@ def main(argv):
             if args.allow_upscale is not None:
                 lore_payload["allow_upscale"] = args.allow_upscale
 
-            if args.no_numbers:
-                lore_payload["show_number"] = False
-            else:
-                idx = lore_index_by_name.get(lore_payload.get("name", "").casefold())
-                if idx is not None:
-                    lore_payload["card_number"] = args.number_start + idx
+            if not args.no_numbers:
+                existing_footer_right = lore_payload.get("footer_right")
+                has_explicit_footer_right = existing_footer_right is not None and str(existing_footer_right).strip() != ""
+
+                if not has_explicit_footer_right:
+                    idx = lore_index_by_name.get(lore_payload.get("name", "").casefold())
+                    if idx is not None:
+                        lore_payload["footer_right"] = str(args.number_start + idx)
 
             name = lore_payload.get("name", "<unknown>")
             print(f"Creating lore card for: {name}")

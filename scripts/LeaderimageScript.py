@@ -289,25 +289,21 @@ def create_card(input_data):
 
         font_to_use = font
         text_to_draw = core
-        adjust_y = 0
 
         if core.startswith("***") and core.endswith("***") and len(core) > 6:
             text_to_draw = core[3:-3]
             font_to_use = bolditalic_font
-            adjust_y = _s(4)
         elif core.startswith("**") and core.endswith("**") and len(core) > 4:
             text_to_draw = core[2:-2]
             font_to_use = bold_font
-            adjust_y = _s(4)
         elif core.startswith("*") and core.endswith("*") and len(core) > 2:
             text_to_draw = core[1:-1]
             font_to_use = italic_font
-            adjust_y = _s(3)
 
-        return text_to_draw, trailing, font_to_use, adjust_y
+        return text_to_draw, trailing, font_to_use
 
     def _measure_rich_token(token: str, font, italic_font, bold_font, bolditalic_font) -> int:
-        text_to_draw, trailing, font_to_use, _adjust_y = _parse_rich_token(
+        text_to_draw, trailing, font_to_use = _parse_rich_token(
             token, font, italic_font, bold_font, bolditalic_font
         )
         main_bbox = draw.textbbox((0, 0), text_to_draw, font=font_to_use)
@@ -351,10 +347,27 @@ def create_card(input_data):
         current_x = x
         current_y = y
 
+        # Align baselines across fonts using ascent metrics.
+        try:
+            base_ascent = font.getmetrics()[0]
+        except Exception:
+            base_ascent = None
+
+        def _baseline_adjust(font_to_use):
+            if base_ascent is None:
+                return 0
+            try:
+                ascent = font_to_use.getmetrics()[0]
+            except Exception:
+                return 0
+            return base_ascent - ascent
+
         for word in words:
-            text_to_draw, trailing, font_to_use, adjust_y = _parse_rich_token(
+            text_to_draw, trailing, font_to_use = _parse_rich_token(
                 word, font, italic_font, bold_font, bolditalic_font
             )
+
+            adjust_y = _baseline_adjust(font_to_use)
 
             word_bbox = draw.textbbox((0, 0), text_to_draw, font=font_to_use)
             word_width = word_bbox[2] - word_bbox[0]
