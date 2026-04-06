@@ -1070,8 +1070,8 @@ leaders = [
     {
         "name": "Warmonger",
         "abilities": (
-            "*Blood-soaked.* When you Copy or Pivot to **battle**, you may declare Warlord, if you do, each die you roll has its result count twice.\n"
-            "*Glorybound.* In **scoring**, if you win no ambitions, lose 5 Power."
+            "*Bloodsoaked.* When you Copy or Pivot to **battle**, you may declare Warlord, if you do, each die you roll has its result count twice.\n"
+            "*Hellbent.* In **scoring**, if you win no ambitions, lose 5 Power."
         ),
         "resources": ["Weapon", "Weapon"],
         "setup": {
