@@ -622,13 +622,13 @@ leaders = [
     {
         "name": "Nomad",
         "abilities": (
-            "*Wayfaring.* When you **move**, you may take **any** pieces you control with you. Cities in gates match the resource types of each planet in its cluster. After moving, if there is no space on a planet, place the building outside the building slots until there is.\n"
-            "*Itinerant.* You cannot **tax** cities in planetary systems."
+            "*Unadorned.* While you have the fewest resources, ignore **tax** limits.\n"
+            "*Appeasing.* When you **tax** a Rival city, they gain 1 resource of your choice."
         ),
         "resources": ["Material", "Fuel"],
         "setup": {
-            "A": {"ships": 3, "building": "starport"},
-            "B": {"ships": 3, "building": "city"},
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 3, "building": "None"}
         },
         "body_font_size": 18
