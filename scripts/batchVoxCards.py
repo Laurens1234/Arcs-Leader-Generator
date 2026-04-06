@@ -75,7 +75,11 @@ def create_vox_card(input_data):
     # Base canvas
     base_img = Image.new("RGBA", (card_width, card_height), (0, 0, 0, 255))
 
-    # Optional Vox artwork layer (same idea as lore art, but default placement is low so text can sit higher)
+    # Frame overlay
+    base_img.paste(vox_frame, (0, 0), vox_frame)
+
+    # Vox artwork layer (on top of the frame).
+    # Text is drawn after this, so it remains readable.
     vox_art_path = os.path.join(vox_image_folder, f"{input_data['name']}.png")
     try:
         art_img = Image.open(vox_art_path).convert("RGBA")
@@ -125,9 +129,6 @@ def create_vox_card(input_data):
             f"Warning: Vox image '{input_data['name']}.png' not found in voxImages folder. Proceeding without image."
         )
 
-    # Frame overlay
-    base_img.paste(vox_frame, (0, 0), vox_frame)
-
     draw = ImageDraw.Draw(base_img)
 
     # Fonts
@@ -154,7 +155,7 @@ def create_vox_card(input_data):
     text_width = text_x1 - text_x0
 
     # Vox text starts much higher up than lore cards.
-    text_y0 = _s(45)
+    text_y0 = _s(55)
 
     title_text = input_data.get("title", input_data["name"])
     title_bbox = draw.textbbox((0, 0), title_text, font=title_font)
