@@ -448,7 +448,7 @@ leaders = [
     {
         "name": "Scourge",
         "abilities": (
-            "*Pyromaniacal.* In **battle**, you may damage cities if your opponent has no fresh ships.\n"
+            "*Pyromaniacal.* Once per **battle**, you may damage a city if your opponent has no fresh ships.\n"
             "*Incendiary.* When you destroy a city, destroy all damaged pieces in its system.\n"
             "*Insatiable.* Before **scoring**, if you did not destroy a city this chapter, destroy a city in a system you control or a Loyal city."
         ),
@@ -466,8 +466,8 @@ leaders = [
     {
         "name": "Beggar",
         "abilities": (
-            "*Frugal.* If you start a turn with no resources and no Guild cards, gain **any** resource.\n"
-            "*Communal.* If you start your turn with any resources, discard 1."
+            "*Frugal.* If you start your **Prelude** with no resources and no Guild cards, gain **any** resource.\n"
+            "*Communal.* If you start your turn with any resources, discard a resource or card."
         ),
         "resources": ["", ""],
         "setup": {
@@ -590,7 +590,7 @@ leaders = [
     {
         "name": "Terraformer",
         "abilities": (
-            "*Genesiacal.* At the start of each chapter, place a resource from the fullest supply on a planet you control (if tied, you choose). That planet now has only that resource type. Also do this after you destroy a city on a planet.\n"
+            "*Genesiacal.* At the start of each chapter, place a resource from the fullest supply on a planet you control (if tied, you choose). That planet now has only that resource type. Also do this to a planet after you destroy a city on it.\n"
             "*Codependent.* When you **tax**, you only gain resources from altered planets."
         ),
         "resources": ["Psionic", "Material"],
@@ -622,7 +622,7 @@ leaders = [
     {
         "name": "Nomad",
         "abilities": (
-            "*Unadorned.* While you have the fewest resources, ignore **tax** limits.\n"
+            "*Unadorned.* While you have the fewest resources, ignore the **tax** limit and city control.\n"
             "*Appeasing.* When you **tax** a Rival city, they gain 1 resource of your choice."
         ),
         "resources": ["Material", "Fuel"],
@@ -704,7 +704,7 @@ leaders = [
     {
         "name": "Cartographer",
         "abilities": (
-            "*Exploratory.* When you initiate a Catapult **move**, gain a Fuel.\n"
+            "*Exploratory.* After you initiate a Catapult **move**, gain a Fuel.\n"
             "*Distracted.* When you Catapult **move**, after each move you must drop off 1 ship."
         ),
         "resources": ["Fuel", "Relic"],
@@ -748,7 +748,7 @@ leaders = [
     {
         "name": "Chief",
         "abilities": (
-            "*Imposing.* After any Rival player of which you control a city takes a **tax** action, you may **tax**. After any Rival player of which you control a starport takes a **build** action, you may **build**.\n"
+            "*Imposing.* After any Rival player of which you control a city takes a **tax** action, you may **tax**. After any Rival player of which you control a starport takes a **build** action, you may **build**. You may build at and Catapult from Rival starports you control.\n"
             "*Bountiful.* At the end of each chapter, give 1 resource to each player of which you control a building."
         ),
         "resources": ["Relic", "Weapon"],
@@ -805,7 +805,7 @@ leaders = [
         "name": "Siegebreaker",
         "abilities": (
             "*Ruinous.* In **battle**, if the defender has any buildings in the system, you may collect 1 extra assault die.\n"
-            "*Brutal.* When you destroy a building in **battle**, destroy 1 of your ships in that system (the defender takes it as a trophy)."
+            "*Brutal.* When you destroy a building in **battle**, destroy 1 of your ships in that system."
         ),
         "resources": ["Weapon", "Fuel"],
         "setup": {
@@ -996,7 +996,7 @@ leaders = [
     {
         "name": "Shaman",
         "abilities": (
-            "*Holostic.* When you **declare** **an** **ambition**, you may **repair** **any** damaged ships you don't control.\n"
+            "*Holostic.* When you **declare** **an** **ambition**, you may **repair** damaged ships you don't control.\n"
             "*Disruptive.* You cannot **repair** ships you control."
         ),
         "resources": ["Relic", "Fuel"],
