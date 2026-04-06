@@ -1,14 +1,13 @@
 vox_cards = [
     {
         "name": "testvox",  # looks for cardAssets/voxImages/testvox.png
-        "title": "testvox",
+        "title": "Testvox",
         "title_font_size": 25,
         "body": (
             "Vox card test to validate the lore-style renderer.\n"
             "Rich text: *italic* **bold** ***bolditalic*** with punctuation: **Tax**, *Influence.*\n"
             "\n"
             "This line is intentionally long to verify wrapping higher on the card.\n"
-            ". . . . . . . . . . . a a a a a / / / / . . . . . . . . . . . . . . . . . . . . a a a a a / / / / . . . . . . . . . . . . . . . . . . . . a a a a a / / / / . . . . . . . . . . . . . . . . . . . . a a a a a / / / / . . . . . . . . ."
         ),
         "footer_left": "V",
         "footer": "Vox",
