@@ -42,8 +42,8 @@ lore_cards = [
         "allow_upscale": False,
 
         # Optional art placement controls:
-        "zoom": 1.2,
-        "boundary_shift": 0.08,
+        "zoom": 1.0,
+        "boundary_shift": 1,
     },
     # {
     #     "name": "Weaponized Bureaucracy",
