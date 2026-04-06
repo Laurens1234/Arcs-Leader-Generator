@@ -385,8 +385,8 @@ leaders = [
     {
         "name": "Augur",
         "abilities": (
-            "*Baneful.* When you **secure** a card, you may bury it to secure the top card of the deck.\n"
-            "*Accursed.* After you **secure** a card, discard all matching your matching resources."
+            "*Baneful.* When you **secure** a card, you may bury it to secure the top card of the deck instead.\n"
+            "*Accursed.* After you **secure** a card, discard all your matching resources."
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
