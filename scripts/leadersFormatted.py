@@ -818,7 +818,7 @@ leaders = [
     {
         "name": "Courier",
         "abilities": (
-            "*Swift.* At the start of each chapter, place 3 agents on planets with no Loyal pieces. When you **move** into one, return the agent and gain a resource matching that planet. (While on a planet an agent is not considered a Loyal piece.)\n"
+            "*Swift.* At the start of each chapter, place 3 agents on planets with no Loyal pieces. When you **move** into one, return the agent and gain a resource matching that planet. (The agent cannot be battled or used to build at.)\n"
             "*Careless.* You **cannot** gain bonus city Power if you have not returned all agents on the board."
         ),
         "resources": ["Fuel", "Fuel"],
