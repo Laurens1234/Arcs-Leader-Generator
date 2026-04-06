@@ -52,7 +52,8 @@ def create_vox_card(input_data):
 
     # Asset paths
     result_path = os.path.join(base_path, "results", "vox")
-    vox_frame_path = os.path.join(base_path, "cardAssets", "CardAsset-Frame-Vox.png")
+    vox_frame_path = os.path.join(base_path, "cardAssets", "CardAsset-Texture-Frame.png")
+    vox_bar_path = os.path.join(base_path, "cardAssets", "Voxbar.png")
     vox_image_folder = os.path.join(base_path, "cardAssets", "voxImages")
     footer_image_path = os.path.join(base_path, "cardAssets", "CardAsset-Footer-Paper.png")
 
@@ -129,6 +130,17 @@ def create_vox_card(input_data):
             f"Warning: Vox image '{input_data['name']}.png' not found in voxImages folder. Proceeding without image."
         )
 
+    # Vox bar overlay (above art/frame, below text)
+    try:
+        vox_bar = Image.open(vox_bar_path).convert("RGBA")
+        if render_scale != 1:
+            vox_bar = vox_bar.resize(_s(vox_bar.size), Image.Resampling.LANCZOS)
+        if vox_bar.size != (card_width, card_height):
+            vox_bar = vox_bar.resize((card_width, card_height), Image.Resampling.LANCZOS)
+        base_img.paste(vox_bar, (0, 0), vox_bar)
+    except FileNotFoundError:
+        print("Warning: Voxbar.png not found. Proceeding without vox bar overlay.")
+
     draw = ImageDraw.Draw(base_img)
 
     # Fonts
@@ -155,7 +167,9 @@ def create_vox_card(input_data):
     text_width = text_x1 - text_x0
 
     # Vox text starts much higher up than lore cards.
-    text_y0 = _s(55)
+    # Lower values move the entire text block up.
+    text_top_y = input_data.get("text_top_y", 24)
+    text_y0 = _s(text_top_y)
 
     title_text = input_data.get("title", input_data["name"])
     title_bbox = draw.textbbox((0, 0), title_text, font=title_font)
@@ -271,7 +285,8 @@ def create_vox_card(input_data):
         return current_y + line_height
 
     body_text = input_data.get("body", "")
-    current_y = line_y + _s(18)
+    body_top_padding = input_data.get("body_top_padding", 16)
+    current_y = line_y + _s(body_top_padding)
     for line in wrap_text(body_text, body_font, italic_font, bold_font, bolditalic_font, text_width):
         if not line.strip():
             current_y += _s(10)
@@ -319,9 +334,9 @@ def create_vox_card(input_data):
         return int(round(target_center - _text_width(text) / 2))
 
     def _x_centered_like_one_char_right(text: str) -> int:
-        placeholder = (text or "0")[0]
+        placeholder = "0"
         single_w = _text_width(placeholder)
-        right_edge = card_width - footer_margin + _s(5)
+        right_edge = card_width - footer_margin + _s(2)
         target_center = right_edge - single_w / 2
         return int(round(target_center - _text_width(text) / 2))
 
@@ -340,7 +355,7 @@ def create_vox_card(input_data):
     if footer_right:
         footer_right_str = str(footer_right)
         if len(footer_right_str) <= 1:
-            footer_x = card_width - footer_margin - _text_width(footer_right_str) + _s(5)
+            footer_x = card_width - footer_margin - _text_width(footer_right_str) + _s(2)
         else:
             footer_x = _x_centered_like_one_char_right(footer_right_str)
         draw.text((footer_x, footer_y), footer_right_str, fill="black", font=footer_font)

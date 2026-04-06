@@ -340,11 +340,11 @@ def create_lore_card(input_data):
         return int(round(target_center - _text_width(text) / 2))
 
     def _x_centered_like_one_char_right(text: str) -> int:
-        # Existing behavior is right-aligned with a small +5px tweak.
+        # Existing behavior is right-aligned with a small tweak.
         # Anchor the *center* to where a single character would be centered.
-        placeholder = (text or "0")[0]
+        placeholder = "0"
         single_w = _text_width(placeholder)
-        right_edge = card_width - footer_margin + _s(5)
+        right_edge = card_width - footer_margin + _s(2)
         target_center = right_edge - single_w / 2
         return int(round(target_center - _text_width(text) / 2))
     
@@ -364,7 +364,7 @@ def create_lore_card(input_data):
     if footer_right:
         footer_right_str = str(footer_right)
         if len(footer_right_str) <= 1:
-            footer_x = card_width - footer_margin - _text_width(footer_right_str) + _s(5)
+            footer_x = card_width - footer_margin - _text_width(footer_right_str) + _s(2)
         else:
             footer_x = _x_centered_like_one_char_right(footer_right_str)
         draw.text((footer_x, footer_y), footer_right_str, fill="black", font=footer_font)

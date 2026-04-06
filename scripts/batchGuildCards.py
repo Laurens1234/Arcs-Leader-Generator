@@ -208,8 +208,7 @@ def create_guild_card(input_data):
     text_x1 = card_width - text_margin
     text_width = text_x1 - text_x0
 
-    # Guild title sits slightly lower than lore for better visual centering under the arch.
-    text_y0 = int(card_height * 0.545) + _s(4)
+    text_y0 = int(card_height * 0.552)
 
     title_text = input_data.get("title", input_data["name"])
     title_bbox = draw.textbbox((0, 0), title_text, font=title_font)
@@ -373,9 +372,9 @@ def create_guild_card(input_data):
         return int(round(target_center - _text_width(text) / 2))
 
     def _x_centered_like_one_char_right(text: str) -> int:
-        placeholder = (text or "0")[0]
+        placeholder = "0"
         single_w = _text_width(placeholder)
-        right_edge = card_width - footer_margin + _s(5)
+        right_edge = card_width - footer_margin + _s(2)
         target_center = right_edge - single_w / 2
         return int(round(target_center - _text_width(text) / 2))
 
@@ -394,7 +393,7 @@ def create_guild_card(input_data):
     if footer_right:
         footer_right_str = str(footer_right)
         if len(footer_right_str) <= 1:
-            footer_x = card_width - footer_margin - _text_width(footer_right_str) + _s(5)
+            footer_x = card_width - footer_margin - _text_width(footer_right_str) + _s(2)
         else:
             footer_x = _x_centered_like_one_char_right(footer_right_str)
         draw.text((footer_x, footer_y), footer_right_str, fill="black", font=footer_font)
