@@ -167,7 +167,7 @@ You can set these per-leader in `scripts/leadersFormatted.py`. Example:
 Run the following script to generate lore cards defined in `loreCardsFormatted.py`:
 
 ```bash
-python scripts/batchloreCards.py
+python scripts/batchLoreCards.py
 ```
 
 Add lore cards to `loreCardsFormatted.py` in this format:
@@ -194,6 +194,79 @@ Place your lore card artwork in `cardAssets/loreImages/` with the filename match
 
 Lore cards will be saved in the `results/lore/` folder.
 
+### Generate Guild Cards
+
+Run the following script to generate guild cards defined in `scripts/guildCardsFormatted.py`:
+
+```bash
+python scripts/batchGuildCards.py
+```
+
+You can optionally generate only specific cards by name:
+
+```bash
+python scripts/batchGuildCards.py testguild
+```
+
+Guild card artwork is loaded from `cardAssets/guildImages/<name>.png`.
+
+### Generate Vox Cards
+
+Run the following script to generate Vox cards defined in `scripts/voxCardsFormatted.py`:
+
+```bash
+python scripts/batchVoxCards.py
+```
+
+Or generate a single card by name:
+
+```bash
+python scripts/batchVoxCards.py testvox
+```
+
+Vox card artwork is loaded from `cardAssets/voxImages/<name>.png`.
+
+**Vox Frame + Bar Overlay**
+
+Vox cards currently use these top-level assets:
+
+- `cardAssets/CardAsset-Texture-Frame.png` as the Vox frame/texture.
+- `cardAssets/Voxbar.png` as an overlay layer pasted on top of the frame/art (but below text).
+
+**Vox Text Placement Tweaks**
+
+You can adjust Vox text placement per-card in `scripts/voxCardsFormatted.py`:
+
+- `text_top_y` (default is controlled in `scripts/batchVoxCards.py`): smaller = title/body block starts higher.
+- `body_top_padding`: spacing between the title and the body (smaller = body starts closer to the title).
+
+### Run All Card Generators (One Command)
+
+Run all generators (Guild → Leader → Lore → Vox):
+
+```bash
+python scripts/batchAllCards.py
+```
+
+Exclude some types by listing them after the command:
+
+```bash
+# Skip Vox
+python scripts/batchAllCards.py vox
+
+# Skip Vox + Lore
+python scripts/batchAllCards.py vox lore
+```
+
+### Footer Right Numbering Alignment (Guild / Lore / Vox)
+
+The bottom-right footer text (`footer_right`) is centered for multi-character values (e.g. `"10"`, `"11"`) so it doesn't drift based on digit widths.
+This behavior is implemented in the three batch scripts:
+
+- `scripts/batchGuildCards.py`
+- `scripts/batchLoreCards.py`
+- `scripts/batchVoxCards.py`
+
 ### Text Formatting
 
 For both leader and lore cards, you can format text by surrounding words with asterisks (each word individually):
@@ -206,16 +279,27 @@ For both leader and lore cards, you can format text by surrounding words with as
 
 ```
 ├── cardAssets/
-│   ├── loreImages/       # Place lore card artwork here
-│   └── leaderImages/     # Leader card assets
+│   ├── guildImages/      # Guild card artwork
+│   ├── leaderImages/     # Leader card artwork
+│   ├── loreImages/       # Lore card artwork
+│   ├── voxImages/        # Vox card artwork
+│   ├── CardAsset-Texture-Frame.png
+│   └── Voxbar.png
 ├── fonts/                # Font files
 ├── results/
-│   └── lore/             # Generated lore cards
+│   ├── guild/            # Generated guild cards
+│   ├── lore/             # Generated lore cards
+│   └── vox/              # Generated vox cards
 ├── scripts/
-│   ├── batchImages.py    # Generate all leader cards
-│   ├── leadersFormatted.py   # Leader card data
-│   ├── loreCards.py      # Generate lore cards
-│   └── loreCardsFormatted.py # Lore card data
+│   ├── batchAllCards.py       # Run all generators (optionally excluding some)
+│   ├── batchGuildCards.py     # Generate guild cards
+│   ├── batchLeaderCards.py    # Generate leader cards
+│   ├── batchLoreCards.py      # Generate lore cards
+│   ├── batchVoxCards.py       # Generate vox cards
+│   ├── guildCardsFormatted.py # Guild card data
+│   ├── leadersFormatted.py    # Leader card data
+│   ├── loreCardsFormatted.py  # Lore card data
+│   └── voxCardsFormatted.py   # Vox card data
 └── README.md
 ```
 
