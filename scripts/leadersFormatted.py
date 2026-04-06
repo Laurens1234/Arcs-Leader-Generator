@@ -1027,7 +1027,7 @@ leaders = [
         "name": "Despot",
         "abilities": (
             "*Autocratic.* When you **declare** **an** **ambition**, you may **tax** one city you control of each player.\n"
-            "*Merciless.* At the end of each chapter, damage one Loyal ship in each system with a city."
+            "*Merciless.* At the end of each chapter, destroy one Loyal ship in each system with a city."
         ),
         "resources": ["Fuel", "Relic"],
         "setup": {
