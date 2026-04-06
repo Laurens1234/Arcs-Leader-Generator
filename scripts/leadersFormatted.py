@@ -55,7 +55,7 @@ leaders = [
     {
         "name": "Hierarch",
         "abilities": (
-            "*Entitled.* At the end of your turn, influence a card where you are tied with another player.\n"
+            "*Entitled.* At the end of your turn, **influence** a card where you are tied with another player.\n"
             "*Rigid.* You cannot **influence** on a turn in which you Pivot."
         ),
         "resources": ["Psionic", "Material"],
@@ -381,12 +381,12 @@ leaders = [
         },
         "body_font_size": 18
     },
-    # Herald
+    # Augur
     {
         "name": "Augur",
         "abilities": (
-            "*Baneful.* When you **secure** a card from the Court, bury it, then look at the top 2 cards of the Court deck, secure one and bury the other.\n"
-            "*Ominous.* After you discard a Guild card using its Prelude action, look at the bottom card of the Court deck. If it shares a resource type with the discarded card, **Provoke** **Outrage** in that type."
+            "*Baneful.* When you **secure** a card, you may bury it to secure the top card of the deck.\n"
+            "*Accursed.* After you **secure** a card, discard all matching your matching resources."
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
@@ -791,7 +791,7 @@ leaders = [
         "name": "Broker",
         "abilities": (
             "*Mercantile.* When you **influence** a card, you may place 1 of your resources on it to influence it again. When it is **secured**, gain those resources.\n"
-            "*Indebted.* When you **declare** **an** **ambition**, discard a resource or return a piece."
+            "*Indebted.* When you **declare** **an** **ambition**, return a piece or give a resource to a Rival."
         ),
         "resources": ["Relic", "Psionic"],
         "setup": {
@@ -1042,13 +1042,13 @@ leaders = [
         "name": "Viceroy",
         "abilities": (
             "*Delegated.* When any player **builds** a city, you may place 1 of your ships in that city's cluster.\n"
-            "*Administrative.* In **setup**, scrap 4 starports. If any player destroys your starport, they return it and take an agent instead."
+            "*Administrative.* In **setup**, scrap 4 starports. If any player destroys your starport, they return it and take two agents instead."
         ),
         "resources": ["Relic", "Fuel"],
         "setup": {
             "A": {"ships": 3, "building": "starport"},
             "B": {"ships": 3, "building": "None"},
-            "C": {"ships": 3, "building": "None"}
+            "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 18
     },
