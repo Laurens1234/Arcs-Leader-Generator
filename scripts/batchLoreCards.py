@@ -1,8 +1,13 @@
 import argparse
 import os
+import sys
 
-from loreCardsFormatted import lore_cards
 from PIL import Image, ImageDraw, ImageFont
+
+script_dir = os.path.dirname(os.path.dirname(__file__))
+sys.path.append(script_dir)
+
+from scripts.loreCardsFormatted import lore_cards
 
 _DEFAULT_OUTPUT_DPI = (300, 300)
 
@@ -13,6 +18,24 @@ def _clamp_int(value, minimum, maximum, default):
     except Exception:
         return default
     return max(minimum, min(maximum, value))
+
+
+def _select_lore_cards(all_cards, requested_names):
+    if not requested_names:
+        return list(all_cards), []
+
+    by_lower_name = {c.get("name", "").casefold(): c for c in all_cards}
+    selected = []
+    missing = []
+    for raw in requested_names:
+        key = raw.casefold()
+        card = by_lower_name.get(key)
+        if card is None:
+            missing.append(raw)
+            continue
+        selected.append(card)
+
+    return selected, missing
 
 
 def create_lore_card(input_data):
@@ -46,6 +69,10 @@ def create_lore_card(input_data):
     # Set render_scale=1 to preserve original pixel dimensions.
     render_scale = _clamp_int(input_data.get("render_scale", 2), 1, 4, 2)
 
+    # By default, prefer keeping artwork full-size even if it requires upscaling.
+    # Set allow_upscale=False to clamp to source resolution (avoids blur but may look smaller).
+    allow_upscale = bool(input_data.get("allow_upscale", True))
+
     def _s(value):
         if isinstance(value, tuple):
             return tuple(int(v * render_scale) for v in value)
@@ -65,15 +92,21 @@ def create_lore_card(input_data):
     lore_image_path = os.path.join(lore_image_folder, f"{input_data['name']}.png")
     try:
         lore_img = Image.open(lore_image_path).convert("RGBA")
-        
+
         # Scale lore image to match card width, maintaining aspect ratio
         target_width = card_width
         aspect_ratio = lore_img.height / lore_img.width
         target_height = int(target_width * aspect_ratio)
 
-        # By default, prefer keeping artwork full-size even if it requires upscaling.
-        # Set allow_upscale=False to clamp to source resolution (avoids blur but may look smaller).
-        allow_upscale = bool(input_data.get("allow_upscale", True))
+        # Support optional zoom multiplier (like leaders). Values >1 crop sides/top; <1 letterbox.
+        zoom = input_data.get("zoom", 1.0)
+        try:
+            zoom = float(zoom)
+        except Exception:
+            zoom = 1.0
+        target_width = max(1, int(target_width * zoom))
+        target_height = max(1, int(target_height * zoom))
+
         if not allow_upscale:
             max_w = lore_img.width * render_scale
             max_h = lore_img.height * render_scale
@@ -84,13 +117,23 @@ def create_lore_card(input_data):
                     f"Note: '{input_data['name']}' lore art is smaller than the frame width; "
                     f"not upscaling to avoid blur. Set allow_upscale=True to keep it full-size."
                 )
-        
+
         lore_img = lore_img.resize((target_width, target_height), Image.Resampling.LANCZOS)
-        
-        # Position at top left (full width)
+
+        # Positioning: keep artwork bottom aligned to the text boundary by default.
+        # Optional `boundary_shift` behaves like leader cards: positive shifts move the boundary down.
+        image_bottom_y = int(card_height * 0.545)
+        shift = input_data.get("boundary_shift", 0.0)
+        try:
+            shift = float(shift)
+        except Exception:
+            shift = 0.0
+        overlay_bottom_y = int(image_bottom_y * (1 + shift))
+        overlay_bottom_y = max(1, min(card_height - 1, overlay_bottom_y))
+
         lore_x = (card_width - lore_img.width) // 2
-        lore_y = 0
-        
+        lore_y = overlay_bottom_y - lore_img.height
+
         base_img.paste(lore_img, (lore_x, lore_y), lore_img)
         
     except FileNotFoundError:
@@ -110,13 +153,14 @@ def create_lore_card(input_data):
 
         title_font = ImageFont.truetype(custom_font_path, _s(title_font_size))
         footer_font = ImageFont.truetype(custom_font_path, _s(footer_font_size))
+        number_font = ImageFont.truetype(custom_font_path, _s(14))
         body_font = ImageFont.truetype(neue_kabel_font_path, _s(body_font_size))
         italic_font = ImageFont.truetype(neue_kabel_italic_path, _s(body_font_size))
         bold_font = ImageFont.truetype(neue_kabel_bold_path, _s(body_font_size))
         bolditalic_font = ImageFont.truetype(neue_kabel_bolditalic_path, _s(body_font_size))
     except IOError as e:
         print(f"Font loading error: {e}")
-        title_font = body_font = italic_font = bold_font = bolditalic_font = footer_font = ImageFont.load_default()
+        title_font = body_font = italic_font = bold_font = bolditalic_font = footer_font = number_font = ImageFont.load_default()
         body_font_size = input_data.get("body_font_size", 18)
 
     # Text area dimensions (adjust these based on the lore frame layout)
@@ -302,8 +346,29 @@ def create_lore_card(input_data):
     os.makedirs(result_path, exist_ok=True)
 
     final_img = final_crop(base_img)
+
+    # Optional card number (small white number near the top-right), like leader cards.
+    show_number = bool(input_data.get("show_number", True))
+    card_number = input_data.get("card_number")
+    if show_number and card_number is not None:
+        try:
+            number_text = str(int(card_number))
+        except Exception:
+            number_text = str(card_number)
+
+        number_draw = ImageDraw.Draw(final_img)
+        bbox = number_draw.textbbox((0, 0), number_text, font=number_font)
+        text_w = bbox[2] - bbox[0]
+
+        right_margin = _s(32)
+        top_margin = _s(30)
+        x = max(0, final_img.width - right_margin - text_w)
+        y = max(0, top_margin)
+        number_draw.text((x, y), number_text, fill="white", font=number_font)
+
     final_img.save(output_image_path, dpi=_DEFAULT_OUTPUT_DPI)
     print(f"Lore card saved at {output_image_path}")
+    print(f"Settings used: render_scale={render_scale}, allow_upscale={allow_upscale}")
     
     return output_image_path
 
@@ -322,14 +387,14 @@ def generate_all_lore_cards(render_scale=None, allow_upscale=None):
             print(f"Error generating lore card '{lore_card.get('name', 'Unknown')}': {e}")
 
 
-if __name__ == "__main__":
+def main(argv):
     parser = argparse.ArgumentParser(description="Generate lore cards.")
     parser.add_argument(
         "--render-scale",
         type=int,
         dest="render_scale",
-        default=None,
-        help="Render the whole card at this scale (1-4). Overrides per-card setting if provided.",
+        default=2,
+        help="Render the whole card at this scale (1-4).",
     )
     upscale_group = parser.add_mutually_exclusive_group()
     upscale_group.add_argument(
@@ -346,5 +411,73 @@ if __name__ == "__main__":
     )
     parser.set_defaults(allow_upscale=None)
 
-    args = parser.parse_args()
-    generate_all_lore_cards(render_scale=args.render_scale, allow_upscale=args.allow_upscale)
+    parser.add_argument(
+        "names",
+        nargs="*",
+        help="Optional lore card names to generate (case-insensitive). If omitted, generates all lore cards.",
+    )
+
+    parser.add_argument(
+        "--number-start",
+        type=int,
+        dest="number_start",
+        default=1,
+        help=(
+            "Starting number for lore cards. The first lore card in loreCardsFormatted.py will be this number, "
+            "the next lore card will be +1, etc. Drawn as a small top-right number."
+        ),
+    )
+    parser.add_argument(
+        "--no-numbers",
+        action="store_true",
+        dest="no_numbers",
+        help="Disable drawing the small top-right lore card number.",
+    )
+
+    args = parser.parse_args(argv[1:])
+
+    requested_names = args.names
+    selected_cards, missing = _select_lore_cards(lore_cards, requested_names)
+
+    lore_index_by_name = {c.get("name", "").casefold(): idx for idx, c in enumerate(lore_cards)}
+
+    if missing:
+        print("Warning: unknown lore name(s): " + ", ".join(missing))
+
+    if not selected_cards:
+        print("No lore cards selected. Nothing to do.")
+        return 1
+
+    success_count = 0
+    error_count = 0
+
+    for card in selected_cards:
+        try:
+            lore_payload = dict(card)
+            lore_payload["render_scale"] = args.render_scale
+            if args.allow_upscale is not None:
+                lore_payload["allow_upscale"] = args.allow_upscale
+
+            if args.no_numbers:
+                lore_payload["show_number"] = False
+            else:
+                idx = lore_index_by_name.get(lore_payload.get("name", "").casefold())
+                if idx is not None:
+                    lore_payload["card_number"] = args.number_start + idx
+
+            name = lore_payload.get("name", "<unknown>")
+            print(f"Creating lore card for: {name}")
+            create_lore_card(lore_payload)
+            success_count += 1
+        except Exception as e:
+            print(f"Error generating lore card '{card.get('name', 'Unknown')}': {e}")
+            error_count += 1
+
+    print(f"\nLore creation complete.")
+    print(f"Lore processed successfully: {success_count}")
+    print(f"Lore with errors: {error_count}")
+    return 0 if error_count == 0 else 2
+
+
+if __name__ == "__main__":
+    raise SystemExit(main(sys.argv))
