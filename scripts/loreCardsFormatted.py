@@ -4,7 +4,7 @@ lore_cards = [
         "title": "Ancient Prophecy",  # Title displayed on the card
         "title_font_size": 25,  # Font size for title text
         "body": (
-            "When you destroy a city, discard this lore and draw 2 Lore cards."
+            "When you destroy a city, discard this lore and gain 2 Lore cards."
         ),
         "footer_left": "L",  # Left footer text (black)
         "footer": "Lore",  # Center footer text (white)
