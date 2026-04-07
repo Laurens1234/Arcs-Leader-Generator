@@ -448,9 +448,9 @@ leaders = [
     {
         "name": "Scourge",
         "abilities": (
-            "*Pyromaniacal.* After hitting ships **battle**, you may hit a Rival city if your opponent has no fresh ships.\n"
-            "*Incendiary.* When you destroy a city, destroy all damaged Rival pieces in its system.\n"
-            "*Insatiable.* Before **scoring**, if you did not destroy a city this chapter, destroy a Loyal city."
+            "*Pyromaniacal.* After assigning all hits in **battle**, you may damage a defending city if your opponent has no fresh ships.\n"
+            "*Incendiary.* When you destroy a city, destroy all damaged pieces in its system.\n"
+            "*Insatiable.* Before **scoring**, if you have no cities as trophies, destroy a Loyal city."
         ),
         "resources": ["Weapon", "Fuel"],
         "setup": {
