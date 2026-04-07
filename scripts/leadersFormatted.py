@@ -131,7 +131,7 @@ leaders = [
         "name": "Maw",
         "abilities": (
             "*Voracious.* When you **declare** **an** **ambition**, place a ship in any system.\n"
-            "*Crushing.* When more than 1 Rival ship moves into a planet you control, you destroy 1 of those ships.\n"
+            "*Crushing.* When any Rival moves into a planet you control, you destroy 1 of those ships.\n"
             "*Starving.* In **scoring**, if Warlord is declared and you don't win it, scrap 2 Loyal ships."
         ),
         "resources": ["Weapon", "Material"],
@@ -449,8 +449,8 @@ leaders = [
         "name": "Scourge",
         "abilities": (
             "*Pyromaniacal.* Once per **battle**, you may damage a city if your opponent has no fresh ships.\n"
-            "*Incendiary.* When you destroy a city, destroy all damaged pieces in its system.\n"
-            "*Insatiable.* Before **scoring**, if you did not destroy a city this chapter, destroy a city in a system you control or a Loyal city."
+            "*Incendiary.* When you destroy a city, destroy all damaged Rival pieces in its system.\n"
+            "*Insatiable.* Before **scoring**, if you did not destroy a city this chapter, destroy a Loyal city."
         ),
         "resources": ["Weapon", "Fuel"],
         "setup": {
@@ -733,7 +733,7 @@ leaders = [
         "name": "Salvager",
         "abilities": (
             "*Opportunistic.* After a **battle** in a system adjacent to one of your ships, if any ship was destroyed in that battle, you may place 1 ship in that system.\n"
-            "*Grimy.* You can build at most 1 ship per turn."
+            "*Grimy.* You can **build** at most 1 ship per turn."
         ),
         "resources": ["Weapon", "Fuel"],
         "setup": {
@@ -950,7 +950,7 @@ leaders = [
     {
         "name": "Assasin",
         "abilities": (
-            "*Lethal.* After you **influence**, if you have the most agents on a card, destroy one Rival agent on it.\n"
+            "*Lethal.* After you **influence**, if you have the most agents on a card, you destroy one Rival agent on it.\n"
             "*Bloodthirsty.* If a Rival has as many or more agents on a card than you, you can only **influence** those cards."
         ),
         "resources": ["Weapon", "Psionic"],
