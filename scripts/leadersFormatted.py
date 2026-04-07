@@ -904,8 +904,8 @@ leaders = [
     {
         "name": "Ozymendias",
         "abilities": (
-            "*Hubristic.* When you control all gates, **secure** the entire Court, returning all agents, then you destroy all ships in the gates.\n"
-            "*Forgotten.* You cannot **influence** if you control no gates."
+            "*Hubristic.* When you control all gates, **secure** the entire Court, returning all agents, then you destroy all loyal ships in the gates.\n"
+            "*Forgotten.* You cannot **influence** if you control no gate."
         ),
         "resources": ["Fuel", "Relic"],
         "setup": {
