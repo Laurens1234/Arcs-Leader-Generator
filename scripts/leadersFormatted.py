@@ -417,8 +417,8 @@ leaders = [
     {
         "name": "Architect",
         "abilities": (
-            "*Visionary.* You may build using **repair**. You may build at any starport you control.\n"
-            "*Meticulous.* You cannot **tax** if any of your pieces are damaged."
+            "*Visionary.* You can **build** at loyal cities and **tax** loyal starports.\n"
+            "*Meticulous.* You cannot **move** if you would lose control of a building."
         ),
         "resources": ["Relic", "Material"],
         "setup": {
