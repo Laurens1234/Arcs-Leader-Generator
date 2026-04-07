@@ -833,7 +833,7 @@ leaders = [
         "name": "Forager",
         "abilities": (
             "*Rooting.* When you **move** into a planet with no pieces, gain 1 matching resource.\n"
-            "*Territorial.* When you **move** out of a planet, if it would be left empty, you must leave 1 of your pieces there."
+            "*Territorial.* When you **move** out of a planet, if it would be left empty, **build** a building there."
         ),
         "resources": ["Material", "Fuel"],
         "setup": {
