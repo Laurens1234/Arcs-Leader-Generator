@@ -53,6 +53,9 @@ python scripts/batchLeaderCards.py --no-numbers
 
 # Generate a single leader, but keep numbering based on file order
 python scripts/batchLeaderCards.py --number-start 50 Kaiju
+
+# Generate only the bottom N leaders in the file
+python scripts/batchLeaderCards.py --last 10
 ```
 
 Add the leaders you have made to `leadersFormatted.py` in this format:
@@ -168,6 +171,9 @@ Run the following script to generate lore cards defined in `loreCardsFormatted.p
 
 ```bash
 python scripts/batchLoreCards.py
+
+# Generate only the bottom N lore cards in the file
+python scripts/batchLoreCards.py --last 10
 ```
 
 Add lore cards to `loreCardsFormatted.py` in this format:
@@ -200,6 +206,9 @@ Run the following script to generate guild cards defined in `scripts/guildCardsF
 
 ```bash
 python scripts/batchGuildCards.py
+
+# Generate only the bottom N guild cards in the file
+python scripts/batchGuildCards.py --last 10
 ```
 
 You can optionally generate only specific cards by name:
@@ -216,6 +225,9 @@ Run the following script to generate Vox cards defined in `scripts/voxCardsForma
 
 ```bash
 python scripts/batchVoxCards.py
+
+# Generate only the bottom N Vox cards in the file
+python scripts/batchVoxCards.py --last 10
 ```
 
 Or generate a single card by name:
@@ -246,6 +258,9 @@ Run all generators (Guild → Leader → Lore → Vox):
 
 ```bash
 python scripts/batchAllCards.py
+
+# Generate only the bottom N cards of each type
+python scripts/batchAllCards.py --last 10
 ```
 
 Exclude some types by listing them after the command:

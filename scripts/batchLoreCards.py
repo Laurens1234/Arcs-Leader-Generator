@@ -434,6 +434,14 @@ def main(argv):
     )
 
     parser.add_argument(
+        "--last",
+        type=int,
+        dest="last",
+        default=None,
+        help="Only generate the last N lore cards from the selected set.",
+    )
+
+    parser.add_argument(
         "--number-start",
         type=int,
         dest="number_start",
@@ -459,6 +467,13 @@ def main(argv):
 
     if missing:
         print("Warning: unknown lore name(s): " + ", ".join(missing))
+
+    if args.last is not None:
+        if args.last <= 0:
+            print("Error: --last must be a positive integer")
+            return 2
+        if len(selected_cards) > args.last:
+            selected_cards = selected_cards[-args.last:]
 
     if not selected_cards:
         print("No lore cards selected. Nothing to do.")

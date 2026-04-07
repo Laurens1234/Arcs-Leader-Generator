@@ -24,6 +24,14 @@ def main(argv: list[str]) -> int:
             "Optionally list types after the command to exclude them."
         )
     )
+
+    parser.add_argument(
+        "--last",
+        type=int,
+        dest="last",
+        default=None,
+        help="Only generate the last N cards in each generator's formatted list.",
+    )
     parser.add_argument(
         "exclude",
         nargs="*",
@@ -47,7 +55,10 @@ def main(argv: list[str]) -> int:
             continue
 
         print(f"\n=== Running {name} generator ===")
-        proc = subprocess.run([sys.executable, script_path], cwd=repo_root)
+        cmd = [sys.executable, script_path]
+        if args.last is not None:
+            cmd.append(f"--last={args.last}")
+        proc = subprocess.run(cmd, cwd=repo_root)
         if proc.returncode != 0:
             any_failures = True
             print(f"*** {name} generator exited with code {proc.returncode} ***")

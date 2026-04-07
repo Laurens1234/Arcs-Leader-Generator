@@ -64,6 +64,14 @@ def main(argv):
     )
 
     parser.add_argument(
+        "--last",
+        type=int,
+        dest="last",
+        default=None,
+        help="Only generate the last N leaders from the selected set.",
+    )
+
+    parser.add_argument(
         "--number-start",
         type=int,
         dest="number_start",
@@ -90,6 +98,13 @@ def main(argv):
 
     if missing:
         print("Warning: unknown leader name(s): " + ", ".join(missing))
+
+    if args.last is not None:
+        if args.last <= 0:
+            print("Error: --last must be a positive integer")
+            return 2
+        if len(selected_leaders) > args.last:
+            selected_leaders = selected_leaders[-args.last:]
 
     if not selected_leaders:
         print("No leaders selected. Nothing to do.")

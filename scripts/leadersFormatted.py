@@ -1081,7 +1081,6 @@ leaders = [
         },
         "body_font_size": 18
     },
-    # Taxman
     {
         "name": "Extortioner",
         "abilities": (
@@ -1089,6 +1088,62 @@ leaders = [
             "*Vindictive.* In **scoring**, if Tyrant is declared and you don't win it, scrap 3 agents."
         ),
         "resources": ["Psionic", "Material"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    {
+        "name": "Emperor",
+        "abilities": (
+            "*Imperial.* In **scoring**, your city bonus equals 2 Power per city you control.\n"
+            "*Exacting.* In **scoring**, you don't gain Power for second place unless you tied for first."
+        ),
+        "resources": ["Weapon", "Material"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 3, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    {
+        "name": "Monolith",
+        "abilities": (
+            "*Immovable.* When defending in **battle**, your ships cannot be destroyed unless the attacker controls the gate of the battle system's cluster.\n"
+            "*Stationary.* Your damaged ships cannot Catapult **move**."
+        ),
+        "resources": ["Material", "Weapon"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    {
+        "name": "Egoist",
+        "abilities": (
+            "*Willful.* When you Pivot, you may take any action except those on your played card.\n"
+            "*Solitary.* You can only Pivot with cards of the lead suit."
+        ),
+        "resources": ["Psionic", "Fuel"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    {
+        "name": "Chancellor",
+        "abilities": (
+            "*Mandating.* When you **declare** **an** **ambition**, take an action on your played card twice.\n"
+            "*Unpopular.* You cannot influence if no ambitions have been declared."
+        ),
+        "resources": ["Relic", "Fuel"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
