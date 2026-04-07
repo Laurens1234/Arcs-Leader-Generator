@@ -1098,7 +1098,7 @@ leaders = [
     {
         "name": "Emperor",
         "abilities": (
-            "*Imperial.* In **scoring**, your city bonus equals 2 Power per city you control.\n"
+            "*Imperial.* In **scoring**, your city bonus is 2 Power per city you control.\n"
             "*Exacting.* In **scoring**, you don't gain Power for second place unless you tied for first."
         ),
         "resources": ["Weapon", "Material"],
@@ -1110,7 +1110,7 @@ leaders = [
         "body_font_size": 18
     },
     {
-        "name": "Monolith",
+        "name": "Titan",
         "abilities": (
             "*Immovable.* When defending in **battle**, your ships cannot be destroyed unless the attacker controls the gate of the battle system's cluster.\n"
             "*Stationary.* Your damaged ships cannot Catapult **move**."
