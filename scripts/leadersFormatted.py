@@ -1127,7 +1127,7 @@ leaders = [
         "name": "Egoist",
         "abilities": (
             "*Willful.* When you Pivot, you may take any action except those on your played card.\n"
-            "*Solitary.* You can only Pivot with cards of the lead suit."
+            "*Inflexible.* You can only Pivot with cards of the lead suit."
         ),
         "resources": ["Psionic", "Fuel"],
         "setup": {
@@ -1138,10 +1138,10 @@ leaders = [
         "body_font_size": 18
     },
     {
-        "name": "Chancellor",
+        "name": "Enforcer",
         "abilities": (
             "*Mandating.* When you **declare** **an** **ambition**, take an action on your played card twice.\n"
-            "*Unpopular.* You cannot influence if no ambitions have been declared."
+            "*Unpopular.* You cannot **influence** if no ambitions have been declared."
         ),
         "resources": ["Relic", "Fuel"],
         "setup": {
