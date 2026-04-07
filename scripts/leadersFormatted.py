@@ -294,7 +294,7 @@ leaders = [
     {
         "name": "Gambler",
         "abilities": (
-            "*Cunning.* You may **pass** the initiative to any player, then guess a suit. If they have it, they must play it, and the card you play that round additionally has the pips of the card they play. (Even if you Copy or Pivot.)\n"
+            "*Cunning.* You may **pass** the initiative to any player, then guess a suit. If they have it, they must play it, and your card let's you take twice as many actions.\n"
             "*Compulsive.* You must **pass** the initiative the first time you have it each chapter."
         ),
         "resources": ["Weapon", "Psionic"],
@@ -748,7 +748,7 @@ leaders = [
     {
         "name": "Chief",
         "abilities": (
-            "*Imposing.* After any Rival player **taxes** or **builds** with a building you control, you may also do so.\n"
+            "*Imposing.* After any Rival player **taxes** or **builds** with a building you control, you may **tax** or **build** respectively.\n"
             "*Bountiful.* After **scoring**, give 1 resource to each player of which you control a building."
         ),
         "resources": ["Relic", "Weapon"],
