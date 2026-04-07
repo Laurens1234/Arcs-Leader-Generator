@@ -70,7 +70,7 @@ leaders = [
     {
         "name": "Smuggler",
         "abilities": (
-            "*Opportunistic.* When you **battle** and roll any raid dice, you may steal 1 resource for free.\n"
+            "*Opportunistic.* In **battle**, if you rolled any keys, you may steal 1 resource for free.\n"
             "*Hunted.* After you destroy a building in **battle**, the defender may move all your attacking ships into a gate."
         ),
         "resources": ["Fuel", "Weapon"],
@@ -264,8 +264,8 @@ leaders = [
     {
         "name": "Chosen",
         "abilities": (
-            "*Hallowed.* In **setup**, choose a ship you place to be the chosen ship. When anyone destroys it, they place it fresh in any system. After it **moves**, it may **battle** by itself. In **battle**, the die it rolls has its result count twice.\n"
-            "*Forsaken.* If you have not attacked with the chosen ship this chapter, you cannot **secure** or **declare** **an** **ambition**."
+            "*Hallowed.* After you move a single ship, you may **battle**. In **battle**, the die it rolls has its result count thrice.\n"
+            "*Forsaken.* If you have not attacked this chapter, you cannot **declare** **an** **ambition**."
         ),
         "resources": ["Relic", "Fuel"],
         "setup": {
@@ -433,7 +433,7 @@ leaders = [
         "name": "Martyr",
         "abilities": (
             "*Venerated.* After defending in a **battle**, if the attacker took any trophies, gain a resource matching the battle's system, gain **any** if in gate.\n"
-            "*Selfless.* In **battle** in a system with your ships, any hits that would damage a city damage your fresh ships first instead."
+            "*Selfless.* In **any** **battle** in a system with your ships, any hits that would damage a city damage your fresh ships first instead."
         ),
         "resources": ["Psionic", "Fuel"],
         "setup": {
@@ -448,7 +448,7 @@ leaders = [
     {
         "name": "Scourge",
         "abilities": (
-            "*Pyromaniacal.* Once per **battle**, you may damage a city if your opponent has no fresh ships.\n"
+            "*Pyromaniacal.* After hitting ships **battle**, you may hit a Rival city if your opponent has no fresh ships.\n"
             "*Incendiary.* When you destroy a city, destroy all damaged Rival pieces in its system.\n"
             "*Insatiable.* Before **scoring**, if you did not destroy a city this chapter, destroy a Loyal city."
         ),
@@ -732,7 +732,7 @@ leaders = [
     {
         "name": "Salvager",
         "abilities": (
-            "*Opportunistic.* After a **battle** in a system adjacent to one of your ships, if any ship was destroyed in that battle, you may place 1 ship in that system.\n"
+            "*Opportunistic.* After **any** **battle** in a system adjacent to one of your ships, if any ship was destroyed in that battle, you may place 1 ship in that system.\n"
             "*Grimy.* You can **build** at most 1 ship per turn."
         ),
         "resources": ["Weapon", "Fuel"],
@@ -848,7 +848,7 @@ leaders = [
         "name": "Highroller",
         "abilities": (
             "*Audacious.* After you roll dice in **battle**, you may damage 1 of your attacking ships to reroll **all** dice.\n"
-            "*Feverish.* After you reroll dice in **battle**, **Provoke** **Outrage** in a resource."
+            "*Feverish.* After you reroll dice in **battle**, **Provoke** **Outrage** in any resource."
         ),
         "resources": ["Weapon", "Fuel"],
         "setup": {
