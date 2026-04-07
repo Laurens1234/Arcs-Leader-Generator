@@ -40,7 +40,7 @@ leaders = [
     {
         "name": "Sentient",
         "abilities": (
-            "*Formless.* At the start of each chapter, choose a gate. Until the end of the chapter, you may Catapult and **build** ships there any number of times per turn.\n"
+            "*Formless.* **At** **the** **start** **of** **each** **chapter**, choose a gate. Until the end of the chapter, you may Catapult and **build** ships there any number of times per turn.\n"
             "*Shapeless.* In **setup**, scrap all your starports."
         ),
         "resources": ["Fuel", "Psionic"],
@@ -179,7 +179,7 @@ leaders = [
         "abilities": (
             "*Symbiotic.* You may **build** in adjacent systems with no Rival pieces.\n"
             "*Fertile.* Gain 1 Material when you **build** a starport; gain 1 matching resource when you **build** a city.\n"
-            "*Sprouting.* At the start of each chapter, you may replace a Loyal building with a ship.\n"
+            "*Sprouting.* **At** **the** **start** **of** **each** **chapter**, you may replace a Loyal building with a ship.\n"
             "*Rooted.* You cannot **battle** in clusters where you have no buildings."
         ),
         "resources": ["Material", "Relic"],
@@ -590,7 +590,7 @@ leaders = [
     {
         "name": "Terraformer",
         "abilities": (
-            "*Genesiacal.* At the start of each chapter, place a resource from the fullest supply on a planet with any loyal pieces (if tied, you choose). That planet now has only that resource type. Also do this to a planet after you destroy a city on it.\n"
+            "*Genesiacal.* **At** **the** **start** **of** **each** **chapter**, you may place a resource from the fullest supply on a planet with any loyal pieces to change its type. Also do this to a planet after you destroy a city on it.\n"
             "*Codependent.* When you **tax**, you only gain resources from altered planets."
         ),
         "resources": ["Psionic", "Material"],
@@ -671,14 +671,13 @@ leaders = [
     {
         "name": "Wheeler-dealer",
         "abilities": (
-            "*Devious.* When you **declare** **an** **ambition**, you may **Provoke** **Outrage** in any type.\n"
-            "*Cunning.* After you **Provoke** **Outrage**, secure cards from the top of the deck matching the amount of cards you just discarded. Then gain **any** resources matching the amount you've just discarded.\n"
+            "*Devious.* When you **declare** **an** **ambition**, you may **Provoke** **Outrage** in a non-Outraged type to **clear** **Outrage** in a different type. Then, spend 1 resource from the cleared type’s supply.\n\n"
             "*Irate.* In **setup**, Provoke Relic or Psionic Outrage."
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 18,
@@ -818,7 +817,7 @@ leaders = [
     {
         "name": "Courier",
         "abilities": (
-            "*Swift.* At the start of each chapter, place 3 agents on planets with no Loyal pieces. When you **move** into one, return the agent and gain a resource matching that planet. (The agent cannot be battled or used to build at.)\n"
+            "*Swift.* **At** **the** **start** **of** **each** **chapter**, place 3 agents on planets with no Loyal pieces. When you **move** into one, return the agent and gain a resource matching that planet. (The agent cannot be battled or used to build at.)\n"
             "*Careless.* You **cannot** gain bonus city Power if you have not returned all agents on the board."
         ),
         "resources": ["Fuel", "Fuel"],
@@ -1171,7 +1170,7 @@ leaders = [
     #     "name": "Companion",
     #     "abilities": (
     #         "*Helpful.* When a Rival **battles**, you may allow them to use your ships like they are Loyal. If they do, take 1 of their agents as a favor. You may spend this favor to use their ships like they are Loyal in a **battle** on your turn.\n"
-    #         "*Entangled.* At the start of each chapter, give 1 favor to a player."
+    #         "*Entangled.* **At** **the** **start** **of** **each** **chapter**, give 1 favor to a player."
     #     ),
     #     "resources": ["Relic", "Fuel"],
     #     "setup": {
