@@ -24,7 +24,7 @@ leaders = [
         "name": "Shapeshifter",
         "abilities": (
             "*Mimicry.* When any player **declares** **an** **ambition**, gain a resource of its type. (Weapon for Warlord, you choose Material or Fuel for Tycoon.)\n"
-            "*Flickering.* At the end of each chapter, discard all your resources, then gain 1 Material."
+            "*Flickering.* After **scoring**, discard all your resources, then gain 1 Material."
         ),
         "resources": ["Psionic", "Material"],
         "setup": {
@@ -542,7 +542,7 @@ leaders = [
         "name": "Golem",
         "abilities": (
             "*Ironclad.* After **any** **battle**, you may discard a resource to keep all your Loyal destroyed ships from that battle damaged instead.\n"
-            "*Cold.* At the end of each chapter, destroy **all** your damaged ships."
+            "*Cold.* In **clean** **up**, destroy **all** your damaged ships."
         ),
         "resources": ["Material", "Weapon"],
         "setup": {
@@ -590,7 +590,7 @@ leaders = [
     {
         "name": "Terraformer",
         "abilities": (
-            "*Genesiacal.* At the start of each chapter, place a resource from the fullest supply on a planet you control (if tied, you choose). That planet now has only that resource type. Also do this to a planet after you destroy a city on it.\n"
+            "*Genesiacal.* At the start of each chapter, place a resource from the fullest supply on a planet with any loyal pieces (if tied, you choose). That planet now has only that resource type. Also do this to a planet after you destroy a city on it.\n"
             "*Codependent.* When you **tax**, you only gain resources from altered planets."
         ),
         "resources": ["Psionic", "Material"],
@@ -606,7 +606,7 @@ leaders = [
         "name": "Trickster",
         "abilities": (
             "*Misdirecting.* Before you play an action card, you may swap a played facedown action card with one of yours without looking at it first. Place yours face-up.\n"
-            "*Revealed.* When you discard a card to seize or Copy, place it face-up."
+            "*Revealed.* When you  Copy or play an extra card to seize, place it face-up."
         ),
         "resources": ["Psionic", "Fuel"],
         "setup": {
@@ -690,7 +690,7 @@ leaders = [
         "name": "Curator",
         "abilities": (
             "*Meticulous.* When you **secure** a card, you may discard it to gain two lore cards.\n"
-            "*Ascetic.* At the end of each chapter, give one lore card to another player. If you're in first place, give away another."
+            "*Ascetic.* After **scoring**, give one lore card to another player. If you're in first place, give away another."
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
@@ -748,8 +748,8 @@ leaders = [
     {
         "name": "Chief",
         "abilities": (
-            "*Imposing.* After any Rival player of which you control a city takes a **tax** action, you may **tax**. After any Rival player of which you control a starport takes a **build** action, you may **build**. You may build at and Catapult from Rival starports you control.\n"
-            "*Bountiful.* At the end of each chapter, give 1 resource to each player of which you control a building."
+            "*Imposing.* After any Rival player **taxes** or **builds** with a building you control, you may also do so.\n"
+            "*Bountiful.* After **scoring**, give 1 resource to each player of which you control a building."
         ),
         "resources": ["Relic", "Weapon"],
         "setup": {
@@ -920,7 +920,7 @@ leaders = [
         "name": "Collector",
         "abilities": (
             "*Acquisitive.* When you **secure** a card, gain a resource matching its type.\n"
-            "*Jaded.* At the end of each chapter, discard a Guild card, if you can't, discard all resources you have."
+            "*Jaded.* After **scoring**, discard a Guild card, if you can't, discard all resources you have."
         ),
         "resources": ["Relic", "Relic"],
         "setup": {
@@ -1027,7 +1027,7 @@ leaders = [
         "name": "Despot",
         "abilities": (
             "*Autocratic.* When you **declare** **an** **ambition**, you may **tax** one city you control of each player.\n"
-            "*Merciless.* At the end of each chapter, destroy one Loyal ship in each system with a city."
+            "*Merciless.* After **scoring**, destroy one Loyal ship in each system with a city."
         ),
         "resources": ["Fuel", "Relic"],
         "setup": {
@@ -1042,7 +1042,7 @@ leaders = [
         "name": "Viceroy",
         "abilities": (
             "*Delegated.* When any player **builds** a city, you may place 1 of your ships in that city's cluster.\n"
-            "*Administrative.* In **setup**, scrap 4 starports. If any player destroys your starport, they return it and take two agents instead."
+            "*Administrative.* In **setup**, scrap 4 starports."
         ),
         "resources": ["Relic", "Fuel"],
         "setup": {
@@ -1101,7 +1101,7 @@ leaders = [
     #     "name": "Prince",
     #     "abilities": (
     #         "*Royal. When you lead you may \"knight\" a Rival's ship, making it Loyal to you for the rest of the turn.\n"
-    #         "*Juvenile.* At the end of each chapter, lose 1 ship if you didn't declare an ambition."
+    #         "*Juvenile.* After **scoring**, lose 1 ship if you didn't declare an ambition."
     #     ),
     #     "resources": ["Weapon", "Relic"],
     #     "setup": {
