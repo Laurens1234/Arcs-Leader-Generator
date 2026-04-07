@@ -40,7 +40,7 @@ leaders = [
     {
         "name": "Sentient",
         "abilities": (
-            "*Formless.* At the start of each chapter, choose a gate. Until the end of the chapter, you may Catapult and **build** ships there any number of times per turn. (You do not need any Loyal pieces to build them.)\n"
+            "*Formless.* At the start of each chapter, choose a gate. Until the end of the chapter, you may Catapult and **build** ships there any number of times per turn.\n"
             "*Shapeless.* In **setup**, scrap all your starports."
         ),
         "resources": ["Fuel", "Psionic"],
@@ -71,7 +71,7 @@ leaders = [
         "name": "Smuggler",
         "abilities": (
             "*Opportunistic.* When you **battle** and roll any raid dice, you may steal 1 resource for free.\n"
-            "*Hunted.* After you destroy a building in **battle**, the defender may force you to move all your ships back into the gate."
+            "*Hunted.* After you destroy a building in **battle**, the defender may move all your attacking ships into a gate."
         ),
         "resources": ["Fuel", "Weapon"],
         "setup": {
@@ -131,7 +131,7 @@ leaders = [
         "name": "Maw",
         "abilities": (
             "*Voracious.* When you **declare** **an** **ambition**, place a ship in any system.\n"
-            "*Crushing.* When any Rival moves into a planet you control, you destroy 1 of those ships.\n"
+            "*Crushing.* When any Rival moves ships into a planet you control, you may destroy 1.\n"
             "*Starving.* In **scoring**, if Warlord is declared and you don't win it, scrap 2 Loyal ships."
         ),
         "resources": ["Weapon", "Material"],
