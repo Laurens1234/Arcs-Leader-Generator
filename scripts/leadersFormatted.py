@@ -231,7 +231,7 @@ leaders = [
         "abilities": (
             "*Judicious.* In **scoring**, if any players tie for first in an ambition, you gain the initiative.\n"
             "*Immunized.* If you have the initiative you don't **Provoke** **Outrage**.\n"
-            "*Fair.* Before **scoring**, the Rival player with the least Power may take a resource or 3 power from you."
+            "*Fair.* Before **scoring**, the Rival with the least Power may take a resource or 3 power from you."
         ),
         "resources": ["Psionic", "Fuel"],
         "setup": {
@@ -748,8 +748,8 @@ leaders = [
     {
         "name": "Chief",
         "abilities": (
-            "*Imposing.* After any Rival player **taxes** or **builds** with a building you control, you may **tax** or **build** respectively.\n"
-            "*Bountiful.* After **scoring**, give 1 resource to each player of which you control a building."
+            "*Imposing.* After any Rival of whom you control a building **taxes** or **builds**, you may **tax** or **build** respectively.\n"
+            "*Bountiful.* Before **scoring**, give 1 resource to each player of whom you control a building."
         ),
         "resources": ["Relic", "Weapon"],
         "setup": {
