@@ -448,8 +448,7 @@ leaders = [
     {
         "name": "Scourge",
         "abilities": (
-            "*Pyromaniacal.* After assigning all hits in **battle**, you may damage a defending city if your opponent has no fresh ships.\n"
-            "*Incendiary.* When you destroy a city, destroy all damaged pieces in its system.\n"
+            "Pyromaniacal. When attacking in **battle**, at the start, you may return any number of trophies matching the defender; deal 1 hit for each.\n"
             "*Insatiable.* Before **scoring**, if you have no cities as trophies, destroy a Loyal city."
         ),
         "resources": ["Weapon", "Fuel"],
