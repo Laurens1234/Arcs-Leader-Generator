@@ -1181,14 +1181,14 @@ leaders = [
         "body_font_size": 18
     },
 
-    # Taxonomist
+    # Dissector
     {
-        "name": "Taxonomist",
+        "name": "Dissector",
         "abilities": (
-            "*Categorical.* You may discard a resource to change to take any action with a pip.\n"
-            "*Fastidious.* ."
+            "*.* You may discard a resource to change to take any action with a pip.\n"
+            "*.* after scoring discard all resources except 1."
         ),
-        "resources": ["Material", "Relic"],
+        "resources": ["Material", "Material"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
