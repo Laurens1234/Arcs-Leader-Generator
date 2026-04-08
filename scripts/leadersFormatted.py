@@ -294,7 +294,7 @@ leaders = [
     {
         "name": "Gambler",
         "abilities": (
-            "*Cunning.* You may **pass** the initiative to any player, then guess a suit. If they have it, they must play it, and your card let's you take twice as many actions.\n"
+            "*Cunning.* You may **pass** the initiative to any player, then guess a suit. If they have it, they must play it, and the card you play this round let's you take twice as many actions.\n"
             "*Compulsive.* You must **pass** the initiative the first time you have it each chapter."
         ),
         "resources": ["Weapon", "Psionic"],
@@ -432,7 +432,7 @@ leaders = [
     {
         "name": "Martyr",
         "abilities": (
-            "*Venerated.* After defending in a **battle**, if the attacker took any trophies, gain a resource matching the battle's system, gain **any** if in gate.\n"
+            "*Venerated.* After defending in a **battle**, if the attacker took any trophies, gain any resourcew.\n"
             "*Selfless.* In **any** **battle** in a system with your ships, any hits that would damage a city damage your fresh ships first instead."
         ),
         "resources": ["Psionic", "Fuel"],
@@ -605,7 +605,7 @@ leaders = [
         "name": "Trickster",
         "abilities": (
             "*Misdirecting.* Before you play an action card, you may swap a played facedown action card with one of yours without looking at it first. Place yours face-up.\n"
-            "*Revealed.* When you  Copy or play an extra card to seize, place it face-up."
+            "*Revealed.* When you  Copy or play an extra card, place it face-up."
         ),
         "resources": ["Psionic", "Fuel"],
         "setup": {
@@ -717,7 +717,7 @@ leaders = [
         "name": "Custodian",
         "abilities": (
             "*Vigilant.* When a Rival ships **move** into a gate you control, gain 1 resource matching any city in that gate's cluster.\n"
-            "*Heedless.* Damaged Rival ships may move again after moving into a gate you control."
+            "*Heedless.* Damaged Rival ships may **move** again after moving into a gate you control."
         ),
         "resources": ["Material", "Fuel"],
         "setup": {
@@ -831,13 +831,13 @@ leaders = [
         "name": "Forager",
         "abilities": (
             "*Rooting.* When you **move** into a planet with no pieces, gain 1 matching resource.\n"
-            "*Territorial.* When you **move** out of a planet, if it would be left empty, **build** a building there."
+            "*Territorial.* When you **move** out of a planet, if it's left empty', **build** a building there."
         ),
         "resources": ["Material", "Fuel"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
-            "C": {"ships": 3, "building": "None"}
+            "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 18,
         "zoom": 1.25
@@ -964,7 +964,7 @@ leaders = [
     {
         "name": "Witch",
         "abilities": (
-            "*Malefic.* When you **secure**, you may capture a Rival agent on another card.\n"
+            "*Malefic.* When you **secure**, you may capture a Rival agent on adjacent card.\n"
             "*Covenbound.* You cannot **secure** unless there is an agent on another card."
         ),
         "resources": ["Psionic", "Relic"],
