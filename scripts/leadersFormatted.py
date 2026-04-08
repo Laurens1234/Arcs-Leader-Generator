@@ -1156,11 +1156,43 @@ leaders = [
             "*Bankrolled.* **At** **the** **start** **of** **each** **chapter**, **tax** all cities you control.\n"
             "*Deskbound.* You can **tax** at most once per turn."
         ),
-        "resources": ["", ""],
+        "resources": ["Material", "Material"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "city"},
             "C": {"ships": 3, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+
+    # Librarian
+    {
+        "name": "Librarian",
+        "abilities": (
+            "*Well-read.* some lore card ability.\n"
+            "*Overburdened.* "
+        ),
+        "resources": ["Relic", "Psionic"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "city"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+
+    # Taxonomist
+    {
+        "name": "Taxonomist",
+        "abilities": (
+            "*Categorical.* You may discard a resource to change to take any action with a pip.\n"
+            "*Fastidious.* ."
+        ),
+        "resources": ["Material", "Relic"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 18
     },
