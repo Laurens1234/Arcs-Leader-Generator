@@ -6,7 +6,7 @@ leaders = [
     {
         "name": "Kaiju",
         "abilities": (
-            "*Devouring.* When you destroy a city, repair all your ships in its cluster.\n"
+            "*Devouring.* When you destroy a city, **repair** all your ships in its cluster.\n"
             "*Feared.* When you **tax** a city you control, damage it."
         ),
         "resources": ["Weapon", "Material"],
@@ -264,7 +264,7 @@ leaders = [
     {
         "name": "Chosen",
         "abilities": (
-            "*Hallowed.* After you move a single ship, you may **battle** with only it. In **battle**, the die it rolls has its result count thrice.\n"
+            "*Hallowed.* After you **move** a single ship, you may **battle** with only it, the die it rolls has its result count thrice.\n"
             "*Forsaken.* If you have not attacked this chapter, you cannot **declare** **an** **ambition**."
         ),
         "resources": ["Relic", "Fuel"],
@@ -1165,37 +1165,68 @@ leaders = [
         "body_font_size": 18
     },
 
-    # Librarian
-    {
-        "name": "Librarian",
-        "abilities": (
-            "*Well-read.* some lore card ability.\n"
-            "*Overburdened.* "
-        ),
-        "resources": ["Relic", "Psionic"],
-        "setup": {
-            "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "city"},
-            "C": {"ships": 2, "building": "None"}
-        },
-        "body_font_size": 18
-    },
+    # # Librarian
+    # {
+    #     "name": "Librarian",
+    #     "abilities": (
+    #         "*Well-read.* some lore card ability.\n"
+    #         "*Overburdened.* "
+    #     ),
+    #     "resources": ["Relic", "Psionic"],
+    #     "setup": {
+    #         "A": {"ships": 3, "building": "city"},
+    #         "B": {"ships": 3, "building": "city"},
+    #         "C": {"ships": 2, "building": "None"}
+    #     },
+    #     "body_font_size": 18
+    # },
 
-    # Dissector
-    {
-        "name": "Dissector",
-        "abilities": (
-            "*.* You may discard a resource to change to take any action with a pip.\n"
-            "*.* after scoring discard all resources except 1."
-        ),
-        "resources": ["Material", "Material"],
-        "setup": {
-            "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "starport"},
-            "C": {"ships": 2, "building": "None"}
-        },
-        "body_font_size": 18
-    },
+    # # Dissector
+    # {
+    #     "name": "Dissector",
+    #     "abilities": (
+    #         "*.* You may discard a resource to change to take any action with a pip.\n"
+    #         "*.* after scoring discard all resources that dont maych any icons on card you have."
+    #     ),
+    #     "resources": ["Material", "Material"],
+    #     "setup": {
+    #         "A": {"ships": 3, "building": "city"},
+    #         "B": {"ships": 3, "building": "starport"},
+    #         "C": {"ships": 2, "building": "None"}
+    #     },
+    #     "body_font_size": 18
+    # },
+
+    # # Tactician
+    # {
+    #     "name": "Tactician",
+    #     "abilities": (
+    #         "*Calculated.* Once per turn, after you **influence** a card, you may move 1 of your agents from that card to an adjacent card."
+    #     ),
+    #     "resources": [],
+    #     "setup": {
+    #         "A": {"ships": 3, "building": "city"},
+    #         "B": {"ships": 3, "building": "starport"},
+    #         "C": {"ships": 2, "building": "None"}
+    #     },
+    #     "body_font_size": 18
+    # },
+
+    # # Hydra
+    # {
+    #     "name": "Hydra",
+    #     "abilities": (
+    #         "*Regenerative.* After **any** **battle**, if you lost 2+ ships, you may place 1 fresh ship at a Loyal starport (or a gate you control if none).\n"
+    #         "*Unwieldy.* You cannot Catapult **move** with more than 3 ships in a single move."
+    #     ),
+    #     "resources": [],
+    #     "setup": {
+    #         "A": {"ships": 3, "building": "city"},
+    #         "B": {"ships": 3, "building": "starport"},
+    #         "C": {"ships": 2, "building": "None"}
+    #     },
+    #     "body_font_size": 18
+    # },
     # # Prince
     # {
     #     "name": "Prince",
