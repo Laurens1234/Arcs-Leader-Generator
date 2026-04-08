@@ -574,7 +574,7 @@ leaders = [
     {
         "name": "Bargainer",
         "abilities": (
-            "*Leveraged.* You may return a player’s trophy or captive to **tax** one of their cities.\n"
+            "*Leveraged.* When you **tax**, you may return a Rival's trophy or captive to tax one of their cities.\n"
             "*Obliged.* To gain Power from an ambition, you must return a trophy or captive, if you don't, gain no Power."
         ),
         "resources": ["Weapon", "Relic"],
@@ -1148,7 +1148,22 @@ leaders = [
             "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 18
-    }
+    },
+    # Treasurer
+    {
+        "name": "Treasurer",
+        "abilities": (
+            "*Bankrolled.* **At** **the** **start** **of** **each** **chapter**, **tax** all cities you control.\n"
+            "*Deskbound.* You can **tax** at most once per turn."
+        ),
+        "resources": ["", ""],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "city"},
+            "C": {"ships": 3, "building": "None"}
+        },
+        "body_font_size": 18
+    },
     # # Prince
     # {
     #     "name": "Prince",
