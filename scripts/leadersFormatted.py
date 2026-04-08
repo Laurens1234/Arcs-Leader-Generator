@@ -264,7 +264,7 @@ leaders = [
     {
         "name": "Chosen",
         "abilities": (
-            "*Hallowed.* After you move a single ship, you may **battle**. In **battle**, the die it rolls has its result count thrice.\n"
+            "*Hallowed.* After you move a single ship, you may **battle** with only it. In **battle**, the die it rolls has its result count thrice.\n"
             "*Forsaken.* If you have not attacked this chapter, you cannot **declare** **an** **ambition**."
         ),
         "resources": ["Relic", "Fuel"],
@@ -432,7 +432,7 @@ leaders = [
     {
         "name": "Martyr",
         "abilities": (
-            "*Venerated.* After defending in a **battle**, if the attacker took any trophies, gain any resourcew.\n"
+            "*Venerated.* After defending in a **battle**, if the attacker took any trophies, gain any resource.\n"
             "*Selfless.* In **any** **battle** in a system with your ships, any hits that would damage a city damage your fresh ships first instead."
         ),
         "resources": ["Psionic", "Fuel"],
@@ -716,7 +716,7 @@ leaders = [
     {
         "name": "Custodian",
         "abilities": (
-            "*Vigilant.* When a Rival ships **move** into a gate you control, gain 1 resource matching any city in that gate's cluster.\n"
+            "*Vigilant.* When a Rival **moves** into a gate you control, gain 1 resource matching any city in that gate's cluster.\n"
             "*Heedless.* Damaged Rival ships may **move** again after moving into a gate you control."
         ),
         "resources": ["Material", "Fuel"],
@@ -831,7 +831,7 @@ leaders = [
         "name": "Forager",
         "abilities": (
             "*Rooting.* When you **move** into a planet with no pieces, gain 1 matching resource.\n"
-            "*Territorial.* When you **move** out of a planet, if it's left empty', **build** a building there."
+            "*Territorial.* When you **move** out of a planet, if it's left empty, **build** a building there."
         ),
         "resources": ["Material", "Fuel"],
         "setup": {
