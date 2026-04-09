@@ -321,6 +321,43 @@ In the middle {icon:dice_hit_white} of a sentence.
 Punctuation after icon {icon:dice_key_black}, then more.
 ```
 
+**Available icon tokens**
+
+These are the built-in icon names currently available (from `icon and punchboard/arcs dev_icon *.png`). Use them like `{icon:<name>}`:
+
+```text
+{icon:crisis}
+{icon:crisis_arrow}
+{icon:crisis_hex}
+{icon:crisis_moon}
+{icon:dice_building_hit_black}
+{icon:dice_building_hit_white}
+{icon:dice_hit_black}
+{icon:dice_hit_white}
+{icon:dice_intercept_black}
+{icon:dice_intercept_white}
+{icon:dice_key_black}
+{icon:dice_key_white}
+{icon:dice_self_hit_black}
+{icon:dice_self_hit_white}
+{icon:edict}
+{icon:edict_arrow}
+{icon:edict_hex}
+{icon:edict_moon}
+{icon:grand_ambition}
+{icon:id_arrow}
+{icon:id_hex}
+{icon:id_moon}
+{icon:objective}
+{icon:players}
+{icon:resource_material}
+{icon:resource_fuel}
+{icon:resource_weapon}
+{icon:resource_relic}
+{icon:resource_psionic}
+{icon:summit}
+```
+
 ## Project Structure
 
 ```

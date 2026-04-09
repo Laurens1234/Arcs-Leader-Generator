@@ -70,7 +70,7 @@ leaders = [
     {
         "name": "Smuggler",
         "abilities": (
-            "*Opportunistic.* In **battle**, if you rolled any keys, you may steal 1 resource for free.\n"
+            "*Opportunistic.* In **battle**, if you rolled any {icon:dice_key_black}, you may steal 1 resource for free.\n"
             "*Hunted.* After you destroy a building in **battle**, the defender may move all your attacking ships into a gate."
         ),
         "resources": ["Fuel", "Weapon"],
@@ -179,7 +179,7 @@ leaders = [
         "abilities": (
             "*Symbiotic.* You may **build** in adjacent systems with no Rival pieces.\n"
             "*Fertile.* Gain 1 Material when you **build** a starport; gain 1 matching resource when you **build** a city.\n"
-            "*Sprouting.* When you **declare** **an** **ambition**, you may replace a loyal building or a building you control with a loyal ship.\n"
+            "*Sprouting.* When you **declare** **an** **ambition**, replace a building you control with a ship.\n"
             "*Rooted.* You cannot **battle** in clusters where you have no buildings."
         ),
         "resources": ["Material", "Relic"],
@@ -196,7 +196,7 @@ leaders = [
     {
         "name": "General",
         "abilities": (
-            "*Blitzing.* In **battle**, you may discard a resource to ignore all intercepts.\n"
+            "*Blitzing.* In **battle**, you may discard a resource to ignore all {icon:dice_intercept_black}.\n"
             "*Insurmountable.* In **battle**, if you have more fresh ships, collect 1 extra die.\n"
             "*Reckless.* In **battle**, you must always roll at least 1 die of each type if you can."
         ),
@@ -279,8 +279,8 @@ leaders = [
     {
         "name": "Sage",
         "abilities": (
-            "*Arcane.* In **setup**, gain 5 extra Lore cards.\n"
-            "*Elusive.* Players may **influence** and **secure** your lore. When you **secure** your own lore, gain one lore card."
+            "*Arcane.* In **setup**, gain 5 extra Lore.\n"
+            "*Elusive.* Players may **influence** and **secure** your lore. When you **secure** your own lore, gain one lore."
         ),
         "resources": ["Relic", "Relic"],
         "setup": {
@@ -355,8 +355,8 @@ leaders = [
     {
         "name": "Dreamer",
         "abilities": (
-            "*Lucid.* When you **declare** **an** **ambition**, gain 1 lore card.\n"
-            "*Blurred.* Your lore cards have a raid cost of 2 keys."
+            "*Lucid.* When you **declare** **an** **ambition**, gain 1 lore.\n"
+            "*Blurred.* Your lore have a raid cost of 2 {icon:dice_key_black}."
         ),
         "resources": ["Psionic", "Fuel"],
         "setup": {
@@ -687,8 +687,8 @@ leaders = [
     {
         "name": "Curator",
         "abilities": (
-            "*Meticulous.* When you **secure** a card, you may discard it to gain two lore cards.\n"
-            "*Ascetic.* After **scoring**, give one lore card to another player. If you're in first place, give away another."
+            "*Meticulous.* When you **secure** a card, you may discard it to gain 2 lore.\n"
+            "*Ascetic.* After **scoring**, give 1 lore to another player. If you're in first place, give away another."
         ),
         "resources": ["Psionic", "Relic"],
         "setup": {
@@ -803,7 +803,7 @@ leaders = [
         "name": "Siegebreaker",
         "abilities": (
             "*Ruinous.* In **battle**, if the defender has any buildings in the system, you may collect 1 extra assault die.\n"
-            "*Brutal.* In **battle**, intercepts on Assault dice you roll 1 also count as 1 self-hit."
+            "*Brutal.* In **battle**, {icon:dice_intercept_black} on Assault dice you roll also count as {icon:dice_self_hit_black}."
         ),
         "resources": ["Weapon", "Fuel"],
         "setup": {
@@ -1171,7 +1171,7 @@ leaders = [
     # {
     #     "name": "Librarian",
     #     "abilities": (
-    #         "*Well-read.* some lore card ability.\n"
+    #         "*Well-read.* some lore ability.\n"
     #         "*Overburdened.* "
     #     ),
     #     "resources": ["Relic", "Psionic"],
