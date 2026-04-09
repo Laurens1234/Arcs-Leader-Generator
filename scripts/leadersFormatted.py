@@ -575,7 +575,7 @@ leaders = [
         "name": "Bargainer",
         "abilities": (
             "*Leveraged.* When you **tax**, you may return a Rival's trophy or captive to tax one of their cities.\n"
-            "*Obliged.* To gain Power from an ambition, you must return a trophy or captive, if you don't, gain no Power."
+            "*Obliged.* In **scoring**, to gain Power from an ambition, you must return a trophy or captive, if you don't, gain no Power."
         ),
         "resources": ["Weapon", "Relic"],
         "setup": {
@@ -636,7 +636,7 @@ leaders = [
     {
         "name": "Iconoclast",
         "abilities": (
-            "*Radical.* After you play an extra action card, you may destroy a city you control to steal a Guild card which matches that city's type.\n"
+            "*Radical.* When you **declare** **an** **ambition**, you may destroy a city you control to steal a Guild card matching that city's type.\n"
             "*Fervent.* In **setup**, destroy one of your cities."
         ),
         "resources": ["Psionic", "Weapon"],
@@ -670,7 +670,7 @@ leaders = [
     {
         "name": "Wheeler-dealer",
         "abilities": (
-            "*Devious.* When you **declare** **an** **ambition**, you may **Provoke** **Outrage** in a non-Outraged type to **clear** **Outrage** in a different type. Then, spend 1 resource from the cleared type’s supply.\n\n"
+            "*Devious.* When you **declare** **an** **ambition**, you may **Provoke** **Outrage** in a non-Outraged type to **clear** **Outrage** in a different type. Then, take and spend 1 resource from the cleared type’s supply.\n\n"
             "*Irate.* In **setup**, Provoke Relic or Psionic Outrage."
         ),
         "resources": ["Psionic", "Relic"],
@@ -702,7 +702,7 @@ leaders = [
     {
         "name": "Cartographer",
         "abilities": (
-            "*Exploratory.* After you initiate a Catapult **move**, gain a Fuel.\n"
+            "*Exploratory.* After you **move** from a starport, gain a Fuel.\n"
             "*Distracted.* When you Catapult **move**, after each move you must drop off 1 ship."
         ),
         "resources": ["Fuel", "Relic"],
@@ -788,8 +788,8 @@ leaders = [
     {
         "name": "Broker",
         "abilities": (
-            "*Mercantile.* When you **influence** a card, you may place 1 of your resources on it to influence it again. When it is **secured**, gain those resources.\n"
-            "*Indebted.* When you **declare** **an** **ambition**, return a piece or give a resource to a Rival."
+            "*Mercantile.* When you **influence** a card, you may place 1 of your resources on it to influence it again. When anyone **secures* it, they gain those resources.\n"
+            "*Indebted.* To **declare** **an** **ambition**, you must return a piece or give a resource to a Rival."
         ),
         "resources": ["Relic", "Psionic"],
         "setup": {
@@ -803,7 +803,7 @@ leaders = [
         "name": "Siegebreaker",
         "abilities": (
             "*Ruinous.* In **battle**, if the defender has any buildings in the system, you may collect 1 extra assault die.\n"
-            "*Brutal.* When you destroy a building in **battle**, destroy 1 of your ships in that system."
+            "*Brutal.* In **battle**, intercepts on Assault dice you roll 1 also count as 1 self-hit."
         ),
         "resources": ["Weapon", "Fuel"],
         "setup": {
@@ -902,7 +902,7 @@ leaders = [
     {
         "name": "Ozymendias",
         "abilities": (
-            "*Hubristic.* When you control all gates, **secure** the entire Court, returning all agents, then you destroy all loyal ships in the gates.\n"
+            "*Hubristic.* When you control all gates, **secure** the entire Court, returning any agents, then destroy all loyal ships in the gates.\n"
             "*Forgotten.* You cannot **influence** if you control no gate."
         ),
         "resources": ["Fuel", "Relic"],
