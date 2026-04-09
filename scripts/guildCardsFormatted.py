@@ -116,4 +116,29 @@ guild_cards = [
         "zoom": 1.0,
         "boundary_shift": 0.0,
     },
+    {
+        "name": "testguild_icons",  # optional: cardAssets/guildImages/testguild_icons.png
+        "title": "Guild Icons",
+        "title_font_size": 25,
+        "body": (
+            "{icon:dice_hit_black} Start-of-sentence icon.\n"
+            "Middle-of-sentence icon {icon:dice_hit_black} to verify spacing.\n"
+            "End-of-sentence icon {icon:dice_intercept_black}.\n"
+            "Comma after icon {icon:dice_key_black}, then more text.\n"
+            "Paren before/after ( {icon:dice_self_hit_black} ) should still align.\n"
+        ),
+        "footer_left": "G",
+        "footer": "Guild",
+        "footer_right": "99",
+        "footer_font_size": 16,
+        "body_font_size": 18,
+
+        "resource": "fuel",
+        "raid": 2,
+
+        "render_scale": 2,
+        "allow_upscale": True,
+        "zoom": 1.0,
+        "boundary_shift": 0.0,
+    },
 ]

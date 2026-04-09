@@ -218,17 +218,100 @@ def create_guild_card(input_data):
 
     line_y = title_y + (title_bbox[3] - title_bbox[1]) + _s(12)
 
+    icon_assets_dir = os.path.join(base_path, "icon and punchboard")
+    _icon_cache = {}
+    _missing_icon_warned = set()
+
     _TRAILING_PUNCT = set(",.;:!?)]}\"'”’»")
 
     def _split_trailing_punct(token: str) -> tuple[str, str]:
         trailing = ""
         while token and token[-1] in _TRAILING_PUNCT:
+            if token[-1] == "}" and token.casefold().startswith("{icon:"):
+                break
             trailing = token[-1] + trailing
             token = token[:-1]
         return token, trailing
 
+    def _try_parse_icon_spec(core: str):
+        prefix = "{icon:"
+        if core.casefold().startswith(prefix) and core.endswith("}"):
+            spec = core[len(prefix) : -1].strip()
+            return spec or None
+        return None
+
+    def _resolve_icon_path(icon_spec: str):
+        raw = (icon_spec or "").strip()
+        if not raw:
+            return None
+
+        # Icon tokens are single "words" in formatted text, so spaces are represented as underscores.
+        normalized = raw.replace("_", " ")
+
+        candidates = []
+        if normalized.casefold().endswith(".png"):
+            candidates.append(normalized)
+        else:
+            candidates.append(f"arcs dev_icon {normalized}.png")
+            candidates.append(f"{normalized}.png")
+
+        for filename in candidates:
+            path = os.path.join(icon_assets_dir, filename)
+            if os.path.exists(path):
+                return path
+        return None
+
+    def _load_icon(icon_spec: str, target_height_px: int):
+        key = (icon_spec, int(target_height_px))
+        if key in _icon_cache:
+            return _icon_cache[key]
+
+        path = _resolve_icon_path(icon_spec)
+        if path is None:
+            _icon_cache[key] = None
+            if icon_spec not in _missing_icon_warned:
+                _missing_icon_warned.add(icon_spec)
+                print(f"Warning: Missing icon for token '{{icon:{icon_spec}}}'. Looked in: {icon_assets_dir}")
+            return None
+
+        try:
+            icon_img = Image.open(path).convert("RGBA")
+        except Exception as e:
+            _icon_cache[key] = None
+            if icon_spec not in _missing_icon_warned:
+                _missing_icon_warned.add(icon_spec)
+                print(f"Warning: Failed to load icon '{path}': {e}")
+            return None
+
+        # Trim transparent padding so icons with extra margins don't render smaller than others.
+        try:
+            alpha = icon_img.getchannel("A")
+            bbox = alpha.getbbox()
+            if bbox is not None:
+                icon_img = icon_img.crop(bbox)
+        except Exception:
+            pass
+
+        if target_height_px <= 0:
+            _icon_cache[key] = None
+            return None
+
+        w, h = icon_img.size
+        if h <= 0:
+            _icon_cache[key] = None
+            return None
+
+        target_width_px = max(1, int(round(target_height_px * (w / h))))
+        icon_img = icon_img.resize((target_width_px, int(target_height_px)), Image.Resampling.LANCZOS)
+        _icon_cache[key] = icon_img
+        return icon_img
+
     def _parse_rich_token(token: str, font, italic_font, bold_font, bolditalic_font):
         core, trailing = _split_trailing_punct(token)
+
+        icon_spec = _try_parse_icon_spec(core)
+        if icon_spec is not None:
+            return "icon", icon_spec, trailing, font
 
         font_to_use = font
         text_to_draw = core
@@ -243,12 +326,49 @@ def create_guild_card(input_data):
             text_to_draw = core[1:-1]
             font_to_use = italic_font
 
-        return text_to_draw, trailing, font_to_use
+        return "text", text_to_draw, trailing, font_to_use
+
+    def _icon_layout_for_font(font) -> tuple[int, int]:
+        """Return (y_offset_px, height_px) for an inline icon to match letter extents."""
+        try:
+            bbox = draw.textbbox((0, 0), "H", font=font)
+            if (bbox[3] - bbox[1]) <= 0:
+                bbox = draw.textbbox((0, 0), "x", font=font)
+            y_offset = int(round(bbox[1]))
+            height = int(round(bbox[3] - bbox[1]))
+            if height <= 0:
+                raise ValueError("Invalid glyph bbox height")
+            return y_offset, height
+        except Exception:
+            try:
+                ascent, descent = font.getmetrics()
+                height = int(ascent + descent)
+                return 0, height if height > 0 else _s(body_font_size)
+            except Exception:
+                return 0, _s(body_font_size)
+
+    _KEY_ICON_SCALE = 0.75
+
+    def _icon_scale_for_spec(icon_spec: str) -> float:
+        spec = (icon_spec or "").casefold()
+        if "dice_key" in spec:
+            return _KEY_ICON_SCALE
+        return 1.0
+
+    def _icon_target_height(icon_spec: str, base_height_px: int) -> int:
+        scale = _icon_scale_for_spec(icon_spec)
+        return max(1, int(round(base_height_px * scale)))
 
     def _measure_rich_token(token: str, font, italic_font, bold_font, bolditalic_font) -> int:
-        text_to_draw, trailing, font_to_use = _parse_rich_token(token, font, italic_font, bold_font, bolditalic_font)
-        main_bbox = draw.textbbox((0, 0), text_to_draw, font=font_to_use)
-        main_width = main_bbox[2] - main_bbox[0]
+        kind, payload, trailing, font_to_use = _parse_rich_token(token, font, italic_font, bold_font, bolditalic_font)
+        if kind == "icon":
+            _, base_icon_height = _icon_layout_for_font(font)
+            icon_height = _icon_target_height(payload, base_icon_height)
+            icon_img = _load_icon(payload, icon_height)
+            main_width = icon_img.width if icon_img is not None else int(icon_height)
+        else:
+            main_bbox = draw.textbbox((0, 0), payload, font=font_to_use)
+            main_width = main_bbox[2] - main_bbox[0]
         if trailing:
             trailing_bbox = draw.textbbox((0, 0), trailing, font=font)
             main_width += trailing_bbox[2] - trailing_bbox[0]
@@ -304,13 +424,33 @@ def create_guild_card(input_data):
             return base_ascent - ascent
 
         for word in words:
-            text_to_draw, trailing, font_to_use = _parse_rich_token(word, font, italic_font, bold_font, bolditalic_font)
-            adjust_y = _baseline_adjust(font_to_use)
+            kind, payload, trailing, font_to_use = _parse_rich_token(word, font, italic_font, bold_font, bolditalic_font)
+            if kind == "icon":
+                icon_y_offset, base_icon_height = _icon_layout_for_font(font)
+                icon_height = _icon_target_height(payload, base_icon_height)
+                icon_img = _load_icon(payload, icon_height)
+                icon_width = icon_img.width if icon_img is not None else int(icon_height)
 
-            word_bbox = draw.textbbox((0, 0), text_to_draw, font=font_to_use)
-            word_width = word_bbox[2] - word_bbox[0]
-            draw.text((current_x, current_y + adjust_y), text_to_draw, font=font_to_use, fill="black")
-            current_x += word_width
+                # Bottom-align to the line's baseline box even when scaled.
+                icon_y = current_y + icon_y_offset + (base_icon_height - icon_height)
+
+                if icon_img is not None:
+                    base_img.paste(icon_img, (int(current_x), int(icon_y)), icon_img)
+                else:
+                    draw.rectangle(
+                        (int(current_x), int(icon_y), int(current_x + icon_width), int(icon_y + icon_height)),
+                        outline="black",
+                        width=max(1, _s(1)),
+                    )
+
+                current_x += icon_width
+            else:
+                adjust_y = _baseline_adjust(font_to_use)
+
+                word_bbox = draw.textbbox((0, 0), payload, font=font_to_use)
+                word_width = word_bbox[2] - word_bbox[0]
+                draw.text((current_x, current_y + adjust_y), payload, font=font_to_use, fill="black")
+                current_x += word_width
 
             if trailing:
                 trailing_bbox = draw.textbbox((0, 0), trailing, font=font)
