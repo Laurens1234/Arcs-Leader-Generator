@@ -604,7 +604,7 @@ leaders = [
     {
         "name": "Trickster",
         "abilities": (
-            "*Misdirecting.* Before you play an action card, you may swap a played facedown action card with one of yours without looking at it first. Place yours face-up.\n"
+            "*Misdirecting.* When you **declare** **an** **ambition**, draw up to 2 cards from the bottom of the action card deck, then discard as many.\n"
             "*Revealed.* When you  Copy or play an extra card, place it face-up."
         ),
         "resources": ["Psionic", "Fuel"],
