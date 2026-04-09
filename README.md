@@ -290,6 +290,37 @@ For both leader and lore cards, you can format text by surrounding words with as
 * `**bold**` → **bold**
 * `***both***` → ***bold italic***
 
+### Inline Icons
+
+You can embed icons directly into card text (leader `abilities`, and guild/lore/vox `body`) using an inline token:
+
+- **Syntax:** `{icon:NAME}`
+- Treat the icon token like a single “word” (separate it with spaces like normal text).
+- Trailing punctuation is supported (e.g. `{icon:dice_key_white},` or `{icon:resource_fuel}.`).
+
+**Where icons come from**
+
+Icons are loaded from the `icon and punchboard/` folder.
+
+When you write `{icon:NAME}`, the generator will try to find an image file matching one of these patterns:
+
+- `icon and punchboard/arcs dev_icon NAME.png`
+- `icon and punchboard/NAME.png`
+
+Notes:
+
+- If `NAME` contains underscores, they are treated as spaces when resolving filenames (because the token has no spaces).
+- You can also include the `.png` in the token (e.g. `{icon:resource_fuel.png}`).
+- If an icon is missing, the generator prints a warning and draws a placeholder box.
+
+**Examples**
+
+```text
+Start with an icon: {icon:resource_fuel} then words.
+In the middle {icon:dice_hit_white} of a sentence.
+Punctuation after icon {icon:dice_key_black}, then more.
+```
+
 ## Project Structure
 
 ```
