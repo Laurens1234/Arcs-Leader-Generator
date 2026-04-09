@@ -154,7 +154,7 @@ leaders = [
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "city"},
-            "C": {"ships": 2, "building": "None"}
+            "C": {"ships": 3, "building": "None"}
         },
         "body_font_size": 18
     },
@@ -377,7 +377,7 @@ leaders = [
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "city"},
-            "C": {"ships": 2, "building": "None"}
+            "C": {"ships": 3, "building": "None"}
         },
         "body_font_size": 18
     },
@@ -409,7 +409,7 @@ leaders = [
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "city"},
-            "C": {"ships": 2, "building": "None"}
+            "C": {"ships": 3, "building": "None"}
         },
         "body_font_size": 18
     },
@@ -439,7 +439,7 @@ leaders = [
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "city"},
-            "C": {"ships": 2, "building": "None"}
+            "C": {"ships": 3, "building": "None"}
         },
         "body_font_size": 18,
         "zoom": 1.2
@@ -780,7 +780,7 @@ leaders = [
         "resources": ["Psionic", "Material"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 3, "building": "None"}
         },
         "body_font_size": 18
@@ -788,7 +788,7 @@ leaders = [
     {
         "name": "Broker",
         "abilities": (
-            "*Mercantile.* When you **influence** a card, you may place 1 of your resources on it to influence it again. When anyone **secures* it, they gain those resources.\n"
+            "*Mercantile.* When you **influence** a card, you may place 1 of your resources on it to influence it again. When anyone **secures** it, they gain those resources.\n"
             "*Indebted.* To **declare** **an** **ambition**, you must return a piece or give a resource to a Rival."
         ),
         "resources": ["Relic", "Psionic"],
@@ -1138,7 +1138,7 @@ leaders = [
     {
         "name": "Enforcer",
         "abilities": (
-            "*Mandating.* When you **declare** **an** **ambition**, take an action on your played card twice.\n"
+            "*Mandating.* When you **declare** **an** **ambition**, take an action on your played card twice. *(Show* *it* *if* *you* *copied.)*\n"
             "*Unpopular.* You cannot **influence** if no ambitions have been declared."
         ),
         "resources": ["Relic", "Fuel"],
@@ -1165,6 +1165,8 @@ leaders = [
         "body_font_size": 18
     },
 
+    # you can ransack starports
+    # you can move between loyal buildings
     # # Librarian
     # {
     #     "name": "Librarian",
