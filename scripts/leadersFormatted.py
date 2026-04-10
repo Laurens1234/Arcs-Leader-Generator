@@ -310,8 +310,8 @@ leaders = [
         "name": "Engineer",
         "abilities": (
             "*Versatile.* Your starports can **move**, **battle**, intercept and control like a ship. You place starports outside building slots.\n"
-            "*Exorbitant.* You can only **build** starports at cities, once per city, per turn.\n"
-            "*Fragile.* After you Catapult **move**, damage the starport you used."
+            "*Exorbitant.* You can only **build** starports at cities, damaged, once per city, per turn.\n"
+            "*Fragile.* After you finish Catapult **moving**, damage the starport you used."
         ),
         "resources": ["Material", "Material"],
         "setup": {
@@ -331,7 +331,7 @@ leaders = [
         "resources": ["Psionic", "Material"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "starport"},
+            "B": {"ships": 3, "building": "city"},
             "C": {"ships": 3, "building": "None"}
         },
         "body_font_size": 18
