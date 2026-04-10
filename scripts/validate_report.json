@@ -1,0 +1,348 @@
+{
+  "errors": {},
+  "asset_renames": [
+    [
+      "Wheeler-Dealer.png",
+      "Wheeler-dealer.png"
+    ]
+  ],
+  "asset_map": {
+    "Kaiju": "Kaiju.png",
+    "Shapeshifter": "Shapeshifter.png",
+    "Sentient": "Sentient.png",
+    "Hierarch": "Hierarch.png",
+    "Smuggler": "Smuggler.png",
+    "Manipulator": "Manipulator.png",
+    "Necromancer": "Necromancer.png",
+    "Composer": "Composer.png",
+    "Maw": "Maw.png",
+    "Saint": "Saint.png",
+    "Seer": "Seer.png",
+    "Terrestrial": "Terrestrial.png",
+    "General": "General.png",
+    "Sentinel": "Sentinel.png",
+    "Prefect": "Prefect.png",
+    "Ghost": "Ghost.png",
+    "Chosen": "Chosen.png",
+    "Sage": "Sage.png",
+    "Gambler": "Gambler.png",
+    "Engineer": "Engineer.png",
+    "Magician": "Magician.png",
+    "Weaver": "Weaver.png",
+    "Dreamer": "Dreamer.png",
+    "Seeker": "Seeker.png",
+    "Augur": "Augur.png",
+    "Alchemist": "Alchemist.png",
+    "Architect": "Architect.png",
+    "Martyr": "Martyr.png",
+    "Scourge": "Scourge.png",
+    "Beggar": "Beggar.png",
+    "Feral": "Feral.png",
+    "Conduit": "Conduit.png",
+    "Puppeteer": "Puppeteer.png",
+    "Automaton": "Automaton.png",
+    "Golem": "Golem.png",
+    "Solian": "Solian.png",
+    "Bargainer": "Bargainer.png",
+    "Terraformer": "Terraformer.png",
+    "Trickster": "Trickster.png",
+    "Nomad": "Nomad.png",
+    "Iconoclast": "Iconoclast.png",
+    "Fiend": "Fiend.png",
+    "Wheeler-dealer": "Wheeler-Dealer.png",
+    "Curator": "Curator.png",
+    "Cartographer": "Cartographer.png",
+    "Custodian": "Custodian.png",
+    "Salvager": "Salvager.png",
+    "Chief": "Chief.png",
+    "Duelist": "Duelist.png",
+    "Prophet": "Prophet.png",
+    "Broker": "Broker.png",
+    "Siegebreaker": "Siegebreaker.png",
+    "Courier": "Courier.png",
+    "Forager": "Forager.png",
+    "Highroller": "Highroller.png",
+    "Insurgent": "Insurgent.png",
+    "Bomber": "Bomber.png",
+    "Musician": "Musician.png",
+    "Ozymandias": "Ozymandias.png",
+    "Collector": "Collector.png",
+    "Samurai": "Samurai.png",
+    "Assassin": "Assassin.png",
+    "Witch": "Witch.png",
+    "Ambassador": "Ambassador.png",
+    "Shaman": "Shaman.png",
+    "Mediator": "Mediator.png",
+    "Despot": "Despot.png",
+    "Viceroy": "Viceroy.png",
+    "Artificer": "Artificer.png",
+    "Warmonger": "Warmonger.png",
+    "Extortioner": "Extortioner.png",
+    "Emperor": "Emperor.png",
+    "Titan": "Titan.png",
+    "Egoist": "Egoist.png",
+    "Enforcer": "Enforcer.png",
+    "Treasurer": "Treasurer.png"
+  },
+  "spelling": {
+    "Necromancer": [
+      {
+        "word": "Gravebound",
+        "suggestions": [
+          "Grave bound",
+          "Grave-bound",
+          "Aboveground"
+        ]
+      }
+    ],
+    "Alchemist": [
+      {
+        "word": "Transformative",
+        "suggestions": [
+          "Trans formative",
+          "Trans-formative",
+          "Transformation"
+        ]
+      }
+    ],
+    "Terraformer": [
+      {
+        "word": "Genesiacal",
+        "suggestions": [
+          "Analgesia"
+        ]
+      }
+    ],
+    "Wheeler-dealer": [
+      {
+        "word": "Psionic",
+        "suggestions": [
+          "Ps ionic",
+          "Ps-ionic",
+          "Ionic"
+        ]
+      }
+    ],
+    "Highroller": [
+      {
+        "word": "reroll",
+        "suggestions": [
+          "re roll",
+          "re-roll",
+          "rerolled"
+        ]
+      },
+      {
+        "word": "reroll",
+        "suggestions": [
+          "re roll",
+          "re-roll",
+          "rerolled"
+        ]
+      }
+    ],
+    "Bomber": [
+      {
+        "word": "starport's",
+        "suggestions": [
+          "star port's",
+          "star-port's",
+          "carport's"
+        ]
+      }
+    ],
+    "Samurai": [
+      {
+        "word": "reroll",
+        "suggestions": [
+          "re roll",
+          "re-roll",
+          "rerolled"
+        ]
+      }
+    ],
+    "Witch": [
+      {
+        "word": "Covenbound",
+        "suggestions": [
+          "Coven bound",
+          "Coven-bound",
+          "Overabound"
+        ]
+      }
+    ],
+    "Warmonger": [
+      {
+        "word": "Bloodsoaked",
+        "suggestions": [
+          "Blood soaked",
+          "Blood-soaked",
+          "Bloodshed"
+        ]
+      }
+    ],
+    "Treasurer": [
+      {
+        "word": "Deskbound",
+        "suggestions": [
+          "Desk bound",
+          "Desk-bound",
+          "Boundedness"
+        ]
+      }
+    ]
+  },
+  "grammar": {
+    "Kaiju": [],
+    "Shapeshifter": [],
+    "Sentient": [],
+    "Hierarch": [],
+    "Smuggler": [],
+    "Manipulator": [],
+    "Necromancer": [
+      {
+        "message": "Possible spelling mistake found.",
+        "offset": 118,
+        "length": 10,
+        "suggestions": [
+          "Grave bound"
+        ]
+      }
+    ],
+    "Composer": [],
+    "Maw": [
+      {
+        "message": "Use a comma before \u2018and\u2019 if it connects two independent clauses (unless they are closely connected and short).",
+        "offset": 218,
+        "length": 4,
+        "suggestions": [
+          ", and"
+        ]
+      }
+    ],
+    "Saint": [],
+    "Seer": [],
+    "Terrestrial": [],
+    "General": [],
+    "Sentinel": [],
+    "Prefect": [],
+    "Ghost": [],
+    "Chosen": [],
+    "Sage": [],
+    "Gambler": [],
+    "Engineer": [],
+    "Magician": [],
+    "Weaver": [],
+    "Dreamer": [],
+    "Seeker": [],
+    "Augur": [],
+    "Alchemist": [],
+    "Architect": [],
+    "Martyr": [],
+    "Scourge": [],
+    "Beggar": [],
+    "Feral": [],
+    "Conduit": [],
+    "Puppeteer": [],
+    "Automaton": [],
+    "Golem": [],
+    "Solian": [],
+    "Bargainer": [],
+    "Terraformer": [
+      {
+        "message": "Possible spelling mistake found.",
+        "offset": 1,
+        "length": 10,
+        "suggestions": [
+          "Genesiac",
+          "Genetical"
+        ]
+      }
+    ],
+    "Trickster": [],
+    "Nomad": [],
+    "Iconoclast": [],
+    "Fiend": [],
+    "Wheeler-dealer": [],
+    "Curator": [],
+    "Cartographer": [],
+    "Custodian": [],
+    "Salvager": [],
+    "Chief": [],
+    "Duelist": [],
+    "Prophet": [],
+    "Broker": [],
+    "Siegebreaker": [],
+    "Courier": [],
+    "Forager": [],
+    "Highroller": [
+      {
+        "message": "Possible spelling mistake found.",
+        "offset": 92,
+        "length": 6,
+        "suggestions": []
+      },
+      {
+        "message": "Possible spelling mistake found.",
+        "offset": 135,
+        "length": 6,
+        "suggestions": []
+      }
+    ],
+    "Insurgent": [],
+    "Bomber": [],
+    "Musician": [],
+    "Ozymandias": [],
+    "Collector": [],
+    "Samurai": [
+      {
+        "message": "Possible spelling mistake found.",
+        "offset": 78,
+        "length": 6,
+        "suggestions": []
+      }
+    ],
+    "Assassin": [],
+    "Witch": [
+      {
+        "message": "Possible spelling mistake found.",
+        "offset": 84,
+        "length": 10,
+        "suggestions": [
+          "Coven bound"
+        ]
+      }
+    ],
+    "Ambassador": [],
+    "Shaman": [],
+    "Mediator": [],
+    "Despot": [],
+    "Viceroy": [],
+    "Artificer": [],
+    "Warmonger": [
+      {
+        "message": "Possible spelling mistake found.",
+        "offset": 1,
+        "length": 11,
+        "suggestions": [
+          "Blood soaked"
+        ]
+      }
+    ],
+    "Extortioner": [
+      {
+        "message": "Use a comma before \u2018and\u2019 if it connects two independent clauses (unless they are closely connected and short).",
+        "offset": 140,
+        "length": 4,
+        "suggestions": [
+          ", and"
+        ]
+      }
+    ],
+    "Emperor": [],
+    "Titan": [],
+    "Egoist": [],
+    "Enforcer": [],
+    "Treasurer": []
+  }
+}
