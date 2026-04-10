@@ -774,7 +774,7 @@ leaders = [
         {
         "name": "Prophet",
         "abilities": (
-            "*Revelatory.* When you **declare** **an** **ambition**, you may **secure** any Guild card in the Court discard pile.\n"
+            "*Revelatory.* When you **declare** **an** **ambition**, you may **secure** Guild card in the Court discard pile which type matches the declared ambition.\n"
             "*Fatalistic.* You cannot seize the initiative."
         ),
         "resources": ["Psionic", "Material"],
