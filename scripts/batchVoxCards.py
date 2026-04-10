@@ -1,4 +1,6 @@
 import argparse
+import importlib
+import importlib.util
 import os
 import sys
 
@@ -549,6 +551,20 @@ def main(argv):
     )
 
     parser.add_argument(
+        "--source-module",
+        dest="source_module",
+        default=None,
+        help="Optional Python module path to import vox_cards from (e.g. scripts.guild_deck_formatted).",
+    )
+
+    parser.add_argument(
+        "--source-file",
+        dest="source_file",
+        default=None,
+        help="Optional path to a .py file to load vox_cards from.",
+    )
+
+    parser.add_argument(
         "--last",
         type=int,
         dest="last",
@@ -575,8 +591,31 @@ def main(argv):
 
     args = parser.parse_args(argv[1:])
 
-    selected, missing = _select_cards(vox_cards, args.names)
-    index_by_name = {c.get("name", "").casefold(): idx for idx, c in enumerate(vox_cards)}
+    # Support loading vox_cards from alternate module/file
+    cards_source = vox_cards
+    if args.source_module or args.source_file:
+        try:
+            if args.source_module:
+                mod = importlib.import_module(args.source_module)
+            else:
+                spec = importlib.util.spec_from_file_location("custom_vox_module", args.source_file)
+                if spec is None or spec.loader is None:
+                    print(f"Error: cannot load source file: {args.source_file}")
+                    return 3
+                mod = importlib.util.module_from_spec(spec)
+                spec.loader.exec_module(mod)
+
+            if hasattr(mod, "vox_cards"):
+                cards_source = getattr(mod, "vox_cards")
+            else:
+                print("Error: source does not define 'vox_cards'.")
+                return 3
+        except Exception as e:
+            print(f"Failed to import vox cards from source: {e}")
+            return 3
+
+    selected, missing = _select_cards(cards_source, args.names)
+    index_by_name = {c.get("name", "").casefold(): idx for idx, c in enumerate(cards_source)}
 
     if missing:
         print("Warning: unknown Vox name(s): " + ", ".join(missing))

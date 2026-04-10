@@ -1,4 +1,6 @@
 import argparse
+import importlib
+import importlib.util
 import os
 import sys
 
@@ -597,12 +599,50 @@ def main(argv):
         help="Do not override footer_right numbering.",
     )
 
+    parser.add_argument(
+        "--source-module",
+        dest="source_module",
+        default=None,
+        help="Optional Python module path to import lore_cards from (e.g. scripts.some_lore_module).",
+    )
+
+    parser.add_argument(
+        "--source-file",
+        dest="source_file",
+        default=None,
+        help="Optional path to a .py file to load lore_cards from.",
+    )
+
     args = parser.parse_args(argv[1:])
 
     requested_names = args.names
-    selected_cards, missing = _select_lore_cards(lore_cards, requested_names)
 
-    lore_index_by_name = {c.get("name", "").casefold(): idx for idx, c in enumerate(lore_cards)}
+    # Support loading lore_cards from alternate module/file
+    cards_source = lore_cards
+    if args.source_module or args.source_file:
+        try:
+            if args.source_module:
+                mod = importlib.import_module(args.source_module)
+            else:
+                spec = importlib.util.spec_from_file_location("custom_lore_module", args.source_file)
+                if spec is None or spec.loader is None:
+                    print(f"Error: cannot load source file: {args.source_file}")
+                    return 3
+                mod = importlib.util.module_from_spec(spec)
+                spec.loader.exec_module(mod)
+
+            if hasattr(mod, "lore_cards"):
+                cards_source = getattr(mod, "lore_cards")
+            else:
+                print("Error: source does not define 'lore_cards'.")
+                return 3
+        except Exception as e:
+            print(f"Failed to import lore cards from source: {e}")
+            return 3
+
+    selected_cards, missing = _select_lore_cards(cards_source, requested_names)
+
+    lore_index_by_name = {c.get("name", "").casefold(): idx for idx, c in enumerate(cards_source)}
 
     if missing:
         print("Warning: unknown lore name(s): " + ", ".join(missing))

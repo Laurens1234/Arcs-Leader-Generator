@@ -252,6 +252,38 @@ You can adjust Vox text placement per-card in `scripts/voxCardsFormatted.py`:
 - `text_top_y` (default is controlled in `scripts/batchVoxCards.py`): smaller = title/body block starts higher.
 - `body_top_padding`: spacing between the title and the body (smaller = body starts closer to the title).
 
+### Load card definitions from a custom module or file
+
+Each generator supports loading card definitions from an alternate Python module or `.py` file. This makes it easy to keep multiple decks or experiment without editing the default formatted files.
+
+- Use `--source-module` to reference an importable module (dot path), or `--source-file` to point to a `.py` file path.
+- The module/file must expose the same symbol name each generator expects:
+    - `batchGuildCards.py` expects `guild_cards`
+    - `batchVoxCards.py` expects `vox_cards`
+    - `batchLoreCards.py` expects `lore_cards`
+    - `batchLeaderCards.py` expects `leaders`
+
+Examples:
+
+```bash
+# From an importable module (module must be on PYTHONPATH or relative package path):
+python scripts/batchGuildCards.py --source-module scripts.guild_deck_formatted
+
+# From a direct file path:
+python scripts/batchVoxCards.py --source-file scripts/guild_deck_formatted.py
+
+# Lore from a custom file and render at 3x:
+python scripts/batchLoreCards.py --source-file scripts/my_lore_set.py --render-scale 3
+
+# Leaders from a custom module, generate only a named leader:
+python scripts/batchLeaderCards.py --source-module scripts.custom_leaders MyLeaderName
+```
+
+Notes:
+
+- If the provided module/file doesn't define the expected variable (for example `guild_cards`), the generator will exit with an error.
+- These flags let you keep multiple formatted decks in `scripts/` (or elsewhere) and render any of them without editing the default formatted files.
+
 ### Run All Card Generators (One Command)
 
 Run all generators (Guild → Leader → Lore → Vox):

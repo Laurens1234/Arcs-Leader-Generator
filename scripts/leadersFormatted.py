@@ -1123,8 +1123,8 @@ leaders = [
     {
         "name": "Egoist",
         "abilities": (
-            "*Willful.* When you Pivot, you may take any action except those on your played card instead.\n"
-            "*Inflexible.* You can only Copy with cards of the lead suit."
+            "*Willful.* When you Pivot, take any action except those on your played card instead.\n"
+            "*Inflexible.* You can only Copy with cards of the lead suit, face up."
         ),
         "resources": ["Psionic", "Fuel"],
         "setup": {

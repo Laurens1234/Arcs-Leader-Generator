@@ -33,6 +33,29 @@ def main(argv: list[str]) -> int:
         help="Only generate the last N cards in each generator's formatted list.",
     )
     parser.add_argument(
+        "--source-module",
+        dest="source_module",
+        default=None,
+        help="Optional Python module path to pass to each generator (applies to all unless per-type override).",
+    )
+
+    parser.add_argument(
+        "--source-file",
+        dest="source_file",
+        default=None,
+        help="Optional path to a .py file to pass to each generator (applies to all unless per-type override).",
+    )
+
+    # Per-type overrides (optional)
+    parser.add_argument("--guild-source-module", dest="guild_source_module", default=None)
+    parser.add_argument("--guild-source-file", dest="guild_source_file", default=None)
+    parser.add_argument("--leader-source-module", dest="leader_source_module", default=None)
+    parser.add_argument("--leader-source-file", dest="leader_source_file", default=None)
+    parser.add_argument("--lore-source-module", dest="lore_source_module", default=None)
+    parser.add_argument("--lore-source-file", dest="lore_source_file", default=None)
+    parser.add_argument("--vox-source-module", dest="vox_source_module", default=None)
+    parser.add_argument("--vox-source-file", dest="vox_source_file", default=None)
+    parser.add_argument(
         "exclude",
         nargs="*",
         choices=[name for name, _ in generators],
@@ -58,6 +81,26 @@ def main(argv: list[str]) -> int:
         cmd = [sys.executable, script_path]
         if args.last is not None:
             cmd.append(f"--last={args.last}")
+        # Forward source-module/file flags, allowing per-type overrides
+        type_module = None
+        type_file = None
+        if name == "guild":
+            type_module = args.guild_source_module or args.source_module
+            type_file = args.guild_source_file or args.source_file
+        elif name == "leader":
+            type_module = args.leader_source_module or args.source_module
+            type_file = args.leader_source_file or args.source_file
+        elif name == "lore":
+            type_module = args.lore_source_module or args.source_module
+            type_file = args.lore_source_file or args.source_file
+        elif name == "vox":
+            type_module = args.vox_source_module or args.source_module
+            type_file = args.vox_source_file or args.source_file
+
+        if type_module:
+            cmd.append(f"--source-module={type_module}")
+        if type_file:
+            cmd.append(f"--source-file={type_file}")
         proc = subprocess.run(cmd, cwd=repo_root)
         if proc.returncode != 0:
             any_failures = True
