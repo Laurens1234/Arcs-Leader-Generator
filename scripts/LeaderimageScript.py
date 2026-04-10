@@ -534,12 +534,24 @@ def create_card(input_data):
         current_y = draw_rich_text(draw, line, body_font, italic_font, bold_font, bolditalic_font, text_x0, current_y, text_width, _s(22))
 
     # Final crop
+    # The base templates include a 3mm bleed on all sides (total size = card + 2*bleed).
+    # Crop the bleed away so the exported PNG matches the trimmed card size.
     def final_crop(image, bleed_mm=3, card_width_mm=70, card_height_mm=120):
         width, height = image.size
-        left = int((bleed_mm / card_width_mm) * width)
-        top = int((bleed_mm / card_height_mm) * height)
-        right = width - left
-        bottom = height - top
+
+        total_width_mm = card_width_mm + 2 * bleed_mm
+        total_height_mm = card_height_mm + 2 * bleed_mm
+
+        # Compute the trimmed pixel size via proportional scaling from the full-bleed canvas.
+        # Using round() avoids systematic undersizing from floor truncation.
+        target_w = int(round(width * (card_width_mm / total_width_mm)))
+        target_h = int(round(height * (card_height_mm / total_height_mm)))
+
+        # Center-crop; if odd pixels need to be removed, the extra pixel lands on right/bottom.
+        left = max(0, (width - target_w) // 2)
+        top = max(0, (height - target_h) // 2)
+        right = min(width, left + target_w)
+        bottom = min(height, top + target_h)
         return image.crop((left, top, right, bottom))
 
     combined_img = final_crop(combined_img)
