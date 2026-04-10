@@ -1,6 +1,6 @@
-#general advice: leaders need to have a one word noun as their name
-#both abilities are adjectives
-#1 negative and 1 possitive
+# General advice: leaders need to have a one word noun as their name.
+# Both abilities are adjectives.
+# 1 negative and 1 positive.
 leaders = [
     # Kaiju
     {
@@ -294,7 +294,7 @@ leaders = [
     {
         "name": "Gambler",
         "abilities": (
-            "*Cunning.* You may **pass** the initiative to any player, then guess a suit. If they have it, they must play it, and the card you play this round let's you take twice as many actions.\n"
+            "*Cunning.* You may **pass** the initiative to any player, then guess a suit. If they have it, they must play it, and the card you play this round lets you take twice as many actions.\n"
             "*Compulsive.* You must **pass** the initiative the first time you have it each chapter."
         ),
         "resources": ["Weapon", "Psionic"],
@@ -558,7 +558,7 @@ leaders = [
         "name": "Solian",
         "abilities": (
             "*Settled.* **Prelude:** You may move freely from planets (no free Catapult moves).\n"
-            "*Grounded.* When your ships **move** into an Rival-controlled gate, one of them takes a hit."
+            "*Grounded.* When your ships **move** into a Rival-controlled gate, one of them takes a hit."
         ),
         "resources": ["Relic", "Material"],
         "setup": {
@@ -605,7 +605,7 @@ leaders = [
         "name": "Trickster",
         "abilities": (
             "*Misdirecting.* When you **declare** **an** **ambition**, draw up to 2 cards from the bottom of the action card deck, then discard as many.\n"
-            "*Revealed.* When you  Copy or play an extra card, place it face-up."
+            "*Revealed.* When you Copy or play an extra card, place it face-up."
         ),
         "resources": ["Psionic", "Fuel"],
         "setup": {
@@ -774,7 +774,7 @@ leaders = [
         {
         "name": "Prophet",
         "abilities": (
-            "*Revelatory.* When you **declare** **an** **ambition**, you may **secure** Guild card in the Court discard pile which type matches the declared ambition.\n"
+            "*Revelatory.* When you **declare** **an** **ambition**, you may **secure** a Guild card in the Court discard pile which type matches the declared ambition.\n"
             "*Fatalistic.* You cannot seize the initiative."
         ),
         "resources": ["Psionic", "Material"],
@@ -887,7 +887,7 @@ leaders = [
     {
         "name": "Musician",
         "abilities": (
-            "*Inspiring.* To seize the iniative, you may give two resources they don't have to the player with the initiative.\n"
+            "*Inspiring.* To seize the initiative, you may give two resources they don't have to the player with the initiative.\n"
             "*Temperamental.* When you gain the initiative, damage 1 Loyal ship."
         ),
         "resources": ["Material", "Fuel"],
@@ -898,9 +898,9 @@ leaders = [
         },
         "body_font_size": 18
     },
-    # Ozymendias
+    # Ozymandias
     {
-        "name": "Ozymendias",
+        "name": "Ozymandias",
         "abilities": (
             "*Hubristic.* When you control all gates, **secure** the entire Court, returning any agents, then destroy all loyal ships in the gates.\n"
             "*Forgotten.* You cannot **influence** if you control no gate."
@@ -913,7 +913,6 @@ leaders = [
         },
         "body_font_size": 18
     },
-    # Collector
     {
         "name": "Collector",
         "abilities": (
@@ -944,9 +943,9 @@ leaders = [
         "zoom": 1.3,
         "boundary_shift": 0.4
     },
-    # Assasin
+    # Assassin
     {
-        "name": "Assasin",
+        "name": "Assassin",
         "abilities": (
             "*Lethal.* After you **influence**, if you have the most agents on a card, you destroy one Rival agent on it.\n"
             "*Bloodthirsty.* If a Rival has as many or more agents on a card than you, you can only **influence** those cards."
@@ -964,7 +963,7 @@ leaders = [
     {
         "name": "Witch",
         "abilities": (
-            "*Malefic.* When you **secure**, you may capture a Rival agent on adjacent card.\n"
+            "*Malefic.* When you **secure**, you may capture a Rival agent on an adjacent card.\n"
             "*Covenbound.* You cannot **secure** unless there is an agent on another card."
         ),
         "resources": ["Psionic", "Relic"],
@@ -994,7 +993,7 @@ leaders = [
     {
         "name": "Shaman",
         "abilities": (
-            "*Holostic.* When you **declare** **an** **ambition**, you may **repair** damaged ships you don't control.\n"
+            "*Holistic.* When you **declare** **an** **ambition**, you may **repair** damaged ships you don't control.\n"
             "*Disruptive.* You cannot **repair** ships you control."
         ),
         "resources": ["Relic", "Fuel"],
