@@ -179,7 +179,7 @@ leaders = [
         "abilities": (
             "*Symbiotic.* You may **build** in adjacent systems with no Rival pieces.\n"
             "*Fertile.* Gain 1 Material when you **build** a starport; gain 1 matching resource when you **build** a city.\n"
-            "*Sprouting.* When you **declare** **an** **ambition**, replace a building you control with a ship.\n"
+            "*Sprouting.* When you **declare** **an** **ambition**, replace any building you control with a ship.\n"
             "*Rooted.* You cannot **battle** in clusters where you have no buildings."
         ),
         "resources": ["Material", "Relic"],
