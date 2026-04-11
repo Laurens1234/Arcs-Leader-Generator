@@ -409,7 +409,7 @@ leaders = [
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "city"},
-            "C": {"ships": 3, "building": "None"}
+            "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 18
     },
