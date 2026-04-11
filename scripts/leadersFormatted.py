@@ -1193,7 +1193,20 @@ leaders = [
         },
         "body_font_size": 18
     },
-
+    # {
+    #     "name": "Pig",
+    #     "abilities": (
+    #         "*Gluttonous.* When you win an ambition, gain 2 matching resources or place 1 ship in a matching system.\n"
+    #         "*Ponderous.* When you take second place, you cannot Catapult move this turn."
+    #     ),
+    #     "resources": ["Relic", "Fuel"],
+    #     "setup": {
+    #         "A": {"ships": 3, "building": "city"},
+    #         "B": {"ships": 3, "building": "starport"},
+    #         "C": {"ships": 2, "building": "None"}
+    #     },
+    #     "body_font_size": 18
+    # },
     # you can ransack starports
     # # Librarian
     # {
