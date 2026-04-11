@@ -1182,8 +1182,8 @@ leaders = [
     {
         "name": "Champion",
         "abilities": (
-            "*Victorious.* When you win an ambition, place 3 ships in a matching system or gain 2 matching resources.\n"
-            "*Humbled.* When you get second place, discard all your resources matching that ambition."
+            "*Victorious.* When you win an ambition, place 3 ships in a matching system or gain 2 matching resources. When you win Tyrant, influence twice.\n"
+            "*Humbled.* When you get second place, discard all your resources matching that ambition. When you get second place in Tyrant, return 2 loyal agents from the Court."
         ),
         "resources": ["Relic", "Fuel"],
         "setup": {
