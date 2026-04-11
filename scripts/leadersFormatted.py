@@ -340,7 +340,7 @@ leaders = [
     {
         "name": "Weaver",
         "abilities": (
-            "*Interwoven.* When you use a pip to **secure**, you may influence an adjacent card.\n"
+            "*Interwoven.* When you **secure**, you may influence an adjacent card.\n"
             "*Tangled.* You must discard a resource to **influence** a card with only Rival agents on it."
         ),
         "resources": ["Relic", "Fuel"],
@@ -887,7 +887,7 @@ leaders = [
     {
         "name": "Musician",
         "abilities": (
-            "*Inspiring.* To seize the initiative, you may give two resources they don't have to the player with the initiative.\n"
+            "*Inspiring.* To seize the initiative, you may give two resources to the player with the initiative.\n"
             "*Temperamental.* When you gain the initiative, damage 1 Loyal ship."
         ),
         "resources": ["Material", "Fuel"],
@@ -1164,8 +1164,22 @@ leaders = [
         "body_font_size": 18
     },
 
+    {
+        "name": "Wayfinder",
+        "abilities": (
+            "*Bridging.* You treat systems with a loyal building as adjacent.\n"
+            "*Tethered.* When Catapult **moving**, stop after 2 moves."
+        ),
+        "resources": ["Psionic", "Fuel"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+
     # you can ransack starports
-    # you can move between loyal buildings
     # # Librarian
     # {
     #     "name": "Librarian",
