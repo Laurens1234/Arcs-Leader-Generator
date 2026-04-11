@@ -16,8 +16,8 @@ leaders = [
             "C": {"ships": 2, "building": "None"}
         },
         "body_font_size": 18,
-        "zoom": 1.15,
-        "boundary_shift": 0.12
+        "zoom": 1.00,
+        "boundary_shift": 0.00
     },
     # Shapeshifter
     {
@@ -405,7 +405,7 @@ leaders = [
             "*Transformative.* When you **declare** **an** **ambition**, discard 1 resource to gain 2 resources of different types other than the one you discarded.\n"
             "*Cautious.* You cannot spend your last resource."
         ),
-        "resources": ["Psionic", "Material"],
+        "resources": ["Psionic", "Relic"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "city"},
@@ -589,7 +589,7 @@ leaders = [
     {
         "name": "Terraformer",
         "abilities": (
-            "*Genesiacal.* **At** **the** **start** **of** **each** **chapter**, you may place a resource from the fullest supply on a planet with any loyal pieces to change its type. Also do this to a planet after you destroy a city on it.\n"
+            "*Genesiacal.* **At** **the** **start** **of** **each** **chapter**, place a resource from the fullest supply on a planet with any loyal pieces to change its type. Also do this to a planet after you destroy a city on it.\n"
             "*Codependent.* When you **tax**, you only gain resources from altered planets."
         ),
         "resources": ["Psionic", "Material"],
@@ -668,7 +668,7 @@ leaders = [
     },
     # Wheeler-dealer
     {
-        "name": "Wheeler-dealer",
+        "name": "Wheeler-Dealer",
         "abilities": (
             "*Devious.* When you **declare** **an** **ambition**, you may **Provoke** **Outrage** in a non-Outraged type to **clear** **Outrage** in a different type. Then, take and spend 1 resource from the cleared type’s supply.\n\n"
             "*Irate.* In **setup**, Provoke Relic or Psionic Outrage."
@@ -843,7 +843,7 @@ leaders = [
         "zoom": 1.25
     },
     {
-        "name": "Highroller",
+        "name": "High-Roller",
         "abilities": (
             "*Audacious.* After you roll dice in **battle**, you may damage 1 of your attacking ships to reroll **all** dice.\n"
             "*Feverish.* After you reroll dice in **battle**, **Provoke** **Outrage** in any resource."
@@ -1024,7 +1024,7 @@ leaders = [
         "name": "Despot",
         "abilities": (
             "*Autocratic.* When you **declare** **an** **ambition**, you may **tax** one city you control of each player.\n"
-            "*Merciless.* After **scoring**, destroy one Loyal ship in each system with a city."
+            "*Merciless.* After **scoring**, damage one Loyal ship in each system with a city."
         ),
         "resources": ["Fuel", "Relic"],
         "setup": {
