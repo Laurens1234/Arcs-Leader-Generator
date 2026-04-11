@@ -1178,6 +1178,21 @@ leaders = [
         },
         "body_font_size": 18
     },
+    
+    {
+        "name": "Champion",
+        "abilities": (
+            "*Victorious.* When you win an ambition, place 3 ships in a matching system or gain 2 matching resources.\n"
+            "*Humbled.* When you get second place, discard all your resources matching that ambition."
+        ),
+        "resources": ["Relic", "Fuel"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 3, "building": "None"}
+        },
+        "body_font_size": 18
+    },
 
     # you can ransack starports
     # # Librarian
