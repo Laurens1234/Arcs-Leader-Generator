@@ -1388,8 +1388,8 @@ leaders = [
     # {
     #     "name": "Pig",
     #     "abilities": (
-    #         "*Gluttonous.* When you win an ambition, gain 2 matching resources or place 1 ship in a matching system.\n"
-    #         "*Ponderous.* When you take second place, you cannot Catapult move this turn."
+    #         "*Gluttonous.* After you destroy a starport, provoke outrage and ransack the court like you destroyed a city.\n"
+    #         "*Ponderous.* When you desroy a city, do not provoke outrage or ransack the court."
     #     ),
     #     "resources": ["Relic", "Fuel"],
     #     "setup": {
@@ -1400,27 +1400,12 @@ leaders = [
     #     "body_font_size": 18
     # },
     # you can ransack starports
-    # # Librarian
-    # {
-    #     "name": "Librarian",
-    #     "abilities": (
-    #         "*Well-read.* some lore ability.\n"
-    #         "*Overburdened.* "
-    #     ),
-    #     "resources": ["Relic", "Psionic"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "city"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
 
     # # Dissector
     # {
     #     "name": "Dissector",
     #     "abilities": (
-    #         "*.* You may discard a resource to change to take any action with a pip.\n"
+    #         "*.* You may discard a resource to change to take any other action with a pip.\n"
     #         "*.* after scoring discard all resources that dont maych any icons on card you have."
     #     ),
     #     "resources": ["Material", "Material"],
@@ -1451,7 +1436,7 @@ leaders = [
     # {
     #     "name": "Hydra",
     #     "abilities": (
-    #         "*Regenerative.* After **any** **battle**, if you lost 2+ ships, you may place 1 fresh ship at a Loyal starport (or a gate you control if none).\n"
+    #         "*Regenerative.* After **any** **battle**, if you lost 2+ ships, you may place 1 fresh ship from a rivals trophy box at a Loyal starport (or a gate you control if none).\n"
     #         "*Unwieldy.* You cannot Catapult **move** with more than 3 ships in a single move."
     #     ),
     #     "resources": [],
@@ -1511,8 +1496,8 @@ leaders = [
     # {
     #     "name": "Messiah",
     #     "abilities": (
-    #         "*Redemptive.* When you **build** a city in a system with any damaged Rival ships, you may replace all those damaged Rival ships with Loyal fresh ships.\n"
-    #         "*Reckoning.* In **scoring**, if you win no ambitions, destroy all your damaged ships."
+    #         "*Redemptive.* When you **build** a city in a system with any damaged ships, you may replace all those damaged repair all damaged ships and replace Rival ones witb Loyal fresh ones.\n"
+    #         "*Reckoning.* In **scoring**, if you win no ambitions, return all your buildings from the map."
     #     ),
     #     "resources": ["Relic", "Weapon"],
     #     "setup": {
@@ -1526,7 +1511,7 @@ leaders = [
     # {
     #     "name": "Abomination",
     #     "abilities": (
-    #         "*Ravenous.* When you play a card, you may discard a card to take twice as many actions with your played card.\n"
+    #         "*Ravenous.* When you play a card, you may discard an action card to take twice as many actions with your played card.\n"
     #         "*Revealed.* When a suit is led, reveal all your matching cards."
     #     ),
     #     "resources": ["Psionic", "Weapon"],
@@ -1541,8 +1526,8 @@ leaders = [
     # {
     #     "name": "Crusader",
     #     "abilities": (
-    #         "*Zealous.* When you destroy a building, **secure** a matching card from the Court.\n"
-    #         "*Dogmatic.* You cannot **influence** a card with no agents if a Rival can secure a card with any of your Loyal agents.."
+    #         "*Zealous.* When you destroy a building, also **secure** a matching card matching its sytem from the Court with no Rival agents.\n"
+    #         "*Dogmatic.* You cannot **influence** a card with no agents if a Rival can secure a card with any of your Loyal agents."
     #     ),
     #     "resources": ["Weapon", "Material"],
     #     "setup": {
@@ -1552,37 +1537,19 @@ leaders = [
     #     },
     #     "body_font_size": 18
     # },
-    # # Djinn
-    # {
-    #     "name": "Djinn",
-    #     "abilities": (
-    #         "*Wishful.* At the start of your Prelude, name a resource type. Until the end of your turn, you may spend resources only as that type.\n"
-    #         "*Bound.* When you have a resource type outraged, you **cannot** spend it."
-    #     ),
-    #     "resources": ["Relic", "Psionic"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
+# Ignore your hits to move after
 
-    # # Beacon
-    # {
-    #     "name": "Beacon",
-    #     "abilities": (
-    #         "*Guiding.* When you **move** into a gate, you may place a beacon there. Beacons allow any player to Catapult **move** through that gate.\n"
-    #         "*Radiant.* Before scoring, you may discard a beacon to gain 2 resources."
-    #     ),
-    #     "resources": ["Fuel", "Material"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "starport"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
-    # Fabricator
+# When you tax, you may tax all other cities in its system. When you build you may build at all other Starports in its sytem.
+
+# You may place any amount of resources on this leader card. They each have a raid cost of 1 key. 
+# When you declare an ambition, gain 1 resource of each type on your leader card.
+# You cannot tax loyal cities.
+
+# When defending in battle, at the start, you may give 2 resources or a guild card to the attacker to immediately end the battle.
+
+#After your tax a rival city gain a different extra resource.
+
+#When you declare an ambition you may ask a rival for a suit of card, if they have it they must give a card of it to you. Then give them 1 card.
+
 
 ]
