@@ -441,7 +441,18 @@ def create_lore_card(input_data):
     body_text = input_data.get('body', '')
     current_y = line_y + _s(18)
     for line in wrap_text(body_text, body_font, italic_font, bold_font, bolditalic_font, text_width):
-        if not line.strip():
+        # Support explicit vertical-space token in the body: "\eN" or "\e N"
+        # Example: "\e6" adds _s(6) pixels of vertical space.
+        stripped = line.strip()
+        if stripped.startswith("\\e"):
+            try:
+                rest = stripped[2:].strip()
+                n = int(rest)
+                current_y += _s(n)
+                continue
+            except Exception:
+                pass
+        if not stripped:
             current_y += _s(10)
             continue
         current_y = draw_rich_text(draw, line, body_font, italic_font, bold_font, bolditalic_font, text_x0, current_y, text_width, _s(22))

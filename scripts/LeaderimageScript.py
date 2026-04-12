@@ -526,12 +526,40 @@ def create_card(input_data):
 
         return current_y + line_height
 
-    current_y = line_y + _s(10)
+    current_y = line_y + _s(8)
+    first_body_line = True
     for line in wrap_text(body_text, body_font, italic_font, bold_font, bolditalic_font, text_width):
-        if not line.strip():
+        # Support explicit vertical-space token in the body: "\eN" or "\e N"
+        # Example: "\e6" adds _s(6) pixels of vertical space.
+        stripped = line.strip()
+        if stripped.startswith("\\e"):
+            try:
+                rest = stripped[2:].strip()
+                n = int(rest)
+                current_y += _s(n)
+                continue
+            except Exception:
+                pass
+        if not stripped:
             current_y += _s(10)
             continue
+
+        # If the line begins with an italic token whose text ends with a period,
+        # add a bit more vertical spacing to separate it from the previous line.
+        # Do not add this extra spacing if this is the first non-empty body line on the card.
+        try:
+            if not first_body_line:
+                first_word = line.strip().split()[0]
+                kind, payload, trailing, font_to_use = _parse_rich_token(
+                    first_word, body_font, italic_font, bold_font, bolditalic_font
+                )
+                if font_to_use is italic_font and isinstance(payload, str) and payload.endswith('.'):
+                    current_y += _s(4)
+        except Exception:
+            pass
+
         current_y = draw_rich_text(draw, line, body_font, italic_font, bold_font, bolditalic_font, text_x0, current_y, text_width, _s(22))
+        first_body_line = False
 
     # Final crop
     # The base templates include a 3mm bleed on all sides (total size = card + 2*bleed).
