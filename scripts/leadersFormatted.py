@@ -1193,189 +1193,11 @@ leaders = [
         },
         "body_font_size": 18
     },
-    
-    # Reroll-focused leaders
     {
-        "name": "",
+        "name": "Tribune",
         "abilities": (
-            "*.* After you roll dice in battle, you may discard 1 resource to reroll any number of your dice.\n"
-            "*.* ."
-        ),
-        "resources": ["Fuel", "Relic"],
-        "setup": {
-            "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "starport"},
-            "C": {"ships": 2, "building": "None"}
-        },
-        "body_font_size": 18
-    },
-    {
-        "name": "Forgemaster",
-        "abilities": (
-            "*.* After you roll Assault or Raid dice in **battle**, you may reroll dice one at a time. For each rerolled die that has a self hit, immediately damage one of your ships. You may stop only after rolling a hit or key.\n"
-            "*Overheated."
-        ),
-        "resources": ["Weapon", "Relic"],
-        "setup": {
-            "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "starport"},
-            "C": {"ships": 2, "building": "None"}
-        },
-        "body_font_size": 18
-    },
-    {
-        "name": "Tactician",
-        "abilities": (
-            "*Calculated.* When defending in **battle**, before the attacker collects dice, you may roll a die, resolve like attacking in battle.\n"
-            "*Ponderous.* ."
-        ),
-        "resources": ["Material", "Weapon"],
-        "setup": {
-            "A": {"ships": 3, "building": "starport"},
-            "B": {"ships": 3, "building": "None"},
-            "C": {"ships": 2, "building": "None"}
-        },
-        "body_font_size": 18
-    },
-    {
-        "name": "Oracle",
-        "abilities": (
-            "*Prescient.* In **battle**, you may reroll any number of skirmish dice in systems matching declared ambitions. You may reroll in gates if all ambitions markers have been placed\n"
-            "*Unnerved.* ."
-        ),
-        "resources": ["Psionic", "Fuel"],
-        "setup": {
-            "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "starport"},
-            "C": {"ships": 2, "building": "None"}
-        },
-        "body_font_size": 18
-    },
-    # Dice-mechanic leaders (one per requested mechanic)
-    {
-        "name": "Setmaker",
-        "abilities": (       
-            "*Unique.* If your roll contains no duplicate faces (all dice different), gain 1 Material.\n"
-            "*Solo.* If some face appears exactly once and no face appears more than once, gain 1 Fuel.\n"
-            "*Paired.* If some face appears exactly 2 times (a pair), gain 1 Material and 1 Fuel.\n"
-            "*Tripled.* If some face appears exactly 3 times, gain 2 Material.\n"
-            "*Quadrupled.* If some face appears exactly 4 times, gain 1 Relic.\n"
-            "*Quintupled.* If some face appears exactly 5 times, gain 1 Relic and 1 Weapon.\n"
-            "*Sextupled.* If some face appears exactly 6 times, gain 2 Relics.\n"
-        
-            "*Downside.* You cannot roll Assault or Raid."
-        ),
-        "resources": ["Material", "Fuel"],
-        "setup": {
-            "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "starport"},
-            "C": {"ships": 2, "building": "None"}
-        },
-        "body_font_size": 18
-    },
-    {
-        "name": "Volley",
-        "abilities": (
-            "*Concentrated.* When resolving non-battle or battle dice, you may roll an extra pool of up to 6 dice and count each die that meets or beats 4 as a success. For each success, gain 1 hit (in battle) or 1 Weapon (outside battle).\n"
-            "*Depleting.* At the end of each chapter, discard 1 Material."
-        ),
-        "resources": ["Weapon", "Fuel"],
-        "setup": {
-            "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "starport"},
-            "C": {"ships": 2, "building": "None"}
-        },
-        "body_font_size": 18
-    },
-    {
-        "name": "Challenger",
-        "abilities": (
-            "*Challenging.* When attacking in battle, you may issue a single opposed roll against one defending ship: roll one die, the defender rolls one die; if yours is higher, add 1 hit; if lower, suffer 1 hit to an attacking ship. Ties do nothing.\n"
-            "*Rash.* When you declare an ambition, discard 1 resource."
-        ),
-        "resources": ["Weapon", "Relic"],
-        "setup": {
-            "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "starport"},
-            "C": {"ships": 2, "building": "None"}
-        },
-        "body_font_size": 18
-    },
-    {
-        "name": "Drafter",
-        "abilities": (
-            "*Drafting.* When any player rolls a non-battle dice pool, create a draft pool by revealing all dice. Starting with you, players may take one die from that pool in turn order. When you take a die from the draft pool, gain 1 Material.\n"
-            "*Greedy.* At the end of your Prelude, discard 1 resource."
-        ),
-        "resources": ["Material", "Fuel"],
-        "setup": {
-            "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "starport"},
-            "C": {"ships": 2, "building": "None"}
-        },
-        "body_font_size": 18
-    },
-    {
-        "name": "Builder",
-        "abilities": (
-            "*Constructive.* When you roll dice outside battle, you may place one rolled die onto any planet you control as a worker. Values 1-2: gain 1 Material; 3-4: build (place a building token); 5-6: repair or move a ship. Remove the worker at round end.\n"
-            "*Grounded.* You cannot Catapult move more than once per round."
-        ),
-        "resources": ["Material", "Relic"],
-        "setup": {
-            "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "starport"},
-            "C": {"ships": 2, "building": "None"}
-        },
-        "body_font_size": 18
-    },
-    {
-        "name": "Gambit",
-        "abilities": (
-            "*Prepared.* You have one Gambit token each chapter. Spend it to reroll any single die you rolled (battle or otherwise) and take the new result. Regain the token when you score.\n"
-            "*Tempting.* At the end of your Prelude, discard 1 resource."
-        ),
-        "resources": ["Weapon", "Material"],
-        "setup": {
-            "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "starport"},
-            "C": {"ships": 2, "building": "None"}
-        },
-        "body_font_size": 18
-    },
-    {
-        "name": "Scout",
-        "abilities": (
-            "*Progressive.* At the start of each chapter, roll a die to advance along a short progress track (1-6). When you reach 10 progress, claim the reward: gain 2 Fuel and repair 1 Loyal ship. Progress resets after reward.\n"
-            "*Restless.* At the end of each chapter, remove 1 progress."
-        ),
-        "resources": ["Fuel", "Material"],
-        "setup": {
-            "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "starport"},
-            "C": {"ships": 2, "building": "None"}
-        },
-        "body_font_size": 18
-    },
-    {
-        "name": "Deceiver",
-        "abilities": (
-            "*Deceptive.* When you roll dice for influence or other hidden-resolution effects, you may keep one die face hidden and state a claim about it. If an opponent challenges and is wrong, they lose 1 resource of their choice; if they're right, you lose 1 resource.\n"
-            "*Exposed.* When you secure a card, discard 1 resource."
-        ),
-        "resources": ["Psionic", "Relic"],
-        "setup": {
-            "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "starport"},
-            "C": {"ships": 2, "building": "None"}
-        },
-        "body_font_size": 18
-    },
-    {
-        "name": "Iconographer",
-        "abilities": (
-            "*Iconic.* One die you roll each battle may be treated as a custom icon die: treat any 6 on that die as a special symbol. When that die shows a 6, trigger: gain 1 Relic or convert one hit into an intercept.\n"
-            "*Unstable.* At the start of each chapter, discard 1 resource."
+            "*Endorsed.* After you destroy a starport, ransack the Court like you destroyed a city.\n"
+            "*Sanctioned.* When you destroy a city, don't ransack the Court."
         ),
         "resources": ["Relic", "Weapon"],
         "setup": {
@@ -1385,52 +1207,37 @@ leaders = [
         },
         "body_font_size": 18
     },
-    # {
-    #     "name": "Pig",
-    #     "abilities": (
-    #         "*Gluttonous.* After you destroy a starport, provoke outrage and ransack the court like you destroyed a city.\n"
-    #         "*Ponderous.* When you desroy a city, do not provoke outrage or ransack the court."
-    #     ),
-    #     "resources": ["Relic", "Fuel"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
-    # you can ransack starports
+    # Dissector
+    {
+        "name": "Dissector",
+        "abilities": (
+            "*Incisive.* When you take an action, you may return 1 captive or scrap 1 agent from your supply to take any different action instead.\n",
+            "*Sadistic.* Before **scoring**, scrap 2 agents from your supply, return 2 captives, or scrap and return 1."
+        ),
+        "resources": ["Psionic", "Material"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
 
-    # # Dissector
-    # {
-    #     "name": "Dissector",
-    #     "abilities": (
-    #         "*.* You may discard a resource to change to take any other action with a pip.\n"
-    #         "*.* after scoring discard all resources that dont maych any icons on card you have."
-    #     ),
-    #     "resources": ["Material", "Material"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
-
-    # # Tactician
-    # {
-    #     "name": "Tactician",
-    #     "abilities": (
-    #         "*Calculated.* Once per turn, after you **influence** a card, you may move 1 of your agents from that card to an adjacent card."
-    #     ),
-    #     "resources": [],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
+    # Tactician
+    {
+        "name": "Tactician",
+        "abilities": (
+            "*Calculated.* After you **influence** a card, you may move 1 of your agents on a card to an different card.\n"
+             "*Wearied.* In *cleanup*, return all your agents on 1 Court card."
+        ), 
+        "resources": ["Psionic", "Fuel"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
 
     # # Hydra
     # {
@@ -1537,19 +1344,291 @@ leaders = [
     #     },
     #     "body_font_size": 18
     # },
-# Ignore your hits to move after
+    # Phantom
+    # {
+    #     "name": "Phantom",
+    #     "abilities": (
+    #         "*Phasing.* You ignore hits to move after; you may move as if undamaged after taking hits this turn.\n"
+    #         "*Unmoored.* At the end of the chapter, scrap 1 Loyal ship you control."
+    #     ),
+    #     "resources": ["Psionic", "Relic"],
+    #     "setup": {
+    #         "A": {"ships": 3, "building": "city"},
+    #         "B": {"ships": 3, "building": "starport"},
+    #         "C": {"ships": 2, "building": "None"}
+    #     },
+    #     "body_font_size": 18
+    # },
 
-# When you tax, you may tax all other cities in its system. When you build you may build at all other Starports in its sytem.
+    # # Collector
+    # {
+    #     "name": "Collector",
+    #     "abilities": (
+    #         "*Imperious.* When you **tax** a city you control, you may also **tax** all other cities in its system. When you **build**, you may **build** at all other starports in that system.\n"
+    #         "*Possessive.* You cannot **tax** Loyal cities."
+    #     ),
+    #     "resources": ["Material", "Weapon"],
+    #     "setup": {
+    #         "A": {"ships": 3, "building": "city"},
+    #         "B": {"ships": 3, "building": "starport"},
+    #         "C": {"ships": 2, "building": "None"}
+    #     },
+    #     "body_font_size": 18
+    # },
 
-# You may place any amount of resources on this leader card. They each have a raid cost of 1 key. 
-# When you declare an ambition, gain 1 resource of each type on your leader card.
-# You cannot tax loyal cities.
+    # # Hoarder
+    # {
+    #     "name": "Hoarder",
+    #     "abilities": (
+    #         "*Storing.* You may place any number of resources on this leader card. Each resource placed here has a raid cost of {icon:dice_key_black}1.\n"
+    #         "*Static.* You cannot move resources from this card except when they are removed by a raid."
+    #     ),
+    #     "resources": ["Fuel", "Material"],
+    #     "setup": {
+    #         "A": {"ships": 3, "building": "city"},
+    #         "B": {"ships": 3, "building": "starport"},
+    #         "C": {"ships": 2, "building": "None"}
+    #     },
+    #     "body_font_size": 18
+    # },
 
-# When defending in battle, at the start, you may give 2 resources or a guild card to the attacker to immediately end the battle.
+    # # Defender
+    # {
+    #     "name": "Defender",
+    #     "abilities": (
+    #         "*Parley.* At the start of a **battle** in which you are defending, you may give 2 resources or a Guild card to the attacker to immediately end the battle.\n"
+    #         "*Soft.* If you use Parley, you cannot **tax** until the end of your next turn."
+    #     ),
+    #     "resources": ["Weapon", "Psionic"],
+    #     "setup": {
+    #         "A": {"ships": 3, "building": "city"},
+    #         "B": {"ships": 3, "building": "starport"},
+    #         "C": {"ships": 2, "building": "None"}
+    #     },
+    #     "body_font_size": 18
+    # },
 
-#After your tax a rival city gain a different extra resource.
+    # # Imposer
+    # {
+    #     "name": "Imposer",
+    #     "abilities": (
+    #         "*Redistributive.* After you **tax** a city you control, one rival city in the same system gains a different extra resource of your choice.\n"
+    #         "*Short-sighted.* When you **tax** a city that is Loyal, gain 1 less resource."
+    #     ),
+    #     "resources": ["Material", "Relic"],
+    #     "setup": {
+    #         "A": {"ships": 3, "building": "city"},
+    #         "B": {"ships": 3, "building": "starport"},
+    #         "C": {"ships": 2, "building": "None"}
+    #     },
+    #     "body_font_size": 18
+    # },
 
-#When you declare an ambition you may ask a rival for a suit of card, if they have it they must give a card of it to you. Then give them 1 card.
-
+    # # Solicitor
+    # {
+    #     "name": "Solicitor",
+    #     "abilities": (
+    #         "*Demanding.* When you **declare** **an** **ambition**, you may ask a Rival for a suit. If they have a card of that suit they must give one to you.\n"
+    #         "*Reciprocal.* After taking that card, give that Rival 1 card."
+    #     ),
+    #     "resources": ["Psionic", "Weapon"],
+    #     "setup": {
+    #         "A": {"ships": 3, "building": "city"},
+    #         "B": {"ships": 3, "building": "starport"},
+    #         "C": {"ships": 2, "building": "None"}
+    #     },
+    #     "body_font_size": 18
+    # }
+    # Reroll-focused leaders
+    # {
+    #     "name": "",
+    #     "abilities": (
+    #         "*.* After you roll dice in battle, you may discard 1 resource to reroll any number of your dice.\n"
+    #         "*.* ."
+    #     ),
+    #     "resources": ["Fuel", "Relic"],
+    #     "setup": {
+    #         "A": {"ships": 3, "building": "city"},
+    #         "B": {"ships": 3, "building": "starport"},
+    #         "C": {"ships": 2, "building": "None"}
+    #     },
+    #     "body_font_size": 18
+    # },
+    # {
+    #     "name": "Forgemaster",
+    #     "abilities": (
+    #         "*.* After you roll Assault or Raid dice in **battle**, you may reroll dice one at a time. For each rerolled die that has a self hit, immediately damage one of your ships. You may stop only after rolling a hit or key.\n"
+    #         "*Overheated."
+    #     ),
+    #     "resources": ["Weapon", "Relic"],
+    #     "setup": {
+    #         "A": {"ships": 3, "building": "city"},
+    #         "B": {"ships": 3, "building": "starport"},
+    #         "C": {"ships": 2, "building": "None"}
+    #     },
+    #     "body_font_size": 18
+    # },
+    # {
+    #     "name": "Tactician",
+    #     "abilities": (
+    #         "*Calculated.* When defending in **battle**, before the attacker collects dice, you may roll a die, resolve like attacking in battle.\n"
+    #         "*Ponderous.* ."
+    #     ),
+    #     "resources": ["Material", "Weapon"],
+    #     "setup": {
+    #         "A": {"ships": 3, "building": "starport"},
+    #         "B": {"ships": 3, "building": "None"},
+    #         "C": {"ships": 2, "building": "None"}
+    #     },
+    #     "body_font_size": 18
+    # },
+    # {
+    #     "name": "Oracle",
+    #     "abilities": (
+    #         "*Prescient.* In **battle**, you may reroll any number of skirmish dice in systems matching declared ambitions. You may reroll in gates if all ambitions markers have been placed\n"
+    #         "*Unnerved.* ."
+    #     ),
+    #     "resources": ["Psionic", "Fuel"],
+    #     "setup": {
+    #         "A": {"ships": 3, "building": "city"},
+    #         "B": {"ships": 3, "building": "starport"},
+    #         "C": {"ships": 2, "building": "None"}
+    #     },
+    #     "body_font_size": 18
+    # },
+    # # Dice-mechanic leaders (one per requested mechanic)
+    # {
+    #     "name": "Setmaker",
+    #     "abilities": (       
+    #         "*Unique.* If your roll contains no duplicate faces (all dice different), gain 1 Material.\n"
+    #         "*Solo.* If some face appears exactly once and no face appears more than once, gain 1 Fuel.\n"
+    #         "*Paired.* If some face appears exactly 2 times (a pair), gain 1 Material and 1 Fuel.\n"
+    #         "*Tripled.* If some face appears exactly 3 times, gain 2 Material.\n"
+    #         "*Quadrupled.* If some face appears exactly 4 times, gain 1 Relic.\n"
+    #         "*Quintupled.* If some face appears exactly 5 times, gain 1 Relic and 1 Weapon.\n"
+    #         "*Sextupled.* If some face appears exactly 6 times, gain 2 Relics.\n"
+        
+    #         "*Downside.* You cannot roll Assault or Raid."
+    #     ),
+    #     "resources": ["Material", "Fuel"],
+    #     "setup": {
+    #         "A": {"ships": 3, "building": "city"},
+    #         "B": {"ships": 3, "building": "starport"},
+    #         "C": {"ships": 2, "building": "None"}
+    #     },
+    #     "body_font_size": 18
+    # },
+    # {
+    #     "name": "Volley",
+    #     "abilities": (
+    #         "*Concentrated.* When resolving non-battle or battle dice, you may roll an extra pool of up to 6 dice and count each die that meets or beats 4 as a success. For each success, gain 1 hit (in battle) or 1 Weapon (outside battle).\n"
+    #         "*Depleting.* At the end of each chapter, discard 1 Material."
+    #     ),
+    #     "resources": ["Weapon", "Fuel"],
+    #     "setup": {
+    #         "A": {"ships": 3, "building": "city"},
+    #         "B": {"ships": 3, "building": "starport"},
+    #         "C": {"ships": 2, "building": "None"}
+    #     },
+    #     "body_font_size": 18
+    # },
+    # {
+    #     "name": "Challenger",
+    #     "abilities": (
+    #         "*Challenging.* When attacking in battle, you may issue a single opposed roll against one defending ship: roll one die, the defender rolls one die; if yours is higher, add 1 hit; if lower, suffer 1 hit to an attacking ship. Ties do nothing.\n"
+    #         "*Rash.* When you declare an ambition, discard 1 resource."
+    #     ),
+    #     "resources": ["Weapon", "Relic"],
+    #     "setup": {
+    #         "A": {"ships": 3, "building": "city"},
+    #         "B": {"ships": 3, "building": "starport"},
+    #         "C": {"ships": 2, "building": "None"}
+    #     },
+    #     "body_font_size": 18
+    # },
+    # {
+    #     "name": "Drafter",
+    #     "abilities": (
+    #         "*Drafting.* When any player rolls a non-battle dice pool, create a draft pool by revealing all dice. Starting with you, players may take one die from that pool in turn order. When you take a die from the draft pool, gain 1 Material.\n"
+    #         "*Greedy.* At the end of your Prelude, discard 1 resource."
+    #     ),
+    #     "resources": ["Material", "Fuel"],
+    #     "setup": {
+    #         "A": {"ships": 3, "building": "city"},
+    #         "B": {"ships": 3, "building": "starport"},
+    #         "C": {"ships": 2, "building": "None"}
+    #     },
+    #     "body_font_size": 18
+    # },
+    # {
+    #     "name": "Builder",
+    #     "abilities": (
+    #         "*Constructive.* When you roll dice outside battle, you may place one rolled die onto any planet you control as a worker. Values 1-2: gain 1 Material; 3-4: build (place a building token); 5-6: repair or move a ship. Remove the worker at round end.\n"
+    #         "*Grounded.* You cannot Catapult move more than once per round."
+    #     ),
+    #     "resources": ["Material", "Relic"],
+    #     "setup": {
+    #         "A": {"ships": 3, "building": "city"},
+    #         "B": {"ships": 3, "building": "starport"},
+    #         "C": {"ships": 2, "building": "None"}
+    #     },
+    #     "body_font_size": 18
+    # },
+    # {
+    #     "name": "Gambit",
+    #     "abilities": (
+    #         "*Prepared.* You have one Gambit token each chapter. Spend it to reroll any single die you rolled (battle or otherwise) and take the new result. Regain the token when you score.\n"
+    #         "*Tempting.* At the end of your Prelude, discard 1 resource."
+    #     ),
+    #     "resources": ["Weapon", "Material"],
+    #     "setup": {
+    #         "A": {"ships": 3, "building": "city"},
+    #         "B": {"ships": 3, "building": "starport"},
+    #         "C": {"ships": 2, "building": "None"}
+    #     },
+    #     "body_font_size": 18
+    # },
+    # {
+    #     "name": "Scout",
+    #     "abilities": (
+    #         "*Progressive.* At the start of each chapter, roll a die to advance along a short progress track (1-6). When you reach 10 progress, claim the reward: gain 2 Fuel and repair 1 Loyal ship. Progress resets after reward.\n"
+    #         "*Restless.* At the end of each chapter, remove 1 progress."
+    #     ),
+    #     "resources": ["Fuel", "Material"],
+    #     "setup": {
+    #         "A": {"ships": 3, "building": "city"},
+    #         "B": {"ships": 3, "building": "starport"},
+    #         "C": {"ships": 2, "building": "None"}
+    #     },
+    #     "body_font_size": 18
+    # },
+    # {
+    #     "name": "Deceiver",
+    #     "abilities": (
+    #         "*Deceptive.* When you roll dice for influence or other hidden-resolution effects, you may keep one die face hidden and state a claim about it. If an opponent challenges and is wrong, they lose 1 resource of their choice; if they're right, you lose 1 resource.\n"
+    #         "*Exposed.* When you secure a card, discard 1 resource."
+    #     ),
+    #     "resources": ["Psionic", "Relic"],
+    #     "setup": {
+    #         "A": {"ships": 3, "building": "city"},
+    #         "B": {"ships": 3, "building": "starport"},
+    #         "C": {"ships": 2, "building": "None"}
+    #     },
+    #     "body_font_size": 18
+    # },
+    # {
+    #     "name": "Iconographer",
+    #     "abilities": (
+    #         "*Iconic.* One die you roll each battle may be treated as a custom icon die: treat any 6 on that die as a special symbol. When that die shows a 6, trigger: gain 1 Relic or convert one hit into an intercept.\n"
+    #         "*Unstable.* At the start of each chapter, discard 1 resource."
+    #     ),
+    #     "resources": ["Relic", "Weapon"],
+    #     "setup": {
+    #         "A": {"ships": 3, "building": "city"},
+    #         "B": {"ships": 3, "building": "starport"},
+    #         "C": {"ships": 2, "building": "None"}
+    #     },
+    #     "body_font_size": 18
+    # },
 
 ]
