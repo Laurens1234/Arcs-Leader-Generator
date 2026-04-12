@@ -566,6 +566,20 @@ def create_guild_card(input_data):
     os.makedirs(result_path, exist_ok=True)
 
     final_img = final_crop(base_img)
+
+    # Ensure final output matches desired card dimensions.
+    # Target logical size is 744x1039 at render_scale=2. Scale proportionally for other render_scale values.
+    try:
+        target_base_w = 744
+        target_base_h = 1039
+        target_w = max(1, int(round(target_base_w * (render_scale / 2.0))))
+        target_h = max(1, int(round(target_base_h * (render_scale / 2.0))))
+        if final_img.size != (target_w, target_h):
+            final_img = final_img.resize((target_w, target_h), Image.Resampling.LANCZOS)
+    except Exception:
+        # If anything goes wrong, fall back to saving the cropped image as-is.
+        pass
+
     final_img.save(output_image_path, dpi=_DEFAULT_OUTPUT_DPI)
 
     print(f"Guild card saved at {output_image_path}")

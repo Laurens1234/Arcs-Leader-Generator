@@ -670,7 +670,7 @@ leaders = [
     {
         "name": "Wheeler-Dealer",
         "abilities": (
-            "*Devious.* When you **declare** **an** **ambition**, you may **Provoke** **Outrage** in a non-Outraged type to **clear** **Outrage** in a different type. Then, take and spend 1 resource from the cleared type’s supply.\n\n"
+            "*Devious.* When you **declare** **an** **ambition**, you may **Provoke** **Outrage** in a non-Outraged type to **clear** **Outrage** in a different type. Then, take and spend 1 resource from the cleared type’s supply.\n"
             "*Irate.* In **setup**, Provoke Relic or Psionic Outrage."
         ),
         "resources": ["Psionic", "Relic"],
