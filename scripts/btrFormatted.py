@@ -4,6 +4,7 @@ leaders = [
         "name": "God's Hand",
         "abilities": (
             "*Faithful* *Reach.* Before dealing action cards, mix in the 6 Faithful Action cards (FL1-6) and take Champion of the Faith title (F7).\n"
+            "{vspace:5}\n"
             "*An* *Era* *of* *Heresy.* When any player wins Empath, they take Champion of the Faith title."
         ),
         "resources": ["Psionic", "Psionic"],
@@ -35,6 +36,7 @@ leaders = [
         "name": "Scavenger",
         "abilities": (
             "**Scavenge** **(Tax):** Damage a fresh rival ship in a system you control. Then gain a resource matching that system.\n"
+            "{vspace:5}\n"
             "*Broken* *Reach.* In **setup**, all players Provoke Material Outrage."
         ),
         "resources": ["Material", "Fuel"],

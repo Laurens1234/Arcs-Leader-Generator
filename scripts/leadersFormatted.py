@@ -1251,7 +1251,7 @@ leaders = [
         },
         "body_font_size": 18
     },
-    # Dice-mechanic leaders (one per mechanic)
+    # Dice-mechanic leaders (one per requested mechanic)
     {
         "name": "Setmaker",
         "abilities": (       
@@ -1584,4 +1584,5 @@ leaders = [
     #     "body_font_size": 18
     # },
     # Fabricator
+
 ]

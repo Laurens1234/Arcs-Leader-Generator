@@ -17,7 +17,6 @@ Website: https://arcs-card-generator.streamlit.app/
    git clone https://github.com/your-username/Arcs-Leader-Generator.git
    ```
 
-2. Install dependencies:
 
    ```bash
    pip install Pillow
@@ -323,6 +322,11 @@ For both leader and lore cards, you can format text by surrounding words with as
 * `*italic*` → *italic*
 * `**bold**` → **bold**
 * `***both***` → ***bold italic***
+
+Explicit vertical space
+
+- Insert a standalone token `{vspace:N}\n` on its own line inside a card `body` to add N pixels of vertical space (scaled by the card's `render_scale`). Example: `{vspace:6}\n` adds `_s(6)` pixels of extra vertical gap. The token must occupy the line by itself (leading spaces allowed). This is useful for fine-tuning text layout when a manual break is needed.
+
 
 ### Inline Icons
 
