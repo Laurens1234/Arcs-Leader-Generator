@@ -1308,8 +1308,8 @@ leaders = [
     {
         "name": "Abomination",
         "abilities": (
-            "*.* When you play a card, you may discard an action card to take twice as many actions with your played card.\n"
-            "*.* When a suit is led, reveal all your matching cards."
+            "*Frenzied.* When you play a card, you may discard an action card to take twice as many actions with your played card.\n"
+            "*Possessed.* When a suit is led, reveal a matching card if you have one."
         ),
         "resources": ["Psionic", "Weapon"],
         "setup": {
@@ -1319,26 +1319,26 @@ leaders = [
         },
         "body_font_size": 18
     },
-    # # Crusader
-    # {
-    #     "name": "Crusader",
-    #     "abilities": (
-    #         "*Zealous.* When you destroy a building, also **secure** a matching card matching its sytem from the Court with no Rival agents.\n"
-    #         "*Dogmatic.* You cannot **influence** a card with no agents if a Rival can secure a card with any of your Loyal agents."
-    #     ),
-    #     "resources": ["Weapon", "Material"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
+    # Crusader
+    {
+        "name": "Crusader",
+        "abilities": (
+            "*Zealous.* When you destroy a city, also **secure** any card matching that cities type with no agents on it.\n"
+            "*Dogmatic.* You cannot **influence** a card with no agents if a Rival can secure a card with any of your Loyal agents."
+        ),
+        "resources": ["Weapon", "Material"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
     # Phantom
     # {
     #     "name": "Phantom",
     #     "abilities": (
-    #         "*Phasing.* You ignore hits to move after; you may move as if undamaged after taking hits this turn.\n"
+    #         "*Phasing.* You ignore your hits to move after; you may move as if undamaged after taking hits this turn.\n"
     #         "*Unmoored.* At the end of the chapter, scrap 1 Loyal ship you control."
     #     ),
     #     "resources": ["Psionic", "Relic"],
