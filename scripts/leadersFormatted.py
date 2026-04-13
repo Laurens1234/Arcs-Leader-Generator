@@ -1296,7 +1296,7 @@ leaders = [
             "*Salvific.* When you **build** a city in a system with any damaged ships, you may repair all damaged ships and replace Rival ships with Loyal ships.\n"
             "*Reckoned.* In **scoring**, if you win no ambitions, return all your buildings on the board."
         ),
-        "resources": ["Relic", "Material"],
+        "resources": ["Weapon", "Material"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
