@@ -109,7 +109,8 @@ leaders = [
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
         },
-        "body_font_size": 18
+        "body_font_size": 18,
+        "zoom": 1.15
     },
     # Composer
     {
@@ -319,7 +320,8 @@ leaders = [
             "B": {"ships": 3, "building": "city"},
             "C": {"ships": 2, "building": "None"}
         },
-        "body_font_size": 18
+        "body_font_size": 18,
+        "zoom": 1.15
     },
     # Magician
     {
@@ -925,7 +927,8 @@ leaders = [
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
         },
-        "body_font_size": 18
+        "body_font_size": 18,
+        "zoom": 1.15
     },
     {
         "name": "Samurai",
@@ -1205,14 +1208,15 @@ leaders = [
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
         },
-        "body_font_size": 18
+        "body_font_size": 18,
+        "zoom": 1.15
     },
     # Dissector
     {
         "name": "Dissector",
         "abilities": (
             "*Incisive.* When you take an action, you may return 1 captive or scrap 1 agent from your supply to take any different action instead.\n",
-            "*Sadistic.* Before **scoring**, scrap 2 agents from your supply, return 2 captives, or scrap and return 1."
+            "*Sadistic.* Before **scoring**, scrap 2 agents from your supply, return 2 captives, or scrap 1 and return 1."
         ),
         "resources": ["Psionic", "Material"],
         "setup": {
@@ -1239,96 +1243,82 @@ leaders = [
         "body_font_size": 18
     },
 
-    # # Hydra
-    # {
-    #     "name": "Hydra",
-    #     "abilities": (
-    #         "*Regenerative.* After **any** **battle**, if you lost 2+ ships, you may place 1 fresh ship from a rivals trophy box at a Loyal starport (or a gate you control if none).\n"
-    #         "*Unwieldy.* You cannot Catapult **move** with more than 3 ships in a single move."
-    #     ),
-    #     "resources": [],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
-    # # Prince
-    # {
-    #     "name": "Prince",
-    #     "abilities": (
-    #         "*Royal. When you lead you may \"knight\" a Rival's ship, making it Loyal to you for the rest of the turn.\n"
-    #         "*Juvenile.* After **scoring**, lose 1 ship if you didn't declare an ambition."
-    #     ),
-    #     "resources": ["Weapon", "Relic"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # }
-    # # Companion
-    # {
-    #     "name": "Companion",
-    #     "abilities": (
-    #         "*Helpful.* When a Rival **battles**, you may allow them to use your ships like they are Loyal. If they do, take 1 of their agents as a favor. You may spend this favor to use their ships like they are Loyal in a **battle** on your turn.\n"
-    #         "*Entangled.* **At** **the** **start** **of** **each** **chapter**, give 1 favor to a player."
-    #     ),
-    #     "resources": ["Relic", "Fuel"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
-    # # Creator
-    # {
-    #     "name": "Creator",
-    #     "abilities": (
-    #         "*Ingenious.* When you **build** a ship, you may take it from any Rival's supply and build it at any starport. If you build a Rival's ship, take a resource matching that system.\n"
-    #         "*Onerous.* idk"
-    #     ),
-    #     "resources": ["Material", "Fuel"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
-    # # Messiah
-    # {
-    #     "name": "Messiah",
-    #     "abilities": (
-    #         "*Redemptive.* When you **build** a city in a system with any damaged ships, you may replace all those damaged repair all damaged ships and replace Rival ones witb Loyal fresh ones.\n"
-    #         "*Reckoning.* In **scoring**, if you win no ambitions, return all your buildings from the map."
-    #     ),
-    #     "resources": ["Relic", "Weapon"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
-    # # Abomination
-    # {
-    #     "name": "Abomination",
-    #     "abilities": (
-    #         "*Ravenous.* When you play a card, you may discard an action card to take twice as many actions with your played card.\n"
-    #         "*Revealed.* When a suit is led, reveal all your matching cards."
-    #     ),
-    #     "resources": ["Psionic", "Weapon"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
+    # Hydra
+    {
+        "name": "Hydra",
+        "abilities": (
+            "*Regenerative.* After **any** **battle**, if 2+ of your loyal pieces got destroyed, you may place 1 loyal ship from a trophy box in any system.\n"
+            "*Unwieldy.* You cannot Catapult **move** with more than 3 ships in a single move."
+        ),
+        "resources": ["Psionic", "Material"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 3, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    {
+        "name": "Enchanter",
+        "abilities": (
+            "*Alluring.* After you play a card to lead, you may enchant a Rival's piece in a system with any loyal pieces, making it Loyal to you for the rest of the turn.\n"
+            "*Resisted.* You need at least 2 ships to control a gate."
+        ),
+        "resources": ["Weapon", "Relic"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18,
+        "zoom": 1.15,
+    },
+    {
+        "name": "Creator",
+        "abilities": (
+            "*Cosmic.* When you **build**, you may instead take it from any Rival's supply and build it at any matching starport, if you did take a resource matching that system.\n"
+            "*Detached.* In **cleanup**, you always return all trophies, even if Warlord was not declared."
+        ),
+        "resources": ["Material", "Fuel"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18,
+        "zoom": 1.15,
+        "boundary_shift": 0.00
+    },
+    # Messiah
+    {
+        "name": "Messiah",
+        "abilities": (
+            "*Salvific.* When you **build** a city in a system with any damaged ships, you may repair all damaged ships and replace Rival ships with Loyal ships.\n"
+            "*Reckoned.* In **scoring**, if you win no ambitions, return all your buildings on the board."
+        ),
+        "resources": ["Relic", "Weapon"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    # Abomination
+    {
+        "name": "Abomination",
+        "abilities": (
+            "*.* When you play a card, you may discard an action card to take twice as many actions with your played card.\n"
+            "*.* When a suit is led, reveal all your matching cards."
+        ),
+        "resources": ["Psionic", "Weapon"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
     # # Crusader
     # {
     #     "name": "Crusader",
@@ -1630,5 +1620,5 @@ leaders = [
     #     },
     #     "body_font_size": 18
     # },
-
+    # when defending in battle, after the attacker collects dice, you may discad a reource to force them to only roll skirmish dice instead.
 ]
