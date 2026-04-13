@@ -1339,8 +1339,8 @@ leaders = [
     # {
     #     "name": "Phantom",
     #     "abilities": (
-    #         "*Phasing.* You ignore your hits to move after; you may move as if undamaged after taking hits this turn.\n"
-    #         "*Unmoored.* At the end of the chapter, scrap 1 Loyal ship you control."
+    #         "*Phasing.* When attacking in **battle**, you choose to ignore any {icon:hit} you roll; at the end of the **battle** you may move any of your ships once per ignored iconhit.\n"
+    #         "*Unmoored.* ."
     #     ),
     #     "resources": ["Psionic", "Relic"],
     #     "setup": {
@@ -1351,18 +1351,18 @@ leaders = [
     #     "body_font_size": 18
     # },
 
-    # # Collector
+    # 
     # {
-    #     "name": "Collector",
+    #     "name": "",
     #     "abilities": (
-    #         "*Imperious.* When you **tax** a city you control, you may also **tax** all other cities in its system. When you **build**, you may **build** at all other starports in that system.\n"
-    #         "*Possessive.* You cannot **tax** Loyal cities."
+    #         "*Imperious.* When you **tax** a city, you may also **tax** all other cities in its system. When you **build**, you may **build** at all other starports in its system.\n"
+    #         "*.* You cannot build 2 different loyal building types in a system."
     #     ),
     #     "resources": ["Material", "Weapon"],
     #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
+    #         "A": {"ships": 3, "building": "starport"},
+    #         "B": {"ships": 3, "building": "none"},
+    #         "C": {"ships": 3, "building": "None"}
     #     },
     #     "body_font_size": 18
     # },
@@ -1371,7 +1371,7 @@ leaders = [
     # {
     #     "name": "Hoarder",
     #     "abilities": (
-    #         "*Storing.* You may place any number of resources on this leader card. Each resource placed here has a raid cost of {icon:dice_key_black}1.\n"
+    #         "*Storing.* You may place any number of resources on this leader card. Each resource placed here has a raid cost of {icon:dice_key_black}.\n"
     #         "*Static.* You cannot move resources from this card except when they are removed by a raid."
     #     ),
     #     "resources": ["Fuel", "Material"],
@@ -1387,7 +1387,7 @@ leaders = [
     # {
     #     "name": "Defender",
     #     "abilities": (
-    #         "*Parley.* At the start of a **battle** in which you are defending, you may give 2 resources or a Guild card to the attacker to immediately end the battle.\n"
+    #         "*Parley.* when defending in battle, after the attacker collects dice, you may discad a reource to force them to only roll skirmish dice instead.\n"
     #         "*Soft.* If you use Parley, you cannot **tax** until the end of your next turn."
     #     ),
     #     "resources": ["Weapon", "Psionic"],
@@ -1621,5 +1621,5 @@ leaders = [
     #     },
     #     "body_font_size": 18
     # },
-    # when defending in battle, after the attacker collects dice, you may discad a reource to force them to only roll skirmish dice instead.
+    # 
 ]
