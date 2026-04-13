@@ -1276,7 +1276,7 @@ leaders = [
     {
         "name": "Creator",
         "abilities": (
-            "*Cosmic.* When you **build**, you may instead build a ship from any Rival's supply and build it at any matching starport, if you do, take a resource matching that system.\n"
+            "*Cosmic.* When you **build**, you may instead take a ship from a Rival's supply and place it fresh one of their starports, if you do, gain a resource matching that system.\n"
             "*Detached.* In **cleanup**, you always return all trophies, even if Warlord was not declared."
         ),
         "resources": ["Material", "Fuel"],
