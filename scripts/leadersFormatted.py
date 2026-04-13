@@ -1216,7 +1216,7 @@ leaders = [
         "name": "Dissector",
         "abilities": (
             "*Incisive.* When you take an action, you may return 1 captive or scrap 1 agent from your supply to take any different action instead.\n",
-            "*Sadistic.* Before **scoring**, scrap 2 agents from your supply, return 2 captives, or scrap 1 and return 1."
+            "*Sadistic.* Before **scoring**, scrap 2 agents from your supply, return 2 captives, or 1 of each."
         ),
         "resources": ["Psionic", "Material"],
         "setup": {
@@ -1261,7 +1261,7 @@ leaders = [
     {
         "name": "Enchanter",
         "abilities": (
-            "*Alluring.* After you play a card to lead, you may enchant a Rival's piece in a system with any loyal pieces, making it Loyal to you for the rest of the turn.\n"
+            "*Alluring.* After you play a card to **lead**, you may \"enchant\" a Rival's piece in a system with any loyal pieces, making it Loyal to you for the rest of the turn.\n"
             "*Resisted.* You need at least 2 ships to control a gate."
         ),
         "resources": ["Weapon", "Relic"],
@@ -1276,7 +1276,7 @@ leaders = [
     {
         "name": "Creator",
         "abilities": (
-            "*Cosmic.* When you **build**, you may instead take it from any Rival's supply and build it at any matching starport, if you did take a resource matching that system.\n"
+            "*Cosmic.* When you **build**, you may instead build a ship from any Rival's supply and build it at any matching starport, if you do, take a resource matching that system.\n"
             "*Detached.* In **cleanup**, you always return all trophies, even if Warlord was not declared."
         ),
         "resources": ["Material", "Fuel"],
@@ -1293,7 +1293,7 @@ leaders = [
     {
         "name": "Messiah",
         "abilities": (
-            "*Salvific.* When you **build** a city in a system with any damaged ships, you may repair all damaged ships and replace Rival ships with Loyal ships.\n"
+            "*Salvific.* When you **build** a city in a system with any damaged ships, you may repair all damaged ships, then replace repaired Rival ships with Loyal ships.\n"
             "*Reckoned.* In **scoring**, if you win no ambitions, return all your buildings on the board."
         ),
         "resources": ["Weapon", "Material"],
@@ -1324,7 +1324,7 @@ leaders = [
     {
         "name": "Crusader",
         "abilities": (
-            "*Zealous.* When you destroy a city, also **secure** any card matching that cities type with no agents on it.\n"
+            "*Zealous.* When you destroy a building, also **secure** any card matching that city's type with no agents on it.\n"
             "*Dogmatic.* You cannot **influence** a card with no agents if a Rival can secure a card with any of your Loyal agents."
         ),
         "resources": ["Weapon", "Material"],
@@ -1339,8 +1339,8 @@ leaders = [
     # {
     #     "name": "Phantom",
     #     "abilities": (
-    #         "*Phasing.* You ignore your hits to move after; you may move as if undamaged after taking hits this turn.\n"
-    #         "*Unmoored.* At the end of the chapter, scrap 1 Loyal ship you control."
+    #         "*Phasing.* When attacking in **battle**, you choose to ignore any {icon:hit} you roll; at the end of the **battle** you may move any of your ships once per ignored iconhit.\n"
+    #         "*Unmoored.* ."
     #     ),
     #     "resources": ["Psionic", "Relic"],
     #     "setup": {
@@ -1351,18 +1351,18 @@ leaders = [
     #     "body_font_size": 18
     # },
 
-    # # Collector
+    # 
     # {
-    #     "name": "Collector",
+    #     "name": "",
     #     "abilities": (
-    #         "*Imperious.* When you **tax** a city you control, you may also **tax** all other cities in its system. When you **build**, you may **build** at all other starports in that system.\n"
-    #         "*Possessive.* You cannot **tax** Loyal cities."
+    #         "*Imperious.* When you **tax** a city, you may also **tax** all other cities in its system. When you **build**, you may **build** at all other starports in its system.\n"
+    #         "*.* You cannot build 2 different loyal building types in a system."
     #     ),
     #     "resources": ["Material", "Weapon"],
     #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
+    #         "A": {"ships": 3, "building": "starport"},
+    #         "B": {"ships": 3, "building": "none"},
+    #         "C": {"ships": 3, "building": "None"}
     #     },
     #     "body_font_size": 18
     # },
@@ -1371,7 +1371,7 @@ leaders = [
     # {
     #     "name": "Hoarder",
     #     "abilities": (
-    #         "*Storing.* You may place any number of resources on this leader card. Each resource placed here has a raid cost of {icon:dice_key_black}1.\n"
+    #         "*Storing.* You may place any number of resources on this leader card. Each resource placed here has a raid cost of {icon:dice_key_black}.\n"
     #         "*Static.* You cannot move resources from this card except when they are removed by a raid."
     #     ),
     #     "resources": ["Fuel", "Material"],
@@ -1387,7 +1387,7 @@ leaders = [
     # {
     #     "name": "Defender",
     #     "abilities": (
-    #         "*Parley.* At the start of a **battle** in which you are defending, you may give 2 resources or a Guild card to the attacker to immediately end the battle.\n"
+    #         "*Parley.* when defending in battle, after the attacker collects dice, you may discad a reource to force them to only roll skirmish dice instead.\n"
     #         "*Soft.* If you use Parley, you cannot **tax** until the end of your next turn."
     #     ),
     #     "resources": ["Weapon", "Psionic"],
@@ -1621,5 +1621,5 @@ leaders = [
     #     },
     #     "body_font_size": 18
     # },
-    # when defending in battle, after the attacker collects dice, you may discad a reource to force them to only roll skirmish dice instead.
+    # 
 ]
