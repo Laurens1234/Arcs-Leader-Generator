@@ -1232,7 +1232,7 @@ leaders = [
         "name": "Tactician",
         "abilities": (
             "*Calculated.* After you **influence** a card, you may move 1 of your agents on a card to an different card.\n"
-             "*Wearied.* In *cleanup*, return all your agents on 1 Court card."
+             "*Wearied.* In *clean** **up*, return all your agents on 1 Court card."
         ), 
         "resources": ["Psionic", "Fuel"],
         "setup": {
