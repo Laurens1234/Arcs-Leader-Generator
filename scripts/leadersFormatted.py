@@ -1317,7 +1317,8 @@ leaders = [
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
         },
-        "body_font_size": 18
+        "body_font_size": 18,
+        "zoom": 1.15
     },
     # Crusader
     {
