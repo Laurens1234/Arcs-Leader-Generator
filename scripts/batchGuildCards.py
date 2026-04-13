@@ -60,6 +60,7 @@ def _guild_frame_filename(resource: str) -> str:
         "material": "CardAsset-Frame-Guild-Material.png",
         "weapon": "CardAsset-Frame-Guild-Weapon.png",
         "relic": "CardAsset-Frame-Guild-Relic.png",
+        "artifact": "CardAsset-Frame-Guild-Relic.png",
         "psionic": "CardAsset-Frame-Guild-Psionic.png",
     }
     if resource not in mapping:
@@ -184,6 +185,53 @@ def create_guild_card(input_data):
 
     # Frame overlay
     base_img.paste(guild_frame, (0, 0), guild_frame)
+    # Optional artifact final overlay: paste the artifact image on top of the frame
+    # but underneath raid/icon overlays so raid cost remains visible.
+    use_artifact_overlay = input_data.get("artifact_top", False) or _normalize_resource(resource) == "artifact"
+    if use_artifact_overlay:
+        artifact_path = os.path.join(base_path, "cardAssets", "Artifact_top_half.png")
+        try:
+            artifact_img = Image.open(artifact_path).convert("RGBA")
+            # Expand artifact overlay horizontally by `artifact_expand` pixels on each side
+            # so it extends a few pixels past the guild card edges. Default is small.
+            try:
+                expand_pixels = int(float(input_data.get("artifact_expand", 2 * render_scale)))
+            except Exception:
+                expand_pixels = 2 * render_scale
+
+            desired_width = card_width + (2 * expand_pixels)
+
+            src_w, src_h = artifact_img.size
+            if src_w >= desired_width:
+                # Crop centered to desired width
+                left = (src_w - desired_width) // 2
+                artifact_img = artifact_img.crop((left, 0, left + desired_width, src_h))
+            else:
+                # Pad transparently to desired width (centered)
+                canvas = Image.new("RGBA", (desired_width, src_h), (0, 0, 0, 0))
+                paste_x = (desired_width - src_w) // 2
+                canvas.paste(artifact_img, (paste_x, 0), artifact_img)
+                artifact_img = canvas
+
+            # Compute default vertical offset so the artifact sits lower by the same top bleed
+            # amount used in final cropping. Allows per-card override via `artifact_offset`.
+            bleed_mm = 3
+            card_width_mm = 70
+            card_height_mm = 120
+            default_top_offset = int((bleed_mm / card_height_mm) * card_height)
+            try:
+                user_offset = int(float(input_data.get("artifact_offset", default_top_offset)))
+            except Exception:
+                user_offset = default_top_offset
+
+            paste_y = user_offset
+
+            # Paste artifact so it extends `expand_pixels` beyond both left and right edges.
+            paste_x_on_card = -expand_pixels
+            base_img.paste(artifact_img, (paste_x_on_card, paste_y), artifact_img)
+        except FileNotFoundError:
+            print(f"Warning: Artifact overlay not found at {artifact_path}. Skipping artifact overlay.")
+    
 
     draw = ImageDraw.Draw(base_img)
 

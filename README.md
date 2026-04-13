@@ -220,6 +220,11 @@ python scripts/batchGuildCards.py testguild
 
 Guild card artwork is loaded from `cardAssets/guildImages/<name>.png`.
 
+Artifact-style guild cards: you can create "artifact" guild cards that overlay
+`cardAssets/Artifact_top_half.png` on top of a normal guild card. To enable this,
+set the card's `resource` to `"artifact"` or add `"artifact_top": True` to the
+card entry in `scripts/guildCardsFormatted.py`.
+
 ### Generate Vox Cards
 
 Run the following script to generate Vox cards defined in `scripts/voxCardsFormatted.py`:

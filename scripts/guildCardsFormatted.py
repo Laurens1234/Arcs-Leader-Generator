@@ -141,4 +141,26 @@ guild_cards = [
         "zoom": 1.0,
         "boundary_shift": 0.0,
     },
+    {
+        "name": "artifact_sample",  # looks for cardAssets/guildImages/artifact_sample.png
+        "title": "Artifact",
+        "title_font_size": 25,
+        "body": (
+            "This is an artifact-style guild card.\n"
+            "Overlay test: uses Artifact_top_half.png on top of the regular guild frame."
+        ),
+        "footer_left": "G",
+        "footer": "Artifact",
+        "footer_right": "1",
+        "footer_font_size": 16,
+        "body_font_size": 18,
+
+        "resource": "artifact",
+        "raid": 2,
+
+        "render_scale": 2,
+        "allow_upscale": True,
+        "zoom": 1.0,
+        "boundary_shift": 0.0,
+    },
 ]
