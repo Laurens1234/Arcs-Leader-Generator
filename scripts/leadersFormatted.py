@@ -265,7 +265,7 @@ leaders = [
     {
         "name": "Chosen",
         "abilities": (
-            "*Hallowed.* After you **move** a single ship, you may **battle** with only it, the die it rolls has its result count thrice.\n"
+            "*Hallowed.* After you **move** a single ship, you may battle with only it, the die it rolls has its result count thrice.\n"
             "*Forsaken.* If you have not attacked this chapter, you cannot **declare** **an** **ambition**."
         ),
         "resources": ["Relic", "Fuel"],
@@ -527,7 +527,7 @@ leaders = [
     {
         "name": "Automaton",
         "abilities": (
-            "*Overclocked.* If you spend 2 or more resources, you may **influence** at the end of your Prelude.\n"
+            "*Overclocked.* If you spend 2 or more resources, you may influence at the end of your Prelude.\n"
             "*Wasteful.* After you **secure** a card using 2 or more agents, scrap an agent."
         ),
         "resources": ["Material", "Fuel"],
@@ -719,7 +719,7 @@ leaders = [
         "name": "Custodian",
         "abilities": (
             "*Vigilant.* When a Rival **moves** into a gate you control, gain 1 resource matching any city in that gate's cluster.\n"
-            "*Heedless.* Damaged Rival ships may **move** again after moving into a gate you control."
+            "*Heedless.* After damaged Rival ships **move** into a gate you control, they may move again."
         ),
         "resources": ["Material", "Fuel"],
         "setup": {
@@ -748,7 +748,7 @@ leaders = [
     {
         "name": "Chief",
         "abilities": (
-            "*Imposing.* After any Rival of whom you control a building **taxes** or **builds**, you may **tax** or **build** respectively.\n"
+            "*Imposing.* After any Rival of whom you control a building **taxes** or **builds**, you may tax or build respectively.\n"
             "*Bountiful.* Before **scoring**, give 1 resource to each player of whom you control a building."
         ),
         "resources": ["Relic", "Weapon"],
@@ -776,7 +776,7 @@ leaders = [
         {
         "name": "Prophet",
         "abilities": (
-            "*Revelatory.* When you **declare** **an** **ambition**, you may **secure** a Guild card in the Court discard pile which type matches the declared ambition.\n"
+            "*Revelatory.* When you **declare** **an** **ambition**, you may secure a Guild card in the Court discard pile which type matches the declared ambition.\n"
             "*Fatalistic.* You cannot seize the initiative."
         ),
         "resources": ["Psionic", "Material"],
@@ -833,7 +833,7 @@ leaders = [
         "name": "Forager",
         "abilities": (
             "*Rooting.* When you **move** into a planet with no pieces, gain 1 matching resource.\n"
-            "*Territorial.* When you **move** out of a planet, if it's left empty, **build** a building there."
+            "*Territorial.* When you **move** out of a planet, if it's left empty, build a building there."
         ),
         "resources": ["Material", "Fuel"],
         "setup": {
@@ -861,7 +861,7 @@ leaders = [
     {
         "name": "Insurgent",
         "abilities": (
-            "*Seditious.* After attacking in **battle**, you may **influence** a card with a defender's agent on it.\n"
+            "*Seditious.* After attacking in **battle**, you may influence a card with a defender's agent on it.\n"
             "*Decentralized.* You cannot **repair** ships."
         ),
         "resources": ["Weapon", "Material"],
@@ -996,8 +996,8 @@ leaders = [
     {
         "name": "Shaman",
         "abilities": (
-            "*Holistic.* When you **declare** **an** **ambition**, you may **repair** damaged ships you don't control.\n"
-            "*Disruptive.* You cannot **repair** ships you control."
+            "*Holistic.* When you **declare** **an** **ambition**, you may repair all your damaged ships.\n"
+            "*Disruptive.* You cannot **repair** with pips."
         ),
         "resources": ["Relic", "Fuel"],
         "setup": {
@@ -1026,7 +1026,7 @@ leaders = [
     {
         "name": "Despot",
         "abilities": (
-            "*Autocratic.* When you **declare** **an** **ambition**, you may **tax** one city you control of each player.\n"
+            "*Autocratic.* When you **declare** **an** **ambition**, you may tax one city you control of each player.\n"
             "*Merciless.* After **scoring**, damage one Loyal ship in each system with a city."
         ),
         "resources": ["Fuel", "Relic"],
@@ -1155,7 +1155,7 @@ leaders = [
     {
         "name": "Treasurer",
         "abilities": (
-            "*Bankrolled.* **At** **the** **start** **of** **each** **chapter**, **tax** all cities you control.\n"
+            "*Bankrolled.* **At** **the** **start** **of** **each** **chapter**, tax all cities you control.\n"
             "*Deskbound.* You can **tax** at most once per turn."
         ),
         "resources": ["Material", "Material"],
@@ -1171,7 +1171,7 @@ leaders = [
         "name": "Wayfinder",
         "abilities": (
             "*Bridging.* You treat systems with a loyal building as adjacent.\n"
-            "*Tethered.* When Catapult **moving**, stop after 2 moves."
+            "*Tethered.* When you Catapult **move**, stop after 2 moves."
         ),
         "resources": ["Psionic", "Fuel"],
         "setup": {
@@ -1247,7 +1247,7 @@ leaders = [
     {
         "name": "Hydra",
         "abilities": (
-            "*Regenerative.* After **any** **battle**, if 2+ of your loyal pieces got destroyed, you may place 1 loyal ship from a trophy box in any system.\n"
+            "*Regenerative.* After **any** **battle**, if 2+ of your loyal pieces got destroyed, you may place 1 loyal ship from any trophy box in any system with loyal pieces.\n"
             "*Unwieldy.* You cannot Catapult **move** with more than 3 ships in a single move."
         ),
         "resources": ["Psionic", "Material"],
@@ -1261,10 +1261,10 @@ leaders = [
     {
         "name": "Enchanter",
         "abilities": (
-            "*Alluring.* After you play a card to **lead**, you may \"enchant\" a Rival's piece in a system with any loyal pieces, making it Loyal to you for the rest of the turn.\n"
+            "*Alluring.* When you copy or pivot to **influence** a card with a rival agent on it, you may replace one of their ships with a loyal one.\n"
             "*Resisted.* If you only have 1 ship in a gate, it doesn't count for control."
         ),
-        "resources": ["Weapon", "Relic"],
+        "resources": ["Psionic", "Fuel"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
@@ -1293,7 +1293,7 @@ leaders = [
     {
         "name": "Messiah",
         "abilities": (
-            "*Salvific.* When you **build** a city in a system with any damaged ships, you may repair all damaged ships, then replace repaired Rival ships with Loyal ships.\n"
+            "*Salvific.* When you **build** a city in a system with any damaged ships, you may repair all ships in that system, then replace all repaired Rival ships with Loyal ships.\n"
             "*Reckoned.* In **scoring**, if you win no ambitions, return all your buildings on the board."
         ),
         "resources": ["Weapon", "Material"],
@@ -1324,7 +1324,7 @@ leaders = [
     {
         "name": "Crusader",
         "abilities": (
-            "*Zealous.* When you destroy a building, also **secure** any card matching that city's type with no agents on it.\n"
+            "*Zealous.* After you destroy a city, also **secure** any card with no Rival agents on it matching that city's type.\n"
             "*Dogmatic.* You cannot **influence** a card with no agents if a Rival can secure a card with any of your Loyal agents."
         ),
         "resources": ["Weapon", "Material"],
