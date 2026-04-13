@@ -437,33 +437,66 @@ def create_card(input_data):
         wrapped_lines = []
         for para in paragraphs:
             if not para.strip():
-                wrapped_lines.append("")
+                wrapped_lines.append([])
                 continue
             words = para.strip().split()
-            current_line_words = []
+
+            # Combine words into rich tokens so formatting markers can span spaces
+            tokens: list[str] = []
+            i = 0
+            while i < len(words):
+                w = words[i]
+                core, _ = _split_trailing_punct(w)
+                if core.casefold().startswith('{icon:') and w.endswith('}'):
+                    tokens.append(w)
+                    i += 1
+                    continue
+
+                combined = False
+                for marker in ("***", "**", "*"):
+                    stripped_core = core.rstrip(''.join(_TRAILING_PUNCT))
+                    if stripped_core.startswith(marker) and not stripped_core.endswith(marker):
+                        buf = [w]
+                        j = i + 1
+                        closed = False
+                        while j < len(words):
+                            buf.append(words[j])
+                            core_buf = _split_trailing_punct(" ".join(buf))[0]
+                            if core_buf.rstrip(''.join(_TRAILING_PUNCT)).endswith(marker):
+                                closed = True
+                                break
+                            j += 1
+                        tokens.append(" ".join(buf))
+                        i = j + 1 if closed else j
+                        combined = True
+                        break
+                if not combined:
+                    tokens.append(w)
+                    i += 1
+
+            current_line_tokens: list[str] = []
             current_line_width = 0
 
-            for idx, word in enumerate(words):
-                word_width = _measure_rich_token(word, font, italic_font, bold_font, bolditalic_font)
+            for idx, token in enumerate(tokens):
+                token_width = _measure_rich_token(token, font, italic_font, bold_font, bolditalic_font)
                 space_width = draw.textbbox((0, 0), " ", font=font)[2]
-                additional_width = word_width if idx == 0 else word_width + space_width
+                additional_width = token_width if idx == 0 else token_width + space_width
 
                 if current_line_width + additional_width <= max_width:
-                    current_line_words.append(word)
+                    current_line_tokens.append(token)
                     current_line_width += additional_width
                 else:
-                    wrapped_lines.append(" ".join(current_line_words))
-                    current_line_words = [word]
-                    current_line_width = word_width
+                    wrapped_lines.append(current_line_tokens)
+                    current_line_tokens = [token]
+                    current_line_width = token_width
 
-            if current_line_words:
-                wrapped_lines.append(" ".join(current_line_words))
+            if current_line_tokens:
+                wrapped_lines.append(current_line_tokens)
 
         return wrapped_lines
 
-    def draw_rich_text(draw, text, font, italic_font, bold_font, bolditalic_font, x, y, max_width, line_height):
+    def draw_rich_text(draw, tokens, font, italic_font, bold_font, bolditalic_font, x, y, max_width, line_height):
         line_height = line_height * (body_font_size / 18)
-        words = text.split(" ")
         current_x = x
         current_y = y
 
@@ -482,7 +515,7 @@ def create_card(input_data):
                 return 0
             return base_ascent - ascent
 
-        for word in words:
+        for word in tokens:
             kind, payload, trailing, font_to_use = _parse_rich_token(
                 word, font, italic_font, bold_font, bolditalic_font
             )
@@ -533,25 +566,26 @@ def create_card(input_data):
         # Support explicit vertical-space token in the body: "{vspace:N}"
         # Example: "{vspace:6}" adds _s(6) pixels of vertical space. The token
         # must occupy the line by itself (leading spaces allowed).
-        stripped = line.strip()
-        if stripped.startswith("{vspace:") and stripped.endswith("}"):
+        if not line:
+            current_y += _s(10)
+            continue
+
+        line_str = " ".join(line).strip()
+        if line_str.startswith("{vspace:") and line_str.endswith("}"):
             try:
-                inner = stripped[len("{vspace:"):-1].strip()
+                inner = line_str[len("{vspace:"):-1].strip()
                 n = int(inner)
                 current_y += _s(n)
                 continue
             except Exception:
                 pass
-        if not stripped:
-            current_y += _s(10)
-            continue
 
         # If the line begins with an italic token whose text ends with a period,
         # add a bit more vertical spacing to separate it from the previous line.
         # Do not add this extra spacing if this is the first non-empty body line on the card.
         try:
-            if not first_body_line:
-                first_word = line.strip().split()[0]
+            if not first_body_line and line:
+                first_word = line[0]
                 kind, payload, trailing, font_to_use = _parse_rich_token(
                     first_word, body_font, italic_font, bold_font, bolditalic_font
                 )

@@ -606,7 +606,7 @@ leaders = [
     {
         "name": "Trickster",
         "abilities": (
-            "*Misdirecting.* When you **declare** **an** **ambition**, draw up to 2 cards from the bottom of the action card deck, then discard as many.\n"
+            "*Misdirecting.* When you **declare an** **ambition**, draw up to 2 cards from the bottom of the action card deck, then discard as many.\n"
             "*Revealed.* When you Copy or play an extra card, place it face-up."
         ),
         "resources": ["Psionic", "Fuel"],
@@ -1155,7 +1155,7 @@ leaders = [
     {
         "name": "Treasurer",
         "abilities": (
-            "*Bankrolled.* **At** **the** **start** **of** **each** **chapter**, tax all cities you control.\n"
+            "*Bankrolled.* **At the start of each chapter**, tax all cities you control.\n"
             "*Deskbound.* You can **tax** at most once per turn."
         ),
         "resources": ["Material", "Material"],
@@ -1215,7 +1215,7 @@ leaders = [
     {
         "name": "Dissector",
         "abilities": (
-            "*Incisive.* When you take an action, you may return 1 captive or scrap 1 agent from your supply to take any different action instead.\n",
+            "*Incisive.* When you take an action, you may return 1 captive or scrap 1 agent from your supply to take any different action instead.\n"
             "*Sadistic.* Before **scoring**, scrap 2 agents from your supply, return 2 captives, or 1 of each."
         ),
         "resources": ["Psionic", "Material"],
@@ -1294,7 +1294,7 @@ leaders = [
         "name": "Messiah",
         "abilities": (
             "*Salvific.* When you **build** a city in a system with any damaged ships, you may repair all ships in that system, then replace all repaired Rival ships with Loyal ships.\n"
-            "*Reckoned.* In **scoring**, if you win no ambitions, return all your buildings on the board."
+            "*Reckoned.* In **scoring**, if you win no ambitions, return all your buildings on the map."
         ),
         "resources": ["Weapon", "Material"],
         "setup": {
