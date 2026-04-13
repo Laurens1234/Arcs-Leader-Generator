@@ -1262,7 +1262,7 @@ leaders = [
         "name": "Enchanter",
         "abilities": (
             "*Alluring.* After you play a card to **lead**, you may \"enchant\" a Rival's piece in a system with any loyal pieces, making it Loyal to you for the rest of the turn.\n"
-            "*Resisted.* If you only have 1 ship in a gate it doesn't count for control."
+            "*Resisted.* If you only have 1 ship in a gate, it doesn't count for control."
         ),
         "resources": ["Weapon", "Relic"],
         "setup": {
