@@ -1419,8 +1419,8 @@ leaders = [
     # {
     #     "name": "Solicitor",
     #     "abilities": (
-    #         "*Demanding.* When you **declare** **an** **ambition**, you may ask a Rival for a suit. If they have a card of that suit they must give one to you.\n"
-    #         "*Reciprocal.* After taking that card, give that Rival 1 card."
+    #         "*Demanding.* When you **declare** **an** **ambition**, you may ask a Rival for a suit. If they have a card of that suit they must give one to you. After taking that card, give that Rival 1 card\n"
+    #         "*.* ."
     #     ),
     #     "resources": ["Psionic", "Weapon"],
     #     "setup": {
