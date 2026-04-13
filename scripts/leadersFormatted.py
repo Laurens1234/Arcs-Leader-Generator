@@ -1216,7 +1216,7 @@ leaders = [
         "name": "Dissector",
         "abilities": (
             "*Incisive.* When you take an action, you may return 1 captive or scrap 1 agent from your supply to take any different action instead.\n",
-            "*Sadistic.* Before **scoring**, scrap 2 agents from your supply, return 2 captives, or scrap 1 and return 1."
+            "*Sadistic.* Before **scoring**, scrap 2 agents from your supply, return 2 captives, or 1 of each."
         ),
         "resources": ["Psionic", "Material"],
         "setup": {
@@ -1232,7 +1232,7 @@ leaders = [
         "name": "Tactician",
         "abilities": (
             "*Calculated.* After you **influence** a card, you may move 1 of your agents on a card to an different card.\n"
-             "*Wearied.* In **clean** **up*, return all your agents on 1 Court card."
+             "*Wearied.* In **clean** **up**, return all your agents on 1 Court card."
         ), 
         "resources": ["Psionic", "Fuel"],
         "setup": {
@@ -1261,7 +1261,7 @@ leaders = [
     {
         "name": "Enchanter",
         "abilities": (
-            "*Alluring.* After you play a card to lead, you may enchant a Rival's piece in a system with any loyal pieces, making it Loyal to you for the rest of the turn.\n"
+            "*Alluring.* After you play a card to **lead**, you may \"enchant\" a Rival's piece in a system with any loyal pieces, making it Loyal to you for the rest of the turn.\n"
             "*Resisted.* You need at least 2 ships to control a gate."
         ),
         "resources": ["Weapon", "Relic"],
@@ -1276,7 +1276,7 @@ leaders = [
     {
         "name": "Creator",
         "abilities": (
-            "*Cosmic.* When you **build**, you may instead take it from any Rival's supply and build it at any matching starport, if you did take a resource matching that system.\n"
+            "*Cosmic.* When you **build**, you may instead build a ship from any Rival's supply and build it at any matching starport, if you do, take a resource matching that system.\n"
             "*Detached.* In **cleanup**, you always return all trophies, even if Warlord was not declared."
         ),
         "resources": ["Material", "Fuel"],
@@ -1293,7 +1293,7 @@ leaders = [
     {
         "name": "Messiah",
         "abilities": (
-            "*Salvific.* When you **build** a city in a system with any damaged ships, you may repair all damaged ships and replace Rival ships with Loyal ships.\n"
+            "*Salvific.* When you **build** a city in a system with any damaged ships, you may repair all damaged ships, then replace repaired Rival ships with Loyal ships.\n"
             "*Reckoned.* In **scoring**, if you win no ambitions, return all your buildings on the board."
         ),
         "resources": ["Weapon", "Material"],
@@ -1324,7 +1324,7 @@ leaders = [
     {
         "name": "Crusader",
         "abilities": (
-            "*Zealous.* When you destroy a city, also **secure** any card matching that cities type with no agents on it.\n"
+            "*Zealous.* When you destroy a building, also **secure** any card matching that city's type with no agents on it.\n"
             "*Dogmatic.* You cannot **influence** a card with no agents if a Rival can secure a card with any of your Loyal agents."
         ),
         "resources": ["Weapon", "Material"],
