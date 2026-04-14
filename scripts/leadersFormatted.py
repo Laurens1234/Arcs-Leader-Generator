@@ -1438,7 +1438,7 @@ leaders = [
     {
         "name": "Seraph",
         "abilities": (
-            "*Celestial.* After you collect dice in **battle**, say a number. Reroll that many dice unless you cannot.\n"
+            "*Celestial.* After you collect dice in **battle**, say a number. You must reroll that many.\n"
             "*Ardoured.* You can only reroll dice with {icon:dice_hit_black} or {icon:dice_building_hit_black} on them."
         ),
         "resources": ["Material", "Weapon"],
@@ -1453,8 +1453,8 @@ leaders = [
     # {
     #     "name": "Forgemaster",
     #     "abilities": (
-    #         "*.* After you roll Assault or Raid dice in **battle**, you may reroll dice one at a time. For each rerolled die that has a self hit, immediately damage one of your ships. You may stop only after rolling a hit or key.\n"
-    #         "*Overheated."
+    #         "*.* In **battle**, you may choose to reroll Assualt and Raid dice one at a time. For each rerolled die that has a self hit, immediately damage one of your ships. You may stop only after rolling a hit or key.\n"
+    #         "*."
     #     ),
     #     "resources": ["Weapon", "Relic"],
     #     "setup": {
@@ -1465,23 +1465,9 @@ leaders = [
     #     "body_font_size": 18
     # },
     # {
-    #     "name": "Tactician",
-    #     "abilities": (
-    #         "*Calculated.* When defending in **battle**, before the attacker collects dice, you may roll a die, resolve like you attackedin battle.\n"
-    #         "*Ponderous.* ."
-    #     ),
-    #     "resources": ["Material", "Weapon"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "starport"},
-    #         "B": {"ships": 3, "building": "None"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
-    # {
     #     "name": "Oracle",
     #     "abilities": (
-    #         "*Prescient.* In **battle**, you may reroll any number of skirmish dice in systems matching declared ambitions. You may reroll in gates if all ambitions markers have been placed\n"
+    #         "*Prescient.* In **battle**, you may reroll any number of dice in systems matching declared ambitions.\n"
     #         "*Unnerved.* ."
     #     ),
     #     "resources": ["Psionic", "Fuel"],
@@ -1493,27 +1479,28 @@ leaders = [
     #     "body_font_size": 18
     # },
     # # Dice-mechanic leaders (one per requested mechanic)
-    # {
-    #     "name": "Setmaker",
-    #     "abilities": (       
-    #         "*Unique.* If your roll contains no duplicate faces (all dice different), gain 1 Material.\n"
-    #         "*Solo.* If some face appears exactly once and no face appears more than once, gain 1 Fuel.\n"
-    #         "*Paired.* If some face appears exactly 2 times (a pair), gain 1 Material and 1 Fuel.\n"
-    #         "*Tripled.* If some face appears exactly 3 times, gain 2 Material.\n"
-    #         "*Quadrupled.* If some face appears exactly 4 times, gain 1 Relic.\n"
-    #         "*Quintupled.* If some face appears exactly 5 times, gain 1 Relic and 1 Weapon.\n"
-    #         "*Sextupled.* If some face appears exactly 6 times, gain 2 Relics.\n"
-        
-    #         "*Downside.* You cannot roll Assault or Raid."
-    #     ),
-    #     "resources": ["Material", "Fuel"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
+    {
+        "name": "Setmaker",
+        "abilities": (  
+            "*Jackpot.* When you roll only skirmish dice, if all of them hit gain the reward of the amount you rolled and all lower ones:"
+            "*1: damage a defending ship (1/2)"
+            "*2: gain a resource matching the system (1/4)"
+            "*3: all your hits count as keys instead (1/8)"
+            "*4: (1/16)"
+            "*5: all dice hit and roll again (1/32)"
+            "*6: deal 1 extra hit (1/2)"
+            "* Any amount of times in **battle**, you may damage and attacking ship to reroll a dice, then increase its cost by 1 this battle."
+            "You can only collect Skirmish dice."
+            "At the end of each battle, deal self hits equal to the amount of dice that missed."
+            ),
+        "resources": ["Material", "Fuel"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
     # {
     #     "name": "Volley",
     #     "abilities": (
@@ -1543,23 +1530,9 @@ leaders = [
     #     "body_font_size": 18
     # },
     # {
-    #     "name": "Drafter",
-    #     "abilities": (
-    #         "*Drafting.* When any player rolls a non-battle dice pool, create a draft pool by revealing all dice. Starting with you, players may take one die from that pool in turn order. When you take a die from the draft pool, gain 1 Material.\n"
-    #         "*Greedy.* At the end of your Prelude, discard 1 resource."
-    #     ),
-    #     "resources": ["Material", "Fuel"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
-    # {
     #     "name": "Builder",
     #     "abilities": (
-    #         "*Constructive.* When you roll dice outside battle, you may place one rolled die onto any planet you control as a worker. Values 1-2: gain 1 Material; 3-4: build (place a building token); 5-6: repair or move a ship. Remove the worker at round end.\n"
+    #         "*Constructive.* When you roll dice battle, you may place one rolled die onto any planet you control as a worker. Values 1-2: gain 1 Material; 3-4: build (place a building token); 5-6: repair or move a ship. Remove the worker at round end.\n"
     #         "*Grounded.* You cannot Catapult move more than once per round."
     #     ),
     #     "resources": ["Material", "Relic"],
