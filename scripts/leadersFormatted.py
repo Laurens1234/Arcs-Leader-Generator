@@ -1335,21 +1335,21 @@ leaders = [
         },
         "body_font_size": 18
     },
-    # Phantom
-    # {
-    #     "name": "Phantom",
-    #     "abilities": (
-    #         "*Phasing.* When attacking in **battle**, you choose to ignore any {icon:hit} you roll; at the end of the **battle** you may move any of your ships once per ignored iconhit.\n"
-    #         "*Unmoored.* ."
-    #     ),
-    #     "resources": ["Psionic", "Relic"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
+   # 
+    {
+        "name": "Phantom",
+        "abilities": (
+            "*.* When attacking in **battle**, you choose to ignore any {icon:dice_hit_black} you roll; at the end of the **battle** you may move any of your attacking ships once per ignored {icon:dice_hit_black}.\n"
+            "*.* ."
+        ),
+        "resources": ["Fuel", "Weapon"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
 
     # 
     # {
