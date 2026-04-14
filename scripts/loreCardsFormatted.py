@@ -275,9 +275,9 @@ lore_cards.append({
     "title": "Edifice Example",
     "title_font_size": 22,
     "body": (
-        "**When Discovered:** Place another Stone Road marker at another random planet. If it is out of play, it becomes in play.\n"
-        "\n"
-        "The Stone Road systems are adjacent."
+        "**When Discovered:** Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "\n\n"
+        "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     ),
     "eddifice_top_right": "6",
     "body_font_size": 18,

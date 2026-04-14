@@ -33,7 +33,7 @@ TEMPLATE_MAP = {
         "module": "leadersFormatted",
         "path": Path("scripts") / "leadersFormatted.py",
     },
-    "Guild": {
+    "Guild / Artifact": {
         "script": "batchGuildCards.py",
         "module": "guildCardsFormatted",
         "path": Path("scripts") / "guildCardsFormatted.py",
@@ -42,6 +42,11 @@ TEMPLATE_MAP = {
         "script": "batchLoreCards.py",
         "module": "loreCardsFormatted",
         "path": Path("scripts") / "loreCardsFormatted.py",
+    },
+    "Eddifice": {
+        "script": "batchLoreCards.py",
+        "module": "eddificeFormatted",
+        "path": Path("scripts") / "eddificeFormatted.py",
     },
     "Vox": {
         "script": "batchVoxCards.py",
@@ -157,6 +162,7 @@ with st.container():
             "Leader": "leaderImages",
             "Guild": "guildImages",
             "Lore": "loreImages",
+            "Eddifice": "loreImages",
             "Vox": "voxImages",
         }
         dest_dir = Path("cardAssets") / UPLOAD_MAP.get(card_type, "captured")
