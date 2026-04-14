@@ -466,10 +466,27 @@ def create_guild_card(input_data):
                     tokens.append(w)
                     i += 1
 
+            # Expand any single rich token that is wider than the max width into
+            # multiple rich-word tokens so it can wrap across lines.
+            expanded_tokens: list[str] = []
+            for t in tokens:
+                if " " in t and _measure_rich_token(t, font, italic_font, bold_font, bolditalic_font) > max_width:
+                    if (t.startswith('***') and t.endswith('***')) or (t.startswith('**') and t.endswith('**')) or (t.startswith('*') and t.endswith('*')):
+                        marker = '***' if t.startswith('***') and t.endswith('***') else ('**' if t.startswith('**') and t.endswith('**') else '*')
+                        inner = t[len(marker):-len(marker)]
+                        parts = inner.split()
+                        for p in parts:
+                            expanded_tokens.append(f"{marker}{p}{marker}")
+                    else:
+                        for p in t.split():
+                            expanded_tokens.append(p)
+                else:
+                    expanded_tokens.append(t)
+
             current_line_tokens: list[str] = []
             current_line_width = 0
 
-            for idx, token in enumerate(tokens):
+            for idx, token in enumerate(expanded_tokens):
                 token_width = _measure_rich_token(token, font, italic_font, bold_font, bolditalic_font)
                 space_width = draw.textbbox((0, 0), " ", font=font)[2]
                 additional_width = token_width if idx == 0 else token_width + space_width

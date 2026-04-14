@@ -163,4 +163,26 @@ guild_cards = [
         "zoom": 1.0,
         "boundary_shift": 0.0,
     },
+        {
+        "name": "testguildbolded",  # optional: cardAssets/guildImages/testguild_icons.png
+        "title": "Guild bolded long",
+        "title_font_size": 25,
+        "body": (
+            "**S a a a a a a  a a a a a a a a a  a a a a a a a a a  a a  a a a  a a a a aSa a a a a  a a a a a a a a a  a a a a a a a a a  a a  a a a  a a a**\n"
+            "S a a a a a a  a a a a a a a a a  a a a  a a a a a a  a a  a a a  a a a a a a Sa a a a  a a a a a a a a a  a a a a a a a a a  a a  a a a  a a a"
+        ),
+        "footer_left": "G",
+        "footer": "Guild",
+        "footer_right": "99",
+        "footer_font_size": 16,
+        "body_font_size": 18,
+
+        "resource": "fuel",
+        "raid": 2,
+
+        "render_scale": 2,
+        "allow_upscale": True,
+        "zoom": 1.0,
+        "boundary_shift": 0.0,
+    },
 ]
