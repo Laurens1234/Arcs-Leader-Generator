@@ -1386,12 +1386,12 @@ leaders = [
         "body_font_size": 18
     },
 
-    # # Defender
+    # # 
     # {
-    #     "name": "Defender",
+    #     "name": "Envoy",
     #     "abilities": (
-    #         "*Parley.* when defending in battle, after the attacker collects dice, you may discad a reource to force them to only roll skirmish dice instead.\n"
-    #         "*Soft.* If you use Parley, you cannot **tax** until the end of your next turn."
+    #         "*Parleyed.* When defending in battle, after the attacker collects dice, you may discard a resource to force them to only roll skirmish dice instead up to the number of fresh ships they have.\n"
+    #         "*Soft.* When defending in battle, before the attacker collects dice, if they have more attacking ships than you have defending ones, they may choose to take a resource from you ending the battle immidiatly."
     #     ),
     #     "resources": ["Weapon", "Psionic"],
     #     "setup": {
@@ -1406,8 +1406,8 @@ leaders = [
     # {
     #     "name": "Imposer",
     #     "abilities": (
-    #         "*Redistributive.* After you **tax** a city you control, one rival city in the same system gains a different extra resource of your choice.\n"
-    #         "*Short-sighted.* When you **tax** a city that is Loyal, gain 1 less resource."
+    #         "*Redistributive.* You may tax any city in a cluster where you control 2 systems.\n"
+    #         "*Short-sighted.* You cannot build buildings in systems adject to a system with another loyal building."
     #     ),
     #     "resources": ["Material", "Relic"],
     #     "setup": {
