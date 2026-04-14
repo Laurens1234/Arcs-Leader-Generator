@@ -1171,7 +1171,7 @@ leaders = [
         "name": "Wayfinder",
         "abilities": (
             "*Bridging.* You treat systems with a loyal building as adjacent.\n"
-            "*Tethered.* When you Catapult **move**, stop after 2 moves."
+            "*Anchored.* When you Catapult **move**, stop after 2 moves."
         ),
         "resources": ["Psionic", "Fuel"],
         "setup": {
@@ -1339,8 +1339,8 @@ leaders = [
     {
         "name": "Phantom",
         "abilities": (
-            "*.* When attacking in **battle**, you choose to ignore any {icon:dice_hit_black} you roll; at the end of the **battle** you may move any of your attacking ships once per ignored {icon:dice_hit_black}.\n"
-            "*.* ."
+            "*Spectral.* When attacking in **battle**, you may choose to ignore any {icon:dice_hit_black} you roll; at the end of the **battle** you may move any of your attacking ships once per ignored {icon:dice_hit_black}.\n"
+            "*Tethered.* You cannot move if you don't control the system you're in."
         ),
         "resources": ["Fuel", "Weapon"],
         "setup": {
@@ -1348,40 +1348,43 @@ leaders = [
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
         },
+        "body_font_size": 18,
+        "zoom": 1.15,
+        "boundary_shift": 0.00
+    },
+
+    
+    {
+        "name": "Harbormaster",
+        "abilities": (
+            "*Portwide.* When you **tax** a city, you may also tax all other cities in its system. When you **build**, you may also build at all other starports in its system. *(Even Rival ones!)*\n"
+            "*Uniform.* You cannot build 2 loyal buildings of different types in a system."
+        ),
+        "resources": ["Material", "Psionic"],
+        "setup": {
+            "A": {"ships": 3, "building": "starport"},
+            "B": {"ships": 3, "building": "none"},
+            "C": {"ships": 3, "building": "None"}
+        },
         "body_font_size": 18
     },
 
     # 
-    # {
-    #     "name": "",
-    #     "abilities": (
-    #         "*Imperious.* When you **tax** a city, you may also **tax** all other cities in its system. When you **build**, you may **build** at all other starports in its system.\n"
-    #         "*.* You cannot build 2 different loyal building types in a system."
-    #     ),
-    #     "resources": ["Material", "Weapon"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "starport"},
-    #         "B": {"ships": 3, "building": "none"},
-    #         "C": {"ships": 3, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
-
-    # # Hoarder
-    # {
-    #     "name": "Hoarder",
-    #     "abilities": (
-    #         "*Storing.* You may place any number of resources on this leader card. Each resource placed here has a raid cost of {icon:dice_key_black}.\n"
-    #         "*Static.* You cannot move resources from this card except when they are removed by a raid."
-    #     ),
-    #     "resources": ["Fuel", "Material"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
+    {
+        "name": "Investor",
+        "abilities": (
+            "*Capitalizing.* In setup, gain any 2 resources and place them on this card. This card holds any number of resources. Their raid cost is {icon:dice_key_black} each.\n"
+            "*Yielding.* When you **declare an ambition**, gain 1 resource of each type on this card.\n"
+            "*Diversified.* When you **tax**, dont gain a resource if its a type you have."
+        ),
+        "resources": ["", ""],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
 
     # # Defender
     # {
