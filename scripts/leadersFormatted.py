@@ -982,7 +982,7 @@ leaders = [
         "name": "Ambassador",
         "abilities": (
             "*Diplomatic.* When you **declare** **an** **ambition**, you may secure any number of times.\n"
-            "*Unauthorized.* You cannot **secure** unless an ambition has been declared."
+            "*Unauthorized.* You cannot **secure** unless an ambition is declared."
         ),
         "resources": ["Psionic", "Fuel"],
         "setup": {
