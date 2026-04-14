@@ -79,79 +79,107 @@ def create_lore_card(input_data):
         if isinstance(value, tuple):
             return tuple(int(v * render_scale) for v in value)
         return int(value * render_scale)
+    # Determine variant early so we can choose the card background
+    variant = (input_data.get("variant") or "").casefold()
 
-    # Load the lore frame to get card dimensions
-    lore_frame = Image.open(lore_frame_path).convert("RGBA")
-
-    if render_scale != 1:
-        lore_frame = lore_frame.resize(_s(lore_frame.size), Image.Resampling.LANCZOS)
-    card_width, card_height = lore_frame.size
-
-    # Create base canvas
-    base_img = Image.new("RGBA", (card_width, card_height), (0, 0, 0, 255))
-
-    # Load and paste lore image (top half of the card)
-    lore_image_path = os.path.join(lore_image_folder, f"{input_data['name']}.png")
-    try:
-        lore_img = Image.open(lore_image_path).convert("RGBA")
-
-        # Scale lore image to match card width, maintaining aspect ratio
-        target_width = card_width
-        aspect_ratio = lore_img.height / lore_img.width
-        target_height = int(target_width * aspect_ratio)
-
-        # Support optional zoom multiplier (like leaders). Values >1 crop sides/top; <1 letterbox.
-        zoom = input_data.get("zoom", 1.0)
+    # Load the lore frame to get card dimensions (or use Edifice background for eddifice variant)
+    if variant == "eddifice":
+        edifice_asset_path = os.path.join(base_path, "cardAssets", "Edifice.png")
         try:
-            zoom = float(zoom)
-        except Exception:
-            zoom = 1.0
-        target_width = max(1, int(target_width * zoom))
-        target_height = max(1, int(target_height * zoom))
+            edifice_img = Image.open(edifice_asset_path).convert("RGBA")
+            if render_scale != 1:
+                edifice_img = edifice_img.resize(_s(edifice_img.size), Image.Resampling.LANCZOS)
+            card_width, card_height = edifice_img.size
+            base_img = edifice_img.copy()
+        except FileNotFoundError:
+            print(f"Warning: Edifice asset not found at {edifice_asset_path}. Falling back to normal lore frame.")
+            lore_frame = Image.open(lore_frame_path).convert("RGBA")
+            if render_scale != 1:
+                lore_frame = lore_frame.resize(_s(lore_frame.size), Image.Resampling.LANCZOS)
+            card_width, card_height = lore_frame.size
+            base_img = Image.new("RGBA", (card_width, card_height), (0, 0, 0, 255))
+            variant = ""  # fallback to normal behavior
+    else:
+        lore_frame = Image.open(lore_frame_path).convert("RGBA")
+        if render_scale != 1:
+            lore_frame = lore_frame.resize(_s(lore_frame.size), Image.Resampling.LANCZOS)
+        card_width, card_height = lore_frame.size
+        base_img = Image.new("RGBA", (card_width, card_height), (0, 0, 0, 255))
 
-        if not allow_upscale:
-            max_w = lore_img.width * render_scale
-            max_h = lore_img.height * render_scale
-            if target_width > max_w or target_height > max_h:
-                target_width = min(target_width, max_w)
-                target_height = int(target_width * aspect_ratio)
-                print(
-                    f"Note: '{input_data['name']}' lore art is smaller than the frame width; "
-                    f"not upscaling to avoid blur. Set allow_upscale=True to keep it full-size."
-                )
-
-        lore_img = lore_img.resize((target_width, target_height), Image.Resampling.LANCZOS)
-
-        # Positioning: keep artwork bottom aligned to the text boundary by default.
-        # Optional `boundary_shift` behaves like leader cards: positive shifts move the boundary down.
-        image_bottom_y = int(card_height * 0.545)
-        shift = input_data.get("boundary_shift", 0.0)
+    # Load and paste lore image (top half of the card), skip for eddifice variant
+    if variant != "eddifice":
+        lore_image_path = os.path.join(lore_image_folder, f"{input_data['name']}.png")
         try:
-            shift = float(shift)
-        except Exception:
-            shift = 0.0
-        overlay_bottom_y = int(image_bottom_y * (1 + shift))
-        overlay_bottom_y = max(1, min(card_height - 1, overlay_bottom_y))
+            lore_img = Image.open(lore_image_path).convert("RGBA")
 
-        lore_x = (card_width - lore_img.width) // 2
-        lore_y = overlay_bottom_y - lore_img.height
+            # Scale lore image to match card width, maintaining aspect ratio
+            target_width = card_width
+            aspect_ratio = lore_img.height / lore_img.width
+            target_height = int(target_width * aspect_ratio)
 
-        base_img.paste(lore_img, (lore_x, lore_y), lore_img)
-        
-    except FileNotFoundError:
-        print(f"Warning: Lore image '{input_data['name']}.png' not found in loreImages folder. Proceeding without image.")
+            # Support optional zoom multiplier (like leaders). Values >1 crop sides/top; <1 letterbox.
+            zoom = input_data.get("zoom", 1.0)
+            try:
+                zoom = float(zoom)
+            except Exception:
+                zoom = 1.0
+            target_width = max(1, int(target_width * zoom))
+            target_height = max(1, int(target_height * zoom))
 
-    # Paste the lore frame on top
-    base_img.paste(lore_frame, (0, 0), lore_frame)
+            if not allow_upscale:
+                max_w = lore_img.width * render_scale
+                max_h = lore_img.height * render_scale
+                if target_width > max_w or target_height > max_h:
+                    target_width = min(target_width, max_w)
+                    target_height = int(target_width * aspect_ratio)
+                    print(
+                        f"Note: '{input_data['name']}' lore art is smaller than the frame width; "
+                        f"not upscaling to avoid blur. Set allow_upscale=True to keep it full-size."
+                    )
+
+            lore_img = lore_img.resize((target_width, target_height), Image.Resampling.LANCZOS)
+
+            # Positioning: keep artwork bottom aligned to the text boundary by default.
+            # Optional `boundary_shift` behaves like leader cards: positive shifts move the boundary down.
+            image_bottom_y = int(card_height * 0.545)
+            shift = input_data.get("boundary_shift", 0.0)
+            try:
+                shift = float(shift)
+            except Exception:
+                shift = 0.0
+            overlay_bottom_y = int(image_bottom_y * (1 + shift))
+            overlay_bottom_y = max(1, min(card_height - 1, overlay_bottom_y))
+
+            lore_x = (card_width - lore_img.width) // 2
+            lore_y = overlay_bottom_y - lore_img.height
+
+            base_img.paste(lore_img, (lore_x, lore_y), lore_img)
+        except FileNotFoundError:
+            print(f"Warning: Lore image '{input_data['name']}.png' not found in loreImages folder. Proceeding without image.")
+
+    # Paste the lore frame on top (skip for eddifice since edifice is the full background)
+    if variant != "eddifice":
+        base_img.paste(lore_frame, (0, 0), lore_frame)
 
     # Create drawing context
     draw = ImageDraw.Draw(base_img)
 
     # Load fonts
     try:
+        # Default sizes: preserve original lore card defaults
         title_font_size = input_data.get("title_font_size", 25)
         footer_font_size = input_data.get("footer_font_size", 14)
         body_font_size = input_data.get("body_font_size", 18)
+        # Increase sizes for edifice variant (twice as big)
+        if variant == "eddifice":
+            try:
+                title_font_size = int(title_font_size * 2)
+            except Exception:
+                title_font_size = title_font_size
+            try:
+                body_font_size = int(body_font_size * 2)
+            except Exception:
+                body_font_size = body_font_size
 
         title_font = ImageFont.truetype(custom_font_path, _s(title_font_size))
         footer_font = ImageFont.truetype(custom_font_path, _s(footer_font_size))
@@ -165,7 +193,18 @@ def create_lore_card(input_data):
         body_font_size = input_data.get("body_font_size", 18)
 
     # Text area dimensions (adjust these based on the lore frame layout)
-    text_margin = _s(40)
+    # Allow per-card override for text margins. Values are in logical pixels
+    # before scaling. If not provided, defaults are used. Edifice default is wider.
+    if input_data.get("text_margin") is not None:
+        try:
+            text_margin = _s(int(input_data.get("text_margin")))
+        except Exception:
+            text_margin = _s(40)
+    else:
+        if variant == "eddifice":
+            text_margin = _s(int(input_data.get("text_margin_eddifice", 48)))
+        else:
+            text_margin = _s(40)
     text_x0 = text_margin
     text_x1 = card_width - text_margin
     text_width = text_x1 - text_x0
@@ -173,12 +212,17 @@ def create_lore_card(input_data):
     # Title position (below the image area)
     text_y0 = int(card_height * 0.545)  # Start below the top half
     
+    # Determine text color (white for edifice variant)
+    text_color = "white" if variant == "eddifice" else "black"
+
     # Draw title text (centered)
     title_text = input_data.get('title', input_data['name'])
     title_bbox = draw.textbbox((0, 0), title_text, font=title_font)
     title_x = text_x0 + (text_width - (title_bbox[2] - title_bbox[0])) // 2
-    title_y = text_y0
-    draw.text((title_x, title_y), title_text, fill="black", font=title_font)
+    # Slightly raise the title (less downward offset); smaller for default, reduced for edifice
+    # For edifice variant, use a smaller downward offset so the title sits higher.
+    title_y = text_y0 + (_s(16) if variant == "eddifice" else _s(0))
+    draw.text((title_x, title_y), title_text, fill=text_color, font=title_font)
 
     # Calculate line_y for body text positioning (no line drawn)
     line_y = title_y + (title_bbox[3] - title_bbox[1]) + _s(12)
@@ -219,7 +263,6 @@ def create_lore_card(input_data):
         else:
             candidates.append(f"arcs dev_icon {normalized}.png")
             candidates.append(f"{normalized}.png")
-
         for filename in candidates:
             path = os.path.join(icon_assets_dir, filename)
             if os.path.exists(path):
@@ -230,7 +273,6 @@ def create_lore_card(input_data):
         key = (icon_spec, int(target_height_px))
         if key in _icon_cache:
             return _icon_cache[key]
-
         path = _resolve_icon_path(icon_spec)
         if path is None:
             _icon_cache[key] = None
@@ -473,7 +515,7 @@ def create_lore_card(input_data):
 
                 word_bbox = draw.textbbox((0, 0), payload, font=font_to_use)
                 word_width = word_bbox[2] - word_bbox[0]
-                draw.text((current_x, current_y + adjust_y), payload, font=font_to_use, fill="black")
+                draw.text((current_x, current_y + adjust_y), payload, font=font_to_use, fill=text_color)
                 current_x += word_width
 
             if trailing:
@@ -481,7 +523,7 @@ def create_lore_card(input_data):
                 trailing_width = trailing_bbox[2] - trailing_bbox[0]
                 # Trailing punctuation is outside the rich marker (e.g. "**tax**,")
                 # so it should use the normal font *and* the normal baseline.
-                draw.text((current_x, current_y), trailing, font=font, fill="black")
+                draw.text((current_x, current_y), trailing, font=font, fill=text_color)
                 current_x += trailing_width
 
             space_width = draw.textbbox((0, 0), " ", font=font)[2]
@@ -491,7 +533,9 @@ def create_lore_card(input_data):
 
     # Draw body text
     body_text = input_data.get('body', '')
-    current_y = line_y + _s(18)
+    # Move body a bit lower; edifice variant gets a larger offset
+    # Increase edifice offset slightly so its body sits lower on the background
+    current_y = line_y + (_s(96) if variant == "eddifice" else _s(24))
     for line in wrap_text(body_text, body_font, italic_font, bold_font, bolditalic_font, text_width):
         # Support explicit vertical-space token in the body: "{vspace:N}"
         # Example: "{vspace:6}" adds _s(6) pixels of vertical space. The token
@@ -512,27 +556,64 @@ def create_lore_card(input_data):
 
         current_y = draw_rich_text(draw, line, body_font, italic_font, bold_font, bolditalic_font, text_x0, current_y, text_width, _s(22))
 
-    # Load and paste footer image on top of everything
-    try:
-        footer_img = Image.open(footer_image_path).convert("RGBA")
-        if render_scale != 1:
-            footer_img = footer_img.resize(_s(footer_img.size), Image.Resampling.LANCZOS)
-        # Position footer at the bottom center
-        footer_x = (card_width - footer_img.width) // 2
-        footer_y = card_height - footer_img.height
-        base_img.paste(footer_img, (footer_x, footer_y), footer_img)
-        # Need to recreate draw context after pasting
-        draw = ImageDraw.Draw(base_img)
-    except FileNotFoundError:
-        print(f"Warning: Footer image not found. Proceeding without footer image.")
+    # Variant-specific footer/edifice handling
+    variant = (input_data.get("variant") or "").casefold()
 
-    # Draw footer text (centered at bottom, on top of footer image)
-    footer_left = input_data.get('footer_left', '')
-    footer_center = input_data.get('footer', '')  # Keep 'footer' as center for backwards compatibility
-    footer_right = input_data.get('footer_right', '')
-    
-    footer_y = card_height - _s(45)  # Position near bottom
-    footer_margin = _s(45)  # Margin from edges
+    if variant != "eddifice":
+        # Load and paste footer image on top of everything
+        try:
+            footer_img = Image.open(footer_image_path).convert("RGBA")
+            if render_scale != 1:
+                footer_img = footer_img.resize(_s(footer_img.size), Image.Resampling.LANCZOS)
+            # Position footer at the bottom center
+            footer_x = (card_width - footer_img.width) // 2
+            footer_y = card_height - footer_img.height
+            base_img.paste(footer_img, (footer_x, footer_y), footer_img)
+            # Need to recreate draw context after pasting
+            draw = ImageDraw.Draw(base_img)
+        except FileNotFoundError:
+            print(f"Warning: Footer image not found. Proceeding without footer image.")
+
+        # Draw footer text (centered at bottom, on top of footer image)
+        footer_left = input_data.get('footer_left', '')
+        footer_center = input_data.get('footer', '')  # Keep 'footer' as center for backwards compatibility
+        footer_right = input_data.get('footer_right', '')
+        
+        footer_y = card_height - _s(45)  # Position near bottom
+        footer_margin = _s(45)  # Margin from edges
+    else:
+        # Edifice variant: no footer at bottom; draw number in top-right on the Edifice background
+        footer_left = input_data.get('footer_left', '')
+        footer_center = input_data.get('footer', '')
+        footer_right = input_data.get('footer_right', '')
+        footer_y = card_height - _s(45)  # still define for compatibility with helpers
+        footer_margin = _s(45)
+
+        draw = ImageDraw.Draw(base_img)
+        # Prefer explicit edifice field `eddifice_top_right`; fall back to `footer_right` for compatibility
+        ed_number = str(input_data.get('eddifice_top_right', input_data.get('footer_right', '')))
+        if ed_number:
+            try:
+                num_font_size = input_data.get('ed_number_font_size', 60)
+                num_font = ImageFont.truetype(custom_font_path, _s(num_font_size))
+            except Exception:
+                num_font = footer_font
+
+            num_bbox = draw.textbbox((0, 0), ed_number, font=num_font)
+            num_w = num_bbox[2] - num_bbox[0]
+            num_h = num_bbox[3] - num_bbox[1]
+            # Place near top-right with increased size and padding; no dark background
+            padding = _s(96)
+            center_x = card_width - padding
+            center_y = _s(72)
+            # Use bbox bearings so glyphs with different left bearings (e.g. '1') center properly.
+            num_x = int(center_x - (num_bbox[0] + num_bbox[2]) / 2)
+            num_y = int(center_y - (num_bbox[1] + num_bbox[3]) / 2)
+            draw = ImageDraw.Draw(base_img)
+            try:
+                draw.text((num_x, num_y), ed_number, font=num_font, fill="white", stroke_width=_s(1), stroke_fill="black")
+            except TypeError:
+                draw.text((num_x, num_y), ed_number, fill="white", font=num_font)
 
     def _text_width(text: str) -> int:
         bbox = draw.textbbox((0, 0), text, font=footer_font)
@@ -555,26 +636,28 @@ def create_lore_card(input_data):
         target_center = right_edge - single_w / 2
         return int(round(target_center - _text_width(text) / 2))
     
-    # Draw left footer text (black)
-    if footer_left:
-        x = footer_margin if len(str(footer_left)) <= 1 else _x_centered_like_one_char_left(str(footer_left))
-        draw.text((x, footer_y), str(footer_left), fill="black", font=footer_font)
-    
-    # Draw center footer text (white)
-    if footer_center:
-        footer_bbox = draw.textbbox((0, 0), footer_center, font=footer_font)
-        footer_width = footer_bbox[2] - footer_bbox[0]
-        footer_x = (card_width - footer_width) // 2
-        draw.text((footer_x, footer_y), footer_center, fill="white", font=footer_font)
-    
-    # Draw right footer text (black)
-    if footer_right:
-        footer_right_str = str(footer_right)
-        if len(footer_right_str) <= 1:
-            footer_x = card_width - footer_margin - _text_width(footer_right_str) + _s(2)
-        else:
-            footer_x = _x_centered_like_one_char_right(footer_right_str)
-        draw.text((footer_x, footer_y), footer_right_str, fill="black", font=footer_font)
+    # Draw footer texts only for non-edifice variant
+    if variant != "eddifice":
+        # Draw left footer text (black)
+        if footer_left:
+            x = footer_margin if len(str(footer_left)) <= 1 else _x_centered_like_one_char_left(str(footer_left))
+            draw.text((x, footer_y), str(footer_left), fill="black", font=footer_font)
+        
+        # Draw center footer text (white)
+        if footer_center:
+            footer_bbox = draw.textbbox((0, 0), footer_center, font=footer_font)
+            footer_width = footer_bbox[2] - footer_bbox[0]
+            footer_x = (card_width - footer_width) // 2
+            draw.text((footer_x, footer_y), footer_center, fill="white", font=footer_font)
+        
+        # Draw right footer text (black)
+        if footer_right:
+            footer_right_str = str(footer_right)
+            if len(footer_right_str) <= 1:
+                footer_x = card_width - footer_margin - _text_width(footer_right_str) + _s(2)
+            else:
+                footer_x = _x_centered_like_one_char_right(footer_right_str)
+            draw.text((footer_x, footer_y), footer_right_str, fill="black", font=footer_font)
 
     # Final crop (same as leader cards for consistency)
     def final_crop(image, bleed_mm=3, card_width_mm=70, card_height_mm=120):
@@ -588,7 +671,11 @@ def create_lore_card(input_data):
     # Ensure results directory exists
     os.makedirs(result_path, exist_ok=True)
 
-    final_img = final_crop(base_img)
+    # For edifice variant, do not remove bleed by cropping — keep full background intact.
+    if variant == "eddifice":
+        final_img = base_img
+    else:
+        final_img = final_crop(base_img)
 
     # Ensure final output matches desired card dimensions.
     # Target logical size is 744x1039 at render_scale=2. Scale proportionally for other render_scale values.

@@ -268,3 +268,21 @@ lore_cards = [
     # },
 
 ]
+
+# Example edifice variant entry (placed at bottom)
+lore_cards.append({
+    "name": "eddifice_example",
+    "title": "Edifice Example",
+    "title_font_size": 22,
+    "body": (
+        "**When Discovered:** Place another Stone Road marker at another random planet. If it is out of play, it becomes in play.\n"
+        "\n"
+        "The Stone Road systems are adjacent."
+    ),
+    "eddifice_top_right": "6",
+    "body_font_size": 18,
+    "variant": "eddifice",
+    "render_scale": 2,
+    "zoom": 1.0,
+    "boundary_shift": 0.0,
+})
