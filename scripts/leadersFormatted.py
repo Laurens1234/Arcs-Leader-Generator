@@ -1361,7 +1361,7 @@ leaders = [
             "*Portwide.* When you **tax** a city, you may also tax all other cities in its system. When you **build** at a starport, you may also build at all other starports in its system. *(Even Rival ones!)*\n"
             "*Methodical.* You cannot have 2 loyal buildings of different types on a planet"
         ),
-        "resources": ["Material", "Psionic"],
+        "resources": ["Material", "Fuel"],
         "setup": {
             "A": {"ships": 3, "building": "starport"},
             "B": {"ships": 3, "building": "none"},
