@@ -1227,12 +1227,12 @@ leaders = [
         "body_font_size": 18
     },
 
-    # Tactician
+    # 
     {
-        "name": "Tactician",
+        "name": "Schemer",
         "abilities": (
-            "*Calculated.* After you **influence** a card, you may move 1 of your agents on a card to an different card.\n"
-             "*Wearied.* In **clean** **up**, return all your agents on 1 Court card."
+            "*Manipulative.* After you **influence**, you may move 1 loyal agent on a card to a different card.\n"
+             "*Compromised.* In **clean** **up**, return all your agents from a card where you have at least 1 loyal agent."
         ), 
         "resources": ["Psionic", "Fuel"],
         "setup": {
@@ -1240,7 +1240,8 @@ leaders = [
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
         },
-        "body_font_size": 18
+        "body_font_size": 18,
+        "zoom": 1.15
     },
 
     # Hydra
@@ -1386,21 +1387,21 @@ leaders = [
         "body_font_size": 18
     },
 
-    # 
-    {
-        "name": "Envoy",
-        "abilities": (
-            "*Parleyed.* When defending in battle, after the attacker collects dice, you may discard a resource to force them to replace all their collected dice with skirmish dice and remove all others.\n"
-            "*Soft.* When defending in battle, before the attacker collects dice, if they have more attacking ships than you have defending ones, they may choose to take a resource from you ending the battle immediately."
-        ),
-        "resources": ["Fuel", "Psionic"],
-        "setup": {
-            "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "starport"},
-            "C": {"ships": 2, "building": "None"}
-        },
-        "body_font_size": 18
-    },
+    # # 
+    # {
+    #     "name": "Envoy",
+    #     "abilities": (
+    #         "*Parleyed.* When defending in battle, after the attacker collects dice, you may discard a resource to force them to replace all their collected dice with skirmish dice and remove all others.\n"
+    #         "*Soft.* When defending in battle, before the attacker collects dice, if they have more attacking ships than you have defending ones, they may choose to take a resource from you ending the battle immediately."
+    #     ),
+    #     "resources": ["Fuel", "Psionic"],
+    #     "setup": {
+    #         "A": {"ships": 3, "building": "city"},
+    #         "B": {"ships": 3, "building": "starport"},
+    #         "C": {"ships": 2, "building": "None"}
+    #     },
+    #     "body_font_size": 18
+    # },
 
     # # Imposer
     # {
