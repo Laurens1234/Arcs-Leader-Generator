@@ -1357,7 +1357,7 @@ leaders = [
     {
         "name": "Harbormaster",
         "abilities": (
-            "*Portwide.* When you **tax** a city, you may also tax all other cities in its system. When you **build**, you may also build at all other starports in its system. *(Even Rival ones!)*\n"
+            "*Portwide.* When you **tax** a city, you may also tax all other cities in its system. When you **build** at a starport, you may also build at all other starports in its system. *(Even Rival ones!)*\n"
             "*Uniform.* You cannot build 2 loyal buildings of different types in a system."
         ),
         "resources": ["Material", "Psionic"],
