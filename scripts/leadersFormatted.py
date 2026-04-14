@@ -1407,7 +1407,7 @@ leaders = [
     {
         "name": "Syndic",
         "abilities": (
-            "*Networked.* You may tax any city in a cluster where you control 2 systems.\n"
+            "*Networked.* You can **tax** any city in a cluster where you control 2 systems.\n"
             "*Compartmental.* You cannot **build** buildings in systems adject to a system with another loyal building."
         ),
         "resources": ["Psionic", "Material"],
