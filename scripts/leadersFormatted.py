@@ -1419,36 +1419,37 @@ leaders = [
         "body_font_size": 18
     },
 
-    # 
-    # {
-    #     "name": "Solicitor",
-    #     "abilities": (
-    #         "*Entreating.* When you **declare** **an** **ambition**, you may ask a Rival for a suit. If they have a card of that, suit they must give one to you. After taking that card, give that Rival 1 card.\n"
-    #         "*Compelled.* When leading, you must **declare** **an** **ambition**."
-    #     ),
-    #     "resources": ["Relic", "Fuel"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
-    # Reroll-focused leaders
-    # {
-    #     "name": "",
-    #     "abilities": (
-    #         "*.* Before you roll dice in battle, you must say a number. You must reroll that many dice unless you cannot.\n"
-    #         "*.* You cannot not reroll dice without {icon:dice_hit_black} on them."
-    #     ),
-    #     "resources": ["Material", "Weapon"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
+    
+    {
+        "name": "Sollicitor",
+        "abilities": (
+            "*Entreating.* When you **declare** **an** **ambition**, you may ask a Rival for a suit. If they have a card of that suit, they must give you the highest card of that suit they have. If they gave you one, give one back.\n"
+            "*Compelled.* When you lead, you must **declare** **an** **ambition**."
+        ),
+        "resources": ["Relic", "Fuel"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
+    
+    {
+        "name": "Seraph",
+        "abilities": (
+            "*Celestial.* After you collect dice in **battle**, say a number. Reroll that many dice unless you cannot.\n"
+            "*Pious.* You can only reroll dice with {icon:dice_hit_black} or {icon:dice_building_hit_black} on them."
+        ),
+        "resources": ["Material", "Weapon"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18,
+        "zoom": 1.15
+    },
     # {
     #     "name": "Forgemaster",
     #     "abilities": (
