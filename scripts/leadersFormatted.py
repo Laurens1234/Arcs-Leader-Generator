@@ -1391,7 +1391,7 @@ leaders = [
     #     "name": "Envoy",
     #     "abilities": (
     #         "*Parleyed.* When defending in battle, after the attacker collects dice, you may discard a resource to force them to only roll skirmish dice instead up to the number of fresh ships they have.\n"
-    #         "*Soft.* When defending in battle, before the attacker collects dice, if they have more attacking ships than you have defending ones, they may choose to take a resource from you ending the battle immidiatly."
+    #         "*Soft.* When defending in battle, before the attacker collects dice, if they have more attacking ships than you have defending ones, they may choose to take a resource from you ending the battle immediately."
     #     ),
     #     "resources": ["Weapon", "Psionic"],
     #     "setup": {
@@ -1422,7 +1422,7 @@ leaders = [
     # {
     #     "name": "Solicitor",
     #     "abilities": (
-    #         "*Demanding.* When you **declare** **an** **ambition**, you may ask a Rival for a suit. If they have a card of that suit they must give one to you. After taking that card, give that Rival 1 card\n"
+    #         "*Demanding.* When you **declare** **an** **ambition**, you may ask a Rival for a suit. If they have a card of that suit they must give one to you. After taking that card, give that Rival 1 card.\n"
     #         "*.* ."
     #     ),
     #     "resources": ["Psionic", "Weapon"],
@@ -1437,10 +1437,10 @@ leaders = [
     # {
     #     "name": "",
     #     "abilities": (
-    #         "*.* After you roll dice in battle, you may discard 1 resource to reroll any number of your dice.\n"
-    #         "*.* ."
+    #         "*.* Before you roll dice in battle, you must say a number. You must reroll that many dice unless you cannot.\n"
+    #         "*.* You cannot not reroll dice with {icon:dice_hit_black} on them."
     #     ),
-    #     "resources": ["Fuel", "Relic"],
+    #     "resources": ["Material", "Weapon"],
     #     "setup": {
     #         "A": {"ships": 3, "building": "city"},
     #         "B": {"ships": 3, "building": "starport"},
@@ -1465,7 +1465,7 @@ leaders = [
     # {
     #     "name": "Tactician",
     #     "abilities": (
-    #         "*Calculated.* When defending in **battle**, before the attacker collects dice, you may roll a die, resolve like attacking in battle.\n"
+    #         "*Calculated.* When defending in **battle**, before the attacker collects dice, you may roll a die, resolve like you attackedin battle.\n"
     #         "*Ponderous.* ."
     #     ),
     #     "resources": ["Material", "Weapon"],
