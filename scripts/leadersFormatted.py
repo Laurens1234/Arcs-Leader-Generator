@@ -1324,8 +1324,8 @@ leaders = [
     {
         "name": "Crusader",
         "abilities": (
-            "*Zealous.* After you destroy a city, also **secure** any card with no Rival agents on it matching that city's type.\n"
-            "*Dogmatic.* You cannot **influence** a card with no agents if a Rival can secure a card with any of your Loyal agents."
+            "*Zealous.* After you destroy a city, also **secure** any card with no or only Lotal agents on it matching that city's type.\n"
+            "*Dogmatic.* You cannot **influence** a card with no agents on it if a Rival can secure a card with any of your Loyal agents on it."
         ),
         "resources": ["Weapon", "Material"],
         "setup": {
@@ -1373,7 +1373,7 @@ leaders = [
     {
         "name": "Investor",
         "abilities": (
-            "*Capitalizing.* In setup, gain any 2 resources and place them on this card. This card holds any number of resources. Their raid cost is {icon:dice_key_black} each.\n"
+            "*Capitalizing.* In **setup**, gain any 2 resources, place them on this card. This card holds any number of resources. Their raid cost is {icon:dice_key_black} each.\n"
             "*Yielding.* When you **declare an ambition**, gain 1 resource of each type on this card.\n"
             "*Diversified.* When you **tax**, dont gain a resource if its a type you have."
         ),
