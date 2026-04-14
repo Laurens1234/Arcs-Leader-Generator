@@ -1339,7 +1339,7 @@ leaders = [
     {
         "name": "Phantom",
         "abilities": (
-            "*Spectral.* When attacking in **battle**, you may choose to ignore any {icon:dice_hit_black} you roll; at the end of the **battle** you may move any of your attacking ships once per ignored {icon:dice_hit_black}.\n"
+            "*Spectral.* When attacking in **battle**, you may choose to ignore any {icon:dice_hit_black} you roll; at the end of the **battle**, you may move any of your attacking ships once per ignored {icon:dice_hit_black}.\n"
             "*Tethered.* You cannot **move** if you don't control the system you're in."
         ),
         "resources": ["Fuel", "Weapon"],
@@ -1386,21 +1386,21 @@ leaders = [
         "body_font_size": 18
     },
 
-    # # 
-    # {
-    #     "name": "Envoy",
-    #     "abilities": (
-    #         "*Parleyed.* When defending in battle, after the attacker collects dice, you may discard a resource to force them to only roll skirmish dice instead up to the number of fresh ships they have.\n"
-    #         "*Soft.* When defending in battle, before the attacker collects dice, if they have more attacking ships than you have defending ones, they may choose to take a resource from you ending the battle immediately."
-    #     ),
-    #     "resources": ["Weapon", "Psionic"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
+    # 
+    {
+        "name": "Envoy",
+        "abilities": (
+            "*Parleyed.* When defending in battle, after the attacker collects dice, you may discard a resource to force them to replace all their collected dice with skirmish dice and remove all others.\n"
+            "*Soft.* When defending in battle, before the attacker collects dice, if they have more attacking ships than you have defending ones, they may choose to take a resource from you ending the battle immediately."
+        ),
+        "resources": ["Fuel", "Psionic"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
 
     # # Imposer
     # {
