@@ -1324,7 +1324,7 @@ leaders = [
     {
         "name": "Crusader",
         "abilities": (
-            "*Zealous.* After you destroy a city, also **secure** any card with no or only Lotal agents on it matching that city's type.\n"
+            "*Zealous.* After you destroy a city, also **secure** any card with no or only Loyal agents on it matching that city's type.\n"
             "*Dogmatic.* You cannot **influence** a card with no agents on it if a Rival can secure a card with any of your Loyal agents on it."
         ),
         "resources": ["Weapon", "Material"],
