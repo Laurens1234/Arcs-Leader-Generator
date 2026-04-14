@@ -1439,7 +1439,7 @@ leaders = [
         "name": "Seraph",
         "abilities": (
             "*Celestial.* After you collect dice in **battle**, say a number. Reroll that many dice unless you cannot.\n"
-            "*Pious.* You can only reroll dice with {icon:dice_hit_black} or {icon:dice_building_hit_black} on them."
+            "*Ardoured.* You can only reroll dice with {icon:dice_hit_black} or {icon:dice_building_hit_black} on them."
         ),
         "resources": ["Material", "Weapon"],
         "setup": {
