@@ -178,7 +178,7 @@ leaders = [
     {
         "name": "Terrestrial",
         "abilities": (
-            "*Symbiotic.* You may **build** in adjacent systems with no Rival pieces.\n"
+            "*Symbiotic.* You may build in adjacent systems with no Rival pieces.\n"
             "*Fertile.* Gain 1 Material when you **build** a starport; gain 1 matching resource when you **build** a city.\n"
             "*Sprouting.* When you **declare** **an** **ambition**, replace any building you control with a ship.\n"
             "*Rooted.* You cannot **battle** in clusters where you have no buildings."
@@ -981,7 +981,7 @@ leaders = [
     {
         "name": "Ambassador",
         "abilities": (
-            "*Diplomatic.* When you **declare** **an** **ambition**, you may **secure** any number of times.\n"
+            "*Diplomatic.* When you **declare** **an** **ambition**, you may secure any number of times.\n"
             "*Unauthorized.* You cannot **secure** unless an ambition has been declared."
         ),
         "resources": ["Psionic", "Fuel"],
@@ -1340,7 +1340,7 @@ leaders = [
         "name": "Phantom",
         "abilities": (
             "*Spectral.* When attacking in **battle**, you may choose to ignore any {icon:dice_hit_black} you roll; at the end of the **battle** you may move any of your attacking ships once per ignored {icon:dice_hit_black}.\n"
-            "*Tethered.* You cannot move if you don't control the system you're in."
+            "*Tethered.* You cannot **move** if you don't control the system you're in."
         ),
         "resources": ["Fuel", "Weapon"],
         "setup": {
@@ -1358,7 +1358,7 @@ leaders = [
         "name": "Harbormaster",
         "abilities": (
             "*Portwide.* When you **tax** a city, you may also tax all other cities in its system. When you **build** at a starport, you may also build at all other starports in its system. *(Even Rival ones!)*\n"
-            "*Uniform.* You cannot build 2 loyal buildings of different types in a system."
+            "*Methodical.* You cannot have 2 loyal buildings of different types on a planet"
         ),
         "resources": ["Material", "Psionic"],
         "setup": {
@@ -1375,7 +1375,7 @@ leaders = [
         "abilities": (
             "*Capitalizing.* In **setup**, gain any 2 resources, place them on this card. This card holds any number of resources. Their raid cost is {icon:dice_key_black} each.\n"
             "*Yielding.* When you **declare an ambition**, gain 1 resource of each type on this card.\n"
-            "*Diversified.* When you **tax**, dont gain a resource if its a type you have."
+            "*Diversified.* When you **tax**, dont gain a resource if you already have a resource of that type."
         ),
         "resources": ["", ""],
         "setup": {
