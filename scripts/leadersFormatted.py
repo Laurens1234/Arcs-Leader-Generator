@@ -1387,59 +1387,59 @@ leaders = [
         "body_font_size": 18
     },
 
-    # # 
-    # {
-    #     "name": "Envoy",
-    #     "abilities": (
-    #         "*Parleyed.* When defending in battle, after the attacker collects dice, you may discard a resource to force them to replace all their collected dice with skirmish dice and remove all others.\n"
-    #         "*Soft.* When defending in battle, before the attacker collects dice, if they have more attacking ships than you have defending ones, they may choose to take a resource from you ending the battle immediately."
-    #     ),
-    #     "resources": ["Fuel", "Psionic"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
+    # 
+    {
+        "name": "Envoy",
+        "abilities": (
+            "*Parleyed.* When defending in **battle**, after the attacker collects dice, you may discard 1 resource. If you do, the attacker can replace any collected dice with skirmish dice and cannot roll any other types.\n"
+            "*Soft.* When defending in **battle**, before the attacker collects dice, if the attacker outnumbers you, they may steal 1 resource from you to end the battle immediately."
+        ),
+        "resources": ["Fuel", "Psionic"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18
+    },
 
-    # # Imposer
-    # {
-    #     "name": "Imposer",
-    #     "abilities": (
-    #         "*Redistributive.* You may tax any city in a cluster where you control 2 systems.\n"
-    #         "*Short-sighted.* You cannot build buildings in systems adject to a system with another loyal building."
-    #     ),
-    #     "resources": ["Material", "Relic"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
+    # 
+    {
+        "name": "Syndic",
+        "abilities": (
+            "*Networked.* You may tax any city in a cluster where you control 2 systems.\n"
+            "*Compartmental.* You cannot **build** buildings in systems adject to a system with another loyal building."
+        ),
+        "resources": ["Psionic", "Material"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "None"},
+            "C": {"ships": 3, "building": "None"}
+        },
+        "body_font_size": 18
+    },
 
-    # # Solicitor
+    # 
     # {
     #     "name": "Solicitor",
     #     "abilities": (
-    #         "*Demanding.* When you **declare** **an** **ambition**, you may ask a Rival for a suit. If they have a card of that suit they must give one to you. After taking that card, give that Rival 1 card.\n"
-    #         "*.* ."
+    #         "*Entreating.* When you **declare** **an** **ambition**, you may ask a Rival for a suit. If they have a card of that, suit they must give one to you. After taking that card, give that Rival 1 card.\n"
+    #         "*Compelled.* When leading, you must **declare** **an** **ambition**."
     #     ),
-    #     "resources": ["Psionic", "Weapon"],
+    #     "resources": ["Relic", "Fuel"],
     #     "setup": {
     #         "A": {"ships": 3, "building": "city"},
     #         "B": {"ships": 3, "building": "starport"},
     #         "C": {"ships": 2, "building": "None"}
     #     },
     #     "body_font_size": 18
-    # }
+    # },
     # Reroll-focused leaders
     # {
     #     "name": "",
     #     "abilities": (
     #         "*.* Before you roll dice in battle, you must say a number. You must reroll that many dice unless you cannot.\n"
-    #         "*.* You cannot not reroll dice with {icon:dice_hit_black} on them."
+    #         "*.* You cannot not reroll dice without {icon:dice_hit_black} on them."
     #     ),
     #     "resources": ["Material", "Weapon"],
     #     "setup": {
