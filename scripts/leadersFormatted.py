@@ -1391,7 +1391,7 @@ leaders = [
     {
         "name": "Envoy",
         "abilities": (
-            "*Parleyed.* When defending in **battle**, after the attacker collects dice, you may discard 1 resource. If you do, the attacker can replace any collected dice with skirmish dice and cannot roll any other types.\n"
+            "*Parleyed.* After *Soft*, you may discard a resource, if you do, the attacker can only collect Skirmish dice.\n"
             "*Soft.* When defending in **battle**, before the attacker collects dice, if the attacker outnumbers you, they may steal 1 resource from you to end the battle immediately."
         ),
         "resources": ["Fuel", "Psionic"],
@@ -1423,7 +1423,7 @@ leaders = [
     {
         "name": "Sollicitor",
         "abilities": (
-            "*Entreating.* When you **declare** **an** **ambition**, you may ask a Rival for a suit. If they have a card of that suit, they must give you the highest card of that suit they have. If they gave you one, give one back.\n"
+            "*Entreating.* When you **declare** **an** **ambition**, you may ask a Rival for a suit, they must give you the highest numbered card of that suit they have. If they did, give them an action card back.\n"
             "*Compelled.* When you lead, you must **declare** **an** **ambition**."
         ),
         "resources": ["Relic", "Fuel"],
@@ -1479,28 +1479,28 @@ leaders = [
     #     "body_font_size": 18
     # },
     # # Dice-mechanic leaders (one per requested mechanic)
-    {
-        "name": "Setmaker",
-        "abilities": (  
-            "*Jackpot.* When you roll only skirmish dice, if all of them hit gain the reward of the amount you rolled and all lower ones:"
-            "*1: damage a defending ship (1/2)"
-            "*2: gain a resource matching the system (1/4)"
-            "*3: all your hits count as keys instead (1/8)"
-            "*4: (1/16)"
-            "*5: all dice hit and roll again (1/32)"
-            "*6: deal 1 extra hit (1/2)"
-            "* Any amount of times in **battle**, you may damage and attacking ship to reroll a dice, then increase its cost by 1 this battle."
-            "You can only collect Skirmish dice."
-            "At the end of each battle, deal self hits equal to the amount of dice that missed."
-            ),
-        "resources": ["Material", "Fuel"],
-        "setup": {
-            "A": {"ships": 3, "building": "city"},
-            "B": {"ships": 3, "building": "starport"},
-            "C": {"ships": 2, "building": "None"}
-        },
-        "body_font_size": 18
-    },
+    # {
+    #     "name": "Setmaker",
+    #     "abilities": (  
+    #         "*Jackpot.* When you roll only skirmish dice, if all of them hit gain the reward of the amount you rolled and all lower ones:\n"
+    #         "1: damage a defending ship (1/2)\n"
+    #         "2: gain a resource matching the system (1/4)\n"
+    #         "3: all your hits count as keys instead (1/8)\n"
+    #         "4: (1/16)\n"
+    #         "5: all dice hit and roll again (1/32)\n"
+    #         "6: Destroy all defending ships\n"
+    #         "Any amount of times in **battle**, you may damage and attacking ship to reroll a dice, then increase its cost by 1 this battle.\n"
+    #         "You can only collect Skirmish dice.\n"
+    #         "At the end of each **battle**, deal self hits equal to the amount of dice that missed.\n"
+    #         ),
+    #     "resources": ["Material", "Fuel"],
+    #     "setup": {
+    #         "A": {"ships": 3, "building": "city"},
+    #         "B": {"ships": 3, "building": "starport"},
+    #         "C": {"ships": 2, "building": "None"}
+    #     },
+    #     "body_font_size": 12.7
+    # },
     # {
     #     "name": "Volley",
     #     "abilities": (
