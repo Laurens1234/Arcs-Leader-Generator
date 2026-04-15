@@ -295,7 +295,7 @@ leaders = [
     {
         "name": "Gambler",
         "abilities": (
-            "*Cunning.* You may **pass** the initiative to any player, then guess a suit. If they have it, they must play it, and the card you play this round lets you take twice as many actions.\n"
+            "*Cunning.* You may **pass** the initiative to any player, then guess a suit. If they have it, they must play it, and the card you play this round lets you take two extra actions.\n"
             "*Compulsive.* You must **pass** the initiative the first time you have it each chapter."
         ),
         "resources": ["Weapon", "Psionic"],
@@ -1140,7 +1140,7 @@ leaders = [
     {
         "name": "Enforcer",
         "abilities": (
-            "*Mandating.* When you **declare** **an** **ambition**, take an action on your played card twice. *(Show* *it* *if* *you* *copied.)*\n"
+            "*Mandating.* When you **declare** **an** **ambition**, take an action on your played card twice. (Show it if you copied.)\n"
             "*Unpopular.* You cannot **influence** if no ambitions have been declared."
         ),
         "resources": ["Relic", "Fuel"],
