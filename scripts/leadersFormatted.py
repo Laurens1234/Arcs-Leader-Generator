@@ -468,7 +468,7 @@ leaders = [
         "name": "Beggar",
         "abilities": (
             "*Frugal.* If you start your **Prelude** with no resources and no Guild cards, gain **any** resource.\n"
-            "*Communal.* If you start your turn with any resources, discard a resource or card."
+            "*Communal.* If you start your turn with any resources, discard a resource or any card."
         ),
         "resources": ["", ""],
         "setup": {
