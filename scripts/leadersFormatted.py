@@ -1376,7 +1376,7 @@ leaders = [
         "abilities": (
             "*Capitalizing.* In **setup**, gain any 2 resources, place them on this card. This card holds any number of resources. Their raid cost is {icon:dice_key_black} each.\n"
             "*Yielding.* When you **declare an ambition**, gain 1 resource of each type on this card.\n"
-            "*Diversified.* When you **tax**, dont gain a resource if you already have a resource of that type."
+            "*Diversified.* When you **tax**, don't gain a resource if you already have a resource of that type."
         ),
         "resources": ["", ""],
         "setup": {
@@ -1408,7 +1408,7 @@ leaders = [
         "name": "Syndic",
         "abilities": (
             "*Networked.* You can **tax** any city in a cluster where you control 2 systems.\n"
-            "*Compartmental.* You cannot **build** buildings in systems adject to a system with another loyal building."
+            "*Compartmental.* You cannot **build** buildings in systems adjecent to a system with another loyal building."
         ),
         "resources": ["Psionic", "Material"],
         "setup": {
@@ -1439,7 +1439,7 @@ leaders = [
         "name": "Seraph",
         "abilities": (
             "*Celestial.* After you collect dice in **battle**, say a number. You must reroll that many.\n"
-            "*Ardoured.* You can only reroll dice with {icon:dice_hit_black} or {icon:dice_building_hit_black} on them."
+            "*Ardent.* You can only reroll dice with {icon:dice_hit_black} or {icon:dice_building_hit_black} on them."
         ),
         "resources": ["Material", "Weapon"],
         "setup": {
@@ -1450,6 +1450,22 @@ leaders = [
         "body_font_size": 18,
         "zoom": 1.15
     },
+    {
+        "name": "Paragon",
+        "abilities": (
+            "*Exemplary.* When you Pivot and play a card of equal rank to the lead card, you may use all pips on your played card.\n"
+            "*Immutable.* You cannot Pivot with cards of different rank than the lead card.\n"
+        ),
+        "resources": ["Psionic", "Relic"],
+        "setup": {
+            "A": {"ships": 3, "building": "city"},
+            "B": {"ships": 3, "building": "starport"},
+            "C": {"ships": 2, "building": "None"}
+        },
+        "body_font_size": 18,
+        "zoom": 1.15
+    },
+
     # {
     #     "name": "Forgemaster",
     #     "abilities": (
@@ -1501,104 +1517,4 @@ leaders = [
     #     },
     #     "body_font_size": 12.7
     # },
-    # {
-    #     "name": "Volley",
-    #     "abilities": (
-    #         "*Concentrated.* When resolving non-battle or battle dice, you may roll an extra pool of up to 6 dice and count each die that meets or beats 4 as a success. For each success, gain 1 hit (in battle) or 1 Weapon (outside battle).\n"
-    #         "*Depleting.* At the end of each chapter, discard 1 Material."
-    #     ),
-    #     "resources": ["Weapon", "Fuel"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
-    # {
-    #     "name": "Challenger",
-    #     "abilities": (
-    #         "*Challenging.* When attacking in battle, you may issue a single opposed roll against one defending ship: roll one die, the defender rolls one die; if yours is higher, add 1 hit; if lower, suffer 1 hit to an attacking ship. Ties do nothing.\n"
-    #         "*Rash.* When you declare an ambition, discard 1 resource."
-    #     ),
-    #     "resources": ["Weapon", "Relic"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
-    # {
-    #     "name": "Builder",
-    #     "abilities": (
-    #         "*Constructive.* When you roll dice battle, you may place one rolled die onto any planet you control as a worker. Values 1-2: gain 1 Material; 3-4: build (place a building token); 5-6: repair or move a ship. Remove the worker at round end.\n"
-    #         "*Grounded.* You cannot Catapult move more than once per round."
-    #     ),
-    #     "resources": ["Material", "Relic"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
-    # {
-    #     "name": "Gambit",
-    #     "abilities": (
-    #         "*Prepared.* You have one Gambit token each chapter. Spend it to reroll any single die you rolled (battle or otherwise) and take the new result. Regain the token when you score.\n"
-    #         "*Tempting.* At the end of your Prelude, discard 1 resource."
-    #     ),
-    #     "resources": ["Weapon", "Material"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
-    # {
-    #     "name": "Scout",
-    #     "abilities": (
-    #         "*Progressive.* At the start of each chapter, roll a die to advance along a short progress track (1-6). When you reach 10 progress, claim the reward: gain 2 Fuel and repair 1 Loyal ship. Progress resets after reward.\n"
-    #         "*Restless.* At the end of each chapter, remove 1 progress."
-    #     ),
-    #     "resources": ["Fuel", "Material"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
-    # {
-    #     "name": "Deceiver",
-    #     "abilities": (
-    #         "*Deceptive.* When you roll dice for influence or other hidden-resolution effects, you may keep one die face hidden and state a claim about it. If an opponent challenges and is wrong, they lose 1 resource of their choice; if they're right, you lose 1 resource.\n"
-    #         "*Exposed.* When you secure a card, discard 1 resource."
-    #     ),
-    #     "resources": ["Psionic", "Relic"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
-    # {
-    #     "name": "Iconographer",
-    #     "abilities": (
-    #         "*Iconic.* One die you roll each battle may be treated as a custom icon die: treat any 6 on that die as a special symbol. When that die shows a 6, trigger: gain 1 Relic or convert one hit into an intercept.\n"
-    #         "*Unstable.* At the start of each chapter, discard 1 resource."
-    #     ),
-    #     "resources": ["Relic", "Weapon"],
-    #     "setup": {
-    #         "A": {"ships": 3, "building": "city"},
-    #         "B": {"ships": 3, "building": "starport"},
-    #         "C": {"ships": 2, "building": "None"}
-    #     },
-    #     "body_font_size": 18
-    # },
-    # 
-    # When you play a card of equal rank as the lead card you may use all your pips
 ]

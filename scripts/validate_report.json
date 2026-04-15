@@ -2,8 +2,8 @@
   "errors": {},
   "asset_renames": [
     [
-      "Wheeler-Dealer.png",
-      "Wheeler-dealer.png"
+      "High-roller.png",
+      "High-Roller.png"
     ]
   ],
   "asset_map": {
@@ -49,7 +49,7 @@
     "Nomad": "Nomad.png",
     "Iconoclast": "Iconoclast.png",
     "Fiend": "Fiend.png",
-    "Wheeler-dealer": "Wheeler-Dealer.png",
+    "Wheeler-Dealer": "Wheeler-Dealer.png",
     "Curator": "Curator.png",
     "Cartographer": "Cartographer.png",
     "Custodian": "Custodian.png",
@@ -61,7 +61,7 @@
     "Siegebreaker": "Siegebreaker.png",
     "Courier": "Courier.png",
     "Forager": "Forager.png",
-    "Highroller": "Highroller.png",
+    "High-Roller": "High-roller.png",
     "Insurgent": "Insurgent.png",
     "Bomber": "Bomber.png",
     "Musician": "Musician.png",
@@ -82,7 +82,26 @@
     "Titan": "Titan.png",
     "Egoist": "Egoist.png",
     "Enforcer": "Enforcer.png",
-    "Treasurer": "Treasurer.png"
+    "Treasurer": "Treasurer.png",
+    "Wayfinder": "Wayfinder.png",
+    "Champion": "Champion.png",
+    "Tribune": "Tribune.png",
+    "Dissector": "Dissector.png",
+    "Schemer": "Schemer.png",
+    "Hydra": "Hydra.png",
+    "Enchanter": "Enchanter.png",
+    "Creator": "Creator.png",
+    "Messiah": "Messiah.png",
+    "Abomination": "Abomination.png",
+    "Crusader": "Crusader.png",
+    "Phantom": "Phantom.png",
+    "Harbormaster": "Harbormaster.png",
+    "Investor": "Investor.png",
+    "Envoy": "Envoy.png",
+    "Syndic": "Syndic.png",
+    "Sollicitor": "Sollicitor.png",
+    "Seraph": "Seraph.png",
+    "Paragon": "Paragon.png"
   },
   "spelling": {
     "Necromancer": [
@@ -113,7 +132,7 @@
         ]
       }
     ],
-    "Wheeler-dealer": [
+    "Wheeler-Dealer": [
       {
         "word": "Psionic",
         "suggestions": [
@@ -123,7 +142,7 @@
         ]
       }
     ],
-    "Highroller": [
+    "High-Roller": [
       {
         "word": "reroll",
         "suggestions": [
@@ -188,6 +207,76 @@
           "Desk bound",
           "Desk-bound",
           "Boundedness"
+        ]
+      }
+    ],
+    "Messiah": [
+      {
+        "word": "Salvific",
+        "suggestions": [
+          "Sacrificial"
+        ]
+      }
+    ],
+    "Harbormaster": [
+      {
+        "word": "Portwide",
+        "suggestions": [
+          "Port wide",
+          "Port-wide",
+          "Deport"
+        ]
+      }
+    ],
+    "Investor": [
+      {
+        "word": "dont",
+        "suggestions": [
+          "font",
+          "dint",
+          "don"
+        ]
+      }
+    ],
+    "Syndic": [
+      {
+        "word": "adject",
+        "suggestions": [
+          "abject",
+          "adjective"
+        ]
+      }
+    ],
+    "Seraph": [
+      {
+        "word": "reroll",
+        "suggestions": [
+          "re roll",
+          "re-roll",
+          "rerolled"
+        ]
+      },
+      {
+        "word": "Ardoured",
+        "suggestions": [
+          "Eduardo"
+        ]
+      },
+      {
+        "word": "reroll",
+        "suggestions": [
+          "re roll",
+          "re-roll",
+          "rerolled"
+        ]
+      }
+    ],
+    "Paragon": [
+      {
+        "word": "Examplary",
+        "suggestions": [
+          "Exemplary",
+          "Exemplar"
         ]
       }
     ]
@@ -263,7 +352,7 @@
     "Nomad": [],
     "Iconoclast": [],
     "Fiend": [],
-    "Wheeler-dealer": [],
+    "Wheeler-Dealer": [],
     "Curator": [],
     "Cartographer": [],
     "Custodian": [],
@@ -275,7 +364,7 @@
     "Siegebreaker": [],
     "Courier": [],
     "Forager": [],
-    "Highroller": [
+    "High-Roller": [
       {
         "message": "Possible spelling mistake found.",
         "offset": 92,
@@ -343,6 +432,94 @@
     "Titan": [],
     "Egoist": [],
     "Enforcer": [],
-    "Treasurer": []
+    "Treasurer": [],
+    "Wayfinder": [],
+    "Champion": [],
+    "Tribune": [],
+    "Dissector": [],
+    "Schemer": [],
+    "Hydra": [],
+    "Enchanter": [],
+    "Creator": [],
+    "Messiah": [
+      {
+        "message": "Possible spelling mistake found.",
+        "offset": 1,
+        "length": 8,
+        "suggestions": [
+          "Calcific"
+        ]
+      }
+    ],
+    "Abomination": [],
+    "Crusader": [],
+    "Phantom": [],
+    "Harbormaster": [
+      {
+        "message": "Possible spelling mistake found.",
+        "offset": 1,
+        "length": 8,
+        "suggestions": []
+      }
+    ],
+    "Investor": [
+      {
+        "message": "Possible spelling mistake found.",
+        "offset": 287,
+        "length": 4,
+        "suggestions": [
+          "don't"
+        ]
+      }
+    ],
+    "Envoy": [],
+    "Syndic": [
+      {
+        "message": "Possible spelling mistake found.",
+        "offset": 139,
+        "length": 6,
+        "suggestions": [
+          "abject",
+          "advect"
+        ]
+      }
+    ],
+    "Sollicitor": [],
+    "Seraph": [
+      {
+        "message": "Possible spelling mistake found.",
+        "offset": 74,
+        "length": 6,
+        "suggestions": []
+      },
+      {
+        "message": "Possible spelling mistake found.",
+        "offset": 93,
+        "length": 8,
+        "suggestions": [
+          "Armored",
+          "Adored",
+          "Adjured",
+          "Arbored",
+          "Aroused"
+        ]
+      },
+      {
+        "message": "Possible spelling mistake found.",
+        "offset": 117,
+        "length": 6,
+        "suggestions": []
+      }
+    ],
+    "Paragon": [
+      {
+        "message": "Possible spelling mistake found.",
+        "offset": 1,
+        "length": 9,
+        "suggestions": [
+          "Exemplary"
+        ]
+      }
+    ]
   }
 }
