@@ -1086,6 +1086,7 @@ leaders = [
         "abilities": (
             "*Shrewd.* **Prelude:** Once per turn, you may return 3 Trophies/Captives of a Rival to steal one of their resources.\n"
             "*Vindictive.* In scoring, when you win first place, you must return a Trophy or Captive, if you choose not to, gain no Power."
+        ),
         "resources": ["Psionic", "Weapon"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
