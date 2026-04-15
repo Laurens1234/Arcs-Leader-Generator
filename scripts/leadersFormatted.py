@@ -1084,14 +1084,14 @@ leaders = [
     {
         "name": "Extortioner",
         "abilities": (
-            "*Shrewd.* When you Copy or Pivot to **tax**, you may tax a city of the player who led.\n"
+            "*Shrewd.* When you Copy to **tax**, you may tax a city of the player who led.\n"
             "*Vindictive.* In **scoring**, if Tyrant is declared and you don't win it, scrap 3 agents."
         ),
-        "resources": ["Psionic", "Material"],
+        "resources": ["Psionic", "Weapon"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
-            "C": {"ships": 2, "building": "None"}
+            "C": {"ships": 3, "building": "None"}
         },
         "body_font_size": 18
     },
@@ -1438,7 +1438,7 @@ leaders = [
     {
         "name": "Seraph",
         "abilities": (
-            "*Celestial.* After you collect dice in **battle**, say a number. You must reroll that many.\n"
+            "*Celestial.* After you collect dice in **battle**, say a positive number. You must reroll that many.\n"
             "*Ardent.* You can only reroll dice with {icon:dice_hit_black} or {icon:dice_building_hit_black} on them."
         ),
         "resources": ["Fuel", "Relic"],
@@ -1466,13 +1466,14 @@ leaders = [
         "zoom": 1.15
     },
 
+
     # {
-    #     "name": "Forgemaster",
+    #     "name": "",
     #     "abilities": (
-    #         "*.* In **battle**, you may choose to reroll Assualt and Raid dice one at a time. For each rerolled die that has a self hit, immediately damage one of your ships. You may stop only after rolling a hit or key.\n"
-    #         "*."
+    #         "*.* In **battle**, you may reroll any number of dice in systems matching declared ambitions.\n"
+    #         "*.* ."
     #     ),
-    #     "resources": ["Weapon", "Relic"],
+    #     "resources": ["", ""],
     #     "setup": {
     #         "A": {"ships": 3, "building": "city"},
     #         "B": {"ships": 3, "building": "starport"},
@@ -1480,13 +1481,25 @@ leaders = [
     #     },
     #     "body_font_size": 18
     # },
+    
+#Before collecting dice in battle, you may roll an Assault or Raid die. You may reroll all dice matching the face of this die. (Empty matches empty.)
+
+#When attacking in **battle**, you may choose to ignore the face on any die if it's also on another rolled die.
+
+#In **battle**, if you roll only raid dice, you may choose the swap the amounts of keys and flame.
+#You cannot raid if the defender has any fresh ships in the battle system.
+
+#When attacking in battle, each intercept you roll also lets you deal 2 hits.
+
+# *Leveraged.* In battle, if you roll multiple skirmish dice, if more than half the skirmish dice you rolled have no {hit}, gain any resource.
+# 
     # {
-    #     "name": "Oracle",
+    #     "name": "Forgemaster",
     #     "abilities": (
-    #         "*Prescient.* In **battle**, you may reroll any number of dice in systems matching declared ambitions.\n"
-    #         "*Unnerved.* ."
+    #         "*.* In **battle**, you may choose to reroll Assualt and Raid dice one at a time. For each rerolled die that has a self hit, immediately damage one of your ships. You may stop only after rolling a hit or key.\n"
+    #         "*."
     #     ),
-    #     "resources": ["Psionic", "Fuel"],
+    #     "resources": ["Weapon", "Relic"],
     #     "setup": {
     #         "A": {"ships": 3, "building": "city"},
     #         "B": {"ships": 3, "building": "starport"},
