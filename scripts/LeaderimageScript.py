@@ -56,7 +56,16 @@ def create_card(input_data):
         base_img = base_img.resize(_s(base_img.size), Image.Resampling.LANCZOS)
         text_box_img = text_box_img.resize(_s(text_box_img.size), Image.Resampling.LANCZOS)
 
-    leader_image_overlay_path = os.path.join(base_path, "cardAssets", "leaderImages", f"{input_data['name']}.png")
+    # Prefer an explicit image name if provided; also accept the legacy/mistyped key "image_name:"
+    overlay_basename = None
+    try:
+        overlay_basename = input_data.get("image_name") or input_data.get("image_name:")
+    except Exception:
+        overlay_basename = None
+    if not overlay_basename:
+        overlay_basename = input_data.get("name")
+    overlay_basename = str(overlay_basename)
+    leader_image_overlay_path = os.path.join(base_path, "cardAssets", "leaderImages", f"{overlay_basename}.png")
 
     try:
         overlay_img = Image.open(leader_image_overlay_path).convert("RGBA")

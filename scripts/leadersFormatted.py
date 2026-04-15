@@ -4,6 +4,7 @@
 leaders = [
     # Kaiju
     {
+        "image_name": "", # if this isn't defined "name": will be used
         "name": "Kaiju",
         "abilities": (
             "*Devouring.* When you destroy a city, **repair** all your ships in its cluster.\n"
