@@ -58,7 +58,7 @@ leaders = [
             "*Entitled.* At the end of your turn, **influence** a card where you are tied with another player.\n"
             "*Rigid.* You cannot **influence** on a turn in which you Pivot."
         ),
-        "resources": ["Psionic", "Material"],
+        "resources": ["Relic", "Material"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
@@ -234,7 +234,7 @@ leaders = [
             "*Immunized.* If you have the initiative you don't **Provoke** **Outrage**.\n"
             "*Fair.* Before **scoring**, the Rival with the least Power may take a resource or 3 power from you."
         ),
-        "resources": ["Psionic", "Fuel"],
+        "resources": ["Psionic", "Material"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
@@ -358,7 +358,7 @@ leaders = [
         "name": "Dreamer",
         "abilities": (
             "*Lucid.* When you **declare** **an** **ambition**, gain 1 lore.\n"
-            "*Blurred.* Your lore have a raid cost of 2 {icon:dice_key_black}."
+            "*Blurred.* Your lore have a raid cost of {icon:dice_key_black} {icon:dice_key_black}."
         ),
         "resources": ["Psionic", "Fuel"],
         "setup": {
@@ -864,7 +864,7 @@ leaders = [
             "*Seditious.* After attacking in **battle**, you may influence a card with a defender's agent on it.\n"
             "*Decentralized.* You cannot **repair** ships."
         ),
-        "resources": ["Weapon", "Material"],
+        "resources": ["Weapon", "Relic"],
         "setup": {
             "A": {"ships": 3, "building": "starport"},
             "B": {"ships": 3, "building": "None"},
@@ -1003,7 +1003,7 @@ leaders = [
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
-            "C": {"ships": 2, "building": "None"}
+            "C": {"ships": 3, "building": "None"}
         },
         "body_font_size": 18
     },
@@ -1084,7 +1084,7 @@ leaders = [
     {
         "name": "Extortioner",
         "abilities": (
-            "*Shrewd.* When you Copy or Pivot to **tax**, you may tax the city of the player who led.\n"
+            "*Shrewd.* When you Copy or Pivot to **tax**, you may tax a city of the player who led.\n"
             "*Vindictive.* In **scoring**, if Tyrant is declared and you don't win it, scrap 3 agents."
         ),
         "resources": ["Psionic", "Material"],
@@ -1115,9 +1115,9 @@ leaders = [
             "*Immovable.* When defending in **battle**, your ships cannot be destroyed unless the attacker controls the gate of the battle system's cluster.\n"
             "*Stationary.* Your damaged ships cannot Catapult **move**."
         ),
-        "resources": ["Material", "Weapon"],
+        "resources": ["Relic", "Weapon"],
         "setup": {
-            "A": {"ships": 3, "building": "city"},
+            "A": {"ships": 4, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
             "C": {"ships": 2, "building": "None"}
         },
@@ -1129,7 +1129,7 @@ leaders = [
             "*Willful.* When you Pivot, take any action except those on your played card instead.\n"
             "*Inflexible.* You can only Copy with cards of the lead suit, face up."
         ),
-        "resources": ["Psionic", "Fuel"],
+        "resources": ["Psionic", "Material"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
@@ -1218,7 +1218,7 @@ leaders = [
             "*Incisive.* When you take an action, you may return 1 captive or scrap 1 agent from your supply to take any different action instead.\n"
             "*Sadistic.* Before **scoring**, scrap 2 agents from your supply, return 2 captives, or 1 of each."
         ),
-        "resources": ["Psionic", "Material"],
+        "resources": ["Relic", "Material"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
@@ -1251,7 +1251,7 @@ leaders = [
             "*Regenerative.* After **any** **battle**, if 2+ of your loyal pieces got destroyed, you may place 1 loyal ship from any trophy box in any system with loyal pieces.\n"
             "*Unwieldy.* You cannot Catapult **move** with more than 3 ships in a single move."
         ),
-        "resources": ["Psionic", "Material"],
+        "resources": ["Weapon", "Material"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
@@ -1280,7 +1280,7 @@ leaders = [
             "*Cosmic.* When you **build**, you may instead take a ship from a Rival's supply and place it fresh one of their starports, if you do, gain a resource matching that system.\n"
             "*Detached.* In **cleanup**, you always return all trophies, even if Warlord was not declared."
         ),
-        "resources": ["Material", "Fuel"],
+        "resources": ["Material", "Relic"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
@@ -1328,7 +1328,7 @@ leaders = [
             "*Zealous.* After you destroy a city, also **secure** any card with no or only Loyal agents on it matching that city's type.\n"
             "*Dogmatic.* You cannot **influence** a card with no agents on it if a Rival can secure a card with any of your Loyal agents on it."
         ),
-        "resources": ["Weapon", "Material"],
+        "resources": ["Weapon", "Fuel"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
@@ -1441,7 +1441,7 @@ leaders = [
             "*Celestial.* After you collect dice in **battle**, say a number. You must reroll that many.\n"
             "*Ardent.* You can only reroll dice with {icon:dice_hit_black} or {icon:dice_building_hit_black} on them."
         ),
-        "resources": ["Material", "Weapon"],
+        "resources": ["Fuel", "Relic"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
             "B": {"ships": 3, "building": "starport"},
