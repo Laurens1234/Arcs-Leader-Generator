@@ -1169,7 +1169,7 @@ leaders = [
     {
         "name": "Wayfinder",
         "abilities": (
-            "*Bridging.* You treat systems with a loyal building as adjacent.\n"
+            "*Bridging.* You treat systems with a Loyal building as adjacent.\n"
             "*Anchored.* When you Catapult **move**, stop after 2 moves."
         ),
         "resources": ["Psionic", "Fuel"],
@@ -1230,7 +1230,7 @@ leaders = [
     {
         "name": "Schemer",
         "abilities": (
-            "*Manipulative.* After you **influence**, you may move 1 loyal agent on a card to a different card.\n"
+            "*Manipulative.* After you **influence**, you may move 1 Loyal agent on a card to a different card.\n"
              "*Compromised.* In **clean** **up**, return all your agents from a card where you have at least 1 loyal agent."
         ), 
         "resources": ["Psionic", "Fuel"],
@@ -1247,7 +1247,7 @@ leaders = [
     {
         "name": "Hydra",
         "abilities": (
-            "*Regenerative.* After **any** **battle**, if 2+ of your loyal pieces got destroyed, you may place 1 loyal ship from any trophy box in any system with loyal pieces.\n"
+            "*Regenerative.* After **any** **battle**, if 2+ of your Loyal pieces got destroyed, you may place 1 Loyal ship from any trophy box in any system with Loyal pieces.\n"
             "*Unwieldy.* You cannot Catapult **move** with more than 3 ships in a single move."
         ),
         "resources": ["Weapon", "Material"],
@@ -1261,7 +1261,7 @@ leaders = [
     {
         "name": "Enchanter",
         "abilities": (
-            "*Alluring.* When you copy or pivot to **influence** a card with a rival agent on it, you may replace one of their ships with a loyal one.\n"
+            "*Alluring.* When you copy or pivot to **influence** a card with a rival agent on it, you may replace one of their ships with a Loyal one.\n"
             "*Resisted.* If you only have 1 ship in a gate, it doesn't count for control."
         ),
         "resources": ["Psionic", "Fuel"],
@@ -1324,7 +1324,7 @@ leaders = [
     {
         "name": "Crusader",
         "abilities": (
-            "*Zealous.* After you destroy a city, also **secure** any card with no or only Loyal agents on it matching that city's type.\n"
+            "*Zealous.* In **battle**, after you destroy a city, also secure any card with no or only Loyal agents on it matching that city's type.\n"
             "*Dogmatic.* You cannot **influence** a card with no agents on it if a Rival can secure a card with any of your Loyal agents on it."
         ),
         "resources": ["Weapon", "Fuel"],
@@ -1339,7 +1339,7 @@ leaders = [
     {
         "name": "Phantom",
         "abilities": (
-            "*Spectral.* When attacking in **battle**, you may choose to ignore any {icon:dice_hit_black} you roll; at the end of the **battle**, you may move any of your attacking ships once per ignored {icon:dice_hit_black}.\n"
+            "*Spectral.* When attacking in **battle**, you may choose to ignore any {icon:dice_hit_black} you roll; at the end of the **battle**, you may take move actions with your attacking ships, once per ignored {icon:dice_hit_black}.\n"
             "*Tethered.* You cannot **move** if you don't control the system you're in."
         ),
         "resources": ["Fuel", "Weapon"],
@@ -1483,7 +1483,7 @@ leaders = [
     
 #Before collecting dice in battle, you may roll an Assault or Raid die. You may reroll all dice matching the face of this die. (Empty matches empty.)
 
-#When attacking in **battle**, you may choose to ignore the face on any die if it's also on another rolled die.
+#When attacking in **battle**, you may choose to ignore the face on a die if it's also on another rolled die.
 
 #In **battle**, if you roll only raid dice, you may choose the swap the amounts of keys and flame.
 #You cannot raid if the defender has any fresh ships in the battle system.
@@ -1491,6 +1491,7 @@ leaders = [
 #When attacking in battle, each intercept you roll also lets you deal 2 hits.
 
 # *Leveraged.* In battle, if you roll multiple skirmish dice, if more than half the skirmish dice you rolled have no {hit}, gain any resource.
+
 # 
     # {
     #     "name": "Forgemaster",
