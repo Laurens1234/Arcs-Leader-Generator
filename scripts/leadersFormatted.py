@@ -576,8 +576,8 @@ leaders = [
     {
         "name": "Bargainer",
         "abilities": (
-            "*Leveraged.* When you **tax**, you may return a Rival's trophy or captive to tax one of their cities.\n"
-            "*Obliged.* In **scoring**, to gain Power from an ambition, you must return a trophy or captive, if you don't, gain no Power."
+            "*Leveraged.* When you **tax**, you may return a Rival's captive to tax one of their cities instead.\n"
+            "*Obliged.* In **scoring**, if you win Tyrant, only gain Power for second place and keep 1 Captive of each Rival. If you don't, return all your Captives. *(Even if it wasn't declared!)*"
         ),
         "resources": ["Weapon", "Relic"],
         "setup": {
@@ -1084,9 +1084,8 @@ leaders = [
     {
         "name": "Extortioner",
         "abilities": (
-            "*Shrewd.* When you Copy to **tax**, you may tax a city of the player who led.\n"
-            "*Vindictive.* In **scoring**, if Tyrant is declared and you don't win it, scrap 3 agents."
-        ),
+            "*Shrewd.* **Prelude:** Once per turn, you may return 3 Trophies/Captives of a Rival to steal one of their resources.\n"
+            "*Vindictive.* In scoring, when you win first place, you must return a Trophy or Captive, if you choose not to, gain no Power.
         "resources": ["Psionic", "Weapon"],
         "setup": {
             "A": {"ships": 3, "building": "city"},
