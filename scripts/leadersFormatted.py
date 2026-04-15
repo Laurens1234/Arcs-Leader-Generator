@@ -163,7 +163,7 @@ leaders = [
     {
         "name": "Seer",
         "abilities": (
-            "*Prescient.* After you discard a Guild card, you may take an action on the **Lead** **card**.\n"
+            "*Prescient.* After you discard a Guild card using its **Prelude** action, you may take an action on the **Lead** **card**.\n"
             "*Narrow-minded.* You **cannot** take more than 2 different types of standard actions each turn."
         ),
         "resources": ["Psionic", "Psionic"],
