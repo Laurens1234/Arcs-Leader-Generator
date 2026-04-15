@@ -82,8 +82,8 @@ def create_lore_card(input_data):
     # Determine variant early so we can choose the card background
     variant = (input_data.get("variant") or "").casefold()
 
-    # Load the lore frame to get card dimensions (or use Edifice background for eddifice variant)
-    if variant == "eddifice":
+    # Load the lore frame to get card dimensions (or use Edifice background for edifice variant)
+    if variant == "edifice":
         edifice_asset_path = os.path.join(base_path, "cardAssets", "Edifice.png")
         try:
             edifice_img = Image.open(edifice_asset_path).convert("RGBA")
@@ -106,8 +106,8 @@ def create_lore_card(input_data):
         card_width, card_height = lore_frame.size
         base_img = Image.new("RGBA", (card_width, card_height), (0, 0, 0, 255))
 
-    # Load and paste lore image (top half of the card), skip for eddifice variant
-    if variant != "eddifice":
+    # Load and paste lore image (top half of the card), skip for edifice variant
+    if variant != "edifice":
         lore_image_path = os.path.join(lore_image_folder, f"{input_data['name']}.png")
         try:
             lore_img = Image.open(lore_image_path).convert("RGBA")
@@ -157,8 +157,8 @@ def create_lore_card(input_data):
         except FileNotFoundError:
             print(f"Warning: Lore image '{input_data['name']}.png' not found in loreImages folder. Proceeding without image.")
 
-    # Paste the lore frame on top (skip for eddifice since edifice is the full background)
-    if variant != "eddifice":
+    # Paste the lore frame on top (skip for edifice since edifice is the full background)
+    if variant != "edifice":
         base_img.paste(lore_frame, (0, 0), lore_frame)
 
     # Create drawing context
@@ -171,7 +171,7 @@ def create_lore_card(input_data):
         footer_font_size = input_data.get("footer_font_size", 14)
         body_font_size = input_data.get("body_font_size", 18)
         # Increase sizes for edifice variant (twice as big)
-        if variant == "eddifice":
+        if variant == "edifice":
             try:
                 title_font_size = int(title_font_size * 2)
             except Exception:
@@ -201,8 +201,8 @@ def create_lore_card(input_data):
         except Exception:
             text_margin = _s(40)
     else:
-        if variant == "eddifice":
-            text_margin = _s(int(input_data.get("text_margin_eddifice", 48)))
+        if variant == "edifice":
+            text_margin = _s(int(input_data.get("text_margin_edifice", 48)))
         else:
             text_margin = _s(40)
     text_x0 = text_margin
@@ -213,7 +213,7 @@ def create_lore_card(input_data):
     text_y0 = int(card_height * 0.545)  # Start below the top half
     
     # Determine text color (white for edifice variant)
-    text_color = "white" if variant == "eddifice" else "black"
+    text_color = "white" if variant == "edifice" else "black"
 
     # Draw title text (centered)
     title_text = input_data.get('title', input_data['name'])
@@ -221,7 +221,7 @@ def create_lore_card(input_data):
     title_x = text_x0 + (text_width - (title_bbox[2] - title_bbox[0])) // 2
     # Slightly raise the title (less downward offset); smaller for default, reduced for edifice
     # For edifice variant, use a smaller downward offset so the title sits higher.
-    title_y = text_y0 + (_s(16) if variant == "eddifice" else _s(0))
+    title_y = text_y0 + (_s(16) if variant == "edifice" else _s(0))
     draw.text((title_x, title_y), title_text, fill=text_color, font=title_font)
 
     # Calculate line_y for body text positioning (no line drawn)
@@ -535,7 +535,7 @@ def create_lore_card(input_data):
     body_text = input_data.get('body', '')
     # Move body a bit lower; edifice variant gets a larger offset
     # Increase edifice offset slightly so its body sits lower on the background
-    current_y = line_y + (_s(96) if variant == "eddifice" else _s(24))
+    current_y = line_y + (_s(96) if variant == "edifice" else _s(24))
     for line in wrap_text(body_text, body_font, italic_font, bold_font, bolditalic_font, text_width):
         # Support explicit vertical-space token in the body: "{vspace:N}"
         # Example: "{vspace:6}" adds _s(6) pixels of vertical space. The token
@@ -559,7 +559,7 @@ def create_lore_card(input_data):
     # Variant-specific footer/edifice handling
     variant = (input_data.get("variant") or "").casefold()
 
-    if variant != "eddifice":
+    if variant != "edifice":
         # Load and paste footer image on top of everything
         try:
             footer_img = Image.open(footer_image_path).convert("RGBA")
@@ -590,8 +590,8 @@ def create_lore_card(input_data):
         footer_margin = _s(45)
 
         draw = ImageDraw.Draw(base_img)
-        # Prefer explicit edifice field `eddifice_top_right`; fall back to `footer_right` for compatibility
-        ed_number = str(input_data.get('eddifice_top_right', input_data.get('footer_right', '')))
+        # Prefer explicit edifice field `edifice_top_right`; fall back to `footer_right` for compatibility
+        ed_number = str(input_data.get('edifice_top_right', input_data.get('footer_right', '')))
         if ed_number:
             try:
                 num_font_size = input_data.get('ed_number_font_size', 60)
@@ -637,7 +637,7 @@ def create_lore_card(input_data):
         return int(round(target_center - _text_width(text) / 2))
     
     # Draw footer texts only for non-edifice variant
-    if variant != "eddifice":
+    if variant != "edifice":
         # Draw left footer text (black)
         if footer_left:
             x = footer_margin if len(str(footer_left)) <= 1 else _x_centered_like_one_char_left(str(footer_left))
@@ -672,7 +672,7 @@ def create_lore_card(input_data):
     os.makedirs(result_path, exist_ok=True)
 
     # For edifice variant, do not remove bleed by cropping — keep full background intact.
-    if variant == "eddifice":
+    if variant == "edifice":
         final_img = base_img
     else:
         final_img = final_crop(base_img)

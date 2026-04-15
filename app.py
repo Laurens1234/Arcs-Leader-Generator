@@ -13,19 +13,30 @@ from pathlib import Path
 from typing import List, Set
 
 import streamlit as st
+import streamlit.components.v1 as components
 from PIL import Image
 
 st.set_page_config(page_title="Arcs Card Generator", layout="wide")
 
 st.title("Arcs Card Generator")
 
-st.markdown("Edit card templates and generate card images from your browser, preview and download the results.")
-
-# Help link
-st.markdown("How to use: [Open project README on GitHub](https://github.com/Laurens1234/Arcs-Leader-Generator/)")
-st.markdown("You can ask for help here: [Discord channel](https://discord.com/channels/1459242411325919317/1482161901067833364)")
-st.markdown("For more features and customization, you can set up and run the generator locally on your PC (see the README for setup instructions).")
-st.markdown("Check out my website: [Arcs Arsenal](https://laurens1234.github.io/arcs-arsenal/)")
+st.markdown(
+        """
+        <div style='border:1px solid #ccc;padding:12px;border-radius:8px;background:transparent'>
+            <strong>Edit Arcs card templates and generate card images directly in your browser.</strong>
+            <div style='margin-top:12px; line-height:1.8;'>
+                    <ul style='margin:0;padding-left:18px;'>
+                        <li>How to use: <a href='https://github.com/Laurens1234/Arcs-Leader-Generator/' target='_blank'>Read the project README on GitHub</a></li>
+                        <li>For advanced features, follow the setup instructions in the README to run the generator locally on your PC.</li>
+                        <li>Need help or want to report a bug? <a href='https://discord.com/channels/1459242411325919317/1482161901067833364' target='_blank'>Open support Discord channel</a></li>
+                        <li>Explore more Arcs tools and resources my other website: <a href='https://laurens1234.github.io/arcs-arsenal/' target='_blank'>Arcs Arsenal</a></li>
+                        <li>Browse my Custom Cards created with this tool: <a href='https://laurens1234.github.io/arcs-arsenal/custom-cards' target='_blank'>Browse Custom Cards</a></li>
+                    </ul>
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+)
 
 TEMPLATE_MAP = {
     "Leader": {
@@ -43,10 +54,10 @@ TEMPLATE_MAP = {
         "module": "loreCardsFormatted",
         "path": Path("scripts") / "loreCardsFormatted.py",
     },
-    "Eddifice": {
+    "Edifice": {
         "script": "batchLoreCards.py",
-        "module": "eddificeFormatted",
-        "path": Path("scripts") / "eddificeFormatted.py",
+        "module": "edificeFormatted",
+        "path": Path("scripts") / "edificeFormatted.py",
     },
     "Vox": {
         "script": "batchVoxCards.py",
@@ -133,8 +144,12 @@ def extract_top_list_entry(path: Path) -> str:
         return "# failed to read template"
 
 with st.container():
-    card_type = st.selectbox("Card type to generate", list(TEMPLATE_MAP.keys()))
-    args = st.text_input("Arguments (optional)", value="")
+    # Place the card type selector in a narrow column so it doesn't span full width
+    col_small, col_large = st.columns([1, 4])
+    with col_small:
+        card_type = st.selectbox("Card type to generate", list(TEMPLATE_MAP.keys()))
+    with col_large:
+        args = st.text_input("Arguments (optional)", value="")
 
     # prepare template editing for the selected card type (always custom override)
     mapping = TEMPLATE_MAP[card_type]
@@ -142,55 +157,113 @@ with st.container():
     repo_path = mapping["path"]
     try:
         if repo_path.exists():
-            template_text = extract_top_list_entry(repo_path)
+            file_template_text = extract_top_list_entry(repo_path)
         else:
-            template_text = "# template not found"
+            file_template_text = "# template not found"
     except Exception:
-        template_text = "# failed to read template"
+        file_template_text = "# failed to read template"
 
-    template_text = st.text_area(f"Edit {template_module}.py (temporary override)", value=template_text, height=300)
+    # Persist user edits per-template in a central dict so switching card types
+    # doesn't lose edits. We keep a separate widget key per-module so Streamlit
+    # manages the widget state, and copy that value into the dict after the
+    # widget is created.
+    overrides_key = "template_overrides"
+    if overrides_key not in st.session_state:
+        st.session_state[overrides_key] = {}
+
+    widget_key = f"template_override_{template_module}"
+    # Initialize the widget key only if missing, using either an existing override
+    # or the file's template text.
+    if widget_key not in st.session_state:
+        st.session_state[widget_key] = st.session_state[overrides_key].get(template_module, file_template_text)
+
+    # Auto-size the text area height to show all lines of the stored template
+    # when switching card types or opening a type.
+    stored_template = st.session_state[widget_key]
+    lines = stored_template.count("\n") + 1
+    pixels_per_line = 20
+    extra_lines = 3
+    computed_height = max(180, min(1600, lines * pixels_per_line + 20 + extra_lines * pixels_per_line))
+
+    # Create the text area widget bound to the widget_key. Streamlit will store
+    # the current text in `st.session_state[widget_key]`.
+    template_text = st.text_area(
+        f"Edit {template_module}.py (temporary override)",
+        height=computed_height,
+        key=widget_key,
+    )
+
+    # Mirror the widget value into the central overrides dict so it's easy to
+    # access and persists across switches.
+    st.session_state[overrides_key][template_module] = st.session_state[widget_key]
     run_button = st.button("Run")
 
+    # Show a custom label so the default Streamlit uploader caption
+    # (e.g. "200MB per file • PNG") is not displayed to the user.
+    st.markdown("Upload PNG images to use with generator (optional)")
     uploaded = st.file_uploader(
-        "Upload PNG images to use with generator (optional)",
+        "",
         type=["png"],
         accept_multiple_files=True,
+        label_visibility="collapsed",
     )
-    st.info("Uploaded PNG filename must match the card name (without .png). Example: leadername.png for card name 'leadername'.")
+    # (Saved filenames will be displayed after uploads are processed.)
     if uploaded:
-        UPLOAD_MAP = {
-            "Leader": "leaderImages",
-            "Guild": "guildImages",
-            "Lore": "loreImages",
-            "Eddifice": "loreImages",
-            "Vox": "voxImages",
-        }
-        dest_dir = Path("cardAssets") / UPLOAD_MAP.get(card_type, "captured")
-        dest_dir.mkdir(parents=True, exist_ok=True)
-        saved = []
+        # Always keep all uploaded files; add numeric suffixes as needed to avoid
+        # name collisions. This avoids prompting and keeps behavior simple.
+        name_map: dict[str, list] = {}
         for f in uploaded:
-            # Save everything as PNG to ensure generator compatibility
-            try:
-                img = Image.open(f)
-            except Exception as e:
-                st.error(f"Failed to open uploaded file '{f.name}': {e}")
-                continue
+            base = Path(f.name).stem
+            name_map.setdefault(base, []).append(f)
 
-            base_name = Path(f.name).stem
-            target = dest_dir / f"{base_name}.png"
-            if target.exists():
-                target = dest_dir / f"{base_name}_{int(time.time())}.png"
-            try:
-                # Convert to RGBA then save as PNG
-                img.convert("RGBA").save(target, format="PNG")
-                saved.append(target)
-            except Exception as e:
-                st.error(f"Failed to save '{f.name}' as PNG: {e}")
+        upload_tmpdir = tempfile.mkdtemp(prefix="adk_upload_")
+        saved = []
+        saved_entries = []  # list of (original_filename, saved_path)
+
+        for base_name, files in name_map.items():
+            for idx, f in enumerate(files):
+                try:
+                    img = Image.open(f)
+                except Exception as e:
+                    st.error(f"Failed to open uploaded file '{f.name}': {e}")
+                    continue
+
+                # First file gets the plain name; subsequent files get numeric suffixes
+                target = Path(upload_tmpdir) / f"{base_name}.png"
+                if target.exists() or idx > 0:
+                    i = 1
+                    while True:
+                        candidate = Path(upload_tmpdir) / f"{base_name}_{i}.png"
+                        if not candidate.exists():
+                            target = candidate
+                            break
+                        i += 1
+
+                try:
+                    img.convert("RGBA").save(target, format="PNG")
+                    saved.append(target)
+                    saved_entries.append((f.name, target))
+                except Exception as e:
+                    st.error(f"Failed to save '{f.name}' as PNG: {e}")
 
         if saved:
-            st.success(f"Saved {len(saved)} uploaded PNG file(s) to {display_rel(dest_dir)}")
-            for t in saved:
-                st.write(display_rel(t))
+            st.session_state["adk_upload_dir"] = upload_tmpdir
+            # Store display info so the UI can show saved filenames below the uploader.
+            st.session_state["adk_upload_display"] = [(orig, str(p.name)) for orig, p in saved_entries]
+            # Do not show a separate success box; the outlined list shows saved files
+            st.write(display_rel(Path(upload_tmpdir)))
+            # Render the saved names inside the outlined box so they appear
+            # immediately after processing the upload.
+            html = "<div style='border:2px solid #666;padding:10px;border-radius:6px;background:transparent;display:block;max-width:100%'>"
+            html += "<strong>Saved upload filenames</strong><br/>"
+            for original_name, path_obj in saved_entries:
+                saved_name = str(path_obj.name)
+                if Path(original_name).name != saved_name:
+                    html += f"{original_name} &rarr; {saved_name}<br/>"
+                else:
+                    html += f"{saved_name}<br/>"
+            html += "</div>"
+            st.markdown(html, unsafe_allow_html=True)
         else:
             st.info("No valid images were uploaded.")
 
@@ -209,6 +282,10 @@ if run_button:
     # prepare environment and temporary template module (always use edited template)
     tempdir = None
     env = os.environ.copy()
+    # If the user uploaded images in this session, pass their tempdir to the subprocess
+    upload_dir = st.session_state.get("adk_upload_dir") if hasattr(st, "session_state") else None
+    if upload_dir:
+        env["ADK_UPLOAD_DIR"] = str(upload_dir)
     if template_module and template_text:
         try:
             tempdir = tempfile.mkdtemp(prefix="adk_template_")
@@ -242,6 +319,17 @@ if run_button:
                     shutil.rmtree(tempdir)
                 except Exception:
                     pass
+            # Clean up any session upload tempdir after the run
+            upload_dir = st.session_state.get("adk_upload_dir") if hasattr(st, "session_state") else None
+            if upload_dir:
+                try:
+                    shutil.rmtree(upload_dir)
+                except Exception:
+                    pass
+                try:
+                    del st.session_state["adk_upload_dir"]
+                except Exception:
+                    pass
 
     if proc:
         output = "".join([proc.stdout or "", proc.stderr or ""]) or "(no output)"
@@ -255,16 +343,19 @@ if run_button:
         after = snapshot_images_mtime(results_root)
         # consider a file 'new' if it didn't exist before or its mtime increased
         new_paths = [p for p, m in after.items() if (p not in before) or (m > before.get(p, 0))]
-        # sort newest-first by mtime
-        new_paths_sorted = sorted(new_paths, key=lambda p: after[p], reverse=True)
+        # sort oldest-first by mtime so new images are appended below previous ones
+        new_paths_sorted = sorted(new_paths, key=lambda p: after[p])
         if new_paths_sorted:
+            # Anchor target for auto-scroll so we can jump to the new images area
+            st.markdown("<div id='adk_new_images'></div>", unsafe_allow_html=True)
             st.subheader("New images generated")
             for path_str in new_paths_sorted:
                 p = Path(path_str)
                 cols = st.columns([1, 4])
                 with cols[0]:
                     try:
-                        st.image(str(p), width=250)
+                        # Display the full-resolution image (no width constraint)
+                        st.image(str(p))
                     except Exception:
                         st.write(p.name)
                 with cols[1]:
@@ -293,6 +384,15 @@ if run_button:
                 )
             except Exception as e:
                 st.warning(f"Failed to create ZIP archive: {e}")
+
+            # Attempt to smoothly scroll the page to the new images anchor.
+            try:
+                components.html(
+                    "<script>const el = window.parent.document.getElementById('adk_new_images'); if(el){el.scrollIntoView({behavior:'smooth', block:'start'});}</script>",
+                    height=0,
+                )
+            except Exception:
+                pass
         else:
             st.info("No new images found in the results folder.")
 

@@ -67,9 +67,25 @@ def create_card(input_data):
     overlay_basename = str(overlay_basename)
     leader_image_overlay_path = os.path.join(base_path, "cardAssets", "leaderImages", f"{overlay_basename}.png")
 
-    try:
-        overlay_img = Image.open(leader_image_overlay_path).convert("RGBA")
+    # If a session upload directory is provided via env var, prefer that image first
+    uploaded_dir = os.environ.get("ADK_UPLOAD_DIR")
+    uploaded_overlay_path = None
+    if uploaded_dir:
+        uploaded_overlay_path = os.path.join(uploaded_dir, f"{overlay_basename}.png")
 
+    overlay_img = None
+    paths_to_try = [p for p in (uploaded_overlay_path, leader_image_overlay_path) if p]
+    for pth in paths_to_try:
+        try:
+            overlay_img = Image.open(pth).convert("RGBA")
+            leader_image_overlay_path = pth
+            break
+        except FileNotFoundError:
+            overlay_img = None
+
+    if overlay_img is None:
+        print(f"Warning: Overlay image '{overlay_basename}.png' not found. Proceeding without overlay.")
+    else:
         # Keep the bottom of the leader image aligned to the original location
         # Support an optional `boundary_shift` fractional value in input_data
         # Positive shifts move the top boundary lower (down), negative moves it up.
@@ -133,9 +149,7 @@ def create_card(input_data):
         overlay_y = overlay_bottom_y - overlay_img.height
 
         base_img.paste(overlay_img, (overlay_x, overlay_y), overlay_img)
-
-    except FileNotFoundError:
-        print(f"Warning: Overlay image '{input_data['name']}.png' not found. Proceeding without overlay.")
+        
 
 
     # Resize resource images
