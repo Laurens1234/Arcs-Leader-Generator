@@ -43,26 +43,31 @@ TEMPLATE_MAP = {
         "script": "batchLeaderCards.py",
         "module": "leadersFormatted",
         "path": Path("scripts") / "leadersFormatted.py",
+        "data": Path("scripts") / "data" / "leaders.yml",
     },
     "Guild / Artifact": {
         "script": "batchGuildCards.py",
         "module": "guildCardsFormatted",
         "path": Path("scripts") / "guildCardsFormatted.py",
+        "data": Path("scripts") / "data" / "guilds.yml",
     },
     "Lore": {
         "script": "batchLoreCards.py",
         "module": "loreCardsFormatted",
         "path": Path("scripts") / "loreCardsFormatted.py",
+        "data": Path("scripts") / "data" / "lore.yml",
     },
     "Edifice": {
         "script": "batchLoreCards.py",
         "module": "edificeFormatted",
         "path": Path("scripts") / "edificeFormatted.py",
+        "data": Path("scripts") / "data" / "edifice.yml",
     },
     "Vox": {
         "script": "batchVoxCards.py",
         "module": "voxCardsFormatted",
         "path": Path("scripts") / "voxCardsFormatted.py",
+        "data": Path("scripts") / "data" / "vox.yml",
     },
 }
 
@@ -153,8 +158,67 @@ with st.container():
 
     # prepare template editing for the selected card type (always custom override)
     mapping = TEMPLATE_MAP[card_type]
-    template_module = mapping["module"]
-    repo_path = mapping["path"]
+    # By default use the Python module path; if a YAML `data` path exists, prefer that
+    template_module = mapping.get("module")
+    repo_path = mapping.get("path")
+    data_path = mapping.get("data")
+    using_yaml = False
+    # If a `data` path is configured, always use YAML — never fall back to the
+    # Python module. Create or prefer a per-template `_single.yml` so the UI
+    # edits a single entry. If no data file exists, create a `_single.yml`
+    # containing either the first entry of an existing full YAML or a placeholder
+    # template so the UI still has a sensible editable document.
+    if data_path:
+        try:
+            data_single = data_path.with_name(data_path.stem + "_single.yml")
+            # If we already have a single-entry file, prefer it.
+            if data_single.exists():
+                repo_path = data_single
+            else:
+                # Attempt to seed the single file from the full data file if present.
+                try:
+                    import yaml
+
+                    if data_path.exists():
+                        full = yaml.safe_load(data_path.read_text(encoding="utf-8"))
+                        if isinstance(full, list) and full:
+                            first = full[0]
+                            dump_text = yaml.safe_dump([first], sort_keys=False, allow_unicode=True)
+                            data_single.write_text(dump_text, encoding="utf-8")
+                            repo_path = data_single
+                        else:
+                            # full file exists but isn't a non-empty list; create placeholder
+                            raise Exception("full YAML not a non-empty list")
+                    else:
+                        # Full data file doesn't exist; create a placeholder single entry
+                        placeholder = [
+                            {
+                                "name": "New Entry",
+                                "abilities": "",
+                                "resources": [],
+                                "setup": {"A": {"ships": 3, "building": None}},
+                                "body_font_size": 18,
+                            }
+                        ]
+                        dump_text = yaml.safe_dump(placeholder, sort_keys=False, allow_unicode=True)
+                        data_single.write_text(dump_text, encoding="utf-8")
+                        repo_path = data_single
+                except Exception:
+                    # If YAML processing fails for any reason, ensure there's at
+                    # least a single-entry file we can edit.
+                    if not data_single.exists():
+                        try:
+                            data_single.write_text("- name: New Entry\n  abilities: ''\n", encoding="utf-8")
+                        except Exception:
+                            pass
+                    repo_path = data_single if data_single.exists() else data_path
+
+        except Exception:
+            # Fall back to the configured data_path as a last resort (still YAML)
+            repo_path = data_path
+
+        template_module = None
+        using_yaml = True
     try:
         if repo_path.exists():
             file_template_text = extract_top_list_entry(repo_path)
@@ -170,12 +234,12 @@ with st.container():
     overrides_key = "template_overrides"
     if overrides_key not in st.session_state:
         st.session_state[overrides_key] = {}
-
-    widget_key = f"template_override_{template_module}"
+    # Use the card type as the widget key so YAML and PY templates share persistent state
+    widget_key = f"template_override_{card_type}"
     # Initialize the widget key only if missing, using either an existing override
     # or the file's template text.
     if widget_key not in st.session_state:
-        st.session_state[widget_key] = st.session_state[overrides_key].get(template_module, file_template_text)
+        st.session_state[widget_key] = st.session_state[overrides_key].get(card_type, file_template_text)
 
     # Auto-size the text area height to show all lines of the stored template
     # when switching card types or opening a type.
@@ -187,15 +251,20 @@ with st.container():
 
     # Create the text area widget bound to the widget_key. Streamlit will store
     # the current text in `st.session_state[widget_key]`.
+    # Show a more accurate label for YAML vs Python templates
+    if using_yaml:
+        label = f"Edit data YAML for {card_type}"
+    else:
+        label = f"Edit {template_module}.py"
     template_text = st.text_area(
-        f"Edit {template_module}.py (temporary override)",
+        label,
         height=computed_height,
         key=widget_key,
     )
 
     # Mirror the widget value into the central overrides dict so it's easy to
     # access and persists across switches.
-    st.session_state[overrides_key][template_module] = st.session_state[widget_key]
+    st.session_state[overrides_key][card_type] = st.session_state[widget_key]
     run_button = st.button("Run")
 
     # Show a custom label so the default Streamlit uploader caption
@@ -251,7 +320,6 @@ with st.container():
             # Store display info so the UI can show saved filenames below the uploader.
             st.session_state["adk_upload_display"] = [(orig, str(p.name)) for orig, p in saved_entries]
             # Do not show a separate success box; the outlined list shows saved files
-            st.write(display_rel(Path(upload_tmpdir)))
             # Render the saved names inside the outlined box so they appear
             # immediately after processing the upload.
             html = "<div style='border:2px solid #666;padding:10px;border-radius:6px;background:transparent;display:block;max-width:100%'>"
@@ -286,6 +354,14 @@ if run_button:
     upload_dir = st.session_state.get("adk_upload_dir") if hasattr(st, "session_state") else None
     if upload_dir:
         env["ADK_UPLOAD_DIR"] = str(upload_dir)
+    # If we're using YAML data (including per-template single files), always
+    # pass ADK_DATA_DIR to the subprocess so the batch scripts never fall back
+    # to `.py` modules. Do not expose internal temp paths to the user.
+    if using_yaml and repo_path is not None:
+        try:
+            env["ADK_DATA_DIR"] = str(Path(repo_path).parent)
+        except Exception:
+            pass
     if template_module and template_text:
         try:
             tempdir = tempfile.mkdtemp(prefix="adk_template_")
@@ -294,12 +370,25 @@ if run_button:
             # prepend tempdir to PYTHONPATH (harmless when using --source-file)
             env_py = env.get("PYTHONPATH", "")
             env["PYTHONPATH"] = str(tempdir) + os.pathsep + env_py if env_py else str(tempdir)
-            st.info(f"Using edited template for module '{template_module}' from temporary path: {target}")
+            # Temporary module written; do not expose temp path to users.
         except Exception as e:
             st.error(f"Failed to write temporary template: {e}")
             tempdir = None
+    elif using_yaml and template_text:
+        # When editing YAML data directly, write the edited YAML file into a
+        # temporary directory and set ADK_DATA_DIR so batch scripts pick it up.
+        try:
+            tempdir = tempfile.mkdtemp(prefix="adk_data_")
+            data_name = mapping.get("data").name if mapping.get("data") else "data.yml"
+            target = Path(tempdir) / data_name
+            target.write_text(template_text, encoding="utf-8")
+            env["ADK_DATA_DIR"] = str(tempdir)
+            # Temporary YAML data written; do not expose temp path to users.
+        except Exception as e:
+            st.error(f"Failed to write temporary YAML data: {e}")
+            tempdir = None
 
-    # If we wrote a temporary template file, tell the batch script to load it via --source-file
+    # If we wrote a temporary template file for a Python module, tell the batch script to load it via --source-file
     if tempdir and template_module:
         target = Path(tempdir) / f"{template_module}.py"
         cmd.append(f"--source-file={str(target)}")
@@ -332,13 +421,38 @@ if run_button:
                     pass
 
     if proc:
-        output = "".join([proc.stdout or "", proc.stderr or ""]) or "(no output)"
+        stdout = proc.stdout or ""
+        stderr = proc.stderr or ""
+        combined = (stdout + stderr).strip() or "(no output)"
+
         st.subheader("Script output")
-        st.code(output)
-        if proc.returncode == 0:
-            st.success("Script finished successfully")
-        else:
+
+        # Show a concise error summary when the script failed.
+        if proc.returncode != 0:
             st.error(f"Script exited with code {proc.returncode}")
+
+            # Prefer explicit failure messages from stderr when available.
+            concise = None
+            if stderr.strip():
+                lines = [l for l in stderr.strip().splitlines() if l.strip()]
+                for l in lines:
+                    if any(k in l for k in ("Failed", "Error", "Traceback", "Exception", "fatal")):
+                        concise = l
+                        break
+                if not concise:
+                    concise = lines[-1] if lines else None
+
+            if concise:
+                st.error(f"Error detail: {concise}")
+            else:
+                st.error("Script failed; see full output below for details.")
+
+            # Always show the full output for diagnosis.
+            st.code(combined)
+        else:
+            # Success: show both stdout and stderr together for context.
+            st.code(combined)
+            st.success("Script finished successfully")
 
         after = snapshot_images_mtime(results_root)
         # consider a file 'new' if it didn't exist before or its mtime increased

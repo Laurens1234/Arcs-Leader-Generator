@@ -7,7 +7,48 @@ import sys
 script_dir = os.path.dirname(os.path.dirname(__file__))
 sys.path.append(script_dir)
 
-from leadersFormatted import leaders
+# Prefer YAML data files in `scripts/data/` but fall back to importing the existing
+# formatted Python module for compatibility.
+leaders = None
+try:
+    import yaml
+
+    # Prefer leaders.yml (official leadersFormatted.py export). Fall back to btr.yml
+    # which contains BTR-specific leaders converted from btrFormatted.py.
+    data_dir_env = os.environ.get("ADK_DATA_DIR")
+    if data_dir_env:
+        leaders_path = os.path.join(data_dir_env, "leaders.yml")
+        btr_path = os.path.join(data_dir_env, "btr.yml")
+    else:
+        leaders_path = os.path.join(script_dir, "scripts", "data", "leaders.yml")
+        btr_path = os.path.join(script_dir, "scripts", "data", "btr.yml")
+    # Prefer per-template single file when present in ADK_DATA_DIR, otherwise
+    # prefer the full list file. If ADK_DATA_DIR is set and any YAML file exists
+    # there, treat load errors or empty results as fatal (no fallback to .py).
+    full_path = leaders_path
+    single_path = os.path.join(os.path.dirname(full_path), "leaders_single.yml")
+    chosen = None
+    if os.path.exists(single_path):
+        chosen = single_path
+    elif os.path.exists(full_path):
+        chosen = full_path
+
+    if chosen:
+        try:
+            with open(chosen, encoding="utf-8") as f:
+                leaders = yaml.safe_load(f)
+        except Exception as e:
+            print(f"[leaderCards] Failed to load YAML at {chosen}: {e}")
+            sys.exit(2)
+
+        if leaders is None and data_dir_env:
+            print(f"[leaderCards] YAML at {chosen} is empty or invalid")
+            sys.exit(2)
+except Exception:
+    leaders = None
+
+if leaders is None:
+    from scripts.legacy.leadersFormatted import leaders
 
 from scripts.LeaderimageScript import create_card as create_leader_image
 

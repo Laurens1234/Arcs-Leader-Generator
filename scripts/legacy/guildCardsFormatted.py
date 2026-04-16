@@ -41,7 +41,7 @@ guild_cards = [
         "body_font_size": 18,
 
         "resource": "material",
-        "raid": 1,
+        "raid": 3,
 
         "render_scale": 2,
         "allow_upscale": True,

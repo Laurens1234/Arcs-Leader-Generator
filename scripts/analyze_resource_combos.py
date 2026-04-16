@@ -5,7 +5,7 @@ Script to analyze and display the most used resource combinations from leaders.
 
 import collections
 
-from leadersFormatted import leaders
+from scripts.legacy.leadersFormatted import leaders
 
 
 def analyze_resource_combos():

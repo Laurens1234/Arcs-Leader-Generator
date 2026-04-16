@@ -22,7 +22,7 @@ def create_card(input_data):
     neue_kabel_italic_path = os.path.join(base_path, "fonts", "NeueKabel-Italic.otf")
     neue_kabel_bolditalic_path = os.path.join(base_path, "fonts", "NeueKabel-BoldItalic.otf")
 
-    result_path = os.path.join(base_path, "results")
+    result_path = os.path.join(base_path, "results", "leader")
     leader_image_path = os.path.join(base_path, "cardAssets", "CardAssets-Tarot-Leader.png")
     text_box_image_path = os.path.join(base_path, "cardAssets", "CardAssets-Tarot-Fate-Text-Box.png")
 

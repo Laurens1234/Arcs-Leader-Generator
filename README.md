@@ -22,6 +22,12 @@ Website: https://arcs-card-generator.streamlit.app/
    pip install Pillow
    ```
 
+Also ensure PyYAML is installed so the generators can load YAML data files:
+
+```bash
+pip install pyyaml
+```
+
 ## Usage
 
 ### Generate Leader Cards
@@ -398,6 +404,47 @@ These are the built-in icon names currently available (from `icon and punchboard
 {icon:resource_weapon}
 {icon:resource_relic}
 {icon:resource_psionic}
+
+## YAML data workflow (recommended)
+
+The project now prefers YAML data files over the old formatted Python modules. This makes it easy to edit card data (and add inline comments) from the web UI or your editor.
+
+- Primary data files: `scripts/data/*.yml` (guilds.yml, lore.yml, vox.yml, leaders.yml, btr.yml, edifice.yml).
+- Web UI behavior: `app.py` always uses YAML for editing/generation and will never fall back to `.py` templates. When editing in the UI the app creates a per-template single-entry file named `<stem>_single.yml` (for example `leaders_single.yml`) so the editor only shows one entry to modify.
+- Legacy templates: the original formatted Python files were moved to `scripts/legacy/`. These are only used as a fallback when no YAML file exists (CLI/back-compat).
+- Temporary data handoff: when you click Run in the web UI the app writes edited YAML into a private temporary folder and sets `ADK_DATA_DIR` for the generator subprocess. The app does not show internal temp paths to users.
+- Error behavior: if a YAML file exists in `ADK_DATA_DIR` and the generator fails to parse it (syntax error or empty result), the generator exits with a clear error and the app displays the concise error plus full output, there is no silent fallback to `.py`.
+
+Converter and tools
+
+- Convert legacy `.py` templates to YAML:
+
+```bash
+python scripts/py_to_yaml_converter.py
+```
+
+- Verify YAML files:
+
+```bash
+python scripts/verify_yaml.py
+```
+
+Quick test (end-to-end)
+
+1. Start the web UI:
+
+```bash
+streamlit run app.py
+```
+
+2. Select a card type (e.g. Leader), edit the YAML entry in the editor and click **Run**.
+3. If you introduce a YAML syntax error, the generator will fail and the UI will show a clear error message and the full script output (no fallback to `.py`).
+
+Notes and next steps
+
+- If you want comment-preserving round-trips when the app rewrites YAML, consider switching to `ruamel.yaml` (optional).
+- Update `requirements.txt` to include `pyyaml` (done). If you prefer `ruamel.yaml` replace the YAML usage accordingly.
+- The `scripts/legacy/` folder keeps the old formatted templates for manual editing or CLI use; prefer YAML for day-to-day edits.
 {icon:summit}
 ```
 

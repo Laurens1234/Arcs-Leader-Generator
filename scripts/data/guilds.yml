@@ -1,0 +1,160 @@
+- name: testguild
+  title: Testguild
+  title_font_size: 25
+  body: 'This is a **Guild** card test.
+
+    Rich text: *italic* **bold** ***bolditalic*** with punctuation: **Tax**, *Influence.*
+
+
+    Long wrapping sentence to confirm layout works the same as lore cards.'
+  footer_left: G
+  footer: Guild
+  footer_right: '1'
+  footer_font_size: 16
+  body_font_size: 18
+  resource: fuel
+  raid: 2
+  render_scale: 2
+  allow_upscale: true
+  zoom: 1.0
+  boundary_shift: 1.0
+- name: testguild_material
+  title: testguild_material
+  title_font_size: 25
+  body: |
+    Material suit test.
+
+    Rich text: *italic* **bold** ***bolditalic***.
+
+    {vspace:30}
+
+    Raid icon test: raid=1.
+  footer_left: G
+  footer: Guild
+  footer_right: '2'
+  footer_font_size: 16
+  body_font_size: 18
+  resource: material
+  raid: 3
+  render_scale: 2
+  allow_upscale: true
+  zoom: 1.0
+  boundary_shift: 0.0
+- name: testguild_weapon
+  title: testguild_weapon
+  title_font_size: 25
+  body: 'Weapon suit test.
+
+    Punctuation baseline: **Tax**, *Influence.* and ***Secure!***
+
+    Raid icon test: raid=2 (default).'
+  footer_left: G
+  footer: Guild
+  footer_right: '3'
+  footer_font_size: 16
+  body_font_size: 18
+  resource: weapon
+  raid: 2
+  render_scale: 2
+  allow_upscale: true
+  zoom: 1.0
+  boundary_shift: 0.0
+- name: testguild_relic
+  title: testguild_relic
+  title_font_size: 25
+  body: 'Relic suit test.
+
+    Long wrap sentence: this line is intentionally a bit longer to wrap across multiple
+    lines in the body text area.
+    {vspace:30}
+
+    Raid icon test: raid=3.'
+  footer_left: G
+  footer: Guild
+  footer_right: '4'
+  footer_font_size: 16
+  body_font_size: 18
+  resource: relic
+  raid: 3
+  render_scale: 2
+  allow_upscale: true
+  zoom: 1.0
+  boundary_shift: 0.0
+- name: testguild_psionic
+  title: testguild_psionic
+  title_font_size: 25
+  body: 'Psionic suit test.
+
+    Raid icon test: raid=''X''.'
+  footer_left: G
+  footer: Guild
+  footer_right: '5'
+  footer_font_size: 16
+  body_font_size: 18
+  resource: psionic
+  raid: X
+  render_scale: 2
+  allow_upscale: true
+  zoom: 1.0
+  boundary_shift: 0.0
+- name: testguild_icons
+  title: Guild Icons
+  title_font_size: 25
+  body: '{icon:dice_hit_black} Start-of-sentence icon.
+
+    Middle-of-sentence icon {icon:dice_hit_black} to verify spacing.
+
+    End-of-sentence icon {icon:dice_intercept_black}.
+
+    Comma after icon {icon:dice_key_black}, then more text.
+
+    Paren before/after ( {icon:dice_self_hit_black} ) should still align.
+
+    '
+  footer_left: G
+  footer: Guild
+  footer_right: '99'
+  footer_font_size: 16
+  body_font_size: 18
+  resource: fuel
+  raid: 2
+  render_scale: 2
+  allow_upscale: true
+  zoom: 1.0
+  boundary_shift: 0.0
+- name: artifact_sample
+  title: Artifact
+  title_font_size: 25
+  body: 'This is an artifact-style guild card.
+
+    Overlay test: uses Artifact_top_half.png on top of the regular guild frame.'
+  footer_left: G
+  footer: Artifact
+  footer_right: '1'
+  footer_font_size: 16
+  body_font_size: 18
+  resource: artifact
+  raid: 2
+  render_scale: 2
+  allow_upscale: true
+  zoom: 1.0
+  boundary_shift: 0.0
+- name: testguildbolded
+  title: Guild bolded long
+  title_font_size: 25
+  body: '**S a a a a a a  a a a a a a a a a  a a a a a a a a a  a a  a a a  a a a
+    a aSa a a a a  a a a a a a a a a  a a a a a a a a a  a a  a a a  a a a**
+
+    S a a a a a a  a a a a a a a a a  a a a  a a a a a a  a a  a a a  a a a a a a
+    Sa a a a  a a a a a a a a a  a a a a a a a a a  a a  a a a  a a a'
+  footer_left: G
+  footer: Guild
+  footer_right: '99'
+  footer_font_size: 16
+  body_font_size: 18
+  resource: fuel
+  raid: 2
+  render_scale: 2
+  allow_upscale: true
+  zoom: 1.0
+  boundary_shift: 0.0

@@ -9,7 +9,52 @@ from PIL import Image, ImageDraw, ImageFont
 script_dir = os.path.dirname(os.path.dirname(__file__))
 sys.path.append(script_dir)
 
-from scripts.guildCardsFormatted import guild_cards
+# Prefer YAML data files in `scripts/data/` but fall back to importing the existing
+# formatted Python module for compatibility. Allow overriding the data directory
+# via the environment variable `ADK_DATA_DIR` (used by the Streamlit app for
+# temporary edits).
+data_dir_env = os.environ.get("ADK_DATA_DIR")
+if data_dir_env:
+    data_dir = data_dir_env
+else:
+    data_dir = os.path.join(script_dir, "scripts", "data")
+
+full_path = os.path.join(data_dir, "guilds.yml")
+single_path = os.path.join(data_dir, "guilds_single.yml")
+
+guild_cards = None
+chosen_path = None
+try:
+    import yaml
+
+    # Prefer the per-template single file when present, otherwise the full list
+    if os.path.exists(single_path):
+        chosen_path = single_path
+    elif os.path.exists(full_path):
+        chosen_path = full_path
+
+    if chosen_path:
+        try:
+            with open(chosen_path, encoding="utf-8") as f:
+                guild_cards = yaml.safe_load(f)
+        except Exception as e:
+            print(f"[guildCards] Failed to load YAML at {chosen_path}: {e}")
+            sys.exit(2)
+
+        # If ADK_DATA_DIR is set (website-provided data), treating an empty
+        # YAML as fatal prevents falling back to legacy .py templates.
+        if guild_cards is None and data_dir_env:
+            print(f"[guildCards] YAML at {chosen_path} is empty or invalid")
+            sys.exit(2)
+except Exception:
+    guild_cards = None
+
+if guild_cards is None:
+    # No YAML present -> fall back to the legacy .py module for CLI/backwards-compat.
+    print("[guildCards] No YAML present; falling back to scripts/legacy/guildCardsFormatted.py")
+    from scripts.legacy.guildCardsFormatted import guild_cards
+else:
+    print(f"[guildCards] Loaded {len(guild_cards)} entries from {chosen_path}")
 
 _DEFAULT_OUTPUT_DPI = (300, 300)
 
@@ -578,7 +623,9 @@ def create_guild_card(input_data):
             try:
                 inner = line_str[len("{vspace:"):-1].strip()
                 n = int(inner)
-                current_y += _s(n)
+                added = _s(n)
+                print(f"[guildCards] vspace token: {n} -> add {added} px at y={current_y}")
+                current_y += added
                 continue
             except Exception:
                 pass

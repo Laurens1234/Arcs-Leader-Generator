@@ -9,7 +9,44 @@ from PIL import Image, ImageDraw, ImageFont
 script_dir = os.path.dirname(os.path.dirname(__file__))
 sys.path.append(script_dir)
 
-from scripts.voxCardsFormatted import vox_cards
+# Prefer YAML data files in `scripts/data/` but fall back to importing the existing
+# formatted Python module for compatibility. Allow overriding via `ADK_DATA_DIR`.
+data_dir_env = os.environ.get("ADK_DATA_DIR")
+if data_dir_env:
+    data_dir = data_dir_env
+else:
+    data_dir = os.path.join(script_dir, "scripts", "data")
+
+full_path = os.path.join(data_dir, "vox.yml")
+single_path = os.path.join(data_dir, "vox_single.yml")
+
+vox_cards = None
+chosen_path = None
+try:
+    import yaml
+
+    if os.path.exists(single_path):
+        chosen_path = single_path
+    elif os.path.exists(full_path):
+        chosen_path = full_path
+
+    if chosen_path:
+        try:
+            with open(chosen_path, encoding="utf-8") as f:
+                vox_cards = yaml.safe_load(f)
+        except Exception as e:
+            print(f"[voxCards] Failed to load YAML at {chosen_path}: {e}")
+            sys.exit(2)
+
+        if vox_cards is None and data_dir_env:
+            print(f"[voxCards] YAML at {chosen_path} is empty or invalid")
+            sys.exit(2)
+except Exception:
+    vox_cards = None
+
+if vox_cards is None:
+    # No YAML present -> fall back to legacy .py module
+    from scripts.legacy.voxCardsFormatted import vox_cards
 
 _DEFAULT_OUTPUT_DPI = (300, 300)
 

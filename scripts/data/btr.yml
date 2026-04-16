@@ -1,0 +1,151 @@
+- name: God's Hand
+  abilities: '*Faithful* *Reach.* Before dealing action cards, mix in the 6 Faithful
+    Action cards (FL1-6) and take Champion of the Faith title (F7).
+
+    {vspace:5}
+
+    *An* *Era* *of* *Heresy.* When any player wins Empath, they take Champion of the
+    Faith title.'
+  resources:
+  - Psionic
+  - Psionic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: city
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+- name: Firebrand
+  abilities: '*Partisan* *Seizing.* Place the Partisan Seizing rules card near the
+    action area. This game, players can seize by provoking outrage if they do not
+    wish to spend a second action card.
+
+    *Shameless.* Whenever you win **any** ambition, you may discard a resource to
+    remove the matching outrage.'
+  resources:
+  - Weapon
+  - Psionic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+  zoom: 1
+  boundary_shift: 0.22
+- name: Scavenger
+  abilities: '**Scavenge** **(Tax):** Damage a fresh rival ship in a system you control.
+    Then gain a resource matching that system.
+
+    {vspace:5}
+
+    *Broken* *Reach.* In **setup**, all players Provoke Material Outrage.'
+  resources:
+  - Material
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+  zoom: 1.25
+  boundary_shift: 0.25
+- name: Diplomat
+  abilities: '*Canny.* Before **scoring** **ambitions**, you **secure** all cards
+    where you have the most agents.
+
+    *Greedy.* In **setup**, place an agent on your Relic Outrage slot.'
+  resources:
+  - Psionic
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+  zoom: 1.3
+  boundary_shift: 0.33
+- name: Imperator
+  abilities: '*Empire* *Builder.* When you win an ambition score twice as many points
+    from your city bonus.
+
+    *Sneering.* You do not score second place for any ambition.'
+  resources:
+  - Material
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+  zoom: 1.15
+  boundary_shift: 0.5
+- name: Ancient Wraith
+  abilities: '*The* *Undying* *Reach.* Place the Twisted Passage rules card in play.
+    Players may move out of the Passage, and no players may harm Rivals there.
+
+    *Ethereal.* You cannot build shipyards, but your destroyed ships are never taken
+    as trophies and are instead placed on the Twisted Passage.'
+  resources:
+  - Weapon
+  - Psionic
+  setup:
+    A:
+      ships: 4
+      building: None
+    B:
+      ships: 3
+      building: None
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+- name: Poet
+  abilities: '*Creative.* You can **Surpass** with cards of a different suit as long
+    as its initiative is greater than the lead card. (On a tie with a suited card,
+    they take initiative.)
+
+    *Pretentious.* You cannot **Surpass** with cards of the same suit as the lead
+    card.'
+  resources:
+  - Material
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18

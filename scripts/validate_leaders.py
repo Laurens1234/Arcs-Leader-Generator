@@ -22,7 +22,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-LEADERS_PY = ROOT / "scripts" / "leadersFormatted.py"
+LEADERS_PY = ROOT / "scripts" / "legacy" / "leadersFormatted.py"
 ASSET_DIR = ROOT / "cardAssets" / "leaderImages"
 
 # Allowed resource literals (empty string currently used for intentionally-blank slots)
@@ -33,12 +33,12 @@ IGNORE_WORDS = {"city", "starport", "starports", "none"}
 
 
 def load_leaders():
-    # Import dynamically from scripts package path
+    # Import dynamically from scripts.legacy package path
     sys.path.insert(0, str(ROOT / "scripts"))
     try:
-        from leadersFormatted import leaders
+        from scripts.legacy.leadersFormatted import leaders
     except Exception as e:
-        print(f"Error importing leadersFormatted.py: {e}")
+        print(f"Error importing legacy leadersFormatted.py: {e}")
         raise
     return leaders
 
