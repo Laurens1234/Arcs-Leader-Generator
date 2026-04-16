@@ -865,7 +865,7 @@
   body_font_size: 18
   zoom: 1
   boundary_shift: 0.35
-- name: Conniver
+- name: Hustler
   abilities: '*Devious.* When you **declare** **an** **ambition**, you may **Provoke**
     **Outrage** in a non-Outraged type to **clear** **Outrage** in a different type.
     Then, take and spend 1 resource from the cleared type’s supply.

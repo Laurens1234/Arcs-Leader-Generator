@@ -17,8 +17,15 @@ if data_dir_env:
 else:
     data_dir = os.path.join(script_dir, "scripts", "data")
 
-full_path = os.path.join(data_dir, "lore.yml")
-single_path = os.path.join(data_dir, "lore_single.yml")
+# Allow the caller to request a specific data filename (e.g. edifice.yml)
+data_name_env = os.environ.get("ADK_DATA_FILENAME")
+if data_name_env:
+    full_path = os.path.join(data_dir, data_name_env)
+    stem = os.path.splitext(data_name_env)[0]
+    single_path = os.path.join(data_dir, f"{stem}_single.yml")
+else:
+    full_path = os.path.join(data_dir, "lore.yml")
+    single_path = os.path.join(data_dir, "lore_single.yml")
 
 lore_cards = None
 chosen_path = None

@@ -383,6 +383,9 @@ if run_button:
             target = Path(tempdir) / data_name
             target.write_text(template_text, encoding="utf-8")
             env["ADK_DATA_DIR"] = str(tempdir)
+            # Inform batch scripts of the exact data filename so they can
+            # load non-default YAML names (e.g. edifice.yml).
+            env["ADK_DATA_FILENAME"] = data_name
             # Temporary YAML data written; do not expose temp path to users.
         except Exception as e:
             st.error(f"Failed to write temporary YAML data: {e}")
