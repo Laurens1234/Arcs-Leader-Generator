@@ -1950,7 +1950,7 @@
       building: None
   body_font_size: 18
 - name: Purist
-  abilities: '*Peaceful.* When attacking in **battle**, you may ignore the results of any die if the same face appears on another die you rolled.
+  abilities: '*Peaceful.* When attacking in **battle**, you may ignore the result of any die if the same face appears on another die you rolled.
 
     *Minimalistic.* In **clean up**, discard resources until you only have 1 resource of each type.'
   resources:
@@ -1969,10 +1969,10 @@
   body_font_size: 18
 
 - name: Marauder
-  abilities: '*Opportunistic.* When attacking in **battle**, if you roll only Raid dice, you may swap the
+  abilities: '*Opportunistic.* When attacking in **battle**, if you only roll Raid dice, you may swap the
     amounts of {icon:dice_self_hit_black} and {icon:dice_key_black}.
 
-    *Cautious.* In **battle**, you collect Raid dice if there are any fresh defending ships.'
+    *Cautious.* In **battle**, you cannot collect Raid dice if there are any fresh defending ships.'
   resources:
   - Weapon
   - Fuel
@@ -2008,12 +2008,12 @@
   body_font_size: 18
   zoom: 1.14
 
-- name: idk
-  abilities: '*Leveraged.* After attacking in **battle**, if you rolled multiple skirmish
+- name: Underwriter
+  abilities: '*Assured.* After attacking in **battle**, if you rolled multiple skirmish
     dice and more than half have no {icon:dice_hit_black} on them, gain any any resource.
     *(After rerolls.)*
 
-    *.* After attacking in **battle**, if all your dice have a {icon:dice_hit_black} or {icon:dice_building_hit_black} on them, discard a resource.'
+    *Levied.* After attacking in **battle**, if all your rolled dice have a {icon:dice_hit_black} or {icon:dice_building_hit_black} on them, discard a resource.'
   resources:
   - Relic
   - Weapon
