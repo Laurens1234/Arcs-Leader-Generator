@@ -149,49 +149,74 @@ def create_lore_card(input_data):
         if render_scale != 1:
             lore_frame = lore_frame.resize(_s(lore_frame.size), Image.Resampling.LANCZOS)
         card_width, card_height = lore_frame.size
-        # Try to use the themed background image with a configurable zoom and optional seed.
-        bg_path = os.path.join(base_path, "cardAssets", "arcs_stars_background.png")
-        try:
-            bg_img = Image.open(bg_path).convert("RGBA")
-
-            # Background zoom: default 1.5x (less extreme than previous defaults).
-            # Can be overridden per-card via `bg_zoom` or globally via env `ADK_BG_ZOOM`.
+        # Prefer the small background image (use it as-is, no random crop/zoom).
+        small_bg_path = os.path.join(base_path, "cardAssets", "arcs_star_background_small.png")
+        # Per-card override: set `use_large_bg: true` to force the large background
+        # even when the small background file exists.
+        if not input_data.get("use_large_bg", False) and os.path.exists(small_bg_path):
             try:
-                zoom = float(input_data.get("bg_zoom", os.environ.get("ADK_BG_ZOOM", 1.5)))
-            except Exception:
-                zoom = 2.0
-            if zoom < 1.0:
-                zoom = 1.0
+                small_bg = Image.open(small_bg_path).convert("RGBA")
+                sb_w, sb_h = small_bg.size
+                # Scale so the small background is at least as wide as the card
+                # and at least as tall as the top half, preserving aspect ratio.
+                target_half_h = card_height // 2
+                scale_w = card_width / float(sb_w)
+                scale_h = target_half_h / float(sb_h)
+                scale = max(scale_w, scale_h, 1.0)
+                new_w = max(1, int(round(sb_w * scale)))
+                new_h = max(1, int(round(sb_h * scale)))
+                small_bg = small_bg.resize((new_w, new_h), Image.Resampling.LANCZOS)
 
-            # Optional deterministic seed: `bg_seed` or env `ADK_BG_SEED`.
-            seed_val = input_data.get("bg_seed", os.environ.get("ADK_BG_SEED"))
-            rng = random.Random()
+                base_img = Image.new("RGBA", (card_width, card_height), (0, 0, 0, 255))
+                paste_x = int(round((card_width - new_w) / 2))
+                paste_y = 0  # align top so it covers the top half
+                base_img.paste(small_bg, (paste_x, paste_y), small_bg)
+            except Exception:
+                base_img = Image.new("RGBA", (card_width, card_height), (0, 0, 0, 255))
+        else:
+            # Try to use the themed background image with a configurable zoom and optional seed.
+            bg_path = os.path.join(base_path, "cardAssets", "arcs_stars_background.png")
             try:
-                if seed_val is not None:
-                    rng.seed(int(seed_val))
-            except Exception:
-                pass
+                bg_img = Image.open(bg_path).convert("RGBA")
 
-            crop_w = max(1, int(round(card_width / zoom)))
-            crop_h = max(1, int(round(card_height / zoom)))
+                # Background zoom: default 1.5x (less extreme than previous defaults).
+                # Can be overridden per-card via `bg_zoom` or globally via env `ADK_BG_ZOOM`.
+                try:
+                    zoom = float(input_data.get("bg_zoom", os.environ.get("ADK_BG_ZOOM", 1.5)))
+                except Exception:
+                    zoom = 1.5
+                if zoom < 1.0:
+                    zoom = 1.0
 
-            bg_w, bg_h = bg_img.size
-            # Ensure background is at least as big as the desired crop by scaling up if necessary
-            if bg_w < crop_w or bg_h < crop_h:
-                scale = max(crop_w / bg_w, crop_h / bg_h)
-                new_w = max(bg_w, int(round(bg_w * scale)))
-                new_h = max(bg_h, int(round(bg_h * scale)))
-                bg_img = bg_img.resize((new_w, new_h), Image.Resampling.LANCZOS)
+                # Optional deterministic seed: `bg_seed` or env `ADK_BG_SEED`.
+                seed_val = input_data.get("bg_seed", os.environ.get("ADK_BG_SEED"))
+                rng = random.Random()
+                try:
+                    if seed_val is not None:
+                        rng.seed(int(seed_val))
+                except Exception:
+                    pass
+
+                crop_w = max(1, int(round(card_width / zoom)))
+                crop_h = max(1, int(round(card_height / zoom)))
+
                 bg_w, bg_h = bg_img.size
+                # Ensure background is at least as big as the desired crop by scaling up if necessary
+                if bg_w < crop_w or bg_h < crop_h:
+                    scale = max(crop_w / bg_w, crop_h / bg_h)
+                    new_w = max(bg_w, int(round(bg_w * scale)))
+                    new_h = max(bg_h, int(round(bg_h * scale)))
+                    bg_img = bg_img.resize((new_w, new_h), Image.Resampling.LANCZOS)
+                    bg_w, bg_h = bg_img.size
 
-            max_x = max(0, bg_w - crop_w)
-            max_y = max(0, bg_h - crop_h)
-            left = rng.randint(0, max_x)
-            top = rng.randint(0, max_y)
-            cropped = bg_img.crop((left, top, left + crop_w, top + crop_h))
-            base_img = cropped.resize((card_width, card_height), Image.Resampling.LANCZOS)
-        except Exception:
-            base_img = Image.new("RGBA", (card_width, card_height), (0, 0, 0, 255))
+                max_x = max(0, bg_w - crop_w)
+                max_y = max(0, bg_h - crop_h)
+                left = rng.randint(0, max_x)
+                top = rng.randint(0, max_y)
+                cropped = bg_img.crop((left, top, left + crop_w, top + crop_h))
+                base_img = cropped.resize((card_width, card_height), Image.Resampling.LANCZOS)
+            except Exception:
+                base_img = Image.new("RGBA", (card_width, card_height), (0, 0, 0, 255))
 
     # Load and paste lore image (top half of the card), skip for edifice variant
     if variant != "edifice":

@@ -2009,7 +2009,7 @@
   zoom: 1.14
 
 - name: Underwriter
-  abilities: '*Assured.* After attacking in **battle**, if you rolled multiple skirmish dice and more them half of those Skirmish dice have no {icon:dice_hit_black}, gain any resource.
+  abilities: '*Assured.* After attacking in **battle**, if more than half of your rolled Skirmish dice have no {icon:dice_hit_black}, gain any resource.
 
     *Levied.* After attacking in **battle**, if all your rolled dice have a {icon:dice_hit_black} or {icon:dice_building_hit_black} on them, discard a resource.'
   resources:

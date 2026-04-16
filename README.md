@@ -398,6 +398,89 @@ These are the built-in icon names currently available (from `icon and punchboard
 {icon:id_hex}
 {icon:id_moon}
 {icon:objective}
+
+## Spellchecking YAML & Background Zoom (new)
+
+This project includes two recent conveniences:
+
+- A YAML spellchecker for `scripts/data` files.
+- Configurable background zooming for lore/guild card generation (default less-zoomed).
+
+Spellchecker
+- Script: `scripts/spellcheck_yaml.py` — scans `scripts/data/` by default and writes plain-text or YAML reports.
+- Wordlist: `scripts/spellcheck_words.txt` — add project-specific tokens (names, game terms) to reduce false positives.
+- Usage examples:
+```
+python scripts/spellcheck_yaml.py --report spellreport.yml
+python scripts/spellcheck_yaml.py --report issues.txt
+python scripts/spellcheck_yaml.py --add-word Kaiju
+```
+
+Notes:
+- Reports are written relative to the `scripts/data/` path and group issues by file.
+- The tokenization is conservative; please add common project words to `scripts/spellcheck_words.txt`.
+
+Background zoom (lore & guild)
+- Files updated: `scripts/batchLoreCards.py`, `scripts/batchGuildCards.py`.
+- Default zoom: `1.5` (less zoomed-in than earlier versions).
+- Per-card override: add `bg_zoom` (float) to a card entry in `scripts/data/*.yml` to control zoom for that card.
+- Optional deterministic crop: add `bg_seed` (int) to a card entry to make the random crop reproducible.
+- Environment overrides (session):
+    - `ADK_BG_ZOOM` — set a global default zoom (e.g. `1.25`).
+    - `ADK_BG_SEED` — set a global seed for deterministic crops.
+
+Examples (per-card YAML entry):
+```
+- name: ExampleLore
+    title: Example Lore
+    bg_zoom: 1.25
+    bg_seed: 42
+```
+
+Examples (PowerShell / cmd):
+```powershell
+$env:ADK_BG_ZOOM = '1.5'    # PowerShell (session)
+# cmd:
+set ADK_BG_ZOOM=1.5
+```
+
+Regenerate a set of cards after adjusting zoom:
+```
+python scripts/batchLoreCards.py
+python scripts/batchGuildCards.py
+```
+
+If you want a different default zoom (e.g. 1.25), tell me and I will update the scripts accordingly.
+
+Small background default (guild & lore)
+- Filename: `cardAssets/arcs_star_background_small.png` — when present, both the lore and guild generators now use this image by default.
+- Behavior: the small background is top-aligned and scaled (preserving aspect ratio) so that it is at least as wide as the final card and at least as tall as the card's top half. This means it will cover the artwork area and may bleed beyond the card edges; it will not be upscaled more than needed.
+- Fallback: if the small file is missing, the generators fall back to the large `cardAssets/arcs_stars_background.png` and apply the configurable random-crop behavior (see `bg_zoom` / `bg_seed`).
+- Per-card control: `bg_zoom` and `bg_seed` still apply when the large background is used. When the small file is present, it takes precedence.
+- To force the large background temporarily: remove or rename `arcs_star_background_small.png` so the generator will use the large background instead.
+
+Per-card override to force large background
+- Add `use_large_bg: true` to a card entry in `scripts/data/*.yml` to force the generator
+    to use the large `arcs_stars_background.png` even when the small file exists.
+
+Example:
+```
+- name: ExampleLore
+    use_large_bg: true
+    bg_zoom: 1.25    # only used for the large background
+    bg_seed: 42
+```
+
+Examples:
+```
+# Add the small background to the repo to use it by default:
+cp my_small_bg.png "cardAssets/arcs_star_background_small.png"
+
+# Per-card override (when large bg is used):
+- name: ExampleLore
+    bg_zoom: 1.25
+    bg_seed: 42
+```
 {icon:players}
 {icon:resource_material}
 {icon:resource_fuel}

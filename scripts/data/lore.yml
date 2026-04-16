@@ -69,10 +69,10 @@
   allow_upscale: false
   zoom: 0.8
   boundary_shift: 0
-- name: testbackgroundzoomwithseed
-  title: testloreimage
-  title_font_size: 25
-  body: 'lore star image test with image seeded zoomed out 0.25'
+- name: tesemptyrandom
+  title: testemptyrandom
+  title_font_size: 22
+  body: 'lore star with random larger random background.'
   footer_left: S
   footer: Lore
   footer_right: 55
@@ -80,22 +80,6 @@
   body_font_size: 18
   render_scale: 2
   allow_upscale: false
-  zoom: 0.8
+  zoom: 1.0
   boundary_shift: 0
-  bg_zoom: 0.25
-  bg_seed: 42
-- name: testbackgroundzoomwithsee2
-  title: testloreimage
-  title_font_size: 25
-  body: 'lore star image test with image seeded zoomed out 0.5'
-  footer_left: S
-  footer: Lore
-  footer_right: 55
-  footer_font_size: 16
-  body_font_size: 18
-  render_scale: 2
-  allow_upscale: false
-  zoom: 0.8
-  boundary_shift: 0
-  bg_zoom: 0.5
-  bg_seed: 55
+  use_large_bg: true
