@@ -2009,9 +2009,7 @@
   zoom: 1.14
 
 - name: Underwriter
-  abilities: '*Assured.* After attacking in **battle**, if you rolled multiple skirmish
-    dice and more than half have no {icon:dice_hit_black} on them, gain any any resource.
-    *(After rerolls.)*
+  abilities: '*Assured.* After attacking in **battle**, if you rolled multiple skirmish dice and more them half of those Skirmish dice have no {icon:dice_hit_black}, gain any resource.
 
     *Levied.* After attacking in **battle**, if all your rolled dice have a {icon:dice_hit_black} or {icon:dice_building_hit_black} on them, discard a resource.'
   resources:
@@ -2030,7 +2028,7 @@
   body_font_size: 18
 
 - name: Doppelganger
-  abilities: '*Mimetic.* **Prelude:** Once per chapter, you may discard a resource to gain **all** of a Rival''s leader''s abilities until the end of the chapter.
+  abilities: '*Mimetic.* **Prelude:** Once per chapter, you may discard a resource to gain **all** of a Rival leader''s abilities until the end of the chapter.
 
     *Unsettling.* You don''t gain Power when you tie for first place.'
   resources:
