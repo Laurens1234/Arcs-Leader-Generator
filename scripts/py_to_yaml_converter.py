@@ -18,7 +18,7 @@ SCRIPTS_DIR = os.path.join(PROJECT_ROOT, "scripts")
 OUT_DIR = os.path.join(SCRIPTS_DIR, "data")
 
 MAPPINGS = {
-    "guildCardsFormatted.py": ("guilds.yml", ["guild_cards"]),
+    "guildCardsFormatted.py": ("guild.yml", ["guild_cards"]),
     "loreCardsFormatted.py": ("lore.yml", ["lore_cards"]),
     "voxCardsFormatted.py": ("vox.yml", ["vox_cards"]),
     # btrFormatted contains BTR-specific leaders; write to btr.yml

@@ -49,7 +49,7 @@ TEMPLATE_MAP = {
         "script": "batchGuildCards.py",
         "module": "guildCardsFormatted",
         "path": Path("scripts") / "guildCardsFormatted.py",
-        "data": Path("scripts") / "data" / "guilds.yml",
+        "data": Path("scripts") / "data" / "guild.yml",
     },
     "Lore": {
         "script": "batchLoreCards.py",

@@ -409,7 +409,7 @@ These are the built-in icon names currently available (from `icon and punchboard
 
 The project now prefers YAML data files over the old formatted Python modules. This makes it easy to edit card data (and add inline comments) from the web UI or your editor.
 
-- Primary data files: `scripts/data/*.yml` (guilds.yml, lore.yml, vox.yml, leaders.yml, btr.yml, edifice.yml).
+- Primary data files: `scripts/data/*.yml` (guild.yml, lore.yml, vox.yml, leaders.yml, btr.yml, edifice.yml).
 - Web UI behavior: `app.py` always uses YAML for editing/generation and will never fall back to `.py` templates. When editing in the UI the app creates a per-template single-entry file named `<stem>_single.yml` (for example `leaders_single.yml`) so the editor only shows one entry to modify.
 - Legacy templates: the original formatted Python files were moved to `scripts/legacy/`. These are only used as a fallback when no YAML file exists (CLI/back-compat).
 - Temporary data handoff: when you click Run in the web UI the app writes edited YAML into a private temporary folder and sets `ADK_DATA_DIR` for the generator subprocess. The app does not show internal temp paths to users.

@@ -19,8 +19,8 @@ if data_dir_env:
 else:
     data_dir = os.path.join(script_dir, "scripts", "data")
 
-full_path = os.path.join(data_dir, "guilds.yml")
-single_path = os.path.join(data_dir, "guilds_single.yml")
+full_path = os.path.join(data_dir, "guild.yml")
+single_path = os.path.join(data_dir, "guild_single.yml")
 
 guild_cards = None
 chosen_path = None
