@@ -1466,8 +1466,7 @@
       building: None
   body_font_size: 18
 - name: Titan
-  abilities: '*Immovable.* When defending in **battle**, your ships cannot be destroyed
-    unless the attacker controls the gate of the battle system''s cluster.
+  abilities: '*Immovable.* When defending in **battle**, each of your ships cannot be damaged twice in the same battle.
 
     *Stationary.* Your damaged ships cannot Catapult **move**.'
   resources:
@@ -1684,7 +1683,7 @@
     supply and place it fresh one of their starports, if you do, gain a resource matching
     that system.
 
-    *Detached.* In **cleanup**, you always return all trophies, even if Warlord was
+    *Detached.* In **clean up**, you always return all trophies, even if Warlord was
     not declared.'
   resources:
   - Material
@@ -1951,13 +1950,13 @@
       ships: 2
       building: None
   body_font_size: 18
-- name: Doppelganger
-  abilities: '*Mimetic.* When attacking in **battle**, you may reroll any die if the same face appears on another die you rolled.
+- name: idk
+  abilities: '*.* When attacking in **battle**, you may ignore the results of any die if the same face appears on another die you rolled.
 
-    *Unsettling.* idk.'
+    *.* In **clean up**, discard all your resources of which type you have more than 1.'
   resources:
   - Psionic
-  - Material
+  - Weapon
   setup:
     A:
       ships: 3
@@ -1969,11 +1968,12 @@
       ships: 2
       building: None
   body_font_size: 18
+
 # - name: z1
-#   abilities: '*Reversed.* In battle, if you roll only raid dice, you may swap the
+#   abilities: '*.* In battle, if you roll only raid dice, you may swap the
 #     amounts of keys and flame.
 
-#     *Cautious.* You cannot raid if the defender has any fresh ships in the battle
+#     *.* You cannot raid if the defender has any fresh ships in the battle
 #     system.'
 #   resources:
 #   - Weapon
@@ -1990,8 +1990,8 @@
 #       building: None
 #   body_font_size: 18
 # - name: z2
-#   abilities: '*Piercing.* When attacking in battle, each intercept die you roll you
-#     roll also counts as hit hit.
+#   abilities: '*Piercing.* When attacking in battle, each intercept you
+#     roll also counts as {hit}{hit}.
 
 #     *.* .'
 #   resources:
@@ -2029,6 +2029,24 @@
 #       building: None
 #   body_font_size: 18
 
+- name: Doppelganger
+  abilities: '*Mimetic.* Prelude: Once per chapter, you may discard a resource to gain **all** of a Rival's leader non-setup  abilities until the end of the chapter.
+
+    *Unsettling.* You don't gain Power when you tie for first place.'
+  resources:
+  - Psionic
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
 
 # {
 #     "name": "Forgemaster",
@@ -2044,7 +2062,7 @@
 #     },
 #     "body_font_size": 18
 # },
-# # Dice-mechanic leaders (one per requested mechanic)
+
 # {
 #     "name": "Setmaker",
 #     "abilities": (  
