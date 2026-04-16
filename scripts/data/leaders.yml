@@ -1935,7 +1935,7 @@
     Raid die. This **battle** You may reroll any dice that match that die''s face
     (empty matches empty).
 
-    *Cautious.* You cannot move if it''d cause you to have ships in more than 4 different
+    *Cautious.* You cannot **move** if it''d cause you to have ships in more than 4 different
     systems.'
   resources:
   - Weapon
