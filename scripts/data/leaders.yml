@@ -743,13 +743,11 @@
   body_font_size: 18
   zoom: 1.2
   boundary_shift: 0.4
-- name: Bargainer
-  abilities: '*Leveraged.* When you **tax**, you may return a Rival''s captive to
+- name: Rackateer
+  abilities: '*Leveraged.* When you **tax**, you may return a Rival''s captive trophy to
     tax one of their cities instead.
 
-    *Obliged.* In **scoring**, if you win Tyrant, only gain Power for second place
-    and keep 1 Captive of each Rival. If you don''t, return all your Captives. *(Even
-    if it wasn''t declared!)*'
+    *Obliged.* In **scoring**, return all your Captives, even if Tyrant wasn''t declared.*'
   resources:
   - Weapon
   - Relic
@@ -867,7 +865,7 @@
   body_font_size: 18
   zoom: 1
   boundary_shift: 0.35
-- name: Wheeler-Dealer
+- name: Conniver
   abilities: '*Devious.* When you **declare** **an** **ambition**, you may **Provoke**
     **Outrage** in a non-Outraged type to **clear** **Outrage** in a different type.
     Then, take and spend 1 resource from the cleared type’s supply.
@@ -1114,7 +1112,7 @@
       building: None
   body_font_size: 18
   zoom: 1.25
-- name: High-Roller
+- name: Punter
   abilities: '*Audacious.* After you roll dice in **battle**, you may damage 1 of
     your attacking ships to reroll **all** dice.
 
