@@ -1931,8 +1931,7 @@
   zoom: 1.15
 - name: Tactician
   abilities: '*Calculalative.* Before attacking in **battle**, roll an Assault or
-    Raid die. This **battle** You may reroll any dice that match that die''s face
-    (empty matches empty).
+    Raid die. This **battle** You may reroll any dice that match that die''s face.
 
     *Cautious.* You cannot **move** if it''d cause you to have ships in more than 4 different
     systems.'
@@ -1953,7 +1952,7 @@
 - name: Purist
   abilities: '*Peaceful.* When attacking in **battle**, you may ignore the results of any die if the same face appears on another die you rolled.
 
-    *Minimalistic.* In **clean up**, discard all your resources of which type you have more than 1 resource.'
+    *Minimalistic.* In **clean up**, discard resources until you only have 1 resource of each type.'
   resources:
   - Psionic
   - Fuel
@@ -1970,10 +1969,10 @@
   body_font_size: 18
 
 - name: Marauder
-  abilities: '*Opportunistic.* When attacking in **battle**, if you roll only raid dice, you may swap the
-    amounts of {icon:dice_key_black} and {icon:dice_self_hit_black}.
+  abilities: '*Opportunistic.* When attacking in **battle**, if you roll only Raid dice, you may swap the
+    amounts of {icon:dice_self_hit_black} and {icon:dice_key_black}.
 
-    *Cautious.* In **battle**, you cannot raid if there are any fresh defending ships.'
+    *Cautious.* In **battle**, you collect Raid dice if there are any fresh defending ships.'
   resources:
   - Weapon
   - Fuel
