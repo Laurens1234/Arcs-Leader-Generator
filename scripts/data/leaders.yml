@@ -1950,12 +1950,73 @@
       ships: 2
       building: None
   body_font_size: 18
-- name: idk
-  abilities: '*.* When attacking in **battle**, you may ignore the results of any die if the same face appears on another die you rolled.
+- name: Purist
+  abilities: '*Peaceful.* When attacking in **battle**, you may ignore the results of any die if the same face appears on another die you rolled.
 
-    *.* In **clean up**, discard all your resources of which type you have more than 1.'
+    *Minimalistic.* In **clean up**, discard all your resources of which type you have more than 1 resource.'
   resources:
   - Psionic
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: Marauder
+  abilities: '*Opportunistic.* When attacking in **battle**, if you roll only raid dice, you may swap the
+    amounts of {icon:dice_key_black} and {icon:dice_self_hit_black}.
+
+    *Cautious.* In **battle**, you cannot raid if there are any fresh defending ships.'
+  resources:
+  - Weapon
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Berserker
+  abilities: '*Ravenous.* In **battle**, each {icon:dice_intercept_black} you
+    roll also counts as {icon:dice_hit_black} {icon:dice_hit_black}.
+
+     *Raging.* In **battle**, you cannot collect less Assault than Skirmish dice.'
+  resources:
+  - Weapon
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.14
+
+- name: idk
+  abilities: '*Leveraged.* After attacking in **battle**, if you rolled multiple skirmish
+    dice and more than half have no {icon:dice_hit_black} on them, gain any any resource.
+    *(After rerolls.)*
+
+    *.* After attacking in **battle**, if all your dice have a {icon:dice_hit_black} or {icon:dice_building_hit_black} on them, discard a resource.'
+  resources:
+  - Relic
   - Weapon
   setup:
     A:
@@ -1969,73 +2030,13 @@
       building: None
   body_font_size: 18
 
-# - name: z1
-#   abilities: '*.* In battle, if you roll only raid dice, you may swap the
-#     amounts of keys and flame.
-
-#     *.* You cannot raid if the defender has any fresh ships in the battle
-#     system.'
-#   resources:
-#   - Weapon
-#   - Fuel
-#   setup:
-#     A:
-#       ships: 3
-#       building: city
-#     B:
-#       ships: 3
-#       building: starport
-#     C:
-#       ships: 2
-#       building: None
-#   body_font_size: 18
-# - name: z2
-#   abilities: '*Piercing.* When attacking in battle, each intercept you
-#     roll also counts as {hit}{hit}.
-
-#     *.* .'
-#   resources:
-#   - Weapon
-#   - Material
-#   setup:
-#     A:
-#       ships: 3
-#       building: city
-#     B:
-#       ships: 3
-#       building: starport
-#     C:
-#       ships: 2
-#       building: None
-#   body_font_size: 18
-# - name: z3
-#   abilities: '*Leveraged.* After attacking in **battle**, if you rolled multiple skirmish
-#     dice and more than half have no {icon:dice_hit_black} on them, gain any any resource.
-#     *(After rerolls.)*
-
-#     *Indebted.* .'
-#   resources:
-#   - Material
-#   - Fuel
-#   setup:
-#     A:
-#       ships: 3
-#       building: city
-#     B:
-#       ships: 3
-#       building: starport
-#     C:
-#       ships: 2
-#       building: None
-#   body_font_size: 18
-
 - name: Doppelganger
-  abilities: '*Mimetic.* Prelude: Once per chapter, you may discard a resource to gain **all** of a Rival''s leader non-setup  abilities until the end of the chapter.
+  abilities: '*Mimetic.* **Prelude:** Once per chapter, you may discard a resource to gain **all** of a Rival''s leader''s abilities until the end of the chapter.
 
     *Unsettling.* You don''t gain Power when you tie for first place.'
   resources:
   - Psionic
-  - Relic
+  - Weapon
   setup:
     A:
       ships: 3
