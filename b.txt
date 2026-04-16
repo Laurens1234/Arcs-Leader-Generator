@@ -1,0 +1,390 @@
+Found 110 entries with potential misspellings.
+File: btr.yml
+  Text: *Faithful* *Reach.* Before dealing action cards, mix in the 6 Faithful Action cards (FL1-6) and take Champion of the Faith title (F7).
+{vspace:5}
+*An* *Era* *of* *Heresy.* When any player wins Empath, they take Champion of the Faith title.
+  Misspelled: Empath, vspace
+File: btr.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: btr.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: btr.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: btr.yml
+  Text: **Scavenge** **(Tax):** Damage a fresh rival ship in a system you control. Then gain a resource matching that system.
+{vspace:5}
+*Broken* *Reach.* In **setup**, all players Provoke Material Outrage.
+  Misspelled: vspace
+File: btr.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: btr.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: edifice.yml
+  Text: **When Discovered:** Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  Misspelled: Lorem, Sed, adipiscing, aliqua, amet, consectetur, dolore, eiusmod, elit, incididunt, ipsum, labore, magna, tempor
+File: guild.yml
+  Text: testguild
+  Misspelled: testguild
+File: guild.yml
+  Text: Testguild
+  Misspelled: Testguild
+File: guild.yml
+  Text: This is a **Guild** card test.
+Rich text: *italic* **bold** ***bolditalic*** with punctuation: **Tax**, *Influence.*
+
+Long wrapping sentence to confirm layout works the same as lore cards.
+  Misspelled: bolditalic
+File: guild.yml
+  Text: testguild_material
+  Misspelled: testguild
+File: guild.yml
+  Text: testguild_material
+  Misspelled: testguild
+File: guild.yml
+  Text: Material suit test.
+
+Rich text: *italic* **bold** ***bolditalic***.
+
+{vspace:30}
+
+Raid icon test: raid=1.
+
+  Misspelled: bolditalic, vspace
+File: guild.yml
+  Text: testguild_weapon
+  Misspelled: testguild
+File: guild.yml
+  Text: testguild_weapon
+  Misspelled: testguild
+File: guild.yml
+  Text: testguild_relic
+  Misspelled: testguild
+File: guild.yml
+  Text: testguild_relic
+  Misspelled: testguild
+File: guild.yml
+  Text: Relic suit test.
+Long wrap sentence: this line is intentionally a bit longer to wrap across multiple lines in the body text area. {vspace:30}
+Raid icon test: raid=3.
+  Misspelled: vspace
+File: guild.yml
+  Text: testguild_psionic
+  Misspelled: psionic, testguild
+File: guild.yml
+  Text: testguild_psionic
+  Misspelled: psionic, testguild
+File: guild.yml
+  Text: Psionic suit test.
+Raid icon test: raid='X'.
+  Misspelled: Psionic
+File: guild.yml
+  Text: psionic
+  Misspelled: psionic
+File: guild.yml
+  Text: testguild_icons
+  Misspelled: testguild
+File: guild.yml
+  Text: {icon:dice_hit_black} Start-of-sentence icon.
+Middle-of-sentence icon {icon:dice_hit_black} to verify spacing.
+End-of-sentence icon {icon:dice_intercept_black}.
+Comma after icon {icon:dice_key_black}, then more text.
+Paren before/after ( {icon:dice_self_hit_black} ) should still align.
+
+  Misspelled: Paren
+File: guild.yml
+  Text: This is an artifact-style guild card.
+Overlay test: uses Artifact_top_half.png on top of the regular guild frame.
+  Misspelled: png
+File: guild.yml
+  Text: testguildbolded
+  Misspelled: testguildbolded
+File: guild.yml
+  Text: Guild bolded long
+  Misspelled: bolded
+File: guild.yml
+  Text: **S a a a a a a  a a a a a a a a a  a a a a a a a a a  a a  a a a  a a a a aSa a a a a  a a a a a a a a a  a a a a a a a a a  a a  a a a  a a a**
+S a a a a a a  a a a a a a a a a  a a a  a a a a a a  a a  a a a  a a a a a a Sa a a a  a a a a a a a a a  a a a a a a a a a  a a  a a a  a a a
+  Misspelled: Sa
+File: leaders.yml
+  Text: Kaiju
+  Misspelled: Kaiju
+File: leaders.yml
+  Text: Kaiju
+  Misspelled: Kaiju
+File: leaders.yml
+  Text: Shapeshifter
+  Misspelled: Shapeshifter
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: *Formless.* **At** **the** **start** **of** **each** **chapter**, choose a gate. Until the end of the chapter, you may Catapult and **build** ships there any number of times per turn.
+*Shapeless.* In **setup**, scrap all your starports.
+  Misspelled: starports
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: *Arising.* After **any** **battle**, for each piece you destroyed, you may place a matching fresh Loyal piece there.
+*Gravebound.* In **setup**, damage both of your buildings. You cannot **build** fresh pieces, place them damaged instead.
+  Misspelled: Gravebound
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: *Versatile.* Your starports can **move**, **battle**, intercept and control like a ship. You place starports outside building slots.
+*Exorbitant.* You can only **build** starports at cities, damaged, once per city, per turn.
+*Fragile.* After you finish Catapult **moving**, damage the starport you used.
+  Misspelled: starports
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: *Transformative.* When you **declare** **an** **ambition**, discard 1 resource to gain 2 resources of different types other than the one you discarded.
+*Cautious.* You cannot spend your last resource.
+  Misspelled: Transformative
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: *Visionary.* You can **build** at loyal cities and **tax** loyal starports.
+*Meticulous.* You cannot **move** if you would lose control of a building.
+  Misspelled: starports
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: *Overclocked.* If you spend 2 or more resources, you may influence at the end of your Prelude.
+*Wasteful.* After you **secure** a card using 2 or more agents, scrap an agent from your supply.
+  Misspelled: Overclocked
+File: leaders.yml
+  Text: Solian
+  Misspelled: Solian
+File: leaders.yml
+  Text: Rackateer
+  Misspelled: Rackateer
+File: leaders.yml
+  Text: Terraformer
+  Misspelled: Terraformer
+File: leaders.yml
+  Text: *Genesiacal.* **At** **the** **start** **of** **each** **chapter**, place a resource from the fullest supply on a planet with any loyal pieces to change its type. Also do this to a planet after you destroy a city on it.
+*Codependent.* When you **tax**, you only gain resources from altered planets.
+  Misspelled: Genesiacal
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: *Devious.* When you **declare** **an** **ambition**, you may **Provoke** **Outrage** in a non-Outraged type to **clear** **Outrage** in a different type. Then, take and spend 1 resource from the cleared type’s supply.
+*Irate.* In **setup**, Provoke Relic or Psionic Outrage.
+  Misspelled: Psionic
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: Siegebreaker
+  Misspelled: Siegebreaker
+File: leaders.yml
+  Text: *Audacious.* After you roll dice in **battle**, you may damage 1 of your attacking ships to reroll **all** dice.
+*Feverish.* After you reroll dice in **battle**, **Provoke** **Outrage** in any resource.
+  Misspelled: reroll
+File: leaders.yml
+  Text: *Incendiary.* When attacking in **battle**, before collecting dice, you may destroy 1 attacking ship to destroy 2 defending pieces.
+*Infamous.* When you destroy a starport, also **Provoke** **Outrage** of that starport's planet type.
+  Misspelled: starport's
+File: leaders.yml
+  Text: *Perfected.* In **battle**, you may change 1 of your dice to any face (like a reroll).
+*Honorable.* After attacking in **battle**, return half the pieces you took as trophies (rounded down).
+  Misspelled: reroll
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: *Malefic.* When you **secure**, you may capture a Rival agent on an adjacent card.
+*Covenbound.* You cannot **secure** unless there is an agent on another card.
+  Misspelled: Covenbound
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: *Delegated.* When any player **builds** a city, you may place 1 of your ships in that city's cluster.
+*Administrative.* In **setup**, scrap 4 starports.
+  Misspelled: starports
+File: leaders.yml
+  Text: *Bloodsoaked.* When you Copy or Pivot to **battle**, you may declare Warlord, if you do, each die you roll has its result count twice.
+*Hellbent.* In **scoring**, if you win no ambitions, lose 5 Power.
+  Misspelled: Bloodsoaked
+File: leaders.yml
+  Text: *Shrewd.* **Prelude:** Once per turn, you may return 3 Trophies/Captives of a Rival to steal one of their resources.
+*Vindictive.* In **scoring**, when you win an ambtion, return a Trophy or Captive, if you choose not to, gain no Power.
+  Misspelled: ambtion
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: *Bankrolled.* **At the start of each chapter**, tax all cities you control.
+*Deskbound.* You can **tax** at most once per turn.
+  Misspelled: Deskbound
+File: leaders.yml
+  Text: Wayfinder
+  Misspelled: Wayfinder
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: *Cosmic.* When you **build**, you may instead take a ship from a Rival's supply and place it fresh one of their starports, if you do, gain a resource matching that system.
+*Detached.* In **clean up**, you always return all trophies, even if Warlord was not declared.
+  Misspelled: starports
+File: leaders.yml
+  Text: *Salvific.* When you **build** a city in a system with any damaged ships, you may repair all ships in that system, then replace all repaired Rival ships with Loyal ships.
+*Reckoned.* In **scoring**, if you win no ambitions, return all your buildings on the map.
+  Misspelled: Salvific
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: *Portwide.* When you **tax** a city, you may also tax all other cities in its system. When you **build** at a starport, you may also build at all other starports in its system. *(Even Rival ones!)*
+*Methodical.* You cannot have 2 loyal buildings of different types on a planet
+  Misspelled: Portwide, starports
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: *Networked.* You can **tax** any city in a cluster where you control 2 systems.
+*Compartmental.* You cannot **build** buildings in systems adjecent to a system with another loyal building.
+  Misspelled: adjecent
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: Sollicitor
+  Misspelled: Sollicitor
+File: leaders.yml
+  Text: *Celestial.* After you collect dice in **battle**, say a positive number. You must reroll that many.
+*Ardent.* You can only reroll dice with {icon:dice_hit_black} or {icon:dice_building_hit_black} on them.
+  Misspelled: reroll
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: *Calculative.* Before attacking in **battle**, roll an Assault or Raid die. This **battle** You may reroll any dice that match that die's face.
+*Cautious.* You cannot **move** if it'd cause you to have ships in more than 4 different systems.
+  Misspelled: reroll
+File: leaders.yml
+  Text: *Peaceful.* When attacking in **battle**, you may ignore the result of any die if the same face appears on another die you rolled.
+*Minimalistic.* In **clean up**, discard resources until you only have 1 resource of each type.
+  Misspelled: Minimalistic
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: leaders.yml
+  Text: Doppelganger
+  Misspelled: Doppelganger
+File: leaders.yml
+  Text: Psionic
+  Misspelled: Psionic
+File: lore.yml
+  Text: testlore
+  Misspelled: testlore
+File: lore.yml
+  Text: testlore
+  Misspelled: testlore
+File: lore.yml
+  Text: This is a *test* lore to validate **bold**, *italic*, and ***bolditalic*** rendering.
+Punctuation test: **Tax**, *Influence.* and ***Secure!***
+
+Also tests wrapping with a longer sentence that should span multiple lines in the body area.
+  Misspelled: bolditalic
+File: lore.yml
+  Text: **When Discovered:** Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  Misspelled: Lorem, Sed, adipiscing, aliqua, amet, consectetur, dolore, eiusmod, elit, incididunt, ipsum, labore, magna, tempor
+File: vox.yml
+  Text: testvox_icons
+  Misspelled: testvox
+File: vox.yml
+  Text: testvox
+  Misspelled: testvox
+File: vox.yml
+  Text: Testvox
+  Misspelled: Testvox
+File: vox.yml
+  Text: Vox card test to validate the lore-style renderer.
+Rich text: *italic* **bold** ***bolditalic*** with punctuation: **Tax**, *Influence.*
+
+This line is intentionally long to verify wrapping higher on the card.
+
+  Misspelled: bolditalic

@@ -3,6 +3,7 @@ import importlib
 import importlib.util
 import os
 import sys
+import random
 
 from PIL import Image, ImageDraw, ImageFont
 
@@ -178,7 +179,47 @@ def create_guild_card(input_data):
 
     card_width, card_height = guild_frame.size
 
-    base_img = Image.new("RGBA", (card_width, card_height), (0, 0, 0, 255))
+    # Use themed star background zoomed 4x into a random region for guild cards (fallback to black)
+    bg_path = os.path.join(base_path, "cardAssets", "arcs_stars_background.png")
+    try:
+        bg_img = Image.open(bg_path).convert("RGBA")
+        # Background zoom: default 1.5x (less extreme than previous defaults).
+        # Can be overridden per-card via `bg_zoom` or globally via env `ADK_BG_ZOOM`.
+        try:
+            zoom = float(input_data.get("bg_zoom", os.environ.get("ADK_BG_ZOOM", 1.5)))
+        except Exception:
+            zoom = 2.0
+        if zoom < 1.0:
+            zoom = 1.0
+
+        # Optional deterministic seed: `bg_seed` or env `ADK_BG_SEED`.
+        seed_val = input_data.get("bg_seed", os.environ.get("ADK_BG_SEED"))
+        rng = random.Random()
+        try:
+            if seed_val is not None:
+                rng.seed(int(seed_val))
+        except Exception:
+            pass
+
+        crop_w = max(1, int(round(card_width / zoom)))
+        crop_h = max(1, int(round(card_height / zoom)))
+
+        bg_w, bg_h = bg_img.size
+        if bg_w < crop_w or bg_h < crop_h:
+            scale = max(crop_w / bg_w, crop_h / bg_h)
+            new_w = max(bg_w, int(round(bg_w * scale)))
+            new_h = max(bg_h, int(round(bg_h * scale)))
+            bg_img = bg_img.resize((new_w, new_h), Image.Resampling.LANCZOS)
+            bg_w, bg_h = bg_img.size
+
+        max_x = max(0, bg_w - crop_w)
+        max_y = max(0, bg_h - crop_h)
+        left = rng.randint(0, max_x)
+        top = rng.randint(0, max_y)
+        cropped = bg_img.crop((left, top, left + crop_w, top + crop_h))
+        base_img = cropped.resize((card_width, card_height), Image.Resampling.LANCZOS)
+    except Exception:
+        base_img = Image.new("RGBA", (card_width, card_height), (0, 0, 0, 255))
 
     # Artwork (same behavior as lore)
     guild_art_path = os.path.join(guild_image_folder, f"{input_data['name']}.png")

@@ -158,3 +158,18 @@
   allow_upscale: true
   zoom: 1.0
   boundary_shift: 0.0
+- name: Abomination
+  title: Abominationguildtest
+  title_font_size: 25
+  body: 'Test with image.'
+  footer_left: G
+  footer: Artifact
+  footer_right: '1'
+  footer_font_size: 16
+  body_font_size: 18
+  resource: Psionic
+  raid: 2
+  render_scale: 2
+  allow_upscale: true
+  zoom: 0.75
+  boundary_shift: 0.0

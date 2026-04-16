@@ -1,0 +1,10 @@
+# Add custom words (one per line) to avoid false positives.
+# Lines starting with '#' are comments and ignored.
+
+# Examples:
+# adsf
+vox
+starport
+starports
+city
+Psionic
