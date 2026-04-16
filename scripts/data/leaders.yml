@@ -2030,9 +2030,9 @@
 #   body_font_size: 18
 
 - name: Doppelganger
-  abilities: '*Mimetic.* Prelude: Once per chapter, you may discard a resource to gain **all** of a Rival's leader non-setup  abilities until the end of the chapter.
+  abilities: '*Mimetic.* Prelude: Once per chapter, you may discard a resource to gain **all** of a Rival''s leader non-setup  abilities until the end of the chapter.
 
-    *Unsettling.* You don't gain Power when you tie for first place.'
+    *Unsettling.* You don''t gain Power when you tie for first place.'
   resources:
   - Psionic
   - Relic
