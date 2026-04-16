@@ -1953,12 +1953,10 @@
       ships: 2
       building: None
   body_font_size: 18
-- name: Echo
-  abilities: '*Duplicative.* When attacking in **battle**, you may ignore the result
-    of any die if the same face appears on another die you rolled.
+- name: Doppelganger
+  abilities: '*Mimetic.* When attacking in **battle**, you may reroll any die if the same face appears on another die you rolled.
 
-    *Volatile.* When defending in **battle**, if the attacker rolled three identical
-    faces, they gain 1 extra {icon:dice_hit_black}.'
+    *Unsettling.* idk.'
   resources:
   - Psionic
   - Material
