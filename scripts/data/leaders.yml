@@ -426,7 +426,7 @@
   zoom: 1.15
 - name: Magician
   abilities: '*Elusive.* After you **tax** a city, you may place it in any building
-    slot you control or swap it with any Loyal building.
+    slot you control or swap it with any Loyal building on the map.
 
     *Unmasked.* When you **tax** a Rival city, you only gain a resource or Captive,
     not both.'
@@ -1075,7 +1075,7 @@
     used to build at.)
 
     *Careless.* You **cannot** gain bonus city Power if you have not returned all
-    agents on the board.'
+    agents on the map.'
   resources:
   - Fuel
   - Fuel
