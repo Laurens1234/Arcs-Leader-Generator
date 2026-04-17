@@ -121,6 +121,13 @@ def main(argv):
     )
 
     parser.add_argument(
+        "--yaml-file",
+        dest="yaml_file",
+        default=None,
+        help="Optional path to a YAML file containing leaders (list).",
+    )
+
+    parser.add_argument(
         "--last",
         type=int,
         dest="last",
@@ -171,6 +178,32 @@ def main(argv):
         except Exception as e:
             print(f"Failed to import leaders from source: {e}")
             return 3
+
+    # Allow loading leaders directly from a YAML file provided on the CLI.
+    if args.yaml_file:
+        try:
+            import yaml as _yaml
+        except Exception:
+            print("Error: loading YAML requires PyYAML (pip install pyyaml)")
+            return 3
+
+        if not os.path.exists(args.yaml_file):
+            print(f"Error: YAML file not found: {args.yaml_file}")
+            return 3
+
+        try:
+            with open(args.yaml_file, encoding="utf-8") as f:
+                loaded = _yaml.safe_load(f)
+        except Exception as e:
+            print(f"Failed to load YAML file {args.yaml_file}: {e}")
+            return 3
+
+        if loaded is None or not isinstance(loaded, list):
+            print(f"Error: YAML at {args.yaml_file} did not contain a list of leaders.")
+            return 3
+
+        cards_source = loaded
+        print(f"[leaderCards] Loaded {len(cards_source)} entries from {args.yaml_file}")
 
     selected_leaders, missing = _select_leaders(cards_source, requested_names)
 
