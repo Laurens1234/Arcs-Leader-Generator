@@ -346,7 +346,7 @@
     it, the die it rolls has its result count thrice.
 
     *Forsaken.* If you have not attacked this chapter, you cannot **declare** **an**
-    **ambition**.'
+    **ambition** or **secure**.'
   resources:
   - Relic
   - Fuel
@@ -662,7 +662,7 @@
   body_font_size: 18
 - name: Puppeteer
   abilities: '*Guiding.* Once per turn, when a Rival tries to **influence** a card
-    with your agents on it, you may force them to influence any other card instead.
+    with any of your agents on it, you may force them to influence any other card instead.
 
     *Straining.* To **secure** a card with any Rival agents on it, you must have 2
     more agents on it than them instead of 1.'
@@ -682,7 +682,7 @@
   body_font_size: 18
 - name: Automaton
   abilities: '*Overclocked.* If you spend 2 or more resources, you may influence at
-    the end of your Prelude.
+    the end of your **Prelude**.
 
     *Wasteful.* After you **secure** a card using 2 or more agents, scrap an agent
     from your supply.'
@@ -722,7 +722,7 @@
   zoom: 1.2
   boundary_shift: 0.2
 - name: Solian
-  abilities: '*Settled.* **Prelude:** You may move freely from planets (no free Catapult
+  abilities: '*Settled.* **Prelude:** Move from a planets any number of times (no free Catapult
     moves).
 
     *Grounded.* When your ships **move** into a Rival-controlled gate, one of them
@@ -767,7 +767,7 @@
     place a resource from the fullest supply on a planet with any Loyal pieces to
     change its type. Also do this to a planet after you destroy a city on it.
 
-    *Codependent.* When you **tax**, you only gain resources from altered planets.'
+    *Codependent.* When you **tax**, you only gain resources from planets with altered types.'
   resources:
   - Psionic
   - Material
@@ -952,7 +952,7 @@
     of your ships, if any ship was destroyed in that battle, you may place 1 ship
     in that system.
 
-    *Grimy.* You can **build** at most 1 ship per turn.'
+    *Grimy.* You can **build** at most 1 each per turn.'
   resources:
   - Relic
   - Fuel
@@ -1030,13 +1030,13 @@
   body_font_size: 18
 - name: Broker
   abilities: '*Mercantile.* When you **influence** a card, you may place 1 of your
-    resources on it to influence it again. When anyone **secures** it, they gain those
+    resources on it to influence it again. When anyone **secures** it, they also gain those
     resources.
 
     *Indebted.* To **declare** **an** **ambition**, you must return a piece or give
     a resource to a Rival.'
   resources:
-  - Relic
+  - Material
   - Psionic
   setup:
     A:
@@ -1112,7 +1112,7 @@
   body_font_size: 18
   zoom: 1.25
 - name: Punter
-  abilities: '*Audacious.* After you roll dice in **battle**, you may damage 1 of
+  abilities: '*Audacious.* Whn attacking in **battle**, you may damage 1 of
     your attacking ships to reroll **all** dice.
 
     *Feverish.* After you reroll dice in **battle**, **Provoke** **Outrage** in any
@@ -1155,7 +1155,7 @@
     you may destroy 1 attacking ship to destroy 2 defending pieces.
 
     *Infamous.* When you destroy a starport, also **Provoke** **Outrage** of that
-    starport''s planet type.'
+    starport''s type.'
   resources:
   - Weapon
   - Fuel
@@ -1212,7 +1212,7 @@
   abilities: '*Acquisitive.* When you **secure** a card, gain a resource matching
     its type.
 
-    *Jaded.* After **scoring**, discard a Guild card, if you can''t, discard all resources
+    *Jaded.* After **scoring**, discard a Guild card; if you can''t, discard all resources
     you have.'
   resources:
   - Relic
@@ -1252,7 +1252,7 @@
   zoom: 1.3
   boundary_shift: 0.4
 - name: Assassin
-  abilities: '*Lethal.* After you **influence**, if you have the most agents on a
+  abilities: '*Lethal.* After you **influence**, if you have the most agents on the
     card, you destroy one Rival agent on it.
 
     *Bloodthirsty.* If a Rival has as many or more agents on a card than you, you
@@ -1427,10 +1427,10 @@
       building: None
   body_font_size: 18
 - name: Extortioner
-  abilities: '*Shrewd.* **Prelude:** Once per turn, you may return 3 Trophies/Captives
+  abilities: '*Predatory.* **Prelude:** Once per turn, you may return 3 Trophies/Captives
     of a Rival to steal one of their resources.
 
-    *Vindictive.*In **scoring**, when you win an Ambition, you may return a Trophy or Captive. If you don’t, gain no Power.'
+    *Amateurish.* In **scoring**, when you get second place, you may return a Trophy or Captive. If you don’t, gain no Power.'
   resources:
   - Psionic
   - Weapon
@@ -1578,10 +1578,10 @@
       building: None
   body_font_size: 18
 - name: Tribune
-  abilities: '*Endorsed.* After you destroy a starport, ransack the Court like you
+  abilities: '*Endorsed.* After you destroy a starport, Ransack the Court like you
     destroyed a city.
 
-    *Sanctioned.* When you destroy a city, don''t ransack the Court.'
+    *Sanctioned.* When you destroy a city, don''t Ransack the Court.'
   resources:
   - Relic
   - Weapon
@@ -1726,7 +1726,7 @@
   abilities: '*Frenzied.* When you play a card, you may discard an action card to
     take twice as many actions with your played card.
 
-    *Possessed.* When a suit is led, reveal a matching card if you have one.'
+    *Possessed.* When a suit is **Led**, reveal a matching card if you have one.'
   resources:
   - Psionic
   - Weapon
@@ -1930,8 +1930,7 @@
   body_font_size: 18
   zoom: 1.15
 - name: Tactician
-  abilities: '*Calculative.* Before attacking in **battle**, roll an Assault or
-    Raid die. This **battle** You may reroll any dice that match that die''s face.
+  abilities: '*Calculative.* Before attacking in **battle**, roll a die. You may reroll any dice that match that die''s face.
 
     *Cautious.* You cannot **move** if it would cause you to have ships in more than 4 different
     systems.'
