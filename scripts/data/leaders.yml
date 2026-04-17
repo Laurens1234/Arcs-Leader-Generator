@@ -48,7 +48,7 @@
 
     *Shapeless.* In **setup**, scrap all your starports.'
   resources:
-  - Fuel
+  - Material
   - Psionic
   setup:
     A:
@@ -209,7 +209,7 @@
   abilities: '*Prescient.* After you discard a Guild card with its **Prelude** action,
     you may take an action on the **Lead** **card**.
 
-    *Narrow-minded.* You **cannot** discard a Guild card with it''s Prelude action
+    *Narrow-minded.* You **cannot** discard a Guild card with it''s **Prelude** action
     unless you''re Leading or Surpassing.'
   resources:
   - Psionic
@@ -255,7 +255,7 @@
   abilities: '*Blitzing.* In **battle**, you may discard a resource to ignore all
     {icon:dice_intercept_black}.
 
-    *Insurmountable.* In **battle**, if you have more fresh ships, collect 1 extra
+    *Insurmountable.* In **battle**, if you have more fresh ships than the defender, collect 1 extra
     die.
 
     *Reckless.* In **battle**, you must always roll at least 1 die of each type if
@@ -276,9 +276,9 @@
   body_font_size: 18
 - name: Sentinel
   abilities: '*Assertive.* At the start of **any** **battle**, if you control the
-    gate of the cluster the battle is in, deal 1 hit.
+    gate of the cluster the battle is in, deal 1 hit to the attacker or defender.
 
-    *Cautious.* You cannot roll more raid and assault dice than you have fresh attacking
+    *Cautious.* In **battle** , you cannot roll more raid and assault dice than you have fresh attacking
     ships.'
   resources:
   - Material
@@ -362,10 +362,10 @@
       building: None
   body_font_size: 18
 - name: Sage
-  abilities: '*Arcane.* In **setup**, gain 5 extra Lore.
+  abilities: '*Arcane.* In **setup**, gain 5 extra lore.
 
-    *Elusive.* Players may **influence** and **secure** your lore. When you **secure**
-    your own lore, gain one lore.'
+    *Elusive.* Players may influence and secure your lore. When you **secure**
+    your own lore, gain 1 lore.'
   resources:
   - Relic
   - Relic
@@ -581,7 +581,7 @@
   zoom: 1.2
 - name: Scourge
   abilities: '*Pyromaniacal.* When attacking in **battle**, at the start, you may
-    return any number of Trophies matching the defender; deal 1 hit for each.
+    return any number of Trophies to the defender; deal 1 hit for each.
 
     *Insatiable.* Before **scoring**, if you have no cities as Trophies, destroy a
     Loyal city.'
@@ -622,7 +622,7 @@
       building: None
   body_font_size: 18
 - name: Feral
-  abilities: '*Savage.* In **battle** in a system with no buildings, collect 2 extra
+  abilities: '*Savage.* In **battle**, in a system with no buildings, collect 2 extra
     dice.
 
     *Uncivilized.* When you **secure** (not ransack) a card with any Rival agents
@@ -954,7 +954,7 @@
 
     *Grimy.* You can **build** at most 1 ship per turn.'
   resources:
-  - Weapon
+  - Relic
   - Fuel
   setup:
     A:
@@ -1050,8 +1050,7 @@
       building: None
   body_font_size: 18
 - name: Siegebreaker
-  abilities: '*Ruinous.* In **battle**, if the defender has any buildings in the system,
-    you may collect 1 extra assault die.
+  abilities: '*Ruinous.* In **battle**, if the defender has any buildings in the system, collect 1 extra die.
 
     *Brutal.* In **battle**, {icon:dice_intercept_black} on Assault dice you roll
     also count as {icon:dice_self_hit_black}.'
@@ -1312,12 +1311,14 @@
   body_font_size: 18
 - name: Shaman
   abilities: '*Holistic.* When you **declare** **an** **ambition**, you may repair
-    all your damaged ships.
+    any of your ships.
+
+    *Ritualistic.* When you repair a ship, you may damage a Rival ship in its system.
 
     *Disruptive.* You cannot **repair** with pips.'
   resources:
-  - Relic
-  - Fuel
+  - Material
+  - Psionic
   setup:
     A:
       ships: 3
@@ -1326,7 +1327,7 @@
       ships: 3
       building: starport
     C:
-      ships: 3
+      ships: 2
       building: None
   body_font_size: 18
 - name: Mediator
@@ -1550,8 +1551,8 @@
       ships: 3
       building: city
     B:
-      ships: 3
-      building: starport
+      ships: 4
+      building: city
     C:
       ships: 2
       building: None
@@ -1742,14 +1743,14 @@
   body_font_size: 18
   zoom: 1.15
 - name: Crusader
-  abilities: '*Zealous.* In **battle**, after you destroy a city, also secure any
+  abilities: '*Zealous.* In **battle**, after you destroy a city, secure any
     card with no or only Loyal agents on it matching that city''s type.
 
     *Dogmatic.* You cannot **influence** a card with no agents on it if a Rival can
     secure a card with any of your Loyal agents on it.'
   resources:
   - Weapon
-  - Fuel
+  - Relic
   setup:
     A:
       ships: 3
@@ -1762,7 +1763,7 @@
       building: None
   body_font_size: 18
 - name: Phantom
-  abilities: '*Spectral.* When attacking in **battle**, you may choose to ignore any
+  abilities: '*Spectral.* In **battle**, you may choose to ignore any
     {icon:dice_hit_black} you roll; at the end of the **battle**, you may take move
     actions with your attacking ships, once per ignored {icon:dice_hit_black}.
 
@@ -2084,3 +2085,5 @@
 # },
 
 # when you declare and ambiont, you may discard all your resources and return a loyal city from the map, to gain 2 resources matching that city.
+
+#when you discard cards due to outrage, discard other cards (resources?)
