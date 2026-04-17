@@ -65,7 +65,8 @@ def create_card(input_data):
     if not overlay_basename:
         overlay_basename = input_data.get("name")
     overlay_basename = str(overlay_basename)
-    leader_image_overlay_path = os.path.join(base_path, "cardAssets", "leaderImages", f"{overlay_basename}.png")
+    # Prefer per-card artwork from the unified `cardAssets/cardImages` folder
+    leader_image_overlay_path = os.path.join(base_path, "cardAssets", "cardImages", f"{overlay_basename}.png")
 
     # If a session upload directory is provided via env var, prefer that image first
     uploaded_dir = os.environ.get("ADK_UPLOAD_DIR")

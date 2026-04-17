@@ -1,5 +1,5 @@
-- name: testguild
-  title: Testguild
+- image_name: testguild
+  name: Testguild
   title_font_size: 25
   body: 'This is a **Guild** card test.
 
@@ -18,8 +18,8 @@
   allow_upscale: true
   zoom: 1.0
   boundary_shift: 1.0
-- name: testguild_material
-  title: testguild_material
+- image_name: testguild_material
+  name: testguild_material
   title_font_size: 25
   body: |
     Material suit test.
@@ -40,8 +40,8 @@
   allow_upscale: true
   zoom: 1.0
   boundary_shift: 0.0
-- name: testguild_weapon
-  title: testguild_weapon
+- image_name: testguild_weapon
+  name: testguild_weapon
   title_font_size: 25
   body: 'Weapon suit test.
 
@@ -59,8 +59,8 @@
   allow_upscale: true
   zoom: 1.0
   boundary_shift: 0.0
-- name: testguild_relic
-  title: testguild_relic
+- image_name: testguild_relic
+  name: testguild_relic
   title_font_size: 25
   body: 'Relic suit test.
 
@@ -80,8 +80,8 @@
   allow_upscale: true
   zoom: 1.0
   boundary_shift: 0.0
-- name: testguild_psionic
-  title: testguild_psionic
+- image_name: testguild_psionic
+  name: testguild_psionic
   title_font_size: 25
   body: 'Psionic suit test.
 
@@ -97,8 +97,8 @@
   allow_upscale: true
   zoom: 1.0
   boundary_shift: 0.0
-- name: testguild_icons
-  title: Guild Icons
+- image_name: testguild_icons
+  name: Guild Icons
   title_font_size: 25
   body: '{icon:dice_hit_black} Start-of-sentence icon.
 
@@ -122,8 +122,8 @@
   allow_upscale: true
   zoom: 1.0
   boundary_shift: 0.0
-- name: artifact_sample
-  title: Artifact
+- image_name: artifact_sample
+  name: Artifact
   title_font_size: 25
   body: 'This is an artifact-style guild card.
 
@@ -139,8 +139,8 @@
   allow_upscale: true
   zoom: 1.0
   boundary_shift: 0.0
-- name: testguildbolded
-  title: Guild bolded long
+- image_name: testguildbolded
+  name: Guild bolded long
   title_font_size: 25
   body: '**S a a a a a a  a a a a a a a a a  a a a a a a a a a  a a  a a a  a a a
     a aSa a a a a  a a a a a a a a a  a a a a a a a a a  a a  a a a  a a a**
@@ -158,8 +158,8 @@
   allow_upscale: true
   zoom: 1.0
   boundary_shift: 0.0
-- name: Abomination
-  title: Abominationguildtest
+- image_name: Abomination
+  name: Abominationguildtest
   title_font_size: 25
   body: 'Test with image.'
   footer_left: G

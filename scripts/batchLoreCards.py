@@ -106,7 +106,8 @@ def create_lore_card(input_data):
     # Asset paths
     result_path = os.path.join(base_path, "results", "lore")
     lore_frame_path = os.path.join(base_path, "cardAssets", "CardAsset-Frame-Lore.png")
-    lore_image_folder = os.path.join(base_path, "cardAssets", "loreImages")
+    # Use unified per-card artwork folder under cardAssets/cardImages
+    lore_image_folder = os.path.join(base_path, "cardAssets", "cardImages")
     footer_image_path = os.path.join(base_path, "cardAssets", "CardAsset-Footer-Paper.png")
     
     # Output path
@@ -220,9 +221,26 @@ def create_lore_card(input_data):
 
     # Load and paste lore image (top half of the card), skip for edifice variant
     if variant != "edifice":
-        lore_image_path = os.path.join(lore_image_folder, f"{input_data['name']}.png")
+        # Prefer any session-uploaded image (from the web UI) before falling back
+        # to the repo `cardAssets/cardImages` folder.
+        # Determine which basename to use for artwork: honor explicit image_name
+        # (or legacy 'image_name:') if present, otherwise use the card `name` field
+        image_basename = input_data.get("image_name") or input_data.get("image_name:") or input_data.get("name")
+        uploaded_dir = os.environ.get("ADK_UPLOAD_DIR")
+        uploaded_path = os.path.join(uploaded_dir, f"{image_basename}.png") if uploaded_dir and image_basename else None
+        lore_image_path = os.path.join(lore_image_folder, f"{image_basename}.png")
+        lore_img = None
+        paths_to_try = [p for p in (uploaded_path, lore_image_path) if p]
+        for pth in paths_to_try:
+            try:
+                lore_img = Image.open(pth).convert("RGBA")
+                lore_image_path = pth
+                break
+            except FileNotFoundError:
+                lore_img = None
         try:
-            lore_img = Image.open(lore_image_path).convert("RGBA")
+            if lore_img is None:
+                raise FileNotFoundError()
 
             # Scale lore image to match card width, maintaining aspect ratio
             target_width = card_width
@@ -267,7 +285,7 @@ def create_lore_card(input_data):
 
             base_img.paste(lore_img, (lore_x, lore_y), lore_img)
         except FileNotFoundError:
-            print(f"Warning: Lore image '{input_data['name']}.png' not found in loreImages folder. Proceeding without image.")
+            print(f"Warning: Lore image '{image_basename}.png' not found in cardAssets/cardImages folder or upload dir. Proceeding without image.")
 
     # Paste the lore frame on top (skip for edifice since edifice is the full background)
     if variant != "edifice":
@@ -328,7 +346,8 @@ def create_lore_card(input_data):
     text_color = "white" if variant == "edifice" else "black"
 
     # Draw title text (centered)
-    title_text = input_data.get('title', input_data['name'])
+    # Card title is now the `name` field; fall back to legacy `title` if absent
+    title_text = input_data.get('name') or input_data.get('title') or input_data['name']
     title_bbox = draw.textbbox((0, 0), title_text, font=title_font)
     title_x = text_x0 + (text_width - (title_bbox[2] - title_bbox[0])) // 2
     # Slightly raise the title (less downward offset); smaller for default, reduced for edifice

@@ -2,8 +2,8 @@
 # Auto-generated guild cards deck: 5 of each resource in order
 # resource order: material, fuel, weapon, relic, psionic
 
-- name: guild_material_1
-  title: Material Guild 1
+- image_name: guild_material_1
+  name: Material Guild 1
   body: "Guild card for material resource #1."
   footer_left: "G"
   footer: "Guild"
@@ -11,8 +11,8 @@
   resource: material
   raid: 2
 
-- name: guild_material_2
-  title: Material Guild 2
+- image_name: guild_material_2
+  name: Material Guild 2
   body: "Guild card for material resource #2."
   footer_left: "G"
   footer: "Guild"
@@ -20,8 +20,8 @@
   resource: material
   raid: 2
 
-- name: guild_material_3
-  title: Material Guild 3
+- image_name: guild_material_3
+  name: Material Guild 3
   body: "Guild card for material resource #3."
   footer_left: "G"
   footer: "Guild"
@@ -29,8 +29,8 @@
   resource: material
   raid: 2
 
-- name: guild_material_4
-  title: Material Guild 4
+- image_name: guild_material_4
+  name: Material Guild 4
   body: "Guild card for material resource #4."
   footer_left: "G"
   footer: "Guild"
@@ -38,8 +38,8 @@
   resource: material
   raid: 2
 
-- name: guild_material_5
-  title: Material Guild 5
+- image_name: guild_material_5
+  name: Material Guild 5
   body: "Guild card for material resource #5."
   footer_left: "G"
   footer: "Guild"
@@ -47,8 +47,8 @@
   resource: material
   raid: 2
 
-- name: guild_fuel_1
-  title: Fuel Guild 1
+- image_name: guild_fuel_1
+  name: Fuel Guild 1
   body: "Guild card for fuel resource #1."
   footer_left: "G"
   footer: "Guild"
@@ -56,8 +56,8 @@
   resource: fuel
   raid: 2
 
-- name: guild_fuel_2
-  title: Fuel Guild 2
+- image_name: guild_fuel_2
+  name: Fuel Guild 2
   body: "Guild card for fuel resource #2."
   footer_left: "G"
   footer: "Guild"
@@ -65,8 +65,8 @@
   resource: fuel
   raid: 2
 
-- name: guild_fuel_3
-  title: Fuel Guild 3
+- image_name: guild_fuel_3
+  name: Fuel Guild 3
   body: "Guild card for fuel resource #3."
   footer_left: "G"
   footer: "Guild"
@@ -74,8 +74,8 @@
   resource: fuel
   raid: 2
 
-- name: guild_fuel_4
-  title: Fuel Guild 4
+- image_name: guild_fuel_4
+  name: Fuel Guild 4
   body: "Guild card for fuel resource #4."
   footer_left: "G"
   footer: "Guild"
@@ -83,8 +83,8 @@
   resource: fuel
   raid: 2
 
-- name: guild_fuel_5
-  title: Fuel Guild 5
+- image_name: guild_fuel_5
+  name: Fuel Guild 5
   body: "Guild card for fuel resource #5."
   footer_left: "G"
   footer: "Guild"
@@ -92,8 +92,8 @@
   resource: fuel
   raid: 2
 
-- name: guild_weapon_1
-  title: Weapon Guild 1
+- image_name: guild_weapon_1
+  name: Weapon Guild 1
   body: "Guild card for weapon resource #1."
   footer_left: "G"
   footer: "Guild"
@@ -101,8 +101,8 @@
   resource: weapon
   raid: 2
 
-- name: guild_weapon_2
-  title: Weapon Guild 2
+- image_name: guild_weapon_2
+  name: Weapon Guild 2
   body: "Guild card for weapon resource #2."
   footer_left: "G"
   footer: "Guild"
@@ -110,8 +110,8 @@
   resource: weapon
   raid: 2
 
-- name: guild_weapon_3
-  title: Weapon Guild 3
+- image_name: guild_weapon_3
+  name: Weapon Guild 3
   body: "Guild card for weapon resource #3."
   footer_left: "G"
   footer: "Guild"
@@ -119,8 +119,8 @@
   resource: weapon
   raid: 2
 
-- name: guild_weapon_4
-  title: Weapon Guild 4
+- image_name: guild_weapon_4
+  name: Weapon Guild 4
   body: "Guild card for weapon resource #4."
   footer_left: "G"
   footer: "Guild"
@@ -128,8 +128,8 @@
   resource: weapon
   raid: 2
 
-- name: guild_weapon_5
-  title: Weapon Guild 5
+- image_name: guild_weapon_5
+  name: Weapon Guild 5
   body: "Guild card for weapon resource #5."
   footer_left: "G"
   footer: "Guild"
@@ -137,8 +137,8 @@
   resource: weapon
   raid: 2
 
-- name: guild_relic_1
-  title: Relic Guild 1
+- image_name: guild_relic_1
+  name: Relic Guild 1
   body: "Guild card for relic resource #1."
   footer_left: "G"
   footer: "Guild"
@@ -146,8 +146,8 @@
   resource: relic
   raid: 2
 
-- name: guild_relic_2
-  title: Relic Guild 2
+- image_name: guild_relic_2
+  name: Relic Guild 2
   body: "Guild card for relic resource #2."
   footer_left: "G"
   footer: "Guild"
@@ -155,8 +155,8 @@
   resource: relic
   raid: 2
 
-- name: guild_relic_3
-  title: Relic Guild 3
+- image_name: guild_relic_3
+  name: Relic Guild 3
   body: "Guild card for relic resource #3."
   footer_left: "G"
   footer: "Guild"
@@ -164,8 +164,8 @@
   resource: relic
   raid: 2
 
-- name: guild_relic_4
-  title: Relic Guild 4
+- image_name: guild_relic_4
+  name: Relic Guild 4
   body: "Guild card for relic resource #4."
   footer_left: "G"
   footer: "Guild"
@@ -173,8 +173,8 @@
   resource: relic
   raid: 2
 
-- name: guild_relic_5
-  title: Relic Guild 5
+- image_name: guild_relic_5
+  name: Relic Guild 5
   body: "Guild card for relic resource #5."
   footer_left: "G"
   footer: "Guild"
@@ -182,8 +182,8 @@
   resource: relic
   raid: 2
 
-- name: guild_psionic_1
-  title: Psionic Guild 1
+- image_name: guild_psionic_1
+  name: Psionic Guild 1
   body: "Guild card for psionic resource #1."
   footer_left: "G"
   footer: "Guild"
@@ -191,8 +191,8 @@
   resource: psionic
   raid: 2
 
-- name: guild_psionic_2
-  title: Psionic Guild 2
+- image_name: guild_psionic_2
+  name: Psionic Guild 2
   body: "Guild card for psionic resource #2."
   footer_left: "G"
   footer: "Guild"
@@ -200,8 +200,8 @@
   resource: psionic
   raid: 2
 
-- name: guild_psionic_3
-  title: Psionic Guild 3
+- image_name: guild_psionic_3
+  name: Psionic Guild 3
   body: "Guild card for psionic resource #3."
   footer_left: "G"
   footer: "Guild"
@@ -209,8 +209,8 @@
   resource: psionic
   raid: 2
 
-- name: guild_psionic_4
-  title: Psionic Guild 4
+- image_name: guild_psionic_4
+  name: Psionic Guild 4
   body: "Guild card for psionic resource #4."
   footer_left: "G"
   footer: "Guild"
@@ -218,8 +218,8 @@
   resource: psionic
   raid: 2
 
-- name: guild_psionic_5
-  title: Psionic Guild 5
+- image_name: guild_psionic_5
+  name: Psionic Guild 5
   body: "Guild card for psionic resource #5."
   footer_left: "G"
   footer: "Guild"

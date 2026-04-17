@@ -1,5 +1,5 @@
-- name: Ancient Prophecy
-  title: Ancient Prophecy
+- image_name: Ancient Prophecy
+  name: Ancient Prophecy
   title_font_size: 25
   body: When you destroy a city, discard this lore and gain 2 Lore cards.
   footer_left: L
@@ -10,8 +10,8 @@
   allow_upscale: true
   zoom: 1.0
   boundary_shift: 0.0
-- name: testlore
-  title: testlore
+- image_name: testlore
+  name: testlore
   title_font_size: 25
   body: 'This is a *test* lore to validate **bold**, *italic*, and ***bolditalic***
     rendering.
@@ -30,8 +30,8 @@
   allow_upscale: false
   zoom: 1.0
   boundary_shift: 1
-- name: edifice_example
-  title: Edifice Example
+- image_name: edifice_example
+  name: Edifice Example
   title_font_size: 22
   body: '**When Discovered:** Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
@@ -43,8 +43,8 @@
   render_scale: 2
   zoom: 1.0
   boundary_shift: 0.0
-- name: testloreimageempty
-  title: testloreimageempty
+- image_name: testloreimageempty
+  name: testloreimageempty
   title_font_size: 25
   body: 'lore star image test'
   footer_left: S
@@ -56,8 +56,8 @@
   allow_upscale: false
   zoom: 1.0
   boundary_shift: 0
-- name: Abomination
-  title: testloreimage
+- image_name: Abomination
+  name: testloreimage
   title_font_size: 25
   body: 'lore star image test with image'
   footer_left: S
@@ -69,8 +69,8 @@
   allow_upscale: false
   zoom: 0.8
   boundary_shift: 0
-- name: tesemptyrandom
-  title: testemptyrandom
+- image_name: tesemptyrandom
+  name: testemptyrandom
   title_font_size: 22
   body: 'lore star with random larger random background.'
   footer_left: S

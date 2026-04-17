@@ -1,5 +1,5 @@
-- name: testvox_icons
-  title: Vox Icons
+- image_name: testvox_icons
+  name: Vox Icons
   title_font_size: 25
   body: '{icon:resource_fuel} Icon at sentence start.
 
@@ -26,8 +26,8 @@
   boundary_shift: 0.0
   text_top_y: 24
   body_top_padding: 16
-- name: testvox
-  title: Testvox
+- image_name: testvox
+  name: Testvox
   title_font_size: 25
   body: 'Vox card test to validate the lore-style renderer.
 

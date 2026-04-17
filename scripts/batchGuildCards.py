@@ -152,7 +152,8 @@ def create_guild_card(input_data):
     neue_kabel_bolditalic_path = os.path.join(base_path, "fonts", "NeueKabel-BoldItalic.otf")
 
     result_path = os.path.join(base_path, "results", "guild")
-    guild_image_folder = os.path.join(base_path, "cardAssets", "guildImages")
+    # Use unified per-card artwork folder under cardAssets/cardImages
+    guild_image_folder = os.path.join(base_path, "cardAssets", "cardImages")
     footer_image_path = os.path.join(base_path, "cardAssets", "CardAsset-Footer-Paper.png")
 
     resource = input_data.get("resource", "fuel")
@@ -245,9 +246,26 @@ def create_guild_card(input_data):
             base_img = Image.new("RGBA", (card_width, card_height), (0, 0, 0, 255))
 
     # Artwork (same behavior as lore)
-    guild_art_path = os.path.join(guild_image_folder, f"{input_data['name']}.png")
+    # Use `image_name` (or legacy 'image_name:') as the image file basename
+    # if provided; otherwise the card `name` is used as the title and fallback.
+    image_basename = input_data.get("image_name") or input_data.get("image_name:") or input_data.get("name")
+    # Prefer any session-uploaded image from the UI before falling back to
+    # `cardAssets/cardImages` in the repository.
+    uploaded_dir = os.environ.get("ADK_UPLOAD_DIR")
+    uploaded_path = os.path.join(uploaded_dir, f"{image_basename}.png") if uploaded_dir and image_basename else None
+    guild_art_path = os.path.join(guild_image_folder, f"{image_basename}.png")
+    art_img = None
+    paths_to_try = [p for p in (uploaded_path, guild_art_path) if p]
+    for pth in paths_to_try:
+        try:
+            art_img = Image.open(pth).convert("RGBA")
+            guild_art_path = pth
+            break
+        except FileNotFoundError:
+            art_img = None
     try:
-        art_img = Image.open(guild_art_path).convert("RGBA")
+        if art_img is None:
+            raise FileNotFoundError()
 
         # Scale art image to match card width, maintaining aspect ratio
         target_width = card_width
@@ -293,7 +311,7 @@ def create_guild_card(input_data):
 
     except FileNotFoundError:
         print(
-            f"Warning: Guild image '{input_data['name']}.png' not found in guildImages folder. Proceeding without image."
+            f"Warning: Guild image '{image_basename}.png' not found in cardAssets/cardImages folder or upload dir. Proceeding without image."
         )
 
     # Frame overlay
@@ -373,7 +391,8 @@ def create_guild_card(input_data):
 
     text_y0 = int(card_height * 0.552)
 
-    title_text = input_data.get("title", input_data["name"])
+    # Card title is the `name` field (preferred); legacy `title` is fallback
+    title_text = input_data.get("name") or input_data.get("title") or input_data["name"]
     title_bbox = draw.textbbox((0, 0), title_text, font=title_font)
     title_x = text_x0 + (text_width - (title_bbox[2] - title_bbox[0])) // 2
     title_y = text_y0

@@ -93,7 +93,8 @@ def create_vox_card(input_data):
     result_path = os.path.join(base_path, "results", "vox")
     vox_frame_path = os.path.join(base_path, "cardAssets", "CardAsset-Texture-Frame.png")
     vox_bar_path = os.path.join(base_path, "cardAssets", "Voxbar.png")
-    vox_image_folder = os.path.join(base_path, "cardAssets", "voxImages")
+    # Use unified per-card artwork folder under cardAssets/cardImages
+    vox_image_folder = os.path.join(base_path, "cardAssets", "cardImages")
     footer_image_path = os.path.join(base_path, "cardAssets", "CardAsset-Footer-Paper.png")
 
     output_image_path = os.path.join(result_path, f"{input_data['name']}_Vox_Card.png")
@@ -120,9 +121,26 @@ def create_vox_card(input_data):
 
     # Vox artwork layer (on top of the frame).
     # Text is drawn after this, so it remains readable.
-    vox_art_path = os.path.join(vox_image_folder, f"{input_data['name']}.png")
+    # Use `image_name` (or legacy 'image_name:') as the image file basename
+    # if provided; otherwise use the card `name` as the fallback.
+    image_basename = input_data.get("image_name") or input_data.get("image_name:") or input_data.get("name")
+    # Prefer uploaded images from the web UI (ADK_UPLOAD_DIR) before falling
+    # back to the repo `cardAssets/cardImages` folder.
+    uploaded_dir = os.environ.get("ADK_UPLOAD_DIR")
+    uploaded_path = os.path.join(uploaded_dir, f"{image_basename}.png") if uploaded_dir and image_basename else None
+    vox_art_path = os.path.join(vox_image_folder, f"{image_basename}.png")
+    art_img = None
+    paths_to_try = [p for p in (uploaded_path, vox_art_path) if p]
+    for pth in paths_to_try:
+        try:
+            art_img = Image.open(pth).convert("RGBA")
+            vox_art_path = pth
+            break
+        except FileNotFoundError:
+            art_img = None
     try:
-        art_img = Image.open(vox_art_path).convert("RGBA")
+        if art_img is None:
+            raise FileNotFoundError()
 
         target_width = card_width
         aspect_ratio = art_img.height / art_img.width
@@ -166,7 +184,7 @@ def create_vox_card(input_data):
 
     except FileNotFoundError:
         print(
-            f"Warning: Vox image '{input_data['name']}.png' not found in voxImages folder. Proceeding without image."
+            f"Warning: Vox image '{image_basename}.png' not found in cardAssets/cardImages folder or upload dir. Proceeding without image."
         )
 
     # Vox bar overlay (above art/frame, below text)
@@ -210,7 +228,8 @@ def create_vox_card(input_data):
     text_top_y = input_data.get("text_top_y", 24)
     text_y0 = _s(text_top_y)
 
-    title_text = input_data.get("title", input_data["name"])
+    # Card title is the `name` field (preferred); legacy `title` is fallback
+    title_text = input_data.get("name") or input_data.get("title") or input_data["name"]
     title_bbox = draw.textbbox((0, 0), title_text, font=title_font)
     title_x = text_x0 + (text_width - (title_bbox[2] - title_bbox[0])) // 2
     title_y = text_y0

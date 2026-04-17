@@ -1,5 +1,5 @@
-- name: edifice_example
-  title: Edifice Example
+- image_name: edifice_example
+  name: Edifice Example
   title_font_size: 22
   body: '**When Discovered:** Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
