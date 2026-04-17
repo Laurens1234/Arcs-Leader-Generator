@@ -342,7 +342,7 @@
   zoom: 1
   boundary_shift: 0.1
 - name: Chosen
-  abilities: '*Hallowed.* After you **move** a single ship, you may battle with only
+  abilities: '*Hallowed.* Once per turn, after you **move** a single ship, you may battle with only
     it, the die it rolls has its result count thrice.
 
     *Forsaken.* If you have not attacked this chapter, you cannot **declare** **an**
@@ -361,6 +361,7 @@
       ships: 2
       building: None
   body_font_size: 18
+  zoom: 1.2
 - name: Sage
   abilities: '*Arcane.* In **setup**, gain 5 extra lore.
 
