@@ -173,6 +173,20 @@ with st.container():
             data_single = data_path.with_name(data_path.stem + "_single.yml")
             # If we already have a single-entry file, prefer it.
             if data_single.exists():
+                # If the full data file exists and is newer than the single-entry
+                # file, refresh the single file so the UI shows the current
+                # top entry (fixes live deploys that previously showed stale
+                # single files created earlier).
+                try:
+                    if data_path.exists() and data_path.stat().st_mtime > data_single.stat().st_mtime:
+                        full = yaml.safe_load(data_path.read_text(encoding="utf-8"))
+                        if isinstance(full, list) and full:
+                            first = full[0]
+                            dump_text = yaml.safe_dump([first], sort_keys=False, allow_unicode=True)
+                            data_single.write_text(dump_text, encoding="utf-8")
+                except Exception:
+                    # If refresh fails, fall back to the existing single file.
+                    pass
                 repo_path = data_single
             else:
                 # Attempt to seed the single file from the full data file if present.
@@ -349,6 +363,8 @@ if run_button:
     before = snapshot_images_mtime(results_root)
     # prepare environment and temporary template module (always use edited template)
     tempdir = None
+    # track any temporary directories we create so we can clean them up reliably
+    tempdirs: list[str] = []
     env = os.environ.copy()
     # If the user uploaded images in this session, pass their tempdir to the subprocess
     upload_dir = st.session_state.get("adk_upload_dir") if hasattr(st, "session_state") else None
@@ -359,12 +375,37 @@ if run_button:
     # to `.py` modules. Do not expose internal temp paths to the user.
     if using_yaml and repo_path is not None:
         try:
-            env["ADK_DATA_DIR"] = str(Path(repo_path).parent)
+            # Prefer creating a per-run temporary single-entry YAML derived
+            # from the full data file (if present). This ensures the
+            # generator always receives the current top entry and avoids
+            # using a stale `_single.yml` that may persist on the host.
+            data_full = mapping.get("data")
+            if data_full and data_full.exists():
+                try:
+                    import yaml
+
+                    full = yaml.safe_load(data_full.read_text(encoding="utf-8"))
+                    if isinstance(full, list) and full:
+                        td = tempfile.mkdtemp(prefix="adk_data_")
+                        tempdirs.append(td)
+                        data_name = data_full.name
+                        target = Path(td) / data_name
+                        target.write_text(yaml.safe_dump([full[0]], sort_keys=False, allow_unicode=True), encoding="utf-8")
+                        env["ADK_DATA_DIR"] = str(td)
+                        env["ADK_DATA_FILENAME"] = data_name
+                    else:
+                        env["ADK_DATA_DIR"] = str(Path(repo_path).parent)
+                except Exception:
+                    env["ADK_DATA_DIR"] = str(Path(repo_path).parent)
+            else:
+                env["ADK_DATA_DIR"] = str(Path(repo_path).parent)
         except Exception:
             pass
     if template_module and template_text:
         try:
-            tempdir = tempfile.mkdtemp(prefix="adk_template_")
+            td = tempfile.mkdtemp(prefix="adk_template_")
+            tempdirs.append(td)
+            tempdir = td
             target = Path(tempdir) / f"{template_module}.py"
             target.write_text(template_text, encoding="utf-8")
             # prepend tempdir to PYTHONPATH (harmless when using --source-file)
@@ -378,7 +419,9 @@ if run_button:
         # When editing YAML data directly, write the edited YAML file into a
         # temporary directory and set ADK_DATA_DIR so batch scripts pick it up.
         try:
-            tempdir = tempfile.mkdtemp(prefix="adk_data_")
+            td = tempfile.mkdtemp(prefix="adk_data_")
+            tempdirs.append(td)
+            tempdir = td
             data_name = mapping.get("data").name if mapping.get("data") else "data.yml"
             target = Path(tempdir) / data_name
             target.write_text(template_text, encoding="utf-8")
@@ -406,9 +449,10 @@ if run_button:
             st.error("Script timed out (600s)")
             proc = None
         finally:
-            if tempdir:
+            # Clean up any tempdirs we created during preparation
+            for td in tempdirs:
                 try:
-                    shutil.rmtree(tempdir)
+                    shutil.rmtree(td)
                 except Exception:
                     pass
             # Clean up any session upload tempdir after the run
