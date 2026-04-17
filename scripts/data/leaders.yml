@@ -1112,11 +1112,11 @@
   body_font_size: 18
   zoom: 1.25
 - name: Punter
-  abilities: '*Audacious.* Whn attacking in **battle**, you may damage 1 of
-    your attacking ships to reroll **all** dice.
+  abilities: '*Audacious.* When attacking in **battle**, you may damage 1 of
+    your ships to reroll **all** dice.
 
     *Feverish.* After you reroll dice in **battle**, **Provoke** **Outrage** in any
-    resource.'
+    resource type.'
   resources:
   - Weapon
   - Fuel
