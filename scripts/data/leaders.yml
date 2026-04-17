@@ -1095,7 +1095,7 @@
   abilities: '*Rooting.* When you **move** into a planet with no pieces, gain 1 matching
     resource.
 
-    *Territorial.* When you **move** out of a planet, if it''s left empty, build a
+    *Territorial.* When you **move** out of a planet, if it''s left empty, place a
     building there.'
   resources:
   - Material
