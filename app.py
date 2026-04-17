@@ -154,7 +154,10 @@ with st.container():
     with col_small:
         card_type = st.selectbox("Card type to generate", list(TEMPLATE_MAP.keys()))
     with col_large:
-        args = st.text_input("Arguments (optional)", value="")
+        args = st.text_input(
+            "Arguments (optional) - type --help to see options",
+            value="",
+        )
 
     # prepare template editing for the selected card type (always custom override)
     mapping = TEMPLATE_MAP[card_type]
@@ -163,7 +166,7 @@ with st.container():
     repo_path = mapping.get("path")
     data_path = mapping.get("data")
     using_yaml = False
-    # If a `data` path is configured, always use YAML — never fall back to the
+    # If a `data` path is configured, always use YAML; never fall back to the
     # Python module. Create or prefer a per-template `_single.yml` so the UI
     # edits a single entry. If no data file exists, create a `_single.yml`
     # containing either the first entry of an existing full YAML or a placeholder
