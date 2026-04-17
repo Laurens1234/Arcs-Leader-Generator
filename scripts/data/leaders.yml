@@ -278,7 +278,7 @@
   abilities: '*Assertive.* At the start of **any** **battle**, if you control the
     gate of the cluster the battle is in, deal 1 hit to the attacker or defender.
 
-    *Cautious.* In **battle** , you cannot roll more raid and assault dice than you have fresh attacking
+    *Cautious.* In **battle**, you cannot roll more raid and assault dice than you have fresh attacking
     ships.'
   resources:
   - Material
@@ -723,8 +723,8 @@
   zoom: 1.2
   boundary_shift: 0.2
 - name: Solian
-  abilities: '*Settled.* **Prelude:** Move from a planets any number of times (no free Catapult
-    moves).
+  abilities: '*Settled.* **Prelude:** Move from a planet any number of times. (No free Catapult
+    moves.)
 
     *Grounded.* When your ships **move** into a Rival-controlled gate, one of them
     takes a hit.'
@@ -1681,7 +1681,7 @@
   zoom: 1.15
 - name: Creator
   abilities: '*Cosmic.* When you **build**, you may instead take a ship from a Rival''s
-    supply and place it fresh one of their starports, if you do, gain a resource matching
+    supply and place it fresh at one of their starports, if you do, gain a resource matching
     that system.
 
     *Detached.* In **clean up**, return all your Trophies, even if Warlord was
@@ -1790,7 +1790,7 @@
     in its system. When you **build** at a starport, you may also build at all other
     starports in its system. *(Even Rival ones!)*
 
-    *Methodical.* You cannot have 2 Loyal buildings of different types on a planet'
+    *Methodical.* You cannot have 2 Loyal buildings of different types on a planet.'
   resources:
   - Material
   - Fuel
@@ -1800,7 +1800,7 @@
       building: starport
     B:
       ships: 3
-      building: none
+      building: None
     C:
       ships: 3
       building: None
@@ -1869,7 +1869,7 @@
       ships: 3
       building: None
   body_font_size: 18
-- name: Sollicitor
+- name: Solicitor
   abilities: '*Entreating.* When you **declare** **an** **ambition**, you may ask
     a Rival for a suit, they must give you the highest numbered card of that suit
     they have. If they did, give them an action card back.
@@ -2030,7 +2030,7 @@
 - name: Doppelganger
   abilities: '*Mimetic.* **Prelude:** Once per chapter, you may discard a resource to gain **all** of a Rival leader''s abilities until the end of the chapter.
 
-    *Unsettling.* In **setup**, scrap a city, starport, ship and agent, from your supply.'
+    *Unsettling.* In **setup**, scrap a city, starport, ship, and agent, each from your supply.'
   resources:
   - Psionic
   - Weapon
@@ -2049,7 +2049,7 @@
 # {
 #     "name": "Forgemaster",
 #     "abilities": (
-#         "*.* In **battle**, you may choose to reroll Assualt and Raid dice one at a time. For each rerolled die that has a self hit, immediately damage one of your ships. You may stop only after rolling a hit or key.\n"
+#         "*.* In **battle**, you may choose to reroll Assault and Raid dice one at a time. For each rerolled die that has a self hit, immediately damage one of your ships. You may stop only after rolling a hit or key.\n"
 #         "*."
 #     ),
 #     "resources": ["Weapon", "Relic"],

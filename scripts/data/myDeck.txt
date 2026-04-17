@@ -1,0 +1,70 @@
+
+
+Loyal Engineers
+Mining Interest
+Material Cartel
+Admin Union
+Construction Union
+
+Fuel Cartel
+Loyal Pilots
+Gatekeepers
+Shipping Interest
+Spacing Union
+
+Arms Union
+Prison Wardens
+Skirmishers
+Court Enforcers
+Loyal Marine
+
+Lattice Spies
+Farseers
+Secret Order
+Loyal Empaths
+Silver-Tongue
+
+Loyal Keepers
+Sworn Guardians
+Elder Broker
+Relic Fence
+Galactic Bards
+
+Mass Uprising
+Populist Demands
+Outrage Spreads
+Song of Freedom
+Guild Struggle
+Call to Action
+
+Deck name primeval / Precariousness
+
+Place ships abilities: (
+- Prelude: You may discard this to place 3 ships and 1 city in any system with no pieces.
+- Prelude: You may discard this to place 3 ships and 1 starport in any system with no pieces.
+- Place 2 ships in 2 gates
+- Place both 1 building and 1 ship in 2 systems with you control
+- place 2 fresh and 4 damaged ships in a system in a system you control
+- place 2 damaged ships in any system with no pieces,then gain a matching resource
+)
+
+prelude: before taking any other actoin, discard a resource to declare any ambition
+prelude: declare an ambition you are currently not winning
+prelude: declare an ambition matching a system you have a city in
+
+before scoring, discard this to declare an ambition any number of times
+after scoring, discard this to return all your pieces from rivals trophy and captive boxes
+after scoring, discard this to re
+
+discard this to steal any resource
+discard this and discard a resource to steal a guild card of the same type.
+discard this to swap up to 2 of your guild cards with another player
+discard this to steal up to 2 resources that don't match a declared ambition
+
+discard this to repair all your ships
+discard this to destroy all agents on a court card
+discard this to damage all ships in a system
+discard this to tax a rival city you control twice, ignoring the tax limit
+
+discard this to influence one card twice
+
