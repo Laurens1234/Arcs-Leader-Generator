@@ -303,7 +303,7 @@
     *Immunized.* If you have the initiative you don''t **Provoke** **Outrage**.
 
     *Fair.* Before **scoring**, the Rival with the least Power may take a resource
-    or 3 power from you.'
+    or 3 Power from you.'
   resources:
   - Psionic
   - Material
@@ -428,7 +428,7 @@
   abilities: '*Elusive.* After you **tax** a city, you may place it in any building
     slot you control or swap it with any Loyal building.
 
-    *Unmasked.* When you **tax** a Rival city, you only gain a resource or captive,
+    *Unmasked.* When you **tax** a Rival city, you only gain a resource or Captive,
     not both.'
   resources:
   - Psionic
@@ -541,7 +541,7 @@
       building: None
   body_font_size: 18
 - name: Architect
-  abilities: '*Visionary.* You can **build** at loyal cities and **tax** loyal starports.
+  abilities: '*Visionary.* You can **build** at Loyal cities and **tax** Loyal starports.
 
     *Meticulous.* You cannot **move** if you would lose control of a building.'
   resources:
@@ -560,7 +560,7 @@
   body_font_size: 18
 - name: Martyr
   abilities: '*Venerated.* After defending in a **battle**, if the attacker took any
-    trophies, gain any resource.
+    Trophies, gain any resource.
 
     *Selfless.* In **any** **battle** in a system with your ships, any hits that would
     damage a city damage your fresh ships first instead.'
@@ -581,9 +581,9 @@
   zoom: 1.2
 - name: Scourge
   abilities: '*Pyromaniacal.* When attacking in **battle**, at the start, you may
-    return any number of trophies matching the defender; deal 1 hit for each.
+    return any number of Trophies matching the defender; deal 1 hit for each.
 
-    *Insatiable.* Before **scoring**, if you have no cities as trophies, destroy a
+    *Insatiable.* Before **scoring**, if you have no cities as Trophies, destroy a
     Loyal city.'
   resources:
   - Weapon
@@ -743,11 +743,11 @@
   body_font_size: 18
   zoom: 1.2
   boundary_shift: 0.4
-- name: Rackateer
-  abilities: '*Leveraged.* When you **tax**, you may return a Rival''s captive trophy to
+- name: Racketeer
+  abilities: '*Unscrupulous:.* When you **tax**, you may return a Rival''s Captive or Trophy to
     tax one of their cities instead.
 
-    *Obliged.* In **scoring**, return all your Captives, even if Tyrant wasn''t declared.*'
+    *Crooked.* In **clean up**, return all your Captives, even if Tyrant wasn''t declared.'
   resources:
   - Weapon
   - Relic
@@ -764,7 +764,7 @@
   body_font_size: 18
 - name: Terraformer
   abilities: '*Genesiacal.* **At** **the** **start** **of** **each** **chapter**,
-    place a resource from the fullest supply on a planet with any loyal pieces to
+    place a resource from the fullest supply on a planet with any Loyal pieces to
     change its type. Also do this to a planet after you destroy a city on it.
 
     *Codependent.* When you **tax**, you only gain resources from altered planets.'
@@ -1192,7 +1192,7 @@
   body_font_size: 18
 - name: Ozymandias
   abilities: '*Hubristic.* When you control all gates, **secure** the entire Court,
-    returning any agents, then destroy all loyal ships in the gates.
+    returning any agents, then destroy all Loyal ships in the gates.
 
     *Forgotten.* You cannot **influence** if you control no gate.'
   resources:
@@ -1235,7 +1235,7 @@
     (like a reroll).
 
     *Honorable.* After attacking in **battle**, return half the pieces you took as
-    trophies (rounded down).'
+    Trophies (rounded down).'
   resources:
   - Weapon
   - Relic
@@ -1429,8 +1429,7 @@
   abilities: '*Shrewd.* **Prelude:** Once per turn, you may return 3 Trophies/Captives
     of a Rival to steal one of their resources.
 
-    *Vindictive.* In **scoring**, when you win an ambtion, return a Trophy or
-    Captive, if you choose not to, gain no Power.'
+    *Vindictive.*In **scoring**, when you win an Ambition, you may return a Trophy or Captive. If you don’t, gain no Power.'
   resources:
   - Psionic
   - Weapon
@@ -1598,10 +1597,10 @@
   body_font_size: 18
   zoom: 1.15
 - name: Dissector
-  abilities: '*Incisive.* When you take an action, you may return 1 captive or scrap
+  abilities: '*Incisive.* When you take an action, you may return 1 Captive or scrap
     1 agent from your supply to take any different action instead.
 
-    *Sadistic.* Before **scoring**, scrap 2 agents from your supply, return 2 captives,
+    *Sadistic.* Before **scoring**, scrap 2 agents from your supply, return 2 Captives,
     or 1 of each.'
   resources:
   - Relic
@@ -1622,7 +1621,7 @@
     on a card to a different card.
 
     *Compromised.* In **clean** **up**, return all your agents from a card where you
-    have at least 1 loyal agent.'
+    have at least 1 Loyal agent.'
   resources:
   - Psionic
   - Fuel
@@ -1640,7 +1639,7 @@
   zoom: 1.15
 - name: Hydra
   abilities: '*Regenerative.* After **any** **battle**, if 2+ of your Loyal pieces
-    got destroyed, you may place 1 Loyal ship from any trophy box in any system with
+    got destroyed, you may place 1 Loyal ship from any Trophy box in any system with
     Loyal pieces.
 
     *Unwieldy.* You cannot Catapult **move** with more than 3 ships in a single move.'
@@ -1659,7 +1658,7 @@
       building: None
   body_font_size: 18
 - name: Enchanter
-  abilities: '*Alluring.* When you copy or pivot to **influence** a card with a rival
+  abilities: '*Alluring.* When you copy or pivot to **influence** a card with a Rival
     agent on it, you may replace one of their ships with a Loyal one.
 
     *Resisted.* If you only have 1 ship in a gate, it doesn''t count for control.'
@@ -1683,7 +1682,7 @@
     supply and place it fresh one of their starports, if you do, gain a resource matching
     that system.
 
-    *Detached.* In **clean up**, you always return all trophies, even if Warlord was
+    *Detached.* In **clean up**, return all your Trophies, even if Warlord was
     not declared.'
   resources:
   - Material
@@ -1789,7 +1788,7 @@
     in its system. When you **build** at a starport, you may also build at all other
     starports in its system. *(Even Rival ones!)*
 
-    *Methodical.* You cannot have 2 loyal buildings of different types on a planet'
+    *Methodical.* You cannot have 2 Loyal buildings of different types on a planet'
   resources:
   - Material
   - Fuel
@@ -1852,8 +1851,8 @@
   abilities: '*Networked.* You can **tax** any city in a cluster where you control
     2 systems.
 
-    *Compartmental.* You cannot **build** buildings in systems adjecent to a system
-    with another loyal building.'
+    *Compartmental.* You cannot **build** buildings in systems adjacent to a system
+    with another Loyal building.'
   resources:
   - Psionic
   - Material
@@ -2084,3 +2083,4 @@
 #     "body_font_size": 12.7
 # },
 
+# when you declare and ambiont, you may discard all your resources and return a loyal city from the map, to gain 2 resources matching that city.

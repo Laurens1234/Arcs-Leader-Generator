@@ -1,4 +1,4 @@
-summary: Found 57 entries with potential misspellings.
+summary: Found 63 entries with potential misspellings.
 entries:
 - file: btr.yml
   issues:
@@ -141,6 +141,9 @@ entries:
       a Sa a a a  a a a a a a a a a  a a a a a a a a a  a a  a a a  a a a'
     misspelled:
     - Sa
+  - text: Abominationguildtest
+    misspelled:
+    - Abominationguildtest
   divider: ==================================================
 - file: leaders.yml
   issues:
@@ -275,8 +278,8 @@ entries:
   - text: '*Calculative.* Before attacking in **battle**, roll an Assault or Raid
       die. This **battle** You may reroll any dice that match that die''s face.
 
-      *Cautious.* You cannot **move** if it''d cause you to have ships in more than
-      4 different systems.'
+      *Cautious.* You cannot **move** if it would cause you to have ships in more
+      than 4 different systems.'
     misspelled:
     - reroll
   - text: '*Peaceful.* When attacking in **battle**, you may ignore the result of
@@ -328,6 +331,21 @@ entries:
     - labore
     - magna
     - tempor
+  - text: testloreimageempty
+    misspelled:
+    - testloreimageempty
+  - text: testloreimageempty
+    misspelled:
+    - testloreimageempty
+  - text: testloreimage
+    misspelled:
+    - testloreimage
+  - text: tesemptyrandom
+    misspelled:
+    - tesemptyrandom
+  - text: testemptyrandom
+    misspelled:
+    - testemptyrandom
   divider: ==================================================
 - file: vox.yml
   issues:
