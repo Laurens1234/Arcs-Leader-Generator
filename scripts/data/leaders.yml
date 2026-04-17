@@ -1933,7 +1933,7 @@
   abilities: '*Calculative.* Before attacking in **battle**, roll an Assault or
     Raid die. This **battle** You may reroll any dice that match that die''s face.
 
-    *Cautious.* You cannot **move** if it''d cause you to have ships in more than 4 different
+    *Cautious.* You cannot **move** if it would cause you to have ships in more than 4 different
     systems.'
   resources:
   - Weapon
@@ -1969,8 +1969,8 @@
   body_font_size: 18
 
 - name: Marauder
-  abilities: '*Opportunistic.* When attacking in **battle**, if you only roll Raid dice, you may swap the
-    amounts of {icon:dice_self_hit_black} and {icon:dice_key_black}.
+  abilities: '*Opportunistic.* When attacking in **battle**, if you roll only Raid dice, you may swap the
+    amounts of {icon:dice_self_hit_black}, {icon:dice_building_hit_black} and {icon:dice_key_black}. *(You* *may* *swap* *all* *3.)*
 
     *Cautious.* In **battle**, you cannot collect Raid dice if there are any fresh defending ships.'
   resources:
@@ -2030,7 +2030,7 @@
 - name: Doppelganger
   abilities: '*Mimetic.* **Prelude:** Once per chapter, you may discard a resource to gain **all** of a Rival leader''s abilities until the end of the chapter.
 
-    *Unsettling.* You don''t gain Power when you tie for first place.'
+    *Unsettling.* In **setup**, scrap a city, starport, ship and agent, from your supply.'
   resources:
   - Psionic
   - Weapon
