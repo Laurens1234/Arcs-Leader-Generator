@@ -745,7 +745,7 @@
   zoom: 1.2
   boundary_shift: 0.4
 - name: Racketeer
-  abilities: '*Unscrupulous:.* When you **tax**, you may return a Rival''s Captive or Trophy to
+  abilities: '*Unscrupulous.* When you **tax**, you may return a Rival''s Captive or Trophy to
     tax one of their cities instead.
 
     *Crooked.* In **clean up**, return all your Captives, even if Tyrant wasn''t declared.'
