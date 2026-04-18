@@ -1,70 +1,48 @@
+Deck name Primeval / Precariousness
 
+Place ships abilities: 
+discard this to place 3 ships and 1 city in any system with no pieces.
+discard this to place 3 ships and 1 starport in any system with no pieces.
+discard this to Place 2 ships in 2 non-adjecent gates
+discard this to Place both 1 building and 1 ship in 2 systems wyou control
+discard this to place 2 fresh and 4 damaged ships in a system in a system you control
+discard this to place 2 damaged ships in 2 different systems to gain 2 matching resources
+discard this to place 2 cities in 2 different systems and gain 2 matching resources
+discard this to place 2 starports in 2 different systems and 2 matching resources
 
-Loyal Engineers
-Mining Interest
-Material Cartel
-Admin Union
-Construction Union
-
-Fuel Cartel
-Loyal Pilots
-Gatekeepers
-Shipping Interest
-Spacing Union
-
-Arms Union
-Prison Wardens
-Skirmishers
-Court Enforcers
-Loyal Marine
-
-Lattice Spies
-Farseers
-Secret Order
-Loyal Empaths
-Silver-Tongue
-
-Loyal Keepers
-Sworn Guardians
-Elder Broker
-Relic Fence
-Galactic Bards
-
-Mass Uprising
-Populist Demands
-Outrage Spreads
-Song of Freedom
-Guild Struggle
-Call to Action
-
-Deck name primeval / Precariousness
-
-Place ships abilities: (
-- Prelude: You may discard this to place 3 ships and 1 city in any system with no pieces.
-- Prelude: You may discard this to place 3 ships and 1 starport in any system with no pieces.
-- Place 2 ships in 2 gates
-- Place both 1 building and 1 ship in 2 systems with you control
-- place 2 fresh and 4 damaged ships in a system in a system you control
-- place 2 damaged ships in any system with no pieces,then gain a matching resource
-)
-
-prelude: before taking any other actoin, discard a resource to declare any ambition
-prelude: declare an ambition you are currently not winning
-prelude: declare an ambition matching a system you have a city in
-
-before scoring, discard this to declare an ambition any number of times
-after scoring, discard this to return all your pieces from rivals trophy and captive boxes
-after scoring, discard this to re
-
+resource or card gain:
 discard this to steal any resource
 discard this and discard a resource to steal a guild card of the same type.
 discard this to swap up to 2 of your guild cards with another player
 discard this to steal up to 2 resources that don't match a declared ambition
 
+declare ambition gains:
+before taking any other actoin, discard a resource to declare any ambition
+declare an ambition you are currently not winning
+declare an ambition matching a system you have a city in
+before scoring, discard this to declare an ambition any number of times
+
+Special:
+after scoring, discard this to force all Rivals to return their resources to the supply
+discard this to return all your pieces from rivals trophy boxes
+discard this to return all your pieces from rivals captives boxes
+
+pieces:
 discard this to repair all your ships
 discard this to destroy all agents on a court card
 discard this to damage all ships in a system
+discard this destroy any damaged ships you control
 discard this to tax a rival city you control twice, ignoring the tax limit
+discard this to capture 2 agents in the court
+discard this to return any buildings you control
 
-discard this to influence one card twice
+bonus cards:
+discard this to union a card which number is declared
+discard this and return 2 loyal buildings from the map to union a card with 4 pips
+discard this and return 2 loyal ships from the map to union a card with 3 pips
+discard this and return 2 loyal agents from the court to untion a card with 2 pips
+discard this and discard 2 resources to union a card with 2 pips
 
+discard this to draw any number of cards from bottom of the action card deck, then discard that many
+
+(Get-Content 'scripts\data\myDeck.txt' | Where-Object { $_ -match '\S' -and $_ -notmatch ':\s*$' } | Measure-Object).Count

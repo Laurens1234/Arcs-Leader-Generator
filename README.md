@@ -529,8 +529,7 @@ Notes and next steps
 - Update `requirements.txt` to include `pyyaml` (done). If you prefer `ruamel.yaml` replace the YAML usage accordingly.
 - The `scripts/legacy/` folder keeps the old formatted templates for manual editing or CLI use; prefer YAML for day-to-day edits.
 {icon:summit}
-```
-
+ 
 ## Project Structure
 
 ```
