@@ -81,7 +81,7 @@
       building: None
   body_font_size: 18
 - name: Smuggler
-  abilities: '*Opportunistic.* In **battle**, if you rolled any {icon:dice_key_black},
+  abilities: '*Canny.* In **battle**, if you rolled any {icon:dice_key_black},
     you may steal 1 resource for free.
 
     *Hunted.* After you destroy a building in **battle**, the defender may move all
@@ -278,7 +278,7 @@
   abilities: '*Assertive.* At the start of **any** **battle**, if you control the
     gate of the cluster the battle is in, deal 1 hit to the attacker or defender.
 
-    *Cautious.* In **battle**, you cannot roll more raid and assault dice than you have fresh attacking
+    *Measured.* In **battle**, you cannot roll more raid and assault dice than you have fresh attacking
     ships.'
   resources:
   - Material
@@ -426,7 +426,7 @@
   body_font_size: 18
   zoom: 1.15
 - name: Magician
-  abilities: '*Elusive.* After you **tax** a city, you may place it in any building
+  abilities: '*Illusory.* After you **tax** a city, you may place it in any building
     slot you control or swap it with any Loyal building on the map.
 
     *Unmasked.* When you **tax** a Rival city, you only gain a resource or Captive,
@@ -452,7 +452,7 @@
     agents on it.'
   resources:
   - Relic
-  - Fuel
+  - Material
   setup:
     A:
       ships: 3
@@ -486,7 +486,7 @@
   abilities: '*Inquisitive.* When you **tax**, gain the resource twice if the matching
     ambition is declared (Weapon matches Warlord).
 
-    *Distracted.* After **scoring**, discard one resource matching a declared ambition.'
+    *Absent-minded:.* After **scoring**, discard one resource matching a declared ambition.'
   resources:
   - Material
   - Relic
@@ -526,7 +526,7 @@
   abilities: '*Transformative.* When you **declare** **an** **ambition**, discard
     1 resource to gain 2 resources of different types other than the one you discarded.
 
-    *Cautious.* You cannot spend your last resource.'
+    *Conservative.* You cannot spend your last resource.'
   resources:
   - Psionic
   - Relic
@@ -544,7 +544,7 @@
 - name: Architect
   abilities: '*Visionary.* You can **build** at Loyal cities and **tax** Loyal starports.
 
-    *Meticulous.* You cannot **move** if you would lose control of a building.'
+    *Diligent.* You cannot **move** if you would lose control of a building.'
   resources:
   - Relic
   - Material
@@ -609,8 +609,8 @@
     *Communal.* If you start your turn with any resources, discard a resource or any
     card.'
   resources:
-  - ''
-  - ''
+  - None
+  - None
   setup:
     A:
       ships: 3
@@ -851,8 +851,8 @@
     *Wrathful.* In **setup**, **Provoke** **Outrage** in all resource types except
     1, then gain any 2 resources.'
   resources:
-  - ''
-  - ''
+  - None
+  - None
   setup:
     A:
       ships: 3
@@ -1822,8 +1822,8 @@
     *Diversified.* When you **tax**, don''t gain a resource if you already have a
     resource of that type.'
   resources:
-  - ''
-  - ''
+  - None
+  - None
   setup:
     A:
       ships: 3
@@ -1975,10 +1975,10 @@
   body_font_size: 18
 
 - name: Marauder
-  abilities: '*Opportunistic.* When attacking in **battle**, if you roll only Raid dice, you may swap the
+  abilities: '*Predatory.* When attacking in **battle**, if you roll only Raid dice, you may swap the
     amounts of {icon:dice_self_hit_black}, {icon:dice_building_hit_black} and {icon:dice_key_black}. *(You* *may* *swap* *all* *3.)*
 
-    *Cautious.* In **battle**, you cannot collect Raid dice if there are any fresh defending ships.'
+    *Forbearing.* In **battle**, you cannot collect Raid dice if there are any fresh defending ships.'
   resources:
   - Weapon
   - Fuel
@@ -2020,7 +2020,7 @@
 
     *Levied.* After attacking in **battle**, if all your rolled dice have a {icon:dice_hit_black} or {icon:dice_building_hit_black} on them, discard a resource.'
   resources:
-  - Relic
+  - Material
   - Weapon
   setup:
     A:
