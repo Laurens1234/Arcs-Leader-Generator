@@ -1190,6 +1190,8 @@
       ships: 2
       building: None
   body_font_size: 18
+  boundary_shift: 0.09
+  zoom: 1.15
 - name: Ozymandias
   abilities: '*Hubristic.* When you control all gates, **secure** the entire Court,
     returning any agents, then destroy all Loyal ships in the gates.
@@ -1291,6 +1293,7 @@
       ships: 2
       building: None
   body_font_size: 18
+  zoom: 1.15
 - name: Ambassador
   abilities: '*Diplomatic.* When you **declare** **an** **ambition**, you may secure
     any number of times.
@@ -1351,6 +1354,7 @@
       ships: 2
       building: None
   body_font_size: 18
+  zoom: 1.1
 - name: Despot
   abilities: '*Autocratic.* When you **declare** **an** **ambition**, you may tax
     one city you control of each player.
@@ -1370,6 +1374,7 @@
       ships: 2
       building: None
   body_font_size: 18
+  zoom: 1.15
 - name: Viceroy
   abilities: '*Delegated.* When any player **builds** a city, you may place 1 of your
     ships in that city''s cluster.
@@ -1427,6 +1432,7 @@
       ships: 2
       building: None
   body_font_size: 18
+  zoom: 1.15
 - name: Extortioner
   abilities: '*Predatory.* **Prelude:** Once per turn, you may return 3 Trophies/Captives
     of a Rival to steal one of their resources.
@@ -2007,6 +2013,7 @@
       building: None
   body_font_size: 18
   zoom: 1.14
+  boundary_shift: -0.01
 
 - name: Underwriter
   abilities: '*Assured.* After attacking in **battle**, if more than half of your rolled Skirmish dice have no {icon:dice_hit_black}, gain any resource.
