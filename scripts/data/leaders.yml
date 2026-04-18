@@ -1454,7 +1454,7 @@
   body_font_size: 18
 - name: Emperor
   abilities: '*Imperial.* In **scoring**, your city bonus is 2 Power per city you
-    control.
+    control instead.
 
     *Exacting.* In **scoring**, you don''t gain Power for second place unless you
     tied for first.'
