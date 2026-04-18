@@ -4,6 +4,8 @@ A Python project to generate custom leader cards and lore cards for Arcs. It use
 
 Website: https://arcs-card-generator.streamlit.app/
 
+My other Arcs website: https://laurens1234.github.io/arcs-arsenal/
+
 ## Requirements
 
 * Python 3.x
@@ -561,8 +563,6 @@ Notes and next steps
 ## Tips
 
 I recommend using ChatGPT or another AI tool to quickly reformat your card data into the required format.
-
-Here you can find the most up to date version of my custom leaders: https://docs.google.com/document/d/11SS9AGXG0q3Vlb67Kl0mdvhnE0kKLfgCDgx5LVDwsGk/edit?usp=sharing
 
 ### Example Cards:
 
