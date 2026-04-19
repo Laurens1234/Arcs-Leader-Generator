@@ -568,9 +568,9 @@ I recommend using ChatGPT or another AI tool to quickly reformat your card data 
 
 **Leader Card:**
 
-![Demo Leader Card](https://github.com/Laurens1234/Arcs-Leader-Generator/blob/main/results/leader/Treasurer_Card.png)
+![Demo Leader Card](https://raw.githubusercontent.com/Laurens1234/Arcs-Leader-Generator/main/results/leader/Treasurer_Card.png)
 
-![Demo Leader Card](https://github.com/Laurens1234/Arcs-Leader-Generator/blob/main/results/leader_Kaiju_Card.png)
+![Demo Leader Card](https://raw.githubusercontent.com/Laurens1234/Arcs-Leader-Generator/main/results/leader/Kaiju_Card.png)
 
 **Lore Card:**
 
