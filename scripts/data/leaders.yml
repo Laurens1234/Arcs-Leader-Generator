@@ -536,13 +536,13 @@
       building: city
     B:
       ships: 3
-      building: city
+      building: starport
     C:
       ships: 2
       building: None
   body_font_size: 18
 - name: Architect
-  abilities: '*Visionary.* You can **build** at Loyal cities and **tax** Loyal starports.
+  abilities: '*Visionary.* You can **tax** Loyal starports, each once per turn.
 
     *Diligent.* You cannot **move** if you would lose control of a building.'
   resources:
