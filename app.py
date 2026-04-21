@@ -155,7 +155,7 @@ with st.container():
         card_type = st.selectbox("Card type to generate", list(TEMPLATE_MAP.keys()))
     with col_large:
         args = st.text_input(
-            "Arguments (optional, type --help to see options)",
+            "Arguments (for advanced use, type --help and run to see options)",
             value="",
         )
 
