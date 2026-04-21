@@ -30,6 +30,23 @@ Also ensure PyYAML is installed so the generators can load YAML data files:
 pip install pyyaml
 ```
 
+
+## Tips
+
+I recommend using ChatGPT or another AI tool to quickly reformat your card data into the required format.
+
+### Example Cards:
+
+**Leader Card:**
+
+![Demo Leader Card](https://raw.githubusercontent.com/Laurens1234/Arcs-Leader-Generator/main/results/leader/Treasurer_Card.png)
+
+![Demo Leader Card](https://raw.githubusercontent.com/Laurens1234/Arcs-Leader-Generator/main/results/leader/Kaiju_Card.png)
+
+**Lore Card:**
+
+![Demo Lore Card](https://github.com/Laurens1234/Arcs-Leader-Generator/blob/main/results/lore/Ancient%20Prophecy_Lore_Card.png)
+
 ## Usage
 
 ### Generate Leader Cards
@@ -560,18 +577,3 @@ Notes and next steps
 └── README.md
 ```
 
-## Tips
-
-I recommend using ChatGPT or another AI tool to quickly reformat your card data into the required format.
-
-### Example Cards:
-
-**Leader Card:**
-
-![Demo Leader Card](https://github.com/Laurens1234/Arcs-Leader-Generator/blob/main/results/leader/Treasurer_Card.png)
-
-![Demo Leader Card](https://github.com/Laurens1234/Arcs-Leader-Generator/blob/main/results/leader_Kaiju_Card.png)
-
-**Lore Card:**
-
-![Demo Lore Card](https://github.com/Laurens1234/Arcs-Leader-Generator/blob/main/results/lore/Ancient%20Prophecy_Lore_Card.png)
