@@ -2053,6 +2053,27 @@
       building: None
   body_font_size: 18
 
+- name: zz
+  abilities: '*Unstoppable.* **Prelude:** Discard a resource onto here, then roll 6-"resources on here" (≥1) Skirmish dice.
+     If all {icon:dice_hit_black}, discard all resources here. Until the next chapter:
+    your ships cannot be destroyed and repair after **battle**, your pips let you battle, any you can spend resources as any type.
+
+    *Confident.* You cannot spend resources their for normal Prelude actions.'
+  resources:
+  - Psionic
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+
 # {
 #     "name": "Forgemaster",
 #     "abilities": (
