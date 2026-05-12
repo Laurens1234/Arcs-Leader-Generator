@@ -18,7 +18,32 @@ from PIL import Image
 
 st.set_page_config(page_title="Arcs Card Generator", layout="wide")
 
-st.title("Arcs Card Generator")
+title_col, button_col = st.columns([4, 2])
+with title_col:
+        st.title("Arcs Card Generator")
+
+with button_col:
+        components.html(
+                """
+                <style>
+                    .kofi-wrap {
+                        display: flex;
+                        justify-content: flex-end;
+                        width: 100%;
+                        overflow: visible;
+                        padding-top: 18px;
+                    }
+                </style>
+                <div class="kofi-wrap">
+                    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+                    <script type='text/javascript'>
+                        kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'K3K61YUXCB');
+                        kofiwidget2.draw();
+                    </script>
+                </div>
+                """,
+                height=100,
+        )
 
 st.markdown(
         """
@@ -28,7 +53,7 @@ st.markdown(
                     <ul style='margin:0;padding-left:18px;'>
                         <li>How to use: <a href='https://github.com/Laurens1234/Arcs-Leader-Generator/' target='_blank'>Read the project README on GitHub</a></li>
                         <li>For advanced features, follow the setup instructions in the README to run the generator locally on your PC.</li>
-                        <li>Need help or want to report a bug? <a href='https://discord.com/channels/1459242411325919317/1482161901067833364' target='_blank'>Open support Discord channel</a></li>
+                        <li>Need help or want to report a bug? <a href='https://discord.com/channels/1459242411325919317/1465885121822457867' target='_blank'>Open support Discord channel</a></li>
                         <li>Explore more Arcs tools and resources my other website: <a href='https://laurens1234.github.io/arcs-arsenal/' target='_blank'>Arcs Arsenal</a></li>
                         <li>Browse my Custom Cards created with this tool: <a href='https://laurens1234.github.io/arcs-arsenal/custom-cards' target='_blank'>Browse Custom Cards</a></li>
                     </ul>
