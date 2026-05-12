@@ -43,8 +43,8 @@
   boundary_shift: 0.1
 - name: Sentient
   abilities: '*Formless.* **At** **the** **start** **of** **each** **chapter**, choose
-    a gate. This chapter, you may Catapult and **build** ships there
-    any number of times per turn.
+    a gate. **This chapter**, you may Catapult move and build there
+    any number of times.
 
     *Shapeless.* In **setup**, scrap all your starports.'
   resources:
@@ -62,7 +62,7 @@
       building: None
   body_font_size: 18
 - name: Hierarch
-  abilities: '*Entitled.* At the end of your turn, influence a card where you
+  abilities: '*Entitled.* At the **end of your turn**, influence a card where you
     are tied with another player.
 
     *Rigid.* You cannot Pivot to **influence** .'
@@ -122,7 +122,7 @@
   body_font_size: 18
 - name: Necromancer
   abilities: '*Arising.* After **any** **battle**, for each piece you destroyed, you
-    may place a matching fresh Loyal piece there.
+    may place a matching fresh piece there.
 
     *Gravebound.* In **setup**, damage both of your buildings. You cannot **build**
     fresh pieces, place them damaged instead.'
@@ -142,7 +142,7 @@
   body_font_size: 18
   zoom: 1.15
 - name: Composer
-  abilities: '*Elegant.* When you **used a pip to repair**, gain 1 resource.
+  abilities: '*Elegant.* When you **use a pip **to** **repair**, gain 1 resource.
 
     *Obsessed.* You cannot **build** or **tax** in clusters where any of your pieces
     are damaged.'
@@ -345,7 +345,7 @@
   abilities: '*Hallowed.* After you **move** a single ship, you may battle with only
     it. The die it rolls has its result count thrice.
 
-    *Forsaken.* If you have not attacked this chapter, you cannot **declare** **an**
+    *Forsaken.* If you have not **attacked** this chapter, you cannot **declare** **an**
     **ambition**.'
   resources:
   - Relic
@@ -606,7 +606,7 @@
   abilities: '*Frugal.* If you start your **Prelude** with no resources and no Guild
     cards, gain **any** resource.
 
-    *Communal.* If you start your turn with any resources, discard a resource or any
+    *Communal.* If you **start your turn** with any resources, discard a resource or any
     card.'
   resources:
   - None
@@ -703,7 +703,7 @@
   body_font_size: 18
 - name: Golem
   abilities: '*Ironclad.* After **any** **battle**, you may discard a resource to
-    keep all your Loyal destroyed ships from that battle damaged instead.
+    keep all Loyal destroyed ships from that battle damaged instead.
 
     *Cold.* In **clean** **up**, destroy all your damaged ships.'
   resources:
@@ -1487,7 +1487,7 @@
 - name: Egoist
   abilities: '*Willful.* When you **Pivot**, instead take any action not on your played card.
 
-    *Inflexible.* You can only Copy with cards of the Lead suit, face up.'
+    *Inflexible.* You can only **Copy** with cards of the Lead suit, face up.'
   resources:
   - Psionic
   - Material
@@ -1636,7 +1636,7 @@
   body_font_size: 18
   zoom: 1.15
 - name: Hydra
-  abilities: '*Regenerative.* After **any** **battle**, if 2+ of your Loyal pieces
+  abilities: '*Regenerative.* After **any** **battle**, if 2+ of your pieces
     were destroyed, you may place 1 Loyal ship from any Trophy box in any system a Loyal piece.
 
     *Unwieldy.* You cannot Catapult **move** from a gate with a Rival ship in it.'
@@ -1743,7 +1743,7 @@
     card with no or only Loyal agents on it matching that city''s type.
 
     *Dogmatic.* You cannot **influence** a card with no agents on it if a Rival can
-    secure a card with any of your Loyal agents on it.'
+    secure a card with any of your agents on it.'
   resources:
   - Weapon
   - Relic
@@ -1906,10 +1906,10 @@
   body_font_size: 18
   zoom: 1.15
 - name: Paragon
-  abilities: '*Exemplary.* When you Pivot and play a card of equal rank to the Lead
+  abilities: '*Exemplary.* When you **Pivot** and play a card of equal rank to the Lead
     card, you may use all pips on your played card.
 
-    *Immutable.* You cannot Pivot with cards of different rank than the Lead card.'
+    *Immutable.* You cannot **Pivot** with cards of different rank than the Lead card.'
   resources:
   - Psionic
   - Relic
@@ -1928,8 +1928,7 @@
 - name: Tactician
   abilities: '*Calculative.* Before attacking in **battle**, roll a die. You may reroll any dice that match that die''s face.
 
-    *Cautious.* You cannot **move** if it would cause you to have ships in more than 4 different
-    systems.'
+    *Cautious.* You cannot have ships in more than 4 different systems.'
   resources:
   - Weapon
   - Material
@@ -2045,7 +2044,7 @@
 - name: zGambler
   abilities: '*Immortal.* **Prelude:** You may discard a resource onto here, then roll 6-"resources on here" (≥1) Skirmish dice. If all {icon:dice_hit_black}, gain all resources here. Until your next turn: your ships instant repair if damaged, your pips let you battle, and you can spend resources as any type.
 
-    *Confident.* You cannot spend resources for their for normal Prelude actions.'
+    *Confident.* You cannot **spend** resources for their for normal Prelude actions.'
   resources:
   - Psionic
   - Weapon
