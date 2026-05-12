@@ -1173,7 +1173,7 @@
   abilities: '*Inspiring.* To **seize the initiative**, you may give two resources to
     the player with the initiative.
 
-    *Temperamental.* When you **gain** **the** **initiative**, damage 1 Loyal ship.'
+    *Temperamental.* When you **gain** **the** **initiative**, damage 1 Loyal piece.'
   resources:
   - Material
   - Fuel
@@ -2004,7 +2004,7 @@
   boundary_shift: -0.01
 
 - name: Underwriter
-  abilities: '*Assured.* After attacking in **battle**, if more than half of your rolled Skirmish dice have no {icon:dice_hit_black}, gain any resource.
+  abilities: '*Assured.* After attacking in **battle**, if half or more of your rolled Skirmish dice have no {icon:dice_hit_black}, gain any resource.
 
     *Levied.* After attacking in **battle**, if all your rolled dice have a {icon:dice_hit_black} or {icon:dice_building_hit_black} on them, discard a resource.'
   resources:
@@ -2023,7 +2023,7 @@
   body_font_size: 18
 
 - name: Doppelganger
-  abilities: '*Mimetic.* **Prelude:** Once per chapter, you may scrap an agent from your supply to gain **all** of a Rival leader''s abilities until the end of the chapter.
+  abilities: '*Mimetic.* **Prelude:** Once per chapter, you may scrap an agent or ship from your supply to gain all of a Rival leader''s abilities until the end of the chapter.
 
     *Unsettling.* In **setup**, scrap a city, starport, ship, and agent, each from your supply.'
   resources:
@@ -2041,8 +2041,8 @@
       building: None
   body_font_size: 18
 
-- name: zGambler
-  abilities: '*Immortal.* **Prelude:** You may discard a resource onto here, then roll 6-"resources on here" (≥1) Skirmish dice. If all {icon:dice_hit_black}, gain all resources here. Until your next turn: your ships instant repair if damaged, your pips let you battle, and you can spend resources as any type.
+- name: Bulwark
+  abilities: '*Immortal.* **Prelude:** You may discard a resource onto here, then roll 6-"resources on here" (≥1) Skirmish dice. If all {icon:dice_hit_black}, gain all resources here. Until your next turn: your ships instantly repair if damaged, your pips let you battle, and you can spend resources as any type.
 
     *Confident.* You cannot **spend** resources for their for normal Prelude actions.'
   resources:
@@ -2060,7 +2060,7 @@
       building: None
   body_font_size: 18
 - name: Demon
-  abilities: '*Cataclismic.* Before or after any *battle** with you, damage 1 Rival piece in the battle system per city you control.
+  abilities: '*Cataclismic.* After any **battle** with you, damage 1 Rival piece in the battle system per city you control.
 
     *Malevolent.* In **clean up**, damage a city you control.'
   resources:
@@ -2077,13 +2077,13 @@
       ships: 3
       building: None
   body_font_size: 18
-- name: Brawler
-  abilities: '*.* Before any **battle** with you, you may swap the positions of any two ships.
+- name: Soulbinder 
+  abilities: '*Syncopated.* Before or after any **battle** with you, you may swap the positions of any two ships on the map.
 
-    *.* '
+    *Fragmented.* When attacking in **battle**, you collect 1 less die if you don''t control the battle system.'
   resources:
-  - 
-  - 
+  - Psionic
+  - Weapon
   setup:
     A:
       ships: 3
@@ -2095,13 +2095,14 @@
       ships: 2
       building: None
   body_font_size: 18
+  boundary_shift: -0.05
 - name: Vessel
-  abilities: '*Mimetic.* You may copy one opponent''s ability for a turn.
+  abilities: '*Mimetic.* **Prelude**: You may return a Rival''s Captive or Trophy to use all of the non-discard abilities on a card they have for the rest of the turn.
 
-    .* .'
+    *Identityless.* You cannot use **new** **actions** on cards you have.'
   resources:
   - Psionic
-  - Fuel
+  - Weapon
   setup:
     A:
       ships: 3
@@ -2114,9 +2115,11 @@
       building: None
   body_font_size: 18
 - name: Conqueror
-  abilities: '*Ambitious.* You can use pips to **battle**.
+  abilities: '*Relentless.* You can use any **pip** to battle.
 
-    *Relentless.* You must **battle** if you can.'
+    *Armed.* You can **spend** Weapons to battle.
+
+    *Instinctive.* You must **spend a pip** to battle if you can.'
   resources:
   - Weapon
   - Weapon
@@ -2131,12 +2134,13 @@
       ships: 2
       building: None
   body_font_size: 18
+  zoom: 1.15
 - name: Comedian
-  abilities: '*Funny.* After any **battle** with you, if you would have no ships left, ignore all damage to your ships from that **battle** and repair all ships instead.
+  abilities: '*Hilarious.* In any **battle** with you, if you would have no ships left in the battle system, ignore all damage to your ships and repair them instead.
 
-    *'
+    *Laughing.* You cannot **destroy** the last Rival ship in each system.'
   resources:
-  - Material
+  - Psionic
   - Fuel
   setup:
     A:
@@ -2146,17 +2150,17 @@
       ships: 3
       building: starport
     C:
-      ships: 3
+      ships: 2
       building: None
   body_font_size: 18
 
 - name: Animator
-  abilities: '*Framing.* After **taking an action**, you may move 1 ship.
+  abilities: '*Framing.* After **taking an action**, you may move 1 Loyal ship.
 
-    *Stagnant.* Ships that did not move this turn cannot **battle**.'
+    *Static.* You cannot **battle** unless you''ve moved this turn.'
   resources:
   - Fuel
-  - Material
+  - Psionic
   setup:
     A:
       ships: 3
@@ -2169,13 +2173,13 @@
       building: None
   body_font_size: 18
 
-- name: Courtier
-  abilities: '*Schemer.* When you **declare an ambition**, you may swap a card you have with one in the court.
+- name: Merchant
+  abilities: '*Mercantile.* When you **declare** **an** **ambition**, you may swap any card you have (except this one) with one in the court.
 
-    *Compromised.* In **clean up**, discard a resource if you did not **declare an ambition** this chapter.'
+    *Dependent.* You cannot **declare** **an** **ambition**, unless you have at least 1 of the thing it is counting.'
   resources:
-  - Psionic
-  - Fuel
+  - Material
+  - Relic
   setup:
     A:
       ships: 3
