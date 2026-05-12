@@ -1655,7 +1655,7 @@
       building: None
   body_font_size: 18
 - name: Enchanter
-  abilities: '*Alluring.* When you copy or pivot to **influence** a card with a Rival
+  abilities: '*Alluring.* When you Copy or Pivot to **influence** a card with a Rival
     agent on it, you may replace one of their ships with a Loyal one.
 
     *Resisted.* If you only have 1 ship in a gate, it doesn''t count for control.'
