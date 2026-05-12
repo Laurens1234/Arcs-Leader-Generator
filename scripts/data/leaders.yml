@@ -2059,6 +2059,135 @@
       ships: 3
       building: None
   body_font_size: 18
+- name: Demon
+  abilities: '*Cataclismic.* Before or after any *battle** with you, damage 1 Rival piece in the battle system per city you control.
+
+    *Malevolent.* In **clean up**, damage a city you control.'
+  resources:
+  - Weapon
+  - Material
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: city
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+- name: Brawler
+  abilities: '*.* Before any **battle** with you, you may swap the positions of any two ships.
+
+    *.* '
+  resources:
+  - 
+  - 
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Vessel
+  abilities: '*Mimetic.* You may copy one opponent''s ability for a turn.
+
+    .* .'
+  resources:
+  - Psionic
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Conqueror
+  abilities: '*Ambitious.* You can use pips to **battle**.
+
+    *Relentless.* You must **battle** if you can.'
+  resources:
+  - Weapon
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Comedian
+  abilities: '*Funny.* After any **battle** with you, if you would have no ships left, ignore all damage to your ships from that **battle** and repair all ships instead.
+
+    *'
+  resources:
+  - Material
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+
+- name: Animator
+  abilities: '*Framing.* After **taking an action**, you may move 1 ship.
+
+    *Stagnant.* Ships that did not move this turn cannot **battle**.'
+  resources:
+  - Fuel
+  - Material
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: Courtier
+  abilities: '*Schemer.* When you **declare an ambition**, you may swap a card you have with one in the court.
+
+    *Compromised.* In **clean up**, discard a resource if you did not **declare an ambition** this chapter.'
+  resources:
+  - Psionic
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
 
 # {
 #     "name": "Forgemaster",
