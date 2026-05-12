@@ -142,7 +142,7 @@
   body_font_size: 18
   zoom: 1.15
 - name: Composer
-  abilities: '*Elegant.* When you **use a pip **to** **repair**, gain 1 resource.
+  abilities: '*Elegant.* When you **use a pip to** **repair**, gain 1 resource.
 
     *Obsessed.* You cannot **build** or **tax** in clusters where any of your pieces
     are damaged.'
@@ -345,7 +345,7 @@
   abilities: '*Hallowed.* After you **move** a single ship, you may battle with only
     it. The die it rolls has its result count thrice.
 
-    *Forsaken.* If you have not **attacked** this chapter, you cannot **declare** **an**
+    *Forsaken.* If you have not attacked this chapter, you cannot **declare** **an**
     **ambition**.'
   resources:
   - Relic
@@ -1637,7 +1637,7 @@
   zoom: 1.15
 - name: Hydra
   abilities: '*Regenerative.* After **any** **battle**, if 2+ of your pieces
-    were destroyed, you may place 1 Loyal ship from any Trophy box in any system a Loyal piece.
+    were destroyed, you may place 1 Loyal ship from any Trophy box in a system a Loyal piece.
 
     *Unwieldy.* You cannot Catapult **move** from a gate with a Rival ship in it.'
   resources:
