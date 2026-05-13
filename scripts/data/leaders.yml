@@ -2078,7 +2078,7 @@
       building: None
   body_font_size: 18
 - name: Soulbinder 
-  abilities: '*Syncopated.* Before or after any **battle** with you, you may swap the positions of any two ships on the map.
+  abilities: '*Syncopated.* Before or after attacking in **battle**, you may swap the positions of any two ships on the map.
 
     *Fragmented.* When attacking in **battle**, you collect 1 less die if you don''t control the battle system.'
   resources:
@@ -2097,7 +2097,7 @@
   body_font_size: 18
   boundary_shift: -0.05
 - name: Vessel
-  abilities: '*Mimetic.* **Prelude**: You may return a Rival''s Captive or Trophy to use all of the non-discard abilities on a card they have for the rest of the turn.
+  abilities: '*Mimetic.* **Prelude**: You may return a Captive or Trophy to Rival to use all of the non-discard abilities on a card they have this turn.
 
     *Identityless.* You cannot use **new** **actions** on cards you have.'
   resources:
