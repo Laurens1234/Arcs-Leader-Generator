@@ -1,0 +1,179 @@
+Found 59 entries with potential misspellings.
+File: btr.yml
+  Text: *Faithful* *Reach.* Before dealing action cards, mix in the 6 Faithful Action cards (FL1-6) and take Champion of the Faith title (F7).
+{vspace:5}
+*An* *Era* *of* *Heresy.* When any player wins Empath, they take Champion of the Faith title.
+  Misspelled: Empath, vspace
+  Text: **Scavenge** **(Tax):** Damage a fresh rival ship in a system you control. Then gain a resource matching that system.
+{vspace:5}
+*Broken* *Reach.* In **setup**, all players Provoke Material Outrage.
+  Misspelled: vspace
+==================================================
+File: edifice.yml
+  Text: **When Discovered:** Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  Misspelled: Lorem, Sed, adipiscing, aliqua, amet, consectetur, dolore, eiusmod, elit, incididunt, ipsum, labore, magna, tempor
+==================================================
+File: guild.yml
+  Text: testguild
+  Misspelled: testguild
+  Text: Testguild
+  Misspelled: Testguild
+  Text: This is a **Guild** card test.
+Rich text: *italic* **bold** ***bolditalic*** with punctuation: **Tax**, *Influence.*
+
+Long wrapping sentence to confirm layout works the same as lore cards.
+  Misspelled: bolditalic
+  Text: testguild_material
+  Misspelled: testguild
+  Text: testguild_material
+  Misspelled: testguild
+  Text: Material suit test.
+
+Rich text: *italic* **bold** ***bolditalic***.
+
+{vspace:30}
+
+Raid icon test: raid=1.
+
+  Misspelled: bolditalic, vspace
+  Text: testguild_weapon
+  Misspelled: testguild
+  Text: testguild_weapon
+  Misspelled: testguild
+  Text: testguild_relic
+  Misspelled: testguild
+  Text: testguild_relic
+  Misspelled: testguild
+  Text: Relic suit test.
+Long wrap sentence: this line is intentionally a bit longer to wrap across multiple lines in the body text area. {vspace:30}
+Raid icon test: raid=3.
+  Misspelled: vspace
+  Text: testguild_psionic
+  Misspelled: testguild
+  Text: testguild_psionic
+  Misspelled: testguild
+  Text: testguild_icons
+  Misspelled: testguild
+  Text: {icon:dice_hit_black} Start-of-sentence icon.
+Middle-of-sentence icon {icon:dice_hit_black} to verify spacing.
+End-of-sentence icon {icon:dice_intercept_black}.
+Comma after icon {icon:dice_key_black}, then more text.
+Paren before/after ( {icon:dice_self_hit_black} ) should still align.
+
+  Misspelled: Paren
+  Text: This is an artifact-style guild card.
+Overlay test: uses Artifact_top_half.png on top of the regular guild frame.
+  Misspelled: png
+  Text: testguildbolded
+  Misspelled: testguildbolded
+  Text: Guild bolded long
+  Misspelled: bolded
+  Text: **S a a a a a a  a a a a a a a a a  a a a a a a a a a  a a  a a a  a a a a aSa a a a a  a a a a a a a a a  a a a a a a a a a  a a  a a a  a a a**
+S a a a a a a  a a a a a a a a a  a a a  a a a a a a  a a  a a a  a a a a a a Sa a a a  a a a a a a a a a  a a a a a a a a a  a a  a a a  a a a
+  Misspelled: Sa
+  Text: Abominationguildtest
+  Misspelled: Abominationguildtest
+==================================================
+File: leaders.yml
+  Text: Kaiju
+  Misspelled: Kaiju
+  Text: Kaiju
+  Misspelled: Kaiju
+  Text: Shapeshifter
+  Misspelled: Shapeshifter
+  Text: *Arising.* After **any** **battle**, for each piece you destroyed, you may place a matching fresh piece there.
+*Gravebound.* In **setup**, damage both of your buildings. You cannot **build** fresh pieces, place them damaged instead.
+  Misspelled: Gravebound
+  Text: *Transformative.* When you **declare** **an** **ambition**, discard 1 resource to gain 2 resources of different types other than the one you discarded.
+*Conservative.* You cannot **spend** your last resource.
+  Misspelled: Transformative
+  Text: *Overclocked.* If you spend 2 or more resources, you may influence at the end of your **Prelude**.
+*Wasteful.* After you **secure** a card using 3 or more agents, scrap an agent from your supply.
+  Misspelled: Overclocked
+  Text: Solian
+  Misspelled: Solian
+  Text: Terraformer
+  Misspelled: Terraformer
+  Text: *Genesiacal.* **At** **the** **start** **of** **each** **chapter**, place a resource from the fullest supply on a planet you control to change its type. Also do this to a planet after you destroy a city on it.
+*Codependent.* When you **tax**, you only gain resources from planets with altered types.
+  Misspelled: Genesiacal
+  Text: Siegebreaker
+  Misspelled: Siegebreaker
+  Text: *Incendiary.* When attacking in **battle**, before collecting dice, you may destroy 1 attacking ship to destroy 2 defending pieces.
+*Infamous.* When you **destroy** a starport, Provoke Outrage of that starport's type.
+  Misspelled: starport's
+  Text: *Malefic.* When you **secure**, you may capture a Rival agent on an adjacent card.
+*Covenbound.* You cannot **secure** unless there is an agent on another card.
+  Misspelled: Covenbound
+  Text: *Bloodsoaked.* When you Copy or Pivot to **battle**, you may declare Warlord, and each {icon:dice_hit_black} you roll counts twice.
+*Hellbent.* In **scoring**, if you win no ambitions, lose 3 Power.
+  Misspelled: Bloodsoaked
+  Text: *Bankrolled.* **At the start of each chapter**, tax all cities you control.
+*Deskbound.* You can **tax** at most once per turn.
+  Misspelled: Deskbound
+  Text: Wayfinder
+  Misspelled: Wayfinder
+  Text: *Bridging.* You treat systems with a building of the same color as adjecent.
+*Anchored.* When you Catapult **move**, stop after 2 moves.
+  Misspelled: adjecent
+  Text: *Salvific.* When you **build** a city in a system with any damaged ships, you may repair all ships in that system, then replace all repaired Rival ships with Loyal ships.
+*Reckoned.* In **scoring**, if you win no ambitions, return all your buildings on the map.
+  Misspelled: Salvific
+  Text: *Portwide.* When you **tax** a city, you may also tax all other cities in its system. When you **build** at a starport, you may also build at all other starports in its system. *(Even Rival ones!)*
+*Methodical.* You cannot have 2 Loyal buildings of different types on a planet.
+  Misspelled: Portwide
+  Text: *Peaceful.* When attacking in **battle**, you may ignore the result of any die if the same face appears on another die you rolled.
+*Minimalistic.* In **clean up**, discard resources until you only have 1 resource of each type.
+  Misspelled: Minimalistic
+  Text: Doppelganger
+  Misspelled: Doppelganger
+  Text: *Cataclismic.* After any **battle** with you, damage 1 Rival piece in the battle system per city you control.
+*Malevolent.* In **clean up**, destroy a city you control.
+  Misspelled: Cataclismic
+  Text: Soulbinder
+  Misspelled: Soulbinder
+  Text: *Mimetic.* **Prelude**: You may return a Captive or Trophy to Rival to use all of the non-discard abilities on a card they have this turn.
+*Identityless.* You cannot use **new** **actions** on cards you have.
+  Misspelled: Identityless
+==================================================
+File: lore.yml
+  Text: testlore
+  Misspelled: testlore
+  Text: testlore
+  Misspelled: testlore
+  Text: This is a *test* lore to validate **bold**, *italic*, and ***bolditalic*** rendering.
+Punctuation test: **Tax**, *Influence.* and ***Secure!***
+
+Also tests wrapping with a longer sentence that should span multiple lines in the body area.
+  Misspelled: bolditalic
+  Text: **When Discovered:** Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  Misspelled: Lorem, Sed, adipiscing, aliqua, amet, consectetur, dolore, eiusmod, elit, incididunt, ipsum, labore, magna, tempor
+  Text: testloreimageempty
+  Misspelled: testloreimageempty
+  Text: testloreimageempty
+  Misspelled: testloreimageempty
+  Text: testloreimage
+  Misspelled: testloreimage
+  Text: tesemptyrandom
+  Misspelled: tesemptyrandom
+  Text: testemptyrandom
+  Misspelled: testemptyrandom
+==================================================
+File: vox.yml
+  Text: testvox_icons
+  Misspelled: testvox
+  Text: testvox
+  Misspelled: testvox
+  Text: Testvox
+  Misspelled: Testvox
+  Text: Vox card test to validate the lore-style renderer.
+Rich text: *italic* **bold** ***bolditalic*** with punctuation: **Tax**, *Influence.*
+
+This line is intentionally long to verify wrapping higher on the card.
+
+  Misspelled: bolditalic
+==================================================

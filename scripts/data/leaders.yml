@@ -2062,7 +2062,7 @@
 - name: Demon
   abilities: '*Cataclismic.* After any **battle** with you, damage 1 Rival piece in the battle system per city you control.
 
-    *Malevolent.* In **clean up**, damage a city you control.'
+    *Malevolent.* In **clean up**, destroy a city you control.'
   resources:
   - Weapon
   - Material
@@ -2157,9 +2157,9 @@
 - name: Animator
   abilities: '*Framing.* After **taking an action**, you may move 1 Loyal ship.
 
-    *Static.* You cannot **battle** unless you''ve moved this turn.'
+    *Static.* You cannot **battle** in systems you haven''t moved into this turn.'
   resources:
-  - Fuel
+  - Material
   - Psionic
   setup:
     A:
