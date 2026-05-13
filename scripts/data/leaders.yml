@@ -2097,7 +2097,7 @@
   body_font_size: 18
   boundary_shift: -0.05
 - name: Vessel
-  abilities: '*Mimetic.* **Prelude**: You may return a Captive or Trophy to Rival to use all of the non-discard abilities on a card they have this turn.
+  abilities: '*Mimetic.* **Prelude**: You may return a Captive or Trophy to a Rival to use all of the non-discard abilities on all cards they have this turn.
 
     *Identityless.* You cannot use **new** **actions** on cards you have.'
   resources:
@@ -2136,7 +2136,7 @@
   body_font_size: 18
   zoom: 1.15
 - name: Comedian
-  abilities: '*Hilarious.* In any **battle** with you, if you would have no ships left in the battle system, ignore all damage to your ships and repair them instead.
+  abilities: '*Hilarious.* In any **battle** with you, If assigning all damage would destroy all your ships in the system, repair them instead.
 
     *Laughing.* You cannot **destroy** the last Rival ship in each system.'
   resources:
