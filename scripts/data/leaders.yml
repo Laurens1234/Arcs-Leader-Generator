@@ -2260,3 +2260,19 @@
 # di not cover outrage slot
 
 # last loyal piece cant be destroyed
+
+
+# Judge When defending in battle, at the start, if the attacked has any of your trophies, 
+# they must either return them or provoke outrage of the battle system's Type.
+
+# Speedster: You may use any pip to move In battle, 
+# collect 1 extra die for each move action this turn Downside: idk
+
+# Wheelbearer
+# Adaptive
+# . After defending in battle, adapt to a die type rolled by the attacker until your next defense:
+# Skirmish  the attacker collects 1 fewer battle die.
+# Assault  you automatically intercept.
+# Raid  the attacker gets 1 fewer key.
+# Sequential
+# . You cannot gain the same adaptation twice in a row.
