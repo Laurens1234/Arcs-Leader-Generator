@@ -70,7 +70,9 @@
 
 - name: Deity of Ruin
   body: '**Dismantle (Repair):** Destroy a piece in a system with a Loyal piece.
-  
+
+        {vspace:5}
+
     **Prelude:** You may discard this to destroy a Material Guild card.'
   footer_left: DC
   footer: Guild
@@ -85,7 +87,9 @@
 
 - name: Deity of Severance
   body: '**Sever (Move):** Move any ships to a system with no pieces.
-  
+
+        {vspace:5}
+
     **Prelude:** You may discard this to destroy a Fuel Guild card.'
   footer_left: DC
   footer: Guild
@@ -100,7 +104,9 @@
 
 - name: Deity of Mercy
   body: '**Spare (Build):** Return a Trophy from a Trophy box.
-  
+
+        {vspace:5}
+
     **Prelude:** You may discard this to destroy a Weapon Guild card.'
   footer_left: DC
   footer: Guild
@@ -116,6 +122,8 @@
 - name: Deity of Treachery
   body: '**Betray (Influence):** Move any number of agents on a card to another card.
   
+          {vspace:5}
+
       **Prelude:** You may discard this to destroy a Relic Guild card.'
   footer_left: DC
   footer: Guild
@@ -131,6 +139,8 @@
 - name: Deity of Division
   body: '**Incite (Tax):** If you **control** a Rival''s city, you may force them to Provoke Outrage in that city''s type, if they have no resources of that type.
   
+          {vspace:5}
+    
     **Prelude:** You may discard this to destroy a Psionic Guild card.'
   footer_left: DC
   footer: Guild
@@ -148,6 +158,8 @@
 - name: Shipwrights
   body: 'When you **play** a face-up Construction Card, gain 1 Material.
   
+          {vspace:5}
+  
     **Prelude:** You may discard this to make all your ships take 2 hits to get damaged or destroyed until the start of your next turn.'
   footer_left: DC
   footer: Guild
@@ -163,6 +175,9 @@
 - name: People's Cartel
   body: 'When **secured** and **after scoring** place resources from the supply on this card until there are 5 on here.
     When any player **taxes**, they may take the resource from here instead.
+  
+          {vspace:5}
+
     **Prelude:** you may discard this to gain any resource.' 
   footer_left: DC
   footer: Guild
@@ -178,6 +193,8 @@
  
 - name: Wayfarers
   body: 'When you **play** a face-up Mobilization Card, gain 1 Fuel.
+  
+          {vspace:5}
 
     **Prelude:** You may discard this to move all your pieces from any system to any system where there is space for the number of buildings you''re moving.'
   footer_left: DC
@@ -193,6 +210,9 @@
 
 - name: Supply Brokers
   body: 'While a supply is full, you may **spend** resources as its type, ignoring Outrage.
+  
+          {vspace:5}
+
     **Prelude:** You may discard this to give a player a resource to take 2 resources from them.'
   footer_left: DC
   footer: Guild
@@ -207,6 +227,9 @@
 
 - name: Primeval Legion
   body: 'When you play a face-up Aggression card, gain 1 weapon.
+  
+          {vspace:5}
+
     **Prelude:** You may discard this to place 3 ships and a startport at a planet with no pieces.'
   footer_left: DC
   footer: Guild
@@ -221,6 +244,8 @@
 
 - name: Berserker Clans
   body: 'In **battle**, each {icon:dice_intercept_black} you roll also counts as {icon:dice_hit_black} {icon:dice_hit_black}.
+  
+          {vspace:5}
 
     When attacking in **battle**, you may discard this to reroll any number of dice.'
   footer_left: DC
@@ -236,6 +261,9 @@
 
 - name: Ancient Armada
   body: '**Purge (Battle)**: Choose a card in the Court, for each Weapon icon you have, roll 1 skirmish dice, destroy 1 agent on that card for each {icon:dice_hit_black}.
+  
+          {vspace:5}
+
     **Prelude:** You may discard this to place any number of damaged ships in a system you control.'
   footer_left: DC
   footer: Guild
@@ -251,6 +279,8 @@
 - name: Custodian Order
   body: 'When you play a face-up Administration card, gain 1 relic
   
+          {vspace:5}
+
     **Prelude:** You may discard this to take any number of to secure any number of times.'
   footer_left: DC
   footer: Guild
@@ -305,6 +335,8 @@
 - name: Remnants
   body: '**Awaken (Build):** Place a ship or building in any system, even one without Loyal pieces.
   
+          {vspace:5}
+
     **Prelude:** You may discard this to place 3 ships and a city on an empty planet.'
   footer_left: DC
   footer: Guild
@@ -320,6 +352,8 @@
 - name: Worldseekers
   body: '**Extract (Tax):** Return a Loyal ship from a planet to gain a matching resource.
   
+          {vspace:5}
+
     **Prelude:** You may discard this to place 4 ships each in a different system.'
   footer_left: DC
   footer: Guild
@@ -335,6 +369,8 @@
 - name: Vaultmasters
   body: 'This cards holds any number of resources. Their Raid cost is {icon:dice_key_black} {icon:dice_key_black} {icon:dice_key_black} each.
   
+          {vspace:5}
+
     When you **declare an ambition**, place resource matching that ambition''s type on this card.'
   footer_left: DC
   footer: Guild

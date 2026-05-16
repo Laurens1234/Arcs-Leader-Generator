@@ -2,11 +2,11 @@
 # Add vox cards here with image_name, name, body, footer_left, footer_right, etc.
 
 
-- name: The Tolling
+- name: All Blades Rise
   title_font_size: 25
-  body: 'While this card is in the court, **after scoring**, each player discards a resource.
+  body: 'While this card is in the Court, collect 1 extra die in **battle**.
   
-    When secured: gain a resource matching the ambition box with ambition token in it.'
+    **When secured:** you may battle thrice.'
   footer_left: DC
   footer: Vox
   footer_right: '26'
@@ -19,9 +19,11 @@
 
 - name: The Call of Victory
   title_font_size: 25
-  body: 'While this card is in the court, when any player wins an ambition, they place 2 ships in a system matching that ambition or in a gate.
+  body: 'While this card is in the court, when any player **wins an ambition**, they place 2 ships in a system matching that ambition or in a gate.
   
-    When secured declare an ambition and place 3 ships in a gate.'
+          {vspace:5}
+
+    **When secured:** You may declare any ambition to place 2 ships in a matching system or gate. Discard this card.'
   footer_left: DC
   footer: Vox
   footer_right: '27'
@@ -32,11 +34,13 @@
   zoom: 1.0
   boundary_shift: 0.0
 
-- name: Promised Spoils
+- name: The Feast of Victory
   title_font_size: 25
-  body: 'While this card is in the court, when any player wins an ambition, they gain a resource matching its type. 
+  body: 'While this card is in the court, when any player **wins an ambition**, they gain a resource matching its type. 
+  
+          {vspace:5}
 
-    When secured: declare an ambition and gain a resource matching its type.'
+    ****When secured:**:** You may declare any ambition to gain a resource matching its type. Discard this card.'
   footer_left: DC
   footer: Vox
   footer_right: '28'
@@ -47,11 +51,13 @@
   zoom: 1.0
   boundary_shift: 0.0
 
-- name: The World Splinters
+- name: The Cold Takes All
   title_font_size: 25
   body: 'While this card is in the court, whenever a player destroys a piece, they discard a resource.
-    
-    When secured, each Rival player discards all their resources except 1.'
+  
+          {vspace:5}
+
+    **When secured:** Each Rival player discards all their resources. Discard this card.'
   footer_left: DC
   footer: Vox
   footer_right: '29'
@@ -62,11 +68,9 @@
   zoom: 1.0
   boundary_shift: 0.0
 
-- name: Primoridal Awakening
+- name: The World Weeps
   title_font_size: 25
-  body: 'If this card is in the Court and has no agents on it, in clean up, each player discards one of their guild cards.
-  
-    When secured, destroy a card in a Rival player area, if the Court deck is empty, shuffle all cards from the court discard pile to form a new court deck, discard this, then refill any empty slots.'
+  body: '**When secured:** gain any card in the court discard pile which type matching an ambition you''re winning. Discard this card.'
   footer_left: DC
   footer: Vox
   footer_right: '30'
@@ -77,11 +81,9 @@
   zoom: 1.0
   boundary_shift: 0.0
 
-- name: The Last Battle
+- name: Primoridal Awakening
   title_font_size: 25
-  body: 'While this card is in the court, each player collects 1 extra die in battle.
-  
-    When Secured: you may battle once in each system.'
+  body: '**When secured:** You may destroy a card in any player area, then shuffle this card into the Court deck. If the Court deck is empty, also also shuffle all cards from the Court discard pile into the Court deck, then refill any empty slots.'
   footer_left: DC
   footer: Vox
   footer_right: '31'
