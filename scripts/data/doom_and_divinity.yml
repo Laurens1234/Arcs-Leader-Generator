@@ -245,6 +245,77 @@
   zoom: 1.0
   boundary_shift: 1.0  
 
+
+
+- name: Deity of Unity
+  body: '**Prelude:** Once per turn, you may discard 1 resource to gain 1 Psionic, or to Clear Outrage of its type.'
+  footer_left: DC
+  footer: Guild
+  footer_font_size: 16
+  body_font_size: 18
+  resource: psionic
+  raid: 3
+  render_scale: 2
+  allow_upscale: true
+  zoom: 1.0
+  boundary_shift: 1.0
+
+- name: Deity of Division
+  body: '**Incite (Tax):** If you **control** a Rival''s city, you may force them to Provoke Outrage in that city''s type, if they have no resources of that type.
+  
+          {vspace:5}
+    
+    **Prelude:** You may discard this to destroy a Psionic Guild card.'
+  footer_left: DC
+  footer: Guild
+  footer_font_size: 16
+  body_font_size: 18
+  resource: psionic
+  raid: 2
+  render_scale: 2
+  allow_upscale: true
+  zoom: 1.0
+  boundary_shift: 1.0
+
+- name: Augurs
+  body: '**Prelude:** You may discard all your resources, at least 1, to declare a matching ambition.'
+  footer_left: DC
+  footer: Guild
+  footer_font_size: 16
+  body_font_size: 16
+  resource: psionic
+  raid: 2
+  render_scale: 1.5
+  allow_upscale: true
+  zoom: 1.0
+  boundary_shift: 1.0
+
+- name: Fatecallers
+  body: 'When you **declare** **an** **ambition**, if you''re not in first place for it, you don''t place the 0 marker.'
+  footer_left: DC
+  footer: Guild
+  footer_font_size: 16
+  body_font_size: 16
+  resource: psionic
+  raid: 2
+  render_scale: 1.5
+  allow_upscale: true
+  zoom: 1.0
+  boundary_shift: 1.0
+
+- name: Fateweavers
+  body: 'When attacking in **battle**, you may discard a resource to reroll any number of dice, or you may discard this to collect any number of dice.'
+  footer_left: DC
+  footer: Guild
+  footer_font_size: 16
+  body_font_size: 16
+  resource: psionic
+  raid: 2
+  render_scale: 1.5
+  allow_upscale: true
+  zoom: 1.0
+  boundary_shift: 1.0
+
 - name: Deity of Oaths
   body: 'You can **secure** any card with a Loyal agent, returning any Rival agents if you don''t have the most on it.'
   footer_left: DC
@@ -316,75 +387,6 @@
   footer_font_size: 16
   body_font_size: 16
   resource: relic
-  raid: 2
-  render_scale: 1.5
-  allow_upscale: true
-  zoom: 1.0
-  boundary_shift: 1.0
-
-- name: Deity of Unity
-  body: '**Prelude:** Once per turn, you may discard 1 resource to gain 1 Psionic, or to Clear Outrage of its type.'
-  footer_left: DC
-  footer: Guild
-  footer_font_size: 16
-  body_font_size: 18
-  resource: psionic
-  raid: 3
-  render_scale: 2
-  allow_upscale: true
-  zoom: 1.0
-  boundary_shift: 1.0
-
-- name: Deity of Division
-  body: '**Incite (Tax):** If you **control** a Rival''s city, you may force them to Provoke Outrage in that city''s type, if they have no resources of that type.
-  
-          {vspace:5}
-    
-    **Prelude:** You may discard this to destroy a Psionic Guild card.'
-  footer_left: DC
-  footer: Guild
-  footer_font_size: 16
-  body_font_size: 18
-  resource: psionic
-  raid: 2
-  render_scale: 2
-  allow_upscale: true
-  zoom: 1.0
-  boundary_shift: 1.0
-
-- name: Augurs
-  body: '**Prelude:** You may discard all your resources, at least 1, to declare a matching ambition.'
-  footer_left: DC
-  footer: Guild
-  footer_font_size: 16
-  body_font_size: 16
-  resource: psionic
-  raid: 2
-  render_scale: 1.5
-  allow_upscale: true
-  zoom: 1.0
-  boundary_shift: 1.0
-
-- name: Fatecallers
-  body: 'When you **declare** **an** **ambition**, if you''re not in first place for it, you don''t place the 0 marker.'
-  footer_left: DC
-  footer: Guild
-  footer_font_size: 16
-  body_font_size: 16
-  resource: psionic
-  raid: 2
-  render_scale: 1.5
-  allow_upscale: true
-  zoom: 1.0
-  boundary_shift: 1.0
-
-- name: Fateweavers
-  body: 'When attacking in **battle**, you may discard a resource to reroll any number of dice, or you may discard this to collect any number of dice.'
-  footer_left: DC
-  footer: Guild
-  footer_font_size: 16
-  body_font_size: 16
-  resource: psionic
   raid: 2
   render_scale: 1.5
   allow_upscale: true
