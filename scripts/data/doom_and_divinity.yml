@@ -179,7 +179,7 @@
 - name: Wayfarers
   body: 'When you **play** a face-up Mobilization Card, gain 1 Fuel.
 
-    Prelude: You may discard this to move all your pieces from any system to any system where there is space for the number of buildings you''re moving.'
+    **Prelude:** You may discard this to move all your pieces from any system to any system where there is space for the number of buildings you''re moving.'
   footer_left: DC
   footer: Guild
   footer_font_size: 16
@@ -193,7 +193,7 @@
 
 - name: Supply Brokers
   body: 'While a supply is full, you may **spend** resources as its type, ignoring Outrage.
-    Prelude: You may discard this to give a player a resource to take 2 resources from them.'
+    **Prelude:** You may discard this to give a player a resource to take 2 resources from them.'
   footer_left: DC
   footer: Guild
   footer_font_size: 16
@@ -205,9 +205,38 @@
   zoom: 1.0
   boundary_shift: 1.0
 
-- name: Valkyrie Order
+- name: Primeval Legion
   body: 'When you play a face-up Aggression card, gain 1 weapon.
-    Prelude: You may discard this to place 3 ships and a startport at a planet with no pieces.'
+    **Prelude:** You may discard this to place 3 ships and a startport at a planet with no pieces.'
+  footer_left: DC
+  footer: Guild
+  footer_font_size: 16
+  body_font_size: 16
+  resource: weapon
+  raid: 2
+  render_scale: 1.5
+  allow_upscale: true
+  zoom: 1.0
+  boundary_shift: 1.0
+
+- name: Berserker Clans
+  body: 'In **battle**, each {icon:dice_intercept_black} you roll also counts as {icon:dice_hit_black} {icon:dice_hit_black}.
+
+    When attacking in **battle**, you may discard this to reroll any number of dice.'
+  footer_left: DC
+  footer: Guild
+  footer_font_size: 16
+  body_font_size: 16
+  resource: weapon
+  raid: 2
+  render_scale: 1.5
+  allow_upscale: true
+  zoom: 1.0
+  boundary_shift: 1.0
+
+- name: Ancient Armada
+  body: '**Purge (Battle)**: Choose a card in the Court, for each Weapon icon you have, roll 1 skirmish dice, destroy 1 agent on that card for each {icon:dice_hit_black}.
+    **Prelude:** You may discard this to place any number of damaged ships in a system you control.'
   footer_left: DC
   footer: Guild
   footer_font_size: 16
@@ -222,7 +251,7 @@
 - name: Custodian Order
   body: 'When you play a face-up Administration card, gain 1 relic
   
-    Prelude: You may discard this to take any number of secure actions.'
+    **Prelude:** You may discard this to take any number of to secure any number of times.'
   footer_left: DC
   footer: Guild
   footer_font_size: 16
@@ -234,8 +263,8 @@
   zoom: 1.0
   boundary_shift: 1.0
 
-- name: Rune Priests
-  body: 'You may discard this to stop a Rival from stealing a card from you. They still spent the keys.'
+- name: Sealkeepers
+  body: 'In **battle**, you may discard this to stop a Rival from stealing a card from you. They still spend the keys.'
   footer_left: DC
   footer: Guild
   footer_font_size: 16
@@ -247,8 +276,8 @@
   zoom: 1.0
   boundary_shift: 1.0
 
-- name: Mindwright Circle
-  body: 'Prelude: You may discard all your resources, at least 1, to declare a matching ambition.'
+- name: Augurs
+  body: '**Prelude:** You may discard all your resources, at least 1, to declare a matching ambition.'
   footer_left: DC
   footer: Guild
   footer_font_size: 16
@@ -260,8 +289,8 @@
   zoom: 1.0
   boundary_shift: 1.0
 
-- name: Seer Cabal
-  body: 'When you lead and declare an ambtion, if you''re not in first or second place for it, you don''t place the 0 marker.'
+- name: Fatecallers
+  body: 'When you **declare** **an** **ambtion**, if you''re not in first place for it, you don''t place the 0 marker.'
   footer_left: DC
   footer: Guild
   footer_font_size: 16
@@ -273,10 +302,10 @@
   zoom: 1.0
   boundary_shift: 1.0
 
-- name: Reclaimers
-  body: 'Reclaim (Build) place a ship or building in any system, even one without Loyal pieces.
+- name: Remnants
+  body: '**Awaken (Build):** Place a ship or building in any system, even one without Loyal pieces.
   
-    Prelude: You may discard this to place 3 ships and a city on an empty planet.'
+    **Prelude:** You may discard this to place 3 ships and a city on an empty planet.'
   footer_left: DC
   footer: Guild
   footer_font_size: 16
@@ -288,10 +317,10 @@
   zoom: 1.0
   boundary_shift: 1.0
 
-- name: Heat Seekers
-  body: 'Converge (Tax) Return a Loyal ship from a planet to gain a matching resource.
+- name: Worldseekers
+  body: '**Extract (Tax):** Return a Loyal ship from a planet to gain a matching resource.
   
-    Prelude: You may discard this to place 4 ships each in a different system.'
+    **Prelude:** You may discard this to place 4 ships each in a different system.'
   footer_left: DC
   footer: Guild
   footer_font_size: 16
@@ -306,7 +335,7 @@
 - name: Vaultmasters
   body: 'This cards holds any number of resources. Their Raid cost is {icon:dice_key_black} {icon:dice_key_black} {icon:dice_key_black} each.
   
-    When you **declare an ambition**, place a resource of a type you don''t have on this card.'
+    When you **declare an ambition**, place resource matching that ambition''s type on this card.'
   footer_left: DC
   footer: Guild
   footer_font_size: 16
@@ -318,10 +347,8 @@
   zoom: 1.0
   boundary_shift: 1.0
 
-- name: Divine 
-  body: 'In battle, you may discard a resource to reroll any dice.
-
-    In battle, you may discard this to collect any number of dice.'
+- name: Fateweavers
+  body: 'When attacking in **battle**, you may discard a resource to reroll any number of  dice, or you may discard this to collect any number of dice.'
   footer_left: DC
   footer: Guild
   footer_font_size: 16

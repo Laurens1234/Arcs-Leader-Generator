@@ -2,10 +2,9 @@
 # Add vox cards here with image_name, name, body, footer_left, footer_right, etc.
 
 
-- image_name: doom_divinity_vox_2
-  name: Fimbulwinter
+- name: The Tolling
   title_font_size: 25
-  body: 'While this card is in the court, in clean up, each player discards a resource.
+  body: 'While this card is in the court, **after scoring**, each player discards a resource.
   
     When secured: gain a resource matching the ambition box with ambition token in it.'
   footer_left: DC
@@ -18,12 +17,11 @@
   zoom: 1.0
   boundary_shift: 0.0
 
-- image_name: doom_divinity_vox_3
-  name: The Great Forge
+- name: The Call of Victory
   title_font_size: 25
   body: 'While this card is in the court, when any player wins an ambition, they place 2 ships in a system matching that ambition or in a gate.
   
-    When secured: declare an ambition and place 3 ships in a gate.'
+    When secured declare an ambition and place 3 ships in a gate.'
   footer_left: DC
   footer: Vox
   footer_right: '27'
@@ -34,8 +32,7 @@
   zoom: 1.0
   boundary_shift: 0.0
 
-- image_name: doom_divinity_vox_4
-  name: Gjallarhorn
+- name: Promised Spoils
   title_font_size: 25
   body: 'While this card is in the court, when any player wins an ambition, they gain a resource matching its type. 
 
@@ -50,8 +47,7 @@
   zoom: 1.0
   boundary_shift: 0.0
 
-- image_name: doom_divinity_vox_5
-  name: The World Tree Splinters
+- name: The World Splinters
   title_font_size: 25
   body: 'While this card is in the court, whenever a player destroys a piece, they discard a resource.
     
@@ -66,8 +62,7 @@
   zoom: 1.0
   boundary_shift: 0.0
 
-- image_name: doom_divinity_vox_6
-  name: Surtr Awakens
+- name: Primoridal Awakening
   title_font_size: 25
   body: 'If this card is in the Court and has no agents on it, in clean up, each player discards one of their guild cards.
   
@@ -82,8 +77,7 @@
   zoom: 1.0
   boundary_shift: 0.0
 
-- image_name: doom_divinity_vox_7
-  name: The Last Battle
+- name: The Last Battle
   title_font_size: 25
   body: 'While this card is in the court, each player collects 1 extra die in battle.
   
