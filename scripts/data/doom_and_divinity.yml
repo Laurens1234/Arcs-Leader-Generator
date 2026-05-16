@@ -14,60 +14,6 @@
   zoom: 1.0
   boundary_shift: 1.0
 
-- name: Deity of Passage
-  body: 'You consider all systems to be adjecent.'
-  footer_left: DC
-  footer: Guild
-  footer_font_size: 16
-  body_font_size: 18
-  resource: fuel
-  raid: 3
-  render_scale: 2
-  allow_upscale: true
-  zoom: 1.0
-  boundary_shift: 1.0
-
-- name: Deity of Conquest
-  body: 'You can **battle** using any pip or resource.'
-  footer_left: DC
-  footer: Guild
-  footer_font_size: 16
-  body_font_size: 18
-  resource: weapon
-  raid: 3
-  render_scale: 2
-  allow_upscale: true
-  zoom: 1.0
-  boundary_shift: 1.0
-
-- name:  Deity of Oaths
-  body: 'You can **secure** any card with a Loyal agent, returning any Rival agents if you don''t have the most on it.'
-  footer_left: DC
-  footer: Guild
-  footer_font_size: 16
-  body_font_size: 18
-  resource: relic
-  raid: 3
-  render_scale: 2
-  allow_upscale: true
-  zoom: 1.0
-  boundary_shift: 1.0
-
-- name: Deity of Unity
-  body: '**Prelude:** Once per turn, you may discard 1 resource to gain 1 Psionic, or to Clear Outrage of its type.'
-  footer_left: DC
-  footer: Guild
-  footer_font_size: 16
-  body_font_size: 18
-  resource: psionic
-  raid: 3
-  render_scale: 2
-  allow_upscale: true
-  zoom: 1.0
-  boundary_shift: 1.0
-
-# ===== BANE CARDS =====
-
 - name: Deity of Ruin
   body: '**Dismantle (Repair):** Destroy a piece in a system with a Loyal piece.
 
@@ -80,6 +26,70 @@
   body_font_size: 18
   resource: material
   raid: 2
+  render_scale: 2
+  allow_upscale: true
+  zoom: 1.0
+  boundary_shift: 1.0
+
+- name: Shipwrights
+  body: 'When you **play** a face-up Construction Card, gain 1 Material.
+  
+          {vspace:5}
+  
+    **Prelude:** You may discard this to make all your ships take 2 hits to get damaged or destroyed until the start of your next turn.'
+  footer_left: DC
+  footer: Guild
+  footer_font_size: 16
+  body_font_size: 16
+  resource: material
+  raid: 2
+  render_scale: 1.5
+  allow_upscale: true
+  zoom: 1.0
+  boundary_shift: 1.0
+
+- name: Supply Brokers
+  body: 'While a supply is full, you may **spend** resources as its type, ignoring Outrage.
+  
+          {vspace:5}
+
+    **Prelude:** You may discard this to give a player a resource, then take 2 resources from them.'
+  footer_left: DC
+  footer: Guild
+  footer_font_size: 16
+  body_font_size: 16
+  resource: material
+  raid: 2
+  render_scale: 1.5
+  allow_upscale: true
+  zoom: 1.0
+  boundary_shift: 1.0
+
+- name: Remnants
+  body: '**Awaken (Build):** Place a ship or building in any system, even one without Loyal pieces.
+  
+          {vspace:5}
+
+    **Prelude:** You may discard this to place 3 ships and a city on an empty planet.'
+  footer_left: DC
+  footer: Guild
+  footer_font_size: 16
+  body_font_size: 16
+  resource: material
+  raid: 2
+  render_scale: 1.5
+  allow_upscale: true
+  zoom: 1.0
+  boundary_shift: 1.0
+
+- name: Deity of Passage
+  body: 'You consider all systems to be adjacent.'
+  footer_left: DC
+  footer: Guild
+  footer_font_size: 16
+  body_font_size: 18
+  resource: fuel
+  raid: 3
   render_scale: 2
   allow_upscale: true
   zoom: 1.0
@@ -102,79 +112,9 @@
   zoom: 1.0
   boundary_shift: 1.0
 
-- name: Deity of Mercy
-  body: '**Spare (Build):** Return a Trophy from a Trophy box.
-
-        {vspace:5}
-
-    **Prelude:** You may discard this to destroy a Weapon Guild card.'
-  footer_left: DC
-  footer: Guild
-  footer_font_size: 16
-  body_font_size: 18
-  resource: weapon
-  raid: 2
-  render_scale: 2
-  allow_upscale: true
-  zoom: 1.0
-  boundary_shift: 1.0
-
-- name: Deity of Treachery
-  body: '**Betray (Influence):** Move any number of agents on a card to another card.
-  
-          {vspace:5}
-
-      **Prelude:** You may discard this to destroy a Relic Guild card.'
-  footer_left: DC
-  footer: Guild
-  footer_font_size: 16
-  body_font_size: 18
-  resource: relic
-  raid: 2
-  render_scale: 2
-  allow_upscale: true
-  zoom: 1.0
-  boundary_shift: 1.0
-
-- name: Deity of Division
-  body: '**Incite (Tax):** If you **control** a Rival''s city, you may force them to Provoke Outrage in that city''s type, if they have no resources of that type.
-  
-          {vspace:5}
-    
-    **Prelude:** You may discard this to destroy a Psionic Guild card.'
-  footer_left: DC
-  footer: Guild
-  footer_font_size: 16
-  body_font_size: 18
-  resource: psionic
-  raid: 2
-  render_scale: 2
-  allow_upscale: true
-  zoom: 1.0
-  boundary_shift: 1.0
-
-# ===== FACTION CARDS =====
-
-- name: Shipwrights
-  body: 'When you **play** a face-up Construction Card, gain 1 Material.
-  
-          {vspace:5}
-  
-    **Prelude:** You may discard this to make all your ships take 2 hits to get damaged or destroyed until the start of your next turn.'
-  footer_left: DC
-  footer: Guild
-  footer_font_size: 16
-  body_font_size: 16
-  resource: material
-  raid: 2
-  render_scale: 1.5
-  allow_upscale: true
-  zoom: 1.0
-  boundary_shift: 1.0
-
 - name: People's Cartel
-  body: 'When **secured** and **after scoring** place resources from the supply on this card until there are 5 on here.
-    When any player **taxes**, they may take the resource from here instead.
+  body: 'When **secured** and **after scoring**, place resources from the supply on this card until there are 5 on it.
+    When any player **taxes**, they may take a resource from here instead.
   
           {vspace:5}
 
@@ -190,7 +130,6 @@
   zoom: 1.0
   boundary_shift: 1.0
 
- 
 - name: Wayfarers
   body: 'When you **play** a face-up Mobilization Card, gain 1 Fuel.
   
@@ -208,19 +147,49 @@
   zoom: 1.0
   boundary_shift: 1.0
 
-- name: Supply Brokers
-  body: 'While a supply is full, you may **spend** resources as its type, ignoring Outrage.
+- name: Worldseekers
+  body: '**Extract (Tax):** Return a Loyal ship from a planet to gain a matching resource.
   
           {vspace:5}
 
-    **Prelude:** You may discard this to give a player a resource to take 2 resources from them.'
+    **Prelude:** You may discard this to place 4 ships each in a different system.'
   footer_left: DC
   footer: Guild
   footer_font_size: 16
   body_font_size: 16
-  resource: material
+  resource: fuel
   raid: 2
   render_scale: 1.5
+  allow_upscale: true
+  zoom: 1.0
+  boundary_shift: 1.0
+
+- name: Deity of Conquest
+  body: 'You can **battle** using any pip or resource.'
+  footer_left: DC
+  footer: Guild
+  footer_font_size: 16
+  body_font_size: 18
+  resource: weapon
+  raid: 3
+  render_scale: 2
+  allow_upscale: true
+  zoom: 1.0
+  boundary_shift: 1.0
+
+- name: Deity of Mercy
+  body: '**Spare (Build):** Return a Trophy from a Trophy box.
+
+        {vspace:5}
+
+    **Prelude:** You may discard this to destroy a Weapon Guild card.'
+  footer_left: DC
+  footer: Guild
+  footer_font_size: 16
+  body_font_size: 18
+  resource: weapon
+  raid: 2
+  render_scale: 2
   allow_upscale: true
   zoom: 1.0
   boundary_shift: 1.0
@@ -230,7 +199,7 @@
   
           {vspace:5}
 
-    **Prelude:** You may discard this to place 3 ships and a startport at a planet with no pieces.'
+    **Prelude:** You may discard this to place 3 ships and a starport at a planet with no pieces.'
   footer_left: DC
   footer: Guild
   footer_font_size: 16
@@ -260,7 +229,7 @@
   boundary_shift: 1.0
 
 - name: Ancient Armada
-  body: '**Purge (Battle)**: Choose a card in the Court, for each Weapon icon you have, roll 1 skirmish dice, destroy 1 agent on that card for each {icon:dice_hit_black}.
+  body: '**Purge (Battle):** Choose a card in the Court. For each Weapon icon you have, roll 1 skirmish die. Destroy 1 agent on that card for each {icon:dice_hit_black}.
   
           {vspace:5}
 
@@ -274,14 +243,44 @@
   render_scale: 1.5
   allow_upscale: true
   zoom: 1.0
+  boundary_shift: 1.0  
+
+- name: Deity of Oaths
+  body: 'You can **secure** any card with a Loyal agent, returning any Rival agents if you don''t have the most on it.'
+  footer_left: DC
+  footer: Guild
+  footer_font_size: 16
+  body_font_size: 18
+  resource: relic
+  raid: 3
+  render_scale: 2
+  allow_upscale: true
+  zoom: 1.0
   boundary_shift: 1.0
 
-- name: Custodian Order
-  body: 'When you play a face-up Administration card, gain 1 relic
+- name: Deity of Treachery
+  body: '**Betray (Influence):** Move any number of agents on a card to another card.
   
           {vspace:5}
 
-    **Prelude:** You may discard this to take any number of to secure any number of times.'
+      **Prelude:** You may discard this to destroy a Relic Guild card.'
+  footer_left: DC
+  footer: Guild
+  footer_font_size: 16
+  body_font_size: 18
+  resource: relic
+  raid: 2
+  render_scale: 2
+  allow_upscale: true
+  zoom: 1.0
+  boundary_shift: 1.0
+
+- name: Custodian Order
+  body: 'When you play a face-up Administration card, gain 1 relic.
+  
+          {vspace:5}
+
+    **Prelude:** You may discard this to secure any number of times.'
   footer_left: DC
   footer: Guild
   footer_font_size: 16
@@ -306,6 +305,53 @@
   zoom: 1.0
   boundary_shift: 1.0
 
+- name: Vaultmasters
+  body: 'This card holds any number of resources. Their Raid cost is {icon:dice_key_black} {icon:dice_key_black} {icon:dice_key_black} each.
+  
+          {vspace:5}
+
+    When you **declare an ambition**, place a resource matching that ambition''s type on this card.'
+  footer_left: DC
+  footer: Guild
+  footer_font_size: 16
+  body_font_size: 16
+  resource: relic
+  raid: 2
+  render_scale: 1.5
+  allow_upscale: true
+  zoom: 1.0
+  boundary_shift: 1.0
+
+- name: Deity of Unity
+  body: '**Prelude:** Once per turn, you may discard 1 resource to gain 1 Psionic, or to Clear Outrage of its type.'
+  footer_left: DC
+  footer: Guild
+  footer_font_size: 16
+  body_font_size: 18
+  resource: psionic
+  raid: 3
+  render_scale: 2
+  allow_upscale: true
+  zoom: 1.0
+  boundary_shift: 1.0
+
+- name: Deity of Division
+  body: '**Incite (Tax):** If you **control** a Rival''s city, you may force them to Provoke Outrage in that city''s type, if they have no resources of that type.
+  
+          {vspace:5}
+    
+    **Prelude:** You may discard this to destroy a Psionic Guild card.'
+  footer_left: DC
+  footer: Guild
+  footer_font_size: 16
+  body_font_size: 18
+  resource: psionic
+  raid: 2
+  render_scale: 2
+  allow_upscale: true
+  zoom: 1.0
+  boundary_shift: 1.0
+
 - name: Augurs
   body: '**Prelude:** You may discard all your resources, at least 1, to declare a matching ambition.'
   footer_left: DC
@@ -320,7 +366,7 @@
   boundary_shift: 1.0
 
 - name: Fatecallers
-  body: 'When you **declare** **an** **ambtion**, if you''re not in first place for it, you don''t place the 0 marker.'
+  body: 'When you **declare** **an** **ambition**, if you''re not in first place for it, you don''t place the 0 marker.'
   footer_left: DC
   footer: Guild
   footer_font_size: 16
@@ -332,59 +378,8 @@
   zoom: 1.0
   boundary_shift: 1.0
 
-- name: Remnants
-  body: '**Awaken (Build):** Place a ship or building in any system, even one without Loyal pieces.
-  
-          {vspace:5}
-
-    **Prelude:** You may discard this to place 3 ships and a city on an empty planet.'
-  footer_left: DC
-  footer: Guild
-  footer_font_size: 16
-  body_font_size: 16
-  resource: material
-  raid: 2
-  render_scale: 1.5
-  allow_upscale: true
-  zoom: 1.0
-  boundary_shift: 1.0
-
-- name: Worldseekers
-  body: '**Extract (Tax):** Return a Loyal ship from a planet to gain a matching resource.
-  
-          {vspace:5}
-
-    **Prelude:** You may discard this to place 4 ships each in a different system.'
-  footer_left: DC
-  footer: Guild
-  footer_font_size: 16
-  body_font_size: 16
-  resource: fuel
-  raid: 2
-  render_scale: 1.5
-  allow_upscale: true
-  zoom: 1.0
-  boundary_shift: 1.0
-
-- name: Vaultmasters
-  body: 'This cards holds any number of resources. Their Raid cost is {icon:dice_key_black} {icon:dice_key_black} {icon:dice_key_black} each.
-  
-          {vspace:5}
-
-    When you **declare an ambition**, place resource matching that ambition''s type on this card.'
-  footer_left: DC
-  footer: Guild
-  footer_font_size: 16
-  body_font_size: 16
-  resource: relic
-  raid: 2
-  render_scale: 1.5
-  allow_upscale: true
-  zoom: 1.0
-  boundary_shift: 1.0
-
 - name: Fateweavers
-  body: 'When attacking in **battle**, you may discard a resource to reroll any number of  dice, or you may discard this to collect any number of dice.'
+  body: 'When attacking in **battle**, you may discard a resource to reroll any number of dice, or you may discard this to collect any number of dice.'
   footer_left: DC
   footer: Guild
   footer_font_size: 16
