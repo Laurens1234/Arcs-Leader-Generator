@@ -1,8 +1,7 @@
 ﻿# Doom & Divinity Deck - Guild Cards
 
 # ===== DEITY CARDS =====
-- image_name: material_deity
-  name: Deity of Foundation
+- name: Deity of Foundation
   body: 'After you **build** or **repair**, you may build or repair.'
   footer_left: DC
   footer: Guild
@@ -15,9 +14,8 @@
   zoom: 1.0
   boundary_shift: 1.0
 
-- image_name: fuel_deity
-  name: Deity of Passage
-  body: 'You consider all system''s to be adjecent.'
+- name: Deity of Passage
+  body: 'You consider all systems to be adjecent.'
   footer_left: DC
   footer: Guild
   footer_font_size: 16
@@ -29,8 +27,7 @@
   zoom: 1.0
   boundary_shift: 1.0
 
-- image_name: weapon_deity
-  name: Deity of Conquest
+- name: Deity of Conquest
   body: 'You can **battle** using any pip or resource.'
   footer_left: DC
   footer: Guild
@@ -43,8 +40,7 @@
   zoom: 1.0
   boundary_shift: 1.0
 
-- image_name: relic_deity
-  name:  Deity of Oaths
+- name:  Deity of Oaths
   body: 'You can **secure** any card with a Loyal agent, returning any Rival agents if you don''t have the most on it.'
   footer_left: DC
   footer: Guild
@@ -57,9 +53,8 @@
   zoom: 1.0
   boundary_shift: 1.0
 
-- image_name: psionic_deity
-  name: Deity of Unity
-  body: '**Prelude:** Once per turn, you may discard a resource to gain a psionic, or to clear Outrage of its type.'
+- name: Deity of Unity
+  body: '**Prelude:** Once per turn, you may discard 1 resource to gain 1 Psionic, or to Clear Outrage of its type.'
   footer_left: DC
   footer: Guild
   footer_font_size: 16
@@ -73,9 +68,8 @@
 
 # ===== BANE CARDS =====
 
-- image_name: bane_material
-  name: Deity of Ruin
-  body: '**Dismantle (Repair):** Destroy a piece in a system with a loyal piece.
+- name: Deity of Ruin
+  body: '**Dismantle (Repair):** Destroy a piece in a system with a Loyal piece.
   
     **Prelude:** You may discard this to destroy a Material Guild card.'
   footer_left: DC
@@ -83,14 +77,13 @@
   footer_font_size: 16
   body_font_size: 18
   resource: material
-  raid: 3
+  raid: 2
   render_scale: 2
   allow_upscale: true
   zoom: 1.0
   boundary_shift: 1.0
 
-- image_name: bane_fuel
-  name: Deity of Severance
+- name: Deity of Severance
   body: '**Sever (Move):** Move any ships to a system with no pieces.
   
     **Prelude:** You may discard this to destroy a Fuel Guild card.'
@@ -99,14 +92,13 @@
   footer_font_size: 16
   body_font_size: 18
   resource: fuel
-  raid: 3
+  raid: 2
   render_scale: 2
   allow_upscale: true
   zoom: 1.0
   boundary_shift: 1.0
 
-- image_name: bane_weapon
-  name: Deity of Mercy
+- name: Deity of Mercy
   body: '**Spare (Build):** Return a Trophy from a Trophy box.
   
     **Prelude:** You may discard this to destroy a Weapon Guild card.'
@@ -115,15 +107,14 @@
   footer_font_size: 16
   body_font_size: 18
   resource: weapon
-  raid: 3
+  raid: 2
   render_scale: 2
   allow_upscale: true
   zoom: 1.0
   boundary_shift: 1.0
 
-- image_name: bane_relic
-  name: Deity of Treachery
-  body: '**Betray (Influence):** Move all agents on a card to another card**
+- name: Deity of Treachery
+  body: '**Betray (Influence):** Move any number of agents on a card to another card.
   
       **Prelude:** You may discard this to destroy a Relic Guild card.'
   footer_left: DC
@@ -131,15 +122,14 @@
   footer_font_size: 16
   body_font_size: 18
   resource: relic
-  raid: 3
+  raid: 2
   render_scale: 2
   allow_upscale: true
   zoom: 1.0
   boundary_shift: 1.0
 
-- image_name: bane_psionic
-  name: Deity of Division
-  body: '**Incite (Tax):** If you control a Rival''s city you may force them to provoke Outrage of that city''s type if they have no resources of that cities type.
+- name: Deity of Division
+  body: '**Incite (Tax):** If you **control** a Rival''s city, you may force them to Provoke Outrage in that city''s type, if they have no resources of that type.
   
     **Prelude:** You may discard this to destroy a Psionic Guild card.'
   footer_left: DC
@@ -147,7 +137,7 @@
   footer_font_size: 16
   body_font_size: 18
   resource: psionic
-  raid: 3
+  raid: 2
   render_scale: 2
   allow_upscale: true
   zoom: 1.0
@@ -155,11 +145,10 @@
 
 # ===== FACTION CARDS =====
 
-- image_name: faction_dwarven_smiths
-  name: Smiths
-  body: 'When you play a face-up Construction Card, gain 1 Material.
+- name: Shipwrights
+  body: 'When you **play** a face-up Construction Card, gain 1 Material.
   
-    Prelude: You may discard this to make all your ships take 2 hits to get damage or destroy until your next turn. '
+    **Prelude:** You may discard this to make all your ships take 2 hits to get damaged or destroyed until the start of your next turn.'
   footer_left: DC
   footer: Guild
   footer_font_size: 16
@@ -171,11 +160,10 @@
   zoom: 1.0
   boundary_shift: 1.0
 
-- image_name: faction_forgewrights
-  name: Forgewrights
-  body: 'When secured & at the start of each chapter: place resources from the supply on the card until there are 5 on here.
-    When any player taxes, they may take the resource from here instead.
-    Prelude: you may discard this to gain any resource.' 
+- name: People's Cartel
+  body: 'When **secured** and **after scoring** place resources from the supply on this card until there are 5 on here.
+    When any player **taxes**, they may take the resource from here instead.
+    **Prelude:** you may discard this to gain any resource.' 
   footer_left: DC
   footer: Guild
   footer_font_size: 16
@@ -188,11 +176,10 @@
   boundary_shift: 1.0
 
  
-- image_name: faction_seafaring_clans
-  name: Seafaring Clans
-  body: 'When you play a face-up Mobilization Card, gain 1 Fuel.
+- name: Wayfarers
+  body: 'When you **play** a face-up Mobilization Card, gain 1 Fuel.
 
-    Prelude: you may discard this to move all your pieces from any system to any system where there is space for the number of buildings you''re moving.'
+    Prelude: You may discard this to move all your pieces from any system to any system where there is space for the number of buildings you''re moving.'
   footer_left: DC
   footer: Guild
   footer_font_size: 16
@@ -204,10 +191,9 @@
   zoom: 1.0
   boundary_shift: 1.0
 
-- image_name: faction_merchant_guild
-  name: Merchant Guild
-  body: 'While a supply is full, you may spend resources as that resource type.
-    Prelude: you may discard this to give a player a resource, then take 2 other resources from them.'
+- name: Supply Brokers
+  body: 'While a supply is full, you may **spend** resources as its type, ignoring Outrage.
+    Prelude: You may discard this to give a player a resource to take 2 resources from them.'
   footer_left: DC
   footer: Guild
   footer_font_size: 16
@@ -219,10 +205,9 @@
   zoom: 1.0
   boundary_shift: 1.0
 
-- image_name: faction_valkyrie_order
-  name: Valkyrie Order
+- name: Valkyrie Order
   body: 'When you play a face-up Aggression card, gain 1 weapon.
-    Prelude: you may discard this to place 3 ships and a startport at a planet with no pieces.'
+    Prelude: You may discard this to place 3 ships and a startport at a planet with no pieces.'
   footer_left: DC
   footer: Guild
   footer_font_size: 16
@@ -234,8 +219,7 @@
   zoom: 1.0
   boundary_shift: 1.0
 
-- image_name: faction_custodian_order
-  name: Custodian Order
+- name: Custodian Order
   body: 'When you play a face-up Administration card, gain 1 relic
   
     Prelude: You may discard this to take any number of secure actions.'
@@ -250,8 +234,7 @@
   zoom: 1.0
   boundary_shift: 1.0
 
-- image_name: faction_rune_priests
-  name: Rune Priests
+- name: Rune Priests
   body: 'You may discard this to stop a Rival from stealing a card from you. They still spent the keys.'
   footer_left: DC
   footer: Guild
@@ -264,9 +247,8 @@
   zoom: 1.0
   boundary_shift: 1.0
 
-- image_name: faction_mindwright_circle
-  name: Mindwright Circle
-  body: 'Prelude: you may discard all your resources, at least 1, to declare a matching ambition.'
+- name: Mindwright Circle
+  body: 'Prelude: You may discard all your resources, at least 1, to declare a matching ambition.'
   footer_left: DC
   footer: Guild
   footer_font_size: 16
@@ -278,8 +260,7 @@
   zoom: 1.0
   boundary_shift: 1.0
 
-- image_name: faction_seer_cabal
-  name: Seer Cabal
+- name: Seer Cabal
   body: 'When you lead and declare an ambtion, if you''re not in first or second place for it, you don''t place the 0 marker.'
   footer_left: DC
   footer: Guild
@@ -292,9 +273,8 @@
   zoom: 1.0
   boundary_shift: 1.0
 
-- image_name: faction_reclaimers
-  name: Reclaimers
-  body: 'Reclaim (Build) place a ship or building in any system, even one without loyal pieces.
+- name: Reclaimers
+  body: 'Reclaim (Build) place a ship or building in any system, even one without Loyal pieces.
   
     Prelude: You may discard this to place 3 ships and a city on an empty planet.'
   footer_left: DC
@@ -308,9 +288,8 @@
   zoom: 1.0
   boundary_shift: 1.0
 
-- image_name: faction_heat_seekers
-  name: Heat Seekers
-  body: 'Converge (Tax) Return a loyal ship from a planet to gain a matching resource.
+- name: Heat Seekers
+  body: 'Converge (Tax) Return a Loyal ship from a planet to gain a matching resource.
   
     Prelude: You may discard this to place 4 ships each in a different system.'
   footer_left: DC
@@ -324,8 +303,7 @@
   zoom: 1.0
   boundary_shift: 1.0
 
-- image_name: faction_vaultmasters
-  name: Vaultmasters
+- name: Vaultmasters
   body: 'This cards holds any number of resources. Their Raid cost is {icon:dice_key_black} {icon:dice_key_black} {icon:dice_key_black} each.
   
     When you **declare an ambition**, place a resource of a type you don''t have on this card.'
@@ -340,8 +318,7 @@
   zoom: 1.0
   boundary_shift: 1.0
 
-- image_name: faction_divine
-  name: Divine 
+- name: Divine 
   body: 'In battle, you may discard a resource to reroll any dice.
 
     In battle, you may discard this to collect any number of dice.'
