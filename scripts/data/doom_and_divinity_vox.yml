@@ -8,7 +8,7 @@
   body: 'While this card is in the court, in clean up, each player discards a resource.
   
     When secured: gain a resource matching the ambition box with ambition token in it.'
-  footer_left: V
+  footer_left: DC
   footer: Vox
   footer_right: '26'
   footer_font_size: 16
@@ -24,7 +24,7 @@
   body: 'While this card is in the court, when any player wins an ambition, they place 2 ships in a system matching that ambition or in a gate.
   
     When secured: declare an ambition and place 3 ships in a gate.'
-  footer_left: V
+  footer_left: DC
   footer: Vox
   footer_right: '27'
   footer_font_size: 16
@@ -40,7 +40,7 @@
   body: 'While this card is in the court, when any player wins an ambition, they gain a resource matching its type. 
 
     When secured: declare an ambition and gain a resource matching its type.'
-  footer_left: V
+  footer_left: DC
   footer: Vox
   footer_right: '28'
   footer_font_size: 16
@@ -56,7 +56,7 @@
   body: 'While this card is in the court, whenever a player destroys a piece, they discard a resource.
     
     When secured, each Rival player discards all their resources except 1.'
-  footer_left: V
+  footer_left: DC
   footer: Vox
   footer_right: '29'
   footer_font_size: 16
@@ -72,7 +72,7 @@
   body: 'If this card is in the Court and has no agents on it, in clean up, each player discards one of their guild cards.
   
     When secured, destroy a card in a Rival player area, if the Court deck is empty, shuffle all cards from the court discard pile to form a new court deck, discard this, then refill any empty slots.'
-  footer_left: V
+  footer_left: DC
   footer: Vox
   footer_right: '30'
   footer_font_size: 16
@@ -88,7 +88,7 @@
   body: 'While this card is in the court, each player collects 1 extra die in battle.
   
     When Secured: you may battle once in each system.'
-  footer_left: V
+  footer_left: DC
   footer: Vox
   footer_right: '31'
   footer_font_size: 16
