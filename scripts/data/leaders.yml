@@ -65,7 +65,7 @@
   abilities: '*Entitled.* At the **end of your turn**, influence a card where you
     are tied with another player.
 
-    *Rigid.* You cannot Pivot to **influence** .'
+    *Rigid.* You cannot Pivot to **influence**.'
   resources:
   - Relic
   - Material
@@ -125,7 +125,7 @@
     may place a matching fresh piece there.
 
     *Gravebound.* In **setup**, damage both of your buildings. You cannot **build**
-    fresh pieces, place them damaged instead.'
+    fresh pieces; place them damaged instead.'
   resources:
   - Psionic
   - Weapon
@@ -209,7 +209,7 @@
   abilities: '*Prescient.* After you discard a Guild card with its **Prelude** action,
     you may take an action on the **Lead** **card**.
 
-    *Narrow-minded.* You **cannot** discard a Guild card with it''s **Prelude** action
+    *Narrow-minded.* You **cannot** discard a Guild card with its **Prelude** action
     unless you''re Leading or Surpassing.'
   resources:
   - Psionic
@@ -322,7 +322,7 @@
   boundary_shift: 0.33
 - name: Ghost
   abilities: '*Manifested.* Once per turn, when you Catapult **move**, your ships
-    may move through one Rival controlled gate. If you do, you may influence.
+    may move through one Rival-controlled gate. If you do, you may influence.
 
     *Directionless.* You can use at most one **move** action each turn.'
   resources:
@@ -343,7 +343,7 @@
   boundary_shift: 0.1
 - name: Chosen
   abilities: '*Hallowed.* After you **move** a single ship, you may battle with only
-    it. The die it rolls has its result count thrice.
+    it. The die it rolls counts its result three times.
 
     *Forsaken.* If you have not attacked this chapter, you cannot **declare** **an**
     **ambition**.'
@@ -486,7 +486,7 @@
   abilities: '*Inquisitive.* When you **tax**, gain the resource twice if the matching
     ambition is declared *(Weapon matches Warlord.)*
 
-    *Absent-minded:.* After **scoring**, discard one resource matching an undeclared ambition.'
+    *Absent-minded.* After **scoring**, discard one resource matching an undeclared ambition.'
   resources:
   - Material
   - Relic
@@ -705,7 +705,7 @@
   abilities: '*Ironclad.* After **any** **battle**, you may discard a resource to
     keep all Loyal destroyed ships from that battle damaged instead.
 
-    *Cold.* In **clean** **up**, destroy all your damaged ships.'
+    *Cold.* In **clean up**, destroy all your damaged ships.'
   resources:
   - Material
   - Weapon
@@ -765,7 +765,7 @@
 - name: Terraformer
   abilities: '*Genesiacal.* **At** **the** **start** **of** **each** **chapter**,
     place a resource from the fullest supply on a planet you control to
-    change its type. Also do this to a planet after you destroy a city on it.
+    change its type. Also do this after you destroy a city on a planet.
 
     *Codependent.* When you **tax**, you only gain resources from planets with altered types.'
   resources:
@@ -783,7 +783,7 @@
       building: None
   body_font_size: 18
 - name: Trickster
-  abilities: '*Misdirecting.* When you **declare an** **ambition**, draw up to 2 cards
+  abilities: '*Misdirecting.* When you **declare** **an** **ambition**, draw up to 2 cards
     from the bottom of the action card deck, then discard as many.
 
     *Revealed.* When you Copy or play an extra card, place it face-up.'
@@ -868,7 +868,7 @@
 - name: Hustler
   abilities: '*Devious.* When you **declare** **an** **ambition**, you may Provoke
     Outrage in a non-Outraged type to clear Outrage in a different type.
-    Then, take and spend 1 resource from the cleared type’s supply.
+    Then, take and spend 1 resource from the cleared type''s supply.
 
     *Irate.* In **setup**, Provoke Outrage in any type.'
   resources:
@@ -1010,7 +1010,7 @@
   body_font_size: 18
 - name: Prophet
   abilities: '*Revelatory.* When you **declare** **an** **ambition**, you may secure
-    a Guild card in the Court discard pile which type matches the declared ambition.
+    a Guild card in the Court discard pile whose type matches the declared ambition.
 
     *Fatalistic.* You cannot **seize the initiative**.'
   resources:
@@ -1253,7 +1253,7 @@
   abilities: '*Lethal.* After you **influence**, if you have the most agents on the
     card, you destroy one Rival agent on it.
 
-    *Bloodthirsty.* If you have a Loyal agent on a card with a Rival agent, you can only influence those cards.'
+    *Bloodthirsty.* If you have a Loyal agent on a card with a Rival agent, you can only influence cards with Rival agents.'
   resources:
   - Weapon
   - Psionic
@@ -1431,7 +1431,7 @@
   abilities: '*Predatory.* **Prelude:** You may return 3 Trophies/Captives
     of a Rival to steal one of their resources.
 
-    *Amateurish.* In **scoring**, when you **get second place**, you may return a Trophy or Captive. If you don’t, gain no Power.'
+    *Amateurish.* In **scoring**, when you **get second place**, you may return a Trophy or Captive. If you don''t, gain no Power.'
   resources:
   - Psionic
   - Weapon
@@ -1540,7 +1540,7 @@
       building: None
   body_font_size: 18
 - name: Wayfinder
-  abilities: '*Bridging.* You treat systems with a building of the same color as adjecent.
+  abilities: '*Bridging.* You treat systems with a building of the same color as adjacent.
 
     *Anchored.* When you Catapult **move**, stop after 2 moves.'
   resources:
@@ -1619,7 +1619,7 @@
 - name: Schemer
   abilities: '*Manipulative.* After you **influence**, you may move any agent on a card to a card with no agents.
 
-    *Compromised.* In **clean** **up**, return a Loyal agent on a card.'
+    *Compromised.* In **clean up**, return a Loyal agent on a card.'
   resources:
   - Psionic
   - Fuel
@@ -1658,7 +1658,7 @@
   abilities: '*Alluring.* When you Copy or Pivot to **influence** a card with a Rival
     agent on it, you may replace one of their ships with a Loyal one.
 
-    *Resisted.* If you only have 1 ship in a gate, it doesn''t count for control.'
+    *Resisted.* If you have exactly 1 ship in a gate, it doesn''t count for control.'
   resources:
   - Psionic
   - Fuel
@@ -1676,7 +1676,7 @@
   zoom: 1.15
 - name: Creator
   abilities: '*Cosmic.* When you **build**, you may instead take a ship from a Rival''s
-    supply and place it fresh at one of their starports, if you do, gain a resource matching
+    supply and place it fresh at one of their starports. If you do, gain a resource matching
     that system.
 
     *Detached.* In **clean up**, return all your Trophies, even if Warlord was
@@ -1698,7 +1698,7 @@
   zoom: 1.15
   boundary_shift: 0.0
 - name: Messiah
-  abilities: '*Salvific.* When you **build** a city in a system with any damaged ships,
+  abilities: '*Salvific.* When you **build** a city in a system with damaged ships,
     you may repair all ships in that system, then replace all repaired Rival ships
     with Loyal ships.
 
@@ -1722,7 +1722,7 @@
   abilities: '*Frenzied.* When you **play a card** face up, you may discard an action card to
     take twice as many actions with your played card.
 
-    *Possessed.* When you **play a card** face up, reveal a card from your hand.'
+    *Possessed.* When you **declare** **an** **ambition** or use *Frenzied*, reveal your entire hand.'
   resources:
   - Psionic
   - Weapon
@@ -1740,7 +1740,7 @@
   zoom: 1.15
 - name: Crusader
   abilities: '*Zealous.* In **battle**, after you destroy a city, secure any
-    card with no or only Loyal agents on it matching that city''s type.
+    card matching that city''s type with no agents or only Loyal agents on it.
 
     *Dogmatic.* You cannot **influence** a card with no agents on it if a Rival can
     secure a card with any of your agents on it.'
@@ -1826,7 +1826,7 @@
   body_font_size: 18
 - name: Envoy
   abilities: '*Parleyed.* When defending in **battle**, at the start, you may discard
-    a resource, if you do, the attacker can only collect Skirmish dice.
+    a resource. If you do, the attacker can only collect Skirmish dice.
 
     *Unwary.* When defending in **battle**, if the attacker rolled any {icon:dice_key_black},
     they gain 1 extra {icon:dice_key_black}.'
@@ -1963,8 +1963,10 @@
   body_font_size: 18
 
 - name: Marauder
-  abilities: '*Predatory.* When attacking in **battle**, if you roll only Raid dice, you may swap the
-    amounts of {icon:dice_self_hit_black}, {icon:dice_building_hit_black}, {icon:dice_key_black} and {icon:dice_intercept_black}. *(You* *may* *swap* *all* *4.)*
+  abilities: '*Predatory.* When attacking in **battle**, if you roll only Raid dice,
+    you may swap the amounts of {icon:dice_self_hit_black}, {icon:dice_building_hit_black},
+    {icon:dice_key_black} and {icon:dice_intercept_black}. *(You* *may* *swap* *all*
+    *4.)*
 
     *Forbearing.* In **battle**, you cannot collect Raid dice if there are any fresh defending ships.'
   resources:
@@ -2042,9 +2044,12 @@
   body_font_size: 18
 
 - name: Bulwark
-  abilities: '*Immortal.* **Prelude:** You may discard a resource onto here, then roll 6-"resources on here" (≥1) Skirmish dice. If all {icon:dice_hit_black}, gain all resources here. Until your next turn: your ships instantly repair if damaged, your pips let you battle, and you can spend resources as any type.
+  abilities: '*Immortal.* **Prelude:** You may discard a resource onto here, 
+    then roll 6-"resources on here" (≥1) Skirmish dice. If all {icon:dice_hit_black}, 
+    gain all resources here. Until your next turn: your ships instantly repair if damaged, 
+    your pips let you battle, and you can spend resources as any type.
 
-    *Confident.* You cannot **spend** resources for their for normal Prelude actions.'
+    *Confident.* You cannot **spend** resources for normal Prelude actions.'
   resources:
   - Psionic
   - Weapon
@@ -2060,7 +2065,7 @@
       building: None
   body_font_size: 18
 - name: Demon
-  abilities: '*Cataclismic.* After any **battle** with you, damage 1 Rival piece in the battle system per city you control.
+  abilities: '*Cataclysmic.* After any **battle** with you, damage 1 Rival piece in the battle system per city you control.
 
     *Malevolent.* In **clean up**, destroy a city you control.'
   resources:
@@ -2077,7 +2082,7 @@
       ships: 3
       building: None
   body_font_size: 18
-- name: Soulbinder 
+- name: Soulbinder
   abilities: '*Syncopated.* Before or after attacking in **battle**, you may swap the positions of any two ships on the map.
 
     *Fragmented.* When attacking in **battle**, you collect 1 less die if you don''t control the battle system.'
@@ -2097,7 +2102,7 @@
   body_font_size: 18
   boundary_shift: -0.05
 - name: Vessel
-  abilities: '*Mimetic.* **Prelude**: You may return a Captive or Trophy to a Rival to use all of the non-discard abilities on all cards they have this turn.
+  abilities: '*Mimetic.* **Prelude:** You may return a Captive or Trophy to a Rival to use all of the non-discard abilities on all cards they have this turn.
 
     *Identityless.* You cannot use **new** **actions** on cards you have.'
   resources:
@@ -2136,9 +2141,9 @@
   body_font_size: 18
   zoom: 1.15
 - name: Comedian
-  abilities: '*Hilarious.* In any **battle** with you, If assigning all damage would destroy all your ships in the system, repair them instead.
+  abilities: '*Hilarious.* In any **battle** with you, if assigning all damage would destroy all your ships in the system, repair them instead.
 
-    *Laughing.* You cannot **destroy** the last Rival ship in each system.'
+    *Laughing.* In any **battle** with you, you cannot **destroy** the last Rival ship in each system.'
   resources:
   - Psionic
   - Fuel
@@ -2174,7 +2179,7 @@
   body_font_size: 18
 
 - name: Merchant
-  abilities: '*Mercantile.* When you **declare** **an** **ambition**, you may swap any card you have (except this one) with one in the court.
+  abilities: '*Mercantile.* When you **declare** **an** **ambition**, you may swap any card you have (except this one) with one in the court. (Agents on the taken card get put on the swapped card.)
 
     *Dependent.* You cannot **declare** **an** **ambition**, unless you have at least 1 of the thing it is counting.'
   resources:
@@ -2210,7 +2215,7 @@
 
 # {
 #     "name": "Setmaker",
-#     "abilities": (  
+#     "abilities": (
 #         "*Jackpot.* When you roll only skirmish dice, if all of them hit gain the reward of the amount you rolled and all lower ones:\n"
 #         "1: damage a defending ship (1/2)\n"
 #         "2: gain a resource matching the system (1/4)\n"
@@ -2218,7 +2223,7 @@
 #         "4: (1/16)\n"
 #         "5: all dice hit and roll again (1/32)\n"
 #         "6: Destroy all defending ships\n"
-#         "Any amount of times in **battle**, you may damage and attacking ship to reroll a dice, then increase its cost by 1 this battle.\n"
+#         "Any number of times in **battle**, you may damage an attacking ship to reroll a die, then increase its cost by 1 this battle.\n"
 #         "You can only collect Skirmish dice.\n"
 #         "At the end of each **battle**, deal self hits equal to the amount of dice that missed.\n"
 #         ),
@@ -2231,41 +2236,41 @@
 #     "body_font_size": 12.7
 # },
 
-# when you declare and ambiont, you may discard all your resources and return a loyal city from the map, to gain 2 resources matching that city.
+# when you declare an ambition, you may discard all your resources and return a loyal city from the map, to gain 2 resources matching that city.
 
 #when you discard cards due to outrage, discard other cards (resources?)
 
 # when you tax a rival city take a ship instead
 
-# when yu tax a rival city take an sgent from the court
+# when you tax a rival city take an agent from the court
 
 # secure on ties (auto?)
 
-# attacing guilds of lore to court
+# attaching guilds or lore to court
 
-# build 3 dmaged ships indyead of 1 fresh
+# build 3 damaged ships instead of 1 fresh
 
 # give 1 less key
 
 # move into middle gate
 
-# raid always but knly resources
+# raid always but only resources
 
-# win ambitions on ties 
+# win ambitions on ties
 
 # damaged ships control
 
 #all you ships start damaged and become fresh after being hit
 
-# di not cover outrage slot
+# do not cover outrage slot
 
-# last loyal piece cant be destroyed
+# last loyal piece can't be destroyed
 
 
-# Judge When defending in battle, at the start, if the attacked has any of your trophies, 
+# Judge When defending in battle, at the start, if the attacker has any of your trophies,
 # they must either return them or provoke outrage of the battle system's Type.
 
-# Speedster: You may use any pip to move In battle, 
+# Speedster: You may use any pip to move In battle,
 # collect 1 extra die for each move action this turn Downside: idk
 
 # Wheelbearer
