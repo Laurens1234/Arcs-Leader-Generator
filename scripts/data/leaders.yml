@@ -1051,7 +1051,7 @@
 - name: Siegebreaker
   abilities: '*Ruinous.* In **battle**, if the defender has any buildings in the system, collect 1 extra die.
 
-    *Brutal.* In **battle**, {icon:dice_intercept_black} on Assault dice you roll
+    *Brutal.* In **battle**, {icon:dice_intercept_black} on assault dice you roll
     also count as {icon:dice_self_hit_black}.'
   resources:
   - Weapon
@@ -1739,11 +1739,12 @@
   body_font_size: 18
   zoom: 1.15
 - name: Crusader
-  abilities: '*Zealous.* In **battle**, after you destroy a city, secure any
-    card matching that city''s type with no agents or only Loyal agents on it.
+  abilities: '*Zealous.* In **battle**, after you destroy a city, Ransack the Court an extra time.
 
-    *Dogmatic.* You cannot **influence** a card with no agents on it if a Rival can
-    secure a card with any of your agents on it.'
+    *Fanatical.* When you **Ransack the Court**, you can secure a card with no agents on it.
+
+    *Dogmatic.* You cannot **influence** a card with no agents on it if a Rival has
+    more agents than you on any card with your agents.'
   resources:
   - Weapon
   - Relic
@@ -1826,7 +1827,7 @@
   body_font_size: 18
 - name: Envoy
   abilities: '*Parleyed.* When defending in **battle**, at the start, you may discard
-    a resource. If you do, the attacker can only collect Skirmish dice.
+    a resource. If you do, the attacker can only collect skirmish dice.
 
     *Unwary.* When defending in **battle**, if the attacker rolled any {icon:dice_key_black},
     they gain 1 extra {icon:dice_key_black}.'
@@ -1963,12 +1964,12 @@
   body_font_size: 18
 
 - name: Marauder
-  abilities: '*Predatory.* When attacking in **battle**, if you roll only Raid dice,
+  abilities: '*Predatory.* When attacking in **battle**, if you roll only raid dice,
     you may swap the amounts of {icon:dice_self_hit_black}, {icon:dice_building_hit_black},
     {icon:dice_key_black} and {icon:dice_intercept_black}. *(You* *may* *swap* *all*
     *4.)*
 
-    *Forbearing.* In **battle**, you cannot collect Raid dice if there are any fresh defending ships.'
+    *Forbearing.* In **battle**, you cannot collect raid dice if there are any fresh defending ships.'
   resources:
   - Weapon
   - Fuel
@@ -1987,7 +1988,7 @@
   abilities: '*Ravenous.* In **battle**, each {icon:dice_intercept_black} you
     roll also counts as {icon:dice_hit_black} {icon:dice_hit_black}.
 
-     *Raging.* In **battle**, you cannot collect less Assault than Skirmish dice.'
+     *Raging.* In **battle**, you cannot collect less assault than skirmish dice.'
   resources:
   - Weapon
   - Fuel
@@ -2006,9 +2007,9 @@
   boundary_shift: -0.01
 
 - name: Underwriter
-  abilities: '*Assured.* After attacking in **battle**, if half or more of your rolled Skirmish dice have no {icon:dice_hit_black}, gain any resource.
+  abilities: '*Assured.* After attacking in **battle**, if half or more of the rolled dice have {icon:dice_self_hit_black}, or nothing on them, gain any resource.
 
-    *Levied.* After attacking in **battle**, if all your rolled dice have a {icon:dice_hit_black} or {icon:dice_building_hit_black} on them, discard a resource.'
+    *Levied.* After attacking in **battle**, if you did not trigger *Assured*, discard a resource.'
   resources:
   - Material
   - Weapon
@@ -2045,7 +2046,7 @@
 
 - name: Bulwark
   abilities: '*Immortal.* **Prelude:** You may discard a resource onto here, 
-    then roll 6-"resources on here" (≥1) Skirmish dice. If all {icon:dice_hit_black}, 
+    then roll 6-"resources on here" (≥1) skirmish dice. If all {icon:dice_hit_black}, 
     gain all resources here. Until your next turn: your ships instantly repair if damaged, 
     your pips let you battle, and you can spend resources as any type.
 
@@ -2201,7 +2202,7 @@
 # {
 #     "name": "Forgemaster",
 #     "abilities": (
-#         "*.* In **battle**, you may choose to reroll Assault and Raid dice one at a time. For each rerolled die that has a self hit, immediately damage one of your ships. You may stop only after rolling a hit or key.\n"
+#         "*.* In **battle**, you may choose to reroll assault and raid dice one at a time. For each rerolled die that has a self hit, immediately damage one of your ships. You may stop only after rolling a hit or key.\n"
 #         "*."
 #     ),
 #     "resources": ["Weapon", "Relic"],
@@ -2224,7 +2225,7 @@
 #         "5: all dice hit and roll again (1/32)\n"
 #         "6: Destroy all defending ships\n"
 #         "Any number of times in **battle**, you may damage an attacking ship to reroll a die, then increase its cost by 1 this battle.\n"
-#         "You can only collect Skirmish dice.\n"
+#         "You can only collect skirmish dice.\n"
 #         "At the end of each **battle**, deal self hits equal to the amount of dice that missed.\n"
 #         ),
 #     "resources": ["Material", "Fuel"],
@@ -2276,8 +2277,8 @@
 # Wheelbearer
 # Adaptive
 # . After defending in battle, adapt to a die type rolled by the attacker until your next defense:
-# Skirmish  the attacker collects 1 fewer battle die.
-# Assault  you automatically intercept.
-# Raid  the attacker gets 1 fewer key.
+# skirmish  the attacker collects 1 fewer battle die.
+# assault  you automatically intercept.
+# raid  the attacker gets 1 fewer key.
 # Sequential
 # . You cannot gain the same adaptation twice in a row.
