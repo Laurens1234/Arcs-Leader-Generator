@@ -300,7 +300,7 @@
   abilities: '*Judicious.* In **scoring**, if any players tie for first in an ambition,
     you gain the initiative.
 
-    *Immunized.* If you have the initiative you don''t **Provoke** **Outrage**.
+    *Immunized.* If you **have the initiative** you don''t Provoke Outrage.
 
     *Fair.* Before **scoring**, the Rival with the least Power may take a resource
     or 3 Power from you.'
@@ -403,8 +403,8 @@
       building: None
   body_font_size: 18
 - name: Engineer
-  abilities: '*Versatile.* Your starports can **move**, **battle**, intercept and
-    control like a ship. You place starports outside building slots.
+  abilities: '*Versatile.* Your starports can **move**, **battle**, **intercept** and
+    **control** like a ship. You **place** starports outside building slots.
 
     *Exorbitant.* You can only **build** starports at cities, damaged, once per city,
     per turn.
@@ -446,7 +446,7 @@
       building: None
   body_font_size: 18
 - name: Weaver
-  abilities: '*Interwoven.* When you **secure**, you may influence an adjacent card.
+  abilities: '*Interwoven.* After you **secure**, you may influence an adjacent card.
 
     *Tangled.* You must discard a resource to **influence** a card with only Rival
     agents on it.'
@@ -585,7 +585,7 @@
     return any number of Trophies to the defender; deal 1 hit for each.
 
     *Insatiable.* Before **scoring**, if you have no cities as Trophies, destroy a
-    Loyal city.'
+    City you control.'
   resources:
   - Weapon
   - Fuel
@@ -604,7 +604,7 @@
   boundary_shift: 0.2
 - name: Beggar
   abilities: '*Frugal.* If you start your **Prelude** with no resources and no Guild
-    cards, gain **any** resource.
+    cards, gain any resource.
 
     *Communal.* If you **start your turn** with any resources, discard a resource or any
     card.'
@@ -626,7 +626,7 @@
   abilities: '*Savage.* In **battle** in a system with no buildings, collect 2 extra
     dice.
 
-    *Uncivilized.* When you **secure** (not ransack) a card with any Rival agents
+    *Uncivilized.* When you **secure** (not ransack) a card with a Rival agent
     on it, destroy a building you control.'
   resources:
   - Weapon
@@ -725,8 +725,7 @@
 - name: Solian
   abilities: '*Settled.* **Prelude:** You may move from a planet any number of times.
 
-    *Grounded.* When you **move** into a Rival-controlled gate, one of them
-    takes a hit.'
+    *Grounded.* When you **move** into a Rival-controlled gate, 1 of your moving ships takes a hit.'
   resources:
   - Relic
   - Material
@@ -763,9 +762,9 @@
       building: None
   body_font_size: 18
 - name: Terraformer
-  abilities: '*Genesiacal.* **At** **the** **start** **of** **each** **chapter**,
-    place a resource from the fullest supply on a planet you control to
-    change its type. Also do this after you destroy a city on a planet.
+  abilities: '*Genesiacal.* **At** **the** **start** **of** **each** **chapter** and when you **declare** **an** **ambition**,
+    place a resource from the supply on a planet with a city you control to
+    change its type. If you choose a planet a resource on it already, instead swap it with one of a different type.
 
     *Codependent.* When you **tax**, you only gain resources from planets with altered types.'
   resources:
@@ -804,7 +803,7 @@
   zoom: 1
   boundary_shift: 0.25
 - name: Nomad
-  abilities: '*Unadorned.* While you have the fewest resources, ignore the **tax**
+  abilities: '*Unadorned.* While you **have** **the** **fewest** **resources**, ignore the **tax**
     limit and city control.
 
     *Appeasing.* When you **tax** a Rival city, they gain 1 resource of your choice.'
@@ -824,7 +823,7 @@
   body_font_size: 18
 - name: Iconoclast
   abilities: '*Radical.* When you **declare** **an** **ambition**, you may destroy
-    a city you control to steal a Guild card matching that city''s type.
+    a city you control or a Loyal city to steal a Guild card matching that city''s type.
 
     *Fervent.* In **setup**, destroy one of your cities.'
   resources:
@@ -908,7 +907,7 @@
   body_font_size: 18
   zoom: 1
 - name: Cartographer
-  abilities: '*Exploratory.* After you **move** from a starport, gain a Fuel.
+  abilities: '*Exploratory.* After you **move** from a starport, gain 1 Fuel.
 
     *Distracted.* When you Catapult **move**, after each move you must drop off 1
     ship.'
@@ -1070,7 +1069,7 @@
 - name: Courier
   abilities: '*Swift.* **At** **the** **start** **of** **each** **chapter**, place
     3 agents on planets with no Loyal pieces. When you **move** into one, return the
-    agent and gain a resource matching that planet. (The agent cannot be battled or
+    agent and gain 1 resource matching that planet. (The agent cannot be battled or
     used to build at.)
 
     *Careless.* You **cannot** gain bonus city Power if you have not returned all
@@ -1131,8 +1130,8 @@
       building: None
   body_font_size: 18
 - name: Insurgent
-  abilities: '*Seditious.* After attacking in **battle**, you may influence a card
-    with a defender''s agent on it.
+  abilities: '*Seditious.* After any **battle** with you, you may influence a card
+    with any of your opponent''s agents on it.
 
     *Decentralized.* You cannot **repair** ships.'
   resources:
@@ -1210,7 +1209,7 @@
       building: None
   body_font_size: 18
 - name: Collector
-  abilities: '*Acquisitive.* When you **secure** a card, gain a resource matching
+  abilities: '*Acquisitive.* When you **secure** a card, gain 1 resource matching
     its type.
 
     *Jaded.* After **scoring**, discard a Guild card or resource.'
@@ -1311,9 +1310,9 @@
   abilities: '*Holistic.* When you **declare** **an** **ambition**, you may repair
     any of your pieces.
 
-    *Ritualistic.* When you **repair**, you may damage a Rival ship in its system.
+    *Ritualistic.* When you **repair** a piece, you may damage a Rival piece in its system.
 
-    *Disruptive.* You cannot **repair** using pips.'
+    *Disruptive.* You cannot **repair** using pips or resources.'
   resources:
   - Material
   - Psionic
@@ -1330,7 +1329,7 @@
   body_font_size: 18
 - name: Mediator
   abilities: '*Conciliatory.* When you **secure** a Guild card, you may discard it
-    to clear its type''s **Outrage** and gain a matching resource.
+    to clear its type''s **Outrage** and gain 1 matching resource.
 
     *Dilatory.* If you **Provoke** **Outrage** in a type you already have outraged,
     **Provoke** **Outrage** in a type you don''t have outraged.'
@@ -1373,7 +1372,7 @@
   abilities: '*Delegated.* When any player **builds** a building, you may place 1 of your
     ships in that building''s cluster.
 
-    *Administrative.* In **setup**, scrap 4 starports and 2 ships.'
+    *Administrative.* In **setup**, scrap 4 starports and 2 from your supply.'
   resources:
   - Relic
   - Fuel
@@ -1467,7 +1466,7 @@
       building: None
   body_font_size: 18
 - name: Titan
-  abilities: '*Immovable.* In **battle**, each of your ships cannot be damaged twice.
+  abilities: '*Immovable.* In any **battle** with you, each of your ships cannot be damaged twice.
 
     *Stationary.* Your damaged ships cannot Catapult **move**.'
   resources:
@@ -1658,7 +1657,7 @@
   abilities: '*Alluring.* When you Copy or Pivot to **influence** a card with a Rival
     agent on it, you may replace one of their ships with a Loyal one.
 
-    *Resisted.* If you have exactly 1 ship in a gate, it doesn''t count for control.'
+    *Resisted.* If you have exactly 1 ship in a system, it doesn''t count for control.'
   resources:
   - Psionic
   - Fuel
@@ -1676,8 +1675,7 @@
   zoom: 1.15
 - name: Creator
   abilities: '*Cosmic.* When you **build**, you may instead take a ship from a Rival''s
-    supply and place it fresh at one of their starports. If you do, gain a resource matching
-    that system.
+    supply and place it fresh at one of their starports. If you do, gain any resource.
 
     *Detached.* In **clean up**, return all your Trophies, even if Warlord was
     not declared.'
@@ -1850,7 +1848,7 @@
     2 systems.
 
     *Compartmental.* You cannot **build** a city in a system adjacent to a system
-    with another Loyal city.'
+    with a Loyal city.'
   resources:
   - Psionic
   - Material
@@ -2105,7 +2103,7 @@
 - name: Vessel
   abilities: '*Mimetic.* **Prelude:** You may return a Captive or Trophy to a Rival to use all of the non-discard abilities on all cards they have this turn.
 
-    *Identityless.* You cannot use **new** **actions** on cards you have.'
+    *Identityless.* You cannot use **new** **actions** on cards you have while Leading.'
   resources:
   - Psionic
   - Weapon
