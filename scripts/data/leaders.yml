@@ -2237,7 +2237,7 @@
 - name: z3
   abilities: '*Evolving.* In **battle**, you may collect dice up to the number of Captives and Trophies of the defender you have instead.
 
-    *Proud.* You cannot retreat.'
+    *Proud.* .'
   resources:
   - Psionic
   - Weapon
@@ -2500,7 +2500,7 @@
 - name: zg Veteran
   abilities: '*Experienced.* In **battle**, you may reroll one die.
 
-    *Cautious.* You must retreat if outnumbered.'
+    *Cautious.* .'
   resources:
   - Relic
   - Fuel
@@ -2533,44 +2533,24 @@
       building: None
   body_font_size: 18
 
+- name: zi Evader
+  abilities: '*Evasive.* When defending in **battle**, after the attacker collects dice, you may move half your defending ships to an adjacent system, removing them from the battle.'
+  resources:
+  - Fuel
+  - Psionic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
 
-# {
-#     "name": "Forgemaster",
-#     "abilities": (
-#         "*.* In **battle**, you may choose to reroll assault and raid dice one at a time. For each rerolled die that has a self hit, immediately damage one of your ships. You may stop only after rolling a hit or key.\n"
-#         "*."
-#     ),
-#     "resources": ["Weapon", "Relic"],
-#     "setup": {
-#         "A": {"ships": 3, "building": "city"},
-#         "B": {"ships": 3, "building": "starport"},
-#         "C": {"ships": 2, "building": "None"}
-#     },
-#     "body_font_size": 18
-# },
 
-# {
-#     "name": "Setmaker",
-#     "abilities": (
-#         "*Jackpot.* When you roll only skirmish dice, if all of them hit gain the reward of the amount you rolled and all lower ones:\n"
-#         "1: damage a defending ship (1/2)\n"
-#         "2: gain a resource matching the system (1/4)\n"
-#         "3: all your hits count as keys instead (1/8)\n"
-#         "4: (1/16)\n"
-#         "5: all dice hit and roll again (1/32)\n"
-#         "6: Destroy all defending ships\n"
-#         "Any number of times in **battle**, you may damage an attacking ship to reroll a die, then increase its cost by 1 this battle.\n"
-#         "You can only collect skirmish dice.\n"
-#         "At the end of each **battle**, deal self hits equal to the amount of dice that missed.\n"
-#         ),
-#     "resources": ["Material", "Fuel"],
-#     "setup": {
-#         "A": {"ships": 3, "building": "city"},
-#         "B": {"ships": 3, "building": "starport"},
-#         "C": {"ships": 2, "building": "None"}
-#     },
-#     "body_font_size": 12.7
-# },
 
 # when you declare an ambition, you may discard all your resources and return a loyal city from the map, to gain 2 resources matching that city.
 
@@ -2596,18 +2576,15 @@
 
 # damaged ships control
 
-#all you ships start damaged and become fresh after being hit
+# all your ships start damaged and become fresh after being hit
 
 # do not cover outrage slot
-
-# last loyal piece can't be destroyed
-
 
 # Judge When defending in battle, at the start, if the attacker has any of your trophies,
 # they must either return them or provoke outrage of the battle system's Type.
 
-# Speedster: You may use any pip to move In battle,
-# collect 1 extra die for each move action this turn Downside: idk
+# Speedster: You may use any pip to move 
+# In battle, collect 1 extra die for each move action this turn Downside: idk
 
 # Wheelbearer
 # Adaptive
