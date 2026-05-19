@@ -446,7 +446,7 @@
       building: None
   body_font_size: 18
 - name: Weaver
-  abilities: '*Interwoven.* After you **secure**, you may influence an adjacent card.
+  abilities: '*Interwoven.* When you **secure**, you may influence an adjacent card.
 
     *Tangled.* You must discard a resource to **influence** a card with only Rival
     agents on it.'
@@ -1329,10 +1329,10 @@
   body_font_size: 18
 - name: Mediator
   abilities: '*Conciliatory.* When you **secure** a Guild card, you may discard it
-    to clear its type''s **Outrage** and gain 1 matching resource.
+    to clear its type''s Outrage and gain 1 matching resource.
 
     *Dilatory.* If you **Provoke** **Outrage** in a type you already have outraged,
-    **Provoke** **Outrage** in a type you don''t have outraged.'
+    Provoke Outrage in a type you don''t have outraged.'
   resources:
   - Psionic
   - Fuel
@@ -1372,7 +1372,7 @@
   abilities: '*Delegated.* When any player **builds** a building, you may place 1 of your
     ships in that building''s cluster.
 
-    *Administrative.* In **setup**, scrap 4 starports and 2 from your supply.'
+    *Administrative.* In **setup**, scrap 4 starports and 2 ships from your supply.'
   resources:
   - Relic
   - Fuel
