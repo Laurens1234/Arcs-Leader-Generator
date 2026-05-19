@@ -168,7 +168,7 @@
     1.
 
     *Starving.* In **scoring**, if Warlord is declared and you don''t win it, scrap
-    2 Loyal ships.'
+    3 Loyal ships.'
   resources:
   - Weapon
   - Material
@@ -1229,9 +1229,9 @@
   body_font_size: 18
   zoom: 1.15
 - name: Samurai
-  abilities: '*Perfected.* In **battle**, you may change 1 of your dice to any face, like a reroll.
+  abilities: '*Perfected.* In **battle**, you may change 1 assault die you rolled to any face, like a reroll.
 
-    *Honorable.* When attacking in **battle**, take no Trophies.'
+    *Honorable.* When attacking in **battle**, you cannot take more than 1 Trophy.'
   resources:
   - Weapon
   - Relic
@@ -1737,7 +1737,7 @@
   body_font_size: 18
   zoom: 1.15
 - name: Crusader
-  abilities: '*Zealous.* In **battle**, after you destroy a city, Ransack the Court an extra time.
+  abilities: '*Zealous.* Once per turn, in **battle**, after you destroy a city, Ransack the Court an extra time.
 
     *Fanatical.* When you **Ransack the Court**, you can secure a card with no agents on it.
 
@@ -2196,6 +2196,343 @@
       building: None
   body_font_size: 18
 
+- name: z1
+  abilities: '*Reckless.* In **battle**, your damaged ships collect 1 extra die.
+
+    *Committed.* Your damaged ships cannot move out of Rival-controlled systems.'
+  resources:
+  - Weapon
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: z2
+  abilities: '*Lightning-Fast.* After you **move**, you may battle in the system with the ships that moved in.
+
+    *Restless.* You cannot **battle** in the same system twice in one turn.'
+  resources:
+  - Fuel
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: z3
+  abilities: '*Evolving.* In **battle**, you may collect dice up to the number of Captives and Trophies of the defender you have instead.
+
+    *Proud.* You cannot retreat.'
+  resources:
+  - Psionic
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: z4
+  abilities: '*Dividing.* Once per turn, split a ship you control into two damaged ships.'
+
+
+  resources:
+  - Psionic
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: z5
+  abilities: '*Mutating.* When attacking in **battle**, collect 1 extra die for each damaged ship you control in the battle system.
+
+    '
+  resources:
+  - Weapon
+  - Material
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: z6
+  abilities: '*Winding.* In **battle**, collect 2 extra dice for previous battle this turn.
+
+    *Committed.* After you **battle**, you must batte again if able.'
+  resources:
+  - Weapon
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: z7
+  abilities: '*Randomized.* At the start of **battle**, roll a die:
+
+    1-2: +1 die
+
+    3-4: ignore the first damage
+
+    5-6: gain +1 key
+
+    *Fated.* You must use the rolled effect.'
+  resources:
+  - Relic
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: z8
+  abilities: '*Obscuring.* When defending in **battle**, the attacker collects 1 fewer die against you.
+
+    '
+  resources:
+  - Fuel
+  - Psionic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: z9 Dragon
+  abilities: '*Descending.* After moving into a planet, immediately deal 1 damage there.
+
+    *Measured.* You cannot **move** twice into or from the same planet each turn.'
+  resources:
+  - Psionic
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: za
+  abilities: '*Launching.* After attacking in **battle**, your leftover {icon:dice_hit_black} may target any ships in adjacent systems.
+
+    *Stationary.* Your ships cannot **move** immediately after you battle.'
+  resources:
+  - Weapon
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: zb
+  abilities: '*Explosive.* In **battle**, when you destroy a ship, damage another Rival ship in the battle system.
+  
+      In **battle**, after you destroy the last Rival ship in a system, destroy a loyal ship in that system.'
+  resources:
+  - Weapon
+  - Material
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: zc
+  abilities: '*Warping.* After moving into a planet, you may move one additional ship from any system to the same planet.'
+  resources:
+  - Psionic
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: zd
+  abilities: '*Manipulative.* After any building on a planet is destroyed, gain 1 matching resource.
+      '
+  resources:
+  - Psionic
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: ze Replicator
+  abilities: '*Duplicating.* **Prelude:** You may discard a resource to create a temporary copy of one of your ships in its system. Return it after your turn.'
+  resources:
+  - Material
+  - Psionic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: zf
+  abilities: '*Guiding.* You may allow other players to give you a resource to roll any of their dice in **battle**. You may do this by giving the defender a resource. You must allow this if you have no resources.'
+  resources:
+  - Psionic
+  - Material
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: zg
+  abilities: '*Organized.* You may scrap 3 agents from your supply to prevent outrage.'
+  resources:
+  - Material
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: zg Veteran
+  abilities: '*Experienced.* In **battle**, you may reroll one die.
+
+    *Cautious.* You must retreat if outnumbered.'
+  resources:
+  - Relic
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: zh
+  abilities: '*Precognitive.* Before you collect a die, you may roll it to see its outcome and choose not to collect it. If you choose not to collect it, it can be collected by another ship instead, but the ship that collected it cannot be used to collect again.'
+  resources:
+  - Psionic
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
 
 # {
 #     "name": "Forgemaster",
@@ -2280,3 +2617,5 @@
 # raid  the attacker gets 1 fewer key.
 # Sequential
 # . You cannot gain the same adaptation twice in a row.
+
+# build a city on a guild card
