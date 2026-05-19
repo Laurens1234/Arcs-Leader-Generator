@@ -2178,7 +2178,7 @@
   body_font_size: 18
 
 - name: Merchant
-  abilities: '*Mercantile.* When you **declare** **an** **ambition**, you may swap any card you have (except this one) with one in the court. (Agents on the taken card get put on the swapped card.)
+  abilities: '*Mercantile.* When you **declare** **an** **ambition**, you may swap any card you have (except this one) with one in the court. (Agents on the taken card are put on the swapped card.)
 
     *Dependent.* You cannot **declare** **an** **ambition**, unless you have at least 1 of the thing it is counting.'
   resources:
