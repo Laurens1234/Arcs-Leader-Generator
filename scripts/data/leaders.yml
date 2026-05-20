@@ -2196,10 +2196,10 @@
       building: None
   body_font_size: 18
 
-- name: z1
-  abilities: '*Reckless.* In **battle**, your damaged ships collect 1 extra die.
+- name: Husk
+  abilities: '*Wrathful.* In **battle**, your damaged ships each collect 1 extra die.
 
-    *Committed.* Your damaged ships cannot move out of Rival-controlled systems.'
+    *Broken.* Your damaged ships cannot **move**.'
   resources:
   - Weapon
   - Fuel
@@ -2215,12 +2215,31 @@
       building: None
   body_font_size: 18
 
-- name: z2
-  abilities: '*Lightning-Fast.* After you **move**, you may battle in the system with the ships that moved in.
+- name: Harrier
+  abilities: '*Agile.* After you **move** into a system, you may battle there.
 
     *Restless.* You cannot **battle** in the same system twice in one turn.'
   resources:
   - Fuel
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: Devourer
+  abilities: '*Assimilating.* In **battle**, you may instead collect dice up to the number of Captives and Trophies of the defender you have.
+
+    *Hungry.* You cannot **move** from systems with any Rival pieces.'
+  resources:
+  - Material
   - Weapon
   setup:
     A:
@@ -2234,13 +2253,13 @@
       building: None
   body_font_size: 18
 
-- name: z3
-  abilities: '*Evolving.* In **battle**, you may collect dice up to the number of Captives and Trophies of the defender you have instead.
-
-    *Proud.* .'
+- name: Broodmother
+  abilities: '*Proliferating.* **Prelude:** Once per turn, split a ship you control into two damaged ships of its color.
+  
+    *Hivebound.* Only your damaged ships count for **control**.'
   resources:
   - Psionic
-  - Weapon
+  - Psionic
   setup:
     A:
       ships: 3
@@ -2253,29 +2272,10 @@
       building: None
   body_font_size: 18
 
-- name: z4
-  abilities: '*Dividing.* Once per turn, split a ship you control into two damaged ships.'
+- name: Predator
+  abilities: '*Bloodscented.* When attacking in **battle**, collect 1 extra die for each damaged ship you control in the battle system.
 
-
-  resources:
-  - Psionic
-  - Relic
-  setup:
-    A:
-      ships: 3
-      building: city
-    B:
-      ships: 3
-      building: starport
-    C:
-      ships: 2
-      building: None
-  body_font_size: 18
-
-- name: z5
-  abilities: '*Mutating.* When attacking in **battle**, collect 1 extra die for each damaged ship you control in the battle system.
-
-    '
+    *Pain-Driven.* In **battle**, collect 2 fewer dice if all your ships in the battle system are fresh.'
   resources:
   - Weapon
   - Material
@@ -2291,10 +2291,10 @@
       building: None
   body_font_size: 18
 
-- name: z6
-  abilities: '*Winding.* In **battle**, collect 2 extra dice for previous battle this turn.
+- name: Reaver
+  abilities: '*Ravaging.* In **battle**, collect 2 extra dice for each previous battle this turn.
 
-    *Committed.* After you **battle**, you must batte again if able.'
+    *Unrestrained.* After you use a pip or Psionic to **battle**, you must do so again if able.'
   resources:
   - Weapon
   - Weapon
