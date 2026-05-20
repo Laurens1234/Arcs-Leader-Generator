@@ -2235,7 +2235,7 @@
   body_font_size: 18
 
 - name: Devourer
-  abilities: '*Assimilating.* In **battle**, you may instead collect dice up to the number of Captives and Trophies of the defender you have.
+  abilities: '*Assimilating.* In **battle**, you may collect dice up to the number of Captives and Trophies you have.
 
     *Hungry.* You cannot **move** from systems with any Rival pieces.'
   resources:
@@ -2311,13 +2311,17 @@
   body_font_size: 18
 
 - name: z7
-  abilities: '*Randomized.* At the start of **battle**, roll a die:
+  abilities: '*Randomized.* When you **declare** **an** **ambition**, roll 4 skirmish dice (discard resources to get more?):
 
-    1-2: +1 die
+    All miss: discard a resource
 
-    3-4: ignore the first damage
+    {icon:dice_hit_black}: gain 1 resource.
 
-    5-6: gain +1 key
+    {icon:dice_hit_black} {icon:dice_hit_black}: take any action
+
+    {icon:dice_hit_black} {icon:dice_hit_black} {icon:dice_hit_black}: take any action
+
+    {icon:dice_hit_black} {icon:dice_hit_black} {icon:dice_hit_black} {icon:dice_hit_black}: All of the above
 
     *Fated.* You must use the rolled effect.'
   resources:
@@ -2336,9 +2340,9 @@
   body_font_size: 18
 
 - name: z8
-  abilities: '*Obscuring.* When defending in **battle**, the attacker collects 1 fewer die against you.
-
-    '
+  abilities: '*Obscuring.* When defending in **battle**, the attacker collects 1 fewer die.
+    *.* When defending in **battle**, if the attacker rolls any assault or raid dice, add 1 {icon:dice_intercept_black} to the roll.
+    *.* Each of your resources only costs {icon:dice_key_black} to steal.'
   resources:
   - Fuel
   - Psionic
@@ -2355,9 +2359,9 @@
   body_font_size: 18
 
 - name: z9 Dragon
-  abilities: '*Descending.* After moving into a planet, immediately deal 1 damage there.
+  abilities: '*Descending.* When you **move** into a planet, damage 2 Rival ships there.
 
-    *Measured.* You cannot **move** twice into or from the same planet each turn.'
+    *Measured.* You cannot **move** into and from the same planet each turn.'
   resources:
   - Psionic
   - Fuel
