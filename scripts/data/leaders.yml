@@ -764,7 +764,7 @@
 - name: Terraformer
   abilities: '*Genesiacal.* **At** **the** **start** **of** **each** **chapter** and when you **declare** **an** **ambition**,
     place a resource from the supply on a planet with a city you control to
-    change its type. If you choose a planet a resource on it already, instead swap it with one of a different type.
+    change its type. If you choose a planet with a resource on it already, instead swap it with different type.
 
     *Codependent.* When you **tax**, you only gain resources from planets with altered types.'
   resources:
@@ -1636,7 +1636,7 @@
   zoom: 1.15
 - name: Hydra
   abilities: '*Regenerative.* After **any** **battle**, if 2+ of your pieces
-    were destroyed, you may place 1 Loyal ship from any Trophy box in a system a Loyal piece.
+    were destroyed, you may place 1 Loyal ship from any Trophy box in a system with a Loyal piece.
 
     *Unwieldy.* You cannot Catapult **move** from a gate with a Rival ship in it.'
   resources:
@@ -1865,7 +1865,7 @@
   body_font_size: 18
 - name: Solicitor
   abilities: '*Entreating.* When you **declare** **an** **ambition**, you may ask
-    a Rival for a suit, they must give you the highest value card of that suit
+    a Rival for a suit. They must give you the highest value card of that suit
     they have. If they did, give them an action card back.
 
     *Compelled.* When you **Lead**, you must declare an ambition.'
@@ -2403,7 +2403,7 @@
 - name: zb
   abilities: '*Explosive.* In **battle**, when you destroy a ship, damage another Rival ship in the battle system.
   
-      In **battle**, after you destroy the last Rival ship in a system, destroy a loyal ship in that system.'
+      In **battle**, after you destroy the last Rival ship in a system, destroy a Loyal ship in that system.'
   resources:
   - Weapon
   - Material
@@ -2560,7 +2560,7 @@
 
 
 
-# when you declare an ambition, you may discard all your resources and return a loyal city from the map, to gain 2 resources matching that city.
+# when you declare an ambition, you may discard all your resources and return a Loyal city from the map, to gain 2 resources matching that city.
 
 #when you discard cards due to outrage, discard other cards (resources?)
 
