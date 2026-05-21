@@ -2199,7 +2199,7 @@
 - name: Husk
   abilities: '*Wrathful.* In **battle**, your damaged ships each collect 1 extra die.
 
-    *Broken.* Your damaged ships cannot **move**.'
+    *Broken.* Your damaged ships cannot **move** into gates.'
   resources:
   - Weapon
   - Fuel
@@ -2220,7 +2220,7 @@
 - name: Rascal
   abilities: '*Mischievous.* After you **move** into a system, you may battle there.
 
-    *Fickle.* You cannot **battle** in the same system twice in one turn.'
+    *Fickle.* You cannot attack in **battle** in the same system twice in one turn.'
   resources:
   - Fuel
   - Fuel
@@ -2237,7 +2237,7 @@
   body_font_size: 18
 
 - name: Devourer
-  abilities: '*Assimilating.* In **battle**, you may collect dice up to the number of Captives and Trophies you have.
+  abilities: '*Assimilating.* In **battle**, you may choose to collect dice up to the number of Trophies you have instead.
 
     *Hungry.* You cannot **move** from systems with any Rival pieces.'
   resources:
@@ -2256,9 +2256,11 @@
   body_font_size: 18
 
 - name: Swarm
-  abilities: '*Brooding.* **Prelude:** Once per turn, split a ship you control into two damaged ships of its color.
-  
-    *Hivebound.* Only your damaged ships count for **control**.'
+  abilities: '*Brooding.* **Prelude:** Once per turn, split a piece you control into two damaged pieces of the same 
+    type and color.
+
+
+    *Hivebound.* Only your buildings and damaged ships count for **control**.'
   resources:
   - Psionic
   - Psionic
@@ -2275,7 +2277,7 @@
   body_font_size: 18
 
 - name: Predator
-  abilities: '*Bloodscented.* When attacking in **battle**, collect 1 extra die for each damaged ship you control in the battle system.
+  abilities: '*Bloodscented.* In **battle**, collect 1 extra die for each damaged ship you control in the battle system.
 
     *Pain-Driven.* In **battle**, collect 2 fewer dice if all your ships in the battle system are fresh.'
   resources:
