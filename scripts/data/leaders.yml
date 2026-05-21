@@ -2202,7 +2202,7 @@
     *Broken.* Your damaged ships cannot **move** into gates.'
   resources:
   - Weapon
-  - Fuel
+  - Relic
   setup:
     A:
       ships: 3
@@ -2239,9 +2239,9 @@
 - name: Devourer
   abilities: '*Assimilating.* In **battle**, you may choose to collect dice up to the number of Trophies you have instead.
 
-    *Hungry.* You cannot **move** from systems with any Rival pieces.'
+    *Hungry.* You cannot **move** from systems with Rival pieces.'
   resources:
-  - Material
+  - Fuel
   - Weapon
   setup:
     A:
@@ -2262,7 +2262,7 @@
 
     *Hivebound.* Only your buildings and damaged ships count for **control**.'
   resources:
-  - Psionic
+  - Material
   - Psionic
   setup:
     A:
@@ -2272,7 +2272,7 @@
       ships: 3
       building: starport
     C:
-      ships: 2
+      ships: 3
       building: None
   body_font_size: 18
 
@@ -2301,7 +2301,7 @@
     *Unrestrained.* After you use a pip or Psionic to **battle**, you must do so again if able.'
   resources:
   - Weapon
-  - Weapon
+  - Psionic
   setup:
     A:
       ships: 3
