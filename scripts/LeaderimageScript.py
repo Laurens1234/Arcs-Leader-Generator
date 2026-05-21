@@ -13,6 +13,13 @@ def _clamp_int(value, minimum, maximum, default):
     return max(minimum, min(maximum, value))
 
 
+def _as_float(value, default=0.0):
+    try:
+        return float(value)
+    except Exception:
+        return default
+
+
 def create_card(input_data):
     # File paths
     base_path = os.path.dirname(os.path.dirname(__file__))
@@ -91,11 +98,7 @@ def create_card(input_data):
         # Support an optional `boundary_shift` fractional value in input_data
         # Positive shifts move the top boundary lower (down), negative moves it up.
         default_top_margin = 60
-        shift = input_data.get("boundary_shift", 0.0)
-        try:
-            shift = float(shift)
-        except Exception:
-            shift = 0.0
+        shift = _as_float(input_data.get("boundary_shift", 0.0), 0.0)
         top_margin = max(0, int(_s(default_top_margin) * (1 + shift)))
         # Allow boundary_shift to also move the bottom alignment point
         default_overlay_bottom = 390
@@ -120,11 +123,7 @@ def create_card(input_data):
             target_width = max(1, int(target_height / aspect_ratio))
 
         # Support an optional zoom multiplier from input_data (e.g., 1.5 for 150%)
-        zoom = input_data.get("zoom", 1.0)
-        try:
-            zoom = float(zoom)
-        except Exception:
-            zoom = 1.0
+        zoom = _as_float(input_data.get("zoom", 1.0), 1.0)
 
         # Apply zoom (allow overflow/cropping of sides as requested)
         target_width = max(1, int(target_width * zoom))
@@ -146,7 +145,15 @@ def create_card(input_data):
 
         overlay_img = overlay_img.resize((target_width, target_height), Image.Resampling.LANCZOS)
 
-        overlay_x = (base_img.width - overlay_img.width) // 2
+        # Optional horizontal art nudge in logical pixels; negative moves left, positive moves right.
+        image_shift_x = _as_float(
+            input_data.get(
+                "image_shift_x",
+                input_data.get("art_shift_x", input_data.get("image_offset_x", 0.0)),
+            ),
+            0.0,
+        )
+        overlay_x = (base_img.width - overlay_img.width) // 2 + _s(image_shift_x)
         overlay_y = overlay_bottom_y - overlay_img.height
 
         base_img.paste(overlay_img, (overlay_x, overlay_y), overlay_img)

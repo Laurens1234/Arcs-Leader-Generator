@@ -2214,11 +2214,13 @@
       ships: 2
       building: None
   body_font_size: 18
+  zoom: 1.15
+  image_shift_x: 65
 
-- name: Harrier
-  abilities: '*Agile.* After you **move** into a system, you may battle there.
+- name: Rascal
+  abilities: '*Mischievous.* After you **move** into a system, you may battle there.
 
-    *Restless.* You cannot **battle** in the same system twice in one turn.'
+    *Fickle.* You cannot **battle** in the same system twice in one turn.'
   resources:
   - Fuel
   - Fuel
@@ -2253,8 +2255,8 @@
       building: None
   body_font_size: 18
 
-- name: Broodmother
-  abilities: '*Proliferating.* **Prelude:** Once per turn, split a ship you control into two damaged ships of its color.
+- name: Swarm
+  abilities: '*Brooding.* **Prelude:** Once per turn, split a ship you control into two damaged ships of its color.
   
     *Hivebound.* Only your damaged ships count for **control**.'
   resources:

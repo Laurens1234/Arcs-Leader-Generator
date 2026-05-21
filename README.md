@@ -108,6 +108,7 @@ Leader cards will be saved in the `results/` folder.
 **Leader Image Options**
 - **zoom**: : A numeric multiplier applied to the leader artwork (e.g., `1.5` for 150%). Zooming enlarges the image and may cause the left/right edges of the card to be cropped, which is expected when zoom > 1.
 - **boundary_shift**: : A fractional value that moves the card image boundaries up or down. Positive values move the top and bottom boundaries lower on the card (e.g., `0.25` moves them 25% lower), negative values move them up. This affects how the artwork is fitted and where its bottom aligns relative to the title area.
+- **image_shift_x**: A horizontal artwork offset in logical pixels. Positive values move the leader artwork right; negative values move it left. For example, `image_shift_x: 25` nudges the art right, while `image_shift_x: -25` nudges it left.
 
 **Image Quality / Blurry Text When Zooming**
 
@@ -187,6 +188,7 @@ You can set these per-leader in `scripts/leadersFormatted.py`. Example:
     "body_font_size": 18,
     "zoom": 1.45,
     "boundary_shift": 0.33,
+    "image_shift_x": -25,  # Optional: move leader artwork left/right
     "render_scale": 2,      # Optional: 1–4 (higher = sharper when zoomed)
     "allow_upscale": False  # Optional: keep small art from being stretched
 }
@@ -576,4 +578,3 @@ Notes and next steps
 │   └── voxCardsFormatted.py   # Vox card data
 └── README.md
 ```
-
