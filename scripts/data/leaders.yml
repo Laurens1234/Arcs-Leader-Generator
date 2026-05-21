@@ -343,7 +343,7 @@
   boundary_shift: 0.1
 - name: Chosen
   abilities: '*Hallowed.* After you **move** a single ship, you may battle with only
-    it. The die it rolls counts its result three times.
+    it. The die it rolls counts its result 3 times.
 
     *Forsaken.* If you have not attacked this chapter, you cannot **declare** **an**
     **ambition**.'
@@ -384,7 +384,7 @@
 - name: Gambler
   abilities: '*Cunning.* You may **pass** the initiative to any player, then guess
     a suit. If they have it, they must play it, and the card you play this round lets
-    you take two extra actions.
+    you take 2 extra actions.
 
     *Compulsive.* You must **pass** the initiative the first time you have it each
     chapter.'
@@ -486,7 +486,7 @@
   abilities: '*Inquisitive.* When you **tax**, gain the resource twice if the matching
     ambition is declared *(Weapon matches Warlord.)*
 
-    *Absent-minded.* After **scoring**, discard one resource matching an undeclared ambition.'
+    *Absent-minded.* After **scoring**, discard 1 resource matching an undeclared ambition.'
   resources:
   - Material
   - Relic
@@ -825,7 +825,7 @@
   abilities: '*Radical.* When you **declare** **an** **ambition**, you may destroy
     a city you control or a Loyal city to steal a Guild card matching that city''s type.
 
-    *Fervent.* In **setup**, destroy one of your cities.'
+    *Fervent.* In **setup**, destroy 1 of your cities.'
   resources:
   - Psionic
   - Weapon
@@ -1169,7 +1169,7 @@
       building: None
   body_font_size: 18
 - name: Musician
-  abilities: '*Inspiring.* To **seize the initiative**, you may give two resources to
+  abilities: '*Inspiring.* To **seize the initiative**, you may give 2 resources to
     the player with the initiative.
 
     *Temperamental.* When you **gain** **the** **initiative**, damage 1 Loyal piece.'
@@ -1250,7 +1250,7 @@
   boundary_shift: 0.4
 - name: Assassin
   abilities: '*Lethal.* After you **influence**, if you have the most agents on the
-    card, you destroy one Rival agent on it.
+    card, you destroy 1 Rival agent on it.
 
     *Bloodthirsty.* If you have a Loyal agent on a card with a Rival agent, you can only influence cards with Rival agents.'
   resources:
@@ -1428,7 +1428,7 @@
   zoom: 1.15
 - name: Extortioner
   abilities: '*Predatory.* **Prelude:** You may return 3 Trophies/Captives
-    of a Rival to steal one of their resources.
+    of a Rival to steal 1 of their resources.
 
     *Amateurish.* In **scoring**, when you **get second place**, you may return a Trophy or Captive. If you don''t, gain no Power.'
   resources:
@@ -2082,7 +2082,7 @@
       building: None
   body_font_size: 18
 - name: Soulbinder
-  abilities: '*Syncopated.* Before or after attacking in **battle**, you may swap the positions of any two ships on the map.
+  abilities: '*Syncopated.* Before or after attacking in **battle**, you may swap the positions of 2 ships on planets or 2 ships on gates.
 
     *Fragmented.* When attacking in **battle**, you collect 1 less die if you don''t control the battle system.'
   resources:
@@ -2256,7 +2256,7 @@
   body_font_size: 18
 
 - name: Swarm
-  abilities: '*Brooding.* **Prelude:** Once per turn, split a piece you control into two damaged pieces of the same 
+  abilities: '*Brooding.* **Prelude:** Once per turn, split a piece you control into 2 damaged pieces of the same 
     type and color.
 
 
@@ -2420,7 +2420,7 @@
   body_font_size: 18
 
 - name: zc
-  abilities: '*Warping.* After moving into a planet, you may move one additional ship from any system to the same planet.'
+  abilities: '*Warping.* After moving into a planet, you may move 1 additional ship from any system to the same planet.'
   resources:
   - Psionic
   - Fuel
