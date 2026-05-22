@@ -2406,7 +2406,7 @@
     *Indiscriminate.* When attacking in **battle**, after you destroy the last defending ship, destroy a Loyal attacking ship.'
   resources:
   - Weapon
-  - Material
+  - Psionic
   setup:
     A:
       ships: 3
@@ -2419,8 +2419,10 @@
       building: None
   body_font_size: 18
 
-- name: zc
-  abilities: '*Warping.* After moving into a planet, you may move 1 additional ship from any system to the same planet.'
+- name: Homesteader
+  abilities: '*Resettling.* Once per turn, before you **move** from a system, you may take any number of move actions from adjacent systems into it first, then take any number of non-Catapult move actions from it.
+    
+    *Isolated.* In **clean up**, damage 1 Loyal ship in each system where you have exactly 1 ship.'
   resources:
   - Psionic
   - Fuel
@@ -2435,6 +2437,7 @@
       ships: 2
       building: None
   body_font_size: 18
+  zoom: 1.15
 
 - name: zd
   abilities: '*Manipulative.* After any building on a planet is destroyed, gain 1 matching resource.
