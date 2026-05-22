@@ -1986,7 +1986,7 @@
   abilities: '*Ravenous.* In **battle**, each {icon:dice_intercept_black} you
     roll also counts as {icon:dice_hit_black} {icon:dice_hit_black}.
 
-     *Raging.* In **battle**, you cannot collect less assault than skirmish dice.'
+     *Raging.* In **battle**, you cannot collect fewer assault than skirmish dice.'
   resources:
   - Weapon
   - Fuel
@@ -2084,7 +2084,7 @@
 - name: Soulbinder
   abilities: '*Syncopated.* Before or after attacking in **battle**, you may swap the positions of 2 ships on planets or 2 ships on gates.
 
-    *Fragmented.* When attacking in **battle**, you collect 1 less die if you don''t control the battle system.'
+    *Fragmented.* When attacking in **battle**, you collect 1 fewer die if you don''t control the battle system.'
   resources:
   - Psionic
   - Weapon
@@ -2196,10 +2196,10 @@
       building: None
   body_font_size: 18
 
-- name: Husk
-  abilities: '*Wrathful.* In **battle**, your damaged ships each collect 1 extra die.
+- name: Wretch
+  abilities: '*Vengeful.* In **battle**, collect 1 extra die per damaged attacking ship
 
-    *Broken.* Your damaged ships cannot **move** into gates.'
+    *Shackled.* Your damaged ships cannot **move** into Rival-controlled gates.'
   resources:
   - Weapon
   - Relic
@@ -2256,9 +2256,7 @@
   body_font_size: 18
 
 - name: Swarm
-  abilities: '*Brooding.* **Prelude:** Once per turn, split a piece you control into 2 damaged pieces of the same 
-    type and color.
-
+  abilities: '*Brooding.* **Prelude:** Once per turn, you may return a Loyal piece to place up to 2 damaged pieces in its system.
 
     *Hivebound.* Only your buildings and damaged ships count for **control**.'
   resources:
@@ -2277,9 +2275,9 @@
   body_font_size: 18
 
 - name: Predator
-  abilities: '*Bloodscented.* In **battle**, collect 1 extra die for each damaged ship you control in the battle system.
+  abilities: '*Rapacious.* In **battle**, collect 1 extra die per damaged defending ship.
 
-    *Pain-Driven.* In **battle**, collect 2 fewer dice if all your ships in the battle system are fresh.'
+    *Sanguivorous.* In **battle**, collect 1 fewer die if all defending ships are fresh.'
   resources:
   - Weapon
   - Material
@@ -2558,6 +2556,82 @@
       building: None
   body_font_size: 18
 
+- name: zj Clockmaker
+  abilities: '*Delaying.* (Once per turn, you may postpone an action or battle until the end of the round. ?) You may spend resources for it at the end of the round?
+
+    *Rigid.* You cannot change postponed decisions later.'
+  resources:
+  - Relic
+  - Psionic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: zk Mathematician
+  abilities: '*Calculating.* Before rolling dice in **battle**, declare an exact number of hits. If you are correct, gain any resource and collect 1 extra die.
+
+    *Precise.* If you are incorrect, idk.'
+  resources:
+  - Psionic
+  - Material
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: zl Tyrant
+  abilities: '*Demanding.* When you **declare** **an** **ambition**, choose a Rival, force them to they must take a move, build, battle, tax, repair, or influence action if able, may accept bribe for this.
+
+    *Despised.* Whenever your demand is ignored, Provoke Outrage in any type.'
+  resources:
+  - Weapon
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: zm Underdog
+  abilities: '*Subversive.* You may Surpass with cards lower than the Lead card. If your card is lower than the Lead card by more than the Lead card is higher than yours, gain the initiative.
+
+    *Grounded.* You cannot Surpass with cards higher than the Lead card.'
+  resources:
+  - Fuel
+  - Psionic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
 
 
 # when you declare an ambition, you may discard all your resources and return a Loyal city from the map, to gain 2 resources matching that city.
@@ -2574,7 +2648,7 @@
 
 # build 3 damaged ships instead of 1 fresh
 
-# give 1 less key
+# give 1 fewer key
 
 # move into middle gate
 
