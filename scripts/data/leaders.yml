@@ -2341,10 +2341,12 @@
       building: None
   body_font_size: 18
 
-- name: z8
-  abilities: '*Obscuring.* When defending in **battle**, the attacker collects 1 fewer die.
-    *.* When defending in **battle**, if the attacker rolls any assault or raid dice, add 1 {icon:dice_intercept_black} to the roll.
-    *.* Each of your resources only costs {icon:dice_key_black} to steal.'
+- name: Smokecaller
+  abilities: '*Shrouding.* When defending in **battle**, the attacker collects 1 fewer die.
+
+    *Billowing.* When defending in **battle**, if the attacker rolls any assault or raid dice, add 1 {icon:dice_intercept_black} to the roll.
+
+    *Sooted.* Each of your resources has a raid cost of {icon:dice_key_black}.'
   resources:
   - Fuel
   - Psionic
@@ -2360,10 +2362,10 @@
       building: None
   body_font_size: 18
 
-- name: z9 Dragon
-  abilities: '*Descending.* When you **move** into a planet, damage 2 Rival ships there.
+- name: Dragon
+  abilities: '*Descending.* After you **move** into a planet, damage up to 2 Rival ships there.
 
-    *Measured.* You cannot **move** into and from the same planet each turn.'
+    *Cumbersome.* You cannot **move** both into and from the same planet each turn.'
   resources:
   - Psionic
   - Fuel
@@ -2378,11 +2380,11 @@
       ships: 2
       building: None
   body_font_size: 18
+  zoom: 1.15
+- name: Sniper
+  abilities: '*Precise.* After attacking in **battle**, your unused {icon:dice_hit_black} may target any ships in other systems.
 
-- name: za
-  abilities: '*Launching.* After attacking in **battle**, your leftover {icon:dice_hit_black} may target any ships in adjacent systems.
-
-    *Stationary.* Your ships cannot **move** immediately after you battle.'
+    *Exposed.* You cannot **move** after you battle for the rest of the turn.'
   resources:
   - Weapon
   - Fuel
@@ -2398,10 +2400,10 @@
       building: None
   body_font_size: 18
 
-- name: zb
-  abilities: '*Explosive.* In **battle**, when you destroy a ship, damage another Rival ship in the battle system.
+- name: Poltergeist
+  abilities: '*Rupturing.* When attacking in **battle**, when you destroy a ship, damage any other ship in the battle system.
   
-      In **battle**, after you destroy the last Rival ship in a system, destroy a Loyal ship in that system.'
+    *Indiscriminate.* When attacking in **battle**, after you destroy the last defending ship, destroy a Loyal attacking ship.'
   resources:
   - Weapon
   - Material
