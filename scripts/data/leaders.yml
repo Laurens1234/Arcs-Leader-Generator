@@ -764,9 +764,9 @@
 - name: Terraformer
   abilities: '*Genesiacal.* **At** **the** **start** **of** **each** **chapter** and when you **declare** **an** **ambition**,
     place a resource from the supply on a planet with a city you control to
-    change its type. If you choose a planet with a resource on it already, instead swap it with different type.
+    change its type. If you choose a planet with a resource already on it, swap it with one of a different type.
 
-    *Codependent.* When you **tax**, you only gain resources from planets with altered types.'
+    *Codependent.* When you **tax**, only gain resources from planets with altered types.'
   resources:
   - Psionic
   - Material
@@ -803,8 +803,7 @@
   zoom: 1
   boundary_shift: 0.25
 - name: Nomad
-  abilities: '*Unadorned.* While you **have** **the** **fewest** **resources**, ignore the **tax**
-    limit and city control.
+  abilities: '*Unadorned.* While you **have** **the** **fewest** **resources**, you may tax starports in systems with loyal pieces like cities. You ignore the tax limit when taxing starports.
 
     *Appeasing.* When you **tax** a Rival city, they gain 1 resource of your choice.'
   resources:
@@ -846,7 +845,8 @@
   abilities: '*Gluttonous.* When you **Provoke** **Outrage**, if you already have
     it outraged, clear it instead and gain that resource thrice.
 
-    *Wrathful.* In **setup**, **Provoke** **Outrage** 3 types.
+    *Wrathful.* In **setup**, **Provoke** **Outrage** in 3 types.
+
     *Greedy.* In **setup**, gain 3 resources.'
   resources:
   - None
@@ -867,7 +867,7 @@
 - name: Hustler
   abilities: '*Devious.* When you **declare** **an** **ambition**, you may Provoke
     Outrage in a non-Outraged type to clear Outrage in a different type.
-    Then, take and spend 1 resource from the cleared type''s supply.
+    Then, gain 1 resource from the cleared type''s supply. If it is empty steal it instead.
 
     *Irate.* In **setup**, Provoke Outrage in any type.'
   resources:
@@ -1048,9 +1048,9 @@
       building: None
   body_font_size: 18
 - name: Siegebreaker
-  abilities: '*Ruinous.* In **battle**, if the defender has any buildings in the system, collect 1 extra die.
+  abilities: '*Ruinous.* In **battle**, if the defender has any buildings in the system, collect 2 extra dice.
 
-    *Brutal.* In **battle**, {icon:dice_intercept_black} on assault dice you roll
+    *Brutal.* In **battle**, {icon:dice_intercept_black} you roll
     also count as {icon:dice_self_hit_black}.'
   resources:
   - Weapon
@@ -1191,9 +1191,9 @@
   zoom: 1.15
 - name: Ozymandias
   abilities: '*Hubristic.* When you **control** all gates, secure all cards in the Court,
-    returning any agents, then return all Loyal ships in the gates.
+    returning any agents on them, then return all Loyal ships in all gates.
 
-    *Forgotten.* You cannot **influence** if you control no gate.'
+    *Forgotten.* You cannot **influence** unless you control a gate.'
   resources:
   - Fuel
   - Relic
@@ -1252,7 +1252,7 @@
   abilities: '*Lethal.* After you **influence**, if you have the most agents on the
     card, you destroy 1 Rival agent on it.
 
-    *Bloodthirsty.* If you have a Loyal agent on a card with a Rival agent, you can only influence cards with Rival agents.'
+    *Bloodthirsty.* If you have a Loyal agent on a card with a Rival agent, you can **influence** only cards with Rival agents on them.'
   resources:
   - Weapon
   - Psionic
@@ -1847,8 +1847,7 @@
   abilities: '*Networked.* You can **tax** any city in a cluster where you control
     2 systems.
 
-    *Compartmental.* You cannot **build** a city in a system adjacent to a system
-    with a Loyal city.'
+    *Compartmental.* You cannot **build** a city in a system adjacent to a Loyal city.'
   resources:
   - Psionic
   - Material
@@ -1908,7 +1907,7 @@
   abilities: '*Exemplary.* When you **Pivot** and play a card of equal rank to the Lead
     card, you may use all pips on your played card.
 
-    *Immutable.* You cannot **Pivot** with cards of different rank than the Lead card.'
+    *Immutable.* You cannot **Pivot** with cards of a different rank from the Lead card.'
   resources:
   - Psionic
   - Relic
@@ -1986,7 +1985,7 @@
   abilities: '*Ravenous.* In **battle**, each {icon:dice_intercept_black} you
     roll also counts as {icon:dice_hit_black} {icon:dice_hit_black}.
 
-     *Raging.* In **battle**, you cannot collect fewer assault than skirmish dice.'
+     *Raging.* In **battle**, you cannot collect fewer assault dice than skirmish dice.'
   resources:
   - Weapon
   - Fuel
@@ -2239,7 +2238,9 @@
 - name: Devourer
   abilities: '*Assimilating.* In **battle**, you may choose to collect dice up to the number of Trophies you have instead.
 
-    *Hungry.* You cannot **move** from systems with Rival pieces.'
+    *Grisly.* When you **take** **a** **Captive**, you may take it as a Trophy instead.
+
+    *Hungry.* You cannot **move** from systems with damaged Rival pieces.'
   resources:
   - Fuel
   - Weapon
@@ -2346,7 +2347,7 @@
 
     *Billowing.* When defending in **battle**, if the attacker rolls any assault or raid dice, add 1 {icon:dice_intercept_black} to the roll.
 
-    *Sooted.* Each of your resources has a raid cost of {icon:dice_key_black}.'
+    *Sooted.* Each of your resources has a raid cost of {icon:dice_key_black}. Each of your Guild cards'' raid cost is no more than {icon:dice_key_black} {icon:dice_key_black}.'
   resources:
   - Fuel
   - Psionic
@@ -2365,7 +2366,7 @@
 - name: Dragon
   abilities: '*Descending.* After you **move** into a planet, damage up to 2 Rival ships there.
 
-    *Cumbersome.* You cannot **move** both into and from the same planet each turn.'
+    *Cumbersome.* Each turn, you cannot **move** into or from the same planet more than once.'
   resources:
   - Psionic
   - Fuel
@@ -2384,7 +2385,7 @@
 - name: Sniper
   abilities: '*Precise.* After attacking in **battle**, your unused {icon:dice_hit_black} may target any ships in other systems.
 
-    *Exposed.* You cannot **move** after you battle for the rest of the turn.'
+    *Exposed.* After you **battle**, you cannot move for the rest of the turn.'
   resources:
   - Weapon
   - Fuel
@@ -2600,7 +2601,7 @@
   body_font_size: 18
 
 - name: zl Tyrant
-  abilities: '*Demanding.* When you **declare** **an** **ambition**, choose a Rival, force them to they must take a move, build, battle, tax, repair, or influence action if able, may accept bribe for this.
+  abilities: '*Demanding.* When you **declare** **an** **ambition**, choose a Rival. They must take a move, build, battle, tax, repair, or influence action if able. They may give you a bribe to ignore during this.
 
     *Despised.* Whenever your demand is ignored, Provoke Outrage in any type.'
   resources:
@@ -2625,6 +2626,209 @@
   resources:
   - Fuel
   - Psionic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: zn
+  abilities: '*Guilded.* When you **tax**, you may **influence** a Guild card of the taxed city''s type.'
+  resources:
+  - None
+  - None
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: zo
+  abilities: '*Mobilized.* After you **tax**, you may **move** or **battle**.'
+  resources:
+  - None
+  - None
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: zp
+  abilities: '*Mustered.* When you **tax**, place 1 Loyal ship at the taxed city.'
+  resources:
+  - None
+  - None
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: zq
+  abilities: '*Adaptive.* When you **tax**, you may instead gain any resource matching a type or icon you have.'
+  resources:
+  - None
+  - None
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: zr
+  abilities: '*Singular.* When you **tax**, you may instead gain a resource of a type no one has resources of.'
+  resources:
+  - None
+  - None
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: zs
+  abilities: '*Ambitious.* When you **tax**, you may instead gain a resource of a type matching a declared ambition.'
+  resources:
+  - None
+  - None
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: zt
+  abilities: '*Contrarian.* When you **declare** **an** **ambition**, your played card lets you take any actions not on it instead.'
+  resources:
+  - None
+  - None
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: zu
+  abilities: '*Reciprocal.* In any **battle** with you, when one of your ships is taken as a Trophy, you may return a Trophy to your opponent to repair it instead.
+
+    *Mutual.* If you have any Trophies of your opponent, they may do the same.'
+  resources:
+  - None
+  - None
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: zv
+  abilities: '*Granting.* Once per chapter, after a Rival takes an action, you may make them repeat it.
+
+    *Escalating.* Afterward, place 1 Demand token on them, plus 1 more for each Demand already on all Rivals.
+
+    *Payment.* At the start of their turns, Rivals remove 1 Demand by giving you 1 resource, destroying 1 Loyal ship, or discarding 1 card.
+
+    *Calamity.* Rivals with 4+ Demands cannot **declare** **an** **ambition**.
+
+    *Catastrophic.* Rivals that cannot remove a Demand destroy all Loyal ships in one system.'
+  resources:
+  - None
+  - None
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: zw
+  abilities: '*Invested.* In **setup**, place 1 agent on this card. When you **declare** **an** **ambition**, place 1 agent on this card.
+
+    *Displaced.* In **battle**, when one of your ships is destroyed, you may return an agent from this card to place that ship in any other system instead.'
+  resources:
+  - None
+  - None
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: zx
+  abilities: '*Foreseeing.* Before **moving** into a system, you may discard all resources to choose a Rival you can battle there, then collect and roll dice as if you were going to battle them there with your next action. After you see the result, you may choose not to move there.
+
+    *Predestined.* If you battle the chosen Rival there with your next action before any dice are collected outside of this foreseen battle, collect only those rolled dice. Resolve the rest of the battle as if you rolled the dice during the battle.
+
+    *Psionic.* In **setup**, Provoke Psionic Outrage.'
+  resources:
+  - None
+  - None
   setup:
     A:
       ships: 3
