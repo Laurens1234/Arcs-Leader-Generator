@@ -1502,7 +1502,7 @@
       building: None
   body_font_size: 18
 - name: Enforcer
-  abilities: '*Mandating.* When you **declare** **an** **ambition**, take an action
+  abilities: '*Mandating.* When you **declare** **an** **ambition**, take one action
     on your played card twice. (Show it if you copied.)
 
     *Unpopular.* You cannot **influence** if no ambitions have been declared.'
@@ -2313,23 +2313,23 @@
       building: None
   body_font_size: 18
 
-- name: z7
-  abilities: '*Randomized.* When you **declare** **an** **ambition**, roll 4 skirmish dice (discard resources to get more?):
+- name: Prospector
+  abilities: '*Opportunistic.* When you **declare** **an** **ambition**, roll 1 skirmish die per ambition you are winning, declared or not. Gain each reward with your total {icon:dice_hit_black} or fewer:
 
-    All miss: discard a resource
+    {icon:dice_hit_black}: Gain 1 resource.
 
-    {icon:dice_hit_black}: gain 1 resource.
+    {icon:dice_hit_black} {icon:dice_hit_black}: Take one action 2 times.
 
-    {icon:dice_hit_black} {icon:dice_hit_black}: take any action
+    {icon:dice_hit_black} {icon:dice_hit_black} {icon:dice_hit_black}: Place 3 ships in any system.
 
-    {icon:dice_hit_black} {icon:dice_hit_black} {icon:dice_hit_black}: take any action
+    {icon:dice_hit_black} {icon:dice_hit_black} {icon:dice_hit_black} {icon:dice_hit_black}: Steal 4 resources.
 
-    {icon:dice_hit_black} {icon:dice_hit_black} {icon:dice_hit_black} {icon:dice_hit_black}: All of the above
+    {icon:dice_hit_black} {icon:dice_hit_black} {icon:dice_hit_black} {icon:dice_hit_black} {icon:dice_hit_black}: Roll 5 skirmish dice for this again.
 
-    *Fated.* You must use the rolled effect.'
+    *Luckless.* If you roll 0 icons, discard 1 resource.'
   resources:
-  - Relic
   - Weapon
+  - Relic
   setup:
     A:
       ships: 3
@@ -2340,7 +2340,7 @@
     C:
       ships: 2
       building: None
-  body_font_size: 18
+  body_font_size: 17
 
 - name: Smokecaller
   abilities: '*Shrouding.* When defending in **battle**, the attacker collects 1 fewer die.
