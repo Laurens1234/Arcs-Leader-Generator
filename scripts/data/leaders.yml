@@ -2368,7 +2368,7 @@
 - name: Dragon
   abilities: '*Descending.* After you **move** into a planet, damage up to 2 Rival ships there.
 
-    *Cumbersome.* Each turn, you cannot **move** into or from the same planet more than once.'
+    *Cumbersome.* Each turn, you cannot **move** into or from a planet more than once.'
   resources:
   - Psionic
   - Fuel
