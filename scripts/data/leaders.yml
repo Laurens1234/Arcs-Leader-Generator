@@ -2483,25 +2483,8 @@
   
     *Profiteering.* When another player is attacking in **battle**, before they roll, they may give you a resource be able to to re-roll any dice.'
   resources:
-  - Fuel
   - Weapon
-  setup:
-    A:
-      ships: 3
-      building: city
-    B:
-      ships: 3
-      building: starport
-    C:
-      ships: 2
-      building: None
-  body_font_size: 18
-
-- name: zg
-  abilities: '*Organized.* You may scrap 3 agents from your supply to prevent outrage.'
-  resources:
   - Material
-  - Relic
   setup:
     A:
       ships: 3
@@ -2514,30 +2497,13 @@
       building: None
   body_font_size: 18
 
-- name: zg Veteran
-  abilities: '*Experienced.* In **battle**, you may reroll one die.
+- name: Veteran
+  abilities: '*Seasoned .* When attacking in **battle**, you may re-roll 1 die. If after re-rolling it has the same face, activate this ability again.
 
-    *Cautious.* .'
+    *Prudent.* You cannot initiate a **battle** against a fleet that has at least twice as many ships as your attacking fleet.'
   resources:
-  - Relic
+  - Weapon
   - Fuel
-  setup:
-    A:
-      ships: 3
-      building: city
-    B:
-      ships: 3
-      building: starport
-    C:
-      ships: 2
-      building: None
-  body_font_size: 18
-
-- name: zh
-  abilities: '*Precognitive.* Before you collect a die, you may roll it to see its outcome and choose not to collect it. If you choose not to collect it, it can be collected by another ship instead, but the ship that collected it cannot be used to collect again.'
-  resources:
-  - Psionic
-  - Relic
   setup:
     A:
       ships: 3
