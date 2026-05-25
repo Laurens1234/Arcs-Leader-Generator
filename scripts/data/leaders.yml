@@ -1717,8 +1717,9 @@
       building: None
   body_font_size: 18
 - name: Abomination
-  abilities: '*Frenzied.* When you **play a card** face up, you may discard an action card to
-    take twice as many actions with your played card.
+  abilities: '*Frenzied.* When you **Copy** or **Pivot**, you may discard an action card to
+    triple your pips this turn. When you **Surpass**, you may discard an action card to
+    double your pips this turn.
 
     *Possessed.* When you **declare** **an** **ambition** or use *Frenzied*, reveal your entire hand.'
   resources:
@@ -2102,7 +2103,7 @@
 - name: Vessel
   abilities: '*Mimetic.* **Prelude:** You may return a Captive or Trophy to a Rival to use all of the non-discard abilities on all cards they have this turn.
 
-    *Identityless.* You cannot use **new** **actions** on cards you have while Leading.'
+    *Identityless.* Only players with less Power than you can use **new** **actions** on cards you have. To do so yourself, return a Captive or Trophy to the Rival player a Rival with the least Power.'
   resources:
   - Psionic
   - Weapon
@@ -2318,15 +2319,15 @@
 
     - 1 {icon:dice_hit_black}: Gain 1 resource.
 
-    - 2 {icon:dice_hit_black}: Take one action 2 times.
+    - 2 {icon:dice_hit_black}: Take one action on the lead card 2 times.
 
-    - 3 {icon:dice_hit_black}: Place 3 ships in any system.
+    - 3 {icon:dice_hit_black}: Place 3 ships in any gate.
 
-    - 4 {icon:dice_hit_black}: Steal 4 resources.
+    - 4 {icon:dice_hit_black}: Steal 4 resources from one player.
 
     - 5 {icon:dice_hit_black}: Roll 5 skirmish dice for this ability again.
 
-    *Luckless.* If you roll 0 icons, discard 1 resource.'
+    *Cursed.* If you roll 0 icons, discard 6 resources.'
   resources:
   - Weapon
   - Relic
