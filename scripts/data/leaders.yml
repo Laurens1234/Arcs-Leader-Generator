@@ -2103,7 +2103,7 @@
 - name: Vessel
   abilities: '*Mimetic.* **Prelude:** You may return a Captive or Trophy to a Rival to use all of the non-discard abilities on all cards they have this turn.
 
-    *Identityless.* Only players with less Power than you can use **new** **actions** on cards you have. To do so yourself, return a Captive or Trophy to the Rival player a Rival with the least Power.'
+    *Identityless.* Only players with less Power than you can use **new** **actions** on cards you have. To do so yourself, use *Mimetic* on any of those players'
   resources:
   - Psionic
   - Weapon
@@ -2118,6 +2118,7 @@
       ships: 2
       building: None
   body_font_size: 18
+
 - name: Conqueror
   abilities: '*Relentless.* You can use any **pip** to battle.
 
