@@ -1557,7 +1557,7 @@
       building: None
   body_font_size: 18
 - name: Champion
-  abilities: '*Victorious.* When you **win an ambition**, place 3 ships in a matching
+  abilities: '*Victorious.* In **clean up**, for each ambition you won this chapter, place 3 ships in a matching
     system or gate, or gain 2 matching resources.
 
     *Humbled.* When you **get second place**, discard a resource matching that
@@ -2478,11 +2478,13 @@
       building: None
   body_font_size: 18
 
-- name: zf
-  abilities: '*.* You may allow other players to give you a resource to roll any of their dice in **battle**. You may do this by giving the defender a resource. You must allow this if you have no resources.'
+- name: Armsdealer
+  abilities: '*Well-Stocked.* When attacking in **battle**, you may discard a resource to reroll any dice.
+  
+    *Profiteering.* When another player is attacking in **battle**, before they roll, they may give you a resource be able to to re-roll any dice.'
   resources:
-  - Psionic
-  - Material
+  - Fuel
+  - Weapon
   setup:
     A:
       ships: 3
