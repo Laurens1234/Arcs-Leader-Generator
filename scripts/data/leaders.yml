@@ -2402,9 +2402,9 @@
   body_font_size: 18
 
 - name: Poltergeist
-  abilities: '*Rupturing.* When attacking in **battle**, when you destroy a ship, damage any other ship in the battle system.
+  abilities: '*Rupturing.* When attacking in **battle**, when you destroy a ship, damage any fresh Rival ship in the battle system.
   
-    *Indiscriminate.* When attacking in **battle**, after you destroy the last defending ship, destroy a Loyal attacking ship.'
+    *Indiscriminate.* When attacking in **battle**, after you destroy the last defending ship, destroy an attacking ship.'
   resources:
   - Weapon
   - Psionic
@@ -2425,7 +2425,7 @@
     
     *Isolated.* In **clean up**, damage 1 Loyal ship in each system where you have exactly 1 ship.'
   resources:
-  - Psionic
+  - Material
   - Fuel
   setup:
     A:
@@ -2435,17 +2435,18 @@
       ships: 3
       building: starport
     C:
-      ships: 2
+      ships: 3
       building: None
   body_font_size: 18
   zoom: 1.15
 
-- name: zd
-  abilities: '*Manipulative.* After any building on a planet is destroyed, gain 1 matching resource.
-      '
+- name: Instigator
+  abilities: '*Seditious.* After any building is **destroyed**, gain 1 matching resource.
+
+      *Disavowed.* When one of your buildings is **destroyed**, discard all matching resources.'
   resources:
   - Psionic
-  - Relic
+  - Weapon
   setup:
     A:
       ships: 3
@@ -2458,10 +2459,12 @@
       building: None
   body_font_size: 18
 
-- name: ze Replicator
-  abilities: '*Duplicating.* **Prelude:** You may discard a resource to create a temporary copy of one of your ships in its system. Return it after your turn.'
+- name: Replicator 
+  abilities: '*Conjuring .* **Prelude:** You may spend a resource to place a temporary version of one of your ships in a system with a Loyal piece. Return it after your turn.
+
+    *Hollow.* In **setup**, scrap 3 Loyal ships.'
   resources:
-  - Material
+  - Psionic
   - Psionic
   setup:
     A:
@@ -2476,7 +2479,7 @@
   body_font_size: 18
 
 - name: zf
-  abilities: '*Guiding.* You may allow other players to give you a resource to roll any of their dice in **battle**. You may do this by giving the defender a resource. You must allow this if you have no resources.'
+  abilities: '*.* You may allow other players to give you a resource to roll any of their dice in **battle**. You may do this by giving the defender a resource. You must allow this if you have no resources.'
   resources:
   - Psionic
   - Material
