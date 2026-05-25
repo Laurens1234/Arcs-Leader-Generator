@@ -1308,7 +1308,7 @@
   body_font_size: 18
 - name: Shaman
   abilities: '*Holistic.* When you **declare** **an** **ambition**, you may repair
-    any of your pieces.
+    all of your pieces.
 
     *Ritualistic.* When you **repair** a piece, you may damage a Rival piece in its system.
 
@@ -2856,6 +2856,7 @@
 # skirmish  the attacker collects 1 fewer battle die.
 # assault  you automatically intercept.
 # raid  the attacker gets 1 fewer key.
+# in the next battle against you a die type rolled in the previous can not be rolled at all now.?
 # Sequential
 # . You cannot gain the same adaptation twice in a row.
 
