@@ -2814,6 +2814,141 @@
       building: None
   body_font_size: 18
 
+- name: zy 
+  abilities: '*Swift.* When you **move**, move to a system 2 away instead of 1, including after each Catapult **move**.'
+  resources:
+  - Fuel
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: zz Surveyor
+  abilities: '*Expansive.* When you **build** a building, you may place it on an intersection with an adjacent planet. If you do, gain a resource matching that adjacent planet. Each intersection can have at most 1 building. Buildings on intersections are on both planets.'
+  resources:
+  - Material
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 17
+
+- name: zz1 Patron
+  abilities: '*Committed.* When you **declare** **an** **ambition**, you may spend resources matching its type for the rest of the chapter.'
+  resources:
+  - Relic
+  - Material
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: zz2 Highroller
+  abilities: '*Swingy.* Before collecting dice in **battle**, you may roll the 6-sided die. You must collect dice equal to its result.'
+  resources:
+  - Weapon
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: zz3 Cat
+  abilities: '*Vengeful.* The first time each chapter your last ship in a battle system would be destroyed, destroy 1 Rival ship there instead and repair your ship.
+
+    *Arrogant.* You cannot retreat.'
+  resources:
+  - Weapon
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: zz4 Jester
+  abilities: '*Entertaining.* At the start of **battle**, roll the 6-sided die:
+
+    1: Collect 1 extra die.
+
+    2: Ignore the first self-damage.
+
+    3: Deal 1 hit.
+
+    4: Gain 1 extra key.
+
+    5: Double your building hits.
+
+    6: Repair all your ships in the battle.'
+  resources:
+  - Psionic
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 17
+
+- name: zz5 Underdog
+  abilities: '*Scrappy.* At the end of **battle**, if you have the fewest Trophies, destroy 1 Rival ship in the battle system.
+
+    *Opportunistic.* When you capture any number of agents, if you have the fewest Captives, capture 1 agent from a Rival supply.'
+  resources:
+  - Weapon
+  - Psionic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
 
 
 # when you declare an ambition, you may discard all your resources and return a Loyal city from the map, to gain 2 resources matching that city.
@@ -2861,4 +2996,3 @@
 # . You cannot gain the same adaptation twice in a row.
 
 # build a city on a guild card
-Shaman
