@@ -585,7 +585,7 @@
     return any number of Trophies to the defender; deal 1 hit for each.
 
     *Insatiable.* Before **scoring**, if you have no cities as Trophies, destroy a
-    City you control.'
+    city you control.'
   resources:
   - Weapon
   - Fuel
@@ -803,7 +803,7 @@
   zoom: 1
   boundary_shift: 0.25
 - name: Nomad
-  abilities: '*Unadorned.* While you **have** **the** **fewest** **resources**, you may tax starports in systems with loyal pieces like cities. You ignore the tax limit when taxing starports.
+  abilities: '*Unadorned.* While you **have** **the** **fewest** **resources**, you may tax starports in systems with Loyal pieces like cities. You ignore the tax limit when taxing starports.
 
     *Appeasing.* When you **tax** a Rival city, they gain 1 resource of your choice.'
   resources:
@@ -2042,9 +2042,9 @@
   body_font_size: 18
 
 - name: Bulwark
-  abilities: '*Immortal.* **Prelude:** You may discard a resource onto here, 
-    then roll 6-"resources on here" (≥1) skirmish dice. If all {icon:dice_hit_black}, 
-    gain all resources here. Until your next turn: your ships instantly repair if damaged, 
+  abilities: '*Immortal.* **Prelude:** You may discard a resource onto here,
+    then roll 6-"resources on here" (≥1) skirmish dice. If all {icon:dice_hit_black},
+    gain all resources here. Until your next turn: your ships instantly repair if damaged,
     your pips let you battle, and you can spend resources as any type.
 
     *Confident.* You cannot **spend** resources for normal Prelude actions.'
@@ -2403,7 +2403,7 @@
 
 - name: Poltergeist
   abilities: '*Rupturing.* When attacking in **battle**, when you destroy a ship, damage any fresh Rival ship in the battle system.
-  
+
     *Indiscriminate.* When attacking in **battle**, after you destroy the last defending ship, destroy an attacking ship.'
   resources:
   - Weapon
@@ -2422,7 +2422,7 @@
 
 - name: Homesteader
   abilities: '*Resettling.* Once per turn, before you **move** from a system, you may take any number of move actions from adjacent systems into it first, then take any number of non-Catapult move actions from it.
-    
+
     *Isolated.* In **clean up**, damage 1 Loyal ship in each system where you have exactly 1 ship.'
   resources:
   - Material
@@ -2443,7 +2443,7 @@
 - name: Instigator
   abilities: '*Seditious.* After any building is **destroyed**, gain 1 matching resource.
 
-      *Disavowed.* When one of your buildings is **destroyed**, discard all matching resources.'
+    *Disavowed.* When one of your buildings is **destroyed**, discard all matching resources.'
   resources:
   - Psionic
   - Weapon
@@ -2459,10 +2459,10 @@
       building: None
   body_font_size: 18
 
-- name: Replicator 
-  abilities: '*Conjuring .* **Prelude:** You may spend a resource to place a temporary version of one of your ships in a system with a Loyal piece. Return it after your turn.
+- name: Replicator
+  abilities: '*Conjuring.* **Prelude:** You may spend a resource to place a conjurable ship in any system. Return it to your supply at the start of your next turn.
 
-    *Hollow.* In **setup**, scrap 3 Loyal ships.'
+    *Hollow.* In **setup**, scrap 3 Loyal ships. Obtain a supply of 3 conjurable ships. They act exactly like your Loyal ships.'
   resources:
   - Psionic
   - Psionic
@@ -2480,8 +2480,8 @@
 
 - name: Armsdealer
   abilities: '*Well-Stocked.* When attacking in **battle**, you may discard a resource to reroll any dice.
-  
-    *Profiteering.* When another player is attacking in **battle**, before they roll, they may give you a resource be able to to re-roll any dice.'
+
+    *Profiteering.* When another player is attacking in **battle**, before they roll, they may give you a resource to reroll any dice.'
   resources:
   - Weapon
   - Material
@@ -2498,7 +2498,7 @@
   body_font_size: 18
 
 - name: Veteran
-  abilities: '*Seasoned .* When attacking in **battle**, you may re-roll 1 die. If after re-rolling it has the same face, activate this ability again.
+  abilities: '*Seasoned.* When attacking in **battle**, you may re-roll 1 die. If after re-rolling it has the same face, activate this ability again.
 
     *Prudent.* You cannot initiate a **battle** against a fleet that has at least twice as many ships as your attacking fleet.'
   resources:
@@ -2845,7 +2845,7 @@
 # Judge When defending in battle, at the start, if the attacker has any of your trophies,
 # they must either return them or provoke outrage of the battle system's Type.
 
-# Speedster: You may use any pip to move 
+# Speedster: You may use any pip to move
 # In battle, collect 1 extra die for each move action this turn Downside: idk
 
 # Wheelbearer
