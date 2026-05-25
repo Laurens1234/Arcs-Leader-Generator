@@ -2314,17 +2314,17 @@
   body_font_size: 18
 
 - name: Prospector
-  abilities: '*Opportunistic.* When you **declare** **an** **ambition**, roll 1 skirmish die per ambition you are winning, declared or not. Gain each reward with your total {icon:dice_hit_black} or fewer:
+  abilities: '*Opportunistic.* When you **declare** **an** **ambition**, roll 1 skirmish die + 1 more per ambition you are winning, declared or not. Gain each reward at your total {icon:dice_hit_black} or fewer:
 
-    {icon:dice_hit_black}: Gain 1 resource.
+    - 1 {icon:dice_hit_black}: Gain 1 resource.
 
-    {icon:dice_hit_black} {icon:dice_hit_black}: Take one action 2 times.
+    - 2 {icon:dice_hit_black}: Take one action 2 times.
 
-    {icon:dice_hit_black} {icon:dice_hit_black} {icon:dice_hit_black}: Place 3 ships in any system.
+    - 3 {icon:dice_hit_black}: Place 3 ships in any system.
 
-    {icon:dice_hit_black} {icon:dice_hit_black} {icon:dice_hit_black} {icon:dice_hit_black}: Steal 4 resources.
+    - 4 {icon:dice_hit_black}: Steal 4 resources.
 
-    {icon:dice_hit_black} {icon:dice_hit_black} {icon:dice_hit_black} {icon:dice_hit_black} {icon:dice_hit_black}: Roll 5 skirmish dice for this again.
+    - 5 {icon:dice_hit_black}: Roll 5 skirmish dice for this ability again.
 
     *Luckless.* If you roll 0 icons, discard 1 resource.'
   resources:
