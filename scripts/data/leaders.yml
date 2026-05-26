@@ -2404,9 +2404,9 @@
   body_font_size: 18
 
 - name: Poltergeist
-  abilities: '*Rupturing.* When attacking in **battle**, when you destroy a ship, damage any fresh Rival ship in the battle system.
+  abilities: '*Rupturing.* When attacking in **battle**, when you destroy a ship, damage a fresh ship in the battle system.
 
-    *Indiscriminate.* When attacking in **battle**, after you destroy the last defending ship, destroy an attacking ship.'
+    *Indiscriminate.* When attacking in **battle**, after you destroy the last defending ship, destroy a fresh attacking ship.'
   resources:
   - Weapon
   - Psionic
@@ -2425,7 +2425,7 @@
 - name: Homesteader
   abilities: '*Resettling.* Once per turn, before you **move** from a system, you may take any number of move actions from adjacent systems into it first, then take any number of non-Catapult move actions from it.
 
-    *Isolated.* In **clean up**, damage 1 Loyal ship in each system where you have exactly 1 ship.'
+    *Isolated.* In **clean up**, return 1 Loyal ship in each system where you have exactly 1 ship.'
   resources:
   - Material
   - Fuel
@@ -2462,11 +2462,11 @@
   body_font_size: 18
 
 - name: Replicator
-  abilities: '*Conjuring.* **Prelude:** You may spend a resource to place a conjurable ship in any system. Return it to your supply at the start of your next turn.
+  abilities: '*Conjuring.* **Prelude:** You may spend a resource to place a conjured ship in any system. Return it to your supply at the start of your next turn.
 
     *Hollow.* In **setup**, scrap 3 Loyal ships. Obtain a supply of 3 conjurable ships. They act exactly like your Loyal ships.'
   resources:
-  - Psionic
+  - Material
   - Psionic
   setup:
     A:
@@ -2483,7 +2483,7 @@
 - name: Armsdealer
   abilities: '*Well-Stocked.* When attacking in **battle**, you may discard a resource to reroll any dice.
 
-    *Profiteering.* When another player is attacking in **battle**, before they roll, they may give you a resource to reroll any dice.'
+    *Profiteering.* When another player is attacking in **battle**, before they roll, they may give you a resource to be able to reroll any dice.'
   resources:
   - Weapon
   - Material
