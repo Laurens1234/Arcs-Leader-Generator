@@ -1986,7 +1986,7 @@
   abilities: '*Ravenous.* In **battle**, each {icon:dice_intercept_black} you
     roll also counts as {icon:dice_hit_black} {icon:dice_hit_black}.
 
-     *Raging.* In **battle**, you cannot collect fewer assault dice than skirmish dice.'
+    *Raging.* In **battle**, you cannot collect fewer assault dice than skirmish dice.'
   resources:
   - Weapon
   - Fuel
@@ -2198,7 +2198,7 @@
   body_font_size: 18
 
 - name: Wretch
-  abilities: '*Vengeful.* In **battle**, collect 1 extra die per damaged attacking ship
+  abilities: '*Vengeful.* In **battle**, collect 1 extra die per damaged attacking ship.
 
     *Shackled.* Your damaged ships cannot **move** into Rival-controlled gates.'
   resources:
@@ -2404,9 +2404,9 @@
   body_font_size: 18
 
 - name: Poltergeist
-  abilities: '*Rupturing.* When attacking in **battle**, when you destroy a Rival piece, roll a skirmish die, if you roll {icon:dice_hit_black}, hit any piece in the battle system.
+  abilities: '*Rupturing.* When attacking in **battle**, when you destroy a Rival piece, roll a skirmish die. If you roll {icon:dice_hit_black}, hit any piece in the battle system.
 
-    *Indiscriminate.* When attacking in **battle**, after you destroy the last defending piece, roll another skirmish die, if you roll {icon:dice_hit_black}, hit an attacking piece in the battle system.'
+    *Indiscriminate.* When attacking in **battle**, after you destroy the last defending piece, roll another skirmish die. If you roll {icon:dice_hit_black}, hit an attacking piece in the battle system.'
   resources:
   - Weapon
   - Psionic
@@ -2462,9 +2462,9 @@
   body_font_size: 18
 
 - name: Replicator
-  abilities: '*Conjuring.* **Prelude:** You may spend a resource to place a conjured ship in any system. Return it to your supply at the start of your next turn.
+  abilities: '*Conjuring.* Any number of times per turn, you may spend a pip or discard a resource to place a conjurable ship in any system.
 
-    *Hollow.* In **setup**, scrap 3 Loyal ships. Obtain a supply of 3 conjurable ships. They act exactly like your Loyal ships, except they cannot be **taken** from their supply except by being conjured.'
+    *Hollow.* In **setup**, scrap 3 Loyal ships. Obtain a supply of 3 conjurable ships. They act exactly like your Loyal ships, except for them returning to your supply at the start of your turn.'
   resources:
   - Material
   - Psionic
