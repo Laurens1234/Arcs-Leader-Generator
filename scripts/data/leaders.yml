@@ -2404,9 +2404,9 @@
   body_font_size: 18
 
 - name: Poltergeist
-  abilities: '*Rupturing.* When attacking in **battle**, when you destroy a ship, damage a fresh ship in the battle system.
+  abilities: '*Rupturing.* When attacking in **battle**, when you destroy a defending ship, damage any fresh ship in the battle system.
 
-    *Indiscriminate.* When attacking in **battle**, after you destroy the last defending ship, destroy a fresh attacking ship.'
+    *Indiscriminate.* When attacking in **battle**, after you destroy the last defending ship, damage an attacking ship.'
   resources:
   - Weapon
   - Psionic
