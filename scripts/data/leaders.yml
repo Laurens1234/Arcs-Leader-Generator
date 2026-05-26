@@ -168,7 +168,7 @@
     1.
 
     *Starving.* In **scoring**, if Warlord is declared and you don''t win it, scrap
-    3 Loyal ships.'
+    2 Loyal ships. If Warlord was not declared this chapter, scrap 1 ship from your supply.'
   resources:
   - Weapon
   - Material
