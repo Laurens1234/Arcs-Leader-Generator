@@ -302,7 +302,7 @@
 
     *Immunized.* If you **have the initiative** you don''t Provoke Outrage.
 
-    *Fair.* Before **scoring**, the Rival with the least Power may take a resource
+    *Fair.* Before **scoring**, your Rival with the least Power may take a resource
     or 3 Power from you.'
   resources:
   - Psionic
@@ -803,9 +803,9 @@
   zoom: 1
   boundary_shift: 0.25
 - name: Nomad
-  abilities: '*Unadorned.* While you **have** **the** **fewest** **resources**, you may tax starports in systems with Loyal pieces like cities. You ignore the tax limit when taxing starports.
+  abilities: '*Unadorned.* While you don''t have **more** **resources** **than** **each** **Rival**, you may tax starports in systems with Loyal pieces like cities. You ignore the tax limit when taxing starports.
 
-    *Appeasing.* When you **tax** a Rival city, they gain 1 resource of your choice.'
+    *Appeasing.* When you **tax** a Rival city, its owner gains 1 resource of your choice.'
   resources:
   - Material
   - Fuel
@@ -2103,7 +2103,7 @@
 - name: Vessel
   abilities: '*Mimetic.* **Prelude:** You may return a Captive or Trophy to a Rival to use all of the non-discard abilities on all cards they have this turn.
 
-    *Identityless.* Only players with less Power than you can use **new** **actions** on cards you have. To do so yourself, use *Mimetic* on any of those players'
+    *Identityless.* Only players with less Power than you can use **new** **actions** on your cards. You can only use them yourself if you used *Mimetic* on your Rival with the least Power this turn.'
   resources:
   - Psionic
   - Weapon
@@ -2320,11 +2320,11 @@
 
     - 1 {icon:dice_hit_black}: Gain 1 resource.
 
-    - 2 {icon:dice_hit_black}: Take one action on the lead card 2 times.
+    - 2 {icon:dice_hit_black}: Take one action 2 times.
 
     - 3 {icon:dice_hit_black}: Place 3 ships in any gate.
 
-    - 4 {icon:dice_hit_black}: Steal 4 resources from one player.
+    - 4 {icon:dice_hit_black}: Steal 4 resources.
 
     - 5 {icon:dice_hit_black}: Roll 5 skirmish dice for this ability again.
 
@@ -2404,9 +2404,9 @@
   body_font_size: 18
 
 - name: Poltergeist
-  abilities: '*Rupturing.* When attacking in **battle**, when you destroy a defending ship, damage any fresh ship in the battle system.
+  abilities: '*Rupturing.* When attacking in **battle**, when you destroy a Rival piece, roll a skirmish die, if you roll {icon:dice_hit_black}, hit any piece in the battle system.
 
-    *Indiscriminate.* When attacking in **battle**, after you destroy the last defending ship, damage an attacking ship.'
+    *Indiscriminate.* When attacking in **battle**, after you destroy the last defending piece, roll another skirmish die, if you roll {icon:dice_hit_black}, hit an attacking piece in the battle system.'
   resources:
   - Weapon
   - Psionic
@@ -2425,7 +2425,7 @@
 - name: Homesteader
   abilities: '*Resettling.* Once per turn, before you **move** from a system, you may take any number of move actions from adjacent systems into it first, then take any number of non-Catapult move actions from it.
 
-    *Isolated.* In **clean up**, return 1 Loyal ship in each system where you have exactly 1 ship.'
+    *Isolated.* In **clean up**, return 1 Loyal ship from each system where you have exactly 1 ship.'
   resources:
   - Material
   - Fuel
@@ -2464,7 +2464,7 @@
 - name: Replicator
   abilities: '*Conjuring.* **Prelude:** You may spend a resource to place a conjured ship in any system. Return it to your supply at the start of your next turn.
 
-    *Hollow.* In **setup**, scrap 3 Loyal ships. Obtain a supply of 3 conjurable ships. They act exactly like your Loyal ships.'
+    *Hollow.* In **setup**, scrap 3 Loyal ships. Obtain a supply of 3 conjurable ships. They act exactly like your Loyal ships, except they cannot be **taken** from their supply except by being conjured.'
   resources:
   - Material
   - Psionic
