@@ -2500,7 +2500,7 @@
   body_font_size: 18
 
 - name: Veteran
-  abilities: '*Seasoned.* When attacking in **battle**, you may re-roll 1 die. If after re-rolling it has the same face, activate this ability again.
+  abilities: '*Seasoned.* When attacking in **battle**, you may reroll 1 die. If after rerolling it has the same face, activate this ability again.
 
     *Prudent.* You cannot initiate a **battle** against a fleet that has at least twice as many ships as your attacking fleet.'
   resources:
