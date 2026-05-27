@@ -2462,7 +2462,7 @@
   body_font_size: 18
 
 - name: Replicator
-  abilities: '*Conjuring.* Any number of times per turn, you may spend a pip or discard a resource to place a conjurable ship in any system.
+  abilities: '*Conjuring.* Up to 3 times per turn, you may spend a pip or discard a resource to place a conjurable ship in any system.
 
     *Hollow.* In **setup**, scrap 3 Loyal ships. Obtain a supply of 3 conjurable ships. They act exactly like your Loyal ships, except for them returning to your supply at the start of your turn.'
   resources:
@@ -2483,7 +2483,7 @@
 - name: Armsdealer
   abilities: '*Well-Stocked.* When attacking in **battle**, you may discard a resource to reroll any dice.
 
-    *Profiteering.* When another player is attacking in **battle**, before they roll, they may give you a resource to be able to reroll any dice.'
+    *Profiteering.* When a Rival player is attacking in **battle**, before they roll, they may give you a resource to be able to reroll any dice.'
   resources:
   - Weapon
   - Material
@@ -2518,8 +2518,10 @@
       building: None
   body_font_size: 18
 
-- name: zi Evader
-  abilities: '*Evasive.* When defending in **battle**, after the attacker collects dice, you may move half your defending ships to an adjacent system, removing them from the battle.'
+- name: Evader
+  abilities: '*Elusive.* When defending in **battle**, after the attacker collects dice, you may move half your defending ships to an adjacent system, removing them from the battle.
+
+    *Skittish.* When attacking in **battle**, you cannot collect assault dice unless you have more ships in the battle system than the defender.'
   resources:
   - Fuel
   - Psionic
@@ -2535,29 +2537,11 @@
       building: None
   body_font_size: 18
 
-- name: zj Clockmaker
-  abilities: '*Delaying.* (Once per turn, you may postpone an action or battle until the end of the round. ?) You may spend resources for it at the end of the round?
+- name: Mathematician
+  abilities: '*Analytical.* Before rolling dice in **battle**, choose a prime number (2, 3, 5, 7...). 
+    After rolling, if your total number of rolled icons equals it, gain any resource and repair an attacking ship.
 
-    *Rigid.* You cannot change postponed decisions later.'
-  resources:
-  - Relic
-  - Psionic
-  setup:
-    A:
-      ships: 3
-      building: city
-    B:
-      ships: 3
-      building: starport
-    C:
-      ships: 2
-      building: None
-  body_font_size: 18
-
-- name: zk Mathematician
-  abilities: '*Calculating.* Before rolling dice in **battle**, declare an exact number of hits. If you are correct, gain any resource and collect 1 extra die.
-
-    *Precise.* If you are incorrect, idk.'
+    *Overcalculating.* After rolling dice in **battle**, if your total number of rolled icons is composite (4, 6, 8, 9...), damage an attacking ship.'
   resources:
   - Psionic
   - Material
@@ -2572,6 +2556,7 @@
       ships: 2
       building: None
   body_font_size: 18
+  zoom: 1.18
 
 - name: zl Tyrant
   abilities: '*Demanding.* When you **declare** **an** **ambition**, choose a Rival. They must take a move, build, battle, tax, repair, or influence action if able. They may give you a bribe to ignore during this.
