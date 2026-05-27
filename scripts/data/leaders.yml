@@ -502,10 +502,10 @@
       building: None
   body_font_size: 18
 - name: Augur
-  abilities: '*Baneful.* When you **secure** a card, you may bury it to secure the
-    top card of the deck instead.
+  abilities: '*Baneful.* When you **secure** a card, you may bury it to draw 2 cards from the
+    top of the Court deck instead. Secure 1 and bury the other.
 
-    *Accursed.* After you **secure** a card, discard a matching resource.'
+    *Accursed.* After you **secure** a card, if you already had a card or resource matching its type, discard 1 of its type.'
   resources:
   - Psionic
   - Relic
@@ -517,7 +517,7 @@
       ships: 3
       building: starport
     C:
-      ships: 3
+      ships: 2
       building: None
   body_font_size: 18
   zoom: 1.2
@@ -1580,7 +1580,7 @@
   abilities: '*Endorsed.* After you **destroy** a starport, Ransack the Court like you
     destroyed a city.
 
-    *Sanctioned.* When you **destroy** a city, don''t Ransack the Court.'
+    *Sanctioned.* When you **destroy** a city, return it and don''t Ransack the Court.'
   resources:
   - Relic
   - Weapon
@@ -1592,7 +1592,7 @@
       ships: 3
       building: starport
     C:
-      ships: 2
+      ships: 3
       building: None
   body_font_size: 18
   zoom: 1.15
@@ -1908,7 +1908,7 @@
   abilities: '*Exemplary.* When you **Pivot** and play a card of equal rank to the Lead
     card, you may use all pips on your played card.
 
-    *Immutable.* You cannot **Pivot** with cards of a different rank from the Lead card.'
+    *Immutable.* You cannot **Pivot** with cards of a lower rank than the Lead card.'
   resources:
   - Psionic
   - Relic
