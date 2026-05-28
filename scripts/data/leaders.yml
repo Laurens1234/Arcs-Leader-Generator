@@ -302,10 +302,9 @@
 
     *Immunized.* If you **have the initiative** you don''t Provoke Outrage.
 
-    *Fair.* Before **scoring**, your Rival with the least Power may take a resource
-    or 3 Power from you.'
+    *Fair.* After **scoring**, the player with the least Power takes 3 Power from you.'
   resources:
-  - Psionic
+  - Weapon
   - Material
   setup:
     A:
@@ -927,12 +926,12 @@
   body_font_size: 18
 - name: Custodian
   abilities: '*Vigilant.* When a Rival **moves** into a gate you control, gain 1 resource
-    matching any city in that gate''s cluster.
+    matching any planet in that gate''s cluster.
 
     *Heedless.* After damaged Rival ships **move** into a gate you control, those ships may
     move again.'
   resources:
-  - Material
+  - Relic
   - Fuel
   setup:
     A:
@@ -1095,7 +1094,7 @@
     *Territorial.* When you **move** out of a planet, if it''s left empty, place a
     building there.'
   resources:
-  - Material
+  - Relic
   - Fuel
   setup:
     A:
@@ -1252,7 +1251,7 @@
   abilities: '*Lethal.* After you **influence**, if you have the most agents on the
     card, you destroy 1 Rival agent on it.
 
-    *Bloodthirsty.* If you have a Loyal agent on a card with a Rival agent, you can **influence** only cards with Rival agents on them.'
+    *Bloodthirsty.* If you have a Loyal agent on a card with a Rival agent, you can only **influence** cards with Rival agents on them.'
   resources:
   - Weapon
   - Psionic
@@ -1564,7 +1563,7 @@
     ambition.'
   resources:
   - Relic
-  - Fuel
+  - Weapon
   setup:
     A:
       ships: 3
@@ -1660,7 +1659,7 @@
     *Resisted.* If you have exactly 1 ship in a system, it doesn''t count for control.'
   resources:
   - Psionic
-  - Fuel
+  - Relic
   setup:
     A:
       ships: 3
@@ -1945,7 +1944,7 @@
 - name: Purist
   abilities: '*Peaceful.* When attacking in **battle**, you may ignore the result of any die if the same face appears on another die you rolled.
 
-    *Minimalistic.* In **clean up**, discard resources until you only have 1 resource of each type.'
+    *Minimalistic.* In **clean up**, discard resources until you only have 1 resource of each type on your player board.'
   resources:
   - Psionic
   - Fuel
@@ -2404,9 +2403,9 @@
   body_font_size: 18
 
 - name: Poltergeist
-  abilities: '*Rupturing.* When attacking in **battle**, when you destroy a Rival piece, roll a skirmish die. If you roll {icon:dice_hit_black}, hit any piece in the battle system.
+  abilities: '*Rupturing.* In any **battle** with you, when you destroy a Rival piece, roll a skirmish die. If you roll {icon:dice_hit_black}, hit any piece in the battle system.
 
-    *Indiscriminate.* When attacking in **battle**, after you destroy the last defending piece, roll another skirmish die. If you roll {icon:dice_hit_black}, hit an attacking piece in the battle system.'
+    *Indiscriminate.* In any **battle** with you, after you destroy the last Rival piece in the battle syste, roll a skirmish die. If you roll {icon:dice_hit_black}, hit an Loyal piece in the battle system.'
   resources:
   - Weapon
   - Psionic
@@ -2443,11 +2442,11 @@
   zoom: 1.15
 
 - name: Instigator
-  abilities: '*Seditious.* After any building is **destroyed**, gain 1 matching resource.
+  abilities: '*Seditious.* After any building is **destroyed**, gain 1 resource.
 
-    *Disavowed.* When one of your buildings is **destroyed**, discard all matching resources.'
+    *Disavowed.* When one of your buildings is **destroyed**, discard all your matching resources.'
   resources:
-  - Psionic
+  - Relic
   - Weapon
   setup:
     A:
@@ -2500,7 +2499,7 @@
   body_font_size: 18
 
 - name: Veteran
-  abilities: '*Seasoned.* When attacking in **battle**, you may reroll 1 die. If after rerolling it has the same face, activate this ability again.
+  abilities: '*Seasoned.* When attacking in **battle**, you may reroll 1 die. If after rerolling it has {icon:dice_self_hit_black} or nothing on it, activate this ability again.
 
     *Prudent.* You cannot initiate a **battle** against a fleet that has at least twice as many ships as your attacking fleet.'
   resources:
@@ -2538,13 +2537,12 @@
   body_font_size: 18
 
 - name: Mathematician
-  abilities: '*Analytical.* Before rolling dice in **battle**, choose a prime number (2, 3, 5, 7...). 
-    After rolling, if your total number of rolled icons equals it, gain any resource and repair an attacking ship.
+  abilities: '*Analytical.* In **battle**, if your number of rolled icons you roll is a prime number (2, 3, 5, 7...) add a {icon:dice_hit_black} to your roll and repair an attacking ship.
 
-    *Overcalculating.* After rolling dice in **battle**, if your total number of rolled icons is composite (4, 6, 8, 9...), damage an attacking ship.'
+    *Overcalculating.* In **battle**, if your number of rolled icons you roll is composite number (4, 6, 8, 9...), damage an attacking ship..'
   resources:
-  - Psionic
-  - Material
+  - Weapon
+  - Relic
   setup:
     A:
       ships: 3
