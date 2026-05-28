@@ -2422,7 +2422,7 @@
   body_font_size: 18
 
 - name: Homesteader
-  abilities: '*Resettling.* Once per turn, before you **move** from a system, you may take any number of move actions from adjacent systems into it first, then take any number of non-Catapult move actions from it.
+  abilities: '*Resettling.* Once per turn, before you **move** from a system, you may take any number of moves from adjacent systems into it first, then take any number of non-Catapult moves from it.
 
     *Isolated.* In **clean up**, return 1 Loyal ship from each system where you have exactly 1 ship.'
   resources:
