@@ -2463,7 +2463,7 @@
 - name: Replicator
   abilities: '*Conjuring.* Up to 3 times per turn, you may spend a pip or discard a resource to place a conjurable ship in any system.
 
-    *Hollow.* In **setup**, scrap 3 Loyal ships. Obtain a supply of 3 conjurable ships. They act exactly like your Loyal ships,except they return to your supply at the start of your turn.'
+    *Hollow.* In **setup**, scrap 3 Loyal ships. Obtain a supply of 3 conjurable ships. They act exactly like your Loyal ships, except they return to your supply at the start of your turn.'
   resources:
   - Material
   - Psionic
