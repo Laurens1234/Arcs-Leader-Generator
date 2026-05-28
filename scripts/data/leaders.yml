@@ -302,10 +302,10 @@
 
     *Immunized.* If you **have the initiative** you don''t Provoke Outrage.
 
-    *Fair.* After **scoring**, your Rival with the least Power takes 3 Power from you, if they have less Power than you.'
+    *Fair.* Before **scoring**, you may give any number of resources, Captives and Trophies to other players. You must give at least 1 resource, if you can''t, give 3 Power.'
   resources:
   - Weapon
-  - Material
+  - Relic
   setup:
     A:
       ships: 3
@@ -643,7 +643,7 @@
   body_font_size: 18
 - name: Conduit
   abilities: '*Conductive.* Once per turn, you may **spend** a resource as a resource
-    no player has Provoked Outrage in.
+    no player has Outrage in.
 
     *Overloaded.* In **setup**, Provoke Weapon Outrage.'
   resources:
@@ -868,9 +868,9 @@
     Outrage in a non-Outraged type to clear Outrage in a different type.
     Then, gain 1 resource from the cleared type''s supply. If it is empty steal it instead.
 
-    *Irate.* In **setup**, Provoke Outrage in any type.'
+    *Irate.* In **setup**, place an agent on your starting city''s type Outrage slot.'
   resources:
-  - Psionic
+  - Relic
   - Relic
   setup:
     A:
@@ -1942,9 +1942,9 @@
       building: None
   body_font_size: 18
 - name: Purist
-  abilities: '*Peaceful.* When attacking in **battle**, you may ignore the result of any die if the same face appears on another die you rolled.
+  abilities: '*Peaceful.* When attacking in **battle**, you may reroll any dice if the same face appears on another die you rolled.
 
-    *Minimalistic.* In **clean up**, discard resources until you only have 1 resource of each type on your player board.'
+    *Minimalistic.* In **clean up**, return 1 Captive and 2 Trophies.'
   resources:
   - Psionic
   - Fuel
@@ -2045,7 +2045,7 @@
   abilities: '*Immortal.* **Prelude:** You may discard a resource onto here,
     then roll 6-"resources on here" (≥1) skirmish dice. If all {icon:dice_hit_black},
     gain all resources here. Until your next turn: your ships instantly repair if damaged,
-    your pips let you battle, and you can spend resources as any type.
+    your pips let you battle, and you can spend resources as any type, ignoring *Confident*.
 
     *Confident.* You cannot **spend** resources for normal Prelude actions.'
   resources:
@@ -2403,9 +2403,9 @@
   body_font_size: 18
 
 - name: Poltergeist
-  abilities: '*Rupturing.* In any **battle** with you, when you destroy a Rival piece, roll a skirmish die. If you roll {icon:dice_hit_black}, hit any piece in the battle system.
+  abilities: '*Rupturing.* In any **battle** with you, when you destroy a Rival piece, roll a skirmish die. If you roll {icon:dice_hit_black}, hit any ship in the battle system.
 
-    *Indiscriminate.* In any **battle** with you, after you destroy the last Rival piece in the battle syste, roll a skirmish die. If you roll {icon:dice_hit_black}, hit an Loyal piece in the battle system.'
+    *Indiscriminate.* In any **battle** with you, after you destroy the last Rival piece in the battle system, roll a skirmish die. If you roll {icon:dice_hit_black}, hit a Loyal ship in the battle system.'
   resources:
   - Weapon
   - Psionic
@@ -2463,7 +2463,7 @@
 - name: Replicator
   abilities: '*Conjuring.* Up to 3 times per turn, you may spend a pip or discard a resource to place a conjurable ship in any system.
 
-    *Hollow.* In **setup**, scrap 3 Loyal ships. Obtain a supply of 3 conjurable ships. They act exactly like your Loyal ships, except for them returning to your supply at the start of your turn.'
+    *Hollow.* In **setup**, scrap 3 Loyal ships. Obtain a supply of 3 conjurable ships. They act exactly like your Loyal ships,except they return to your supply at the start of your turn.'
   resources:
   - Material
   - Psionic
@@ -2482,7 +2482,7 @@
 - name: Armsdealer
   abilities: '*Well-Stocked.* When attacking in **battle**, you may discard a resource to reroll any dice.
 
-    *Profiteering.* When a Rival player is attacking in **battle**, before they roll, they may give you a resource to be able to reroll any dice.'
+    *Profiteering.* When a Rival player is attacking in **battle**, before they roll, they may give you a resource so they can reroll any dice.'
   resources:
   - Weapon
   - Material
@@ -2537,9 +2537,9 @@
   body_font_size: 18
 
 - name: Mathematician
-  abilities: '*Analytical.* In **battle**, if your number of rolled icons you roll is a prime number (2, 3, 5, 7...) add a {icon:dice_hit_black} to your roll and repair an attacking ship.
+  abilities: '*Analytical.* In **battle**, if the number of icons you roll is a prime number (2, 3, 5, 7...), deal 1 extra hit and repair an attacking ship.
 
-    *Overcalculating.* In **battle**, if your number of rolled icons you roll is composite number (4, 6, 8, 9...), damage an attacking ship..'
+    *Overcalculating.* In **battle**, if the number of icons you roll is composite number (4, 6, 8, 9...), damage an attacking ship..'
   resources:
   - Weapon
   - Relic
@@ -2578,7 +2578,7 @@
 - name: zm Underdog
   abilities: '*Subversive.* You can **Surpass** with cards with a lower number than the lead card. At the end of the round, if your card is lower than the Lead card by more than the highest Surpassing card is higher, gain the initiative.
 
-    *Grounded.* You cannot **Surpass** with cards higher than the Lead card.'
+    *Grounded.* You cannot **Surpass** with cards higher than all played cards this round.'
   resources:
   - Fuel
   - Psionic
