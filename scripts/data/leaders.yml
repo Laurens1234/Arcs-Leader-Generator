@@ -302,7 +302,7 @@
 
     *Immunized.* If you **have the initiative** you don''t Provoke Outrage.
 
-    *Fair.* After **scoring**, the player with the least Power takes 3 Power from you.'
+    *Fair.* After **scoring**, your Rival with the least Power takes 3 Power from you, if they have less Power than you.'
   resources:
   - Weapon
   - Material
