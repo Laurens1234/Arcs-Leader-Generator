@@ -2618,26 +2618,7 @@
   
     *Single-Minded.* When you **Pivot**, you can only take the leftmost action on your played action card.'
   resources:
-  - None
-  - None
-  setup:
-    A:
-      ships: 3
-      building: city
-    B:
-      ships: 3
-      building: starport
-    C:
-      ships: 2
-      building: None
-  body_font_size: 18
-
-- name: Cat
-  abilities: '*.* When one of your ships is **destroyed**, you may scrap an agent from your supply to repair it instead.
-
-    *.* In **setup**, scrap 1 agent from your supply. When your **agent supply** is empty, destroy a Loyal ship and scrap this card.'
-  resources:
-  - Psionic
+  - Relic
   - Weapon
   setup:
     A:
@@ -2651,15 +2632,13 @@
       building: None
   body_font_size: 18
 
-- name: zx
-  abilities: '*Foreseeing.* Before **moving** into a system, you may discard all resources to choose a Rival you can battle there, then collect and roll dice as if you were going to battle them there with your next action. After you see the result, you may choose not to move there.
+- name: Cat
+  abilities: '*.* Once per turn, when one of your ships is **destroyed**, you may scrap an agent from your supply to repair it instead.
 
-    *Predestined.* If you battle the chosen Rival there with your next action before any dice are collected outside of this foreseen battle, collect only those rolled dice. Resolve the rest of the battle as if you rolled the dice during the battle.
-
-    *Psionic.* In **setup**, Provoke Psionic Outrage.'
+    *.* In **setup**, scrap 1 agent from your supply. When your **agent supply** is empty, destroy a Loyal ship and scrap this card.'
   resources:
-  - None
-  - None
+  - Psionic
+  - Fuel
   setup:
     A:
       ships: 3
@@ -2672,12 +2651,14 @@
       building: None
   body_font_size: 18
 
+
+
 - name: Jumper 
   abilities: '*Leaping.* When you **move**, move to a system 2 systems away from you. *(Even when you Catapult move.)
   
     *Overshooting.* You cannot **move** to systems adjacent to you.'
   resources:
-  - Psionic
+  - Relic
   - Fuel
   setup:
     A:
@@ -2753,6 +2734,28 @@
       ships: 2
       building: None
   body_font_size: 17
+
+
+# - name: zx
+#   abilities: '*Foreseeing.* Before **moving** into a system, you may discard all resources to choose a Rival you can battle there, then collect and roll dice as if you were going to battle them there with your next action. After you see the result, you may choose not to move there.
+
+#     *Predestined.* If you battle the chosen Rival there with your next action before any dice are collected outside of this foreseen battle, collect only those rolled dice. Resolve the rest of the battle as if you rolled the dice during the battle.
+
+#     *Psionic.* In **setup**, Provoke Psionic Outrage.'
+#   resources:
+#   - None
+#   - None
+#   setup:
+#     A:
+#       ships: 3
+#       building: city
+#     B:
+#       ships: 3
+#       building: starport
+#     C:
+#       ships: 2
+#       building: None
+#   body_font_size: 18
 
 # - name: zz5 Underdog
 #   abilities: '*Scrappy.* At the end of **battle**, if you have the fewest Trophies, destroy 1 Rival ship in the battle system.
