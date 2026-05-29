@@ -2556,31 +2556,12 @@
   body_font_size: 18
   zoom: 1.18
 
-- name: zl 
-  abilities: '*.* When you **declare** **an** **ambition**, choose a Rival. You may take a stand action as them. Any rival may give you resources at any time until this ability is finished.
+- name: Underdog
+  abilities: '*Subversive .* You can **Surpass** with cards of a lower rank than the lead card. At the end of the round, if your card is lower than the Lead card by more than the highest Surpassing card is higher, gain the initiative.
 
-    *Despised.* '
+    *Modest.* You cannot **Surpass** with cards higher than all played cards of its suit this round.'
   resources:
-  - Weapon
-  - Relic
-  setup:
-    A:
-      ships: 3
-      building: city
-    B:
-      ships: 3
-      building: starport
-    C:
-      ships: 2
-      building: None
-  body_font_size: 18
-
-- name: zm Underdog
-  abilities: '*Subversive.* You can **Surpass** with cards with a lower number than the lead card. At the end of the round, if your card is lower than the Lead card by more than the highest Surpassing card is higher, gain the initiative.
-
-    *Grounded.* You cannot **Surpass** with cards higher than all played cards this round.'
-  resources:
-  - Fuel
+  - Material
   - Psionic
   setup:
     A:
@@ -2594,8 +2575,50 @@
       building: None
   body_font_size: 18
 
-- name: zn
-  abilities: '*Guilded.* When you **tax**, you may **influence** a Guild card of the taxed city''s type.'
+- name: Mobster
+  abilities: '*Intimidating.* After you **tax**, you may influence, move, battle, or place 1 ship at the taxed city.
+  
+    *Stubborn.* You can **tax** at most 1 city of each color per turn.'
+  resources:
+  - Relic
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+
+
+- name: Glutton
+  abilities: '*Famished.* After you **tax**, you may destroy the taxed city. If you have not Provoked Outrage in the city''s type before, gain resources up to your empty slots.
+    
+    *Overfed.* In **clean up**, discard resources until you have 2 or fewer on your player board.'
+  resources:
+  - Psionic
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: Contrarian
+  abilities: '*Unorthodox.* When you **declare** **an** **ambition**, your played card lets you take any actions not on it instead.
+  
+    *Single-Minded.* When you **Pivot**, you can only take the leftmost action on your played action card.'
   resources:
   - None
   - None
@@ -2611,159 +2634,40 @@
       building: None
   body_font_size: 18
 
-- name: zo
-  abilities: '*Mobilized.* After you **tax**, you may **move** or **battle**.'
+# - name: zv
+#   abilities: '*Granting.* Once per chapter, after a Rival takes an action, you may make them repeat it.
+
+#     *Escalating.* Afterward, place 1 Demand token on them, plus 1 more for each Demand already on all Rivals.
+
+#     *Payment.* At the start of their turns, Rivals remove 1 Demand by giving you 1 resource, destroying 1 Loyal ship, or discarding 1 card.
+
+#     *Calamity.* Rivals with 4+ Demands cannot **declare** **an** **ambition**.
+
+#     *Catastrophic.* Rivals that cannot remove a Demand destroy all Loyal ships in one system.'
+#   resources:
+#   - None
+#   - None
+#   setup:
+#     A:
+#       ships: 3
+#       building: city
+#     B:
+#       ships: 3
+#       building: starport
+#     C:
+#       ships: 2
+#       building: None
+#   body_font_size: 18
+
+- name: zy
+  abilities: '*.* In **setup** and when you **declare** **an** **ambition**, place 1 agent on this card.
+
+    *.* In any **battle** with you, when one of your ships is destroyed, you may return an agent from this card to replace a Rival ship in the battle with it.
+    
+      '
   resources:
-  - None
-  - None
-  setup:
-    A:
-      ships: 3
-      building: city
-    B:
-      ships: 3
-      building: starport
-    C:
-      ships: 2
-      building: None
-  body_font_size: 18
-
-- name: zp
-  abilities: '*Mustered.* When you **tax**, place 1 Loyal ship at the taxed city.'
-  resources:
-  - None
-  - None
-  setup:
-    A:
-      ships: 3
-      building: city
-    B:
-      ships: 3
-      building: starport
-    C:
-      ships: 2
-      building: None
-  body_font_size: 18
-
-- name: zq
-  abilities: '*Adaptive.* When you **tax**, you may instead gain any resource matching a type or icon you have.'
-  resources:
-  - None
-  - None
-  setup:
-    A:
-      ships: 3
-      building: city
-    B:
-      ships: 3
-      building: starport
-    C:
-      ships: 2
-      building: None
-  body_font_size: 18
-
-- name: zr
-  abilities: '*Singular.* When you **tax**, you may instead gain a resource of a type no one has resources of.'
-  resources:
-  - None
-  - None
-  setup:
-    A:
-      ships: 3
-      building: city
-    B:
-      ships: 3
-      building: starport
-    C:
-      ships: 2
-      building: None
-  body_font_size: 18
-
-- name: zs
-  abilities: '*Ambitious.* When you **tax**, you may instead gain a resource of a type matching a declared ambition.'
-  resources:
-  - None
-  - None
-  setup:
-    A:
-      ships: 3
-      building: city
-    B:
-      ships: 3
-      building: starport
-    C:
-      ships: 2
-      building: None
-  body_font_size: 18
-
-- name: zt
-  abilities: '*Contrarian.* When you **declare** **an** **ambition**, your played card lets you take any actions not on it instead.'
-  resources:
-  - None
-  - None
-  setup:
-    A:
-      ships: 3
-      building: city
-    B:
-      ships: 3
-      building: starport
-    C:
-      ships: 2
-      building: None
-  body_font_size: 18
-
-- name: zu
-  abilities: '*Reciprocal.* In any **battle** with you, when one of your ships is taken as a Trophy, you may return a Trophy to your opponent to repair it instead.
-
-    *Mutual.* If you have any Trophies of your opponent, they may do the same.'
-  resources:
-  - None
-  - None
-  setup:
-    A:
-      ships: 3
-      building: city
-    B:
-      ships: 3
-      building: starport
-    C:
-      ships: 2
-      building: None
-  body_font_size: 18
-
-- name: zv
-  abilities: '*Granting.* Once per chapter, after a Rival takes an action, you may make them repeat it.
-
-    *Escalating.* Afterward, place 1 Demand token on them, plus 1 more for each Demand already on all Rivals.
-
-    *Payment.* At the start of their turns, Rivals remove 1 Demand by giving you 1 resource, destroying 1 Loyal ship, or discarding 1 card.
-
-    *Calamity.* Rivals with 4+ Demands cannot **declare** **an** **ambition**.
-
-    *Catastrophic.* Rivals that cannot remove a Demand destroy all Loyal ships in one system.'
-  resources:
-  - None
-  - None
-  setup:
-    A:
-      ships: 3
-      building: city
-    B:
-      ships: 3
-      building: starport
-    C:
-      ships: 2
-      building: None
-  body_font_size: 18
-
-- name: zw
-  abilities: '*Invested.* In **setup**, place 1 agent on this card. When you **declare** **an** **ambition**, place 1 agent on this card.
-
-    *Displaced.* In **battle**, when one of your ships is destroyed, you may return an agent from this card to place that ship in any other system instead.'
-  resources:
-  - None
-  - None
+  - Psionic
+  - Weapon
   setup:
     A:
       ships: 3
