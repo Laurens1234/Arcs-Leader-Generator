@@ -2633,9 +2633,9 @@
   body_font_size: 18
 
 - name: Cat
-  abilities: '*.* Once per turn, when one of your ships is **destroyed**, you may scrap an agent from your supply to repair it instead.
+  abilities: '*Nine-Lived.* Once per turn, when one of your ships is **destroyed**, you may scrap an agent from your supply to repair it instead.
 
-    *.* In **setup**, scrap 1 agent from your supply. When your **agent supply** is empty, destroy a Loyal ship and scrap this card.'
+    *Fated.* In **setup**, scrap 1 agent from your supply. When your **agent supply** is empty, destroy a Loyal ship and scrap this card.'
   resources:
   - Psionic
   - Fuel
