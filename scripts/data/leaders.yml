@@ -2594,15 +2594,13 @@
       building: None
   body_font_size: 18
 
-
-
 - name: Glutton
   abilities: '*Famished.* After you **tax**, you may destroy the taxed city. If you have not Provoked Outrage in the city''s type before, gain resources up to your empty slots.
     
     *Overfed.* In **clean up**, discard resources until you have 2 or fewer on your player board.'
   resources:
   - Psionic
-  - Weapon
+  - Material
   setup:
     A:
       ships: 3
@@ -2634,37 +2632,10 @@
       building: None
   body_font_size: 18
 
-# - name: zv
-#   abilities: '*Granting.* Once per chapter, after a Rival takes an action, you may make them repeat it.
+- name: Cat
+  abilities: '*.* When one of your ships is **destroyed**, you may scrap an agent from your supply to repair it instead.
 
-#     *Escalating.* Afterward, place 1 Demand token on them, plus 1 more for each Demand already on all Rivals.
-
-#     *Payment.* At the start of their turns, Rivals remove 1 Demand by giving you 1 resource, destroying 1 Loyal ship, or discarding 1 card.
-
-#     *Calamity.* Rivals with 4+ Demands cannot **declare** **an** **ambition**.
-
-#     *Catastrophic.* Rivals that cannot remove a Demand destroy all Loyal ships in one system.'
-#   resources:
-#   - None
-#   - None
-#   setup:
-#     A:
-#       ships: 3
-#       building: city
-#     B:
-#       ships: 3
-#       building: starport
-#     C:
-#       ships: 2
-#       building: None
-#   body_font_size: 18
-
-- name: zw
-  abilities: '*.* In **setup** and when you **declare** **an** **ambition**, place 1 agent on this card.
-
-    *.* In any **battle** with you, when one of your ships is destroyed, you may return an agent from this card to replace a Rival ship in the battle with it.
-    
-      '
+    *.* In **setup**, scrap 1 agent from your supply. When your **agent supply** is empty, destroy a Loyal ship and scrap this card.'
   resources:
   - Psionic
   - Weapon
@@ -2701,10 +2672,12 @@
       building: None
   body_font_size: 18
 
-- name: zy 
-  abilities: '*Swift.* When you **move**, move to a system 2 away instead of 1, including after each Catapult **move**.'
+- name: Jumper 
+  abilities: '*Leaping.* When you **move**, move to a system 2 systems away from you. *(Even when you Catapult move.)
+  
+    *Overshooting.* You cannot **move** to systems adjacent to you.'
   resources:
-  - Fuel
+  - Psionic
   - Fuel
   setup:
     A:
@@ -2719,7 +2692,7 @@
   body_font_size: 18
 
 - name: zz Surveyor
-  abilities: '*Expansive.* When you **build** a building, you may place it on an intersection with an adjacent planet. If you do, gain a resource matching that adjacent planet. Each intersection can have at most 1 building. Buildings on intersections are on both planets.'
+  abilities: '*Expansive.* When you **build** a building, you may place it on an intersection with an adjacent planet, to gain a matching resource resource. Each intersection can have at most 1 building. Buildings on intersections are in both systems.'
   resources:
   - Material
   - Relic
@@ -2736,46 +2709,10 @@
   body_font_size: 17
 
 - name: zz1 Patron
-  abilities: '*Committed.* When you **declare** **an** **ambition**, you may spend resources matching its type for the rest of the chapter.'
+  abilities: '*Committed.* You may **spend** resources as resources matching a declared ambition, ignoring Outrage.'
   resources:
   - Relic
   - Material
-  setup:
-    A:
-      ships: 3
-      building: city
-    B:
-      ships: 3
-      building: starport
-    C:
-      ships: 2
-      building: None
-  body_font_size: 18
-
-- name: zz2 Highroller
-  abilities: '*Swingy.* Before collecting dice in **battle**, you may roll the 6-sided die. You must collect dice equal to its result.'
-  resources:
-  - Weapon
-  - Relic
-  setup:
-    A:
-      ships: 3
-      building: city
-    B:
-      ships: 3
-      building: starport
-    C:
-      ships: 2
-      building: None
-  body_font_size: 18
-
-- name: zz3 Cat
-  abilities: '*Vengeful.* The first time each chapter your last ship in a battle system would be destroyed, destroy 1 Rival ship there instead and repair your ship.
-
-    *Arrogant.* You cannot retreat.'
-  resources:
-  - Weapon
-  - Fuel
   setup:
     A:
       ships: 3
@@ -2817,26 +2754,24 @@
       building: None
   body_font_size: 17
 
-- name: zz5 Underdog
-  abilities: '*Scrappy.* At the end of **battle**, if you have the fewest Trophies, destroy 1 Rival ship in the battle system.
+# - name: zz5 Underdog
+#   abilities: '*Scrappy.* At the end of **battle**, if you have the fewest Trophies, destroy 1 Rival ship in the battle system.
 
-    *Opportunistic.* When you capture any number of agents, if you have the fewest Captives, capture 1 agent from a Rival supply.'
-  resources:
-  - Weapon
-  - Psionic
-  setup:
-    A:
-      ships: 3
-      building: city
-    B:
-      ships: 3
-      building: starport
-    C:
-      ships: 2
-      building: None
-  body_font_size: 18
-
-
+#     *Opportunistic.* When you capture any number of agents, if you have the fewest Captives, capture 1 agent from a Rival supply.'
+#   resources:
+#   - Weapon
+#   - Psionic
+#   setup:
+#     A:
+#       ships: 3
+#       building: city
+#     B:
+#       ships: 3
+#       building: starport
+#     C:
+#       ships: 2
+#       building: None
+#   body_font_size: 18
 
 # when you declare an ambition, you may discard all your resources and return a Loyal city from the map, to gain 2 resources matching that city.
 
@@ -2883,3 +2818,45 @@
 # . You cannot gain the same adaptation twice in a row.
 
 # build a city on a guild card
+
+# - name: zv
+#   abilities: '*Granting.* Once per chapter, after a Rival takes an action, you may make them repeat it.
+
+#     *Escalating.* Afterward, place 1 Demand token on them, plus 1 more for each Demand already on all Rivals.
+
+#     *Payment.* At the start of their turns, Rivals remove 1 Demand by giving you 1 resource, destroying 1 Loyal ship, or discarding 1 card.
+
+#     *Calamity.* Rivals with 4+ Demands cannot **declare** **an** **ambition**.
+
+#     *Catastrophic.* Rivals that cannot remove a Demand destroy all Loyal ships in one system.'
+#   resources:
+#   - None
+#   - None
+#   setup:
+#     A:
+#       ships: 3
+#       building: city
+#     B:
+#       ships: 3
+#       building: starport
+#     C:
+#       ships: 2
+#       building: None
+#   body_font_size: 18
+
+# - name: zz2 Highroller
+#   abilities: '*Swingy.* Before collecting dice in **battle**, you may roll the 6-sided die. You must collect dice equal to its result.'
+#   resources:
+#   - Weapon
+#   - Relic
+#   setup:
+#     A:
+#       ships: 3
+#       building: city
+#     B:
+#       ships: 3
+#       building: starport
+#     C:
+#       ships: 2
+#       building: None
+#   body_font_size: 18
