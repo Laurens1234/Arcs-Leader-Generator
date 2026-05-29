@@ -2557,7 +2557,7 @@
   zoom: 1.18
 
 - name: Underdog
-  abilities: '*Subversive .* You can **Surpass** with cards of a lower rank than the lead card. At the end of the round, if your card is lower than the Lead card by more than the highest Surpassing card is higher, gain the initiative.
+  abilities: '*Subversive.* You can **Surpass** with cards of a lower rank than the lead card. At the end of the round, if your card is lower than the Lead card by more than the highest Surpassing card is higher, gain the initiative.
 
     *Modest.* You cannot **Surpass** with cards higher than all played cards of its suit this round.'
   resources:
@@ -2652,11 +2652,10 @@
   body_font_size: 18
 
 
-
-- name: Jumper 
-  abilities: '*Leaping.* When you **move**, move to a system 2 systems away from you. *(Even when you Catapult move.)
+- name: Cavalier
+  abilities: '*Mounted.* When you **move** from a planet, move to a system 2 or 3 systems away from you. *(Even when you Catapult move.)*
   
-    *Overshooting.* You cannot **move** to systems adjacent to you.'
+    *Unruly.* You cannot **move** from planets to systems adjacent to you.'
   resources:
   - Relic
   - Fuel
@@ -2671,29 +2670,14 @@
       ships: 2
       building: None
   body_font_size: 18
+  zoom: 1.15 
 
-- name: zz Surveyor
-  abilities: '*Expansive.* When you **build** a building, you may place it on an intersection with an adjacent planet, to gain a matching resource resource. Each intersection can have at most 1 building. Buildings on intersections are in both systems.'
+- name: Surveyor
+  abilities: '*Expansive.* When you **build** a building, you may place it on an intersection with an adjacent planet, to gain a matching resource resource. Each intersection can have at most 1 building. Buildings on intersections are in both systems.
+    *Sprawling.* You cannot **Build** buildings in each planet''s second slot if there is already a city on the first slot.'
   resources:
   - Material
   - Relic
-  setup:
-    A:
-      ships: 3
-      building: city
-    B:
-      ships: 3
-      building: starport
-    C:
-      ships: 2
-      building: None
-  body_font_size: 17
-
-- name: zz1 Patron
-  abilities: '*Committed.* You may **spend** resources as resources matching a declared ambition, ignoring Outrage.'
-  resources:
-  - Relic
-  - Material
   setup:
     A:
       ships: 3
@@ -2706,22 +2690,23 @@
       building: None
   body_font_size: 18
 
-- name: zz4 Jester
-  abilities: '*Entertaining.* At the start of **battle**, roll the 6-sided die:
+
+- name: Jester
+  abilities: '*Entertaining.* Before attacking in **battle**, roll a 6-sided die:
 
     1: Collect 1 extra die.
 
-    2: Ignore the first self-damage.
+    2: Ignore 1 {icon:dice_self_hit_black}.
 
-    3: Deal 1 hit.
+    3: Gain 1 extra {icon:dice_key_black}.
+      
+    4: Deal 1 hit to any ship in the battle system.
 
-    4: Gain 1 extra key.
+    5: Damage all defending buildings.
 
-    5: Double your building hits.
-
-    6: Repair all your ships in the battle.'
+    6: Repair all ships in the battle system.'
   resources:
-  - Psionic
+  - Weapon
   - Fuel
   setup:
     A:
@@ -2733,8 +2718,25 @@
     C:
       ships: 2
       building: None
-  body_font_size: 17
+  body_font_size: 18
 
+
+# - name: zz1 Patron
+#   abilities: '*Committed.* You may **spend** resources as resources matching a declared ambition, ignoring Outrage.'
+#   resources:
+#   - Relic
+#   - Material
+#   setup:
+#     A:
+#       ships: 3
+#       building: city
+#     B:
+#       ships: 3
+#       building: starport
+#     C:
+#       ships: 2
+#       building: None
+#   body_font_size: 18
 
 # - name: zx
 #   abilities: '*Foreseeing.* Before **moving** into a system, you may discard all resources to choose a Rival you can battle there, then collect and roll dice as if you were going to battle them there with your next action. After you see the result, you may choose not to move there.
