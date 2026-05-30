@@ -1406,8 +1406,9 @@
       building: None
   body_font_size: 18
 - name: Warmonger
-  abilities: '*Bloodsoaked.* When you Copy or Pivot to **battle**, you may declare
-    Warlord, and each {icon:dice_hit_black} you roll counts twice.
+  abilities: '*Belligerent.* When you **declare** **an** **ambition**, you may declare Tyrant or Warlord instead.
+  
+    *Bloodsoaked.* When you Copy or Pivot to **battle**, gain 1 Weapon, and each {icon:dice_hit_black} you roll counts twice.
 
     *Hellbent.* In **scoring**, if you win no ambitions, lose 3 Power.'
   resources:
@@ -1425,6 +1426,7 @@
       building: None
   body_font_size: 18
   zoom: 1.15
+
 - name: Extortioner
   abilities: '*Predatory.* **Prelude:** You may return 3 Trophies/Captives
     of a Rival to steal 1 of their resources.
