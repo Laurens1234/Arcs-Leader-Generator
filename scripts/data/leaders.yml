@@ -2655,7 +2655,7 @@
 
 
 - name: Cavalier
-  abilities: '*Mounted.* When you **move** from a planet, move to a system 2 or 3 systems away from you. *(Even when you Catapult move.)*
+  abilities: '*Mounted.* When you **move** from a planet, move to a system 2 or 3 systems away from you.
   
     *Unruly.* You cannot **move** from planets to systems adjacent to you.'
   resources:
@@ -2722,24 +2722,6 @@
       building: None
   body_font_size: 18
 
-
-# - name: zz1 Patron
-#   abilities: '*Committed.* You may **spend** resources as resources matching a declared ambition, ignoring Outrage.'
-#   resources:
-#   - Relic
-#   - Material
-#   setup:
-#     A:
-#       ships: 3
-#       building: city
-#     B:
-#       ships: 3
-#       building: starport
-#     C:
-#       ships: 2
-#       building: None
-#   body_font_size: 18
-
 # - name: zx
 #   abilities: '*Foreseeing.* Before **moving** into a system, you may discard all resources to choose a Rival you can battle there, then collect and roll dice as if you were going to battle them there with your next action. After you see the result, you may choose not to move there.
 
@@ -2760,6 +2742,25 @@
 #       ships: 2
 #       building: None
 #   body_font_size: 18
+
+# - name: zz1 Patron
+#   abilities: '*Committed.* You may **spend** resources as resources matching a declared ambition, ignoring Outrage.'
+#   resources:
+#   - Relic
+#   - Material
+#   setup:
+#     A:
+#       ships: 3
+#       building: city
+#     B:
+#       ships: 3
+#       building: starport
+#     C:
+#       ships: 2
+#       building: None
+#   body_font_size: 18
+
+
 
 # - name: zz5 Underdog
 #   abilities: '*Scrappy.* At the end of **battle**, if you have the fewest Trophies, destroy 1 Rival ship in the battle system.
