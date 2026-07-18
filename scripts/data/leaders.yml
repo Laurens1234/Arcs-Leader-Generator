@@ -2676,6 +2676,7 @@
 
 - name: Surveyor
   abilities: '*Expansive.* When you **build** a building, you may place it on an intersection with an adjacent planet to gain a matching resource. Each intersection can have at most 1 building. Buildings on intersections are in both systems.
+  
     *Sprawling.* You cannot **build** buildings in a planet''s second slot if there is already a building in the first slot.'
   resources:
   - Material
