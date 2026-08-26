@@ -722,9 +722,9 @@
   zoom: 1.2
   boundary_shift: 0.2
 - name: Solian
-  abilities: '*Settled.* **Prelude:** You may move from a planet any number of times.
+  abilities: '*Settled.* **Prelude:** You may move from a planet any number of times, until you move into a Rival controlled planet.
 
-    *Grounded.* When you **move** into a Rival-controlled gate, 1 of your moving ships takes a hit.'
+    *Grounded.* When you **move** into a gate with any Rival pieces, 1 of your moving ships takes a hit.'
   resources:
   - Relic
   - Material
@@ -1211,7 +1211,7 @@
   abilities: '*Acquisitive.* When you **secure** a card, gain 1 resource matching
     its type.
 
-    *Jaded.* After **scoring**, discard a Guild card or resource.'
+    *Jaded.* After **scoring**, give a Guild card or resource to a Rival with less Power than you. If there are none, discard one instead.'
   resources:
   - Relic
   - Relic
@@ -1311,7 +1311,7 @@
 
     *Ritualistic.* When you **repair** a piece, you may damage a Rival piece in its system.
 
-    *Disruptive.* You cannot **repair** using pips or resources.'
+    *Disruptive.* You cannot **repair** using pips.'
   resources:
   - Material
   - Psionic
@@ -1388,7 +1388,7 @@
   body_font_size: 18
 - name: Artificer
   abilities: '*Proficient.* After you Copy or Pivot to **build** or **repair**, you
-    may build or repair.
+    may build, repair or gain a Material.
 
     *Diligent.* You cannot **Pivot** if the Lead suit is Construction or Administration.'
   resources:
@@ -2298,7 +2298,7 @@
   body_font_size: 18
 
 - name: Reaver
-  abilities: '*Ravaging.* In **battle**, collect 2 extra dice for each previous battle this turn.
+  abilities: '*Ravaging.* In **battle**, collect 2 extra dice for each previous battle this turn. In **battle**, you must collect the maximum number of dice you can.
 
     *Unrestrained.* After you use a pip or Psionic to **battle**, you must do so again if able.'
   resources:
@@ -2722,6 +2722,197 @@
       ships: 2
       building: None
   body_font_size: 18
+
+  
+# - name: Leader 1
+#   abilities: '*Adaptive Builder.* You can use build pips and Material to do any action except influence.
+
+#     *Prelude.* You may discard an action card from your hand and place this card on a played construction card to return it to your hand at the end of the round.
+
+#     *Limit.* You cannot build more than once per turn.'
+#   resources:
+#   - Material
+#   - Material
+#   setup:
+#     A:
+#       ships: 3
+#       building: city
+#     B:
+#       ships: 3
+#       building: starport
+#     C:
+#       ships: 2
+#       building: None
+#   body_font_size: 18
+
+# - name: Leader 2
+#   abilities: '*Relayer.* *Prelude:* Once per turn, you may give an agent from your supply to any Rival to take a resource from them.
+
+#     *Reciprocal.* In a Rival''s Prelude, once per turn they can return a Captive to you to take a resource from you.'
+#   resources:
+#   - Psionic
+#   - Material
+#   setup:
+#     A:
+#       ships: 3
+#       building: city
+#     B:
+#       ships: 3
+#       building: starport
+#     C:
+#       ships: 2
+#       building: None
+#   body_font_size: 18
+
+# - name: Leader 3
+#   abilities: '*Collector.* When you take a Trophy, you may place it on this card instead. When 3 pieces of different colors or types are on this card, gain any 2 resources and return those pieces.'
+#   resources:
+#   - Relic
+#   - Psionic
+#   setup:
+#     A:
+#       ships: 3
+#       building: city
+#     B:
+#       ships: 3
+#       building: starport
+#     C:
+#       ships: 2
+#       building: None
+#   body_font_size: 18
+
+# - name: Leader 4
+#   abilities: '*Diplomat.* When any player declares an ambition you may change your policy.
+
+#     *Peace:* When you tax, gain a Relic or Psionic instead.
+
+#     *War:* When you tax, gain a Weapon instead.
+
+#     *Escalation.*'
+#   resources:
+#   - Relic
+#   - Weapon
+#   setup:
+#     A:
+#       ships: 3
+#       building: city
+#     B:
+#       ships: 3
+#       building: starport
+#     C:
+#       ships: 2
+#       building: None
+#   body_font_size: 18
+
+# - name: Leader 5
+#   abilities: '*Remover.* When you declare an ambition, you may remove a card from the Court. You may secure.'
+#   resources:
+#   - Material
+#   - Relic
+#   setup:
+#     A:
+#       ships: 3
+#       building: city
+#     B:
+#       ships: 3
+#       building: starport
+#     C:
+#       ships: 2
+#       building: None
+#   body_font_size: 18
+
+# - name: Leader 6
+#   abilities: '*Transmuter.* Prelude: Once per turn you may turn a Material into a Fuel, a Fuel into a Weapon, a Weapon into a Relic, or a Relic into a Psionic.
+
+#     *Taxation.* When you tax, gain a Material instead. (If the Material supply is empty, gain a Fuel; if that is empty, gain a Weapon; etc.)'
+#   resources:
+#   - Material
+#   - Fuel
+#   setup:
+#     A:
+#       ships: 3
+#       building: city
+#     B:
+#       ships: 3
+#       building: starport
+#     C:
+#       ships: 2
+#       building: None
+#   body_font_size: 18
+
+# - name: Leader 7
+#   abilities: '*Trader.* When you declare an ambition, you may trade 1 resource for 1 resource with Rivals any number of times, or swap 1 Guild card with 1 Guild card of a Rival.
+
+#     *Invitation.* During a Rival''s Prelude, they may give you 2 resources to take 1 from you.'
+#   resources:
+#   - Material
+#   - Psionic
+#   setup:
+#     A:
+#       ships: 3
+#       building: city
+#     B:
+#       ships: 3
+#       building: starport
+#     C:
+#       ships: 2
+#       building: None
+#   body_font_size: 18
+
+# - name: Leader 8
+#   abilities: '*Conqueror.* When you declare an ambition you are winning, you may take a city or starport from a Rival''s supply and take it as a Trophy.
+
+#     *Prelude.* You may return buildings from your supply to gain a resource.'
+#   resources:
+#   - Weapon
+#   - Material
+#   setup:
+#     A:
+#       ships: 3
+#       building: city
+#     B:
+#       ships: 3
+#       building: starport
+#     C:
+#       ships: 2
+#       building: None
+#   body_font_size: 18
+
+# - name: Leader 9
+#   abilities: '*Viceregal.* In scoring, when any player wins an ambition, they may place a victory token on it. When you declare it, you may remove the token and draw an action card from the bottom of the action card deck. When another player declares it, they may return the token and gain a resource.
+
+#     *Tied.* In scoring, gain no Power if you tie for first place.'
+#   resources:
+#   - Psionic
+#   - Relic
+#   setup:
+#     A:
+#       ships: 3
+#       building: city
+#     B:
+#       ships: 3
+#       building: starport
+#     C:
+#       ships: 2
+#       building: None
+#   body_font_size: 18
+
+# - name: Leader 10
+#   abilities: '*Inquisitor.* When a player destroys a city, you may start a trial to decide if that player should provoke outrage. Every player gets one vote and may spend resources for additional votes. Keep voting until all players decide not to in turn order. You can only vote for one result. If the side you voted for wins, gain resources matching the destroyed city up to your empty slots.'
+#   resources:
+#   - Relic
+#   - Material
+#   setup:
+#     A:
+#       ships: 3
+#       building: city
+#     B:
+#       ships: 3
+#       building: starport
+#     C:
+#       ships: 2
+#       building: None
+#   body_font_size: 18
 
 # - name: zx
 #   abilities: '*Foreseeing.* Before **moving** into a system, you may discard all resources to choose a Rival you can battle there, then collect and roll dice as if you were going to battle them there with your next action. After you see the result, you may choose not to move there.
